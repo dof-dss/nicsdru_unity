@@ -24,3 +24,7 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ignore the lock file as our template project is
+# going to be forked rather than run as its own instance.
+composer.lock
