@@ -87,7 +87,7 @@
             "web/modules/origins": [
                 "dof-dss/nicsdru_origins_modules"
             ],
-            "web/profiles/custom/{$name}": [
+            "web/profiles/custom/origins": [
                 "dof-dss/nicsdru_origins_profile"
             ],
             "web/modules/contrib/{$name}": [
