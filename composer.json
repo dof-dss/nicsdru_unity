@@ -175,7 +175,6 @@
                 "type:drupal-library",
                 "harvesthq/chosen"
             ],
-            "web/modules/custom": ["dof-dss/nidirect-site-modules"],
             "web/modules/origins": ["dof-dss/nicsdru_origins_modules"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
