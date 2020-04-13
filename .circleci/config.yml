@@ -134,6 +134,7 @@ jobs:
       - run:
           name: Test Drupal with drush
           command: |
+            cd /var/www/html
             ../vendor/bin/drush status
       - persist_to_workspace:
           root: ./
