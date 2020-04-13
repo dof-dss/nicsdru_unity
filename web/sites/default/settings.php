@@ -63,7 +63,7 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
       break;
 
-    case (stripos(getenv('PLATFORM_BRANCH'), 'D8NID-qa') !== FALSE):
+    case (stripos(getenv('PLATFORM_BRANCH'), 'D8UN-qa') !== FALSE):
       // QA environment config adjustments.
       $env_colour = '#e56716';
       break;
