@@ -6,15 +6,17 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
+/web/modules/migrate/
 /web/modules/origins
 /web/profiles/custom
+console/
 
 # Ignore sensitive information
-/web/sites/*/settings.php
 /web/sites/*/settings.local.php
 
 # Ignore Drupal's file directory
 /web/sites/*/files/
+/private
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
@@ -25,6 +27,11 @@
 # Ignore .env files as they are personal
 /.env
 
-# Ignore the lock file as our template project is
-# going to be forked rather than run as its own instance.
-composer.lock
+# Ignore raw SQL files, potentially dangerous.
+*.sql
+
+# Misc tooling files to ingore.
+.swp
+.vscode
+.DS_Store
+.talismanrc
