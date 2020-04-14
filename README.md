@@ -36,7 +36,7 @@ Like the popular git-flow workflow, but without the more complex elements:
 - `development` bleeding-edge. All feature branches originate from here.
 - `master` stable, automatically deployed to platform.sh. Release tags should originate from here.
 
-Preferred feature branch naming convention: `TICKET_REF-short-desc`, for example: `D8NID-123-event-listing`
+Preferred feature branch naming convention: `TICKET_REF-short-desc`, for example: `D8UN-123-event-listing`
 
 We highly recommend developers use a tool such as [Talisman](https://github.com/thoughtworks/talisman) to ensure they do not commit potentially sensitive material into the codebase.
 
