@@ -1,4 +1,4 @@
-uuid: 3cefd3ed-0374-4b50-a552-428364a8c502
+uuid: b4c9d71d-302b-4491-b879-bddcc98ddec0
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - aeon@example.com
+  - admin@example.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

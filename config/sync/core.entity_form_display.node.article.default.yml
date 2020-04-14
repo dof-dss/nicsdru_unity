@@ -1,21 +1,19 @@
-uuid: 46de9de6-1f47-4293-bb3a-e21fd718cc90
+uuid: e1104e52-0dbb-48dc-a72a-8837caf41035
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
+    - field.field.node.article.field_enable_toc
+    - field.field.node.article.field_next_audit_due
+    - field.field.node.article.field_summary
     - node.type.article
   module:
-    - comment
-    - image
+    - datetime
     - path
     - text
 _core:
-  default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
+  default_config_hash: lt6_q6-_Xa51csfvbVYNi1iJ7SQwjLL-oN5uSBqyS9c
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -29,13 +27,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -43,24 +34,27 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 4
-    region: content
+  field_enable_toc:
+    weight: 123
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      display_label: true
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
+    type: boolean_checkbox
     region: content
+  field_next_audit_due:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_summary:
+    weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
+    region: content
   path:
     type: path
     weight: 30
@@ -102,8 +96,10 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true
+  field_tags: true

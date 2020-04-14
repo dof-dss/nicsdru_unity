@@ -1,0 +1,24 @@
+uuid: c77422a4-9f76-4d3f-81e2-f0fa63fdee7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact
+_core:
+  default_config_hash: JNwURudPjx7I2LwqnN4jzj7NXWh6CEJUxEOA-1MuzXI
+id: node.contact.promote
+field_name: promote
+entity_type: node
+bundle: contact
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

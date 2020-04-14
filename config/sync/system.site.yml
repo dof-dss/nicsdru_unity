@@ -1,6 +1,5 @@
-uuid: 64614b02-c99d-42d7-83ed-f278468364e6
-name: 'NICS Unity'
-mail: aeon@example.com
+name: 'Drush Site-Install'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
@@ -11,4 +10,5 @@ weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 52970328-768c-4900-b29b-cf2dca2a0cc8

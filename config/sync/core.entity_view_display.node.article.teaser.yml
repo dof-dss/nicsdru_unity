@@ -1,21 +1,19 @@
-uuid: cdf83685-05f9-47a5-a8de-5235c44c1ed0
+uuid: 6ac38ddd-cd57-44dd-9663-5087d02dbec1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.medium
+    - field.field.node.article.field_enable_toc
+    - field.field.node.article.field_next_audit_due
+    - field.field.node.article.field_summary
     - node.type.article
   module:
-    - image
     - text
     - user
 _core:
-  default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
+  default_config_hash: zXK51U8-5ytLW2Mw9_19_LuBcDoz01uu9JcQN0sHCTs
 id: node.article.teaser
 targetEntityType: node
 bundle: article
@@ -29,27 +27,10 @@ content:
       trim_length: 600
     third_party_settings: {  }
     label: hidden
-  field_image:
-    type: image
-    weight: -1
-    region: content
-    settings:
-      image_style: medium
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
-  field_tags:
-    type: entity_reference_label
-    weight: 10
-    region: content
-    settings:
-      link: true
-    third_party_settings: {  }
-    label: above
   links:
     weight: 100
     region: content
 hidden:
-  comment: true
-  field_image: true
-  field_tags: true
+  field_enable_toc: true
+  field_next_audit_due: true
+  field_summary: true

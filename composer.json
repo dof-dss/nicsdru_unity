@@ -32,7 +32,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
-        "dof-dss/nicsdru_origins_modules": "^0.3",
+        "dof-dss/nicsdru_origins_modules": "^0.3.4",
         "dof-dss/nicsdru_origins_theme": "^0.2.0",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
@@ -101,6 +101,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
+        "dof-dss/nicsdru_origins_profile": "^0.1.4",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^8.8",
         "drupal/devel": "^2.1",
@@ -180,6 +181,7 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/profiles/custom/{$name}": ["dof-dss/nicsdru_origins_profile"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
