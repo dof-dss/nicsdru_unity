@@ -47,7 +47,7 @@ API keys, auth tokens or other credentials values *must* be stored as environmen
 - We *strongly* recommend developers use Talisman when working on this project.
 - Talisman validates the outgoing change set for things that look suspicious - such as authorization tokens and private keys.
 
-(Installation instructions)[https://github.com/thoughtworks/talisman/#installation-as-a-global-hook-template]
+[Installation instructions](https://github.com/thoughtworks/talisman/#installation-as-a-global-hook-template)
 
 ## Project structure
 
