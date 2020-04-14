@@ -131,12 +131,10 @@ jobs:
           command: |
             # Copy our build into position (./ suffix ensures hidden files are copied too).
             sudo rsync -avq /home/circleci/project/. /var/www/html
-      - run: ls -la /var/www/html/
-      - run: ls -la /var/www/html/web
       - run:
           name: Test Drupal with drush
           command: |
-            cd /var/www/html
+            cd /var/www/html/web
             ../vendor/bin/drush status
       - persist_to_workspace:
           root: ./
