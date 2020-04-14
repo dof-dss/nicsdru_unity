@@ -57,7 +57,7 @@ commands:
     description: "Adds github.com to known hosts in container; for working locally."
     steps:
       - run:
-          name: Keyscan Github (local workaround)
+          name: Keyscan for github.com
           command: mkdir -p ~/.ssh && ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 jobs:
   # Tests the integrity of the build, stores the results in a workspace for re-use in later jobs.
@@ -81,15 +81,15 @@ jobs:
           at: ./
       - run:
           name: PHPCS static analysis
-          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/modules/migrate /home/circleci/project/web/themes/custom"
+          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom"
       - run:
-         name: Deprecated code check
-         command: |
+          name: Deprecated code check
+          command: |
             cd /home/circleci/project
             vendor/bin/drupal-check /home/circleci/project/web/modules/custom /home/circleci/project/web/modules/origins
 
-  # Job that installs Drupal from configuration to confirm there are no installation errors.
-  config_install:
+  # Run any unit tests and any kernel tests against a vanilla D8 site + our site config imported over it (no predefined content).
+  unit_kernel_tests:
     docker:
       - image: circleci/php:7.3.14-apache-browsers
       - image: circleci/mysql:5.7.27
@@ -132,33 +132,16 @@ jobs:
             # Copy our build into position (./ suffix ensures hidden files are copied too).
             sudo rsync -avq /home/circleci/project/. /var/www/html
       - run:
-          name: Test Drupal with drush
+          name: PHPUnit tests (unit)
           command: |
-            cd /var/www/html/web
-            ../vendor/bin/drush status
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - ./
+            cd /var/www/html/web/core
+            ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite unit --group unity
+      - run:
+          name: PHPUnit tests (kernel)
+          command: |
+            cd /var/www/html/web/core
+            ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite kernel --group unity
 
-  # Run any unit tests and any kernel tests against a vanilla D8 site + our site config imported over it (no predefined content).
-  unit_kernel_tests:
-    docker:
-      - image: circleci/php:7.3.14-apache-browsers
-      - image: circleci/mysql:5.7.27
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-            name: PHPUnit tests (unit)
-            command: |
-              cd /var/www/html/web/core
-              ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite unit --group unity
-      - run:
-            name: PHPUnit tests (kernel)
-            command: |
-              cd /var/www/html/web/core
-              ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite kernel --group unity
 
   # Deploy task.
   deploy:
@@ -177,40 +160,33 @@ jobs:
             git remote add platform ${PLATFORM_REPO_URL}
             git push -f platform ${CIRCLE_BRANCH}
 
-  # Our most time expensive, full-stack tests. Requires up to date content and services for chromedriver, yarn and database.
-  ui_tests:
+  # Nightly config install test.
+  config_install:
     docker:
-      - image: circleci/php:7.3.14-apache-node-browsers
+      - image: circleci/php:7.3.14-apache-browsers
       - image: circleci/mysql:5.7.27
-      - image: drupalci/chromedriver:production
-        environment:
-          CHROMEDRIVER_WHITELISTED_IPS: ""
-          CHROMEDRIVER_URL_BASE: "/wd/hub"
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-            name: Add OS and PHP extensions/config
+      steps:
+        - attach_workspace:
+            at: ./
+        - run:
+            name: Add extra OS and PHP extensions/config
             command: |
-              # Add yarn deb repo.
-              curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-              sudo echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-              sudo apt-get install -y libpng-dev mariadb-client rsync gnupg apt-transport-https yarn
+              sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
+              sudo apt-get install -y libpng-dev mariadb-client rsync
               sudo docker-php-ext-install gd pdo_mysql
-              composer global require hirak/prestissimo
-      - run:
+        - run:
             name: Copy vhost into place
             command: |
               sudo cp .circleci/drupal.vhost /etc/apache2/sites-available/drupal.conf
-      - run:
+        - run:
             name: Enable web server and vhosts
             command: |
               sudo a2enmod rewrite
               sudo a2dissite 000-default
               sudo a2ensite drupal
               sudo service apache2 start
-      - run:
-            name: Set up Drupal and configure settings
+        - run:
+            name: Install Drupal and configure settings
             command: |
               # Should be scaffolded by now.
               cd /home/circleci/project/web
@@ -220,39 +196,15 @@ jobs:
               cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
               # Copy PHPUnit config into core folder.
               cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
-              # Copy Nightwatch conf files into place.
-              cat core/.env.example | sed -e "s|\(^DRUPAL_TEST_BASE_URL\)\(.\+\)|\1=http:\/\/localhost|g" > core/.env
-              sed -i -e "s|\(#\)\(DRUPAL_NIGHTWATCH_SEARCH_DIRECTORY\)=|\2=../|g" core/.env
-              sed -i -e "s|sqlite:\/\/localhost\/sites\/default\/files/db.sqlite|mysql://root:@127.0.0.1/circle_test|g" core/.env
-              sed -i -e "s|^DRUPAL_TEST_CHROMEDRIVER_AUTOSTART=true|DRUPAL_TEST_CHROMEDRIVER_AUTOSTART=false|g" core/.env
-              sed -i -e "s|\(#\)\(DRUPAL_TEST_WEBDRIVER_CHROME_ARGS\)=|\2=\"--disable-gpu --headless --no-sandbox\"|g" core/.env
-              sed -i -e "s|\(^DRUPAL_NIGHTWATCH_OUTPUT\)=reports/nightwatch|\1=/home/circleci/nightwatch-reports|g" core/.env
-              mkdir -p /home/circleci/nightwatch-reports
-              # Install npm packages
-              cd /home/circleci/project/web/core
-              yarn install
-              cd /home/circleci/project/web/modules/custom
-              yarn install
-              cd /home/circleci/project/web/modules/migrate/nidirect-migrations/migrate_nidirect_node
-              yarn install
-
-              # Fetch database from our defined endpoint
-              git clone --depth=1 ${DB_SOURCE_URL} /home/circleci/dbs
-              # Restore to db service
+              # Install Drupal (or restore from DB dump at this point).
+              ../vendor/bin/drush site-install -y --existing-config
+        - run:
+            name: Test for HTTP 200 response code on Drupal
+            comamnd: |
               cd /home/circleci/project/web
-              gzip -dc /home/circleci/dbs/nidirect--ui-test-sanitised.sql.gz | ../vendor/bin/drush sqlc
-              # Remove downloaded db file.
-              sudo rm -rf /home/circleci/dbs
-              # Clear caches/container rebuild for this environment.
               ../vendor/bin/drush cr
-      - run:
-            name: Copy files into webroot
-            command: |
-              # Copy our build into position (./ suffix ensures hidden files are copied too).
-              sudo rsync -avq /home/circleci/project/. /var/www/html
-      - run:
-            name: UI tests with Nightwatch.js
-            command: yarn --cwd=/var/www/html/web/core test:nightwatch --skiptags core
+              # curl returns exit code 0 even for non-HTTP 200 so use grep to do the check based on response headers.
+              curl -I http://localhost/user/login | grep "HTTP/2 200"
 
 workflows:
   version: 2
@@ -262,16 +214,13 @@ workflows:
       - static_analysis:
           requires:
             - build
-      - config_install:
-          requires:
-            - build
       - unit_kernel_tests:
           requires:
-            - config_install
-#      - deploy:
-#          requires:
-#            - static_analysis
-##            - unit_kernel_tests
+            - build
+  #      - deploy:
+  #          requires:
+  #            - static_analysis
+  #            - unit_kernel_tests
   nightly:
     triggers:
       - schedule:
