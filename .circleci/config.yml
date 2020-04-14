@@ -165,46 +165,47 @@ jobs:
     docker:
       - image: circleci/php:7.3.14-apache-browsers
       - image: circleci/mysql:5.7.27
-      steps:
-        - attach_workspace:
-            at: ./
-        - run:
-            name: Add extra OS and PHP extensions/config
-            command: |
-              sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
-              sudo apt-get install -y libpng-dev mariadb-client rsync
-              sudo docker-php-ext-install gd pdo_mysql
-        - run:
-            name: Copy vhost into place
-            command: |
-              sudo cp .circleci/drupal.vhost /etc/apache2/sites-available/drupal.conf
-        - run:
-            name: Enable web server and vhosts
-            command: |
-              sudo a2enmod rewrite
-              sudo a2dissite 000-default
-              sudo a2ensite drupal
-              sudo service apache2 start
-        - run:
-            name: Install Drupal and configure settings
-            command: |
-              # Should be scaffolded by now.
-              cd /home/circleci/project/web
-              cp sites/default/default.settings.php sites/default/settings.php
-              cp sites/default/default.services.yml sites/default/services.yml
-              # Copy in our environment specific settings to the settings.php file.
-              cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
-              # Copy PHPUnit config into core folder.
-              cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
-              # Install Drupal (or restore from DB dump at this point).
-              ../vendor/bin/drush site-install -y --existing-config
-        - run:
-            name: Test for HTTP 200 response code on Drupal
-            comamnd: |
-              cd /home/circleci/project/web
-              ../vendor/bin/drush cr
-              # curl returns exit code 0 even for non-HTTP 200 so use grep to do the check based on response headers.
-              curl -I http://localhost/user/login | grep "HTTP/2 200"
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
+            sudo apt-get install -y libpng-dev mariadb-client rsync
+            sudo docker-php-ext-install gd pdo_mysql
+      - run:
+          name: Copy vhost into place
+          command: |
+            sudo cp .circleci/drupal.vhost /etc/apache2/sites-available/drupal.conf
+      - run:
+          name: Enable web server and vhosts
+          command: |
+            sudo a2enmod rewrite
+            sudo a2dissite 000-default
+            sudo a2ensite drupal
+            sudo service apache2 start
+      - run:
+          name: Install Drupal and configure settings
+          command: |
+            # Should be scaffolded by now.
+            cd /home/circleci/project/web
+            cp sites/default/default.settings.php sites/default/settings.php
+            cp sites/default/default.services.yml sites/default/services.yml
+            # Copy in our environment specific settings to the settings.php file.
+            cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
+            # Copy PHPUnit config into core folder.
+            cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
+            # Install Drupal (or restore from DB dump at this point).
+            ../vendor/bin/drush site-install -y --existing-config
+      - run:
+          name: Test for HTTP 200 response code on Drupal
+          command: |
+            cd /home/circleci/project/web
+            ../vendor/bin/drush cr
+            # curl returns exit code 0 even for non-HTTP 200 so use grep to do the check based on response headers.
+            curl -I http://localhost/user/login | grep "HTTP/2 200"
+
 
 workflows:
   version: 2
@@ -217,10 +218,10 @@ workflows:
       - unit_kernel_tests:
           requires:
             - build
-  #      - deploy:
-  #          requires:
-  #            - static_analysis
-  #            - unit_kernel_tests
+#      - deploy:
+#          requires:
+#            - static_analysis
+#            - unit_kernel_tests
   nightly:
     triggers:
       - schedule:
