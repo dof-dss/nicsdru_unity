@@ -36,3 +36,5 @@ hidden:
   field_additional_info: true
   field_link: true
   field_summary: true
+  langcode: true
+  search_api_excerpt: true
