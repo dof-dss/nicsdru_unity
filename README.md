@@ -1,6 +1,6 @@
 # Unity sites codebase
 
-[![CircleCI](https://circleci.com/gh/johangant/nicsdru_unity.svg?style=svg)](https://circleci.com/gh/johangant/nicsdru_unity)
+[![CircleCI](https://circleci.com/gh/dof-dss/nicsdru_unity.svg?style=svg)](https://circleci.com/gh/dof-dss/nicsdru_unity)
 
 This source code is for the Unity sites. It is built with Drupal 8 in a multisite configuration.
 
