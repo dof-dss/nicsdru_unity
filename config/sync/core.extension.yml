@@ -20,7 +20,6 @@ module:
   ctools: 0
   datetime: 0
   datetime_range: 0
-  dblog: 0
   diff: 0
   dynamic_page_cache: 0
   editor: 0
@@ -81,11 +80,9 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   ultimate_cron: 0
-  update: 0
   user: 0
   views_contextual_filters_or: 0
   views_custom_cache_tag: 0
-  views_ui: 0
   whatlinkshere: 0
   workflows: 0
   menu_link_content: 1
