@@ -11,6 +11,8 @@ dependencies:
   module:
     - datetime
     - path
+    - scheduler
+    - scheduler_content_moderation_integration
     - text
 _core:
   default_config_hash: lt6_q6-_Xa51csfvbVYNi1iJ7SQwjLL-oN5uSBqyS9c
@@ -55,6 +57,13 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -67,6 +76,18 @@ content:
       display_label: true
     weight: 15
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -100,6 +121,23 @@ content:
       placeholder: ''
       match_limit: 10
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   comment: true
   field_tags: true

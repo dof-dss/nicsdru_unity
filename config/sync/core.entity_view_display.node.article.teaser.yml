@@ -34,3 +34,5 @@ hidden:
   field_enable_toc: true
   field_next_audit_due: true
   field_summary: true
+  langcode: true
+  search_api_excerpt: true
