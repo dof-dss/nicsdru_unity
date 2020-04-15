@@ -9,10 +9,10 @@ commands:
           name: Add GitHub access token for composer
           command: echo 'composer config -g github-oauth.github.com $GITHUB_TOKEN' >> $BASH_ENV
       # Add SSH user key so we can access related repositories as part of our initial clone + composer install command.
-      # d0:8f >> GitHub user key fingerprint
+      # 63:d5 >> GitHub user key fingerprint
       - add_ssh_keys:
           fingerprints:
-            - "d0:8f:a9:c1:8c:f7:fc:06:4e:34:18:4c:53:4d:45:79"
+            - "63:d5:d9:74:c7:9c:80:83:9a:67:da:28:d2:a5:d3:e5"
       - checkout
   composer_tasks:
     description: "Validate and install dependencies using composer"
