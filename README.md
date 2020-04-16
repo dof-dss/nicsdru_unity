@@ -91,5 +91,16 @@ lando -h uregni mysql
 
 All changes **must** be submitted with an appropriate pull request (PR) in GitHub. Direct commits to `master` or `development` are not normally permitted.
 
+## Adding new sites to the multi site codebase
+
+- Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
+- Add your new db to the 'relationships' section of .platform.app.yaml
+- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
+domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
+name should be just 'uregni'.
+- Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
+- Create a new directory /config/sync/<short sitename>
+- It would also be good to add a route for local development to the bottom of web/sites/sites.php
+
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
