@@ -29,12 +29,13 @@ $config['config_split.config_split.local']['status'] = FALSE;
 $config['config_split.config_split.development']['status'] = FALSE;
 $config['config_split.config_split.production']['status'] = FALSE;
 
-// Config readonly settings; default to active if not specified.
-$settings['config_readonly'] = !empty(getenv('CONFIG_READONLY')) ? getenv('CONFIG_READONLY') : 1;
+// Config readonly settings; should be set to 1 or 0 due to type juggling in PHP unable to correctly interpret strings
+// such as 'true' or 'false' from envvars.
+$settings['config_readonly'] = (bool) getenv('CONFIG_READONLY');
 
 // Permit changes via command line.
 if (PHP_SAPI === 'cli') {
-  $settings['config_readonly'] = 0;
+  $settings['config_readonly'] = FALSE;
 }
 
 // Configuration that is allowed to be changed in readonly environments.
