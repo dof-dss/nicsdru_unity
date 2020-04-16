@@ -6,15 +6,14 @@
 
 use Drupal\Core\Installer\InstallerKernel;
 
-if (!isset($platformsh_subsite_id)) {
-  $platformsh_subsite_id = 'database';
+if (!isset($subsite_id)) {
+  $subsite_id = 'database';
 }
 
 $platformsh = new \Platformsh\ConfigReader\Config();
 
-
 // Configure the database.
-$creds = $platformsh->credentials($platformsh_subsite_id);
+$creds = $platformsh->credentials($subsite_id);
 if ($creds) {
   $databases['default']['default'] = [
     'driver' => $creds['scheme'],
@@ -33,15 +32,13 @@ if (!$platformsh->inRuntime()) {
 
 // Configure file paths.
 if (!isset($settings['file_public_path'])) {
-  $settings['file_public_path'] = 'files/' . $platformsh_subsite_id;
-  //$settings['file_public_path'] = 'sites/default/files';
-  //$settings['file_public_path'] = 'sites/' . $platformsh_subsite_id . '/files';
+  $settings['file_public_path'] = 'files/' . $subsite_id;
 }
 if (!isset($settings['file_private_path'])) {
-  $settings['file_private_path'] = $platformsh->appDir . '/private/' . $platformsh_subsite_id;
+  $settings['file_private_path'] = $platformsh->appDir . '/private/' . $subsite_id;
 }
 if (!isset($config['file_temp_path'])) {
-  $config['file_temp_path'] = $platformsh->appDir . '/tmp/' . $platformsh_subsite_id;
+  $config['file_temp_path'] = $platformsh->appDir . '/tmp/' . $subsite_id;
 }
 
 // Configure the default PhpStorage and Twig template cache directories.
@@ -102,7 +99,7 @@ foreach ($platformsh->variables() as $name => $value) {
 
 // Set the project-specific entropy value, used for generating one-time
 // keys and such.
-$settings['hash_salt'] = $settings['hash_salt'] ?? $platformsh->projectEntropy . $platformsh_subsite_id;
+$settings['hash_salt'] = $settings['hash_salt'] ?? $platformsh->projectEntropy . $subsite_id;
 
 // Set the deployment identifier, which is used by some Drupal cache systems.
 $settings['deployment_identifier'] = $settings['deployment_identifier'] ?? $platformsh->treeId;
