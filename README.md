@@ -16,6 +16,7 @@ We recommend Lando for local development. To get started, ensure you have the fo
 2. Composer [https://getcomposer.org/](https://getcomposer.org/)
 3. Platform CLI tool [https://docs.platform.sh/development/cli.html](https://docs.platform.sh/development/cli.html)
 
+- Make a copy of .lando.example.yml naming it .lando.local.yml and edit with your own unique project name.
 - `lando start`
 
 Once ready, you will need to either install Drupal from existing configuration (no content):
