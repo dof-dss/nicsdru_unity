@@ -10,11 +10,37 @@ compose:
   - docker-compose.yml
 env_file:
   - .lando/config/local.envvars
+proxy:
+  appserver:
+    - uregni.gov.uk.lndo.site
+    - liofa.eu.lndo.site
+    - fictcommission.org.lndo.site
 services:
   appserver:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
+  uregni_db:
+    type: mariadb
+    portforward: true
+    creds:
+      user: uregni
+      password: uregni
+      database: uregni
+  liofa_db:
+    type: mariadb
+    portforward: true
+    creds:
+      user: liofa
+      password: liofa
+      database: liofa
+  fictcommission_db:
+    type: mariadb
+    portforward: true
+    creds:
+      user: fictcommission
+      password: fictcommission
+      database: fictcommission
   redis:
     type: redis:5.0
     persist: true
