@@ -124,6 +124,9 @@ jobs:
             cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
             # Copy PHPUnit config into core folder.
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
+            # Workaround to install from config; can't yet due to issue in Drupal core.
+            sed -i -e "s/origins:/minimal:/g" ../config/sync/core.extension.yml
+            sed -i -e "s/profile: origins/profile: minimal:/g" ../config/sync/core.extension.yml
             # Install Drupal (or restore from DB dump at this point).
             ../vendor/bin/drush site-install -y --existing-config
       - run:
