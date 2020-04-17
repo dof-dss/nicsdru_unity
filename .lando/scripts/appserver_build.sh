@@ -42,7 +42,7 @@ fi
 echo "Creating settings.local.php file for each multi site"
 //chmod +w $DRUPAL_ROOT/sites/default
 
-//cp -v /app/.lando/config/drupal.settings.php $DRUPAL_ROOT/sites/default/settings.local.php
+# Copy local settings files for multi site.
 cp -v $DRUPAL_ROOT/sites/fictcommission/lando.settings.local.php $DRUPAL_ROOT/sites/fictcommission/settings.local.php
 cp -v $DRUPAL_ROOT/sites/liofa/lando.settings.local.php $DRUPAL_ROOT/sites/liofa/settings.local.php
 cp -v $DRUPAL_ROOT/sites/uregni/lando.settings.local.php $DRUPAL_ROOT/sites/uregni/settings.local.php
