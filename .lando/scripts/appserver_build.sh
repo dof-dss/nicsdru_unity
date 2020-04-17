@@ -26,10 +26,10 @@ if [ ! -d "/app/web/core" ]; then
 fi
 
 # Create Drupal public files directory and set IO permissions.
-if [ ! -d "/app/web/sites/default/files" ]; then
+if [ ! -d "/app/web/files" ]; then
   echo "Creating public Drupal files directory"
-  mkdir -p /app/web/sites/default/files
-  chmod -R 0777 /app/web/sites/default/files
+  mkdir -p /app/web/files
+  chmod -R 0777 /app/web/files
 fi
 
 # Create Drupal private file directory above web root.
@@ -39,10 +39,13 @@ if [ ! -d "/app/.lando/private" ]; then
 fi
 
 # Set local environment settings.php file.
-echo "Creating settings.local.php file using our Lando copy"
-chmod +w $DRUPAL_ROOT/sites/default
+echo "Creating settings.local.php file for each multi site"
+//chmod +w $DRUPAL_ROOT/sites/default
 
-cp -v /app/.lando/config/drupal.settings.php $DRUPAL_ROOT/sites/default/settings.local.php
+//cp -v /app/.lando/config/drupal.settings.php $DRUPAL_ROOT/sites/default/settings.local.php
+cp -v $DRUPAL_ROOT/sites/fictcommission/lando.settings.local.php $DRUPAL_ROOT/sites/fictcommission/settings.local.php
+cp -v $DRUPAL_ROOT/sites/liofa/lando.settings.local.php $DRUPAL_ROOT/sites/liofa/settings.local.php
+cp -v $DRUPAL_ROOT/sites/uregni/lando.settings.local.php $DRUPAL_ROOT/sites/uregni/settings.local.php
 
 # Copy default services config and replace key values for local development.
 cp -v /app/.lando/config/drupal.services.yml $DRUPAL_SERVICES_FILE
