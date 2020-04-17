@@ -72,8 +72,22 @@ Some key project directories and/or files:
 ├── web/modules/custom (custom code; sourced from other repository by composer)
 ├── web/modules/origins (common internal custom modules; sourced from other repository by composer)
 ├── web/themes/custom/nicsdru_origins_theme (custom base theme) composer)
-└── web/sites/default/settings.php (central Drupal settings file)
+└── web/sites/sites.php (Drupal multi site config file)
 ```
+
+## Adding new sites to the multi site codebase for Lando
+- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
+  domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
+  name should be just 'uregni'.
+- Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
+- Edit the top level .lando.yml file and add a new local site url under proxy/appserver e.g. uregni.gov.uk.lndo.site
+- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example)
+- Edit .lando/config/local.envvars and create a new set of db credentials that match the credentials that you added to .lando.yml
+- Edit .lando/scripts/appserver_build.sh and add a new copy line under the comment 'Copy local settings files for multi site'
+- Edit web/sites/sites.php and add a new mapping from your local url to the short site name.
+- Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
+
+
 
 ## Contribution
 
