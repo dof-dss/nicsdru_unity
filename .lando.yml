@@ -20,21 +20,21 @@ services:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
-  uregni_db:
+  uregni:
     type: mariadb
     portforward: true
     creds:
       user: uregni
       password: uregni
       database: uregni
-  liofa_db:
+  liofa:
     type: mariadb
     portforward: true
     creds:
       user: liofa
       password: liofa
       database: liofa
-  fictcommission_db:
+  fictcommission:
     type: mariadb
     portforward: true
     creds:
