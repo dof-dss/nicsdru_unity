@@ -43,8 +43,8 @@ echo "Creating settings.local.php file for each multi site"
 #chmod +w $DRUPAL_ROOT/sites/default
 for d in /app/web/sites/*/; do
   echo "$d"
-  if [ "$d" != "sites/default" ]; then
-    cp -v $DRUPAL_ROOT/sites/$d/lando.settings.local.php $DRUPAL_ROOT/sites/$d/settings.local.php
+  if [ "$d" != "/app/web/sites/default/" ]; then
+    cp -v $DRUPAL_ROOT/sites/lando.settings.local.php $d/settings.local.php
   fi
 done
 

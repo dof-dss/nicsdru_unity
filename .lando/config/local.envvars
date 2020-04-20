@@ -1,29 +1,13 @@
 # This file shows environment variables for local development only.
 # Values for other environment values should be set from provisioning software and/or vault.
-FICTCOMMISSION_DB_HOST=fictcommission
-FICTCOMMISSION_DB_USER=fictcommission
-FICTCOMMISSION_DB_PASS=fictcommission
-FICTCOMMISSION_DB_NAME=fictcommission
-FICTCOMMISSION_DB_PREFIX=
-FICTCOMMISSION_DB_PORT=3306
-FICTCOMMISSION_DB_NAMESPACE=Drupal\Core\Database\Driver\mysql
-FICTCOMMISSION_DB_DRIVER=mysql
-UREGNI_DB_HOST=uregni
-UREGNI_DB_USER=uregni
-UREGNI_DB_PASS=uregni
-UREGNI_DB_NAME=uregni
-UREGNI_DB_PREFIX=
-UREGNI_DB_PORT=3306
-UREGNI_DB_NAMESPACE=Drupal\Core\Database\Driver\mysql
-UREGNI_DB_DRIVER=mysql
-LIOFA_DB_HOST=liofa
-LIOFA_DB_USER=liofa
-LIOFA_DB_PASS=liofa
-LIOFA_DB_NAME=liofa
-LIOFA_DB_PREFIX=
-LIOFA_DB_PORT=3306
-LIOFA_DB_NAMESPACE=Drupal\Core\Database\Driver\mysql
-LIOFA_DB_DRIVER=mysql
+DB_HOST=database
+DB_USER=drupal8
+DB_PASS=drupal8
+DB_NAME=drupal8
+DB_PREFIX=
+DB_PORT=3306
+DB_NAMESPACE=Drupal\Core\Database\Driver\mysql
+DB_DRIVER=mysql
 FILE_PRIVATE_PATH=../private
 CONFIG_SYNC_DIRECTORY=../config/sync
 REDIS_HOSTNAME=redis
