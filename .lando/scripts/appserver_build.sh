@@ -45,6 +45,7 @@ for d in /app/web/sites/*/; do
   echo "$d"
   if [ "$d" != "/app/web/sites/default/" ]; then
     cp -v $DRUPAL_ROOT/sites/lando.settings.local.php $d/settings.local.php
+    cp -v $DRUPAL_ROOT/sites/site_settings.php $d/settings.php
   fi
 done
 
