@@ -44,7 +44,7 @@ echo "Creating settings.local.php file for each multi site"
 for d in /app/web/sites/*/; do
   echo "$d"
   if [ "$d" != "/app/web/sites/default/" ]; then
-    cp -v $DRUPAL_ROOT/sites/site_settings.php $d/settings.php
+    cp -v $DRUPAL_ROOT/sites/site.settings.php $d/settings.php
   fi
 done
 
