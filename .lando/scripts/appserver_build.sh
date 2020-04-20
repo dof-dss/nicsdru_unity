@@ -40,12 +40,13 @@ fi
 
 # Set local environment settings.php file.
 echo "Creating settings.local.php file for each multi site"
-//chmod +w $DRUPAL_ROOT/sites/default
-
-# Copy local settings files for multi site.
-cp -v $DRUPAL_ROOT/sites/fictcommission/lando.settings.local.php $DRUPAL_ROOT/sites/fictcommission/settings.local.php
-cp -v $DRUPAL_ROOT/sites/liofa/lando.settings.local.php $DRUPAL_ROOT/sites/liofa/settings.local.php
-cp -v $DRUPAL_ROOT/sites/uregni/lando.settings.local.php $DRUPAL_ROOT/sites/uregni/settings.local.php
+#chmod +w $DRUPAL_ROOT/sites/default
+for d in /app/web/sites/*/; do
+  echo "$d"
+  if [ "$d" != "sites/default" ]; then
+    cp -v $DRUPAL_ROOT/sites/$d/lando.settings.local.php $DRUPAL_ROOT/sites/$d/settings.local.php
+  fi
+done
 
 # Copy default services config and replace key values for local development.
 cp -v /app/.lando/config/drupal.services.yml $DRUPAL_SERVICES_FILE
