@@ -82,6 +82,9 @@ all of the credentials to 'drupal8' as has been done with the other sites)
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
 - N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
 
+Under multi site, Lando commands may be run as follows:
+lando drush -l uregni cr
+lando -h uregni mysql
 
 
 ## Contribution
