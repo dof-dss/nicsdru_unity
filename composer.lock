@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "642a174a7b92f6a3c04e275dc0f7233f",
+    "content-hash": "2aad266b3a144eae623989a86f5d3f63",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1911,17 +1911,17 @@
             "time": "2020-04-01T13:45:08+00:00"
         },
         {
-            "name": "dof-dss/nicsdru_origins_theme",
-            "version": "0.2.0",
+            "name": "dof-dss/nicsdru_unity_theme",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dof-dss/nicsdru_origins_theme.git",
-                "reference": "8c78b615eed600ea7bf76a1d3dab8df4374c36dd"
+                "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
+                "reference": "39e64e3c98cbc69197457879eaeba80db992228f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_theme/zipball/8c78b615eed600ea7bf76a1d3dab8df4374c36dd",
-                "reference": "8c78b615eed600ea7bf76a1d3dab8df4374c36dd",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/39e64e3c98cbc69197457879eaeba80db992228f",
+                "reference": "39e64e3c98cbc69197457879eaeba80db992228f",
                 "shasum": ""
             },
             "require": {
@@ -1938,13 +1938,13 @@
                     "role": "Maintainer"
                 }
             ],
-            "description": "Drupal 8 base theme",
-            "homepage": "https://github.com/dof-dss/nicsdru_origins_theme",
+            "description": "Drupal 8 theme",
+            "homepage": "https://github.com/dof-dss/nicsdru_unity_theme",
             "keywords": [
                 "drupal",
                 "theme"
             ],
-            "time": "2020-03-26T11:14:03+00:00"
+            "time": "2020-03-30T22:23:16+00:00"
         },
         {
             "name": "drupal/address",
