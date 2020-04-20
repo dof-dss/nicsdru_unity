@@ -80,6 +80,7 @@ Some key project directories and/or files:
 all of the credentials to 'drupal8' as has been done with the other sites)
 - Edit web/sites/sites.php and add a new mapping from your local url to the short site name.
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
+- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
 
 
 
