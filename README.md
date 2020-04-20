@@ -77,8 +77,8 @@ Some key project directories and/or files:
   name should be just 'uregni'.
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
 - Edit the top level .lando.yml file and add a new local site url under proxy/appserver e.g. uregni.gov.uk.lndo.site
-- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example)
-- Edit .lando/config/local.envvars and create a new set of db credentials that match the credentials that you added to .lando.yml
+- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
+all of the credentials to 'drupal8' as has been done with the other sites)
 - Edit web/sites/sites.php and add a new mapping from your local url to the short site name.
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
 
