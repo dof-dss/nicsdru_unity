@@ -75,7 +75,6 @@ Some key project directories and/or files:
 - Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
   domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
   name should be just 'uregni'.
-- Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
 - Edit the top level .lando.yml file and add a new local site url under proxy/appserver e.g. uregni.gov.uk.lndo.site
 - Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
 all of the credentials to 'drupal8' as has been done with the other sites)
