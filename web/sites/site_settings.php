@@ -83,7 +83,25 @@ $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_n
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/sync/' . $subsite_id;
 
+// Configure file paths.
+if (!isset($settings['file_public_path'])) {
+  $settings['file_public_path'] = 'files/' . $subsite_id;
+}
+
+$databases['default']['default'] = [
+  'database' => getenv('DB_NAME'),
+  'username' => getenv('DB_USER'),
+  'password' => getenv('DB_PASS'),
+  'prefix' => getenv('DB_PREFIX'),
+  'host' => $subsite_id,
+  'port' => getenv('DB_PORT'),
+  'namespace' => getenv('DB_NAMESPACE'),
+  'driver' => getenv('DB_DRIVER'),
+];
+
 // Local settings. These come last so that they can override anything.
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+
