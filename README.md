@@ -19,10 +19,6 @@ We recommend Lando for local development. To get started, ensure you have the fo
 - Make a copy of .lando.example.yml naming it .lando.local.yml and edit with your own unique project name.
 - `lando start`
 
-Once ready, you will need to either install Drupal from existing configuration (no content):
-
-`lando drush si --existing-config`
-
 Or, if available, you may also fetch the database and import this:
 
 `platform db:dump --stdout unity-db.sql | lando db-import unity-db.sql` (you'll need to specify project ID and environment ID)
