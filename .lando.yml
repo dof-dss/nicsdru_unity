@@ -24,23 +24,23 @@ services:
     type: mariadb
     portforward: true
     creds:
-      user: uregni
-      password: uregni
-      database: uregni
+      user: drupal8
+      password: drupal8
+      database: drupal8
   liofa:
     type: mariadb
     portforward: true
     creds:
-      user: liofa
-      password: liofa
-      database: liofa
+      user: drupal8
+      password: drupal8
+      database: drupal8
   fictcommission:
     type: mariadb
     portforward: true
     creds:
-      user: fictcommission
-      password: fictcommission
-      database: fictcommission
+      user: drupal8
+      password: drupal8
+      database: drupal8
   redis:
     type: redis:5.0
     persist: true
