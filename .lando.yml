@@ -10,11 +10,37 @@ compose:
   - docker-compose.yml
 env_file:
   - .lando/config/local.envvars
+proxy:
+  appserver:
+    - uregni.gov.uk.lndo.site
+    - liofa.eu.lndo.site
+    - fictcommission.org.lndo.site
 services:
   appserver:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
+  uregni:
+    type: mariadb
+    portforward: true
+    creds:
+      user: drupal8
+      password: drupal8
+      database: drupal8
+  liofa:
+    type: mariadb
+    portforward: true
+    creds:
+      user: drupal8
+      password: drupal8
+      database: drupal8
+  fictcommission:
+    type: mariadb
+    portforward: true
+    creds:
+      user: drupal8
+      password: drupal8
+      database: drupal8
   redis:
     type: redis:5.0
     persist: true
