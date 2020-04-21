@@ -14,9 +14,6 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-// Site hash salt.
-$settings['hash_salt'] = getenv('HASH_SALT');
-
 // Temp directory.
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 
@@ -44,6 +41,7 @@ $config['geolocation.settings']['google_map_api_key'] = getenv('GOOGLE_MAP_API_K
 // Environment indicator defaults.
 $env_colour = !empty(getenv('SIMPLEI_ENV_COLOR')) ? getenv('SIMPLEI_ENV_COLOR') : '#000000';;
 $env_name = !empty(getenv('SIMPLEI_ENV_NAME')) ? getenv('SIMPLEI_ENV_NAME') : getenv('PLATFORM_BRANCH');
+$settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 
 // If we're running on platform.sh, check for and load relevant settings.
 if (!empty(getenv('PLATFORM_BRANCH'))) {
@@ -73,27 +71,15 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   }
 } else {
   // Lando config.
-  $databases['default']['default'] = [
-    'database' => getenv('DB_NAME'),
-    'username' => getenv('DB_USER'),
-    'password' => getenv('DB_PASS'),
-    'prefix' => getenv('DB_PREFIX'),
-    'host' => $subsite_id,
-    'port' => getenv('DB_PORT'),
-    'namespace' => getenv('DB_NAMESPACE'),
-    'driver' => getenv('DB_DRIVER'),
-  ];
-
-  $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
-  $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
+  if (file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
+    include $app_root . '/' . $site_path . '/../settings.lando.php';
+  }
 }
 
 // Configure file paths.
 if (!isset($settings['file_public_path'])) {
   $settings['file_public_path'] = 'files/' . $subsite_id;
 }
-
-$settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 
 // Set up a config sync directory.
 //
