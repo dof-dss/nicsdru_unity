@@ -44,9 +44,6 @@ cp -v /app/.lando/config/drupal.services.yml $DRUPAL_SERVICES_FILE
 echo "Copying Redis service overrides"
 cp -v /app/.lando/config/redis.services.yml $DRUPAL_ROOT/sites/default/redis.services.yml
 
-# Close off write access to the folder.
-chmod -w $DRUPAL_ROOT/sites/default
-
 # Set Simple test variables and put PHPUnit config in place.
 if [ ! -f "${DRUPAL_ROOT}/core/phpunit.xml" ]; then
   echo "Adding localised PHPUnit config to Drupal webroot"
