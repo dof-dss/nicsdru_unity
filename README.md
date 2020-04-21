@@ -16,7 +16,6 @@ We recommend Lando for local development. To get started, ensure you have the fo
 2. Composer [https://getcomposer.org/](https://getcomposer.org/)
 3. Platform CLI tool [https://docs.platform.sh/development/cli.html](https://docs.platform.sh/development/cli.html)
 
-- Make a copy of .lando.example.yml naming it .lando.local.yml and edit with your own unique project name.
 - `lando start`
 
 Or, if available, you may also fetch the database and import this:
@@ -70,22 +69,6 @@ Some key project directories and/or files:
 ├── web/themes/custom/nicsdru_origins_theme (custom base theme) composer)
 └── web/sites/sites.php (Drupal multi site config file)
 ```
-
-## Adding new sites to the multi site codebase for Lando
-- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
-  domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
-  name should be just 'uregni'.
-- Edit the top level .lando.yml file and add a new local site url under proxy/appserver e.g. uregni.gov.uk.lndo.site
-- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
-all of the credentials to 'drupal8' as has been done with the other sites)
-- Edit web/sites/sites.php and add a new mapping from your local url to the short site name.
-- Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
-- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
-
-Under multi site, Lando commands may be run as follows:
-lando drush -l uregni cr
-lando -h uregni mysql
-
 
 ## Contribution
 
