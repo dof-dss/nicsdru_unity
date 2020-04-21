@@ -45,9 +45,6 @@ $config['geolocation.settings']['google_map_api_key'] = getenv('GOOGLE_MAP_API_K
 $env_colour = !empty(getenv('SIMPLEI_ENV_COLOR')) ? getenv('SIMPLEI_ENV_COLOR') : '#000000';;
 $env_name = !empty(getenv('SIMPLEI_ENV_NAME')) ? getenv('SIMPLEI_ENV_NAME') : getenv('PLATFORM_BRANCH');
 
-// Extract the directory name for multi site identification.
-$subsite_id = basename(__DIR__);
-
 // If we're running on platform.sh, check for and load relevant settings.
 if (!empty(getenv('PLATFORM_BRANCH'))) {
 
