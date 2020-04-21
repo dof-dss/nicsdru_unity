@@ -71,6 +71,26 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
       include $app_root . '/' . $site_path . '/../settings.development.php';
   }
+} else {
+  // Lando config.
+  $databases['default']['default'] = [
+    'database' => getenv('DB_NAME'),
+    'username' => getenv('DB_USER'),
+    'password' => getenv('DB_PASS'),
+    'prefix' => getenv('DB_PREFIX'),
+    'host' => $subsite_id,
+    'port' => getenv('DB_PORT'),
+    'namespace' => getenv('DB_NAMESPACE'),
+    'driver' => getenv('DB_DRIVER'),
+  ];
+
+  $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
+  $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
+}
+
+// Configure file paths.
+if (!isset($settings['file_public_path'])) {
+  $settings['file_public_path'] = 'files/' . $subsite_id;
 }
 
 $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);

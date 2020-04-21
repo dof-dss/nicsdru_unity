@@ -31,9 +31,6 @@ if (!$platformsh->inRuntime()) {
 }
 
 // Configure file paths.
-if (!isset($settings['file_public_path'])) {
-  $settings['file_public_path'] = 'files/' . $subsite_id;
-}
 if (!isset($settings['file_private_path'])) {
   $settings['file_private_path'] = $platformsh->appDir . '/private/' . $subsite_id;
 }
