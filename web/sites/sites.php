@@ -56,30 +56,17 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
-$platformsh = new \Platformsh\ConfigReader\Config();
-
-if (!$platformsh->inRuntime()) {
-  return;
-}
-
-// The following block adds a $sites[] entry for each subdomain that is defined
-// in routes.yaml.
-// Note that the route retrieved will be fully expanded at this point (so the region,
-// project id, branch name will be already filled in for dev sites).
-// Note also that the corresponding directory in sites will be just up to the first dot
-// in the domain name, so the route "https://uregni.gov.uk.{default}/" will correspond
-// to the sites/uregni directory.
-foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route) {
-  $host = parse_url($route['url'], PHP_URL_HOST);
-  if ($host !== FALSE) {
-    $subdomain = substr($host, 0, strpos($host,'.'));
-    $sites[$host] = $subdomain;
+// Different sites setup depending on whether we are running on
+// Platform.sh or local Lando
+if (!empty(getenv('PLATFORM_BRANCH'))) {
+  // Running on Platform.sh, include appropriate sites file.
+  if (file_exists($app_root . '/' . $site_path . '/../sites.platformsh.php')) {
+    include $app_root . '/' . $site_path . '/../sites.platformsh.php';
+  }
+} else {
+  // Running in Lando locally, include appropriate sites file.
+  if (file_exists($app_root . '/' . $site_path . '/../sites.lando.php')) {
+    include $app_root . '/' . $site_path . '/../sites.lando.php';
   }
 }
 
-// Add additional domain mappings here.
-
-// Set up local dev sites.
-$sites['fictcommission.org.local'] = 'fictcommission';
-$sites['liofa.eu.local'] = 'liofa';
-$sites['uregni.gov.uk.local'] = 'uregni';
