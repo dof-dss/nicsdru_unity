@@ -65,8 +65,8 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   }
 } else {
   // Running in Lando locally, include appropriate sites file.
-  if (file_exists($app_root . '/' . $site_path . '/../sites.lando.php')) {
-    include $app_root . '/' . $site_path . '/../sites.lando.php';
+  if (file_exists($app_root . '/sites/sites.lando.php')) {
+    include $app_root . '/sites/sites.lando.php';
   }
 }
 
