@@ -91,7 +91,7 @@ lando -h uregni mysql
 
 All changes **must** be submitted with an appropriate pull request (PR) in GitHub. Direct commits to `master` or `development` are not normally permitted.
 
-## Adding new sites to the multi site codebase (for Platform.sh)
+## Adding new sites to the multi site codebase
 
 - Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
 - Add your new db to the 'relationships' section of .platform.app.yaml
@@ -109,6 +109,10 @@ all of the credentials to 'drupal8' as has been done with the other sites)
 Under multi site, Lando commands may be run as follows:
 lando drush -l uregni cr
 lando -h uregni mysql
+
+After connecting to the Platform server using 'platform ssh', drush commands may be run as follows (in the /app/web directory):
+../vendor/bin/drush -l uregni cr
+
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
