@@ -91,7 +91,7 @@ lando -h uregni mysql
 
 All changes **must** be submitted with an appropriate pull request (PR) in GitHub. Direct commits to `master` or `development` are not normally permitted.
 
-## Adding new sites to the multi site codebase
+## Adding new sites to the multi site codebase (for Platform.sh)
 
 - Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
 - Add your new db to the 'relationships' section of .platform.app.yaml
@@ -99,8 +99,16 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
 name should be just 'uregni'.
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
-- Create a new directory /config/sync/<short sitename>
-- It would also be good to add a route for local development to the bottom of web/sites/sites.php
+- Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
+- Edit the top level .lando.yml file and add a new local site url under proxy/appserver e.g. uregni.gov.uk.lndo.site
+- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
+all of the credentials to 'drupal8' as has been done with the other sites)
+- Edit web/sites/sites.lando.php and add a new mapping from your local url to the short site name.
+- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
+
+Under multi site, Lando commands may be run as follows:
+lando drush -l uregni cr
+lando -h uregni mysql
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
