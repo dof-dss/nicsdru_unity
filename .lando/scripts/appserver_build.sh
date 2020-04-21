@@ -38,16 +38,6 @@ if [ ! -d "/app/.lando/private" ]; then
   mkdir -p /app.lando//private
 fi
 
-# Set local environment settings.php file.
-echo "Creating settings.local.php file for each multi site"
-#chmod +w $DRUPAL_ROOT/sites/default
-for d in /app/web/sites/*/; do
-  echo "$d"
-  if [ "$d" != "/app/web/sites/default/" ]; then
-    cp -v $DRUPAL_ROOT/sites/site.settings.php $d/settings.php
-  fi
-done
-
 # Copy default services config and replace key values for local development.
 cp -v /app/.lando/config/drupal.services.yml $DRUPAL_SERVICES_FILE
 
