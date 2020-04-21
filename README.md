@@ -113,6 +113,8 @@ lando -h uregni mysql
 After connecting to the Platform server using 'platform ssh', drush commands may be run as follows (in the /app/web directory):
 ../vendor/bin/drush -l uregni cr
 
+Also, if you run platform CLI commands like 'platform sql' you will be asked to choose between the multi sites.
+
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
