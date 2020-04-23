@@ -18,10 +18,6 @@ We recommend Lando for local development. To get started, ensure you have the fo
 
 - `lando start`
 
-Once ready, you will need to either install Drupal from existing configuration (no content):
-
-`lando drush si --existing-config`
-
 Or, if available, you may also fetch the database and import this:
 
 `platform db:dump --stdout unity-db.sql | lando db-import unity-db.sql` (you'll need to specify project ID and environment ID)
@@ -71,12 +67,40 @@ Some key project directories and/or files:
 ├── web/modules/custom (custom code; sourced from other repository by composer)
 ├── web/modules/origins (common internal custom modules; sourced from other repository by composer)
 ├── web/themes/custom/nicsdru_origins_theme (custom base theme) composer)
-└── web/sites/default/settings.php (central Drupal settings file)
+└── web/sites/sites.php (Drupal multi site config file)
 ```
 
 ## Contribution
 
 All changes **must** be submitted with an appropriate pull request (PR) in GitHub. Direct commits to `master` or `development` are not normally permitted.
+
+## Adding new sites to the multi site codebase
+
+- Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
+- Add your new db to the 'relationships' section of .platform.app.yaml
+- Add new routes to .platform/routes.yaml, one for domain name of the new site and another for the www redirect 
+(use 'uregni' as an example)
+- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
+domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
+name should be just 'uregni'.
+- Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
+- Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
+- Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver 
+e.g. uregni.gov.uk.lndo.site
+- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
+all of the credentials to 'drupal8' as has been done with the other sites)
+- Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name.
+- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
+
+Under multi site, Lando commands may be run as follows:
+lando drush -l uregni cr
+lando -h uregni mysql
+
+After connecting to the Platform server using 'platform ssh', drush commands may be run as follows (in the /app/web directory):
+../vendor/bin/drush -l uregni cr
+
+Also, if you run platform CLI commands like 'platform sql' you will be asked to choose between the multi sites.
+
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.

@@ -7,19 +7,12 @@
 //
 // See https://api.drupal.org/api/drupal/sites!default!default.settings.php/8
 $databases = [];
-$config_directories = [];
 $settings['update_free_access'] = FALSE;
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
 ];
-
-// Site hash salt.
-$settings['hash_salt'] = getenv('HASH_SALT');
-
-// Configuration sync base/default directory.
-$settings['config_sync_directory'] = getenv('CONFIG_SYNC_DIRECTORY');
 
 // Temp directory.
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
@@ -29,13 +22,12 @@ $config['config_split.config_split.local']['status'] = FALSE;
 $config['config_split.config_split.development']['status'] = FALSE;
 $config['config_split.config_split.production']['status'] = FALSE;
 
-// Config readonly settings; should be set to 1 or 0 due to type juggling in PHP unable to correctly interpret strings
-// such as 'true' or 'false' from envvars.
-$settings['config_readonly'] = (bool) getenv('CONFIG_READONLY');
+// Config readonly settings; default to active if not specified.
+$settings['config_readonly'] = !empty(getenv('CONFIG_READONLY')) ? getenv('CONFIG_READONLY') : 1;
 
 // Permit changes via command line.
 if (PHP_SAPI === 'cli') {
-  $settings['config_readonly'] = FALSE;
+  $settings['config_readonly'] = 0;
 }
 
 // Configuration that is allowed to be changed in readonly environments.
@@ -49,11 +41,13 @@ $config['geolocation.settings']['google_map_api_key'] = getenv('GOOGLE_MAP_API_K
 // Environment indicator defaults.
 $env_colour = !empty(getenv('SIMPLEI_ENV_COLOR')) ? getenv('SIMPLEI_ENV_COLOR') : '#000000';;
 $env_name = !empty(getenv('SIMPLEI_ENV_NAME')) ? getenv('SIMPLEI_ENV_NAME') : getenv('PLATFORM_BRANCH');
+$settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 
 // If we're running on platform.sh, check for and load relevant settings.
 if (!empty(getenv('PLATFORM_BRANCH'))) {
-  if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
-    include $app_root . '/' . $site_path . '/settings.platformsh.php';
+
+  if (file_exists($app_root . '/' . $site_path . '/../settings.platformsh.php')) {
+    include $app_root . '/' . $site_path . '/../settings.platformsh.php';
   }
 
   // Environment specific settings and services.
@@ -72,12 +66,25 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
     default:
       // Default to use development settings/services for general platform.sh environments.
       $config['config_split.config_split.development']['status'] = TRUE;
-      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.development.yml';
-      include $app_root . '/' . $site_path . '/settings.development.php';
+      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
+      include $app_root . '/' . $site_path . '/../settings.development.php';
+  }
+} else {
+  // Lando config.
+  if (file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
+    include $app_root . '/' . $site_path . '/../settings.lando.php';
   }
 }
 
-$settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
+// Configure file paths.
+if (!isset($settings['file_public_path'])) {
+  $settings['file_public_path'] = 'files/' . $subsite_id;
+}
+
+// Set up a config sync directory.
+//
+// This is defined inside the read-only "config" directory, deployed via Git.
+$settings['config_sync_directory'] = '../config/sync/' . $subsite_id;
 
 // Local settings. These come last so that they can override anything.
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {

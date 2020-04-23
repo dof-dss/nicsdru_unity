@@ -17,6 +17,7 @@ console/
 
 # Ignore Drupal's file directory
 /web/sites/*/files/
+/web/files
 /private
 
 # Ignore SimpleTest multi-site environment.
@@ -39,4 +40,3 @@ console/
 
 # Any local tooling/Lando things we want to ignore.
 web/sites/default/redis.services.yml
-.lando.example.yml
