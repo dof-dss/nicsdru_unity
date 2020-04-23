@@ -78,7 +78,7 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 
 - Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
 - Add your new db to the 'relationships' section of .platform.app.yaml
-- Add new routes to .platform/routes.yaml, one for domain name of the new site and one for the www redirect 
+- Add new routes to .platform/routes.yaml, one for domain name of the new site and another for the www redirect 
 (use 'uregni' as an example)
 - Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
 domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
