@@ -7,15 +7,25 @@ db:
   # the CLI will return an error.
   type: mariadb:10.4
   # The disk attribute is the size of the persistent disk (in MB) allocated to the service.
-  disk: 4096
+  disk: 8192
   configuration:
     schemas:
-      - main
+      - fictcommissiondb
+      - liofadb
+      - uregnidb
     endpoints:
-      admin:
-        default_schema: main
+      fictcommission:
+        default_schema: fictcommissiondb
         privileges:
-          main: admin
+          fictcommissiondb: admin
+      uregni:
+        default_schema: uregnidb
+        privileges:
+          uregnidb: admin
+      liofa:
+        default_schema: liofadb
+        privileges:
+          liofadb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
