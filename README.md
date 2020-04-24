@@ -101,6 +101,11 @@ After connecting to the Platform server using 'platform ssh', drush commands may
 
 Also, if you run platform CLI commands like 'platform sql' you will be asked to choose between the multi sites.
 
+- N.B. "There can be only one" - because the local Lando site URLs take the form 'uregni.gov.uk.lndo.site' and do not include the 
+Lando app name, you may only have one set of sites installed on your local machine i.e. it is not possible to clone this repo
+into /apps/unity and run 'lando start' and then subsequently clone it into /apps/unity2 and run 'lando start' again as the 
+site URLs will be duplicated and Lando will attempt to set up 'uregni.gov.uk.lndo.site' pointing to both.
+
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
