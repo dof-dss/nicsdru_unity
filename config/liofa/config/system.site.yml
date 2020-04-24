@@ -1,0 +1,14 @@
+name: 'LIOFA Unity'
+mail: martin@theduttons.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 68dc8bd1-cbf6-41a6-806d-38f9396286cd

@@ -1,0 +1,12 @@
+uuid: 638f09be-840d-4ad7-8cf1-c0613a1f6cee
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+_core:
+  default_config_hash: D-NCOHXv_YM1NsnwdGlvePV73a_eQoLyxNJ-mxJ7erQ
+id: menu_link_content.token
+label: Token
+targetEntityType: menu_link_content
+cache: true
