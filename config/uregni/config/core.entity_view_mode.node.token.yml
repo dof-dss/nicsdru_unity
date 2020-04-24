@@ -1,0 +1,12 @@
+uuid: 0dc8efe3-9c5e-429d-a77c-addf3e22bb60
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: QpSCuCmwn-TMN3gzCbI3OY00dzdKC1mVwzAz2d6uPY4
+id: node.token
+label: Token
+targetEntityType: node
+cache: true
