@@ -1,0 +1,25 @@
+uuid: 460f3a1c-d4e3-468d-a779-717b973e9774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.publication
+  module:
+    - text
+_core:
+  default_config_hash: OGUhgCvZhfOqpBwYm4MqL_Ap28GwUVc3IERCI1Qibj8
+id: node.publication.body
+field_name: body
+entity_type: node
+bundle: publication
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
