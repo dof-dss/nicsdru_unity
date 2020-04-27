@@ -1,5 +1,7 @@
 <?php
 
+// @codingStandardsIgnoreFile
+
 // Multi site configuration for Platform.sh.
 
 $platformsh = new \Platformsh\ConfigReader\Config();
