@@ -1,0 +1,12 @@
+uuid: 1c8ee3a9-8c7d-419e-be5f-c1cdb55d5889
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+_core:
+  default_config_hash: E7jyRDsqq1-VyW4Dc_Zzn-KpK-6xtIUJyjX_DqSl9Ug
+id: block.token
+label: Token
+targetEntityType: block
+cache: true

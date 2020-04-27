@@ -1,0 +1,14 @@
+name: Uregni
+mail: a@a.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: b53fe067-cb99-4fc9-a2f0-72136e53bd33
