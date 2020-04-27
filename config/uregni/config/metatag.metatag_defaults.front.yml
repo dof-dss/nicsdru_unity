@@ -1,0 +1,11 @@
+uuid: 684f7e15-f650-4dec-a40c-71556cba1e14
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 70bSXdfg3nlJ_VvJ6BdyAONpvgMBG9FgnlkiIaihgxU
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
