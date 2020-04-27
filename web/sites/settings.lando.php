@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @file
+ * Lando local development override configuration file.
+ */
+
+use Drupal\Core\Installer\InstallerKernel;
+
 $databases['default']['default'] = [
   'database' => getenv('DB_NAME'),
   'username' => getenv('DB_USER'),
@@ -27,7 +34,8 @@ $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV
 // Due to issues with enabling Redis during install/config import. We cannot enable the cache backend by default.
 // Once you have a site/db installed. Enable the Redis module and change the $redis_enabled to true.
 $redis_enabled = FALSE;
-if ($redis_enabled && !\Drupal\Core\Installer\InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')){
+if ($redis_enabled && !InstallerKernel::installationAttempted() &&
+    extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host'] = getenv('REDIS_HOSTNAME');
   $settings['redis.connection']['port'] = getenv('REDIS_PORT');
@@ -51,7 +59,11 @@ if ($redis_enabled && !\Drupal\Core\Installer\InstallerKernel::installationAttem
       ],
       'cache.backend.redis' => [
         'class' => 'Drupal\redis\Cache\CacheBackendFactory',
-        'arguments' => ['@redis.factory', '@cache_tags_provider.container', '@serialization.phpserialize'],
+        'arguments' => [
+          '@redis.factory',
+          '@cache_tags_provider.container',
+          '@serialization.phpserialize'
+        ],
       ],
       'cache.container' => [
         'class' => '\Drupal\redis\Cache\PhpRedis',
