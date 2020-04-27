@@ -1,11 +1,14 @@
 <?php
 
-// Default Drupal 8 settings.
-//
-// These are already explained with detailed comments in Drupal's
-// default.settings.php file.
-//
-// See https://api.drupal.org/api/drupal/sites!default!default.settings.php/8
+/**
+ * @file
+ * Default Drupal 8 settings.
+ *
+ * These are already explained with detailed comments in Drupal's
+ * default.settings.php file.
+ * See https://api.drupal.org/api/drupal/sites!default!default.settings.php/8
+ */
+
 $databases = [];
 $settings['update_free_access'] = FALSE;
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
@@ -69,7 +72,8 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
       include $app_root . '/' . $site_path . '/../settings.development.php';
   }
-} else {
+}
+else {
   // Lando config.
   if (file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
     include $app_root . '/' . $site_path . '/../settings.lando.php';

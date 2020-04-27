@@ -5,9 +5,9 @@ commands:
   checkout_code:
     description: "Handle composer access tokens, SSH key fingerprints and code checkout"
     steps:
-      - run:
-          name: Add GitHub access token for composer
-          command: echo 'composer config -g github-oauth.github.com $GITHUB_TOKEN' >> $BASH_ENV
+#      - run:
+#          name: Add GitHub access token for composer
+#          command: echo 'composer config -g github-oauth.github.com $GITHUB_TOKEN' >> $BASH_ENV
       # Add SSH user key so we can access related repositories as part of our initial clone + composer install command.
       # 63:d5 >> GitHub user key fingerprint
       - add_ssh_keys:
@@ -81,7 +81,7 @@ jobs:
           at: ./
       - run:
           name: PHPCS static analysis
-          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom"
+          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/sites /home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom /home/circleci/project/web/profiles/custom"
       - run:
           name: Deprecated code check
           command: |
@@ -93,6 +93,8 @@ jobs:
     docker:
       - image: circleci/php:7.3.14-apache-browsers
       - image: circleci/mysql:5.7.27
+        environment:
+          - CONFIG_SYNC_DIRECTORY: "../config/uregni/config"
     steps:
       - attach_workspace:
           at: ./
@@ -124,9 +126,11 @@ jobs:
             cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
             # Copy PHPUnit config into core folder.
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
-            # Workaround to install from config; can't yet due to issue in Drupal core.
-            sed -i -e "s/origins:/minimal:/g" ../config/sync/core.extension.yml
-            sed -i -e "s/profile: origins/profile: minimal:/g" ../config/sync/core.extension.yml
+            # >> Workaround to install from config; can't yet due to issue in Drupal core.
+            # >> Drupal multisite: we'll use uregni config as representative for the codebase as we don't have
+            # >> a generic/all-purpose config set to install from.
+            sed -i -e "s/origins:/minimal:/g" ../config/uregni/config/core.extension.yml
+            sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
             # Install Drupal (or restore from DB dump at this point).
             ../vendor/bin/drush site-install -y --existing-config
       - run:
