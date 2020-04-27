@@ -1,5 +1,5 @@
-name: 'FICTCOMMISSION Unity'
-mail: martin@theduttons.org
+name: FICTCOMMISSION
+mail: a@a.com
 slogan: ''
 page:
   403: ''
@@ -11,4 +11,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 8a2e7488-6fc5-4543-aaf9-192c1d0c2c33
+uuid: 9a8eae0d-15d6-4201-95af-cd6090ce21ce
