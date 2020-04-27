@@ -11620,16 +11620,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "0488315187f0040f2682fb15eebb7bb01c3c3c9e"
+                "reference": "fa9b782132f1a4a63e68eb67b256bb64ccf5145a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/0488315187f0040f2682fb15eebb7bb01c3c3c9e",
-                "reference": "0488315187f0040f2682fb15eebb7bb01c3c3c9e",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/fa9b782132f1a4a63e68eb67b256bb64ccf5145a",
+                "reference": "fa9b782132f1a4a63e68eb67b256bb64ccf5145a",
                 "shasum": ""
             },
             "require": {
@@ -11653,7 +11653,7 @@
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
-            "time": "2020-04-14T09:24:28+00:00"
+            "time": "2020-04-27T12:46:28+00:00"
         },
         {
             "name": "drupal/coder",

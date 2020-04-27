@@ -1,5 +1,5 @@
-name: 'LIOFA Unity'
-mail: martin@theduttons.org
+name: LIOFA
+mail: a@a.com
 slogan: ''
 page:
   403: ''
@@ -11,4 +11,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 68dc8bd1-cbf6-41a6-806d-38f9396286cd
+uuid: 62c979ba-9daf-46ce-b703-373468993e28
