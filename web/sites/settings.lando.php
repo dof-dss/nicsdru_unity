@@ -18,7 +18,7 @@ $databases['default']['default'] = [
   'driver' => getenv('DB_DRIVER'),
 ];
 
-$databases[$subsite_id . '7']['default'] = array (
+$databases[$subsite_id . '7']['default'] = [
   'database' => getenv('MIGRATE_SOURCE_DB_NAME'),
   'username' => getenv('MIGRATE_SOURCE_DB_USER'),
   'password' => getenv('MIGRATE_SOURCE_DB_PASS'),
@@ -27,7 +27,7 @@ $databases[$subsite_id . '7']['default'] = array (
   'port' => getenv('DB_PORT'),
   'namespace' => getenv('DB_NAMESPACE'),
   'driver' => getenv('DB_DRIVER'),
-);
+];
 
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
