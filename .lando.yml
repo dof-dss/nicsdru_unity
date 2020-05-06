@@ -27,6 +27,13 @@ services:
       user: drupal8
       password: drupal8
       database: drupal8
+  uregni7:
+    type: mariadb
+    portforward: true
+    creds:
+      user: drupal7
+      password: drupal7
+      database: drupal7
   liofa:
     type: mariadb
     portforward: true
