@@ -40,7 +40,7 @@ Note that your database host must have a '7' suffix, please make sure that you d
 `lando drupal moi migrate_upgrade` (or you could do this from the admin screens)
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
-`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=http://www.uregni.goc.uk --configure-only`
+`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=http://www.uregni.gov.uk --configure-only`
 (change the db host from 'uregni7' if you are migrating another site)
 
 4. Install the migrate_tools module
