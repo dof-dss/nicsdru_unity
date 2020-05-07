@@ -30,21 +30,22 @@ Or, if available, you may also fetch the database and import this:
 ## Running migrations
 
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
-We will take Uregni as an example and assume that we have a dump file 'uregni.sql'.
+We will take Uregni as an example and assume that we have a dump file 'uregni.sql' , this file should be placed in the
+imports/data directory.
+Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files 
+directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist.
 
 1. Import the database into the Drupal 7 database host for your chosen site. Using our example site this will be 'uregni7'. 
 Note that your database host must have a '7' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
-`lando db-import -h uregni7 uregni.sql`
+`lando db-import -h uregni7 ./imports/data/uregni.sql`
 
-2. Install the migrate_upgrade module
-`lando drupal moi migrate_upgrade` (or you could do this from the admin screens)
+2. Install the migrate_upgrade module (listed as 'Drupal Upgrade' at /admin/modules)
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
-`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=http://www.uregni.gov.uk --configure-only`
-(change the db host from 'uregni7' if you are migrating another site)
+`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=/app/imports/files --configure-only`
+(change the db host from 'uregni7' and the file path if you are migrating another site)
 
 4. Install the migrate_tools module
-`lando drupal moi migrate_tools` (or you could do this from the admin screens)
 
 5. You should now have a long list of migrations in the database, which may be seen by running this command:
 `lando drush migrate-status` (from the appropriate site directory e.g. web/sites/uregni)
