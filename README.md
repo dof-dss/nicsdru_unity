@@ -16,14 +16,45 @@ We recommend Lando for local development. To get started, ensure you have the fo
 2. Composer [https://getcomposer.org/](https://getcomposer.org/)
 3. Platform CLI tool [https://docs.platform.sh/development/cli.html](https://docs.platform.sh/development/cli.html)
 
+- Clone this repo
+- at the command line, 'cd' into your new directory
+- `composer install`
 - `lando start`
 
 Or, if available, you may also fetch the database and import this:
 
-`platform db:dump --stdout unity-db.sql | lando db-import unity-db.sql` (you'll need to specify project ID and environment ID)
+`platform db:dump` (you'll need to select project, environment and required site e.g. 'uregni')
 
-Avoid retrieving any managed files. You should be accessing these via the stage_file_proxy module. If this isn't working,
- check the configuration for it.
+`lando db-import -h <site name> <downloaded db>` (where 'site name' may be 'uregni', 'liofa' etc)
+
+## Running migrations
+
+You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
+We will take Uregni as an example and assume that we have a dump file 'uregni.sql'.
+
+1. Import the database into the Drupal 7 database host for your chosen site. Using our example site this will be 'uregni7'. 
+Note that your database host must have a '7' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
+`lando db-import -h uregni7 uregni.sql`
+
+2. Install the migrate_upgrade module
+`lando drupal moi migrate_upgrade` (or you could do this from the admin screens)
+
+3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
+`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=http://www.uregni.gov.uk --configure-only`
+(change the db host from 'uregni7' if you are migrating another site)
+
+4. Install the migrate_tools module
+`lando drupal moi migrate_tools` (or you could do this from the admin screens)
+
+5. You should now have a long list of migrations in the database, which may be seen by running this command:
+`lando drush migrate-status` (from the appropriate site directory e.g. web/sites/uregni)
+
+6. You could choose one of these migrations and run it as follows:
+`lando drush migrate-import upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
+
+7. You could then roll back the migration as follows:
+`lando drush migrate-rollback upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
+
 
 ## Code workflow
 
@@ -87,8 +118,8 @@ name should be just 'uregni'.
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
 - Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver 
 e.g. uregni.gov.uk.lndo.site
-- Edit the top level .lando.yml file and add a new database under 'services' (see 'uregni' as an example and make sure that you set 
-all of the credentials to 'drupal8' as has been done with the other sites)
+- Edit the top level .lando.yml file and add two new databases under 'services' (see 'uregni' and 'uregni7' as an example and 
+make sure that you set all of the credentials to 'drupal8' or  'drupal7' as has been done with the other sites).  
 - Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name.
 - N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
 
