@@ -32,7 +32,8 @@ Or, if available, you may also fetch the database and import this:
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
 We will take Uregni as an example and assume that we have a dump file 'uregni.sql'.
 
-1. Import the database into the 'uregni7' database host:
+1. Import the database into the Drupal 7 database host for your chosen site. Using our example site this will be 'uregni7'. 
+Note that your database host must have a '7' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
 `lando db-import -h uregni7 uregni.sql`
 
 2. Install the migrate_upgrade module
