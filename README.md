@@ -29,7 +29,7 @@ Or, if available, you may also fetch the database and import this:
 
 ## Running migrations
 
-You will first need to het hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
+You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
 We will take Uregni as an example and assume that we have a dump file 'uregni.sql'.
 
 1. Import the database into the 'uregni7' database host:
@@ -40,12 +40,12 @@ We will take Uregni as an example and assume that we have a dump file 'uregni.sq
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
 `lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=http://www.uregni.goc.uk --configure-only`
-(change the db host from 'uregni7' if you ar migrating another site)
+(change the db host from 'uregni7' if you are migrating another site)
 
 4. Install the migrate_tools module
 `lando drupal moi migrate_tools` (or you could do this from the admin screens)
 
-5. You should now have a long list of migrations in the database, which may be senn by running this command:
+5. You should now have a long list of migrations in the database, which may be seen by running this command:
 `lando drush migrate-status` (from the appropriate site directory e.g. web/sites/uregni)
 
 6. You could choose one of these migrations and run it as follows:
