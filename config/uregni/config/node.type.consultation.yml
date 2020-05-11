@@ -7,13 +7,13 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - main-menu
+    parent: 'main-menu:0:'
 _core:
   default_config_hash: xzHFwCCVjLDmkJUuW8riSxMaf7WfnCZDNFNqgb35HdU
-name: Consultation
+name: 'Consultation page'
 type: consultation
-description: 'Use this content type for consultations.'
+description: 'Use <em>consultation pages</em> for publishing non-HTML content such as PDF documents which have a closing date.'
 help: ''
 new_revision: true
 preview_mode: 1
