@@ -1,0 +1,28 @@
+uuid: b673ffd1-6a80-47f5-98f4-fd745a9b9da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.body
+    - node.type.vacancy
+  module:
+    - text
+    - user
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

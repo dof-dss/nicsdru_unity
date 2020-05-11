@@ -1,0 +1,28 @@
+uuid: 3adb77e1-0fd9-44da-8ca8-f46de6bfa634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_member.body
+    - node.type.staff_member
+  module:
+    - text
+    - user
+id: node.staff_member.default
+targetEntityType: node
+bundle: staff_member
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
