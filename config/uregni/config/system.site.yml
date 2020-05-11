@@ -1,5 +1,5 @@
 name: Uregni
-mail: a@a.com
+mail: uregni@gov.uk
 slogan: ''
 page:
   403: ''
@@ -11,4 +11,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: b53fe067-cb99-4fc9-a2f0-72136e53bd33
+uuid: fe70d927-1fb3-47c8-b948-340813a132ab
