@@ -7,13 +7,13 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - main-menu
+    parent: 'main-menu:0:'
 _core:
   default_config_hash: lepjnMhreFGZZ5tISJQUK8BTd8mcfP_tCyFAJ-RidQM
-name: News
+name: 'News page'
 type: news
-description: 'Use this content type for news items, press releases and announcements.'
+description: 'Use <em>news pages</em> for your news items, press releases and announcements.'
 help: ''
 new_revision: true
 preview_mode: 1
