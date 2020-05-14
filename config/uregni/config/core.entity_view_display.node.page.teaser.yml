@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_enable_toc
+    - field.field.node.page.field_page_top_image
     - node.type.page
   module:
     - text
@@ -24,7 +26,9 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_enable_toc: true
+  field_page_top_image: true
