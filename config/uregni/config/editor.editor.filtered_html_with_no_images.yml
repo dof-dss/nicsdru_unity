@@ -28,11 +28,6 @@ settings:
             - BulletedList
             - NumberedList
         -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalImage
-        -
           name: Tools
           items:
             - Source
