@@ -14,8 +14,12 @@ bundle: publication_page
 label: Body
 description: ''
 required: false
-translatable: false
-default_value: {  }
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: " "
+    format: filtered_html
 default_value_callback: ''
 settings:
   display_summary: true
