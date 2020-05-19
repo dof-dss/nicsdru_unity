@@ -7,8 +7,8 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main-menu
-    parent: 'main-menu:0:'
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: xzHFwCCVjLDmkJUuW8riSxMaf7WfnCZDNFNqgb35HdU
 name: 'Consultation page'
