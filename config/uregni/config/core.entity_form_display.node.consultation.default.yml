@@ -16,9 +16,26 @@ dependencies:
     - address
     - datetime
     - datetime_range
+    - field_group
     - file
     - path
     - text
+third_party_settings:
+  field_group:
+    group_respond:
+      children:
+        - field_email_address
+        - field_postal
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: 'group-respond field-group-fieldset'
+      label: 'Ways to respond'
 _core:
   default_config_hash: f9XHQzGh4BHgBOCvH9NQ-_5RkHDwLN6qy36xGxBOZTc
 id: node.consultation.default
