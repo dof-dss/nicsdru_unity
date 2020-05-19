@@ -84,16 +84,30 @@ process:
         target_id: fid
         display: display
         description: description
-  field_consultation_dates:
+  field_consultation_dates/value:
     -
-      plugin: sub_process
+      plugin: extract
       source: field_consultation_dates
-      process:
-        value:
-          plugin: format_date
-          from_format: 'Y-m-d H:i:s'
-          to_format: 'Y-m-d\TH:i:s'
-          source: value
+      index:
+        - '0'
+        - value
+    -
+      plugin: format_date
+      from_format: 'Y-m-d H:i:s'
+      to_format: 'Y-m-d\TH:i:s'
+      timezone: 'GMT'
+  field_consultation_dates/end_value:
+    -
+      plugin: extract
+      source: field_consultation_dates
+      index:
+        - '0'
+        - value2
+    -
+      plugin: format_date
+      from_format: 'Y-m-d H:i:s'
+      to_format: 'Y-m-d\TH:i:s'
+      timezone: 'GMT'
   field_email_address:
     -
       plugin: sub_process

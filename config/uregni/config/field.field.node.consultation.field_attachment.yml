@@ -22,7 +22,7 @@ default_value_callback: ''
 settings:
   file_directory: consultations
   file_extensions: 'pdf doc docx xls xlsx xlsm ppt pptx odt ods odp dot zip'
-  max_filesize: ''
+  max_filesize: '30 MB'
   description_field: false
   handler: 'default:file'
   handler_settings: {  }

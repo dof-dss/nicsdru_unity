@@ -9,8 +9,8 @@ dependencies:
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
     - field.field.node.consultation.field_postal
+    - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
-    - field.field.node.consultation.field_respond_online
     - field.field.node.consultation.field_summary
     - node.type.consultation
   module:
@@ -41,6 +41,6 @@ hidden:
   field_consultation_dates: true
   field_email_address: true
   field_postal: true
+  field_publication_topic: true
   field_published_date: true
-  field_respond_online: true
   field_summary: true
