@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
+    - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
     - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
@@ -87,4 +88,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_meta_tags: true
   field_publication_topic: true
