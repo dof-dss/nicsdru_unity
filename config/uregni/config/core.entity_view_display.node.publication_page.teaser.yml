@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_publication_date
+    - field.field.node.publication_page.field_publication_image
+    - field.field.node.publication_page.field_publication_topic
+    - field.field.node.publication_page.field_publication_type
     - node.type.publication_page
   module:
     - text
@@ -27,4 +31,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_publication_date: true
+  field_publication_image: true
+  field_publication_topic: true
+  field_publication_type: true
