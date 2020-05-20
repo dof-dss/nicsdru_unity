@@ -51,3 +51,5 @@ hidden:
   field_meta_tags: true
   field_teaser: true
   links: true
+  langcode: true
+  search_api_excerpt: true
