@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_teaser
-    - image.style.thumbnail
     - node.type.news
   module:
     - datetime
-    - image
+    - file
+    - metatag
     - path
     - text
 _core:
@@ -22,12 +23,12 @@ bundle: news
 mode: default
 content:
   body:
+    weight: 7
     type: text_textarea_with_summary
-    weight: 10
     settings:
       rows: 9
-      placeholder: ''
       summary_rows: 3
+      placeholder: ''
       show_summary: false
     third_party_settings: {  }
     region: content
@@ -37,19 +38,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 51
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_photo:
-    weight: 9
+    weight: 6
+    type: file_generic
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
     region: content
   field_published_date:
-    weight: 7
+    weight: 4
+    type: datetime_default
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
     region: content
   field_teaser:
     weight: 8
@@ -103,5 +110,10 @@ content:
       placeholder: ''
       match_limit: 10
     region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }
