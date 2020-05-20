@@ -18,7 +18,7 @@ translatable: false
 default_value:
   -
     summary: ''
-    value: " "
+    value: ' '
     format: filtered_html
 default_value_callback: ''
 settings:

@@ -32,3 +32,5 @@ content:
 hidden:
   field_enable_toc: true
   field_page_top_image: true
+  langcode: true
+  search_api_excerpt: true
