@@ -13,11 +13,15 @@ entity_type: node
 bundle: page
 label: Body
 description: ''
-required: false
-translatable: true
-default_value: {  }
+required: true
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: " "
+    format: filtered_html
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
 field_type: text_with_summary

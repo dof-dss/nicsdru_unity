@@ -14,10 +14,15 @@ field_name: field_consultation_dates
 entity_type: node
 bundle: consultation
 label: 'Consultation dates'
-description: ''
-required: false
+description: 'Enter a start date/time and closing date/time for this consultation.'
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
 default_value_callback: ''
 settings: {  }
 field_type: daterange
