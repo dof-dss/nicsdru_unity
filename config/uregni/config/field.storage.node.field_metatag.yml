@@ -1,13 +1,13 @@
-uuid: d7531efc-c38c-4a71-8ec8-cd9b7cc2253c
+uuid: 6070ece4-baab-4d5f-82d4-cf00bf84f7f1
 langcode: und
 status: true
 dependencies:
   module:
     - metatag
-    - user
-id: user.field_metatag
+    - node
+id: node.field_metatag
 field_name: field_metatag
-entity_type: user
+entity_type: node
 type: metatag
 settings: {  }
 module: metatag
