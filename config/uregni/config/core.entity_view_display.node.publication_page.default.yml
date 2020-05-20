@@ -4,15 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_metatag
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_image
     - field.field.node.publication_page.field_publication_topic
     - field.field.node.publication_page.field_publication_type
-    - image.style.medium
     - node.type.publication_page
   module:
-    - datetime
-    - image
     - text
     - user
 id: node.publication_page.default
@@ -27,29 +25,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_publication_date:
-    type: datetime_default
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-  field_publication_image:
-    type: image
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings: {  }
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_metatag: true
+  field_publication_date: true
+  field_publication_image: true
   field_publication_topic: true
   field_publication_type: true

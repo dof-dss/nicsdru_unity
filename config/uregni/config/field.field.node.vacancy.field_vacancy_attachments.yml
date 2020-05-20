@@ -1,0 +1,27 @@
+uuid: 0b99e92f-a082-4861-a62a-81636dd0d208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vacancy_attachments
+    - node.type.vacancy
+  module:
+    - file
+id: node.vacancy.field_vacancy_attachments
+field_name: field_vacancy_attachments
+entity_type: node
+bundle: vacancy
+label: Attachments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: true
+  file_directory: ''
+  file_extensions: 'pdf txt doc docx xlsm'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

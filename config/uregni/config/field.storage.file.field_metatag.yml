@@ -1,0 +1,19 @@
+uuid: f320df89-48d5-42c2-a154-9630f6351e3e
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - metatag
+id: file.field_metatag
+field_name: field_metatag
+entity_type: file
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

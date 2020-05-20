@@ -14,9 +14,9 @@ field_name: field_summary
 entity_type: node
 bundle: consultation
 label: Summary
-description: 'Enter a summary of this consultation.'
+description: 'Enter a summary for this consultation.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.staff_member.body
+    - field.field.node.staff_member.field_member_image
+    - field.field.node.staff_member.field_member_role
+    - field.field.node.staff_member.field_metatag
     - node.type.staff_member
   module:
     - text
@@ -25,4 +28,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_member_image: true
+  field_member_role: true
+  field_metatag: true

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
+    - field.field.node.consultation.field_metatag
     - field.field.node.consultation.field_postal
     - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
@@ -40,6 +41,7 @@ hidden:
   field_attachment: true
   field_consultation_dates: true
   field_email_address: true
+  field_metatag: true
   field_postal: true
   field_publication_topic: true
   field_published_date: true

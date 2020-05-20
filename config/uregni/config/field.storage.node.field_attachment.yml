@@ -1,5 +1,5 @@
 uuid: 377863a5-6805-4bb5-90fd-881331d0814b
-langcode: en
+langcode: und
 status: true
 dependencies:
   module:
@@ -12,8 +12,8 @@ field_name: field_attachment
 entity_type: node
 type: file
 settings:
-  display_field: false
   display_default: false
+  display_field: false
   uri_scheme: public
   target_type: file
 module: file

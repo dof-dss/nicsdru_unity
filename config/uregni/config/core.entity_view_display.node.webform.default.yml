@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.webform.body
+    - field.field.node.webform.field_metatag
     - node.type.webform
   module:
     - text
@@ -25,4 +26,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_metatag: true

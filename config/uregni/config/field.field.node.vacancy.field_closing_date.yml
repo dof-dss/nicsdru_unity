@@ -1,0 +1,21 @@
+uuid: 27cc4614-50ef-4dee-9ec9-b354fd7a36ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_closing_date
+    - node.type.vacancy
+  module:
+    - datetime
+id: node.vacancy.field_closing_date
+field_name: field_closing_date
+entity_type: node
+bundle: vacancy
+label: 'Closing date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

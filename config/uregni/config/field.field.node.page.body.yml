@@ -15,11 +15,7 @@ label: Body
 description: ''
 required: true
 translatable: false
-default_value:
-  -
-    summary: ''
-    value: " "
-    format: filtered_html
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: false

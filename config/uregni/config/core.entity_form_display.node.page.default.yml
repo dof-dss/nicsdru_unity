@@ -5,11 +5,10 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_enable_toc
+    - field.field.node.page.field_metatag
     - field.field.node.page.field_page_top_image
-    - image.style.thumbnail
     - node.type.page
   module:
-    - image
     - path
     - text
 id: node.page.default
@@ -33,21 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_enable_toc:
-    weight: 2
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    region: content
-  field_page_top_image:
-    weight: 1
-    type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 8
@@ -93,4 +77,7 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_enable_toc: true
+  field_metatag: true
+  field_page_top_image: true

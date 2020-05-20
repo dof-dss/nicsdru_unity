@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.vacancy.body
+    - field.field.node.vacancy.field_appointment
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_metatag
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_vacancy_attachments
     - node.type.vacancy
   module:
     - text
@@ -27,4 +32,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_appointment: true
+  field_closing_date: true
+  field_metatag: true
+  field_salary: true
+  field_vacancy_attachments: true

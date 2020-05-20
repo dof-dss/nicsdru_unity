@@ -16,12 +16,8 @@ bundle: consultation
 label: Body
 description: ''
 required: false
-translatable: true
-default_value:
-  -
-    summary: ''
-    value: " "
-    format: filtered_html
+translatable: false
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true

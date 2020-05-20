@@ -1,4 +1,4 @@
-uuid: e7af29f7-7ead-4373-92d0-248441b431f7
+uuid: cbda4ec3-0ce8-4130-a5e5-90f515278014
 langcode: en
 status: true
 dependencies:
@@ -15,10 +15,7 @@ label: Date
 description: 'Please select the published date for this publication, or accept the default value of today.'
 required: true
 translatable: false
-default_value:
-  -
-    default_date_type: now
-    default_date: now
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: datetime

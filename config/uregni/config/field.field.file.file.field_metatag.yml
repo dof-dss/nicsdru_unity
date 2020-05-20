@@ -1,0 +1,21 @@
+uuid: 5ef9e28e-6789-4b03-8270-a8cbd84d42a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_metatag
+  module:
+    - file
+    - metatag
+id: file.file.field_metatag
+field_name: field_metatag
+entity_type: file
+bundle: file
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

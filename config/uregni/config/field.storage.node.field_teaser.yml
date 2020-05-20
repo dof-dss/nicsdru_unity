@@ -1,5 +1,5 @@
 uuid: e9ddf8e7-e883-4bc3-b142-c1b68e26a379
-langcode: en
+langcode: und
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ field_name: field_teaser
 entity_type: node
 type: string
 settings:
-  max_length: 140
+  max_length: 120
   is_ascii: false
   case_sensitive: false
 module: core

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
+    - field.field.node.consultation.field_metatag
     - field.field.node.consultation.field_postal
     - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
@@ -86,12 +87,6 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
-  field_publication_topic:
-    type: options_select
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_published_date:
     weight: 8
     settings: {  }
@@ -151,4 +146,6 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_metatag: true
+  field_publication_topic: true

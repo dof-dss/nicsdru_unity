@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_metatag
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_teaser
@@ -104,4 +105,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_metatag: true
