@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.consultation.field_summary
     - node.type.consultation
   module:
-    - address
     - datetime
     - datetime_range
     - file
@@ -64,7 +63,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: address_default
+    type: basic_string
     region: content
   field_published_date:
     weight: 1
