@@ -53,7 +53,7 @@ services:
     persist: true
     config:
         server: .lando/config/redis.conf
-  solr:
+  uregni_solr:
     type: solr:7
     portforward: true
     core: default
