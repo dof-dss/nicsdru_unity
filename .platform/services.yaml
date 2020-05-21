@@ -33,11 +33,15 @@ solr:
   disk: 1024
   configuration:
     cores:
-      default:
+      uregniindex:
+        conf_dir: !archive "solr_config/"
+      fictindex:
         conf_dir: !archive "solr_config/"
     endpoints:
-      solr:
-        core: default
+      uregni:
+        core: uregniindex
+      fict:
+        core: fictindex
 
 redis:
   type: redis:5.0
