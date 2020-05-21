@@ -143,7 +143,7 @@ a:hover {
   display: inline-block;
   width: 1.5em;
   height: .75em;
-  background: transparent url('../images/arrow-down.png?17231e83366') no-repeat 50% 50%;
+  background: transparent url('../images/arrow-down.png?17236f04505') no-repeat 50% 50%;
   background-size: 1.6rem auto;
 }
 
@@ -375,7 +375,7 @@ blockquote,
 q {
   quotes: none;
   border: 0;
-  background: transparent url('../images/quote.png?17231e83368') no-repeat scroll 0 0;
+  background: transparent url('../images/quote.png?17236f04507') no-repeat scroll 0 0;
   padding: 1rem .5rem .5rem 4.7rem;
   text-shadow: 1px 1px #fff;
   margin: 5px 0;
