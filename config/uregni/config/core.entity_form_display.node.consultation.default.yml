@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.consultation.field_summary
     - node.type.consultation
   module:
-    - address
     - datetime
     - field_group
     - file
@@ -89,10 +88,12 @@ content:
     type: metatag_firehose
     region: content
   field_postal:
-    weight: 15
-    settings: {  }
+    weight: 52
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: address_default
+    type: string_textarea
     region: content
   field_publication_topic:
     weight: 3
