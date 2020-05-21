@@ -1,6 +1,6 @@
 {
   "masterPicture": "src/images/favicon.svg",
-  "iconsPath": "/themes/custom/nicsdru_unity_theme/images/favicons/",
+  "iconsPath": "/themes/uregni_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",
