@@ -8,7 +8,7 @@ site-styling:
 
     # The SMACSS category, "layout", is loaded after "base" styles.
     layout:
-      css/layouts.css: { weight: -100, minified: true }
+      css/layout.css: { weight: -100, minified: true }
 
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
