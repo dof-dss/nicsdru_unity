@@ -16,6 +16,7 @@ type: 'php:7.3'
 # side is in the form `:`.
 relationships:
   fictsolr: 'solr:fict'
+  uregnisolr: 'solr:uregni'
   redis: 'redis:redis'
   fictcommission: 'db:fictcommission'
   uregni: 'db:uregni'
