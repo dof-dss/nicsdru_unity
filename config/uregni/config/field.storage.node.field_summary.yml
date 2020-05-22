@@ -1,18 +1,16 @@
-uuid: e83e3f0b-7430-43cf-930b-e908e4bb28b4
+uuid: 38781943-cb4f-4b68-bea3-85375f74b854
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
-_core:
-  default_config_hash: y3uANBTCu0sinb6ZNRfotIxKa7Gp2E6KTBhia6-i2vE
 id: node.field_summary
 field_name: field_summary
 entity_type: node
-type: text_long
-settings: {  }
-module: text
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
