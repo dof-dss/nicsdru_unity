@@ -124,7 +124,7 @@ make sure that you set all of the credentials to 'drupal8' or  'drupal7' as has 
 - If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when 
 configuring the server in search_api)
 - If necessary, add a new Solr core for Platform.sh in .platform/service.yaml (add a core and an endpoint by copying the config for 
-'uregniindex' and 'uregni') - after doing this add a new relationship in .platform.app.yaml (following the example of 'uregnisolr')
+'uregni_index' and 'uregni') - after doing this add a new relationship in .platform.app.yaml (following the example of 'uregnisolr')
 - When creating your solr server in search_api use 'standard' connector, 'solr' as solr host, and short sitename as solr core
 - Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name
 - N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site
