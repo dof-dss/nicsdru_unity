@@ -15,7 +15,7 @@ type: 'php:7.3'
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `:`.
 relationships:
-  fictsolr: 'solr:fict'
+  fictcommissionsolr: 'solr:fictcommission'
   uregnisolr: 'solr:uregni'
   redis: 'redis:redis'
   fictcommission: 'db:fictcommission'
