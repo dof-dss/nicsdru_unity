@@ -35,13 +35,13 @@ solr:
     cores:
       uregniindex:
         conf_dir: !archive "solr_config/"
-      fictcommissionindex:
-        conf_dir: !archive "solr_config/"
+#     fictcommissionindex:
+#       conf_dir: !archive "solr_config/"
     endpoints:
       uregni:
         core: uregniindex
-      fictcommission:
-        core: fictcommissionindex
+#     fictcommission:
+#       core: fictcommissionindex
 
 
 redis:
