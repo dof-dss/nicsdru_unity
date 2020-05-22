@@ -8,10 +8,11 @@ dependencies:
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_teaser
+    - image.style.thumbnail
     - node.type.news
   module:
     - datetime
-    - file
+    - image
     - metatag
     - path
     - text
@@ -23,7 +24,7 @@ bundle: news
 mode: default
 content:
   body:
-    weight: 7
+    weight: 10
     type: text_textarea_with_summary
     settings:
       rows: 9
@@ -39,27 +40,28 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_meta_tags:
-    weight: 51
+    weight: 12
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_photo:
-    weight: 6
-    type: file_generic
+    weight: 9
+    type: image_image
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
     region: content
   field_published_date:
-    weight: 4
+    weight: 5
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_teaser:
-    weight: 8
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -68,7 +70,7 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -83,7 +85,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
@@ -112,7 +114,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

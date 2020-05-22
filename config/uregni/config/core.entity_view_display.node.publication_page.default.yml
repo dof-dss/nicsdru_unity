@@ -24,13 +24,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_publication_date:
     type: datetime_default
-    weight: 1
+    weight: 0
     region: content
     label: hidden
     settings:
@@ -39,19 +39,15 @@ content:
     third_party_settings: {  }
   field_publication_image:
     type: image
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
       image_style: medium
       image_link: ''
     third_party_settings: {  }
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_meta_tags: true
   field_publication_topic: true
   field_publication_type: true
+  links: true
