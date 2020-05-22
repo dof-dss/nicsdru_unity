@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7db86076e99e5c7d49d49f215012d39",
+    "content-hash": "a38617afec8779ec75bd8bd4edbd717d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9218,16 +9218,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.3.11",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "75f99d7489409207d09c6cd75a6c773ccbb516d5"
+                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/75f99d7489409207d09c6cd75a6c773ccbb516d5",
-                "reference": "75f99d7489409207d09c6cd75a6c773ccbb516d5",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
+                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
                 "shasum": ""
             },
             "require": {
@@ -9284,7 +9284,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-09T13:17:05+00:00"
+            "time": "2019-08-26T08:55:16+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -15337,7 +15337,7 @@
         {
             "alias": "3.4.35",
             "alias_normalized": "3.4.35.0",
-            "version": "4.3.11.0",
+            "version": "4.3.4.0",
             "package": "symfony/event-dispatcher"
         }
     ],
