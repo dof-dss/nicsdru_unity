@@ -53,6 +53,13 @@ if ($platformsh->hasRelationship($relationship_name)) {
   $config['search_api.server.' . $solr_server_name]['backend_config']['connector_config'] = $platformsh->formattedCredentials($relationship_name, 'drupal-solr');
 }
 
+$relationship_name = 'uregnisolr';
+$solr_server_name = 'solr_default';
+if ($platformsh->hasRelationship($relationship_name)) {
+  // Set the connector configuration to the appropriate value, as defined by the formatter above.
+  $config['search_api.server.' . $solr_server_name]['backend_config']['connector_config'] = $platformsh->formattedCredentials($relationship_name, 'drupal-solr');
+}
+
 // Configure file paths.
 if (!isset($settings['file_private_path'])) {
   $settings['file_private_path'] = $platformsh->appDir . '/private/' . $subsite_id;
