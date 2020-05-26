@@ -15,7 +15,7 @@ module.exports = (ctx) => ({
       cachebuster: true,
       relative: true,
       loadPaths: ['images'],
-      baseUrl: '/themes/custom/uregni_theme/'
+      baseUrl: '/themes/uregni_theme/'
     }
   }
 })
