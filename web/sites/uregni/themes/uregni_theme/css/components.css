@@ -619,7 +619,7 @@ nav.pager .pager__item.is-active {
 
 /* line 28, node_modules/nicsdru_unity_theme/src/scss/3_components/block/_block.scss */
 .block > h2 {
-  font-size: 2.1rem;
+  font-size: 3.6rem;
   margin: 0 0 0.6rem;
   margin: .5rem 0 1.5rem;
   padding: 1rem;
@@ -786,7 +786,7 @@ nav.pager .pager__item.is-active {
 
 /* line 68, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_search-form.scss */
 .search-form input[type='submit'] {
-  background: url('../images/search-icon.png?17236f04507') no-repeat center 4px;
+  background: url('../images/search-icon.png?17250022fe0') no-repeat center 4px;
   text-indent: -9999px;
   width: 4rem;
   -webkit-filter: none;

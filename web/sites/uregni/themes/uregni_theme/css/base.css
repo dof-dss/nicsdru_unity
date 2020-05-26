@@ -143,7 +143,7 @@ a:hover {
   display: inline-block;
   width: 1.5em;
   height: .75em;
-  background: transparent url('../images/arrow-down.png?17236f04505') no-repeat 50% 50%;
+  background: transparent url('../images/arrow-down.png?17250022fdd') no-repeat 50% 50%;
   background-size: 1.6rem auto;
 }
 
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 22, node_modules/nicsdru_unity_theme/src/scss/1_base/_headings.scss */
 h1 {
-  font-size: 2.1rem;
+  font-size: 3.6rem;
   margin: 0 0 0.6rem;
 }
 
@@ -375,7 +375,7 @@ blockquote,
 q {
   quotes: none;
   border: 0;
-  background: transparent url('../images/quote.png?17236f04507') no-repeat scroll 0 0;
+  background: transparent url('../images/quote.png?17250022fe0') no-repeat scroll 0 0;
   padding: 1rem .5rem .5rem 4.7rem;
   text-shadow: 1px 1px #fff;
   margin: 5px 0;
