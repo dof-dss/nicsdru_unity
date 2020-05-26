@@ -5,4 +5,4 @@ dependencies: {  }
 id: uregni_medium
 label: 'Uregni medium'
 locked: false
-pattern: 'd M Y'
+pattern: 'd F Y'
