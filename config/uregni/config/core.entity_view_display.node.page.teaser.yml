@@ -34,3 +34,5 @@ hidden:
   field_enable_toc: true
   field_meta_tags: true
   field_page_top_image: true
+  langcode: true
+  search_api_excerpt: true
