@@ -114,15 +114,21 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 (use 'uregni' as an example)
 - Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
 domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
-name should be just 'uregni'.
+name should be just 'uregni'
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
 - Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver 
 e.g. uregni.gov.uk.lndo.site
 - Edit the top level .lando.yml file and add two new databases under 'services' (see 'uregni' and 'uregni7' as an example and 
-make sure that you set all of the credentials to 'drupal8' or  'drupal7' as has been done with the other sites).  
-- Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name.
-- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site.
+make sure that you set all of the credentials to 'drupal8' or  'drupal7' as has been done with the other sites)  
+- If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when 
+configuring the server in search_api)
+- If necessary, add a new Solr core for Platform.sh in .platform/service.yaml (add a core and an endpoint by copying the config for 
+'uregni_index' and 'uregni') - after doing this add a new relationship in .platform.app.yaml (following the example of 'uregnisolr')
+- When creating your solr server in search_api use 'standard' connector, 'solr' as solr host, and short sitename as solr core - also
+under 'Advanced Server Configuration' set the solr.install.dir to '../../..'
+- Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name
+- N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site
 
 Under multi site, Lando commands may be run as follows:
 lando drush -l uregni cr
