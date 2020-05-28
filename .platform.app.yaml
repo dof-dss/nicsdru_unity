@@ -58,23 +58,12 @@ hooks:
   # The deploy hook runs after your application has been deployed and started.
   deploy: |
     set -e
-    # TODO Find a way of looping through the multi sites here.
-    #
-    # Uregni rebuild caches, run db-updates and import config.
-    cd /app/web/sites/uregni
-    drush -l uregni -y cache-rebuild
-    drush -l uregni -y updatedb
-    drush -l uregni -y config-import
-    # Liofa rebuild caches, run db-updates and import config.
-    cd /app/web/sites/liofa
-    drush -l uregni -y cache-rebuild
-    drush -l uregni -y updatedb
-    drush -l uregni -y config-import
-    # Fictcommission rebuild caches, run db-updates and import config.
-    cd /app/web/sites/fictcommission
-    drush -l uregni -y cache-rebuild
-    drush -l uregni -y updatedb
-    drush -l uregni -y config-import
+    for site in uregni liofa fictcommission; do
+      # Rebuild caches, run db-updates and import config.
+      drush -l $site -y cache-rebuild
+      drush -l $site -y updatedb
+      drush -l $site -y config-import
+    ; done
 
 # The configuration of app when it is exposed to the web.
 web:
