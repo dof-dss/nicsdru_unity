@@ -34,8 +34,8 @@ content:
     region: content
     label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: uregni_medium
     third_party_settings: {  }
   field_publication_image:
     type: image
@@ -50,6 +50,6 @@ hidden:
   field_meta_tags: true
   field_publication_topic: true
   field_publication_type: true
-  links: true
   langcode: true
+  links: true
   search_api_excerpt: true
