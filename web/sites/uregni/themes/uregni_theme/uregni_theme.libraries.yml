@@ -13,3 +13,9 @@ site-styling:
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
       css/components.css: { minified: true }
+
+uregni-specific-styles:
+  version: 1.x
+  css:
+    component:
+      css/3_components/field/field-photo.css: { minified: true }
