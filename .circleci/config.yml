@@ -122,8 +122,8 @@ jobs:
             cd /home/circleci/project/web
             cp sites/default/default.settings.php sites/default/settings.php
             cp sites/default/default.services.yml sites/default/services.yml
-            # Copy in our environment specific settings to the settings.php file.
-            cp /home/circleci/project/.circleci/drupal.settings.php sites/default/settings.php
+            # Copy in our environment specific settings to the Uregni settings.php file.
+            cp /home/circleci/project/.circleci/drupal.settings.php sites/uregni/settings.local.php
             # Copy PHPUnit config into core folder.
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
             # >> Workaround to install from config; can't yet due to issue in Drupal core.
