@@ -1,0 +1,15 @@
+uuid: 33f52556-a1af-476f-82f8-cf95b608aa30
+langcode: en
+status: false
+dependencies: {  }
+id: development
+label: development
+description: 'Development environment split.'
+folder: ../config/fictcommission/development
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
