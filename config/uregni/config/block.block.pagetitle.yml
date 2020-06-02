@@ -2,6 +2,8 @@ uuid: 41e67fc0-b513-46b3-bc57-3961719008a7
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
   theme:
     - uregni_theme
 id: pagetitle
@@ -15,4 +17,11 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
