@@ -10,6 +10,8 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   contact: 0
   contextual: 0
   ctools: 0
@@ -47,7 +49,6 @@ module:
   toolbar: 0
   update: 0
   user: 0
-  views_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
