@@ -127,6 +127,7 @@ jobs:
             for site in uregni liofa fictcommission
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
+              cd /home/circleci/project/web
               cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
               # >> Workaround to install from config; can't yet due to issue in Drupal core.
               sed -i -e "s/origins:/minimal:/g" ../config/$site/config/core.extension.yml
