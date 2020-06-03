@@ -762,7 +762,7 @@ $settings['entity_update_backup'] = TRUE;
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
 $databases['default']['default'] = [
-  'database'  => getenv('DB_NAME'),
+  'database'  => $subsite_id,
   'username'  => getenv('DB_USER'),
   'password'  => getenv('DB_PASS'),
   'prefix'    => getenv('DB_PREFIX'),
