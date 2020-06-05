@@ -58,12 +58,12 @@ hooks:
   # The deploy hook runs after your application has been deployed and started.
   deploy: |
     set -e
-    for site in uregni liofa fictcommission; do
+    for site in uregni liofa fictcommission do
       # Rebuild caches, run db-updates and import config.
       drush -l $site -y cache-rebuild
       drush -l $site -y updatedb
       drush -l $site -y config-import
-    ; done
+    done
 
 # The configuration of app when it is exposed to the web.
 web:
