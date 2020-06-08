@@ -78,6 +78,11 @@
   ]
 %}
 
+{% set date_now = "now"|date('d F Y H:i:s') %}
+{% set consultation_start_date = content.field_consultation_dates[0].start_date['#attributes']['datetime'] | date('U') | format_date('custom', 'd F Y H:i:s') %}
+{% set consultation_end_date = content.field_consultation_dates[0].end_date['#attributes']['datetime'] | date('U') | format_date('custom', 'd F Y H:i:s') %}
+{% set consultation_end_time = content.field_consultation_dates[0].end_date['#attributes']['datetime'] | date('H:i') %}
+
 {% if not page %}
 <article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id) }}>
   <header>
@@ -100,8 +105,30 @@
   </header>
   {% endif %}
   <div{{ content_attributes.addClass('content') }}>
-    {{ content }}
+
+    {{ content.field_published_date }}
+
+    <div class="summary">
+      <div class="consultation-dates">
+        {{ 'Consultation opened on'|t }}
+        <strong>{{ content.field_consultation_dates[0].start_date }}</strong>{{ '.'|t }}
+        {{ 'Closing date '|t }}
+        <strong>{{ content.field_consultation_dates[0].end_date }}</strong>
+        {{ 'at '|t }}
+        <strong>{{ consultation_end_time }}</strong>{{ '.'|t }}
+      </div>
+      <div class="field-summary">
+        <h2>{{ content.field_summary['#title'] }}</h2>
+        <p>{{ content.field_summary }}</p>
+      </div>
+    </div>
   </div>
+
+  {{ content | without('field_published_date','field_summary', 'field_consultation_dates', 'field_postal', 'field_email_address', 'group_ways_to_respond')}}
+
+  {% if date_now > consultation_start_date and date_now <= consultation_end_date %}
+    {{ content.group_ways_to_respond }}
+  {% endif %}
 {% if not page %}
 </article>
 {% endif %}
