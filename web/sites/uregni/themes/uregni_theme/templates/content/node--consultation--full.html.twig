@@ -126,6 +126,7 @@
 
   {{ content | without('field_published_date','field_summary', 'field_consultation_dates', 'field_postal', 'field_email_address', 'group_ways_to_respond')}}
 
+  {# Only show the ways to respond field_group if a consultation has started and not yet closed #}
   {% if date_now > consultation_start_date and date_now <= consultation_end_date %}
     {{ content.group_ways_to_respond }}
   {% endif %}
