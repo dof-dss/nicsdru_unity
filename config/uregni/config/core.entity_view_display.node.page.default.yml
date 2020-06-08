@@ -25,6 +25,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_page_top_image:
     type: image
     weight: 0
@@ -37,6 +42,7 @@ content:
 hidden:
   field_enable_toc: true
   field_meta_tags: true
+  field_next_audit_due: true
   langcode: true
   links: true
   search_api_excerpt: true
