@@ -1887,16 +1887,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.3.4",
+            "version": "0.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "afc65ecf43b95de85900ecfd7d6678ccd7d80659"
+                "reference": "17b3cbe73f314eb980f94683bce7ce9689a7c3b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/afc65ecf43b95de85900ecfd7d6678ccd7d80659",
-                "reference": "afc65ecf43b95de85900ecfd7d6678ccd7d80659",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/17b3cbe73f314eb980f94683bce7ce9689a7c3b6",
+                "reference": "17b3cbe73f314eb980f94683bce7ce9689a7c3b6",
                 "shasum": ""
             },
             "require": {
@@ -1908,7 +1908,7 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2020-04-01T13:45:08+00:00"
+            "time": "2020-06-05T15:16:59+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
