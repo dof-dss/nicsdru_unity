@@ -30,7 +30,7 @@ function uregni_theme_preprocess_node(array &$variables) {
     // Set a variable to be used in the twig template for the consultation end date time.
     $variables['consultation_end_time'] = date('H:i', $consultation_end_date_timestamp);
 
-    // Set a variable to be used in the twig template for the ways to respond fieldgroup, initially set to 0..
+    // Set a variable to be used in the twig template for the ways to respond fieldgroup, initially set to 0.
     $variables['consultation_in_progress'] = FALSE;
 
     // If the consultation started before and is ending after today's date then show the contact information.
