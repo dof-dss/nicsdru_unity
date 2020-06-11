@@ -6841,12 +6841,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
@@ -11762,16 +11762,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "fa9b782132f1a4a63e68eb67b256bb64ccf5145a"
+                "reference": "52a2a73d35d4ca920b0dcd4592eb2c5e9994946b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/fa9b782132f1a4a63e68eb67b256bb64ccf5145a",
-                "reference": "fa9b782132f1a4a63e68eb67b256bb64ccf5145a",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/52a2a73d35d4ca920b0dcd4592eb2c5e9994946b",
+                "reference": "52a2a73d35d4ca920b0dcd4592eb2c5e9994946b",
                 "shasum": ""
             },
             "require": {
@@ -11795,7 +11795,7 @@
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
-            "time": "2020-04-27T12:46:28+00:00"
+            "time": "2020-06-10T14:58:01+00:00"
         },
         {
             "name": "drupal/coder",
