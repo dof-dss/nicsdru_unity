@@ -14,8 +14,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.se
 
 // Set config split environment.
 $config['config_split.config_split.local']['status'] = FALSE;
-$config['config_split.config_split.development']['status'] = TRUE;
-$config['config_split.config_split.production']['status'] = FALSE;
+$config['config_split.config_split.hosted']['status'] = TRUE;
 
 // Environment indicator config.
 $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV_COLOUR'), getenv('SIMPLEI_ENV_NAME'));

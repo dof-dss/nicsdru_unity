@@ -22,8 +22,7 @@ $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 
 // Set config split environment; environment specific values is set near the end of this file.
 $config['config_split.config_split.local']['status'] = FALSE;
-$config['config_split.config_split.development']['status'] = FALSE;
-$config['config_split.config_split.production']['status'] = FALSE;
+$config['config_split.config_split.hosted']['status'] = FALSE;
 
 // Config readonly settings; default to active if not specified.
 $settings['config_readonly'] = !empty(getenv('CONFIG_READONLY')) ? getenv('CONFIG_READONLY') : 1;
@@ -69,8 +68,6 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       break;
 
     default:
-      // Default to use development settings/services for general platform.sh environments.
-      $config['config_split.config_split.development']['status'] = TRUE;
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
       include $app_root . '/' . $site_path . '/../settings.development.php';
   }
