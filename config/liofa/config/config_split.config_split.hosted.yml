@@ -1,0 +1,15 @@
+uuid: 3e35e375-2447-419b-b42c-cf933637aa6b
+langcode: en
+status: false
+dependencies: {  }
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''''hosted'''' and not running locally, whether development, QA or production.'
+folder: ../config/liofa/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
