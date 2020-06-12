@@ -123,6 +123,3 @@ $settings['hash_salt'] = $settings['hash_salt'] ?? $platformsh->projectEntropy .
 
 // Set the deployment identifier, which is used by some Drupal cache systems.
 $settings['deployment_identifier'] = $settings['deployment_identifier'] ?? $platformsh->treeId;
-
-// For now, set all Platform.sh sites to use 'production' config.
-$config['config_split.config_split.production']['status'] = TRUE;
