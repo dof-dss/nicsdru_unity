@@ -4,8 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.vacancy.body
+    - field.field.node.vacancy.field_appointment
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_vacancy_attachments
     - node.type.vacancy
   module:
+    - datetime
+    - file
     - text
     - user
 id: node.vacancy.default
@@ -14,17 +20,45 @@ bundle: vacancy
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+  field_appointment:
+    type: string
+    weight: 1
     region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_closing_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: uregni_long
+    third_party_settings: {  }
+  field_salary:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_vacancy_attachments:
+    type: file_default
+    weight: 4
+    region: content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
 hidden:
-  langcode: true
+  links: true
   search_api_excerpt: true
