@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.vacancy.body
     - field.field.node.vacancy.field_appointment
     - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_meta_tags
     - field.field.node.vacancy.field_salary
     - field.field.node.vacancy.field_vacancy_attachments
     - node.type.vacancy
   module:
     - datetime
     - file
+    - metatag
     - path
     - text
 id: node.vacancy.default
@@ -49,6 +51,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_salary:
     type: string_textfield
     weight: 8
