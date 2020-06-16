@@ -12,6 +12,10 @@
 /web/profiles/custom
 console/
 
+# Ignore migrate Yaml files in the config directory, as they should
+# now live inside custom modules e.g. web/sites/uregni/modules/custom_migrations
+/config/**/migrate_plus.*
+
 # Ignore sensitive information
 /web/sites/*/settings.local.php
 

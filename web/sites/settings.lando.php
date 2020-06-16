@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @file
+ * Lando local development override configuration file.
+ */
+
+use Drupal\Core\Installer\InstallerKernel;
+
 $databases['default']['default'] = [
   'database' => getenv('DB_NAME'),
   'username' => getenv('DB_USER'),
@@ -11,9 +18,24 @@ $databases['default']['default'] = [
   'driver' => getenv('DB_DRIVER'),
 ];
 
+$databases[$subsite_id . '7']['default'] = [
+  'database' => getenv('MIGRATE_SOURCE_DB_NAME'),
+  'username' => getenv('MIGRATE_SOURCE_DB_USER'),
+  'password' => getenv('MIGRATE_SOURCE_DB_PASS'),
+  'prefix' => getenv('DB_PREFIX'),
+  'host' => $subsite_id . '7',
+  'port' => getenv('DB_PORT'),
+  'namespace' => getenv('DB_NAMESPACE'),
+  'driver' => getenv('DB_DRIVER'),
+];
+
+// Prevent SqlBase from moaning.
+$databases['migrate']['default'] = $databases[$subsite_id . '7']['default'];
+
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
+// Assume all Lando sites should use 'local' config for devlopment.
 $config['config_split.config_split.local']['status'] = TRUE;
 
 // Site hash salt.
@@ -26,7 +48,8 @@ $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV
 // Due to issues with enabling Redis during install/config import. We cannot enable the cache backend by default.
 // Once you have a site/db installed. Enable the Redis module and change the $redis_enabled to true.
 $redis_enabled = FALSE;
-if ($redis_enabled && !\Drupal\Core\Installer\InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')){
+if ($redis_enabled && !InstallerKernel::installationAttempted() &&
+    extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host'] = getenv('REDIS_HOSTNAME');
   $settings['redis.connection']['port'] = getenv('REDIS_PORT');
@@ -50,7 +73,11 @@ if ($redis_enabled && !\Drupal\Core\Installer\InstallerKernel::installationAttem
       ],
       'cache.backend.redis' => [
         'class' => 'Drupal\redis\Cache\CacheBackendFactory',
-        'arguments' => ['@redis.factory', '@cache_tags_provider.container', '@serialization.phpserialize'],
+        'arguments' => [
+          '@redis.factory',
+          '@cache_tags_provider.container',
+          '@serialization.phpserialize'
+        ],
       ],
       'cache.container' => [
         'class' => '\Drupal\redis\Cache\PhpRedis',

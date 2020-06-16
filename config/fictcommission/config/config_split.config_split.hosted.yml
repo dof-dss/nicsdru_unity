@@ -1,0 +1,15 @@
+uuid: 1e89cdd2-e43f-4b57-9f8d-3853c258dd23
+langcode: en
+status: false
+dependencies: {  }
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+folder: ../config/fictcommission/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

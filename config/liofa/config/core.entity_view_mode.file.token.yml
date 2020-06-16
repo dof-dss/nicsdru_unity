@@ -1,0 +1,12 @@
+uuid: b1f388aa-62ba-48de-98fe-560f1d7f6a2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+_core:
+  default_config_hash: swMDySu08EGn-IIODf8c3_tcIN4VU1uFiedP6ozVAUI
+id: file.token
+label: Token
+targetEntityType: file
+cache: true
