@@ -12,31 +12,33 @@ dependencies:
     - field.field.node.vacancy.field_vacancy_attachments
     - node.type.vacancy
   module:
-    - text
+    - datetime
     - user
 id: node.vacancy.teaser
 targetEntityType: node
 bundle: vacancy
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
     region: content
-  links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+  field_closing_date:
+    type: datetime_default
+    weight: 1
     region: content
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: uregni_long
+    third_party_settings: {  }
 hidden:
+  body: true
   field_appointment: true
-  field_closing_date: true
   field_meta_tags: true
   field_salary: true
   field_vacancy_attachments: true
   langcode: true
+  links: true
   search_api_excerpt: true
