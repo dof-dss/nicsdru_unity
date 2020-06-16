@@ -1,0 +1,20 @@
+uuid: e45deb5b-3fdc-430a-8584-6984e68c6b9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: xzHFwCCVjLDmkJUuW8riSxMaf7WfnCZDNFNqgb35HdU
+name: 'Consultation page'
+type: consultation
+description: 'Use <em>consultation pages</em> for publishing non-HTML content such as PDF documents which have a closing date.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

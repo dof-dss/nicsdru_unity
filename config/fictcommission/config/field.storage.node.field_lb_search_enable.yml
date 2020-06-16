@@ -1,0 +1,20 @@
+uuid: 9f6a9793-6675-44a0-8c5f-2848cc97ed8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: KngDDlWEezO5fK-f5E8nv9sxmhr9gGQpgru3RybMctk
+id: node.field_lb_search_enable
+field_name: field_lb_search_enable
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

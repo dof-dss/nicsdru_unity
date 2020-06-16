@@ -15,7 +15,8 @@ type: 'php:7.3'
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `:`.
 relationships:
-  solr: 'solr:solr'
+  #fictcommission_solr: 'solr:fictcommission'
+  uregni_solr: 'solr:uregni'
   redis: 'redis:redis'
   fictcommission: 'db:fictcommission'
   uregni: 'db:uregni'
@@ -57,12 +58,25 @@ hooks:
   # The deploy hook runs after your application has been deployed and started.
   deploy: |
     set -e
-    php ./drush/platformsh_generate_drush_yml.php
-    cd web
-    # Rebuild caches, run db-updates and import config.
-    drush -y cache-rebuild
-    drush -y updatedb
-    drush -y config-import
+
+    # Uregni Rebuild caches, run db-updates and import config.
+    cd /app/web/sites/uregni
+    drush -l uregni -y cache-rebuild
+    drush -l uregni -y updatedb
+    drush -l uregni -y config-import
+
+    # Liofa Rebuild caches, run db-updates and import config.
+    cd /app/web/sites/liofa
+    drush -l liofa -y cache-rebuild
+    drush -l liofa -y updatedb
+    drush -l liofa -y config-import
+
+    # Fictcommission Rebuild caches, run db-updates and import config.
+    cd /app/web/sites/fictcommission
+    drush -l fictcommission -y cache-rebuild
+    drush -l fictcommission -y updatedb
+    drush -l fictcommission -y config-import
+
 # The configuration of app when it is exposed to the web.
 web:
   # Specific parameters for different URL prefixes.

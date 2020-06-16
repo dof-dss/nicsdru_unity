@@ -1,0 +1,38 @@
+uuid: 8d4df0ea-0f8b-4205-aaa9-2a81b8509d2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.staff_member.body
+    - field.field.node.staff_member.field_member_image
+    - field.field.node.staff_member.field_member_role
+    - field.field.node.staff_member.field_metatag
+    - node.type.staff_member
+  module:
+    - text
+    - user
+id: node.staff_member.teaser
+targetEntityType: node
+bundle: staff_member
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_member_image: true
+  field_member_role: true
+  field_metatag: true
+  langcode: true
+  search_api_excerpt: true

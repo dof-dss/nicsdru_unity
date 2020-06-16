@@ -27,6 +27,13 @@ services:
       user: drupal8
       password: drupal8
       database: drupal8
+  uregni7:
+    type: mariadb
+    portforward: true
+    creds:
+      user: drupal7
+      password: drupal7
+      database: drupal7
   liofa:
     type: mariadb
     portforward: true
@@ -46,7 +53,7 @@ services:
     persist: true
     config:
         server: .lando/config/redis.conf
-  solr:
+  uregni_solr:
     type: solr:7
     portforward: true
     core: default
@@ -89,7 +96,7 @@ tooling:
   phpcs:
     description: Run PHPCS checks against all custom Drupal 8 code
     service: appserver
-    cmd: /app/phpcs.sh "/app" "/app/web/modules/origins /app/web/modules/custom /app/web/themes/custom /app/web/profiles/custom"
+    cmd: /app/phpcs.sh "/app" "/app/web/sites /app/web/modules/origins /app/web/modules/custom /app/web/themes/custom /app/web/profiles/custom"
   drck:
     description: Run drupal-check for Drupal 9 compatibility e.g. 'lando drck ./'
     service: appserver
