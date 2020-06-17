@@ -29,6 +29,9 @@ $databases[$subsite_id . '7']['default'] = [
   'driver' => getenv('DB_DRIVER'),
 ];
 
+// Prevent SqlBase from moaning.
+$databases['migrate']['default'] = $databases[$subsite_id . '7']['default'];
+
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
