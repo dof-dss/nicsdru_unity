@@ -33,11 +33,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_attachment:
     weight: 4
     label: above
@@ -87,6 +82,7 @@ content:
     type: basic_string
     region: content
 hidden:
+  content_moderation_control: true
   field_meta_tags: true
   field_publication_topic: true
   langcode: true
