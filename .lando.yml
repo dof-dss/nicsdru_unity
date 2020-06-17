@@ -20,6 +20,9 @@ services:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
+  database:
+    build_as_root:
+      - /app/.lando/scripts/create_databases.sh
   redis:
     type: redis:5.0
     persist: true
