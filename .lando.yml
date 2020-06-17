@@ -20,34 +20,6 @@ services:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
-  uregni:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
-  uregni7:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal7
-      password: drupal7
-      database: drupal7
-  liofa:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
-  fictcommission:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
   redis:
     type: redis:5.0
     persist: true
