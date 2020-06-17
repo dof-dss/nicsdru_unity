@@ -60,22 +60,25 @@ hooks:
     set -e
 
     # Uregni Rebuild caches, run db-updates and import config.
+    echo '****** Uregni deployment ******'
     cd /app/web/sites/uregni
     drush -l uregni -y cache-rebuild
     drush -l uregni -y updatedb
     drush -l uregni -y config-import
 
     # Liofa Rebuild caches, run db-updates and import config.
-    #cd /app/web/sites/liofa
-    #drush -l liofa -y cache-rebuild
-    #drush -l liofa -y updatedb
-    #drush -l liofa -y config-import
+    echo '****** Liofa deployment ******'
+    cd /app/web/sites/liofa
+    drush -l liofa -y cache-rebuild
+    drush -l liofa -y updatedb
+    drush -l liofa -y config-import
 
     # Fictcommission Rebuild caches, run db-updates and import config.
-    #cd /app/web/sites/fictcommission
-    #drush -l fictcommission -y cache-rebuild
-    #drush -l fictcommission -y updatedb
-    #drush -l fictcommission -y config-import
+    echo '****** Fictcommission deployment ******'
+    cd /app/web/sites/fictcommission
+    drush -l fictcommission -y cache-rebuild
+    drush -l fictcommission -y updatedb
+    drush -l fictcommission -y config-import
 
 # The configuration of app when it is exposed to the web.
 web:
