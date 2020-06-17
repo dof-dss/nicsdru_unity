@@ -35,12 +35,14 @@ console/
 
 # Ignore raw SQL files, potentially dangerous.
 *.sql
+*.sql.gz
 
 # Misc tooling files to ingore.
 .swp
 .vscode
 .DS_Store
 .talismanrc
+*.json
 
 # Any local tooling/Lando things we want to ignore.
 web/sites/default/redis.services.yml
