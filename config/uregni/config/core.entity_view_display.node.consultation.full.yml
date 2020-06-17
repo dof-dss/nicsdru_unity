@@ -32,7 +32,7 @@ third_party_settings:
         - field_email_address
         - field_postal
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: html_element
       region: content
       format_settings:
@@ -127,6 +127,7 @@ content:
     type: basic_string
     region: content
 hidden:
+  content_moderation_control: true
   field_meta_tags: true
   field_publication_topic: true
   langcode: true
