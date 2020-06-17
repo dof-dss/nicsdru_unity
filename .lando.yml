@@ -79,6 +79,8 @@ tooling:
   drush:
     server: appserver
     cmd: drush -r /app/web
+  'db-export [file]': disabled
+  'db-import <file>': diabled
   db-export:
     service: database
     description: Exports database from a database service to a file
