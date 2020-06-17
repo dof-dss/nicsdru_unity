@@ -29,11 +29,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_photo:
     weight: 1
     label: hidden
@@ -53,6 +48,7 @@ content:
     type: datetime_default
     region: content
 hidden:
+  content_moderation_control: true
   field_meta_tags: true
   field_teaser: true
   langcode: true
