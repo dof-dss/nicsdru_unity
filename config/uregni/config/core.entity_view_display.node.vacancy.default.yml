@@ -27,11 +27,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_appointment:
     type: string
     weight: 1
@@ -66,6 +61,7 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_meta_tags: true
   langcode: true
   links: true
