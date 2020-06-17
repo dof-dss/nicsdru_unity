@@ -22,7 +22,7 @@ services:
       - /app/.lando/scripts/appserver_build.sh
   database:
     build_as_root:
-      - /app/.lando/scripts/create_databases.sh
+      - sh /app/.lando/scripts/create_databases.sh
   redis:
     type: redis:5.0
     persist: true
@@ -79,3 +79,15 @@ tooling:
   drush:
     server: appserver
     cmd: drush -r /app/web
+  db-export:
+    service: database
+    description: Exports database from a database service to a file
+    cmd: "sh /app/.lando/scripts/export_databases.sh"
+    user: root
+    options:
+      host:
+        default: none
+        alias:
+          - h
+      stdout:
+        description: Dump database to stdout
