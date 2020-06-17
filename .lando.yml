@@ -93,3 +93,24 @@ tooling:
           - h
       stdout:
         description: Dump database to stdout
+  'db-import [database] [file]':
+    service: database
+    description: Import file to database
+    cmd: "sh /app/.lando/scripts/import_database.sh"
+    user: root
+    options:
+      database:
+        passthrough: true
+        description: Database to import to
+        interactive:
+          type: input
+          message: Which database to import to?
+          weight: 1
+      file:
+        passthrough: true
+        description: File to import
+        interactive:
+          type: input
+          message: Which file to import?
+          weight: 2
+
