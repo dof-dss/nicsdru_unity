@@ -19,14 +19,9 @@ targetEntityType: node
 bundle: vacancy
 mode: teaser
 content:
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_closing_date:
     type: datetime_default
-    weight: 1
+    weight: 0
     region: content
     label: above
     settings:
@@ -35,6 +30,7 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  content_moderation_control: true
   field_appointment: true
   field_meta_tags: true
   field_salary: true
