@@ -81,18 +81,16 @@ tooling:
     cmd: drush -r /app/web
   'db-export [file]': disabled
   'db-import <file>': diabled
-  db-export:
+  'db-export [name]':
     service: database
-    description: Exports database from a database service to a file
-    cmd: "sh /app/.lando/scripts/export_databases.sh"
+    description: Exports database to a file. To export all databases, don't provide the name'
+    cmd: "sh /app/.lando/scripts/export_database.sh"
     user: root
     options:
-      host:
-        default: none
+      name:
+        description: Database to export
         alias:
-          - h
-      stdout:
-        description: Dump database to stdout
+          - n
   'db-import [database] [file]':
     service: database
     description: Import file to database
