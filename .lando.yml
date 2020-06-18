@@ -132,4 +132,19 @@ tooling:
           type: input
           message: What do you want to call this database?
           weight: 1
+  'db-delete [name]':
+    service: database
+    description: Delete a database
+    cmd: "sh /app/.lando/scripts/delete_database.sh"
+    user: root
+    options:
+      name:
+        passthrough: true
+        description: Name of the database to delete
+        alias:
+          - n
+        interactive:
+          type: input
+          message: Which database do you want to delete?
+          weight: 1
 
