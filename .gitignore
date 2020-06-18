@@ -42,7 +42,6 @@ console/
 .vscode
 .DS_Store
 .talismanrc
-*.json
 
 # Any local tooling/Lando things we want to ignore.
 web/sites/default/redis.services.yml
