@@ -66,16 +66,16 @@ hooks:
     drush -l uregni -y config-import
 
     # Liofa Rebuild caches, run db-updates and import config.
-    cd /app/web/sites/liofa
-    drush -l liofa -y cache-rebuild
-    drush -l liofa -y updatedb
-    drush -l liofa -y config-import
+    #cd /app/web/sites/liofa
+    #drush -l liofa -y cache-rebuild
+    #drush -l liofa -y updatedb
+    #drush -l liofa -y config-import
 
     # Fictcommission Rebuild caches, run db-updates and import config.
-    cd /app/web/sites/fictcommission
-    drush -l fictcommission -y cache-rebuild
-    drush -l fictcommission -y updatedb
-    drush -l fictcommission -y config-import
+    #cd /app/web/sites/fictcommission
+    #drush -l fictcommission -y cache-rebuild
+    #drush -l fictcommission -y updatedb
+    #drush -l fictcommission -y config-import
 
 # The configuration of app when it is exposed to the web.
 web:
