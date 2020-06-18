@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+. /helpers/log.sh
 
 # Parse command options & flags.
 for i in "$@"
@@ -14,7 +16,7 @@ case $i in
 esac
 done
 
-echo "Deleting database: ${database}";
+lando_green "Deleting database: ${database}";
 
 # Drop the database if it exists.
 mysql -uroot -e "DROP DATABASE IF EXISTS ${database}";

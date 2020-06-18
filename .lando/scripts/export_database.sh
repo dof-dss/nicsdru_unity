@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+. /helpers/log.sh
 
 # If the first command option is missing then dump every database.
 if [ -z "$1" ]; then
@@ -7,13 +9,13 @@ if [ -z "$1" ]; then
 
     # Ignore the standard 'default' folder under web/sites.
     if [ $database != 'default' ]; then
-        echo "Exporting database: ${database}"
+        lando_green "Exporting database: ${database}"
         mysqldump --opt --user=${USER} --host=${HOST} --port=${PORT} --databases $database > `date +%Y-%m-%d`.$database.sql
     fi
   done
 else
   # Export a single database.
-  echo "Exporting database: ${1}"
+  lando_green "Exporting database: ${1}"
   mysqldump --opt --user=${USER} --host=${HOST} --port=${PORT} --databases ${1} > `date +%Y-%m-%d`.${1}.sql
 fi
 

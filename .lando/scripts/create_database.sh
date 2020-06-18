@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+. /helpers/log.sh
 
 # Parse command options & flags.
 for i in "$@"
@@ -14,7 +16,7 @@ case $i in
 esac
 done
 
-echo "Creating database: ${database}";
+lando_green "Creating database: ${database}";
 
 # Create the database with the default Lando database credentials if
 # it doesn't already exist.

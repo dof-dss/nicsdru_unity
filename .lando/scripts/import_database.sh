@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+. /helpers/log.sh
 
 # Parse command options & flags.
 for i in "$@"
@@ -29,12 +31,12 @@ if [ -f "$file" ]; then
 
     # We drop each table to cleanup the database before import.
     for t in $tables; do
-      echo "Dropping $t table from $database database..."
+      lando_yellow "Dropping $t table from $database database..."
       $sqlconn -e "DROP TABLE $t"
     done
 
-    echo "Importing to $database"
+    lando_green "Importing to $database"
     $sqlconn < $file
 else
-    echo "File '$file' does not exist. Aborting import"
+    lando_red "File '$file' does not exist. Aborting import"
 fi
