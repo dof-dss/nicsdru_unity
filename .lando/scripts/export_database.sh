@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 if [ -z "$1" ]; then
   for dir in $(find /app/web/sites/ -mindepth 1 -maxdepth 1 -type d) ; do
     database=${dir##*/} ;
