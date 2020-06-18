@@ -11,10 +11,6 @@ case $i in
     file="${i#*=}"
     shift # past argument=value
     ;;
-    --default)
-    DEFAULT=YES
-    shift # past argument with no value
-    ;;
     *)
           # unknown option
     ;;
