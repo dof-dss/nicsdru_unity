@@ -122,6 +122,8 @@ tooling:
       name:
         passthrough: true
         description: Name of the database to create
+        alias:
+          - n
         interactive:
           type: input
           message: What do you want to call this database?
