@@ -17,7 +17,7 @@ case $i in
 esac
 done
 
-echo "Creating database: ${database}";
+echo "Deleting database: ${database}";
 
-mysql -uroot -e "CREATE DATABASE IF NOT EXISTS ${database}; \
-                 GRANT ALL PRIVILEGES ON ${database}.* TO 'drupal8'@'%' IDENTIFIED by 'drupal8';"
+mysql -uroot -e "DROP DATABASE IF EXISTS ${database}";
+
