@@ -102,6 +102,8 @@ tooling:
       database:
         passthrough: true
         description: Database to import to
+        alias:
+          - d
         interactive:
           type: input
           message: Which database to import to?
@@ -109,6 +111,8 @@ tooling:
       file:
         passthrough: true
         description: File to import
+        alias:
+          - f
         interactive:
           type: input
           message: Which file to import?
