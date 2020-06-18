@@ -147,4 +147,9 @@ tooling:
           type: input
           message: Which database do you want to delete?
           weight: 1
+  db-list:
+    service: database
+    description: List all databases
+    cmd: mysql -uroot -e "SHOW DATABASES;"
+    user: root
 
