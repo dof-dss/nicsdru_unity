@@ -18,11 +18,18 @@ esac
 done
 
 if [ -f "$file" ]; then
-    echo "Dropping ${database} database"
-    mysql -u root -h $DB_HOST  -D $database -e "DROP DATABASE IF EXISTS ${database};"
+
+  sqlconn="mysql -u root -h $DB_HOST -D $database"
+
+    tables=$($sqlconn -e 'SHOW TABLES' | awk '{ print $1}' | grep -v '^Tables' || true)
+
+    for t in $tables; do
+      echo "Dropping $t table from $database database..."
+      $sqlconn -e "DROP TABLE $t"
+    done
 
     echo "Importing to $database"
-    mysql -u root -h $DB_HOST $database < $file
+    $sqlconn < $file
 else
     echo "File '$file' does not exist. Aborting import"
 fi
