@@ -113,4 +113,17 @@ tooling:
           type: input
           message: Which file to import?
           weight: 2
+  'db-create [name]':
+    service: database
+    description: Create a new database
+    cmd: "sh /app/.lando/scripts/create_database.sh"
+    user: root
+    options:
+      name:
+        passthrough: true
+        description: Name of the database to create
+        interactive:
+          type: input
+          message: What do you want to call this database?
+          weight: 1
 
