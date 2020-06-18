@@ -80,7 +80,7 @@ tooling:
     server: appserver
     cmd: drush -r /app/web
   'db-export [file]': disabled
-  'db-import <file>': diabled
+  'db-import <file>': disabled
   'db-export [name]':
     service: database
     description: Exports database to a file. To export all databases, don't provide the name'
