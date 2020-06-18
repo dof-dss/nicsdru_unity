@@ -22,7 +22,7 @@ services:
       - /app/.lando/scripts/appserver_build.sh
   database:
     build_as_root:
-      - sh /app/.lando/scripts/create_databases.sh
+      - "sh /app/.lando/scripts/create_databases.sh"
   redis:
     type: redis:5.0
     persist: true
