@@ -62,7 +62,7 @@ hooks:
     for site in uregni liofa fictcommission
     do
       # Uregni Rebuild caches, run db-updates and import config.
-      echo $site
+      echo '****** $site deployment ******'
       cd /app/web/sites/uregni
       drush -l $site -y cache-rebuild
       drush -l $site -y updatedb
