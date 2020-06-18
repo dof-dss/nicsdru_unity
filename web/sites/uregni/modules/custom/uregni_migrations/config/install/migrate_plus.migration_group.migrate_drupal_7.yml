@@ -12,9 +12,9 @@ shared_configuration:
     key: drupal_7
     database:
       driver: mysql
-      username: drupal7
-      password: drupal7
-      host: uregni7
+      username: drupal8
+      password: drupal8
+      host: database
       port: ''
-      database: drupal7
+      database: uregni_legacy
       prefix: null
