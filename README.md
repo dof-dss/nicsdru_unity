@@ -25,25 +25,25 @@ Or, if available, you may also fetch the database and import this:
 
 `platform db:dump` (you'll need to select project, environment and required site e.g. 'uregni')
 
-`lando db-import -h <site name> <downloaded db>` (where 'site name' may be 'uregni', 'liofa' etc)
+`lando db-import -d <sitename/database> -f <downloaded sql file>` (where 'site name' may be 'uregni', 'liofa' etc)
 
 ## Running migrations
 
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
 We will take Uregni as an example and assume that we have a dump file 'uregni.sql' , this file should be placed in the
 imports/data directory.
-Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files 
+Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files
 directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist.
 
-1. Import the database into the Drupal 7 database host for your chosen site. Using our example site this will be 'uregni7'. 
-Note that your database host must have a '7' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
-`lando db-import -h uregni7 ./imports/data/uregni.sql`
+1. Import the database into the Drupal 7 database your chosen site. Using our example site this will be 'uregni_legacy'.
+Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
+`lando db-import -d <sitename>_legacy -f <downloaded db>`
 
 2. Install the migrate_upgrade module (listed as 'Drupal Upgrade' at /admin/modules)
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
-`lando drush migrate-upgrade --legacy-db-url=mysql://drupal7:drupal7@uregni7/drupal7 --legacy-root=/app/imports/files --configure-only`
-(change the db host from 'uregni7' and the file path if you are migrating another site)
+`lando drush migrate-upgrade --legacy-db-url=mysql://drupal8:drupal8@database/uregni_legacy --legacy-root=/app/imports/files --configure-only`
+(change the db connection database name and the file path if you are migrating another site)
 
 4. Install the migrate_tools module
 
@@ -111,20 +111,18 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 - Set up a new database in .platform/services.yaml (just like 'uregni' or 'liofa')
 - Add your new db to the 'relationships' section of .platform.app.yaml
 - Add new short site name to the 'deploy' hook loop in .platform.app.yaml (you will see the other sites listed)
-- Add new routes to .platform/routes.yaml, one for domain name of the new site and another for the www redirect 
+- Add new routes to .platform/routes.yaml, one for domain name of the new site and another for the www redirect
 (use 'uregni' as an example)
-- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the 
-domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory 
+- Create a new directory for your site under web/sites. Note that the directory name should be the first part of the
+domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory
 name should be just 'uregni'
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
 - Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
-- Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver 
+- Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver
 e.g. uregni.gov.uk.lndo.site
-- Edit the top level .lando.yml file and add two new databases under 'services' (see 'uregni' and 'uregni7' as an example and 
-make sure that you set all of the credentials to 'drupal8' or  'drupal7' as has been done with the other sites)  
-- If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when 
+- If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when
 configuring the server in search_api)
-- If necessary, add a new Solr core for Platform.sh in .platform/service.yaml (add a core and an endpoint by copying the config for 
+- If necessary, add a new Solr core for Platform.sh in .platform/service.yaml (add a core and an endpoint by copying the config for
 'uregni_index' and 'uregni') - after doing this add a new relationship in .platform.app.yaml (following the example of 'uregnisolr')
 - When creating your solr server in search_api use 'standard' connector, 'solr' as solr host, and short sitename as solr core - also
 under 'Advanced Server Configuration' set the solr.install.dir to '../../..'
@@ -140,9 +138,9 @@ After connecting to the Platform server using 'platform ssh', drush commands may
 
 Also, if you run platform CLI commands like 'platform sql' you will be asked to choose between the multi sites.
 
-- N.B. "There can be only one" - because the local Lando site URLs take the form 'uregni.gov.uk.lndo.site' and do not include the 
+- N.B. "There can be only one" - because the local Lando site URLs take the form 'uregni.gov.uk.lndo.site' and do not include the
 Lando app name, you may only have one set of sites installed on your local machine i.e. it is not possible to clone this repo
-into /apps/unity and run 'lando start' and then subsequently clone it into /apps/unity2 and run 'lando start' again as the 
+into /apps/unity and run 'lando start' and then subsequently clone it into /apps/unity2 and run 'lando start' again as the
 site URLs will be duplicated and Lando will attempt to set up 'uregni.gov.uk.lndo.site' pointing to both.
 
 
