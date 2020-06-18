@@ -11,15 +11,11 @@ id: node.vacancy.body
 field_name: body
 entity_type: node
 bundle: vacancy
-label: Body
+label: 'Job description'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    summary: ''
-    value: ' '
-    format: filtered_html
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
