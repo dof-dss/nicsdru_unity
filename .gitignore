@@ -35,6 +35,7 @@ console/
 
 # Ignore raw SQL files, potentially dangerous.
 *.sql
+*.sql.gz
 
 # Misc tooling files to ingore.
 .swp

@@ -20,34 +20,9 @@ services:
     xdebug: false
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
-  uregni:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
-  uregni7:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal7
-      password: drupal7
-      database: drupal7
-  liofa:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
-  fictcommission:
-    type: mariadb
-    portforward: true
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
+  database:
+    build_as_root:
+      - "sh /app/.lando/scripts/create_databases.sh"
   redis:
     type: redis:5.0
     persist: true
@@ -104,3 +79,75 @@ tooling:
   drush:
     server: appserver
     cmd: drush -r /app/web
+  'db-export [file]': disabled
+  'db-import <file>': disabled
+  'db-export [name]':
+    service: database
+    description: Exports database to a file. To export all databases, don't provide the name'
+    cmd: "sh /app/.lando/scripts/export_database.sh"
+    user: root
+    options:
+      name:
+        description: Database to export
+        alias:
+          - n
+  'db-import [database] [file]':
+    service: database
+    description: Import file to database
+    cmd: "sh /app/.lando/scripts/import_database.sh"
+    user: root
+    options:
+      database:
+        passthrough: true
+        description: Database to import to
+        alias:
+          - d
+        interactive:
+          type: input
+          message: Which database to import to?
+          weight: 1
+      file:
+        passthrough: true
+        description: File to import
+        alias:
+          - f
+        interactive:
+          type: input
+          message: Which file to import?
+          weight: 2
+  'db-create [name]':
+    service: database
+    description: Create a new database
+    cmd: "sh /app/.lando/scripts/create_database.sh"
+    user: root
+    options:
+      name:
+        passthrough: true
+        description: Name of the database to create
+        alias:
+          - n
+        interactive:
+          type: input
+          message: What do you want to call this database?
+          weight: 1
+  'db-delete [name]':
+    service: database
+    description: Delete a database
+    cmd: "sh /app/.lando/scripts/delete_database.sh"
+    user: root
+    options:
+      name:
+        passthrough: true
+        description: Name of the database to delete
+        alias:
+          - n
+        interactive:
+          type: input
+          message: Which database do you want to delete?
+          weight: 1
+  db-list:
+    service: database
+    description: List all databases
+    cmd: mysql -uroot -e "SHOW DATABASES;"
+    user: root
+
