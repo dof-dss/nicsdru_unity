@@ -11,7 +11,7 @@ id: node.vacancy.body
 field_name: body
 entity_type: node
 bundle: vacancy
-label: Body
+label: 'Job description'
 description: ''
 required: false
 translatable: true
