@@ -19,7 +19,7 @@ default_value:
   -
     summary: ''
     value: ' '
-    format: filtered_html
+    format: basic_html
 default_value_callback: ''
 settings:
   display_summary: true
