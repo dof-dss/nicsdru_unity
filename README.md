@@ -143,6 +143,24 @@ Lando app name, you may only have one set of sites installed on your local machi
 into /apps/unity and run 'lando start' and then subsequently clone it into /apps/unity2 and run 'lando start' again as the
 site URLs will be duplicated and Lando will attempt to set up 'uregni.gov.uk.lndo.site' pointing to both.
 
+## Uploading files to platform.sh
+
+- Navigate to files directory in lando local copy of unity.
+  - Cd web/files.
+- For multi-site:
+  - Group all the files within the site files folder name within the site files directory.
+    - E.g. uregni > uregni > all_uregni_files.
+  - We do this because there is no option to upload files into web/files/uregni on platform so the files simply go into
+    web/files and they have to be moved manually via ssh in platform.
+- Run the command platform mount:upload.
+- Follow the wizard for the site:
+  - Select 3 for web/files.
+- Run.
+- If the upload fails at any point just run through the platform mount:upload again, it will start from where it left off.
+- To check the files are there.
+  - platform ssh.
+  - Follow the wizard for the site.
+  - cd web/files/uregni and all the uploaded files should be there.
 
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
