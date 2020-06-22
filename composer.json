@@ -127,7 +127,8 @@
     "extra": {
         "patches": {
             "drupal/core": {
-                "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch"
+                "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
+                "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
             },
             "drupal/config_split": {
                 "General typo issues": "https://www.drupal.org/files/issues/2018-10-02/general_typo_issues-3003865-4.patch",
