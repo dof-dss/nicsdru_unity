@@ -49,4 +49,49 @@ class ContentProcessors {
     return $links;
   }
 
+  /**
+   * Extracts embedded document links and replaces them with link to publication page.
+   *
+   * @param array $content
+   *  Drupal content field array.
+   *
+   * @return array
+   *  Drupal content field array.
+   */
+  public static function embeddedDocuments(array $content) {
+
+    // Set Content Body Value
+    $body = $content[0][0]['value'];
+
+    // Publication Page link used for replacing embedded links
+    $publications_link = 'TESTING LINK'; //@TODO: Find the correct way to provide a link to content type
+
+    // Extract and replace links. -- @TODO: Improve REGEX to ensure it's not capturing every link tag unneccessarily
+    $embed_regex = '/<a href="(\S+?)"/m';
+    preg_replace($embed_regex, $publications_link, $body);
+
+    // Set Body value with new modified value
+    $content[0][0]['value'] = $body;
+
+    /*
+     * @TODO: THIS WILL NEED TO BE EDITED TO CREATE CONTENT TYPE NOT FIELD ENTRY -- IF REQUIRED!
+
+    preg_match_all($embed_regex, $body, $matches, PREG_SET_ORDER, 0);
+    $embedded_documents = [];
+
+    // Create a Drupal publications content for each extracted link element.
+    foreach ($matches as $link) {
+      $embedded_documents[] = [
+        'uri' => (strpos($link[1], '/') === 0 ? 'internal:' . $link[1] : $link[1]),
+        'title' => $link[2],
+        'options' => [
+          'attributes' => [],
+        ],
+      ];
+    }
+    */
+
+    return $content;
+  }
+
 }
