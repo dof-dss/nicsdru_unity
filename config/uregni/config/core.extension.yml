@@ -21,14 +21,20 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
+  entity_browser: 0
+  entity_browser_entity_form: 0
+  entity_embed: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  geolocation: 0
   help: 0
   history: 0
   image: 0
+  inline_entity_form: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -63,7 +69,9 @@ module:
   token_filter: 0
   toolbar: 0
   twig_tweak: 0
+  unity_media: 0
   user: 0
+  whatlinkshere: 0
   workflows: 0
   menu_link_content: 1
   pathauto: 1

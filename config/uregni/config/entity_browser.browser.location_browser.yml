@@ -1,0 +1,17 @@
+uuid: 425ea405-a0dc-4836-9884-b83482fb3579
+langcode: en
+status: true
+dependencies: {  }
+name: location_browser
+label: 'Location browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '650'
+  link_text: Select
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets: {  }
