@@ -75,11 +75,11 @@ process:
   body:
     -
       plugin: callback
-        callable:
-          - '\Drupal\unity_file_migrations\ContentProcessors'
-          - embeddedDocuments
-        source:
-          - body
+      callable:
+        - '\Drupal\unity_file_migrations\ContentProcessors'
+        - embeddedDocuments
+      source:
+        - body
   field_photo:
     -
       plugin: sub_process
