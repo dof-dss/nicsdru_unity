@@ -2,6 +2,8 @@ uuid: 395fac39-de90-4ab9-b71a-477f6cc1e04f
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embed
   module:
     - editor
     - entity_embed
@@ -84,7 +86,7 @@ filters:
     status: true
     weight: -47
     settings:
-      default_view_mode: default
+      default_view_mode: embed
       allowed_media_types:
         audio: audio
         image: image
