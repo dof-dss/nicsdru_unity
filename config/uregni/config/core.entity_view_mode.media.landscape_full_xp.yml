@@ -1,0 +1,10 @@
+uuid: 88ff70c0-7fc4-4b38-9239-4d3d0c83c4cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.landscape_full_xp
+label: 'Landscape full XP'
+targetEntityType: media
+cache: true
