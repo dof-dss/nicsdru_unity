@@ -1,6 +1,6 @@
-name: 'File Migrations'
+name: 'Migrate UNITY'
 type: module
-description: 'Document, audio and image migrations'
+description: 'Unity Document, audio and image migrations and other tools'
 core: 8.x
 package: 'Custom'
 migration_dependencies:
