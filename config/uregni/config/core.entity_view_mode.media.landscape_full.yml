@@ -1,10 +1,10 @@
-uuid: 159dd007-4eb4-4450-866e-d7d918c5076a
+uuid: a3cd0b65-7369-4f23-b88f-578a4457e7cb
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.embed
-label: Embed
+id: media.landscape_full
+label: 'Landscape full'
 targetEntityType: media
 cache: true

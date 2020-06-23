@@ -1,10 +1,10 @@
-uuid: 159dd007-4eb4-4450-866e-d7d918c5076a
+uuid: 487ade41-7b10-418d-ae6a-2e64c6516571
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.embed
-label: Embed
+id: media.portrait_full
+label: 'Portrait full'
 targetEntityType: media
 cache: true

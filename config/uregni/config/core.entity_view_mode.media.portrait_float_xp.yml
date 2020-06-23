@@ -1,10 +1,10 @@
-uuid: 159dd007-4eb4-4450-866e-d7d918c5076a
+uuid: 41e2c1b5-72af-40a0-b0cb-697758315937
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.embed
-label: Embed
+id: media.portrait_float_xp
+label: 'Portrait float XP'
 targetEntityType: media
 cache: true
