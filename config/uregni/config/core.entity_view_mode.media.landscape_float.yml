@@ -1,0 +1,10 @@
+uuid: d622dbd6-0a93-4d5b-9913-4da4fcc53219
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.landscape_float
+label: 'Landscape float'
+targetEntityType: media
+cache: true
