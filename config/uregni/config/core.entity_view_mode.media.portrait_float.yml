@@ -1,0 +1,10 @@
+uuid: 942082c8-8380-4dcc-96a7-ebf8730f800f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.portrait_float
+label: 'Portrait float'
+targetEntityType: media
+cache: true
