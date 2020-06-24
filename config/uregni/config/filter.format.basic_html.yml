@@ -87,6 +87,19 @@ filters:
     weight: -44
     settings:
       filter_url_length: 72
+  noreferrer:
+    id: noreferrer
+    provider: noreferrer
+    status: true
+    weight: -49
+    settings: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: -43
+    settings:
+      replace_empty: '0'
   media_embed:
     id: media_embed
     provider: media
@@ -107,16 +120,3 @@ filters:
         portrait_float: portrait_float
         portrait_float_xp: portrait_float_xp
         portrait_full: portrait_full
-  noreferrer:
-    id: noreferrer
-    provider: noreferrer
-    status: true
-    weight: -49
-    settings: {  }
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: false
-    weight: -43
-    settings:
-      replace_empty: '0'
