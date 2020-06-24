@@ -2,6 +2,7 @@
 
 namespace Drupal\unity_file_migrations\Plugin\migrate\process;
 
+use Drupal\Core\Link;
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
@@ -31,11 +32,14 @@ class DocumentEmbed extends ProcessPluginBase {
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
 
-    // Publication Page link used for replacing embedded links
-    $publications_link = 'TESTING LINK'; //@TODO: Find the correct way to provide a link to content type
+    // Publication Page link used for replacing embedded links.
+    $publications_link = Link::createFromRoute('Publication Page',
+      'entity.node.canonical',
+      ['node' => 2593],
+      ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']])->toString();
 
-    // Extract and replace links. -- @TODO: Improve REGEX to ensure it's not capturing every link tag unneccessarily
-    $embed_regex = '/<a href="(\S+?)"/m';
+    // Extract and replace links.
+    $embed_regex = '/<a[\w\s\.]*href="([\w:\-\/\.]*)(pdf|doc|doxc)[\w\s\.\=\-"\':><(&);\/]+<\/a>/U';
     $value = preg_replace($embed_regex, $publications_link, $value);
 
     return $value;
