@@ -43,6 +43,7 @@ settings:
           name: Media
           items:
             - DrupalMediaLibrary
+            - map
         -
           name: Tasks
           items:
