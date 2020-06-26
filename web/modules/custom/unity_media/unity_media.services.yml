@@ -1,0 +1,5 @@
+services:
+  unity_media.route_subscriber:
+    class: Drupal\unity_media\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
