@@ -4,9 +4,14 @@ status: true
 dependencies:
   module:
     - search_api_solr
-    - search_api
     - node
+    - taxonomy
+    - search_api
   config:
+    - field.storage.node.body
+    - field.storage.node.field_publication_date
+    - field.storage.node.field_publication_topic
+    - field.storage.node.field_publication_type
     - search_api.server.solr_default
 third_party_settings:
   search_api_solr:
@@ -50,7 +55,57 @@ id: publications
 name: Publications
 description: ''
 read_only: false
-field_settings: {  }
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_publication_date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_publication_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_publication_date
+  field_publication_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_publication_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publication_type
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  name:
+    label: 'Topic » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_publication_topic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publication_topic
+      module:
+        - taxonomy
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -63,9 +118,31 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  entity_status: {  }
+  html_filter:
+    all_fields: true
+    fields:
+      - body
+      - field_publication_type
+      - langcode
+      - name
+      - title
+    title: false
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
 tracker_settings:
   default:
     indexing_order: fifo
