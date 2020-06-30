@@ -1,7 +1,9 @@
-uuid: f124b75e-a205-424e-b9cd-e259979590ae
+uuid: 0ad32c7a-6a77-4138-be77-2137f7715a24
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: CtfC5LDjVNnbLPFruCI4NqxrtR8ml1OZSXRF58iAYdo
 id: supervisor_user
 label: 'supervisor user'
 weight: 5
@@ -170,16 +172,11 @@ permissions:
   - 'use editorial transition submit_for_review'
   - 'use editorial transition unpublish'
   - 'use media wysiwyg'
-  - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
-  - 'use nics_editorial_workflow transition draft_of_published'
   - 'use nics_editorial_workflow transition publish'
   - 'use nics_editorial_workflow transition reject'
-  - 'use nics_editorial_workflow transition restore'
-  - 'use nics_editorial_workflow transition restore_to_draft'
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'use nics_editorial_workflow transition unpublish'
-  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'use workbench_moderation my drafts tab'

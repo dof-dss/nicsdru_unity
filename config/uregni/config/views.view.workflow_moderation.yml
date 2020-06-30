@@ -8,14 +8,12 @@ dependencies:
     - user.role.author_user
     - user.role.editor_user
     - user.role.supervisor_user
-    - workflows.workflow.nics_editorial_workflow
   module:
-    - content_moderation
     - datetime
     - node
     - user
 _core:
-  default_config_hash: qmeJXDzqRz-sV5iAHcmJgIoorYcaDuZ4J8TrVdqQ8uk
+  default_config_hash: kZsO6DJQmcnqrG_jXTRL2ngNHdnh0R8Sf3ttK979K84
 id: workflow_moderation
 label: 'Workflow: Moderation'
 module: views

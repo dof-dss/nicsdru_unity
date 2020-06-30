@@ -1,7 +1,9 @@
-uuid: bc6c87bb-1b9d-45ef-9860-e56675789718
+uuid: ad146d2d-e710-4bd2-8ef1-cf0e6afc9859
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: JbObrzDpJi9e8_S9HPMLHPCIT2f6VlpIBmOlrXNH0P4
 id: admin_user
 label: 'admin user'
 weight: 7
@@ -275,17 +277,12 @@ permissions:
   - 'use editorial transition submit_for_review'
   - 'use editorial transition unpublish'
   - 'use media wysiwyg'
-  - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
-  - 'use nics_editorial_workflow transition draft_of_published'
   - 'use nics_editorial_workflow transition publish'
   - 'use nics_editorial_workflow transition quick_publish'
   - 'use nics_editorial_workflow transition reject'
-  - 'use nics_editorial_workflow transition restore'
-  - 'use nics_editorial_workflow transition restore_to_draft'
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'use nics_editorial_workflow transition unpublish'
-  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'use text format filtered_html_with_tokens'
