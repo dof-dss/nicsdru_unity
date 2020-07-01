@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c701bf1fb38ea2d56598891d3817443",
+    "content-hash": "06989068569d03c8681150a1cb19c9ee",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1891,16 +1891,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.3.9",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "42d46e3271b876a175bed565c19c7049ea62786d"
+                "reference": "5845474412d65b65c71358e3941cc8a51dcf51e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/42d46e3271b876a175bed565c19c7049ea62786d",
-                "reference": "42d46e3271b876a175bed565c19c7049ea62786d",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/5845474412d65b65c71358e3941cc8a51dcf51e6",
+                "reference": "5845474412d65b65c71358e3941cc8a51dcf51e6",
                 "shasum": ""
             },
             "require": {
@@ -1912,7 +1912,7 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2020-06-17T08:52:11+00:00"
+            "time": "2020-06-30T15:41:24+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
@@ -12125,20 +12125,20 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.6",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "52a2a73d35d4ca920b0dcd4592eb2c5e9994946b"
+                "reference": "d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/52a2a73d35d4ca920b0dcd4592eb2c5e9994946b",
-                "reference": "52a2a73d35d4ca920b0dcd4592eb2c5e9994946b",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089",
+                "reference": "d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089",
                 "shasum": ""
             },
             "require": {
-                "dof-dss/nicsdru_origins_modules": "^0.3",
+                "dof-dss/nicsdru_origins_modules": "^0.4",
                 "drupal/address": "^1.7",
                 "drupal/admin_toolbar": "^2.2",
                 "drupal/adminimal_theme": "^1.5",
@@ -12158,7 +12158,7 @@
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
-            "time": "2020-06-10T14:58:01+00:00"
+            "time": "2020-07-01T08:37:34+00:00"
         },
         {
             "name": "drupal/coder",
