@@ -29,7 +29,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
         // Output the result.
         $variables['header']['result'] = [
           '#type' => 'html_tag',
-          '#tag' => 'h3',
+          '#tag' => 'h2',
           '#attributes' => ['class' => 'current-search-item-results-count'],
           '#value' => t('@item_count @header_text',
             [
@@ -41,7 +41,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
       else {
         $variables['header']['result'] = [
           '#type' => 'html_tag',
-          '#tag' => 'h3',
+          '#tag' => 'h2',
           '#attributes' => ['class' => 'current-search-item-results-count'],
           '#value' => t('0 results'),
         ];
