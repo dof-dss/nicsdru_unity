@@ -1,10 +1,10 @@
 name: 'Migrate UNITY'
 type: module
-description: 'Unity complete migrations'
+description: 'Unity Document, audio and image migrations and other tools'
 core: 8.x
 package: 'Custom'
 migration_dependencies:
-  required: { }
+ required: { }
 dependencies:
   - drupal:migrate
   - drupal:migrate_plus
