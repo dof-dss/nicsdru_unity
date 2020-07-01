@@ -20,7 +20,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
       // Ensure the search has items in an array.
       if (!empty($variables['view']->total_rows)) {
 
-        // Count the number of publications in the array.
+        // Count the number of items in the array.
         $number_of_items = $variables['view']->total_rows;
 
         // Singular expression if only 1, if more pluralise.
