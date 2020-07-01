@@ -32,7 +32,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
-        "dof-dss/nicsdru_origins_modules": "^0.3.4",
+        "dof-dss/nicsdru_origins_modules": "^0.4",
         "dof-dss/nicsdru_unity_theme": "^0.1.1",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
@@ -104,7 +104,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "dof-dss/nicsdru_origins_profile": "^0.1.4",
+        "dof-dss/nicsdru_origins_profile": "^0.1.7",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^8.8",
         "drupal/devel": "^2.1",
