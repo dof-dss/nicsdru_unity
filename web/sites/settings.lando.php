@@ -8,22 +8,22 @@
 use Drupal\Core\Installer\InstallerKernel;
 
 $databases['default']['default'] = [
-  'database' => getenv('DB_NAME'),
+  'database' => $subsite_id,
   'username' => getenv('DB_USER'),
   'password' => getenv('DB_PASS'),
   'prefix' => getenv('DB_PREFIX'),
-  'host' => $subsite_id,
+  'host' => getenv('DB_HOST'),
   'port' => getenv('DB_PORT'),
   'namespace' => getenv('DB_NAMESPACE'),
   'driver' => getenv('DB_DRIVER'),
 ];
 
 $databases[$subsite_id . '7']['default'] = [
-  'database' => getenv('MIGRATE_SOURCE_DB_NAME'),
-  'username' => getenv('MIGRATE_SOURCE_DB_USER'),
-  'password' => getenv('MIGRATE_SOURCE_DB_PASS'),
+  'database' => $subsite_id . '_legacy',
+  'username' => getenv('DB_USER'),
+  'password' => getenv('DB_PASS'),
   'prefix' => getenv('DB_PREFIX'),
-  'host' => $subsite_id . '7',
+  'host' => getenv('DB_HOST'),
   'port' => getenv('DB_PORT'),
   'namespace' => getenv('DB_NAMESPACE'),
   'driver' => getenv('DB_DRIVER'),
