@@ -2,4 +2,4 @@ name: 'Unity Search Pages'
 type: module
 description: 'Custom code to provide Unity sites with a search page views'
 core: 8.x
-package: 'Custom'
+package: 'Unity'
