@@ -38,9 +38,6 @@ $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 // Assume all Lando sites should use 'local' config for devlopment.
 $config['config_split.config_split.local']['status'] = TRUE;
 
-// Site hash salt.
-$settings['hash_salt'] = getenv('HASH_SALT');
-
 // Environment indicator config.
 $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV_COLOUR'), getenv('SIMPLEI_ENV_NAME'));
 
