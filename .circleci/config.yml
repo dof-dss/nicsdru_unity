@@ -222,13 +222,14 @@ jobs:
               ../../../vendor/bin/drush site-install -y --existing-config
             done
       - run:
-          name: Test for HTTP 200 response code on Drupal
+          name: Test for successful bootstraps on all Drupal sites
           command: |
             cd /home/circleci/project/web
-            ../vendor/bin/drush cr
-            # curl returns exit code 0 even for non-HTTP 200 so use grep to do the check based on response headers.
-            curl -I http://localhost/user/login | grep "HTTP/2 200"
-
+            # for site in uregni liofa fictcommission
+            for site in uregni
+            do
+              ../vendor/bin/drush -l $site st | grep "Drupal bootstrap : Successful"
+            done
 
 workflows:
   version: 2
