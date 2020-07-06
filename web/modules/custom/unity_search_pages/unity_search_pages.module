@@ -13,7 +13,7 @@
  */
 function unity_search_pages_preprocess_views_view(array &$variables) {
   // Add view display ids to add result count to header of the search view.
-  $display_ids = ['publication_search_page', 'news_search_page', 'search_page'];
+  $display_ids = ['publication_search_page', 'news_search_page'];
 
   foreach ($display_ids as $display_id) {
     if ($variables['display_id'] == $display_id) {
