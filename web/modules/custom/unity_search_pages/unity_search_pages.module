@@ -40,11 +40,11 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
             $result = 'consultation';
             break;
         }
+
         // Singular expression if only 1, if more pluralise.
         if ($number_of_items > 1 and $result != 'news') {
           $header_text = $result . 's';
-        }
-        else {
+        } else {
           $header_text = $result;
         }
 
