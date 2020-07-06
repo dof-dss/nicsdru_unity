@@ -26,8 +26,24 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
         // Count the number of items in the array.
         $number_of_items = $variables['view']->total_rows;
 
+        // Choose which result text expression to use
+        switch ($display_id) {
+          case 'publication_search_page':
+            $result = 'publication';
+            break;
+          case 'news_search_page':
+            $result = 'news';
+            break;
+          case 'consultations_search_page':
+            $result = 'consultation';
+            break;
+        }
         // Singular expression if only 1, if more pluralise.
-        $header_text = ($number_of_items == 1) ? 'result' : 'results';
+        if ($number_of_items > 1 and $result != 'news') {
+          $header_text = $result.'s';
+        } else {
+          $header_text = $result;
+        }
 
         // Output the result.
         $variables['header']['result'] = [
