@@ -28,7 +28,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
         $number_of_items = $variables['view']->total_rows;
 
         // Singular expression if only 1, if more pluralise.
-        $header_text = ($number_of_items == 1) ? 'result' : 'results';
+        $header_text = \Drupal::translation()->formatPlural($number_of_items, 'result', 'results');
 
         // Output the result.
         $variables['header']['result'] = [
