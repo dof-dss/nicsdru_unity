@@ -82,6 +82,7 @@
         "drupal/search_api_solr": "^3.2",
         "drupal/search_api_spellcheck": "^3.0@alpha",
         "drupal/simplei": "^1.1",
+        "drupal/structure_sync": "^1.16",
         "drupal/taxonomy_access_fix": "^2.6",
         "drupal/taxonomy_manager": "^1.0@alpha",
         "drupal/telephone_plus": "1.x-dev",
