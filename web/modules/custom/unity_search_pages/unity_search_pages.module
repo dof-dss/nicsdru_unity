@@ -5,6 +5,9 @@
  * Custom code for search pages.
  */
 
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Render\Markup;
+
 /**
  * Implements hook_preprocess_views_view() for views_view.
  *
@@ -51,5 +54,42 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
         ];
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * Replaces consultation dates with open or closed values based on current
+ * timestamp.
+ */
+function unity_search_pages_preprocess_views_view_fields(&$variables) {
+  $view = $variables['view'];
+  $row = $variables['row'];
+
+  $current_time = \Drupal::time()->getCurrentTime();
+
+  if ($view->id() == 'consultations_search') {
+    // Get start date and convert to a timestamp.
+    $start_date = $row->_object->get('field_consultation_dates')->value;
+    $start_date_date_time = new DrupalDateTime($start_date, 'UTC');
+    $start_date_timestamp = $start_date_date_time->getTimestamp();
+
+    // Get end date and convert to a timestamp.
+    $end_date = $row->_object->get('field_consultation_dates')->end_value;
+    $end_date_date_time = new DrupalDateTime($end_date, 'UTC');
+    $end_date_timestamp = $end_date_date_time->getTimestamp();
+
+    // If current time is between the start and end date values, then open,
+    // otherwise closed.
+    if (($current_time > $start_date_timestamp) && ($current_time < $end_date_timestamp)) {
+      $output = t('Open');
+    }
+    else {
+      $output = t('Closed');
+    }
+
+    // Replace the content of field_consultation_dates with $output.
+    $variables['fields']['field_consultation_dates']->content = Markup::create($output);
   }
 }
