@@ -20,3 +20,4 @@ uregni-specific-styles:
     component:
       css/3_components/field/field-photo.css: { minified: true }
       css/5_theme/entities.css: { minified: true }
+      css/5_theme/views.css: { minified: true }
