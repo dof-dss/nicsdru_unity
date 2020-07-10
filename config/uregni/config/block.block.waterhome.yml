@@ -16,9 +16,9 @@ provider: null
 plugin: 'block_content:19418964-9a33-4373-bf97-68707922fd9e'
 settings:
   id: 'block_content:19418964-9a33-4373-bf97-68707922fd9e'
-  label: 'Water : home'
+  label: Water
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full
