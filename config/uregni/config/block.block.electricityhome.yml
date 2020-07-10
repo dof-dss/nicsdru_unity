@@ -16,9 +16,9 @@ provider: null
 plugin: 'block_content:018e2ba1-0d09-4452-b2ee-b2eb97638d93'
 settings:
   id: 'block_content:018e2ba1-0d09-4452-b2ee-b2eb97638d93'
-  label: 'Electricity : home'
+  label: Electricity
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full
