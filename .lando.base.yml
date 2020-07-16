@@ -48,21 +48,30 @@ tooling:
   yarn:
     service: appserver
     cmd: yarn
-  nightwatch:
+  'nightwatch [site] [test]':
     service: appserver
-    description: "Placeholder command that instructs user to run a site specific command like 'nightwatch_uregni'"
-    cmd: echo "Please use a site specific command like nightwatch_uregni"
-  nightwatch_uregni:
-    service: appserver
-    description: "Run Nightwatch.js functional tests for Uregni.\n\n
-                    Usage:\n
-                    > Run a specific test with tag\n
-                    lando nightwatch_uregni --tag your-tag\n
-                    > Run a single test suite file, relative to Drupal core location\n
-                    lando nightwatch_uregni ../modules/custom/modulename/tests/src/Nightwatch/Tests/yourTestSuite.js\n
-                    > Run all tests except Core\n
-                    lando nightwatch_uregni --skiptags core\n"
-    cmd: export DRUPAL_TEST_BASE_URL=http://uregni.gov.uk.lndo.site && export DRUPAL_TEST_DB_URL=mysql://drupal8:drupal8@database/uregni && "yarn --cwd=/app/web/core test:nightwatch"
+    description: Run Nightwatch tests
+    cmd: "sh /app/.lando/scripts/run_nightwatch.sh"
+    user: root
+    options:
+      site:
+        passthrough: true
+        description: Multisite to run tests on
+        alias:
+          - s
+        interactive:
+          type: input
+          message: Which Unity site (e.g. uregni) ?
+          weight: 1
+      test:
+        passthrough: true
+        description: Nightwatch test to run
+        alias:
+          - t
+        interactive:
+          type: input
+          message: Which Nightwatch test to run (path relative to web/core) ?
+          weight: 2
   phpunit:
     description: "Run PHPUnit tests. You can pass options, e.g. --group=unity, as you require"
     service: appserver
