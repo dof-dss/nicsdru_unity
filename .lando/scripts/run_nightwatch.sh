@@ -22,6 +22,7 @@ done
 
 lando_green "Running Nightwatch test for site: $site";
 
+# Will need to add more sites in here as we go
 if [ $site = "uregni" ]; then
 export DRUPAL_TEST_BASE_URL=http://uregni.gov.uk.lndo.site
 export DRUPAL_TEST_DB_URL=mysql://drupal8:drupal8@database/uregni
