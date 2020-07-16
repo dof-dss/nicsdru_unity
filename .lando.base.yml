@@ -50,7 +50,14 @@ tooling:
     cmd: yarn
   'nightwatch [site] [test]':
     service: appserver
-    description: Run Nightwatch tests
+    description: "Run Nightwatch.js functional tests.\n\n
+                      Usage:\n
+                      > Run a specific test with tag\n
+                      lando nightwatch <site> --tag your-tag\n
+                      > Run a single test suite file, relative to Drupal core location\n
+                      lando nightwatch <site> ../modules/custom/modulename/tests/src/Nightwatch/Tests/yourTestSuite.js\n
+                      > Run all tests except Core\n
+                      lando nightwatch <site> --skiptags core\n"
     cmd: "sh /app/.lando/scripts/run_nightwatch.sh"
     user: root
     options:
@@ -65,13 +72,6 @@ tooling:
           weight: 1
       test:
         passthrough: true
-        description: Nightwatch test to run
-        alias:
-          - t
-        interactive:
-          type: input
-          message: Which Nightwatch test to run (path relative to web/core) ?
-          weight: 2
   phpunit:
     description: "Run PHPUnit tests. You can pass options, e.g. --group=unity, as you require"
     service: appserver
