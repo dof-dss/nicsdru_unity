@@ -59,7 +59,6 @@ tooling:
                       > Run all tests except Core\n
                       lando nightwatch <site> --skiptags core\n"
     cmd: "sh /app/.lando/scripts/run_nightwatch.sh"
-    user: root
     options:
       site:
         passthrough: true
