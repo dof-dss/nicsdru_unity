@@ -8,14 +8,12 @@ dependencies:
     - user.role.author_user
     - user.role.editor_user
     - user.role.supervisor_user
-    - workflows.workflow.nics_editorial_workflow
   module:
-    - content_moderation
     - datetime
     - node
     - user
 _core:
-  default_config_hash: qmeJXDzqRz-sV5iAHcmJgIoorYcaDuZ4J8TrVdqQ8uk
+  default_config_hash: fRZeGmz6ZpMJKI_WmhRNxsv6EWHcMIrOU5aUkfiP5MI
 id: workflow_moderation
 label: 'Workflow: Moderation'
 module: views
@@ -263,7 +261,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/needs-review'>Change to Draft</a></div>\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/workflow/needs-review'>Change to Published</a></div>"
+            text: "<div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/needs-review'>Change to Draft</a></div>\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/content/needs-review'>Change to Published</a></div>"
             make_link: false
             path: ''
             absolute: false
@@ -312,7 +310,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div><a href=''/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/needs-review''>Change to Draft</a></div>'
+            text: '<div><a href=''/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/needs-review''>Change to Draft</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -958,7 +956,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
-      path: admin/workflow/all-drafts
+      path: admin/content/all-drafts
       filters:
         moderation_state:
           id: moderation_state
@@ -1562,7 +1560,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/all-drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/workflow/all-drafts'>Change to Needs Review</a></div>\r\n{% endif %}\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/workflow/all-drafts'>Change to Published</a></div>"
+            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/all-drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/content/all-drafts'>Change to Needs Review</a></div>\r\n{% endif %}\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/content/all-drafts'>Change to Published</a></div>"
             make_link: false
             path: ''
             absolute: false
@@ -1611,7 +1609,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/all-drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/workflow/all-drafts'>Change to Needs Review</a></div>\r\n{% endif %}"
+            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/all-drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/content/all-drafts'>Change to Needs Review</a></div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1936,7 +1934,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
-      path: admin/workflow/drafts
+      path: admin/content/drafts
       filters:
         moderation_state:
           id: moderation_state
@@ -2525,7 +2523,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/workflow/drafts'>Change to Needs Review</a></div>\r\n{% endif %}\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/workflow/drafts'>Change to Published</a></div>"
+            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/content/drafts'>Change to Needs Review</a></div>\r\n{% endif %}\r\n<div><a href='/origins_workflow/change_state/{{ nid }}/published?destination=/admin/content/drafts'>Change to Published</a></div>"
             make_link: false
             path: ''
             absolute: false
@@ -2574,7 +2572,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/workflow/drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/workflow/drafts'>Change to Needs Review</a></div>\r\n{% endif %}"
+            text: "{% if moderation_state_1 == \"Needs Review\" %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/draft?destination=/admin/content/drafts'>Change to Draft</a></div>\r\n{% else %}\r\n  <div><a href='/origins_workflow/change_state/{{ nid }}/needs_review?destination=/admin/content/drafts'>Change to Needs Review</a></div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -2893,7 +2891,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/workflow/needs-audit
+      path: admin/content/needs-audit
       display_description: ''
       defaults:
         filters: false
@@ -3695,7 +3693,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/workflow/needs-review
+      path: admin/content/needs-review
       display_description: ''
       defaults:
         filters: false
