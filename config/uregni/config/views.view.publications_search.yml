@@ -266,7 +266,8 @@ display:
       path: publications
       exposed_block: true
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
       menu:
