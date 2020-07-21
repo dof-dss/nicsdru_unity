@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: uregni_theme
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
