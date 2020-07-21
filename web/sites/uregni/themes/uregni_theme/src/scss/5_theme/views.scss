@@ -1,0 +1,23 @@
+/*
+ * @file
+ * Provides the layout styles for content output for views.
+ */
+@import "../init/index";
+
+.home-latest-news {
+  @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+
+    .field-photo {
+      float: none;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .views-row {
+      flex-basis: 32%;
+      padding: 1%;
+    }
+  }
+}

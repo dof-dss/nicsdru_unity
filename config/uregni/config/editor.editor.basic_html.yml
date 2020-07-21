@@ -59,7 +59,7 @@ settings:
             - Maximize
   plugins:
     stylescombo:
-      styles: 'p.info-notice|Information notice'
+      styles: "p.info-notice|Information notice\r\na.btn|Button"
     language:
       language_list: un
     linkit:

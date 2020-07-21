@@ -37,12 +37,12 @@ $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
 // Assume all Lando sites should use 'local' config for devlopment.
 $config['config_split.config_split.local']['status'] = TRUE;
-
-// Site hash salt.
-$settings['hash_salt'] = getenv('HASH_SALT');
+$config['config_split.config_split.hosted']['status'] = FALSE;
 
 // Environment indicator config.
 $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV_COLOUR'), getenv('SIMPLEI_ENV_NAME'));
+
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/../local.services.yml';
 
 // Redis Cache.
 // Due to issues with enabling Redis during install/config import. We cannot enable the cache backend by default.
