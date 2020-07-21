@@ -10,14 +10,14 @@ dependencies:
     - search_api
 third_party_settings:
   facets_pretty_paths:
-    coder: default_coder
+    coder: taxonomy_term_coder
 id: topic_consultation
-name: 'Topic Consultation'
+name: Topic
 url_alias: topic
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: name
+field_identifier: field_publication_topic
 facet_source_id: 'search_api:views_page__consultations_search__consultations_search_page'
 widget:
   type: links
@@ -44,6 +44,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
+    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
