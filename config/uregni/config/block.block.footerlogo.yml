@@ -1,0 +1,25 @@
+uuid: c7c98836-43fa-4839-a13e-3c15da44da51
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:832e1e63-d013-4245-8de7-78ebf653b236'
+  module:
+    - block_content
+  theme:
+    - uregni_theme
+id: footerlogo
+theme: uregni_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:832e1e63-d013-4245-8de7-78ebf653b236'
+settings:
+  id: 'block_content:832e1e63-d013-4245-8de7-78ebf653b236'
+  label: 'Footer logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
