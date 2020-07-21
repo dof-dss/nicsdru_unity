@@ -30,31 +30,12 @@
 }
 
 /* line 29, src/scss/3_components/layout/footer.scss */
-#footer input[type="submit"] {
-  background-color: #606;
-  border: none;
-  background-image: none;
-  color: #fff;
-  font-weight: normal;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  margin: 1rem 0 0;
-  text-align: center;
-  padding: .6rem 1.6rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-/* line 46, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu {
   margin: 4% auto;
 }
 
 @media (min-width: 440px) {
-  /* line 49, src/scss/3_components/layout/footer.scss */
+  /* line 32, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li {
     display: inline-block;
     padding: 0 .8rem 0 0;
@@ -62,13 +43,13 @@
     border-right: 1px solid #fff;
     margin-right: .5rem;
   }
-  /* line 57, src/scss/3_components/layout/footer.scss */
+  /* line 40, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li:last-child {
     border-right: none;
   }
 }
 
-/* line 62, src/scss/3_components/layout/footer.scss */
+/* line 45, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu li a.is-active {
   text-decoration: none;
 }
