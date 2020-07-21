@@ -18,8 +18,9 @@ uregni-specific-styles:
   version: 1.x
   css:
     component:
-      css/3_components/field/field-photo.css: { minified: true }
       css/3_components/block/consumer-info.css: { minified: true }
+      css/3_components/field/field-photo.css: { minified: true }
+      css/3_components/content/button.css: { minified: true }
       css/3_components/content/fontawesome.css: { minified: true }
       css/3_components/layout/bottom-wrapper.css: { minified: true }
       css/3_components/layout/footer.css: { minified: true }
