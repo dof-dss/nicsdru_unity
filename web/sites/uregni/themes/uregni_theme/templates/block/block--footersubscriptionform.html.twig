@@ -37,17 +37,23 @@
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>
-      <i class="fas fa-fire" aria-hidden="true"></i>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
       {{ content }}
+
+      <div class="feedblitz-custom-form">
+        <form name="FeedBlitz_f437a43daac811e3915b002590771163" method="POST" action="http://app.feedblitz.com/f/f.fbz?AddNewUserDirect" class="subscribe_form2">
+          <div class="form-item">
+            <label for="email" class="visually-hidden">Enter your email address to subscribe to our news alert service.</label>
+            <input name="EMAIL" id="email" class="form-text" maxlength="64" type="email" size="25" value="" placeholder="Please enter your email">
+          </div>
+          <input name="EMAIL_" type="hidden" value="">
+          <input name="EMAIL_ADDRESS" type="hidden" value=""> <input name="FEEDID" type="hidden" value="829104">
+          <input name="cids" type="hidden" value="1">
+          <input name="PUBLISHER" type="hidden" value="28302245">
+          <input type="submit" value="Sign up" class="btn" onclick="FeedBlitz_f437a43daac811e3915b002590771163s(this.form);">
+        </form>
+      </div>
     </div>
   {% endblock %}
 </div>
