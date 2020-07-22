@@ -22,6 +22,7 @@ uregni-specific-styles:
       css/3_components/block/home-blocks.css: { minified: true }
       css/3_components/field/field-photo.css: { minified: true }
       css/3_components/form/button.css: { minified: true }
+      css/3_components/form/search-form.css: { minified: true }
       css/3_components/content/fontawesome.css: { minified: true }
       css/3_components/layout/container.css: { minified: true }
       css/3_components/layout/footer.css: { minified: true }
