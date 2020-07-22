@@ -62,33 +62,32 @@
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
- * - is_front: A flag indicating if the current page is the front page.
  *
  * @see template_preprocess_node()
  */
 #}
-{% set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'clearfix',
-] %}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
 {% if not page %}
 <article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id) }}>
-  {% endif %}
+{% endif %}
 
-  {% if not is_front %}
     {{ content.field_page_top_image }}
 
     {{ drupal_block('page_title_block', wrapper=false) }}
-  {% endif %}
 
   <div{{ content_attributes.addClass('content') }}>
-    {{ content | without('field_page_top_image') }}
+    {{ content | without('field_page_top_image')  }}
   </div>
-  {% if not page %}
+{% if not page %}
 </article>
 {% endif %}
