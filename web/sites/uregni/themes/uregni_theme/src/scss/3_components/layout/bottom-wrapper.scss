@@ -1,6 +1,6 @@
 /*
  * @file
- * Provides the layout styles for content in regions of the home page.
+ * Provides the layout styles for content in the bottom wrapper region of the home page.
  */
 @import "../../init/index";
 
@@ -41,41 +41,13 @@
     border-top: 4px solid #686868;
 
     .column {
-
       @include breakpoint($tab) {
         width: 49%;
       }
 
-      &:first-child {
-        padding: 2rem 0;
-      }
-
       &:last-child {
         background: #f3f3f3;
-
-        @include breakpoint($tab) {
-          padding: 2rem;
-        }
       }
-    }
-  }
-}
-
-#footer {
-  @media screen and (max-width: $tab) {
-    padding-left: 1rem;
-
-    .column {
-      padding-left: 0;
-    }
-  }
-}
-
-.footer-area {
-  .column,
-  .column:first-child {
-    @media screen and (max-width: $lap) {
-      margin: 0;
     }
   }
 }
