@@ -37,17 +37,18 @@
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>
-      <i class="fas fa-fire" aria-hidden="true"></i>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
       {{ content }}
+
+      <div class="social-icons">
+        <ul>
+          <li><a href="https://twitter.com/uregni" target="_blank">
+              <i class="fab fa-twitter" aria-hidden="true"><span class="visually-hidden">Follow us on Twitter</span></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   {% endblock %}
 </div>
