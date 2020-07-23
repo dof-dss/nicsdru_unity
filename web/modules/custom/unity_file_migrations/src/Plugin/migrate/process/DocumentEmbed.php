@@ -76,7 +76,8 @@ class DocumentEmbed extends ProcessPluginBase
 
                 // Then replace these links to publication link ( or publication page if not exists -- for now ).
                 //            $value = preg_replace($embed_regex, $publications_link, $value);
-                $value = str_replace($match[1], $publications_link, $value); // Str replace for multiple matches within body value
+
+                $value = str_replace($match[0], $publications_link, $value); // Str replace for multiple matches within body value
             }
         }
 
