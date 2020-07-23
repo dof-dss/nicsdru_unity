@@ -40,3 +40,18 @@
     }
   }
 }
+
+.search-results {
+  .search-form {
+    max-width: 25rem;
+
+    .form-submit {
+      width: 10rem;
+
+      &:hover {
+        background: $ash-grey;
+        opacity: .8;
+      }
+    }
+  }
+}
