@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Custom code for search pages.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_preprocess_views_view() for views_view.
+ *
+ * Adding a singular/pluralised result count in the header of the search pages.
+ *
+ * @RenderElement("html_tag");
+ */
+function unity_search_pages_preprocess_views_view(array &$variables) {
+  // Add view display ids to add result count to header of the search view.
+  $display_ids = ['publication_search_page',
+    'news_search_page',
+    'consultations_search_page',
+  ];
+
+  foreach ($display_ids as $display_id) {
+    if ($variables['display_id'] == $display_id) {
+      // Ensure the search has items in an array.
+      if (!empty($variables['view']->total_rows)) {
+
+        // Count the number of items in the array.
+        $number_of_items = $variables['view']->total_rows;
+
+        // Singular expression if only 1, if more pluralise.
+        $header_text = \Drupal::translation()->formatPlural($number_of_items, 'result', 'results');
+
+        // Output the result.
+        $variables['header']['result'] = [
+          '#type' => 'html_tag',
+          '#tag' => 'h2',
+          '#attributes' => ['class' => 'current-search-item-results-count'],
+          '#value' => t('@item_count @header_text',
+            [
+              '@item_count' => $number_of_items,
+              '@header_text' => $header_text,
+            ]),
+        ];
+      }
+      else {
+        $variables['header']['result'] = [
+          '#type' => 'html_tag',
+          '#tag' => 'h2',
+          '#attributes' => ['class' => 'current-search-item-results-count'],
+          '#value' => t('0 results'),
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * Replaces consultation dates with open or closed values based on current
+ * timestamp.
+ */
+function unity_search_pages_preprocess_views_view_fields(&$variables) {
+  $view = $variables['view'];
+  $row = $variables['row'];
+
+  $current_time = \Drupal::time()->getCurrentTime();
+
+  if ($view->id() == 'consultations_search') {
+    // Get start date and convert to a timestamp.
+    $start_date = $row->_object->get('field_consultation_dates')->value;
+    $start_date_date_time = new DrupalDateTime($start_date, 'UTC');
+    $start_date_timestamp = $start_date_date_time->getTimestamp();
+
+    // Get end date and convert to a timestamp.
+    $end_date = $row->_object->get('field_consultation_dates')->end_value;
+    $end_date_date_time = new DrupalDateTime($end_date, 'UTC');
+    $end_date_timestamp = $end_date_date_time->getTimestamp();
+
+    // If current time is between the start and end date values, then open,
+    // otherwise closed.
+    if (($current_time > $start_date_timestamp) && ($current_time < $end_date_timestamp)) {
+      $output = t('Open');
+    }
+    else {
+      $output = t('Closed');
+    }
+
+    // Replace the content of field_consultation_dates with $output.
+    $variables['fields']['field_consultation_dates']->content = Markup::create($output);
+  }
+}

@@ -22,12 +22,25 @@ module:
   dynamic_page_cache: 0
   editor: 0
   embed: 0
+  entity_browser: 0
+  entity_browser_entity_form: 0
   entity_embed: 0
+  entity_reference_revisions: 0
+  facets: 0
+  facets_pretty_paths: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  geocoder: 0
+  geocoder_address: 0
+  geocoder_field: 0
+  geolocation: 0
+  geolocation_address: 0
+  geolocation_google_maps: 0
+  geolocation_google_static_maps: 0
+  geolocation_search_api: 0
   help: 0
   history: 0
   image: 0
@@ -50,6 +63,7 @@ module:
   node: 0
   noreferrer: 0
   options: 0
+  origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_workflow: 0
   page_cache: 0
@@ -60,8 +74,11 @@ module:
   responsive_image: 0
   search: 0
   search_api: 0
+  search_api_location: 0
+  search_api_location_views: 0
   search_api_solr: 0
   simplei: 0
+  structure_sync: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -69,11 +86,17 @@ module:
   token_filter: 0
   toolbar: 0
   twig_tweak: 0
+  unity_common: 0
+  unity_image_styles: 0
+  unity_media: 0
+  unity_search_pages: 0
   user: 0
+  whatlinkshere: 0
   workflows: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
   origins: 1000
 theme:
   stark: 0
