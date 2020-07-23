@@ -34,6 +34,11 @@
   margin: 4% auto;
 }
 
+/* line 32, src/scss/3_components/layout/footer.scss */
+#footer .footer-menu li {
+  padding-left: 0;
+}
+
 @media (min-width: 440px) {
   /* line 32, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li {
@@ -43,13 +48,13 @@
     border-right: 1px solid #fff;
     margin-right: .5rem;
   }
-  /* line 40, src/scss/3_components/layout/footer.scss */
+  /* line 42, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li:last-child {
     border-right: none;
   }
 }
 
-/* line 45, src/scss/3_components/layout/footer.scss */
+/* line 47, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu li a.is-active {
   text-decoration: none;
 }
