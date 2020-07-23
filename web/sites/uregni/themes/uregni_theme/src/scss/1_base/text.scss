@@ -1,0 +1,13 @@
+/*
+ * @file
+ * Overrides to base text styles
+ */
+@import '../init/index';
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

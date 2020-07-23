@@ -17,6 +17,9 @@ site-styling:
 uregni-specific-styles:
   version: 1.x
   css:
+    base:
+      css/1_base/text.css: { minified: true }
+
     component:
       css/3_components/block/consumer-info.css: { minified: true }
       css/3_components/field/field-photo.css: { minified: true }

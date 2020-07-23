@@ -1,0 +1,17 @@
+/*
+ * @file
+ * Overrides to base text styles
+ */
+/* Vertical rhythm presets =========================================== */
+/* Breakpoints ======================================================== */
+/* line 7, src/scss/1_base/text.scss */
+a {
+  text-decoration: underline;
+}
+
+/* line 10, src/scss/1_base/text.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=text.css.map */
