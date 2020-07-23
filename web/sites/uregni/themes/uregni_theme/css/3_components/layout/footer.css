@@ -1,0 +1,57 @@
+/*
+ * @file
+ * Provides the layout styles for content in the bottom wrapper region of the home page.
+ */
+/* Vertical rhythm presets =========================================== */
+/* Breakpoints ======================================================== */
+@media (min-width: 766px) {
+  /* line 8, src/scss/3_components/layout/footer.scss */
+  #footer .column {
+    width: 32.5%;
+  }
+}
+
+/* line 13, src/scss/3_components/layout/footer.scss */
+#footer .column li {
+  border: none;
+}
+
+/* line 18, src/scss/3_components/layout/footer.scss */
+#footer address {
+  color: #fff;
+  font-style: normal;
+  margin-bottom: 2.4rem;
+}
+
+/* line 24, src/scss/3_components/layout/footer.scss */
+#footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 29, src/scss/3_components/layout/footer.scss */
+#footer .footer-menu {
+  margin: 4% auto;
+}
+
+@media (min-width: 440px) {
+  /* line 32, src/scss/3_components/layout/footer.scss */
+  #footer .footer-menu li {
+    display: inline-block;
+    padding: 0 .8rem 0 0;
+    line-height: 1.8rem;
+    border-right: 1px solid #fff;
+    margin-right: .5rem;
+  }
+  /* line 40, src/scss/3_components/layout/footer.scss */
+  #footer .footer-menu li:last-child {
+    border-right: none;
+  }
+}
+
+/* line 45, src/scss/3_components/layout/footer.scss */
+#footer .footer-menu li a.is-active {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=footer.css.map */
