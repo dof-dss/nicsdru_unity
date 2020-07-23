@@ -3,6 +3,8 @@
 namespace Drupal\unity_file_migrations\Plugin\migrate\process;
 
 use Drupal\Core\Link;
+use Drupal\Core\Menu\MenuLinkTree;
+use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
@@ -34,17 +36,49 @@ class DocumentEmbed extends ProcessPluginBase
     public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property)
     {
 
-        // Publication Page link used for replacing embedded links.
-        $publications_link = Link::createFromRoute(
-            'Publication Page',
-            'entity.node.canonical',
-            ['node' => 2593],
-            ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']]
-        )->toString();
+        // Create REGEX string to match file links.
+        $embed_regex = '/<a[\w\s\.]*href="([\w:\-\/\.]*)(pdf|doc|docx)[\w\s\.\=\-"\':><(&);\/]+<\/a>/U';
 
-        // Extract and replace links.
-        $embed_regex = '/<a[\w\s\.]*href="([\w:\-\/\.]*)(pdf|doc|doxc)[\w\s\.\=\-"\':><(&);\/]+<\/a>/U';
-        $value = preg_replace($embed_regex, $publications_link, $value);
+        // Search for matches in body value.
+        $matches = [];
+        preg_match_all($embed_regex, $value['value'], $matches, PREG_SET_ORDER);
+
+        // Iterate these matches to find publications ( if exists ).
+        if (!empty($matches)) {
+
+            foreach($matches as $match) {
+
+                $query = \Drupal::entityQuery('node')
+                    ->condition('type', 'publication_page')
+                    ->condition('body', basename($match[1], "."), 'CONTAINS');
+
+                $nids = $query->execute();
+
+                // Node has returned with file included. Creating link to specific node.
+                if ($lastNode = end($nids)) {
+                    // Publication Page link used for replacing embedded links.
+                    $publications_link = Link::createFromRoute(
+                        'Specific Publication Page',
+                        'entity.node.canonical',
+                        ['node' => $lastNode],
+                        ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']]
+                    )->toString();
+                } else {
+                    // Else, just create route to default publication page
+                    // Publication Page link used for replacing embedded links.
+                    $publications_link = Link::createFromRoute(
+                        'Default Publication Page',
+                        'entity.node.canonical',
+                        ['node' => 2593],
+                        ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']]
+                    )->toString();
+                }
+
+                // Then replace these links to publication link ( or publication page if not exists -- for now ).
+                //            $value = preg_replace($embed_regex, $publications_link, $value);
+                $value = str_replace($match[1], $publications_link, $value); // Str replace for multiple matches within body value
+            }
+        }
 
         return $value;
     }
