@@ -16,8 +16,20 @@
     }
 
     .views-row {
-      flex-basis: 32%;
-      padding: 1%;
+      flex-basis: 31.5%;
+    }
+  }
+
+  article {
+    clear: right;
+  }
+
+  h3 {
+    @include breakpoint($tab) {
+      @include adjust-font-size-to(16px, 4);
+    }
+    a {
+      text-decoration: underline;
     }
   }
 }
