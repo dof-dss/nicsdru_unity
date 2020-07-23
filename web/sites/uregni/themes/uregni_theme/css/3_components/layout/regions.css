@@ -45,36 +45,36 @@
   }
 }
 
-/* line 49, src/scss/3_components/layout/regions.scss */
+/* line 48, src/scss/3_components/layout/regions.scss */
 #bottom_wrapper .bottom-row .column:first-child {
   padding: 2rem 0;
 }
 
-/* line 53, src/scss/3_components/layout/regions.scss */
+/* line 52, src/scss/3_components/layout/regions.scss */
 #bottom_wrapper .bottom-row .column:last-child {
   background: #f3f3f3;
 }
 
 @media (min-width: 766px) {
-  /* line 53, src/scss/3_components/layout/regions.scss */
+  /* line 52, src/scss/3_components/layout/regions.scss */
   #bottom_wrapper .bottom-row .column:last-child {
     padding: 2rem;
   }
 }
 
 @media screen and (max-width: 766px) {
-  /* line 64, src/scss/3_components/layout/regions.scss */
+  /* line 63, src/scss/3_components/layout/regions.scss */
   #footer {
     padding-left: 1rem;
   }
-  /* line 68, src/scss/3_components/layout/regions.scss */
+  /* line 67, src/scss/3_components/layout/regions.scss */
   #footer .column {
     padding-left: 0;
   }
 }
 
 @media screen and (max-width: 961px) {
-  /* line 75, src/scss/3_components/layout/regions.scss */
+  /* line 74, src/scss/3_components/layout/regions.scss */
   .footer-area .column,
   .footer-area .column:first-child {
     margin: 0;

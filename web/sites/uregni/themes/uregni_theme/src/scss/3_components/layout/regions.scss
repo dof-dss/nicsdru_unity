@@ -41,7 +41,6 @@
     border-top: 4px solid #686868;
 
     .column {
-
       @include breakpoint($tab) {
         width: 49%;
       }
