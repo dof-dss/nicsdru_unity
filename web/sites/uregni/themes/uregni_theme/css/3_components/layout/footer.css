@@ -26,21 +26,20 @@
 /* line 24, src/scss/3_components/layout/footer.scss */
 #footer a {
   color: #fff;
-  text-decoration: underline;
 }
 
-/* line 29, src/scss/3_components/layout/footer.scss */
+/* line 28, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu {
   margin: 4% auto;
 }
 
-/* line 32, src/scss/3_components/layout/footer.scss */
+/* line 31, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu li {
   padding-left: 0;
 }
 
 @media (min-width: 440px) {
-  /* line 32, src/scss/3_components/layout/footer.scss */
+  /* line 31, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li {
     display: inline-block;
     padding: 0 .8rem 0 0;
@@ -48,13 +47,13 @@
     border-right: 1px solid #fff;
     margin-right: .5rem;
   }
-  /* line 42, src/scss/3_components/layout/footer.scss */
+  /* line 41, src/scss/3_components/layout/footer.scss */
   #footer .footer-menu li:last-child {
     border-right: none;
   }
 }
 
-/* line 47, src/scss/3_components/layout/footer.scss */
+/* line 46, src/scss/3_components/layout/footer.scss */
 #footer .footer-menu li a.is-active {
   text-decoration: none;
 }

@@ -51,4 +51,20 @@
   width: 200px;
 }
 
+/* line 45, src/scss/3_components/form/search-form.scss */
+.search-results .search-form {
+  max-width: 25rem;
+}
+
+/* line 48, src/scss/3_components/form/search-form.scss */
+.search-results .search-form .form-submit {
+  width: 10rem;
+}
+
+/* line 51, src/scss/3_components/form/search-form.scss */
+.search-results .search-form .form-submit:hover {
+  background: #666;
+  opacity: .8;
+}
+
 /*# sourceMappingURL=search-form.css.map */

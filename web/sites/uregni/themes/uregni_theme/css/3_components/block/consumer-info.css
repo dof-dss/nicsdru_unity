@@ -30,11 +30,10 @@
 #block-consumerinformationhome h2.btn,
 #block-consumerinformationhome a.btn {
   background: #606;
-  text-decoration: underline;
 }
 
 @media (min-width: 766px) {
-  /* line 28, src/scss/3_components/block/consumer-info.scss */
+  /* line 27, src/scss/3_components/block/consumer-info.scss */
   #block-consumerinformationhome h2 {
     font-size: 4.8rem;
     line-height: 5.4rem;
@@ -43,7 +42,7 @@
 }
 
 @media (min-width: 766px) {
-  /* line 36, src/scss/3_components/block/consumer-info.scss */
+  /* line 35, src/scss/3_components/block/consumer-info.scss */
   #block-consumerinformationhome .content {
     width: 30%;
     padding: 3rem 0 0 2rem;
