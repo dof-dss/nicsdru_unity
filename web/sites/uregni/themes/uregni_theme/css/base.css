@@ -107,7 +107,7 @@ html {
 body {
   font-size: 1.6rem;
   margin: 0 0 2.4rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: sans-serif;
   color: #555;
   line-height: 160%;
 }
@@ -143,7 +143,7 @@ a:hover {
   display: inline-block;
   width: 1.5em;
   height: .75em;
-  background: transparent url('../images/arrow-down.png?17255cece67') no-repeat 50% 50%;
+  background: transparent url('../images/arrow-down.png?172bd4f8149') no-repeat 50% 50%;
   background-size: 1.6rem auto;
 }
 
@@ -376,7 +376,7 @@ blockquote,
 q {
   quotes: none;
   border: 0;
-  background: transparent url('../images/quote.png?17255cece69') no-repeat scroll 0 0;
+  background: transparent url('../images/quote.png?172bd4f814e') no-repeat scroll 0 0;
   padding: 1rem .5rem .5rem 4.7rem;
   text-shadow: 1px 1px #fff;
   margin: 5px 0;

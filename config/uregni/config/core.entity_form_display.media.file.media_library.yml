@@ -1,0 +1,21 @@
+uuid: b58d65f8-1e31-411c-8b50-e7c32cf624aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.file.field_media_file
+    - media.type.file
+id: media.file.media_library
+targetEntityType: media
+bundle: file
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_file: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

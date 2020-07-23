@@ -17,6 +17,9 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
+// Site hash salt.
+$settings['hash_salt'] = getenv('HASH_SALT');
+
 // Temp directory.
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 

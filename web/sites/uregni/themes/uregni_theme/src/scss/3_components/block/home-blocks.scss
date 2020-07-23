@@ -1,0 +1,41 @@
+/*
+ * @file
+ * Provides the layout styles for content output consumer information on the homepage.
+ */
+@import "../../init/index";
+
+.front {
+  .block {
+    h2 {
+      @include responsive-typo-map($h2-text);
+      margin: 0;
+      padding: 1rem 1rem 1rem 0;
+    }
+  }
+
+  .block-system-main-block {
+    h2 {
+      @include adjust-font-size-to(24px, 5);
+
+      @include breakpoint($phab) {
+        @include adjust-font-size-to(30px, 6);
+      }
+      color: $green-dark;
+      margin: 0.9rem 0 2.1rem;
+    }
+
+    p {
+      @include responsive-typo-map($h3-text);
+
+      @include breakpoint($phab) {
+        @include adjust-font-size-to(21px);
+      }
+    }
+
+    p,
+    h2 {
+      font-weight: 200;
+      letter-spacing: -.3px;
+    }
+  }
+}
