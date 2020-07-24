@@ -1,29 +1,5 @@
 blocks:
   -
-    info: 'test 3'
-    langcode: en
-    uuid: 33f364f9-d3e3-4c4a-a175-4cd5605bea7f
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<p>test 3</p>\r\n"
-        summary: ''
-        format: basic_html
-  -
-    info: Test
-    langcode: en
-    uuid: e5ad9d3d-9c0f-4f5b-8719-51f8ca846730
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<p>Test</p>\r\n"
-        summary: ''
-        format: basic_html
-  -
     info: 'Footer subscription form'
     langcode: en
     uuid: 445ae893-ea77-4f0a-9da9-877d72660990
