@@ -1,0 +1,25 @@
+uuid: 103c865f-2458-4f4f-b53b-402198a4ef4f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:e5ad9d3d-9c0f-4f5b-8719-51f8ca846730'
+  module:
+    - block_content
+  theme:
+    - uregni_theme
+id: test
+theme: uregni_theme
+region: search
+weight: 0
+provider: null
+plugin: 'block_content:e5ad9d3d-9c0f-4f5b-8719-51f8ca846730'
+settings:
+  id: 'block_content:e5ad9d3d-9c0f-4f5b-8719-51f8ca846730'
+  label: Test
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
