@@ -45,4 +45,48 @@
   text-decoration: underline;
 }
 
+/* line 38, src/scss/5_theme/views.scss */
+.search-page #sidebar-first {
+  padding-left: 0;
+}
+
+@media (min-width: 961px) {
+  /* line 43, src/scss/5_theme/views.scss */
+  .search-page #sidebar-first {
+    width: 30%;
+  }
+  /* line 47, src/scss/5_theme/views.scss */
+  .search-page #content {
+    width: 65%;
+  }
+}
+
+/* line 64, src/scss/5_theme/views.scss */
+.search-page .views-exposed-form {
+  background: #f6f6f6;
+  -webkit-box-shadow: 0 0 1px inset #333;
+  box-shadow: 0 0 1px inset #333;
+  padding: 1rem 0;
+}
+
+/* line 69, src/scss/5_theme/views.scss */
+.search-page .views-exposed-form label {
+  font-weight: bold;
+}
+
+/* line 74, src/scss/5_theme/views.scss */
+.search-page .form-item {
+  margin-bottom: 0;
+}
+
+/* line 79, src/scss/5_theme/views.scss */
+.search-page input.form-text {
+  max-width: 100%;
+}
+
+/* line 84, src/scss/5_theme/views.scss */
+.search-page h2 {
+  margin-top: 0;
+}
+
 /*# sourceMappingURL=views.css.map */
