@@ -410,7 +410,8 @@ display:
       exposed_block: true
       display_description: ''
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
