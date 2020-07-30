@@ -1,6 +1,6 @@
 uuid: 3fdd9414-cd84-4db7-80af-44a74963b0e2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - filter.format.filtered_html_with_no_images
