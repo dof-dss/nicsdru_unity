@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87b411f63dca40ab66725d32ed00825f",
+    "content-hash": "0660044d927650f47178747335f8e10d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1916,16 +1916,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.2",
+            "version": "dev-D8UN-108",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "5dfe75bc6affbd93fff90be6e15822b5d73b3cb3"
+                "reference": "ffe25be90ad69230dd501a9958ffaeda18350c18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/5dfe75bc6affbd93fff90be6e15822b5d73b3cb3",
-                "reference": "5dfe75bc6affbd93fff90be6e15822b5d73b3cb3",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/ffe25be90ad69230dd501a9958ffaeda18350c18",
+                "reference": "ffe25be90ad69230dd501a9958ffaeda18350c18",
                 "shasum": ""
             },
             "require": {
@@ -1948,7 +1948,7 @@
                 "drupal",
                 "theme"
             ],
-            "time": "2020-05-20T14:39:47+00:00"
+            "time": "2020-08-03T10:22:16+00:00"
         },
         {
             "name": "drupal/address",
@@ -15760,6 +15760,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/config_readonly": 10,
         "drupal/facets_pretty_paths": 10,
         "drupal/hms_field": 10,
