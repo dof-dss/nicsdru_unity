@@ -13,7 +13,12 @@
 //
 // Style guide: components
 
-@import 'field/field-photo';
 @import 'block/consumer-info';
+@import 'block/home-blocks';
 @import 'content/fontawesome';
-@import 'layout/bottom-wrapper';
+@import 'field/field-photo';
+@import 'form/button';
+@import "form/search-form";
+@import 'layout/container';
+@import 'layout/footer';
+@import 'layout/regions';

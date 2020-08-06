@@ -67,7 +67,7 @@ hooks:
       drush -l $site -y cache-rebuild
       drush -l $site -y updatedb
       drush -l $site -y config-import
-      drush -l $site import-blocks --choice full
+      drush -l $site import-blocks --choice safe
     done
 
 # The configuration of app when it is exposed to the web.
