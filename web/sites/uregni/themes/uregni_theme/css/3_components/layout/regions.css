@@ -1,0 +1,79 @@
+/*
+ * @file
+ * Provides the layout styles for content in regions of the home page.
+ */
+/* Vertical rhythm presets =========================================== */
+/* Breakpoints ======================================================== */
+/* line 8, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper h2 {
+  font-size: 2.1rem;
+  line-height: 3rem;
+}
+
+/* line 16, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .energy .column:first-child h2 i,
+#bottom_wrapper .energy .column:first-child .btn {
+  background: #cc4630;
+}
+
+/* line 22, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .energy .column:nth-child(2) h2 i,
+#bottom_wrapper .energy .column:nth-child(2) .btn {
+  background: #8561af;
+}
+
+/* line 28, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .energy .column:last-child h2 i,
+#bottom_wrapper .energy .column:last-child .btn {
+  background: #0a7ad0;
+}
+
+/* line 36, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .bottom-row {
+  border-top: 4px solid #686868;
+}
+
+@media (min-width: 766px) {
+  /* line 39, src/scss/3_components/layout/regions.scss */
+  #bottom_wrapper .bottom-row .column {
+    width: 49%;
+  }
+}
+
+/* line 44, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .bottom-row .column:first-child {
+  padding: 2rem 0;
+}
+
+/* line 48, src/scss/3_components/layout/regions.scss */
+#bottom_wrapper .bottom-row .column:last-child {
+  background: #f3f3f3;
+}
+
+@media (min-width: 766px) {
+  /* line 48, src/scss/3_components/layout/regions.scss */
+  #bottom_wrapper .bottom-row .column:last-child {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  /* line 59, src/scss/3_components/layout/regions.scss */
+  #footer {
+    padding-left: 1rem;
+  }
+  /* line 63, src/scss/3_components/layout/regions.scss */
+  #footer .column {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 961px) {
+  /* line 70, src/scss/3_components/layout/regions.scss */
+  .footer-area .column,
+  .footer-area .column:first-child {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=regions.css.map */

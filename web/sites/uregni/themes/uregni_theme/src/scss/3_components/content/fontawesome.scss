@@ -16,11 +16,25 @@ h2 i {
   text-align: center;
   vertical-align: middle;
 
-  &.fa {
+  &.fas,
+  &.far {
     line-height: 4.4rem;
   }
 }
 
-.fa-lightbulb-o::before {
-  content: "\f0eb";
+#footer .social-icons i {
+  font-size: 2.4rem;
+  border: 1px solid;
+  padding: .5rem .7rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  line-height: 3rem;
+
+  &:hover {
+    background: $white;
+    color: $brand-primary;
+  }
 }

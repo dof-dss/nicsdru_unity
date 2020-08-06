@@ -162,5 +162,14 @@ site URLs will be duplicated and Lando will attempt to set up 'uregni.gov.uk.lnd
   - Follow the wizard for the site.
   - cd web/files/uregni and all the uploaded files should be there.
 
+## Running Nightwatch tests
+- Nightwatch tests may appear in the /tests directory of any module
+- Nightwatch tests may be run easily from Lando, the following command is a good example:
+
+lando nightwatch uregni ../modules/origins/origins_workflow/tests/src/Nightwatch/Tests/AdminTest.js
+
+Note that a Unity site name must appear after 'nightwatch' (this could equally be 'liofa' or 'fictcommission').
+The path to the Nightwatch test is relative to web/core.
+
 # Licence
 Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
