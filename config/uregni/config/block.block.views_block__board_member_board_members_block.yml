@@ -1,22 +1,22 @@
-uuid: 0d055248-f5bc-4462-a64e-b78db1d9da2a
+uuid: d77c4048-e95c-40a1-87ff-16b1e8dc273d
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.latest_news
+    - views.view.board_member
   module:
     - system
     - views
   theme:
     - uregni_theme
-id: views_block__latest_news_home_latest_news
+id: views_block__board_member_board_members_block
 theme: uregni_theme
 region: content
-weight: -10
+weight: -8
 provider: null
-plugin: 'views_block:latest_news-home_latest_news'
+plugin: 'views_block:board_member-board_members_block'
 settings:
-  id: 'views_block:latest_news-home_latest_news'
+  id: 'views_block:board_member-board_members_block'
   label: ''
   provider: views
   label_display: visible
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /our-board
     negate: false
     context_mapping: {  }
