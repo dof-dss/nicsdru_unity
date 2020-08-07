@@ -149,7 +149,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts: {  }
-      title: 'Board members'
+      title: 'Our board'
       header: {  }
       footer: {  }
       empty: {  }
