@@ -46,7 +46,7 @@
 /* line 35, src/scss/3_components/form/search-form.scss */
 .search-form input[type="text"] {
   color: #555;
-  background: url('../../../images/search-icon.png?1739a3e53cd') no-repeat left top 3px;
+  background: url('../../../images/search-icon.png?172b88a186f') no-repeat left top 3px;
   padding: 0 1rem 0 2.6rem;
   width: 200px;
 }

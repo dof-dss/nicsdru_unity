@@ -258,7 +258,7 @@
   /* line 218, node_modules/nicsdru_unity_theme/src/scss/2_layout/_header.scss */
   #headerHero .region-search .form-submit {
     height: 35px;
-    background: #fff url('../images/search-icon.png?1739a3e53cd') no-repeat center;
+    background: #fff url('../images/search-icon.png?172b88a186f') no-repeat center;
     text-indent: -999rem;
   }
 }
@@ -440,12 +440,12 @@ aside #user-login-form .form-actions {
 
 /* line 75, node_modules/nicsdru_unity_theme/src/scss/init/unity-layout/_unity-layout.scss */
 .sidebar-first #content {
-  width: 80%;
+  width: 70%;
 }
 
 /* line 79, node_modules/nicsdru_unity_theme/src/scss/init/unity-layout/_unity-layout.scss */
 .sidebar-first #sidebar-first {
-  width: 19%;
+  width: 25%;
 }
 
 /* 2 columns: sidebar-second */
