@@ -143,7 +143,7 @@ a:hover {
   display: inline-block;
   width: 1.5em;
   height: .75em;
-  background: transparent url('../images/arrow-down.png?172bd4f8149') no-repeat 50% 50%;
+  background: transparent url('../images/arrow-down.png?172b88a1868') no-repeat 50% 50%;
   background-size: 1.6rem auto;
 }
 
@@ -376,7 +376,7 @@ blockquote,
 q {
   quotes: none;
   border: 0;
-  background: transparent url('../images/quote.png?172bd4f814e') no-repeat scroll 0 0;
+  background: transparent url('../images/quote.png?172b88a186e') no-repeat scroll 0 0;
   padding: 1rem .5rem .5rem 4.7rem;
   text-shadow: 1px 1px #fff;
   margin: 5px 0;
@@ -589,6 +589,33 @@ td {
   text-align: left;
   padding: 10px;
   border: 1px solid #dbdbdb;
+}
+
+/* line 23, src/scss/base.scss */
+a {
+  text-decoration: underline;
+}
+
+/* line 26, src/scss/base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 31, src/scss/base.scss */
+p {
+  margin-bottom: 2.4rem;
+}
+
+/* line 35, src/scss/base.scss */
+address {
+  margin-bottom: 2.4rem;
+  line-height: 3rem;
+  font-style: normal;
+}
+
+/* line 41, src/scss/base.scss */
+.page-title {
+  margin: 2.3rem 0;
 }
 
 /*# sourceMappingURL=base.css.map */
