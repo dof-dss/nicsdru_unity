@@ -42,22 +42,16 @@
   ]
 %}
 
-{%
-  set field_classes = [
-  'field-member-image',
-]
-%}
-
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass(field_classes).setAttribute('role', 'presentation') }}>{{- item.content -}}</div>
+        <div{{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ item.attributes.addClass(field_classes).setAttribute('role', 'presentation') }}>{{- item.content -}}</div>
+      <p{{ attributes }}>{{ item.content }}</p>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -67,7 +61,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <p{{ item.attributes }}>{{ item.content }}</p>
     {% endfor %}
     {% if multiple %}
       </div>
