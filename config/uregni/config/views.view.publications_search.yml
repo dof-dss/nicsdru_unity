@@ -275,10 +275,11 @@ display:
         title: Publications
         description: ''
         expanded: false
-        parent: 'menu_link_content:2abe8855-e9be-4622-a328-6cba24c0fa19'
+        parent: 'menu_link_content:f1f1af0b-e91f-4f43-8af2-185f4dd5a576'
         weight: 0
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
