@@ -28,8 +28,34 @@
     @include breakpoint($tab) {
       @include adjust-font-size-to(16px, 4);
     }
+
     a {
       text-decoration: underline;
     }
+  }
+}
+
+.board-members {
+  display: flex;
+  flex-flow: column;
+
+  @include breakpoint($mob) {
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .views-row {
+    background: #e4e4e4;
+    margin-bottom: 2%;
+    padding: 1rem;
+
+    @include breakpoint($mob) {
+      flex-basis: 49%;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    padding-top: 3rem;
   }
 }
