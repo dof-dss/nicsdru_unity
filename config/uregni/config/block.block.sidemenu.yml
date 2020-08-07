@@ -1,0 +1,40 @@
+uuid: 808fbf41-0c51-4fc4-a4cb-28c5d909ac19
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - node
+    - system
+  theme:
+    - uregni_theme
+id: sidemenu
+theme: uregni_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sidebar navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 0
+  expand_all_items: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+      staff_member: staff_member
+      vacancy: vacancy
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
