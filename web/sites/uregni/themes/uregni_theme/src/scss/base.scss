@@ -19,3 +19,34 @@
 // Ensure any custom fonts get loaded first to minimize front-end performance impact.
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/1_base/index';
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 2.4rem;
+}
+
+address {
+  margin-bottom: 2.4rem;
+  line-height: 3rem;
+  font-style: normal;
+}
+
+.page-title {
+  margin: 2.3rem 0;
+}
+
+#block-views-block-board-member-board-members-block {
+  h2 {
+    @include responsive-typo-map($h2-text);
+    margin: 0;
+    padding-left: 0;
+  }
+}
+
