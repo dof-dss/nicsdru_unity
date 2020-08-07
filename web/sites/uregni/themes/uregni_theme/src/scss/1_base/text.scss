@@ -11,3 +11,11 @@ a {
     text-decoration: none;
   }
 }
+
+#block-views-block-board-member-board-members-block {
+  h2 {
+      @include responsive-typo-map($h2-text);
+      margin: 0;
+      padding-left: 0;
+    }
+}
