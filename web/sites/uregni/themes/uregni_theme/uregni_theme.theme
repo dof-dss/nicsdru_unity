@@ -49,3 +49,12 @@ function uregni_theme_theme_suggestions_views_view_alter(array &$suggestions, ar
     $suggestions[] = 'views_view__' . $variables['view']->element['#display_id'];
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function uregni_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#view_mode'])) {
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+  }
+}
