@@ -14,4 +14,12 @@ a:hover {
   text-decoration: none;
 }
 
+/* line 16, src/scss/1_base/text.scss */
+#block-views-block-board-member-board-members-block h2 {
+  font-size: 2.1rem;
+  margin: 3.6rem 0 1.2rem;
+  margin: 0;
+  padding-left: 0;
+}
+
 /*# sourceMappingURL=text.css.map */
