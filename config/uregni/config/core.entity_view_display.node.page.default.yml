@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.page.field_page_top_image
     - node.type.page
   module:
-    - image
     - text
     - user
 id: node.page.default
@@ -26,14 +25,14 @@ content:
     third_party_settings: {  }
     region: content
   field_page_top_image:
-    type: image
+    type: entity_reference_entity_view
     weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: landscape_full
+      link: false
     third_party_settings: {  }
+    region: content
 hidden:
   content_moderation_control: true
   field_enable_toc: true
