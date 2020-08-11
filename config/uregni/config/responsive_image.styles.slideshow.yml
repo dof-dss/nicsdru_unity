@@ -1,0 +1,23 @@
+uuid: 209232ac-3618-42cd-b5d1-42811a4d16b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.slideshow_1024x340_
+  theme:
+    - nicsdru_unity_theme
+id: slideshow
+label: Slideshow
+image_style_mappings:
+  -
+    breakpoint_id: nicsdru_unity_theme.base
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: slideshow_1024x340_
+  -
+    breakpoint_id: nicsdru_unity_theme.base
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: slideshow_1024x340_
+breakpoint_group: nicsdru_unity_theme
+fallback_image_style: slideshow_1024x340_

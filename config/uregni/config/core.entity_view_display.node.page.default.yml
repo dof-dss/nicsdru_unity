@@ -11,7 +11,7 @@ dependencies:
     - image.style.slideshow_1024x340_
     - node.type.page
   module:
-    - image
+    - media
     - text
     - user
 id: node.page.default
@@ -27,14 +27,14 @@ content:
     third_party_settings: {  }
     region: content
   field_page_top_image:
-    type: image
-    weight: 0
-    region: content
+    type: media_thumbnail
+    weight: 2
     label: hidden
     settings:
       image_style: slideshow_1024x340_
       image_link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   content_moderation_control: true
   field_enable_toc: true
