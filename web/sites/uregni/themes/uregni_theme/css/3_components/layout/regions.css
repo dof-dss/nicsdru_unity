@@ -76,4 +76,11 @@
   }
 }
 
+@media screen and (max-width: 766px) {
+  /* line 78, src/scss/3_components/layout/regions.scss */
+  #sidebar-first {
+    padding: 0;
+  }
+}
+
 /*# sourceMappingURL=regions.css.map */
