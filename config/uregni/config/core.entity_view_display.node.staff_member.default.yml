@@ -7,10 +7,8 @@ dependencies:
     - field.field.node.staff_member.field_member_image
     - field.field.node.staff_member.field_member_role
     - field.field.node.staff_member.field_metatag
-    - image.style.medium
     - node.type.staff_member
   module:
-    - media
     - text
     - user
 id: node.staff_member.default
@@ -26,12 +24,12 @@ content:
     third_party_settings: {  }
     region: content
   field_member_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 1
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      view_mode: portrait_float
+      link: false
     third_party_settings: {  }
     region: content
   field_member_role:

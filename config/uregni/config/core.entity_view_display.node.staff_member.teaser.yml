@@ -8,10 +8,8 @@ dependencies:
     - field.field.node.staff_member.field_member_image
     - field.field.node.staff_member.field_member_role
     - field.field.node.staff_member.field_metatag
-    - image.style.media_library
     - node.type.staff_member
   module:
-    - media
     - user
 id: node.staff_member.teaser
 targetEntityType: node
@@ -19,13 +17,13 @@ bundle: staff_member
 mode: teaser
 content:
   field_member_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: media_library
-      image_link: ''
+      view_mode: member_small_image
+      link: false
     third_party_settings: {  }
   field_member_role:
     type: string
