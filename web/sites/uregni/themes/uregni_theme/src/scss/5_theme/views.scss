@@ -2,7 +2,7 @@
  * @file
  * Provides the layout styles for content output for views.
  */
-@import "../init/index";
+@import '../init/index';
 
 .home-latest-news {
   @include breakpoint($tab) {

@@ -17,17 +17,16 @@ site-styling:
 uregni-specific-styles:
   version: 1.x
   css:
-    base:
-      css/1_base/text.css: { minified: true }
-
     component:
       css/3_components/block/consumer-info.css: { minified: true }
       css/3_components/block/home-blocks.css: { minified: true }
+      css/3_components/block/sidemenu.css: { minified: true }
       css/3_components/field/field-photo.css: { minified: true }
       css/3_components/field/field-member-image.css: { minified: true }
       css/3_components/form/button.css: { minified: true }
       css/3_components/form/search-form.css: { minified: true }
       css/3_components/content/fontawesome.css: { minified: true }
+      css/3_components/content/lists.css: { minified: true }
       css/3_components/layout/container.css: { minified: true }
       css/3_components/layout/footer.css: { minified: true }
       css/3_components/layout/regions.css: { minified: true }
