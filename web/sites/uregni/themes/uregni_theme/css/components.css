@@ -33,15 +33,23 @@
   background-color: #0f3d0f;
 }
 
+/* line 45, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .nav-main {
+  height: auto;
+  min-height: 44px;
+}
+
 @media screen and (max-width: 766px) {
-  /* line 39, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu {
-    border: 0;
+  /* line 45, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .nav-main {
+    height: 0;
+    overflow: hidden;
+    min-height: 0;
   }
 }
 
-/* line 49, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu ul {
+/* line 57, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main {
   float: left;
   padding: 0;
   margin: 0;
@@ -49,86 +57,15 @@
 }
 
 @media screen and (max-width: 766px) {
-  /* line 49, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu ul {
-    display: none;
-    float: none;
+  /* line 57, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main {
     max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 766px) {
-  /* line 63, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu ul ul .ul-toggle {
-    font-size: 17px;
-    top: 1px;
-  }
-}
-
-/* line 71, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu ul li:first-child {
-  padding-left: 0;
-}
-
-/* line 75, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu ul li .leaf,
-#main-menu ul li .expanded,
-#main-menu ul li .collapsed {
-  list-style: none;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 82, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu ul.collapse {
-    display: block !important;
-  }
-}
-
-@media screen and (max-width: 766px) {
-  /* line 88, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu ul.menu li {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    border-right: 0;
-  }
-}
-
-/* line 96, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu ul.menu li li {
-  border: 0;
-  margin: 0;
-}
-
-/* line 100, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu ul.menu li li:hover > a {
-  background: #0f3d0f;
-}
-
-/* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li {
-  font-size: 1.4rem;
-  position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  vertical-align: top;
-  border-right: 1px solid #fff;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li {
     float: none;
-    max-width: 100%;
   }
 }
 
-/* line 124, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li ul {
+/* line 68, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub {
   display: none;
   position: absolute;
   z-index: 9999;
@@ -139,60 +76,67 @@
 }
 
 @media screen and (max-width: 766px) {
-  /* line 124, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li ul {
+  /* line 68, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub {
     position: static;
     border: 0;
   }
 }
 
-/* line 138, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li ul ul {
+/* line 82, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub ul {
   left: 151px;
   top: 0;
 }
 
 @media screen and (max-width: 766px) {
-  /* line 138, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li ul ul {
-    margin: 0 !important;
+  /* line 82, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub ul {
+    margin: 0;
     border: 0;
   }
 }
 
-/* line 149, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li li {
+/* line 92, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub .menu-item {
   float: none;
   min-width: 150px;
   padding: 0;
   margin: 0;
   position: relative;
   width: 100%;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 157, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li li li a {
-    background: #1b6e1b;
-  }
-}
-
-/* line 163, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li li a {
   background: #606;
 }
 
+/* line 101, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub .menu-item.open, #main-menu .menu-main_sub .menu-item:hover {
+  background: #0f3d0f;
+}
+
 @media screen and (max-width: 766px) {
-  /* line 163, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li li a {
-    text-align: center;
+  /* line 101, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub .menu-item.open, #main-menu .menu-main_sub .menu-item:hover {
     background: #196619;
   }
 }
 
-/* line 172, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li li a,
-#main-menu li li span.activelink {
+@media screen and (max-width: 766px) {
+  /* line 92, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub .menu-item {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-right: 0;
+    background: #196619;
+  }
+  /* line 118, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub .menu-item .menu-item .menu-link {
+    background: #1b6e1b;
+  }
+}
+
+/* line 124, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub .menu-link {
   font-size: 1.4rem;
   min-width: 150px;
   margin: 0;
@@ -204,90 +148,139 @@
   color: #fff;
 }
 
-@media screen and (max-width: 766px) {
-  /* line 172, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li li a,
-  #main-menu li li span.activelink {
-    border-top: 1px solid #fff;
-  }
-}
-
-/* line 189, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li li:hover > a {
+/* line 135, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub .menu-link:focus, #main-menu .menu-main_sub .menu-link:hover {
   background: #0f3d0f;
-  border-top: 1px solid #fff;
+}
+
+/* line 140, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-main_sub .menu-link.is-active {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 766px) {
-  /* line 194, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li li .activelink {
+  /* line 124, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub .menu-link {
+    border-top: 1px solid #fff;
     text-align: center;
   }
 }
 
-@media screen and (max-width: 766px) {
-  /* line 200, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li li .drop-down-toggle {
-    top: 5px;
+@media screen and (min-width: 766px) {
+  /* line 124, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-main_sub .menu-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
-/* line 207, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li:hover > a {
-  background: #606;
+/* line 158, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-item {
+  font-size: 1.4rem;
+  position: relative;
+  display: -moz-inline-stack;
+  zoom: 1;
+  vertical-align: top;
+  border-right: 1px solid #fff;
+  float: left;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 766px) {
-  /* line 207, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li:hover > a {
-    background: #196619;
+  /* line 158, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item {
+    float: none;
+    max-width: 100%;
   }
 }
 
-/* line 215, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li a:focus {
+/* line 174, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-item.open {
   background: #606;
-  outline: none;
 }
 
-/* line 220, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li:hover > ul,
-#main-menu li li:hover > ul,
-#main-menu li li li:hover > ul {
+/* line 177, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-item.open .fas {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-right: .5rem;
+  padding-left: 0;
+}
+
+/* line 183, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-item.open > ul {
   display: block;
 }
 
-@media screen and (max-width: 766px) {
-  /* line 220, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu li:hover > ul,
-  #main-menu li li:hover > ul,
-  #main-menu li li li:hover > ul {
-    display: none;
+/* line 188, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-item:hover {
+  background: #606;
+}
+
+@media screen and (min-width: 766px) {
+  /* line 192, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item:hover .fas {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    padding-right: .5rem;
+    padding-left: 0;
+  }
+  /* line 198, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item:hover > ul {
+    display: block;
   }
 }
 
-/* line 230, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu li .leaf,
-#main-menu li .expanded,
-#main-menu li .collapsed {
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 766px) {
+  /* line 207, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item .menu-main_sub .menu-item .fas {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    height: 15px;
+    padding: 0;
+  }
+  /* line 215, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item .menu-main_sub .menu-item:hover .fas, #main-menu .menu-item .menu-main_sub .menu-item.open .fas {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }
 
-/* line 238, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu a,
-#main-menu span.activelink {
+@media screen and (max-width: 766px) {
+  /* line 222, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item .menu-main_sub .menu-item .fas {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    padding-left: .5rem;
+  }
+  /* line 228, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-item .menu-main_sub .menu-item.open .fas {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+/* line 237, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-link {
   padding: 1.1rem 2rem;
   display: block;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  min-width: 44px;
 }
 
 @media screen and (max-width: 766px) {
-  /* line 238, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu a,
-  #main-menu span.activelink {
+  /* line 237, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-link {
     width: 100%;
     padding: 13px 2%;
     border-radius: 0;
@@ -297,223 +290,160 @@
   }
 }
 
+/* line 254, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-link:hover, #main-menu .menu-link:focus {
+  background: #606;
+}
+
 @media screen and (max-width: 766px) {
-  /* line 256, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu span.activelink {
-    padding: 1.3rem 2rem;
+  /* line 254, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu-link:hover, #main-menu .menu-link:focus {
     background: #196619;
   }
 }
 
 /* line 263, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu span.activelink,
-#main-menu li.active-trail a,
-#main-menu li a.is-active {
-  background: #606;
+#main-menu .menu-link:focus {
+  -webkit-box-shadow: 0 0 5px 3px #0f3d0f;
+  box-shadow: 0 0 5px 3px #0f3d0f;
+  outline: none;
+}
+
+/* line 268, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu-link .fas {
+  padding-left: .5rem;
+}
+
+/* line 273, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .menu .is-active {
+  background-color: #606;
   color: #fff;
 }
 
-/* line 270, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu .nav-toggle {
-  display: none;
+@media screen and (max-width: 766px) {
+  /* line 273, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .menu .is-active {
+    background: #196619;
+  }
 }
 
-@media screen and (max-width: 766px) {
-  /* line 270, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu .nav-toggle {
-    font-size: 1.5rem;
-    font-weight: normal;
-    background: #0f3d0f;
-    color: #fff;
-    margin: 0;
-    padding: 3%;
-    letter-spacing: 1px;
-    text-align: center;
-  }
+/* line 284, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+#main-menu .toggler {
+  position: absolute;
+  top: 0;
+  left: -.5rem;
+  z-index: 2;
+  cursor: pointer;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 5rem;
+  min-height: 5rem;
 }
 
 @media screen and (max-width: 766px) {
   /* line 284, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu .nav-toggle.open {
-    display: block;
+  #main-menu .toggler {
+    top: -5.2rem;
+    left: .5rem;
+    width: 5rem;
+    height: 5rem;
+    /* Toggler Animation */
+    /* Show menu */
   }
-}
-
-/* line 291, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-#main-menu .ul-toggle {
-  display: none;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 291, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu .ul-toggle {
-    display: block !important;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background: #196619;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: white;
-    text-shadow: none;
-    font-weight: normal;
-    font-size: 20px;
+  /* line 304, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .toggler:checked + .hamburger > div {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    /* Turns Lines Into X */
   }
-}
-
-@media screen and (max-width: 766px) {
-  /* line 309, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu.collapse .menu-navigation-container > ul.menu {
-    display: block !important;
+  /* line 308, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .toggler:checked + .hamburger > div::before, #main-menu .toggler:checked + .hamburger > div::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
-}
-
-@media screen and (max-width: 766px) {
   /* line 315, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  #main-menu.expanded {
-    position: relative;
+  #main-menu .toggler:checked:hover + .hamburger > div {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
   }
-}
-
-/* line 322, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-ul.menu {
-  padding: 0;
-  margin: .5rem 0;
+  /* line 320, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .toggler:checked ~ .nav-main {
+    height: auto;
+    -webkit-transition: max-height 1s ease;
+    transition: max-height 1s ease;
+  }
 }
 
 /* line 327, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.region ul.menu li,
-.region ul.links li,
-.region .item-list ul li {
-  list-style: none outside none;
-  margin: 0 0 .2rem;
-  padding: 0 0 0 1.5rem;
-  text-align: left;
-}
-
-/* line 336, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.drop-down-toggle {
+#main-menu .hamburger {
   position: absolute;
-  top: 7px;
-  right: 16px;
+  top: -5.2rem;
+  left: .5rem;
+  z-index: 1;
+  width: auto;
+  height: 50px;
+  padding: 1rem;
   display: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 15px;
-  background: #494747;
-  border: #aaaaaa 2px solid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 766px) {
-  /* line 336, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .drop-down-toggle {
-    display: block;
+  /* line 327, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Hamburger Line */
   }
-}
-
-/* line 352, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.drop-down-arrow {
-  display: block;
-  width: 0;
-  height: 0;
-  margin: .8rem 0 0 .5rem;
-  border-top: 5px solid #aaa;
-  border-left: transparent 5px solid;
-  border-right: transparent 5px solid;
-}
-
-/* line 362, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.burger-toggle {
-  display: none;
-  -webkit-filter: none;
-  filter: none;
-}
-
-/* line 366, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.js .burger-toggle {
-  font-size: 1.6rem;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 62px;
-  height: 54px;
-  margin-left: 1px;
-  padding: 0;
-  color: #fff;
-  background: transparent !important;
-  border: 0;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-weight: normal;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 366, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .js .burger-toggle {
-    width: 96px;
-    padding-right: 56px;
-    padding-left: 5px;
-    border-left-width: 5px;
-    border-right-width: 5px;
-    margin-left: 0;
+  /* line 343, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .hamburger > div {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: 2.1rem;
+    height: .3rem;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    /* Hamburger Lines - Top & Bottom */
+    /* Moves Line Down */
   }
-}
-
-@media screen and (min-width: 766px) {
-  /* line 366, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .js .burger-toggle {
-    display: none;
+  /* line 355, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .hamburger > div::after, #main-menu .hamburger > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -.9rem;
+    width: 100%;
+    height: .3rem;
+    background: inherit;
   }
-}
-
-/* line 397, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.js .burger-toggle .sr-only {
-  display: none;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 397, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .js .burger-toggle .sr-only {
-    display: block;
-    position: absolute !important;
-    right: 8px;
-    background-color: inherit;
+  /* line 367, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .hamburger > div::after {
+    top: .9rem;
+  }
+  /* line 372, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
+  #main-menu .hamburger-text {
     color: #fff;
-    border-radius: 0;
-    margin: 0;
-    line-height: 29px;
-    height: auto;
-    width: auto;
-    clip: auto;
-  }
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* line 397, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .js .burger-toggle .sr-only {
-    margin-top: 1.3rem;
-  }
-}
-
-/* line 420, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-.js .burger-toggle .icon-bar {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-  margin: 5px auto;
-}
-
-@media screen and (max-width: 766px) {
-  /* line 420, node_modules/nicsdru_unity_theme/src/scss/3_components/navigation/_main-nav.scss */
-  .js .burger-toggle .icon-bar {
-    width: 21px;
+    padding-left: 1rem;
   }
 }
 
@@ -787,7 +717,7 @@ nav.pager .pager__item.is-active {
 
 /* line 68, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_search-form.scss */
 .search-form input[type='submit'] {
-  background: url('../images/search-icon.png?172bd4f814e') no-repeat center 4px;
+  background: url('../images/search-icon.png?172b88a186f') no-repeat center 4px;
   text-indent: -9999px;
   width: 4rem;
   -webkit-filter: none;
@@ -970,6 +900,191 @@ a.btn {
 a.btn:hover {
   opacity: .7;
   text-decoration: none;
+}
+
+/*
+ * @file
+ * Provides the styling for icon components. The file then extrapolates some concepts around icons further
+ * for when they are used in some kind of message container.
+ */
+/* line 37, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico {
+  display: inline;
+  margin-left: .2em;
+}
+
+/* line 48, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico-elink {
+  height: 1.1rem;
+  width: 1.4rem;
+  margin-bottom: .3rem;
+  fill: #0c1e63;
+}
+
+/* line 54, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+a:focus .ico-elink {
+  fill: #fff;
+}
+
+/* line 69, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico-arrow-left {
+  fill: #373737;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 74, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico-arrow-right {
+  fill: #373737;
+}
+
+/* line 78, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico-arrow-up {
+  fill: #373737;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 83, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.ico-arrow-down {
+  fill: #373737;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 89, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.info-notice, .messages {
+  border: 2px solid;
+  margin: 1.5em 0;
+  padding: 1rem 1rem 1rem 4rem;
+}
+
+@media (min-width: 641px) {
+  /* line 89, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  .info-notice, .messages {
+    padding: 1.4rem 1.4rem 1.4rem 6rem;
+  }
+}
+
+/* line 98, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.info-notice > *:first-child, .messages > *:first-child {
+  margin-top: 0;
+}
+
+/* line 102, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.info-notice > *:last-child, .messages > *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.info-notice {
+  border-color: #002e62;
+  background: #fff url('../images/i.svg?172b88a186a') no-repeat 0.9rem 0.9rem/24px 24px;
+}
+
+@media (min-width: 641px) {
+  /* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  .info-notice {
+    background: #fff url('../images/i.svg?172b88a186a') no-repeat 1.4rem 1.4rem/30px 30px;
+  }
+}
+
+/* line 116, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.no-svg .info-notice {
+  background-image: url('../images/i.png?172b88a186a');
+}
+
+/* line 121, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+ul.info-notice {
+  padding: 1rem 1rem 1rem 4rem;
+}
+
+@media (min-width: 641px) {
+  /* line 121, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  ul.info-notice {
+    padding: 1.4rem 1.4rem 1.4rem 7rem;
+  }
+}
+
+/* line 134, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages-list {
+  margin: 2.5rem 0;
+  list-style: none;
+}
+
+/* line 138, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.field .messages-list,
+.form-wrapper .messages-list {
+  margin-bottom: 0;
+}
+
+/* line 147, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages--error {
+  border-color: #e34f4f;
+  background: #fff url('../images/wrong.svg?172b88a1872') no-repeat 0.9rem 0.9rem/24px 24px;
+}
+
+@media (min-width: 641px) {
+  /* line 147, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  .messages--error {
+    background: #fff url('../images/wrong.svg?172b88a1872') no-repeat 1.4rem 1.4rem/30px 30px;
+  }
+}
+
+/* line 155, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.no-svg .messages--error {
+  background-image: url('../images/wrong.png?172b88a1872');
+}
+
+/* line 160, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages--status {
+  border-color: #3fa940;
+  background: #fff url('../images/status.svg?172b88a1870') no-repeat 0.9rem 0.9rem/24px 24px;
+}
+
+@media (min-width: 641px) {
+  /* line 160, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  .messages--status {
+    background: #fff url('../images/status.svg?172b88a1870') no-repeat 1.4rem 1.4rem/30px 30px;
+  }
+}
+
+/* line 168, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.no-svg .messages--status {
+  background-image: url('../images/status.png?172b88a186f');
+}
+
+/* line 173, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages--warning {
+  border-color: #db6304;
+  background: #fff url('../images/warning.svg?172b88a1871') no-repeat 0.9rem 0.9rem/24px 24px;
+}
+
+@media (min-width: 641px) {
+  /* line 173, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+  .messages--warning {
+    background: #fff url('../images/warning.svg?172b88a1871') no-repeat 1.4rem 1.4rem/30px 30px;
+  }
+}
+
+/* line 181, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.no-svg .messages--warning {
+  background-image: url('../images/warning.png?172b88a1871');
+}
+
+/* line 186, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages__list {
+  margin: 0;
+}
+
+/* line 190, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages__item {
+  font-size: 1.8rem;
+}
+
+/* line 193, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
+.messages__item:first-child {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=components.css.map */

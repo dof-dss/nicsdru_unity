@@ -1,0 +1,24 @@
+/*
+ * @file
+ * Provides the styles for lists.
+ */
+
+@import "../../init/index";
+
+.node-type-page {
+  .content {
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ dependencies:
 id: consumerinformationhome
 theme: uregni_theme
 region: content
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:a07ad254-b480-4b6f-a6a5-8bbfe86f83e4'
 settings:

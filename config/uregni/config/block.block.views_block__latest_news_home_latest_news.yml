@@ -12,7 +12,7 @@ dependencies:
 id: views_block__latest_news_home_latest_news
 theme: uregni_theme
 region: content
-weight: -3
+weight: -10
 provider: null
 plugin: 'views_block:latest_news-home_latest_news'
 settings:
