@@ -42,4 +42,9 @@ h2 i.fas, h2 i.far {
   color: #0f3d0f;
 }
 
+/* line 42, src/scss/3_components/content/fontawesome.scss */
+.ico-elink {
+  background: url('../../../images/new-window.gif?1739a3e53cd') no-repeat;
+}
+
 /*# sourceMappingURL=fontawesome.css.map */
