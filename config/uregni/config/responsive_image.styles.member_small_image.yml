@@ -1,24 +1,24 @@
-uuid: 9e8df0dd-97f3-41e6-92cc-1da7d0d7aeed
+uuid: f66b69f1-b33e-4d36-b1b3-ff6272f44bee
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.nigov_portrait_300_x1
-    - image.style.nigov_portrait_600_x2
+    - image.style.member_small_image_x1
+    - image.style.member_small_image_x2
   theme:
     - nicsdru_unity_theme
-id: portrait_float
-label: 'Portrait float'
+id: member_small_image
+label: 'Member small image'
 image_style_mappings:
   -
     breakpoint_id: nicsdru_unity_theme.base
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: nigov_portrait_300_x1
+    image_mapping: member_small_image_x1
   -
     breakpoint_id: nicsdru_unity_theme.base
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: nigov_portrait_600_x2
+    image_mapping: member_small_image_x2
 breakpoint_group: nicsdru_unity_theme
-fallback_image_style: nigov_portrait_300_x1
+fallback_image_style: member_small_image_x1

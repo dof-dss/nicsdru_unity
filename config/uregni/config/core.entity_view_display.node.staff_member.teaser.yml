@@ -10,30 +10,33 @@ dependencies:
     - field.field.node.staff_member.field_metatag
     - node.type.staff_member
   module:
-    - text
     - user
 id: node.staff_member.teaser
 targetEntityType: node
 bundle: staff_member
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
+  field_member_image:
+    type: entity_reference_entity_view
     weight: 0
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      view_mode: member_small_image
+      link: false
+    third_party_settings: {  }
+  field_member_role:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
-  field_member_image: true
-  field_member_role: true
   field_metatag: true
   langcode: true
+  links: true
   search_api_excerpt: true
