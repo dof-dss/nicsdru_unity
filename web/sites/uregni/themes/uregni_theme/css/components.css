@@ -551,7 +551,7 @@ nav.pager .pager__item.is-active {
 .block > h2 {
   font-size: 3.6rem;
   line-height: 4.2rem;
-  margin: 0 0 0.6rem;
+  margin: 2.3rem 0 2.3rem;
   margin: .5rem 0 1.5rem;
   padding: 1rem;
   overflow: hidden;
@@ -717,7 +717,7 @@ nav.pager .pager__item.is-active {
 
 /* line 68, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_search-form.scss */
 .search-form input[type='submit'] {
-  background: url('../images/search-icon.png?172b88a186f') no-repeat center 4px;
+  background: url('../images/search-icon.png?1739a3e53cd') no-repeat center 4px;
   text-indent: -9999px;
   width: 4rem;
   -webkit-filter: none;
@@ -979,19 +979,19 @@ a:focus .ico-elink {
 /* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .info-notice {
   border-color: #002e62;
-  background: #fff url('../images/i.svg?172b88a186a') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/i.svg?1739a3e53cc') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .info-notice {
-    background: #fff url('../images/i.svg?172b88a186a') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/i.svg?1739a3e53cc') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 116, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .info-notice {
-  background-image: url('../images/i.png?172b88a186a');
+  background-image: url('../images/i.png?1739a3e53cb');
 }
 
 /* line 121, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
@@ -1021,55 +1021,55 @@ ul.info-notice {
 /* line 147, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--error {
   border-color: #e34f4f;
-  background: #fff url('../images/wrong.svg?172b88a1872') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/wrong.svg?1739a3e53ce') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 147, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--error {
-    background: #fff url('../images/wrong.svg?172b88a1872') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/wrong.svg?1739a3e53ce') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 155, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--error {
-  background-image: url('../images/wrong.png?172b88a1872');
+  background-image: url('../images/wrong.png?1739a3e53ce');
 }
 
 /* line 160, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--status {
   border-color: #3fa940;
-  background: #fff url('../images/status.svg?172b88a1870') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/status.svg?1739a3e53cd') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 160, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--status {
-    background: #fff url('../images/status.svg?172b88a1870') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/status.svg?1739a3e53cd') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 168, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--status {
-  background-image: url('../images/status.png?172b88a186f');
+  background-image: url('../images/status.png?1739a3e53cd');
 }
 
 /* line 173, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--warning {
   border-color: #db6304;
-  background: #fff url('../images/warning.svg?172b88a1871') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/warning.svg?1739a3e53ce') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 173, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--warning {
-    background: #fff url('../images/warning.svg?172b88a1871') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/warning.svg?1739a3e53ce') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 181, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--warning {
-  background-image: url('../images/warning.png?172b88a1871');
+  background-image: url('../images/warning.png?1739a3e53ce');
 }
 
 /* line 186, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */

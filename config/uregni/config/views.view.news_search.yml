@@ -39,7 +39,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -410,7 +410,8 @@ display:
       exposed_block: true
       display_description: ''
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
