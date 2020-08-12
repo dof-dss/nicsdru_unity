@@ -440,12 +440,12 @@ aside #user-login-form .form-actions {
 
 /* line 75, node_modules/nicsdru_unity_theme/src/scss/init/unity-layout/_unity-layout.scss */
 .sidebar-first #content {
-  width: 80%;
+  width: 70%;
 }
 
 /* line 79, node_modules/nicsdru_unity_theme/src/scss/init/unity-layout/_unity-layout.scss */
 .sidebar-first #sidebar-first {
-  width: 19%;
+  width: 25%;
 }
 
 /* 2 columns: sidebar-second */

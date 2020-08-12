@@ -1,4 +1,4 @@
-uuid: 80160951-264b-42e9-8501-251095f10ebe
+uuid: 79323074-3286-49a6-8e7c-e4851749f44c
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ field_name: field_page_top_image
 entity_type: node
 bundle: page
 label: 'Top image'
-description: 'Please choose an image  to be displayed with this page item. '
+description: 'Please choose an image to be displayed with this page item.'
 required: false
 translatable: false
 default_value: {  }

@@ -591,4 +591,39 @@ td {
   border: 1px solid #dbdbdb;
 }
 
+/* line 23, src/scss/base.scss */
+a {
+  text-decoration: underline;
+}
+
+/* line 26, src/scss/base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 31, src/scss/base.scss */
+p {
+  margin-bottom: 2.4rem;
+}
+
+/* line 35, src/scss/base.scss */
+address {
+  margin-bottom: 2.4rem;
+  line-height: 3rem;
+  font-style: normal;
+}
+
+/* line 41, src/scss/base.scss */
+.page-title {
+  margin: 2.3rem 0;
+}
+
+/* line 46, src/scss/base.scss */
+#block-views-block-board-member-board-members-block h2 {
+  font-size: 2.1rem;
+  margin: 3.6rem 0 1.2rem;
+  margin: 0;
+  padding-left: 0;
+}
+
 /*# sourceMappingURL=base.css.map */
