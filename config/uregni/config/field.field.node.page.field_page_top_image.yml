@@ -1,33 +1,28 @@
-uuid: 2f8092d9-4a2d-4fa6-8f17-51fb8ea19671
+uuid: 79323074-3286-49a6-8e7c-e4851749f44c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_page_top_image
+    - media.type.image
     - node.type.page
-  module:
-    - image
 id: node.page.field_page_top_image
 field_name: field_page_top_image
 entity_type: node
 bundle: page
 label: 'Top image'
-description: ''
+description: 'Please choose an image to be displayed with this page item.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: ''
-  file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
-  min_resolution: 600x350
-  alt_field: false
-  title_field: false
-  default_image: 0
-  alt_field_required: true
-  title_field_required: false
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: image
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
