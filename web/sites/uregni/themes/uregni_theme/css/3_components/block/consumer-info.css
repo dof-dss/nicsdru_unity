@@ -14,7 +14,7 @@
 @media (min-width: 766px) {
   /* line 7, src/scss/3_components/block/consumer-info.scss */
   #block-consumerinformationhome {
-    background: #78cbbf url('../../../images/customer-info.png?173523d942a') right center no-repeat;
+    background: #78cbbf url('../../../images/customer-info.png?1739a3e53cb') right center no-repeat;
     background-size: auto 100%;
     min-height: 270px;
   }

@@ -45,7 +45,51 @@
   text-decoration: underline;
 }
 
-/* line 38, src/scss/5_theme/views.scss */
+/* line 39, src/scss/5_theme/views.scss */
+.search-page #sidebar-first {
+  padding-left: 0;
+}
+
+@media (min-width: 961px) {
+  /* line 44, src/scss/5_theme/views.scss */
+  .search-page #sidebar-first {
+    width: 30%;
+  }
+  /* line 48, src/scss/5_theme/views.scss */
+  .search-page #content {
+    width: 65%;
+  }
+}
+
+/* line 65, src/scss/5_theme/views.scss */
+.search-page .views-exposed-form {
+  background: #f6f6f6;
+  -webkit-box-shadow: 0 0 1px inset #333;
+  box-shadow: 0 0 1px inset #333;
+  padding: 1rem 0;
+}
+
+/* line 70, src/scss/5_theme/views.scss */
+.search-page .views-exposed-form label {
+  font-weight: bold;
+}
+
+/* line 75, src/scss/5_theme/views.scss */
+.search-page .form-item {
+  margin-bottom: 0;
+}
+
+/* line 80, src/scss/5_theme/views.scss */
+.search-page input.form-text {
+  max-width: 100%;
+}
+
+/* line 85, src/scss/5_theme/views.scss */
+.search-page h2 {
+  margin-top: 0;
+}
+
+/* line 90, src/scss/5_theme/views.scss */
 .board-members {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +101,7 @@
 }
 
 @media (min-width: 440px) {
-  /* line 38, src/scss/5_theme/views.scss */
+  /* line 90, src/scss/5_theme/views.scss */
   .board-members {
     -ms-flex-flow: wrap;
     flex-flow: wrap;
@@ -67,7 +111,7 @@
   }
 }
 
-/* line 47, src/scss/5_theme/views.scss */
+/* line 99, src/scss/5_theme/views.scss */
 .board-members .views-row {
   background: #e4e4e4;
   margin-bottom: 2%;
@@ -75,14 +119,14 @@
 }
 
 @media (min-width: 440px) {
-  /* line 47, src/scss/5_theme/views.scss */
+  /* line 99, src/scss/5_theme/views.scss */
   .board-members .views-row {
     -ms-flex-preferred-size: 49%;
     flex-basis: 49%;
   }
 }
 
-/* line 57, src/scss/5_theme/views.scss */
+/* line 109, src/scss/5_theme/views.scss */
 .board-members h3 {
   margin-top: 0;
   padding-top: 3rem;

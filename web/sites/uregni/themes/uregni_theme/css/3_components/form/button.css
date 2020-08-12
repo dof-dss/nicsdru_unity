@@ -4,8 +4,8 @@
  */
 /* Vertical rhythm presets =========================================== */
 /* Breakpoints ======================================================== */
-/* line 7, src/scss/3_components/form/button.scss */
-input[type="submit"] {
+/* line 8, src/scss/3_components/form/button.scss */
+.feedblitz-custom-form input[type="submit"] {
   background-color: #606;
   border: none;
   background-image: none;
@@ -23,8 +23,8 @@ input[type="submit"] {
   border-radius: 0;
 }
 
-/* line 23, src/scss/3_components/form/button.scss */
-input[type="submit"]:hover {
+/* line 24, src/scss/3_components/form/button.scss */
+.feedblitz-custom-form input[type="submit"]:hover {
   background: #606;
   -webkit-box-shadow: none;
   box-shadow: none;
