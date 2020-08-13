@@ -4,11 +4,18 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - origins_toc
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
+  origins_toc:
+    toc_enable: 1
+    toc_title: 'Table of contents'
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
