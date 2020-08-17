@@ -5,15 +5,17 @@ namespace Drupal\uregni_breadcrumbs;
 /**
  * @file
  * Generates the breadcrumb trail for content including:
- * - News
+ * - Board member
  *
  * In the format:
  * > Home
- * > News
+ * > About us
+ * > Board members
  * > current-page-title
  *
  * > <front>
- * > /news
+ * > /about-us
+ * > /our-board
  * > /current-page-title
  */
 use Drupal\Core\Breadcrumb\Breadcrumb;

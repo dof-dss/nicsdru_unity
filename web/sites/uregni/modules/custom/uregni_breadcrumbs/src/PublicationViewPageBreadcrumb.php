@@ -4,13 +4,22 @@ namespace Drupal\uregni_breadcrumbs;
 
 /**
  * @file
- * Generates the breadcrumb trail for search page(s)
+ * Generates the breadcrumb trail for publication search page
+ *
+ * In the format:
+ * > Home
+ * > About us
+ * > current-page-title
+ *
+ * > <front>
+ * > /about-us
+ * > /current-page-title
  */
 use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Link ;
+use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -56,26 +65,12 @@ class PublicationViewPageBreadcrumb implements BreadcrumbBuilderInterface {
    * {@inheritdoc}
    */
   public function applies(RouteMatchInterface $route_match) {
-//    // You can put any logic here. You must return a BOOLEAN TRUE or FALSE.
-//    //-----[ BEGIN example ]-----
-//    // Get all parameters.
-//    $parameters = $route_match->getParameters()->all();
-//    return $parameters;
-//
-//    // Determine if the current page is a node page
-//    if (isset($parameters['node']) && !empty($parameters['node'])) {
-//      return TRUE;
-//    }
-//    //-----[ END example ]-----
-//
-//    // Still here? This does not apply.
-//    return FALSE;
     $match = FALSE;
     $route_name = $route_match->getRouteName();
 
-      if ($route_name == 'view.publications_search.publication_search_page') {
-        $match = TRUE;
-      }
+    if ($route_name == 'view.publications_search.publication_search_page') {
+      $match = TRUE;
+    }
 
     return $match;
 
@@ -95,4 +90,5 @@ class PublicationViewPageBreadcrumb implements BreadcrumbBuilderInterface {
 
     return $breadcrumb;
   }
+
 }
