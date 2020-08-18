@@ -50,8 +50,8 @@ commands:
           command: |
             sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
             sudo apt-get --allow-releaseinfo-change update
-            sudo apt-get install -y libpng-dev
-            sudo docker-php-ext-install gd
+            sudo apt-get install -y libpng-dev mariadb-client rsync
+            sudo docker-php-ext-install gd pdo_mysql
             composer global require hirak/prestissimo
   github_hosts_workaround:
     description: "Adds github.com to known hosts in container; for working locally."
