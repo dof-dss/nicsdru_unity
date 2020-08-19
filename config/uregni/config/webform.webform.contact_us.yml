@@ -207,8 +207,8 @@ handlers:
       from_mail: '[webform_submission:values:your_email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:your_name:raw]'
-      subject: _default
-      body: _default
+      subject: 'Feedback form submission'
+      body: "&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
