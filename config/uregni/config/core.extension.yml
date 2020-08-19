@@ -55,6 +55,7 @@ module:
   linkit: 0
   media: 0
   media_library: 0
+  menu_breadcrumb: 0
   menu_ui: 0
   metatag: 0
   migrate: 0
@@ -93,6 +94,7 @@ module:
   unity_image_styles: 0
   unity_media: 0
   unity_search_pages: 0
+  uregni_breadcrumbs: 0
   user: 0
   webform: 0
   webform_access: 0

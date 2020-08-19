@@ -89,7 +89,7 @@
   <div class="container-wrap">
     <div class="content-sidebar-wrap search-page">
       {{ drupal_block('page_title_block', wrapper=false) }}
-      {{ page.breadcrumb }}
+      {{ drupal_block('system_breadcrumb_block') }}
       {% if page.sidebar_first %}
         <aside id="sidebar-first">
           {{ page.sidebar_first }}
