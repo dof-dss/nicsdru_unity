@@ -4,3 +4,411 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+// Components / modules
+//
+// Components / modules are the reusable, modular parts of any design. They are the callouts, the sidebar sections,
+// the product lists and so on.
+//
+// Weight: -6
+//
+// Style guide: components
+
+#block-consumerinformationhome {
+  background: #78cbbf;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint($tab) {
+    background: #78cbbf resolve('customer-info.png') right center no-repeat;
+    background-size: auto 100%;
+    min-height: 270px;
+  }
+
+  h2,
+  a {
+    color: $white;
+
+    &.btn {
+      background: $brand-secondary;
+    }
+  }
+
+  h2 {
+    @include breakpoint($tab) {
+      font-size: 4.8rem;
+      line-height: 5.4rem;
+      margin: 0;
+    }
+  }
+
+  .content {
+    @include breakpoint($tab) {
+      width: 30%;
+      padding: 3rem 0 0 2rem;
+    }
+  }
+}
+
+.front {
+  .block {
+    h2 {
+      @include responsive-typo-map($h2-text);
+      margin: 0;
+      padding: 1rem 1rem 1rem 0;
+    }
+  }
+
+  .block-system-main-block {
+    h2 {
+      @include adjust-font-size-to(24px, 5);
+
+      @include breakpoint($phab) {
+        @include adjust-font-size-to(30px, 6);
+      }
+      color: $green-dark;
+      margin: 0.9rem 0 2.1rem;
+    }
+
+    p {
+      @include responsive-typo-map($h3-text);
+
+      @include breakpoint($phab) {
+        @include adjust-font-size-to(21px);
+      }
+    }
+
+    p,
+    h2 {
+      font-weight: 200;
+      letter-spacing: -.3px;
+    }
+  }
+}
+
+#block-sidemenu {
+  ul {
+    border: 1px solid #ccc;
+    margin: .5rem 0;
+    list-style: none;
+
+    li {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #ccc;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        color: $text;
+        display: block;
+      }
+
+      ul {
+        border: none;
+
+        li {
+          padding-left: 1rem;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.field-photo {
+  @include breakpoint($mob) {
+    float: right;
+    max-width: 250px;
+    margin: 0 0 1rem 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.field-member-image {
+  float: right;
+  margin-left: 2rem;
+}
+
+.board-members {
+  .field-member-image {
+    float: left;
+    padding-right: 3rem;
+    margin-left: 0;
+  }
+}
+
+.feedblitz-custom-form {
+  input[type="submit"] {
+    background-color: $brand-secondary;
+    border: none;
+    background-image: none;
+    color: #fff;
+    font-weight: normal;
+    text-shadow: none;
+    box-shadow: none;
+    margin: 1rem 0 0;
+    text-align: center;
+    padding: .6rem 1.6rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover {
+      background: $brand-secondary;
+      box-shadow: none;
+    }
+  }
+}
+
+.search-form {
+  @include breakpoint($tab) {
+    margin-right: 6rem;
+  }
+
+  .form-submit {
+    &:hover {
+      opacity: 1;
+      @include breakpoint($tab) {
+        background: $ash-grey;
+        opacity: .8;
+      }
+    }
+  }
+
+  input {
+    height: 3.3rem;
+
+    &[type="submit"] {
+      text-indent: 0;
+      background-image: none;
+      font-size: 1.4rem;
+
+      @include breakpoint($tab) {
+        width: 10rem;
+      }
+    }
+
+    &[type="text"] {
+      color: #555;
+      background: resolve("search-icon.png") no-repeat left top 3px;
+      padding: 0 1rem 0 2.6rem;
+      width: 200px;
+    }
+  }
+}
+
+.search-results {
+  .search-form {
+    max-width: 25rem;
+
+    .form-submit {
+      width: 10rem;
+
+      &:hover {
+        background: $ash-grey;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+h2 i {
+  font-size: 2.2rem;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  line-height: 4.4rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+  &.fas,
+  &.far {
+    line-height: 4.4rem;
+  }
+}
+
+#footer .social-icons i {
+  font-size: 2.4rem;
+  border: 1px solid;
+  padding: .5rem .7rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  line-height: 3rem;
+
+  &:hover {
+    background: $white;
+    color: $brand-primary;
+  }
+}
+
+.ico-elink {
+  background: resolve("new-window.gif") no-repeat;
+}
+
+.node-type-page {
+  .content {
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.front {
+  .container-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+#footer {
+  .column {
+    @include breakpoint($tab) {
+      width: 32.5%;
+    }
+
+    li {
+      border: none;
+    }
+  }
+
+  address {
+    color: $white;
+    font-style: normal;
+    margin-bottom: 2.4rem;
+  }
+
+  a {
+    color: $white;
+  }
+
+  .footer-menu {
+    margin: 4% auto;
+
+    li {
+      padding-left: 0;
+
+      @include breakpoint($mob) {
+        display: inline-block;
+        padding: 0 .8rem 0 0;
+        line-height: 1.8rem;
+        border-right: 1px solid #fff;
+        margin-right: .5rem;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      a.is-active {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#bottom_wrapper {
+  h2 {
+    font-size: 2.1rem;
+    line-height: 3rem;
+  }
+
+  .energy {
+    .column {
+      &:first-child {
+        h2 i,
+        .btn {
+          background: #cc4630;
+        }
+      }
+      &:nth-child(2) {
+        h2 i,
+        .btn {
+          background: #8561af;
+        }
+      }
+      &:last-child {
+        h2 i,
+        .btn {
+          background: #0a7ad0;
+        }
+      }
+    }
+  }
+
+  .bottom-row {
+    border-top: 4px solid #686868;
+
+    .column {
+      @include breakpoint($tab) {
+        width: 49%;
+      }
+
+      &:first-child {
+        padding: 2rem 0;
+      }
+
+      &:last-child {
+        background: #f3f3f3;
+
+        @include breakpoint($tab) {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
+
+    .column {
+      padding-left: 0;
+    }
+  }
+}
+
+.footer-area {
+  .column,
+  .column:first-child {
+    @media screen and (max-width: $lap) {
+      margin: 0;
+    }
+  }
+}
+
+#sidebar-first {
+  @media screen and (max-width: $tab) {
+    padding: 0;
+  }
+}
