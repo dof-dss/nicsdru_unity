@@ -84,6 +84,8 @@
     {{ content.field_page_top_image }}
 
     {{ drupal_block('page_title_block', wrapper=false) }}
+    {{ drupal_block('system_breadcrumb_block') }}
+
   {% endif %}
 
   <div{{ content_attributes.addClass('content') }}>
