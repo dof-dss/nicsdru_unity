@@ -90,7 +90,9 @@ class NewsBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        $match = $this->node->bundle() == 'news';
+        if ($this->node->bundle() == 'news') {
+          $match = TRUE;
+        }
       }
     }
     return $match;
