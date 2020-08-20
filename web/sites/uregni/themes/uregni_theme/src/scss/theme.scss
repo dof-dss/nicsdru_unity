@@ -1,9 +1,58 @@
 /*
  * @file
- * Provides the layout styles for content output for views.
+ * Provides very specific styling for uregni theme.
  */
-@import '../init/index';
+@import 'init/index';
 
+// Theme
+//
+// Theme rules are similar to state rules in that they describe how components or modules or layouts might look in a
+// given context / scenario, however the difference here is that is it is a very specific context and unlikely to be
+// re-usable.
+//
+// Weight: -2
+//
+// Style guide: theme
+
+// Entities
+//
+// Provides very specific styling for entities / content types.
+//
+// Weight: 1
+//
+// Style guide: theme.entities
+.node-type-consultation {
+  .summary {
+    background: #f3f3f3;
+
+    @include breakpoint($tab) {
+      display: flex;
+    }
+
+    .consultation-dates {
+      padding: 1.2rem;
+      @include breakpoint($tab) {
+        flex-basis: 33.33%;
+      }
+    }
+
+    .field-summary {
+      padding: 1.2rem;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Views
+//
+// Provides very specific styling for views.
+//
+// Weight: 1
+//
+// Style guide: theme.views
 .home-latest-news {
   @include breakpoint($tab) {
     display: flex;
@@ -42,13 +91,14 @@
 
   @include breakpoint($lap) {
     #sidebar-first {
-        width: 30%;
-      }
+      width: 30%;
+    }
 
     #content {
       width: 65%;
     }
   }
+
   // Other Unity sites use border-bottom so this will maybe need applied
   // to keep all sites consistent.
   //.views-row {
@@ -62,6 +112,7 @@
   //    margin-bottom: 1em;
   //  }
   //}
+
   .views-exposed-form {
     background: $grey-light;
     box-shadow: 0 0 1px inset $charcoal;
