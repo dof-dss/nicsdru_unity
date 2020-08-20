@@ -91,7 +91,9 @@ class ConsultationBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        $match = $this->node->bundle() == 'consultation';
+        if ($this->node->bundle() == 'consultation') {
+          $match = TRUE;
+        }
       }
     }
     return $match;
