@@ -9,11 +9,9 @@ dependencies:
     - field.field.node.publication_page.field_publication_image
     - field.field.node.publication_page.field_publication_topic
     - field.field.node.publication_page.field_publication_type
-    - image.style.medium
     - node.type.publication_page
   module:
     - datetime
-    - image
     - text
     - user
 id: node.publication_page.default
@@ -38,14 +36,14 @@ content:
       format_type: uregni_medium
     third_party_settings: {  }
   field_publication_image:
-    type: image
-    weight: 1
-    region: content
+    type: entity_reference_entity_view
+    weight: 3
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      view_mode: landscape_full
+      link: false
     third_party_settings: {  }
+    region: content
 hidden:
   content_moderation_control: true
   field_meta_tags: true

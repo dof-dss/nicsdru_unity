@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87b411f63dca40ab66725d32ed00825f",
+    "content-hash": "ed65e65c2e5ff326eafa3ab177431271",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1891,16 +1891,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.4.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "5845474412d65b65c71358e3941cc8a51dcf51e6"
+                "reference": "e810d73cad1ae341ace4b7a4048ec1ad685cdc12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/5845474412d65b65c71358e3941cc8a51dcf51e6",
-                "reference": "5845474412d65b65c71358e3941cc8a51dcf51e6",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/e810d73cad1ae341ace4b7a4048ec1ad685cdc12",
+                "reference": "e810d73cad1ae341ace4b7a4048ec1ad685cdc12",
                 "shasum": ""
             },
             "require": {
@@ -1912,20 +1912,20 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2020-06-30T15:41:24+00:00"
+            "time": "2020-08-12T09:52:33+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.2",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "5dfe75bc6affbd93fff90be6e15822b5d73b3cb3"
+                "reference": "999aea44dd7dfe869d5c3efe641c63a1aafb12b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/5dfe75bc6affbd93fff90be6e15822b5d73b3cb3",
-                "reference": "5dfe75bc6affbd93fff90be6e15822b5d73b3cb3",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/999aea44dd7dfe869d5c3efe641c63a1aafb12b5",
+                "reference": "999aea44dd7dfe869d5c3efe641c63a1aafb12b5",
                 "shasum": ""
             },
             "require": {
@@ -1948,7 +1948,7 @@
                 "drupal",
                 "theme"
             ],
-            "time": "2020-05-20T14:39:47+00:00"
+            "time": "2020-08-03T13:59:40+00:00"
         },
         {
             "name": "drupal/address",
@@ -12189,20 +12189,20 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.7",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089"
+                "reference": "2a45acf18d5023a866c02f74183bc2c3eefa40f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089",
-                "reference": "d2a93216b0cb8dea7cfba6b5d27f0e2e2dcf1089",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/2a45acf18d5023a866c02f74183bc2c3eefa40f6",
+                "reference": "2a45acf18d5023a866c02f74183bc2c3eefa40f6",
                 "shasum": ""
             },
             "require": {
-                "dof-dss/nicsdru_origins_modules": "^0.4",
+                "dof-dss/nicsdru_origins_modules": "^0.6",
                 "drupal/address": "^1.7",
                 "drupal/admin_toolbar": "^2.2",
                 "drupal/adminimal_theme": "^1.5",
@@ -12222,7 +12222,7 @@
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
-            "time": "2020-07-01T08:37:34+00:00"
+            "time": "2020-08-03T11:01:49+00:00"
         },
         {
             "name": "drupal/coder",
