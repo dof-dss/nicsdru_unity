@@ -70,12 +70,6 @@
       </div>
       <div{{ hero_attributes.addClass(hero_classes).setAttribute('id', 'headerHero') }}>
         {{ page.search }}
-        <button class="burger-toggle collapse" type="button" data-toggle="collapse" data-target=".main-menu">
-          <span class="sr-only">Menu</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
       </div>
       <div class="clear"></div>
     </header>
@@ -89,7 +83,7 @@
   <div class="container-wrap">
     <div class="content-sidebar-wrap search-page">
       {{ drupal_block('page_title_block', wrapper=false) }}
-        {{ page.breadcrumb }}
+      {{ drupal_block('system_breadcrumb_block') }}
         {% if page.sidebar_first %}
           <aside id="sidebar-first">
             {{ page.sidebar_first }}
