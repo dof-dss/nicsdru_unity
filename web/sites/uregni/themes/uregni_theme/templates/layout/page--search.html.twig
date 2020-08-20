@@ -89,8 +89,8 @@
   <div class="container-wrap">
     <div class="content-sidebar-wrap">
       {{ drupal_block('page_title_block', wrapper=false) }}
+      {{ drupal_block('system_breadcrumb_block') }}
       <div id="content">
-        {{ page.breadcrumb }}
         {% if page.content %}
           <main id="post-content">
             {{ page.content }}
