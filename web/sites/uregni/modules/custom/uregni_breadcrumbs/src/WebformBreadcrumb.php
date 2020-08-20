@@ -5,15 +5,13 @@ namespace Drupal\uregni_breadcrumbs;
 /**
  * @file
  * Generates the breadcrumb trail for content including:
- * - News
+ * - Webform
  *
  * In the format:
  * > Home
- * > News
  * > current-page-title
  *
  * > <front>
- * > /news
  * > /current-page-title
  */
 use Drupal\Core\Breadcrumb\Breadcrumb;
@@ -30,7 +28,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 /**
  * {@inheritdoc}
  */
-class NewsBreadcrumb implements BreadcrumbBuilderInterface {
+class WebformBreadcrumb implements BreadcrumbBuilderInterface {
 
   /**
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
@@ -90,7 +88,7 @@ class NewsBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        if ($this->node->bundle() == 'news') {
+        if ($this->node->bundle() == 'webform') {
           $match = TRUE;
         }
       }
@@ -106,7 +104,6 @@ class NewsBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('News'), Url::fromRoute('view.news_search.news_search_page'));
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
     }

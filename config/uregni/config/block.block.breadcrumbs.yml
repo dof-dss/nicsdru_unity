@@ -26,6 +26,7 @@ visibility:
       news: news
       publication_page: publication_page
       staff_member: staff_member
+      webform: webform
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
