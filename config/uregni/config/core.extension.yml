@@ -1,4 +1,5 @@
 module:
+  webform_clientside_validation: -1
   address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
@@ -9,6 +10,8 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  clientside_validation: 0
+  clientside_validation_jquery: 0
   config: 0
   config_filter: 0
   config_split: 0
@@ -93,6 +96,10 @@ module:
   unity_search_pages: 0
   uregni_breadcrumbs: 0
   user: 0
+  webform: 0
+  webform_access: 0
+  webform_node: 0
+  webform_ui: 0
   whatlinkshere: 0
   workflows: 0
   menu_link_content: 1
