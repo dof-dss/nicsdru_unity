@@ -91,7 +91,9 @@ class PublicationBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        $match = $this->node->bundle() == 'publication_page';
+        if ($this->node->bundle() == 'publication_page') {
+          $match = TRUE;
+        }
       }
     }
     return $match;

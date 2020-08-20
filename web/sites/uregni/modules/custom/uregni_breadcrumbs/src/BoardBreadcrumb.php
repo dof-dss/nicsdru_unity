@@ -92,7 +92,9 @@ class BoardBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        $match = $this->node->bundle() == 'staff_member';
+        if ($this->node->bundle() == 'staff_member') {
+          $match = TRUE;
+        }
       }
     }
     return $match;
