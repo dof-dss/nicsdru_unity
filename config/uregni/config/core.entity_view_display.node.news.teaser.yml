@@ -27,7 +27,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: uregni_homepage_news_images
+      view_mode: unity_3_col_images
       link: false
     third_party_settings: {  }
   field_published_date:
