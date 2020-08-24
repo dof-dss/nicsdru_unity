@@ -415,7 +415,7 @@ h2 i {
 
 #block-contactuscontactinfo {
   h2 {
-    @include adjust-font-size-to(21px, 5)
+    @include adjust-font-size-to(21px, 5);
     margin-top: 1.2rem;
   }
 
