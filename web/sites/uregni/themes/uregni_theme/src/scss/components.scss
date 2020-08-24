@@ -412,3 +412,14 @@ h2 i {
     padding: 0;
   }
 }
+
+#block-contactuscontactinfo {
+  h2 {
+    @include adjust-font-size-to(21px, 5)
+    margin-top: 1.2rem;
+  }
+
+  p {
+    word-wrap: break-word;
+  }
+}
