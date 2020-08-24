@@ -28,7 +28,6 @@ visibility:
     id: node_type
     bundles:
       page: page
-      staff_member: staff_member
       vacancy: vacancy
     negate: false
     context_mapping:
