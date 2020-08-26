@@ -82,3 +82,25 @@ function uregni_theme_theme_suggestions_menu_alter(&$suggestions, array $variabl
     $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
   }
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function uregni_theme_preprocess_page(&$variables) {
+  // Initially set the new variable for search pages to False.
+  $variables['search_page'] = FALSE;
+  // A list of search page titles on the Uregni site.
+  $search_pages = [
+    'News',
+    'Consultations',
+    'Publications',
+    'Search'
+  ];
+
+  // If a search page set the variable to true.
+  foreach ($search_pages as $search_page) {
+    if ($variables['page']['#title'] == $search_page) {
+      $variables['search_page'] = TRUE;
+    }
+  }
+}
