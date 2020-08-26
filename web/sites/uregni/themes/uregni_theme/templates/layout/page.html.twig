@@ -49,6 +49,9 @@
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
  *
+ * The following is controlled through the uregni_theme.theme variables.
+ * - search_page: Returns the page is a search page based on its title.
+ *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
@@ -106,7 +109,11 @@
 
 <div id="container">
   <div class="container-wrap">
-    <div class="content-sidebar-wrap">
+    <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+      {% if search_page %}
+        {{ drupal_block('page_title_block', wrapper=false) }}
+        {{ drupal_block('system_breadcrumb_block') }}
+      {% endif %}
       <div id="content">
         {{ page.breadcrumb }}
         {% if page.content %}
