@@ -1,26 +1,14 @@
 blocks:
   -
-    info: 'Footer subscription form'
+    info: 'Contact us contact info'
     langcode: en
-    uuid: 445ae893-ea77-4f0a-9da9-877d72660990
+    uuid: 8710f632-f7b7-4973-8fc9-74f71a191f76
     bundle: basic_block
     revision_id: null
     rev_id_current: null
     fields:
       body:
-        value: "<p>Subscribe to our news alert service.&nbsp;<br />\r\nGet the latest news updates directly to your email daily.</p>\r\n"
-        summary: ''
-        format: basic_html
-  -
-    info: 'Footer logo'
-    langcode: en
-    uuid: 832e1e63-d013-4245-8de7-78ebf653b236
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3f27dc16-c684-45af-bc98-b8d23cc3d862\"></drupal-media>\r\n"
+        value: "<h3>By post</h3>\r\n\r\n<address>Utility Regulator<br />\r\nQueens House<br />\r\n14 Queen Street<br />\r\nBelfast<br />\r\nBT1 6ED</address>\r\n\r\n<h3>By phone and fax</h3>\r\n\r\n<p>Tel: +44 (0) 28 9031 1575<br />\r\nFax: +44 (0) 28 9031 1740</p>\r\n\r\n<h3>By email</h3>\r\n\r\n<p><a href=\"mailto:info@uregni.gov.uk\">info@uregni.gov.uk</a><br />\r\nTo contact individual staff members:<br />\r\nfirstname.surname@uregni.gov.uk</p>\r\n\r\n<h3>Find us</h3>\r\n\r\n<p>Click here to <a href=\"https://www.uregni.gov.uk/sites/uregni/files/media-files/Map.pdf\">download a map <span> (PDF&nbsp;158 KB)</span></a>.</p>\r\n"
         summary: ''
         format: basic_html
   -
@@ -36,51 +24,39 @@ blocks:
         summary: ''
         format: basic_html
   -
-    info: 'Licences : home'
+    info: 'Footer logo'
     langcode: en
-    uuid: 38810365-e710-46ec-bd28-0607a55766d7
+    uuid: 832e1e63-d013-4245-8de7-78ebf653b236
     bundle: basic_block
     revision_id: null
     rev_id_current: null
     fields:
       body:
-        value: "<h2>Licences</h2>\r\n\r\n<div class=\"content\">\r\n<p>We issue and maintain licences for gas, electricity and water companies to operate in Northern Ireland.</p>\r\n\r\n<p><a class=\"btn\" href=\"licences\">Find out more</a></p>\r\n</div>\r\n"
+        value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"08f5358f-b64f-4323-8115-7f0684087181\"></drupal-media>\r\n"
         summary: ''
         format: basic_html
   -
-    info: 'Single Electricity Market : home'
+    info: 'Footer subscription form'
     langcode: en
-    uuid: 3323e044-bd58-4ee6-9c0a-44befed73bfe
+    uuid: 445ae893-ea77-4f0a-9da9-877d72660990
     bundle: basic_block
     revision_id: null
     rev_id_current: null
     fields:
       body:
-        value: "<h2>Single Electricity Market</h2>\r\n\r\n<div class=\"content\">\r\n<p>The Single Electricity Market (SEM) is the wholesale electricity market for the island of Ireland.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://www.semcommittee.com/\" target=\"_blank\">Find out more</a></p>\r\n</div>\r\n"
+        value: "<p>Subscribe to our news alert service.&nbsp;<br />\r\nGet the latest news updates directly to your email daily.</p>\r\n"
         summary: ''
         format: basic_html
   -
-    info: 'Water : home'
+    info: 'Consumer Information : Home'
     langcode: en
-    uuid: 19418964-9a33-4373-bf97-68707922fd9e
+    uuid: a07ad254-b480-4b6f-a6a5-8bbfe86f83e4
     bundle: basic_block
     revision_id: null
     rev_id_current: null
     fields:
       body:
-        value: "<p>Documents about our regulation of water and sewerage services can all be accessed here</p>\r\n\r\n<div class=\"content\">\r\n<p><a class=\"btn\" href=\"publications/topic/water-9\">Water Publications</a></p>\r\n</div>\r\n"
-        summary: ''
-        format: basic_html
-  -
-    info: 'Gas : home'
-    langcode: en
-    uuid: 51aa0f08-d0bc-4780-a758-fad650f4d709
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        value: "<p>As the economic regulator of the gas industry we publish a range of documents about our work</p>\r\n\r\n<p><a class=\"btn\" href=\"publications/topic/gas-13/topic/gas-networks-7/topic/gas-retail-8\">Gas Publications</a></p>\r\n"
+        value: "<h2>Consumer Information</h2>\r\n\r\n<p><a class=\"btn\" href=\"/consumer-information\">Find out more</a></p>\r\n"
         summary: ''
         format: basic_html
   -
@@ -96,14 +72,50 @@ blocks:
         summary: ''
         format: basic_html
   -
-    info: 'Consumer Information : Home'
+    info: 'Gas : home'
     langcode: en
-    uuid: a07ad254-b480-4b6f-a6a5-8bbfe86f83e4
+    uuid: 51aa0f08-d0bc-4780-a758-fad650f4d709
     bundle: basic_block
     revision_id: null
     rev_id_current: null
     fields:
       body:
-        value: "<h2>Consumer Information</h2>\r\n\r\n<p><a class=\"btn\" href=\"/consumer-information\">Find out more</a></p>\r\n"
+        value: "<p>As the economic regulator of the gas industry we publish a range of documents about our work</p>\r\n\r\n<p><a class=\"btn\" href=\"publications/topic/gas-13/topic/gas-networks-7/topic/gas-retail-8\">Gas Publications</a></p>\r\n"
+        summary: ''
+        format: basic_html
+  -
+    info: 'Water : home'
+    langcode: en
+    uuid: 19418964-9a33-4373-bf97-68707922fd9e
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>Documents about our regulation of water and sewerage services can all be accessed here</p>\r\n\r\n<div class=\"content\">\r\n<p><a class=\"btn\" href=\"publications/topic/water-9\">Water Publications</a></p>\r\n</div>\r\n"
+        summary: ''
+        format: basic_html
+  -
+    info: 'Single Electricity Market : home'
+    langcode: en
+    uuid: 3323e044-bd58-4ee6-9c0a-44befed73bfe
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<h2>Single Electricity Market</h2>\r\n\r\n<div class=\"content\">\r\n<p>The Single Electricity Market (SEM) is the wholesale electricity market for the island of Ireland.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://www.semcommittee.com/\" target=\"_blank\">Find out more</a></p>\r\n</div>\r\n"
+        summary: ''
+        format: basic_html
+  -
+    info: 'Licences : home'
+    langcode: en
+    uuid: 38810365-e710-46ec-bd28-0607a55766d7
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<h2>Licences</h2>\r\n\r\n<div class=\"content\">\r\n<p>We issue and maintain licences for gas, electricity and water companies to operate in Northern Ireland.</p>\r\n\r\n<p><a class=\"btn\" href=\"licences\">Find out more</a></p>\r\n</div>\r\n"
         summary: ''
         format: basic_html
