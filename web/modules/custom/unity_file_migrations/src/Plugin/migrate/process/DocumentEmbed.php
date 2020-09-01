@@ -48,6 +48,11 @@ class DocumentEmbed extends ProcessPluginBase
 
             foreach($matches as $match) {
 
+                // Validation to check the preg match returned array result.
+                if (empty($match[0]) || empty($match[1])) {
+                    continue;
+                }
+
                 $query = \Drupal::entityQuery('node')
                     ->condition('type', 'publication_page')
                     ->condition('body', basename($match[1], "."), 'CONTAINS');
@@ -66,6 +71,7 @@ class DocumentEmbed extends ProcessPluginBase
                 } else {
                     // Else, just create route to default publication page
                     // Publication Page link used for replacing embedded links.
+                    // Currently hardcoded node ID but will be dynamic to prevent ID issues.
                     $publications_link = Link::createFromRoute(
                         'Default Publication Page',
                         'entity.node.canonical',
