@@ -12,7 +12,13 @@ use Drupal\migrate\MigrateSkipRowException;
 use GuzzleHttp\Exception\RequestException;
 
 /**
+ * Class DocumentEmbed
+ *
  * Provides a 'DocumentEmbed' migrate process plugin.
+ *
+ * @category Document_Migrate
+ * @package  Drupalunity_File_MigrationsPluginmigrateprocess
+ * @author   Chris Clarke <Christopher.Clarke@finance-ni.gov.uk>
  *
  * @MigrateProcessPlugin(
  *  id = "document_embed"
@@ -22,19 +28,20 @@ class DocumentEmbed extends ProcessPluginBase
 {
 
     /**
-     * @param  $value
-     *  Body Value.
-     * @param  MigrateExecutableInterface $migrate_executable
-     *  Migrate Executable.
-     * @param  $row
-     *  Row.
-     * @param  $destination_property
-     *  Destination Property.
-     * @return array|string|string[]|null
-     *  Body Value return.
+     * Transform Functionality.
+     *
+     * @param $value                Body Value.
+     * @param MigrateExecutableInterface $migrate_executable   Migrate Executable.
+     * @param $row                  Row.
+     * @param $destination_property Destination Property.
+     *
+     * @return array|string|string[]|null Body Value return.
      */
-    public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property)
-    {
+    public function transform(
+        $value,
+        MigrateExecutableInterface $migrate_executable,
+        Row $row, $destination_property
+    ) {
 
         // Create REGEX string to match file links.
         $embed_regex = '/<a[\w\s\.]*href="([\w:\-\/\.]*)(pdf|doc|docx)[\w\s\.\=\-"\':><(&);\/]+<\/a>/U';
@@ -46,7 +53,7 @@ class DocumentEmbed extends ProcessPluginBase
         // Iterate these matches to find publications ( if exists ).
         if (!empty($matches)) {
 
-            foreach($matches as $match) {
+            foreach ($matches as $match) {
 
                 // Validation to check the preg match returned array result.
                 if (empty($match[0]) || empty($match[1])) {
