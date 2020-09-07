@@ -21,8 +21,8 @@ class ExtendedSiteInformationForm extends SiteInformationForm {
     $form['front_page']['frontpage_title'] = [
       '#type' => 'textfield',
       '#title' => t('Front page title'),
-      '#default_value' => $site_config->get('frontpage_title') ?: 'Welcome to ' .
-      $form['site_information']['site_name']['#default_value'] . ' site',
+      '#default_value' => $site_config->get('frontpage_title') ?: t('Welcome to @name site',
+        ['@name' => $form['site_information']['site_name']['#default_value']]),
       '#description' => t("Optionally enter an appropriate title for the front page."),
     ];
 
