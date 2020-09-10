@@ -49,6 +49,9 @@
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
  *
+ * The following is controlled through the uregni_theme.theme variables.
+ * - search_page: Returns if the page is a search page based on its title.
+ *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
@@ -70,12 +73,6 @@
       </div>
       <div{{ hero_attributes.addClass(hero_classes).setAttribute('id', 'headerHero') }}>
         {{ page.search }}
-        <button class="burger-toggle collapse" type="button" data-toggle="collapse" data-target=".main-menu">
-          <span class="sr-only">Menu</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
       </div>
       <div class="clear"></div>
     </header>
@@ -87,6 +84,11 @@
 
 {% if is_front %}
   {{ page.slideshow }}
+
+  <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
+    {{ drupal_config('system.site', 'frontpage_title') }}
+  </h1>
+
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
@@ -112,7 +114,11 @@
 
 <div id="container">
   <div class="container-wrap">
-    <div class="content-sidebar-wrap">
+    <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+      {% if search_page %}
+        {{ drupal_block('page_title_block', wrapper=false) }}
+        {{ drupal_block('system_breadcrumb_block') }}
+      {% endif %}
       <div id="content">
         {{ page.breadcrumb }}
         {% if page.content %}
@@ -172,7 +178,7 @@
   </div>
 </div>
 
-<div id="footer">
+<footer id="footer">
   <div id="footer_wrapper">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
       <div id="footer-area" class="footer-area clearfix">
@@ -205,6 +211,6 @@
       {% endif %}
     {% endif %}
   </div>
-</div>
+</footer>
 
 

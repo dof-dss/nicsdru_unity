@@ -1,4 +1,4 @@
-uuid: 1a1e3f4e-4b7b-4b81-90ee-b9eac497dddb
+uuid: a6f95916-20d1-4379-8113-29830aa4bc9a
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - node.type.webform
   module:
     - text
+_core:
+  default_config_hash: '-Qu0UyzQ0jD4TDYq8fOasS-D-vGd3gSwzi15PzRJUD4'
 id: node.webform.body
 field_name: body
 entity_type: node
@@ -15,11 +17,7 @@ label: Body
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    summary: ''
-    value: ' '
-    format: basic_html
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
