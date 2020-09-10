@@ -6,10 +6,9 @@ core: 8.x
 
 libraries:
   - uregni_theme/site-styling
-  - uregni_theme/uregni-specific-styles
 
 ckeditor_stylesheets:
-  - css/3_components/ckeditor.css
+  - css/ckeditor.css
 
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:

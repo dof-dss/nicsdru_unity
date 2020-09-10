@@ -48,6 +48,8 @@
     "uglify-js": "^3.9.3"
   },
   "scripts": {
+    "––––––– POST INSTALL SCRIPTS": "–––––––––––––",
+    "install": "(cd node_modules/nicsdru_unity_theme && npm install)",
     "––––––– JS SCRIPTS": "–––––––––––––",
     "js": "npm-run-all --sequential js-lint js-compile",
     "js-lint": "./node_modules/.bin/eslint src/js/**",
