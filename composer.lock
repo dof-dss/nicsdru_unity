@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff657cbaadc8d7b008123a82b341260b",
+    "content-hash": "3f5ad8f1ca3326e3003af7561fc5f5ec",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1913,6 +1913,42 @@
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
             "time": "2020-08-12T09:52:33+00:00"
+        },
+        {
+            "name": "dof-dss/nicsdru_unity_theme",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
+                "reference": "9b0436f30a93a3a710282192e81e5201d644f7cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/9b0436f30a93a3a710282192e81e5201d644f7cd",
+                "reference": "9b0436f30a93a3a710282192e81e5201d644f7cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "drupal-custom-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Corbett",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Drupal 8 theme",
+            "homepage": "https://github.com/dof-dss/nicsdru_unity_theme",
+            "keywords": [
+                "drupal",
+                "theme"
+            ],
+            "time": "2020-09-14T12:10:33+00:00"
         },
         {
             "name": "drupal/address",
