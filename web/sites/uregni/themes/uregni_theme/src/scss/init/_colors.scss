@@ -19,7 +19,6 @@ $chroma: add-colors((
   charcoal:               #333,
   ash-grey:               #666,
   'grey':                 #999,
-  green-dark:             #0f3d0f,
   grey-dark:              #4d4d4d,
   grey-light:             #f6f6f6,
   grey-lightest:          #f0f0f0,
@@ -79,7 +78,6 @@ $chroma-active-scheme: 'functional';
 $black: color('black');
 $charcoal: color(charcoal);
 $ash-grey: color(ash-grey);
-$green-dark: color(green-dark);
 $grey: color(charcoal);
 $grey-dark: color(grey-dark);
 $grey-light: color(grey-light);
