@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f5ad8f1ca3326e3003af7561fc5f5ec",
+    "content-hash": "1b2eb217570b476347af927120349816",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2608,73 +2608,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
-        },
-        {
-            "name": "drupal/config_inspector",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/config_inspector.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_inspector-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "9f6dca8b2fa69f2410b732c09e3edea23422fa04"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1588166264",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Gábor Hojtsy",
-                    "homepage": "https://www.drupal.org/user/4166"
-                },
-                {
-                    "name": "Jose Reyero",
-                    "homepage": "https://www.drupal.org/user/4299"
-                },
-                {
-                    "name": "aspilicious",
-                    "homepage": "https://www.drupal.org/user/172527"
-                },
-                {
-                    "name": "vijaycs85",
-                    "homepage": "https://www.drupal.org/user/93488"
-                },
-                {
-                    "name": "vuil",
-                    "homepage": "https://www.drupal.org/user/3568458"
-                }
-            ],
-            "description": "Provides a configuration data and structure inspector tool",
-            "homepage": "https://drupal.org/project/config_inspector",
-            "support": {
-                "source": "https://cgit.drupalcode.org/config_inspector",
-                "issues": "https://drupal.org/project/issues/config_inspector",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
