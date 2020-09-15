@@ -7,12 +7,14 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  block_visibility_groups: 0
   breakpoint: 0
   ckeditor: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
   config: 0
   config_filter: 0
+  config_inspector: 0
   config_split: 0
   contact: 0
   content_moderation: 0
@@ -91,6 +93,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   unity_common: 0
+  unity_frontpage: 0
   unity_image_styles: 0
   unity_media: 0
   unity_search_pages: 0
