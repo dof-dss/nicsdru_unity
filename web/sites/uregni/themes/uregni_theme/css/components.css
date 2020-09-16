@@ -928,26 +928,26 @@ a:focus .ico-elink {
 
 /* line 69, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .ico-arrow-left {
-  fill: #373737;
+  fill: #555;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 /* line 74, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .ico-arrow-right {
-  fill: #373737;
+  fill: #555;
 }
 
 /* line 78, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .ico-arrow-up {
-  fill: #373737;
+  fill: #555;
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 /* line 83, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .ico-arrow-down {
-  fill: #373737;
+  fill: #555;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -978,7 +978,7 @@ a:focus .ico-elink {
 
 /* line 107, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .info-notice {
-  border-color: #002e62;
+  border-color: #0f3d0f;
   background: #fff url('../images/i.svg?1739a3e53cc') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
@@ -1112,7 +1112,7 @@ ul.info-notice {
 /* line 32, src/scss/components.scss */
 #block-consumerinformationhome h2.btn,
 #block-consumerinformationhome a.btn {
-  background: #002e62;
+  background: #606;
 }
 
 @media (min-width: 766px) {
@@ -1134,7 +1134,7 @@ ul.info-notice {
 
 /* line 55, src/scss/components.scss */
 .front .block h2 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin: 3.6rem 0 1.2rem;
   margin: 0;
   padding: 1rem 1rem 1rem 0;
@@ -1196,7 +1196,7 @@ ul.info-notice {
 
 /* line 103, src/scss/components.scss */
 #block-sidemenu ul li a {
-  color: #373737;
+  color: #555;
   display: block;
 }
 
@@ -1244,7 +1244,7 @@ ul.info-notice {
 
 /* line 149, src/scss/components.scss */
 .feedblitz-custom-form input[type="submit"] {
-  background-color: #002e62;
+  background-color: #606;
   border: none;
   background-image: none;
   color: #fff;
@@ -1263,7 +1263,7 @@ ul.info-notice {
 
 /* line 165, src/scss/components.scss */
 .feedblitz-custom-form input[type="submit"]:hover {
-  background: #002e62;
+  background: #606;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1366,7 +1366,7 @@ h2 i.fas, h2 i.far {
 /* line 253, src/scss/components.scss */
 #footer .social-icons i:hover {
   background: #fff;
-  color: #002e62;
+  color: #0f3d0f;
 }
 
 /* line 259, src/scss/components.scss */
