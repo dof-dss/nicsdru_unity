@@ -334,6 +334,14 @@ h2 i {
       }
     }
   }
+
+  .social-icons {
+    ul {
+      li::before {
+          content: '';
+      }
+    }
+  }
 }
 
 #bottom_wrapper {

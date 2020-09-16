@@ -1455,71 +1455,76 @@ h2 i.fas, h2 i.far {
 }
 
 /* line 340, src/scss/components.scss */
+#footer .social-icons ul li::before {
+  content: '';
+}
+
+/* line 348, src/scss/components.scss */
 #bottom_wrapper h2 {
   font-size: 2.1rem;
   line-height: 3rem;
 }
 
-/* line 348, src/scss/components.scss */
+/* line 356, src/scss/components.scss */
 #bottom_wrapper .energy .column:first-child h2 i,
 #bottom_wrapper .energy .column:first-child .btn {
   background: #cc4630;
 }
 
-/* line 354, src/scss/components.scss */
+/* line 362, src/scss/components.scss */
 #bottom_wrapper .energy .column:nth-child(2) h2 i,
 #bottom_wrapper .energy .column:nth-child(2) .btn {
   background: #8561af;
 }
 
-/* line 360, src/scss/components.scss */
+/* line 368, src/scss/components.scss */
 #bottom_wrapper .energy .column:last-child h2 i,
 #bottom_wrapper .energy .column:last-child .btn {
   background: #0a7ad0;
 }
 
-/* line 368, src/scss/components.scss */
+/* line 376, src/scss/components.scss */
 #bottom_wrapper .bottom-row {
   border-top: 4px solid #686868;
 }
 
 @media (min-width: 766px) {
-  /* line 371, src/scss/components.scss */
+  /* line 379, src/scss/components.scss */
   #bottom_wrapper .bottom-row .column {
     width: 49%;
   }
 }
 
-/* line 376, src/scss/components.scss */
+/* line 384, src/scss/components.scss */
 #bottom_wrapper .bottom-row .column:first-child {
   padding: 2rem 0;
 }
 
-/* line 380, src/scss/components.scss */
+/* line 388, src/scss/components.scss */
 #bottom_wrapper .bottom-row .column:last-child {
   background: #f3f3f3;
 }
 
 @media (min-width: 766px) {
-  /* line 380, src/scss/components.scss */
+  /* line 388, src/scss/components.scss */
   #bottom_wrapper .bottom-row .column:last-child {
     padding: 2rem;
   }
 }
 
 @media screen and (max-width: 766px) {
-  /* line 391, src/scss/components.scss */
+  /* line 399, src/scss/components.scss */
   #footer {
     padding-left: 1rem;
   }
-  /* line 395, src/scss/components.scss */
+  /* line 403, src/scss/components.scss */
   #footer .column {
     padding-left: 0;
   }
 }
 
 @media screen and (max-width: 961px) {
-  /* line 402, src/scss/components.scss */
+  /* line 410, src/scss/components.scss */
   .footer-area .column,
   .footer-area .column:first-child {
     margin: 0;
@@ -1527,20 +1532,20 @@ h2 i.fas, h2 i.far {
 }
 
 @media screen and (max-width: 766px) {
-  /* line 410, src/scss/components.scss */
+  /* line 418, src/scss/components.scss */
   #sidebar-first {
     padding: 0;
   }
 }
 
-/* line 417, src/scss/components.scss */
+/* line 425, src/scss/components.scss */
 #block-contactuscontactinfo h2 {
   font-size: 2.1rem;
   line-height: 3rem;
   margin-top: 1.2rem;
 }
 
-/* line 422, src/scss/components.scss */
+/* line 430, src/scss/components.scss */
 #block-contactuscontactinfo p {
   word-wrap: break-word;
 }
