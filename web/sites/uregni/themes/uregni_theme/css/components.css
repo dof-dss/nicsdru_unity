@@ -610,13 +610,98 @@ nav.pager .pager__item.is-active {
 }
 
 /* line 39, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
-.fieldset-wrapper {
-  margin-top: 2.5rem;
+fieldset {
+  border: none;
 }
 
-/* line 43, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+/* line 42, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+fieldset .fieldset-wrapper {
+  margin-top: 2.5rem;
+  padding-left: 0.3rem;
+}
+
+/* line 48, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
 .password-suggestions ul li {
   margin-left: 1.2em;
+}
+
+/* line 52, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+label {
+  display: block;
+}
+
+/* line 56, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='email'],
+[type='password'],
+[type='date'],
+[type='time'],
+[type='number'] {
+  width: 100%;
+  max-width: 56rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+/* line 70, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+[size='30'],
+[size='40'],
+[size='50'],
+[size='60'] {
+  max-width: 65rem;
+}
+
+/* line 77, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='email'],
+[type='password'],
+[type='date'],
+[type='time'],
+[type='number'],
+textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #f0f0f0;
+  color: #333;
+  margin: .5em 0;
+  padding: .6rem;
+  min-height: 3.5rem;
+  /* Highlight the form elements that caused a form submission error. */
+}
+
+/* line 95, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_forms-generic.scss */
+[type='text'].error, [type='text'].error:focus,
+[type='search'].error,
+[type='search'].error:focus,
+[type='tel'].error,
+[type='tel'].error:focus,
+[type='url'].error,
+[type='url'].error:focus,
+[type='email'].error,
+[type='email'].error:focus,
+[type='password'].error,
+[type='password'].error:focus,
+[type='date'].error,
+[type='date'].error:focus,
+[type='time'].error,
+[type='time'].error:focus,
+[type='number'].error,
+[type='number'].error:focus,
+textarea.error,
+textarea.error:focus {
+  border: 1px solid #b63a1b;
+  outline-color: #b63a1b;
+  background-color: #ffdae0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #333;
 }
 
 /* line 1, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_search-form.scss */
@@ -757,6 +842,48 @@ nav.pager .pager__item.is-active {
   .search-form input[type='text'] {
     width: 100%;
   }
+}
+
+/* Error Tool Tip Styles*/
+/* line 2, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_webform.scss */
+.form-item--error-message {
+  position: relative;
+  top: 100%;
+  left: -1px;
+  margin-top: -1px;
+  z-index: 101;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 56rem;
+}
+
+/* line 11, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_webform.scss */
+.form-item--error-message .error {
+  font-size: 1.6rem;
+  margin: 0 0 2.4rem;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  position: relative;
+  padding: .9rem;
+  color: #fff;
+  background-color: #d1431f;
+  border: 1px solid #d1431f;
+  border-radius: 3px;
+  -webkit-box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+/* line 25, node_modules/nicsdru_unity_theme/src/scss/3_components/form/_webform.scss */
+.form-item--error-message .error::after {
+  content: '';
+  border: .9rem solid transparent;
+  border-bottom-color: #d1431f;
+  position: absolute;
+  top: -1.8rem;
+  left: .9rem;
 }
 
 /* line 1, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_lists.scss */
@@ -1144,7 +1271,7 @@ ul.info-notice {
 .front .block-system-main-block h2 {
   font-size: 2.4rem;
   line-height: 3rem;
-  color: #0f3d0f;
+  color: #002e62;
   margin: 0.9rem 0 2.1rem;
 }
 
