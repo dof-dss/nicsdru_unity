@@ -300,29 +300,6 @@ h2 i {
     padding-left: 1rem;
   }
 
-  .column {
-    padding-left: 0;
-
-    @media screen and (min-width: 556px) and (max-width: $tab) {
-      width: 50% !important;
-      float: left !important;
-    }
-    
-    @include breakpoint($tab) {
-      width: 32.5%;
-    }
-
-    li {
-      border: none;
-    }
-  }
-
-  address {
-    color: $white;
-    font-style: normal;
-    margin-bottom: 2.4rem;
-  }
-
   a {
     color: $white;
   }
@@ -349,6 +326,36 @@ h2 i {
         text-decoration: none;
       }
     }
+  }
+}
+
+#footer-content {
+  .column,
+  .column:first-child {
+    padding-left: 0;
+    @media screen and (max-width: $lap) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 556px) and (max-width: $tab) {
+      width: 50%;
+      float: left;
+    }
+
+    @include breakpoint($tab) {
+      width: 32.5%;
+    }
+
+    li {
+      border: none;
+    }
+  }
+
+  address {
+    color: $white;
+    font-style: normal;
+    margin-bottom: 2.4rem;
+    line-height: 2.4rem;
   }
 
   .social-icons {
@@ -429,14 +436,14 @@ h2 i {
   }
 }
 
-.footer-area {
-  .column,
-  .column:first-child {
-    @media screen and (max-width: $lap) {
-      margin: 0;
-    }
-  }
-}
+//.footer-area {
+//  .column,
+//  .column:first-child {
+//    @media screen and (max-width: $lap) {
+//      margin: 0;
+//    }
+//  }
+//}
 
 #sidebar-first {
   @media screen and (max-width: $tab) {
