@@ -5,4 +5,4 @@ dependencies: {  }
 id: uregni_long
 label: 'Uregni long, date and time'
 locked: false
-pattern: 'd F Y - H:i'
+pattern: 'd F Y - g.i a'
