@@ -145,28 +145,50 @@
   }
 }
 
+input[type="submit"] {
+  border: none;
+  background-image: none;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow: none;
+  margin: 1rem 0 0;
+  text-align: center;
+  padding: .6rem 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+  border-radius: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
 .feedblitz-custom-form {
   input[type="submit"] {
-    background-color: $brand-secondary;
-    border: none;
-    background-image: none;
-    color: #fff;
-    font-weight: normal;
-    text-shadow: none;
-    box-shadow: none;
-    margin: 1rem 0 0;
-    text-align: center;
-    padding: .6rem 1.6rem;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    cursor: pointer;
-    border-radius: 0;
+    background: $brand-secondary;
 
     &:hover {
       background: $brand-secondary;
-      box-shadow: none;
     }
   }
+}
+
+.webform-submission-form {
+  input[type="submit"] {
+    background: $brand-primary;
+    min-width: 13rem;
+
+    &:hover {
+      background: #4d004d;
+      border-color: #4d004d;
+    }
+  }
+}
+
+select.form-select {
+  font-size: 100%;
 }
 
 .search-form {
