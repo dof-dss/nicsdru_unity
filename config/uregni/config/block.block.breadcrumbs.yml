@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_visibility_groups
     - ctools
     - system
   theme:
@@ -26,7 +27,13 @@ visibility:
       news: news
       publication_page: publication_page
       staff_member: staff_member
+      vacancy: vacancy
       webform: webform
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
