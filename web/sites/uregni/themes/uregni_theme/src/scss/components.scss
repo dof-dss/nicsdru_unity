@@ -18,6 +18,7 @@
   background: #78cbbf;
   padding: 2rem;
   margin-bottom: 2rem;
+  clear: right; 
 
   @include breakpoint($tab) {
     background: #78cbbf resolve('customer-info.png') right center no-repeat;
