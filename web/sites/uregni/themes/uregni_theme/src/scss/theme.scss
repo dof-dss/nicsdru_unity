@@ -148,12 +148,21 @@
   }
 
   .views-row {
+    display: flex;
     background: #e4e4e4;
     margin-bottom: 2%;
     padding: 1rem;
 
     @include breakpoint($mob) {
       flex-basis: 49%;
+    }
+
+    .group-left {
+      flex-basis: 40%;
+    }
+
+    .group-right {
+      flex-basis: 60%;
     }
   }
 
