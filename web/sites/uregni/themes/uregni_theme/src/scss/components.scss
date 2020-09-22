@@ -328,6 +328,8 @@ h2 i {
   .column,
   .column:first-child {
     padding-left: 0;
+    float: left;
+    
     @media screen and (max-width: $lap) {
       margin: 0;
     }
