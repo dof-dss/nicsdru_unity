@@ -262,23 +262,6 @@ h2 i {
   }
 }
 
-#footer .social-icons i {
-  font-size: 2.4rem;
-  border: 1px solid;
-  padding: .5rem .7rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  line-height: 3rem;
-
-  &:hover {
-    background: $white;
-    color: $brand-primary;
-  }
-}
-
 .ico-elink {
   background: resolve("new-window.gif") no-repeat;
 }
@@ -314,20 +297,8 @@ h2 i {
 }
 
 #footer {
-  .column {
-    @include breakpoint($tab) {
-      width: 32.5%;
-    }
-
-    li {
-      border: none;
-    }
-  }
-
-  address {
-    color: $white;
-    font-style: normal;
-    margin-bottom: 2.4rem;
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
   }
 
   a {
@@ -357,11 +328,58 @@ h2 i {
       }
     }
   }
+}
+
+#footer-content {
+  .column,
+  .column:first-child {
+    padding-left: 0;
+    @media screen and (max-width: $lap) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 556px) and (max-width: $tab) {
+      width: 50%;
+      float: left;
+    }
+
+    @include breakpoint($tab) {
+      width: 32.5%;
+    }
+
+    li {
+      border: none;
+    }
+  }
+
+  address {
+    color: $white;
+    font-style: normal;
+    margin-bottom: 2.4rem;
+    line-height: 2.4rem;
+  }
 
   .social-icons {
-    ul {
-      li::before {
+    i {
+      font-size: 2.4rem;
+      border: 1px solid;
+      padding: .5rem .7rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      line-height: 3rem;
+
+      &:hover {
+        background: $white;
+        color: $brand-primary;
+      }
+
+      ul {
+        li::before {
           content: '';
+        }
       }
     }
   }
@@ -415,25 +433,6 @@ h2 i {
           padding: 2rem;
         }
       }
-    }
-  }
-}
-
-#footer {
-  @media screen and (max-width: $tab) {
-    padding-left: 1rem;
-
-    .column {
-      padding-left: 0;
-    }
-  }
-}
-
-.footer-area {
-  .column,
-  .column:first-child {
-    @media screen and (max-width: $lap) {
-      margin: 0;
     }
   }
 }
