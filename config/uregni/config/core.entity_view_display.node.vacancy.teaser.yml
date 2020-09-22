@@ -23,7 +23,7 @@ content:
     type: datetime_default
     weight: 0
     region: content
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: uregni_long
