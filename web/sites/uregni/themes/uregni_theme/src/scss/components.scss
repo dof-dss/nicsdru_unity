@@ -18,7 +18,7 @@
   background: #78cbbf;
   padding: 2rem;
   margin-bottom: 2rem;
-  clear: right; 
+  clear: right;
 
   @include breakpoint($tab) {
     background: #78cbbf resolve('customer-info.png') right center no-repeat;
@@ -133,16 +133,10 @@
   }
 }
 
-.field-member-image {
-  float: right;
-  margin-left: 2rem;
-}
-
-.board-members {
+.node-type-staff-member {
   .field-member-image {
-    float: left;
-    padding-right: 3rem;
-    margin-left: 0;
+    float: right;
+    margin-left: 2rem;
   }
 }
 
