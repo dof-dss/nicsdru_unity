@@ -120,10 +120,6 @@
         {{ drupal_block('system_breadcrumb_block') }}
       {% endif %}
       <div id="content">
-        {% if vacancy %}
-          {{ drupal_block('page_title_block', wrapper=false) }}
-          {{ drupal_block('system_breadcrumb_block') }}
-        {% endif %}
         {{ page.breadcrumb }}
         {% if page.content %}
           <main id="post-content">

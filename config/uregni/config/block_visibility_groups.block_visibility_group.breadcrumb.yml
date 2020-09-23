@@ -1,0 +1,31 @@
+uuid: a3c9f2ff-02d5-4056-9b10-908861c6dd34
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+id: breadcrumb
+label: Breadcrumb
+logic: or
+conditions:
+  8eb0d836-5802-4524-94e1-e3e1a0713a8b:
+    id: request_path
+    pages: /job-opportunities
+    negate: false
+    context_mapping: {  }
+    uuid: 8eb0d836-5802-4524-94e1-e3e1a0713a8b
+  73b68c74-9102-4a70-a5f8-75534dce27d3:
+    id: 'entity_bundle:node'
+    bundles:
+      consultation: consultation
+      news: news
+      publication_page: publication_page
+      staff_member: staff_member
+      vacancy: vacancy
+      webform: webform
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uuid: 73b68c74-9102-4a70-a5f8-75534dce27d3
+allow_other_conditions: true

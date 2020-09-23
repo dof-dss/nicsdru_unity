@@ -2,16 +2,17 @@ uuid: 757e33b6-e990-4d5b-8b71-0d3e286dc016
 langcode: en
 status: true
 dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.breadcrumb
   module:
     - block_visibility_groups
-    - ctools
     - system
   theme:
     - uregni_theme
 id: breadcrumbs
 theme: uregni_theme
 region: content
-weight: -12
+weight: -13
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -20,20 +21,8 @@ settings:
   provider: system
   label_display: '0'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      consultation: consultation
-      news: news
-      publication_page: publication_page
-      staff_member: staff_member
-      vacancy: vacancy
-      webform: webform
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
+    block_visibility_group: breadcrumb
     context_mapping: {  }
