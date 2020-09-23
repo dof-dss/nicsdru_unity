@@ -24,6 +24,7 @@
 .node-type-consultation {
   .summary {
     background: #f3f3f3;
+    margin-bottom: 2.4rem;
 
     @include breakpoint($tab) {
       display: flex;
@@ -99,19 +100,23 @@
     }
   }
 
-  // Other Unity sites use border-bottom so this will maybe need applied
-  // to keep all sites consistent.
-  //.views-row {
-  //  border-bottom: 1px solid #d3d7d9;
-  //  padding-bottom: .4285em;
-  //  margin-bottom: .5em;
-  //
-  //  &:last-child {
-  //    border-bottom: 0;
-  //    padding-bottom: 0;
-  //    margin-bottom: 1em;
-  //  }
-  //}
+   // Other Unity sites use border-bottom so this will maybe need applied
+   // to keep all sites consistent.
+  .views-row {
+    border-bottom: 1px solid #d3d7d9;
+    padding-bottom: .4285em;
+    margin-bottom: .5em;
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
 
   .views-exposed-form {
     background: $grey-light;
@@ -135,6 +140,10 @@
 
   h2 {
     margin-top: 0;
+  }
+
+  .metaListItem {
+    margin-left: 2rem;
   }
 }
 
