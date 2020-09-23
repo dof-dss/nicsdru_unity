@@ -1,0 +1,17 @@
+uuid: 3f40bf53-519d-4fd8-b45d-71c76833a6d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: page_title
+label: 'Page title'
+logic: or
+conditions:
+  15677c91-2f25-4ed1-a6a6-5c3d6f5d257b:
+    id: request_path
+    pages: /job-opportunities
+    negate: false
+    context_mapping: {  }
+    uuid: 15677c91-2f25-4ed1-a6a6-5c3d6f5d257b
+allow_other_conditions: true
