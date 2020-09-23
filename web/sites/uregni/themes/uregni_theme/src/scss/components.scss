@@ -204,7 +204,9 @@ select.form-select {
   }
 
   input {
-    height: 3.3rem;
+    &:hover {
+      box-shadow: none;
+    }
 
     &[type="submit"] {
       text-indent: 0;

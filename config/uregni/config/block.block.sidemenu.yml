@@ -25,13 +25,13 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: sidebar_menu
-    context_mapping: {  }
   request_path:
     id: request_path
     pages: '<front>'
     negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: sidebar_menu
     context_mapping: {  }
