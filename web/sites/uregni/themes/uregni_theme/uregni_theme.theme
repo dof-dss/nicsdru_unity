@@ -89,7 +89,6 @@ function uregni_theme_theme_suggestions_menu_alter(&$suggestions, array $variabl
 function uregni_theme_preprocess_page(&$variables) {
   // Initially set the new variable for search pages to False.
   $variables['search_page'] = FALSE;
-  $variables['vacancy'] = FALSE;
   // A list of search page titles on the Uregni site.
   $search_pages = [
     'News',
@@ -103,9 +102,5 @@ function uregni_theme_preprocess_page(&$variables) {
     if ($variables['page']['#title'] == $search_page) {
       $variables['search_page'] = TRUE;
     }
-  }
-
-  if ($variables['page']['#title'] == 'Working for us') {
-    $variables['vacancy'] = TRUE;
   }
 }
