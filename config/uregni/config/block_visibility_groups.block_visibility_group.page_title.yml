@@ -20,7 +20,6 @@ conditions:
     bundles:
       consultation: consultation
       news: news
-      page: page
       publication_page: publication_page
       staff_member: staff_member
       vacancy: vacancy
