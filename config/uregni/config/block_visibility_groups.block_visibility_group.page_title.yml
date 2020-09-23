@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - ctools
     - system
 id: page_title
 label: 'Page title'
@@ -14,4 +15,18 @@ conditions:
     negate: false
     context_mapping: {  }
     uuid: 15677c91-2f25-4ed1-a6a6-5c3d6f5d257b
+  e3b67794-3a12-4568-8ce8-450aac319d55:
+    id: 'entity_bundle:node'
+    bundles:
+      consultation: consultation
+      news: news
+      page: page
+      publication_page: publication_page
+      staff_member: staff_member
+      vacancy: vacancy
+      webform: webform
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uuid: e3b67794-3a12-4568-8ce8-450aac319d55
 allow_other_conditions: true
