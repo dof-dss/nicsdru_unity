@@ -104,6 +104,11 @@
       a {
         color: $text;
         display: block;
+
+        &.is-active {
+          color: $brand-secondary;
+          text-decoration: none;
+        }
       }
 
       ul {
