@@ -104,6 +104,11 @@
       a {
         color: $text;
         display: block;
+
+        &.is-active {
+          color: $brand-secondary;
+          text-decoration: none;
+        }
       }
 
       ul {
@@ -354,8 +359,6 @@ h2 i {
 
   address {
     color: $white;
-    font-style: normal;
-    margin-bottom: 2.4rem;
     line-height: 2.4rem;
   }
 
