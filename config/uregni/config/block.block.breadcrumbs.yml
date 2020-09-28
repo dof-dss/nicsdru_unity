@@ -2,8 +2,6 @@ uuid: 757e33b6-e990-4d5b-8b71-0d3e286dc016
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.breadcrumb
   module:
     - block_visibility_groups
     - system
@@ -11,8 +9,8 @@ dependencies:
     - uregni_theme
 id: breadcrumbs
 theme: uregni_theme
-region: content
-weight: -13
+region: breadcrumb
+weight: -14
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -24,5 +22,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: breadcrumb
+    block_visibility_group: ''
     context_mapping: {  }
