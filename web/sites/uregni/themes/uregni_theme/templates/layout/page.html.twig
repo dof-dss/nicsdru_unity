@@ -115,12 +115,11 @@
 <div id="container">
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+      {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
-        {{ drupal_block('system_breadcrumb_block') }}
       {% endif %}
       <div id="content">
-        {{ page.breadcrumb }}
         {% if page.content %}
           <main id="post-content">
             {{ page.content }}
