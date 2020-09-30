@@ -1718,4 +1718,9 @@ h2 i.fas, h2 i.far {
   word-wrap: break-word;
 }
 
+/* line 461, src/scss/components.scss */
+.block-facet--links .content {
+  padding: 0 !important;
+}
+
 /*# sourceMappingURL=components.css.map */
