@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_visibility_groups.block_visibility_group.sidebar_menu
     - system.menu.main
   module:
-    - node
+    - block_visibility_groups
     - system
   theme:
     - uregni_theme
@@ -24,16 +25,13 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      page: page
-      vacancy: vacancy
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   request_path:
     id: request_path
     pages: '<front>'
     negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: sidebar_menu
     context_mapping: {  }
