@@ -456,3 +456,9 @@ h2 i {
     word-wrap: break-word;
   }
 }
+
+.block-facet--links {
+  .content {
+    padding: 0 !important;
+  }
+}
