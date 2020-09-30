@@ -1,23 +1,22 @@
-uuid: 91481145-6151-419e-b145-2ddf8c3da57d
+uuid: a798fbd1-681d-44ff-8d48-7608ed44498a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_consultation_dates
-    - field.storage.node.field_published_date
-    - search_api.index.consultations
+    - field.storage.node.field_closing_date
+    - node.type.vacancy
     - system.menu.main
   module:
     - datetime
-    - datetime_range
-    - search_api
-id: consultations_search
-label: 'Consultations search'
+    - node
+    - user
+id: vacancies
+label: Vacancies
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_consultations
-base_field: search_api_id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -26,21 +25,24 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       query:
         type: views_query
         options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
-          submit_button: Search
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -50,7 +52,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 20
+          items_per_page: 5
           offset: 0
           id: 0
           total_pages: null
@@ -72,19 +74,20 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: vacancy--view-row
           default_row_class: true
       row:
         type: fields
         options:
-          default_field_elements: false
-          inline: {  }
+          default_field_elements: true
+          inline:
+            field_closing_date: field_closing_date
           separator: ''
           hide_empty: false
       fields:
         title:
           id: title
-          table: search_api_index_consultations
+          table: node_field_data
           field: title
           relationship: none
           group_type: group
@@ -109,8 +112,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -125,7 +128,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -144,93 +147,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_published_date:
-          id: field_published_date
-          table: search_api_index_consultations
-          field: field_published_date
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_closing_date:
+          id: field_closing_date
+          table: node__field_closing_date
+          field: field_closing_date
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Published '
-          exclude: false
-          alter:
-            alter_text: false
-            text: 'Published date'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: uregni_medium
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_consultation_dates:
-          id: field_consultation_dates
-          table: search_api_index_consultations
-          field: field_consultation_dates
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
+          label: 'Closing date'
           exclude: false
           alter:
             alter_text: false
@@ -259,24 +186,23 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: span
-          element_class: metaListItem
-          element_label_type: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
+          element_wrapper_class: views-field-inline
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: datetime_default
           settings:
             timezone_override: ''
             format_type: uregni_long
-            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -287,47 +213,65 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
+          plugin_id: field
       filters:
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_consultations
-          field: search_api_fulltext
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            vacancy: vacancy
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_closing_date_value:
+          id: field_closing_date_value
+          table: node__field_closing_date
+          field: field_closing_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: search_api_fulltext_op
-            label: 'Enter keywords'
-            description: 'Search consultations and choose filters to show only the results you want'
+            operator_id: ''
+            label: ''
+            description: ''
             use_operator: false
-            operator: search_api_fulltext_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: search
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              author_user: '0'
-              supervisor_user: '0'
-              editor_user: '0'
-              admin_user: '0'
             placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -340,15 +284,12 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
-          min_length: null
-          fields: {  }
-          plugin_id: search_api_fulltext
+          plugin_id: datetime
       sorts:
-        field_published_date:
-          id: field_published_date
-          table: search_api_index_consultations
-          field: field_published_date
+        field_closing_date_value:
+          id: field_closing_date_value
+          table: node__field_closing_date
+          field: field_closing_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -356,36 +297,23 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: search_api
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_consultations
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-      title: Consultations
+          granularity: second
+          plugin_id: datetime
+      title: 'Working for us'
       header: {  }
       footer: {  }
       empty:
-        area:
-          id: area
+        area_text_custom:
+          id: area_text_custom
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          content:
-            value: 'There were no results found.'
-            format: basic_html
-          plugin_id: text
+          content: 'There are no current vacancies'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
@@ -394,41 +322,36 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_consultation_dates'
-        - 'config:field.storage.node.field_published_date'
-        - 'config:search_api.index.consultations'
-  consultations_search_page:
+        - 'config:field.storage.node.field_closing_date'
+  vacancies:
     display_plugin: page
-    id: consultations_search_page
-    display_title: Page
+    id: vacancies
+    display_title: 'Working for us'
     position: 1
     display_options:
       display_extenders: {  }
-      path: consultations
+      path: job-opportunities
       menu:
         type: normal
-        title: Consultations
+        title: 'Job opportunities'
         menu_name: main
+        description: ''
+        parent: 'menu_link_content:257147b4-8ef4-4fe2-b9c1-30b213ddc3ff'
         weight: -44
-      exposed_block: true
-      cache:
-        type: search_api_tag
-        options: {  }
-      defaults:
-        cache: false
+        expanded: false
+        enabled: true
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:field.storage.node.field_consultation_dates'
-        - 'config:field.storage.node.field_published_date'
-        - 'config:search_api.index.consultations'
+        - 'config:field.storage.node.field_closing_date'
