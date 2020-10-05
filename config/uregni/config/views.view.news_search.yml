@@ -69,13 +69,16 @@ display:
           quantity: 9
       style:
         type: default
-      row:
-        type: fields
         options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              news: search_result
       fields:
         title:
           id: title
