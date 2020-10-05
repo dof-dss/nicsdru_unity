@@ -51,7 +51,6 @@ function uregni_theme_theme_suggestions_views_view_alter(array &$suggestions, ar
   }
 }
 
-
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
