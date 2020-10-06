@@ -70,14 +70,16 @@
  *   in different view modes.
  */
 #}
-<article>
+<div class="group-left">
+  {{ content.field_member_image }}
+</div>
 
-    {{ content.field_member_image }}
-
-    <h3>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
+<div class="group-right">
+  <h3>
+    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h3>
 
   {{ content.field_member_role }}
+</div>
 
-</article>
+

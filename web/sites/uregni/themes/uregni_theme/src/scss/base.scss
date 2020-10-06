@@ -42,6 +42,11 @@ address {
   margin: 2.3rem 0;
 }
 
+th {
+  vertical-align: top;
+  text-align: left;
+}
+
 #block-views-block-board-member-board-members-block {
   h2 {
     @include responsive-typo-map($h2-text);
