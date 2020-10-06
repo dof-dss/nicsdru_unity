@@ -24,6 +24,7 @@
 .node-type-consultation {
   .summary {
     background: #f3f3f3;
+    margin-bottom: 2.4rem;
 
     @include breakpoint($tab) {
       display: flex;
@@ -84,57 +85,51 @@
   }
 }
 
-.search-page {
-  #sidebar-first {
-    padding-left: 0;
-  }
-
-  @include breakpoint($lap) {
+.path-consultations,
+.path-news,
+.path-publications {
+  .search-page {
     #sidebar-first {
-      width: 30%;
+      padding-left: 0;
     }
 
-    #content {
-      width: 65%;
+    @include breakpoint($lap) {
+      #sidebar-first {
+        width: 30%;
+      }
+
+      #content {
+        width: 65%;
+      }
     }
-  }
 
-  // Other Unity sites use border-bottom so this will maybe need applied
-  // to keep all sites consistent.
-  //.views-row {
-  //  border-bottom: 1px solid #d3d7d9;
-  //  padding-bottom: .4285em;
-  //  margin-bottom: .5em;
-  //
-  //  &:last-child {
-  //    border-bottom: 0;
-  //    padding-bottom: 0;
-  //    margin-bottom: 1em;
-  //  }
-  //}
+    .views-exposed-form {
+      background: $grey-light;
+      box-shadow: 0 0 1px inset $charcoal;
+      padding: 1rem 0;
 
-  .views-exposed-form {
-    background: $grey-light;
-    box-shadow: 0 0 1px inset $charcoal;
-    padding: 1rem 0;
-
-    label {
-      font-weight: bold;
+      label {
+        font-weight: bold;
+      }
     }
-  }
 
-  .form-item {
-    margin-bottom: 0;
-  }
-
-  input {
-    &.form-text {
-      max-width: 100%;
+    .form-item {
+      margin-bottom: 0;
     }
-  }
 
-  h2 {
-    margin-top: 0;
+    input {
+      &.form-text {
+        max-width: 100%;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
   }
 }
 
@@ -148,6 +143,7 @@
   }
 
   .views-row {
+    display: flex;
     background: #e4e4e4;
     margin-bottom: 2%;
     padding: 1rem;
@@ -155,10 +151,37 @@
     @include breakpoint($mob) {
       flex-basis: 49%;
     }
+
+    .group-left {
+      flex-basis: 40%;
+    }
+
+    .group-right {
+      flex-basis: 60%;
+    }
   }
 
   h3 {
     margin-top: 0;
     padding-top: 3rem;
+  }
+}
+
+.vacancy--view-row {
+  margin: 2.4rem 0 3.9rem;
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }

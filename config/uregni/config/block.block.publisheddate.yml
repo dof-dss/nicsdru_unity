@@ -5,6 +5,7 @@ dependencies:
   config:
     - facets.facet.published_date
   module:
+    - block_visibility_groups
     - facets
     - system
   theme:
@@ -26,4 +27,9 @@ visibility:
     id: request_path
     pages: "/news\r\n/news/date/*"
     negate: false
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
     context_mapping: {  }

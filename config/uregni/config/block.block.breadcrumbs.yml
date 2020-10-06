@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
+    - block_visibility_groups
     - system
   theme:
     - uregni_theme
 id: breadcrumbs
 theme: uregni_theme
-region: content
-weight: -12
+region: breadcrumb
+weight: -14
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,14 +19,8 @@ settings:
   provider: system
   label_display: '0'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      consultation: consultation
-      news: news
-      publication_page: publication_page
-      staff_member: staff_member
-      webform: webform
+  condition_group:
+    id: condition_group
     negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+    block_visibility_group: ''
+    context_mapping: {  }

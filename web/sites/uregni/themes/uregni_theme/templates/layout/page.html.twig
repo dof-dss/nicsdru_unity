@@ -85,9 +85,11 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
-    {{ drupal_config('system.site', 'frontpage_title') }}
-  </h1>
+  {% if drupal_config('system.site', 'frontpage_title') %}
+    <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
+      {{ drupal_config('system.site', 'frontpage_title') }}
+    </h1>
+  {% endif %}
 
   {{ page.front_welcome }}
 
@@ -115,12 +117,11 @@
 <div id="container">
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+      {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
-        {{ drupal_block('system_breadcrumb_block') }}
       {% endif %}
       <div id="content">
-        {{ page.breadcrumb }}
         {% if page.content %}
           <main id="post-content">
             {{ page.content }}
@@ -181,7 +182,7 @@
 <footer id="footer">
   <div id="footer_wrapper">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
-      <div id="footer-area" class="footer-area clearfix">
+      <div id="footer-content" class="clearfix">
         {% if page.footer_first %}
           <div class="column">
             {{ page.footer_first }}
