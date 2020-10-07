@@ -20,6 +20,7 @@ dependencies:
     - field_group
     - file
     - layout_builder
+    - metatag
     - text
     - user
 third_party_settings:
@@ -30,6 +31,7 @@ third_party_settings:
     group_additional_content_details:
       children:
         - field_publication_topic
+        - field_meta_tags
       parent_name: ''
       weight: 7
       format_type: html_element
@@ -84,6 +86,13 @@ content:
     third_party_settings: {  }
     type: email_mailto
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 11
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_postal:
     weight: 6
     label: inline
@@ -117,7 +126,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
   langcode: true
   links: true
   search_api_excerpt: true
