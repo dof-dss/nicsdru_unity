@@ -23,8 +23,10 @@
 a {
   text-decoration: underline;
 
-  &:hover {
-    text-decoration: none;
+  &:focus {
+    color: #032f50;
+    border-bottom: 3px solid #032f50;
+    background: #ffe66a;
   }
 }
 

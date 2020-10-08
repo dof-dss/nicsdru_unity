@@ -14,6 +14,27 @@
 //
 // Style guide: components
 
+.content {
+  strong {
+    a {
+      font-weight: normal;
+    }
+  }
+}
+
+#logo {
+  a {
+    display: block;
+
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: 0.3rem dashed #949494;
+      outline-offset: 1.2rem;
+    }
+  }
+}
+
 #block-consumerinformationhome {
   background: #78cbbf;
   padding: 2rem;
@@ -26,20 +47,30 @@
     min-height: 270px;
   }
 
-  h2,
-  a {
-    color: $white;
-
-    &.btn {
-      background: $brand-secondary;
-    }
-  }
-
   h2 {
+    color: $brand-tertiary;
+
     @include breakpoint($tab) {
       font-size: 4.8rem;
       line-height: 5.4rem;
       margin: 0;
+    }
+  }
+
+  a.btn {
+    color: $white;
+    background: $brand-secondary;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: 1;
+      background: $grey-dark;
+    }
+
+    &:focus {
+      color: #032f50;
+      border-bottom: 3px solid #032f50;
+      background: #ffe66a;
     }
   }
 
@@ -83,6 +114,14 @@
     h2 {
       font-weight: 200;
       letter-spacing: -.3px;
+    }
+  }
+
+  a.btn {
+    &:hover {
+      text-decoration: underline;
+      opacity: 1;
+      background: $grey-dark;
     }
   }
 }
@@ -144,6 +183,7 @@
     margin-left: 2rem;
   }
 }
+
 .feedblitz-custom-form,
 .webform-submission-form {
   input[type="submit"] {
@@ -152,6 +192,7 @@
     color: #fff;
     font-weight: normal;
     text-shadow: none;
+    text-decoration: underline;
     box-shadow: none;
     margin: 1rem 0 0;
     text-align: center;
@@ -164,6 +205,12 @@
     &:hover {
       box-shadow: none;
     }
+
+    &:focus {
+      color: #032f50;
+      border-bottom: 3px solid #032f50;
+      background: #ffe66a;
+    }
   }
 }
 
@@ -172,8 +219,14 @@
     background: $brand-secondary;
 
     &:hover {
-      background: $brand-secondary;
+      text-decoration: underline;
+      opacity: 1;
+      background: $grey-dark;
     }
+  }
+
+  input[type="text"] {
+    outline-color: #ffe66a;
   }
 }
 
@@ -221,6 +274,10 @@ select.form-select {
       @include breakpoint($tab) {
         width: 10rem;
       }
+
+      &:focus {
+        outline-color: #ffe66a;
+      }
     }
 
     &[type="text"] {
@@ -234,16 +291,25 @@ select.form-select {
 
 .search-results {
   .search-form {
-    max-width: 25rem;
+    max-width: 24rem;
 
     .form-submit {
       width: 10rem;
-
-      &:hover {
-        background: $ash-grey;
-        opacity: .8;
-      }
     }
+  }
+}
+
+.search-form {
+  input[type="submit"] {
+    &:hover {
+      opacity: 1;
+      background-color: $grey-dark;
+    }
+  }
+
+  input.form-text {
+    border: 1px solid $grey-dark;
+    border-right: none;
   }
 }
 
@@ -305,7 +371,13 @@ h2 i {
   }
 
   a {
-    color: $white;
+    color: $offwhite;
+
+    &:focus {
+      color: #032f50;
+      border-bottom: 3px solid #032f50;
+      background: #ffe66a;
+    }
   }
 
   .footer-menu {
@@ -318,7 +390,7 @@ h2 i {
         display: inline-block;
         padding: 0 .8rem 0 0;
         line-height: 1.8rem;
-        border-right: 1px solid #fff;
+        border-right: 1px solid $offwhite;
         margin-right: .5rem;
 
         &:last-child {
@@ -375,8 +447,13 @@ h2 i {
       line-height: 3rem;
 
       &:hover {
-        background: $white;
+        background: $offwhite;
         color: $brand-primary;
+      }
+
+      &:focus {
+        color: #032f50;
+        background: #ffe66a;
       }
 
       ul {
@@ -402,17 +479,31 @@ h2 i {
           background: #cc4630;
         }
       }
+
       &:nth-child(2) {
         h2 i,
         .btn {
           background: #8561af;
         }
       }
+
       &:last-child {
         h2 i,
         .btn {
-          background: #0a7ad0;
+          background: #345ddb;
         }
+      }
+
+      .btn:hover {
+        text-decoration: underline;
+        opacity: 1;
+        background: $grey-dark;
+      }
+
+      .btn:focus {
+        color: #032f50;
+        border-bottom: 3px solid #032f50;
+        background: #ffe66a;
       }
     }
   }
@@ -454,5 +545,37 @@ h2 i {
 
   p {
     word-wrap: break-word;
+  }
+}
+
+a.btn {
+  text-decoration: underline;
+
+  &:focus {
+    color: #032f50;
+    border-bottom: 3px solid #032f50;
+    background: #ffe66a;
+  }
+}
+
+#main-menu .menu-link:focus {
+  border-bottom: none;
+}
+
+select,
+[type="text"],
+[type="search"],
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="password"],
+[type="date"],
+[type="time"],
+[type="number"],
+[type="file"],
+textarea {
+  &:focus {
+    outline: 3px solid #333;
+    outline-offset: -2px;
   }
 }
