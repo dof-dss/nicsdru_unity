@@ -105,7 +105,7 @@
 
     .views-exposed-form {
       background: $grey-light;
-      box-shadow: 0 0 1px inset $charcoal;
+      box-shadow: 0 0 1px inset $grey-dark;
       padding: 1rem 0;
 
       label {
@@ -120,6 +120,27 @@
     input {
       &.form-text {
         max-width: 100%;
+        border: 1px solid $grey-dark;
+      }
+
+      &[type="submit"] {
+        background-color: $ash-grey;
+        color: $white;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        line-height: 1;
+        font-weight: normal;
+        text-shadow: none;
+        position: relative;
+        box-shadow: none;
+        background-image: none;
+        border: none;
+
+        &:hover {
+          opacity: 1;
+          background: $grey-dark;
+        }
       }
     }
 
