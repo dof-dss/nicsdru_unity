@@ -225,7 +225,7 @@
     }
   }
 
-  input[type="text"] {
+  input[type="email"]:focus {
     outline-color: #ffe66a;
   }
 }
