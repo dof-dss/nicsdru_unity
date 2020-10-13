@@ -78,6 +78,8 @@ process:
       source: body
     -
       plugin: media_wysiwyg_filter
+    -
+      plugin: absolute_link_filter
   body/0/format:
     -
       plugin: static_map
