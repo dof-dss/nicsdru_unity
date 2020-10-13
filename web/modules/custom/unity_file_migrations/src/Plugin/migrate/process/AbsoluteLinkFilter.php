@@ -33,27 +33,40 @@ class AbsoluteLinkFilter extends ProcessPluginBase {
             preg_match('|https://(.*)|', $original_link, $matches2)) {
             // This is an absolute URL.
             // Does it look like a self link to Uregni ?
-            if (count($matches2) > 1) {
-              $remaining_url_portion = $matches2[1];
-              if (preg_match('|[^\/]*uregni[^\/]*|', $remaining_url_portion)) {
-                // This is a self link to Uregni that has been entered as an absolute path
-                // so convert it into a relative path.
-                // To do this, just take everything from the first '/'.
-                $matches3 = [];
-                if (preg_match('|[^ \/]*([\/])(.*)|', $remaining_url_portion, $matches3)) {
-                  if (count($matches3) > 2) {
-                    $relative_link = '/' . $matches3[2];
-                    // Now replace all occurences of the original absolute link
-                    // with the new relative link.
-                    $value['value'] = str_replace($original_link, $relative_link, $value['value']);
-                  }
-                }
-              }
-            }
+            $this->convertUregniLink($matches2, $value, $original_link, $row);
           }
         }
       }
     }
     return $value;
+  }
+
+  /**
+   * Utility function to convert internal Uregni link to relative.
+   */
+  private function convertUregniLink($matches2, &$value, $original_link, $row) {
+    if (count($matches2) > 1) {
+      $remaining_url_portion = $matches2[1];
+      if (preg_match('|[^\/]*uregni[^\/]*|', $remaining_url_portion)) {
+        // This is a self link to Uregni that has been entered as an absolute path
+        // so convert it into a relative path.
+        // To do this, just take everything from the first '/'.
+        $matches3 = [];
+        if (preg_match('|[^ \/]*([\/])(.*)|', $remaining_url_portion, $matches3)) {
+          if (count($matches3) > 2) {
+            $relative_link = '/' . $matches3[2];
+            // Now we just need to convert /sites/uregni/files location
+            // to /files/uregni for D8.
+            $relative_link = str_replace('sites/uregni/files', 'files/uregni', $relative_link);
+            // Catch this alternative format too.
+            $relative_link = str_replace('sites/uregni.gov.uk/files', 'files/uregni', $relative_link);
+            // Now replace all occurences of the original absolute link
+            // with the new relative link.
+            $value['value'] = str_replace($original_link, $relative_link, $value['value']);
+            $this->messenger()->addMessage("Node " . $row->getSource()['nid'] . " Replaced - " . $original_link . ", with - " . $relative_link);
+          }
+        }
+      }
+    }
   }
 }
