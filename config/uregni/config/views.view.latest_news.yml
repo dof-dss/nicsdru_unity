@@ -9,6 +9,7 @@ dependencies:
     - datetime
     - node
     - user
+    - views_custom_cache_tag
 id: latest_news
 label: 'Latest news'
 module: views
@@ -28,12 +29,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: time
+        type: custom_tag
         options:
-          results_lifespan: 1800
-          results_lifespan_custom: 0
-          output_lifespan: 1800
-          output_lifespan_custom: 0
+          custom_tag: 'node:type:{{ raw_arguments.type }}'
       query:
         type: views_query
         options:
