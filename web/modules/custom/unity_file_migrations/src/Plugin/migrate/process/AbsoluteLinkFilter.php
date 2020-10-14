@@ -45,6 +45,7 @@ class AbsoluteLinkFilter extends ProcessPluginBase {
   private function convertUregniLink($matches, &$value, $original_link) {
     if (count($matches) > 1) {
       $remaining_url_portion = $matches[1];
+      // Does the domain name contain 'uregni' ?
       if (preg_match('|[^\/]*uregni[^\/]*|', $remaining_url_portion)) {
         // This is a self link to Uregni that has been entered as an
         // absolute path so convert it into a relative path.
