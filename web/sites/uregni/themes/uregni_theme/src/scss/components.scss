@@ -455,11 +455,11 @@ h2 i {
         color: #032f50;
         background: #ffe66a;
       }
+    }
 
-      ul {
-        li::before {
-          content: '';
-        }
+    ul {
+      li::before {
+        content: '';
       }
     }
   }
