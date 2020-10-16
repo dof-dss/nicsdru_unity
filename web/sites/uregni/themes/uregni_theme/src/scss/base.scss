@@ -20,7 +20,10 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/1_base/index';
 
-a {
+#content a,
+#footer a,
+.breadcrumb a,
+.content a {
   text-decoration: underline;
 
   &:focus {
