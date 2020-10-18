@@ -19,12 +19,12 @@ $chroma: add-colors((
   charcoal:               #333,
   ash-grey:               #666,
   'grey':                 #999,
-  grey-dark:              #4d4d4d,
+  grey-dark:              #555,
   grey-light:             #f6f6f6,
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
-  offwhite:               #f3f8fc,
+  offwhite:               #ff4dff,
   dark-red:               #b63a1b, // 4.53:1 with light-pink
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
@@ -40,11 +40,11 @@ $chroma: add-colors((
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   #555,
+  text:                   #111,
   headings:               #555,
 
-  link:                   'brand-secondary',
-  link-hover:             'brand-secondary',
+  link:                   #345ddb,
+  link-hover:             #b500b5,
   link-visited:           #5e60b5,
   link-active:            'link',
 
