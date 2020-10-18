@@ -20,11 +20,16 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/1_base/index';
 
-a {
+#content a,
+#footer a,
+.breadcrumb a,
+.content a {
   text-decoration: underline;
 
-  &:hover {
-    text-decoration: none;
+  &:focus {
+    color: #032f50;
+    border-bottom: 3px solid #032f50;
+    background: #ffe66a;
   }
 }
 
