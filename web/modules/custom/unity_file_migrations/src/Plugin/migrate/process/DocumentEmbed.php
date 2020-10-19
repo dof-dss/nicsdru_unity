@@ -25,15 +25,17 @@ class DocumentEmbed extends ProcessPluginBase {
   /**
    * Transform Functionality.
    *
-   * @param $value
+   * @param array $value
    *   Body Value.
    * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
    *   Migrate Executable.
    * @param \Drupal\migrate\Row $row
-   * @param $destination_property
+   *   Row.
+   * @param string $destination_property
    *   Destination Property.
    *
-   * @return array|string|string[]|null Body Value return.
+   * @return array|string|string[]|null
+   *   Body Value return.
    */
   public function transform(
         $value,
@@ -72,23 +74,31 @@ class DocumentEmbed extends ProcessPluginBase {
                 'Specific Publication Page',
                 'entity.node.canonical',
                 ['node' => $lastNode],
-                ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']]
-            )->toString();
+                [
+                  'attributes' => [
+                    'rel' => 'nofollow',
+                    'class' => 'publication_link',
+                  ],
+                ])->toString();
         }
         else {
           // Else, just create route to default publication page
           // Publication Page link used for replacing embedded links.
-          // Currently hardcoded node ID but will be dynamic to prevent ID issues.
+          // Currently hardcoded NID but will be dynamic to prevent ID issues.
           $publications_link = Link::createFromRoute(
                 'Default Publication Page',
                 'entity.node.canonical',
                 ['node' => 2593],
-                ['attributes' => ['rel' => 'nofollow', 'class' => 'publication_link']]
-                    )->toString();
+                [
+                  'attributes' => [
+                    'rel' => 'nofollow',
+                    'class' => 'publication_link',
+                  ],
+                ])->toString();
         }
 
-        // Then replace these links to publication link ( or publication page if not exists -- for now ).
-        //            $value = preg_replace($embed_regex, $publications_link, $value);.
+        // Replace links to publication (or publication page if not exists).
+        // $value = preg_replace($embed_regex, $publications_link, $value);.
         // Str replace for multiple matches within body value.
         $value = str_replace($match[0], $publications_link, $value);
       }
