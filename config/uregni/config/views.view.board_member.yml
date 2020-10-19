@@ -8,6 +8,7 @@ dependencies:
   module:
     - node
     - user
+    - views_custom_cache_tag
 id: board_member
 label: 'Board members'
 module: views
@@ -27,8 +28,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'handy_cache_tags:node:staff_member'
       query:
         type: views_query
         options:
