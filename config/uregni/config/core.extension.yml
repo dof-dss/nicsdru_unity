@@ -111,6 +111,7 @@ module:
   views: 10
   paragraphs: 11
   origins: 1000
+  eu_cookie_compliance: 1001
 theme:
   stark: 0
   stable: 0
