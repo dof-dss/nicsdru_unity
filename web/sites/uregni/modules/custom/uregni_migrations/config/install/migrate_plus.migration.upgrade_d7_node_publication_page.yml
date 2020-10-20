@@ -80,6 +80,8 @@ process:
       plugin: media_wysiwyg_filter
     -
       plugin: absolute_link_filter
+      site_name: uregni
+      test_url_1: uregni.gov.uk
   body/0/format:
     -
       plugin: static_map
