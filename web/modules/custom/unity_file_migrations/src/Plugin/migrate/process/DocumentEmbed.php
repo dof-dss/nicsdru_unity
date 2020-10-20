@@ -24,18 +24,6 @@ class DocumentEmbed extends ProcessPluginBase {
 
   /**
    * Transform Functionality.
-   *
-   * @param array $value
-   *   Body Value.
-   * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
-   *   Migrate Executable.
-   * @param \Drupal\migrate\Row $row
-   *   Row.
-   * @param string $destination_property
-   *   Destination Property.
-   *
-   * @return array|string|string[]|null
-   *   Body Value return.
    */
   public function transform(
         $value,
