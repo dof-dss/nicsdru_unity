@@ -616,6 +616,7 @@ display:
         filter_groups: false
         fields: false
         pager: false
+        cache: false
       filter_groups:
         operator: AND
         groups:
@@ -696,6 +697,9 @@ display:
         options:
           items_per_page: 5
           offset: 0
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
