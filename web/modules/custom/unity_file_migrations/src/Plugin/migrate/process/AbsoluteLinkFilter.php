@@ -32,7 +32,7 @@ class AbsoluteLinkFilter extends ProcessPluginBase {
             preg_match('|https://(.*)|', $original_link, $matches2)) {
             // This is an absolute URL does it match one
             // of the parameters to this plugin?
-            $this->convertAbsoluteLink( $value, $original_link);
+            $this->convertAbsoluteLink($value, $original_link);
           }
         }
       }
@@ -60,4 +60,5 @@ class AbsoluteLinkFilter extends ProcessPluginBase {
       }
     }
   }
+
 }
