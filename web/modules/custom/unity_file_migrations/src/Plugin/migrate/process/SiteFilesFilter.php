@@ -34,10 +34,10 @@ class SiteFilesFilter extends ProcessPluginBase {
             throw new MigrateException('"to_ref" must be configured.');
           }
           $value['value'] = str_replace($this->configuration['from_ref'], $this->configuration['to_ref'], $value['value']);
-          $this->messenger()->addWarning("** Replacing " . $original_link);
         }
       }
     }
     return $value;
   }
+
 }

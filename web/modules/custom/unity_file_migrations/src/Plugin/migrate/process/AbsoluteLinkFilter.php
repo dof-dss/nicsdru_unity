@@ -56,7 +56,6 @@ class AbsoluteLinkFilter extends ProcessPluginBase {
         // We have a match, change this absolute link
         // to a relative link.
         $value['value'] = str_replace($replace_url, '', $value['value']);
-        $this->messenger()->addWarning("Replacing " . $original_link);
       }
     }
   }
