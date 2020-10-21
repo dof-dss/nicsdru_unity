@@ -80,7 +80,18 @@ process:
       plugin: media_wysiwyg_filter
     -
       plugin: absolute_link_filter
-  body/0/format:
+      replace_urls:
+        http://www.uregni.gov.uk
+        https://www.uregni.gov.uk
+        http://test-uregni.nigov.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/uregni/files
+      to_ref: files/uregni
+    -
+      plugin: site_files_filter
+      from_ref: sites/uregni.gov.uk/files
+      to_ref: files/uregni  body/0/format:
     -
       plugin: static_map
       bypass: true
