@@ -79,7 +79,7 @@ process:
     -
       plugin: media_wysiwyg_filter
     -
-      plugin: absolute_link_filter
+      plugin: filter_absolute_links
       replace_urls:
         http://www.uregni.gov.uk
         https://www.uregni.gov.uk
