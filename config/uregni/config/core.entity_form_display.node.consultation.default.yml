@@ -13,11 +13,13 @@ dependencies:
     - field.field.node.consultation.field_published_date
     - field.field.node.consultation.field_summary
     - node.type.consultation
+    - workflows.workflow.nics_editorial_workflow
   module:
+    - content_moderation
     - datetime
     - datetime_range
     - field_group
-    - file
+    - media_library
     - metatag
     - path
     - text
@@ -28,7 +30,7 @@ third_party_settings:
         - field_email_address
         - field_postal
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: fieldset
       region: content
       format_settings:
@@ -45,7 +47,7 @@ bundle: consultation
 mode: default
 content:
   body:
-    weight: 11
+    weight: 12
     type: text_textarea_with_summary
     settings:
       rows: 9
@@ -56,19 +58,19 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_attachment:
-    weight: 12
-    type: file_generic
+    type: media_library_widget
+    weight: 13
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
     region: content
   field_consultation_dates:
-    weight: 8
+    weight: 9
     type: daterange_default
     settings: {  }
     third_party_settings: {  }
@@ -82,7 +84,7 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 15
+    weight: 16
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -97,19 +99,19 @@ content:
     type: string_textarea
     region: content
   field_publication_topic:
-    weight: 4
+    weight: 5
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_published_date:
-    weight: 6
+    weight: 7
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_summary:
-    weight: 9
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -125,13 +127,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 17
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -139,21 +141,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -175,7 +177,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
