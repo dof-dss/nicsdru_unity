@@ -16,7 +16,7 @@ dependencies:
   module:
     - datetime
     - datetime_range
-    - file
+    - origins_common
     - text
     - user
 _core:
@@ -34,12 +34,14 @@ content:
     third_party_settings: {  }
     region: content
   field_attachment:
+    type: html_list_formatter
     weight: 4
     label: above
     settings:
-      use_description_as_link_text: true
+      list_type: ul
+      list_classes: ''
+      display_item_link: false
     third_party_settings: {  }
-    type: file_default
     region: content
   field_consultation_dates:
     weight: 1
