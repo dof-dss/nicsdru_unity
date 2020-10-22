@@ -1,8 +1,9 @@
-uuid: b673ffd1-6a80-47f5-98f4-fd745a9b9da2
+uuid: 82450c9f-09f5-458e-86cb-69095f2e174b
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.diff
     - field.field.node.vacancy.body
     - field.field.node.vacancy.field_appointment
     - field.field.node.vacancy.field_closing_date
@@ -12,12 +13,38 @@ dependencies:
     - node.type.vacancy
   module:
     - datetime
+    - field_group
+    - layout_builder
+    - metatag
     - text
     - user
-id: node.vacancy.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_meta_tags
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.vacancy.diff
 targetEntityType: node
 bundle: vacancy
-mode: default
+mode: diff
 content:
   body:
     label: above
@@ -43,6 +70,13 @@ content:
       timezone_override: ''
       format_type: uregni_long
     third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 7
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_salary:
     type: string
     weight: 0
@@ -54,15 +88,14 @@ content:
   field_vacancy_attachments:
     type: entity_reference_entity_view
     weight: 4
+    region: content
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
   langcode: true
   links: true
   search_api_excerpt: true
