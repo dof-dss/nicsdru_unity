@@ -123,3 +123,9 @@ function uregni_theme_theme_suggestions_views_view_unformatted_alter(array &$sug
     }
   }
 }
+
+function uregni_theme_theme_suggestions_responsive_image_formatter_alter(array &$suggestions, array $variables) {
+  if (isset($variables['responsive_image_style_id'])) {
+    $suggestions[] = 'responsive_image_formatter__' . $variables['responsive_image_style_id'];
+  }
+}
