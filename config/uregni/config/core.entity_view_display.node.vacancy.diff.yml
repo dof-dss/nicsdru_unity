@@ -14,7 +14,6 @@ dependencies:
   module:
     - datetime
     - field_group
-    - file
     - layout_builder
     - metatag
     - text
@@ -87,12 +86,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_vacancy_attachments:
-    type: file_default
+    type: entity_reference_entity_view
     weight: 4
     region: content
     label: above
     settings:
-      use_description_as_link_text: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
