@@ -33,7 +33,8 @@ You will first need to get hold of a Drupal 7 database dump for your chosen site
 We will take Uregni as an example and assume that we have a dump file 'uregni.sql' , this file should be placed in the
 imports/data directory.
 Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files
-directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist.
+directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist. 
+(Note also for uregni, that there should be another set of files at './imports/files/sites/uregni.gov.uk' .)
 
 1. Import the database into the Drupal 7 database your chosen site. Using our example site this will be 'uregni_legacy'.
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
