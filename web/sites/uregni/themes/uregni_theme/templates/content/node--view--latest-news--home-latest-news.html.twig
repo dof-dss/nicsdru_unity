@@ -68,9 +68,11 @@
 #}
 
 <article>
+  <a href="{{ url }}" rel="bookmark">
   {{ content.field_photo }}
-  <h3{{ title_attributes.addClass('title') }}>
-    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  <h3>
+    {{ label }}
   </h3>
+  </a>
   {{ content | without('field_photo')}}
 </article>
