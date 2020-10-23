@@ -27,14 +27,22 @@ Or, if available, you may also fetch the database and import this:
 
 `lando db-import -d <sitename/database> -f <downloaded sql file>` (where 'site name' may be 'uregni', 'liofa' etc)
 
-## Running migrations
+## Preparing to run migrations
 
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
-We will take Uregni as an example and assume that we have a dump file 'uregni.sql' , this file should be placed in the
-imports/data directory.
-Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files
-directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist. 
-(Note also for uregni, that there should be another set of files at './imports/files/sites/uregni.gov.uk' .)
+
+Taking uregni as an example, the database dump can be downloaded from Platform.sh using the 'platform db:dump' command 
+and selecting 'Software-responsive' and 'uregni'. 
+
+Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive' 
+and 'public_html/sites/uregni/files'. In the case of Uregni, this process should then be repeated for 
+'public_html/sites/uregni.gov.uk/files'.
+
+The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni. 
+Note that the path './imports/files/sites/uregni/files/styles' should exist. 
+Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk' .
+
+## Running migrations
 
 1. Import the database into the Drupal 7 database your chosen site. Using our example site this will be 'uregni_legacy'.
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
