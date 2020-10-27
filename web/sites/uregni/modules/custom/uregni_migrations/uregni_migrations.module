@@ -18,4 +18,11 @@ function uregni_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface 
       }
     }
   }
+  if ($migration->id() == 'upgrade_d7_view_modes') {
+    if ($row->getSource()['type'] == 'entityreference') {
+      if ($row->getSource()['entity_type'] == 'entityqueue_subqueue') {
+        return FALSE;
+      }
+    }
+  }
 }
