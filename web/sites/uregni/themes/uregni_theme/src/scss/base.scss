@@ -33,6 +33,20 @@
   }
 }
 
+.home-latest-news {
+  a {
+    &:focus .field-photo {
+      background: #ffe66a;
+    }
+
+    &:focus h3 {
+      color: #032f50;
+      border-bottom: 3px solid #032f50;
+      background: #ffe66a;
+    }
+  }
+}
+
 p {
   margin-bottom: 2.4rem;
 }
