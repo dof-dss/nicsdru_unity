@@ -48,22 +48,10 @@ Also for uregni, there should be another set of files at './imports/files/sites/
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
 `lando db-import -d <sitename>_legacy -f <downloaded db>`
 
-2. Install the migrate_upgrade module (listed as 'Drupal Upgrade' at /admin/modules)
+2. Install unity_file_migrations module and any site specific migration modules e.g. uregni_migrations
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
-`lando drush migrate-upgrade --legacy-db-url=mysql://drupal8:drupal8@database/uregni_legacy --legacy-root=/app/imports/files --configure-only`
-(change the db connection database name and the file path if you are migrating another site)
-
-4. Install the migrate_tools module
-
-5. You should now have a long list of migrations in the database, which may be seen by running this command:
-`lando drush migrate-status` (from the appropriate site directory e.g. web/sites/uregni)
-
-6. You could choose one of these migrations and run it as follows:
-`lando drush migrate-import upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
-
-7. You could then roll back the migration as follows:
-`lando drush migrate-rollback upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
+`lando drush migrate-import --group=migrate_drupal_7`
 
 
 ## Code workflow
