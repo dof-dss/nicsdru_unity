@@ -132,3 +132,12 @@ function uregni_theme_theme_suggestions_responsive_image_formatter_alter(array &
     $suggestions[] = 'responsive_image_formatter__' . $variables['responsive_image_style_id'];
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function uregni_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+}

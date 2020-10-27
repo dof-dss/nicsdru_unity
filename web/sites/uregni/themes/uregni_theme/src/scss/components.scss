@@ -133,8 +133,19 @@
       }
 
       a {
-        color: $text;
+        color: $link;
+        text-decoration: underline;
         display: block;
+
+        &:hover {
+        color: $link-hover;
+        }
+
+        &:focus {
+          color: #032f50;
+          border-bottom: 3px solid #032f50;
+          background: #ffe66a;
+        }
 
         &.is-active {
           color: $brand-secondary;
