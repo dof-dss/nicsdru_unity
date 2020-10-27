@@ -133,8 +133,13 @@
       }
 
       a {
-        color: $text;
+        color: $link;
+        text-decoration: underline;
         display: block;
+
+        &:hover {
+        color: $link-hover;
+      }
 
         &.is-active {
           color: $brand-secondary;
