@@ -64,6 +64,9 @@ Note that the -d sitename must have a '_legacy' suffix, please make sure that yo
 6. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
 `lando drush import-blocks`
 
+7. Make sure that all nodes are published if appropriate:
+`lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
+
 
 ## Code workflow
 
@@ -139,6 +142,7 @@ under 'Advanced Server Configuration' set the solr.install.dir to '../../..'
 
 Under multi site, Lando commands may be run as follows:
 lando drush -l uregni cr
+lando drupal --uri=http://uregni.gov.uk.lndo.site
 lando -h uregni mysql
 
 After connecting to the Platform server using 'platform ssh', drush commands may be run as follows (in the /app/web directory):
