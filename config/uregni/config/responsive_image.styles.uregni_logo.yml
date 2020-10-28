@@ -2,12 +2,10 @@ uuid: 2fdad67b-4ad5-4f4f-845c-2c3873c6dc1b
 langcode: en
 status: true
 dependencies:
-  config:
-    - image.style.max_325x325
   theme:
     - nicsdru_unity_theme
 id: uregni_logo
 label: Uregni_logo
 image_style_mappings: {  }
 breakpoint_group: nicsdru_unity_theme
-fallback_image_style: max_325x325
+fallback_image_style: '_original image_'
