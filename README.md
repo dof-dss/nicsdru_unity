@@ -58,14 +58,14 @@ Note that the -d sitename must have a '_legacy' suffix, please make sure that yo
 
 4. You may need to run the 'migrate-import' command a few times until it completes.
 
-5. When all content has been migrated, import config again:
+5. When all content has been migrated, make sure that all nodes are published if appropriate:
+`lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
+
+6. Import config again:
 `lando drush import-config`
 
-6. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
+7. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
 `lando drush import-blocks`
-
-7. Make sure that all nodes are published if appropriate:
-`lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
 
 
 ## Code workflow
