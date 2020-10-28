@@ -48,10 +48,21 @@ Also for uregni, there should be another set of files at './imports/files/sites/
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
 `lando db-import -d <sitename>_legacy -f <downloaded db>`
 
-2. Install unity_file_migrations module and any site specific migration modules e.g. uregni_migrations
+2. Import config:
+`lando drush import-config`
+
+3. Install the unity_file_migrations module and any site specific migration modules e.g. uregni_migrations
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
 `lando drush migrate-import --group=migrate_drupal_7`
+
+4. You may need to run the 'migrate-import' command a few times until it completes.
+
+5. When all content has been migrated, import config again:
+`lando drush import-config`
+
+6. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
+`lando drush import-blocks`
 
 
 ## Code workflow
