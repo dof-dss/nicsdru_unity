@@ -145,19 +145,21 @@ class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
       ->condition('content_entity_revision_id', $vid)
       ->execute();
 
-    // Only one row in node_field_revision should be set to
-    // 'published' for this nid.
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['status' => 0])
-      ->condition('nid', $nid)
-      ->condition('vid', $vid, '<>')
-      ->execute();
+    if ($status == 1) {
+      // Only one row in node_field_revision should be set to
+      // 'published' for this nid.
+      $query = $this->dbConnDrupal8->update('node_field_revision')
+        ->fields(['status' => 0])
+        ->condition('nid', $nid)
+        ->condition('vid', $vid, '<>')
+        ->execute();
 
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['status' => 1])
-      ->condition('nid', $nid)
-      ->condition('vid', $vid)
-      ->execute();
+      $query = $this->dbConnDrupal8->update('node_field_revision')
+        ->fields(['status' => 1])
+        ->condition('nid', $nid)
+        ->condition('vid', $vid)
+        ->execute();
+    }
   }
 
   /**
