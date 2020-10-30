@@ -176,6 +176,7 @@ migration_dependencies:
   required:
     - upgrade_d7_user
     - upgrade_d7_node_type
+    - upgrade_d7_taxonomy_term_publications_topics
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_metatag_field
