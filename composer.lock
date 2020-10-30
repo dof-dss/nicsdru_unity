@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1309aea4b100fd02069ab19adff59b7",
+    "content-hash": "2662674a6477a9560563b2265f5713b1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1891,16 +1891,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.2",
+            "version": "0.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "dcea3c58779ca52c8b1dacbc0e577942d67e25e1"
+                "reference": "12615282183f11d6832a2d4c3654df99a075f9c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/dcea3c58779ca52c8b1dacbc0e577942d67e25e1",
-                "reference": "dcea3c58779ca52c8b1dacbc0e577942d67e25e1",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/12615282183f11d6832a2d4c3654df99a075f9c4",
+                "reference": "12615282183f11d6832a2d4c3654df99a075f9c4",
                 "shasum": ""
             },
             "require": {
@@ -1912,7 +1912,7 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2020-09-25T14:05:04+00:00"
+            "time": "2020-10-28T14:27:41+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
@@ -6400,7 +6400,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/telephone_plus",
                 "issues": "https://www.drupal.org/project/issues/telephone_plus"
-            }
+            },
+            "time": "2020-09-28T15:00:43+00:00"
         },
         {
             "name": "drupal/token",
@@ -12688,6 +12689,10 @@
                     "homepage": "https://www.drupal.org/u/gbyte.co",
                     "email": "contact@gbyte.co",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "gbyte",
+                    "homepage": "https://www.drupal.org/user/2381352"
                 }
             ],
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
