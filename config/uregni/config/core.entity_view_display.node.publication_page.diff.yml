@@ -1,16 +1,18 @@
-uuid: 85accf67-c535-44f8-b12a-f6066dec2de9
+uuid: 16dc6e8b-8570-4330-848b-bb691429860f
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.page.body
-    - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_next_audit_due
-    - field.field.node.page.field_page_top_image
-    - field.field.node.page.field_toc_enable
-    - node.type.page
+    - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_meta_tags
+    - field.field.node.publication_page.field_publication_date
+    - field.field.node.publication_page.field_publication_image
+    - field.field.node.publication_page.field_publication_topic
+    - field.field.node.publication_page.field_publication_type
+    - node.type.publication_page
   module:
+    - datetime
     - field_group
     - layout_builder
     - metatag
@@ -23,10 +25,10 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
+        - field_publication_topic
         - field_meta_tags
-        - field_toc_enable
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -40,52 +42,54 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
-id: node.page.diff
+id: node.publication_page.diff
 targetEntityType: node
-bundle: page
+bundle: publication_page
 mode: diff
 content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 5
+    weight: 7
     region: content
-    label: inline
+    label: above
     settings: {  }
     third_party_settings: {  }
-  field_page_top_image:
-    type: entity_reference_entity_view
-    weight: 1
+  field_publication_date:
+    type: datetime_default
+    weight: 0
+    region: content
     label: hidden
     settings:
-      view_mode: slide
+      timezone_override: ''
+      format_type: uregni_medium
+    third_party_settings: {  }
+  field_publication_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: landscape_full
       link: false
     third_party_settings: {  }
     region: content
-  field_toc_enable:
-    type: boolean
+  field_publication_topic:
+    type: entity_reference_label
     weight: 6
     region: content
-    label: inline
+    label: above
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-  toc_display:
-    weight: -10
-    region: content
-    settings: {  }
+      link: true
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_next_audit_due: true
+  field_publication_type: true
   langcode: true
   links: true
   search_api_excerpt: true

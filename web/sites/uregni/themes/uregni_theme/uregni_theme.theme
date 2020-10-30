@@ -70,6 +70,25 @@ function uregni_theme_preprocess_block(&$variables) {
     $region = Block::load($variables['elements']['#id'])->getRegion();
     $variables['content']['#attributes']['region'] = $region;
   }
+
+  // Check if the block is an exposed filter block.
+  if ($variables['base_plugin_id'] == 'views_exposed_filter_block') {
+    // Add search page name ensuring they are in the exposed block machine name.
+    $search_pages = [
+      'news',
+      'consultations',
+      'publications',
+    ];
+
+    $plugin_id = $variables['plugin_id'];
+
+    foreach ($search_pages as $search_page) {
+      // Search the machine name for search page name and set variable to this.
+      if (str_contains($plugin_id, $search_page)) {
+        $variables['search_page_name'] = $search_page;
+      }
+    }
+  }
 }
 
 /**
@@ -121,5 +140,14 @@ function uregni_theme_theme_suggestions_views_view_unformatted_alter(array &$sug
     if ($variables['view']->element['#display_id'] == $search_page) {
       $suggestions[] = 'views_view_unformatted__search_result_page';
     }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function uregni_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
   }
 }

@@ -169,8 +169,8 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Enter Keywords'
-            description: 'Search publications and choose filters to show only the results you want'
+            label: ''
+            description: ''
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
@@ -187,7 +187,7 @@ display:
               supervisor_user: '0'
               editor_user: '0'
               admin_user: '0'
-            placeholder: ''
+            placeholder: Keywords
           is_grouped: false
           group_info:
             label: ''
