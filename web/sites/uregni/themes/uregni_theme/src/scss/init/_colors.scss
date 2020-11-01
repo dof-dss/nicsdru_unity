@@ -41,7 +41,7 @@ $chroma: define-color-scheme('functional', 'Colors used by functional parts of t
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
   text:                   #111,
-  headings:               #555,
+  headings:               'text',
 
   link:                   #345ddb,
   link-hover:             #b500b5,
