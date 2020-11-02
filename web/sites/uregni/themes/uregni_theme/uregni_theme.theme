@@ -12,7 +12,7 @@ use Drupal\Core\Render\Markup;
 /**
  * Implements hook_preprocess_node().
  */
-function unity_search_pages_preprocess_node(array &$variables) {
+function uregni_theme_preprocess_node(array &$variables) {
   // Only use this code for consultations content type.
   if ($variables['node']->getType() === 'consultation') {
 
