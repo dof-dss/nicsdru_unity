@@ -47,7 +47,7 @@ function uregni_theme_preprocess_node(array &$variables) {
 
     if ($variables['view_mode'] == 'search_result') {
       // Replace the dates with text as to whether open or closed consultation.
-      $variables['content']['field_consultation_dates']['0'] = Markup::create($output);
+      $variables['content']['field_consultation_dates']['status'] = Markup::create($output);
     }
 
   }
