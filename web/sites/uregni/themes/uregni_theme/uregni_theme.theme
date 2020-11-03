@@ -53,7 +53,6 @@ function uregni_theme_preprocess_node(array &$variables) {
   }
 }
 
-
 /**
  * Implements hook_theme_suggestions_views_view_alter().
  */
