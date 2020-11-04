@@ -27,34 +27,45 @@ Or, if available, you may also fetch the database and import this:
 
 `lando db-import -d <sitename/database> -f <downloaded sql file>` (where 'site name' may be 'uregni', 'liofa' etc)
 
-## Running migrations
+## Preparing to run migrations
 
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
-We will take Uregni as an example and assume that we have a dump file 'uregni.sql' , this file should be placed in the
-imports/data directory.
-Ideally, you should also get hold of a Drupal 7 'files' directory and place it in the appropriate imports/files
-directory e.g. imports/files/sites/uregni. Note that the path './imports/files/sites/uregni/files/styles' should exist.
+
+Taking uregni as an example, the database dump can be downloaded from Platform.sh using the 'platform db:dump' command 
+and selecting 'Software-responsive' and 'uregni'. 
+
+Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive' 
+and 'public_html/sites/uregni/files'. In the case of Uregni, this process should then be repeated for 
+'public_html/sites/uregni.gov.uk/files'.
+
+The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni. 
+Note that the path './imports/files/sites/uregni/files/styles' should exist. 
+Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk' .
+
+## Running migrations
 
 1. Import the database into the Drupal 7 database your chosen site. Using our example site this will be 'uregni_legacy'.
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
 `lando db-import -d <sitename>_legacy -f <downloaded db>`
 
-2. Install the migrate_upgrade module (listed as 'Drupal Upgrade' at /admin/modules)
+2. Import config:
+`lando drush import-config`
+
+3. Install the unity_file_migrations module and any site specific migration modules e.g. uregni_migrations
 
 3. Make sure that you are in the appropriate site directory e.g. web/sites/uregni and run this command:
-`lando drush migrate-upgrade --legacy-db-url=mysql://drupal8:drupal8@database/uregni_legacy --legacy-root=/app/imports/files --configure-only`
-(change the db connection database name and the file path if you are migrating another site)
+`lando drush migrate-import --group=migrate_drupal_7`
 
-4. Install the migrate_tools module
+4. You may need to run the 'migrate-import' command a few times until it completes.
 
-5. You should now have a long list of migrations in the database, which may be seen by running this command:
-`lando drush migrate-status` (from the appropriate site directory e.g. web/sites/uregni)
+5. When all content has been migrated, make sure that all nodes are published if appropriate:
+`lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
 
-6. You could choose one of these migrations and run it as follows:
-`lando drush migrate-import upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
+6. Import config again:
+`lando drush import-config`
 
-7. You could then roll back the migration as follows:
-`lando drush migrate-rollback upgrade_d7_node_type` (from the appropriate site directory e.g. web/sites/uregni)
+7. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
+`lando drush import-blocks`
 
 
 ## Code workflow
@@ -131,6 +142,7 @@ under 'Advanced Server Configuration' set the solr.install.dir to '../../..'
 
 Under multi site, Lando commands may be run as follows:
 lando drush -l uregni cr
+lando drupal --uri=http://uregni.gov.uk.lndo.site
 lando -h uregni mysql
 
 After connecting to the Platform server using 'platform ssh', drush commands may be run as follows (in the /app/web directory):

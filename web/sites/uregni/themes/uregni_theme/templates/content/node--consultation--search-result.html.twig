@@ -67,12 +67,10 @@
  */
 #}
 
-<article>
-  <a href="{{ url }}" rel="bookmark">
-  {{ content.field_photo }}
-  <h3>
-    {{ label }}
-  </h3>
-  </a>
-  {{ content | without('field_photo')}}
-</article>
+<h3>
+  <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+</h3>
+<p class="meta">
+  {{ content.field_published_date }}
+  <span class="metaListItem">{{ content.field_consultation_dates.status }}</span>
+</p>
