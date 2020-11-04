@@ -44,14 +44,13 @@
   'eu-cookie-compliance-banner',
 ] %}
 <div{{ attributes.addClass(classes).setAttribute('role', 'region').setAttribute('aria-label', 'cookie banner'|t) }}>
-  <div class="container grid popup-content" role="presentation">
+  <div class="container grid popup-content clearfix" role="presentation">
     <div id="popup-text" class="eu-cookie-compliance-message" role="presentation">
       {{ message }}
       {% if disagree_button %}
         <a href="#" class="find-more-button">{{ disagree_button }}</a>
       {% endif %}
     </div>
-
     {% if cookie_categories %}
       <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories" role="presentation">
         {% for key, category in cookie_categories %}
