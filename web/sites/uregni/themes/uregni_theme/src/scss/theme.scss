@@ -74,13 +74,17 @@
     clear: right;
   }
 
+  a:hover > h3 {
+    color: $link-hover;
+  }
+
   h3 {
+    margin-top: 0;
+    padding-top: 2.4rem;
+    color: $link;
+
     @include breakpoint($tab) {
       @include adjust-font-size-to(16px, 4);
-    }
-
-    a {
-      text-decoration: underline;
     }
   }
 }
@@ -104,48 +108,23 @@
     }
 
     .views-exposed-form {
-      background: $grey-light;
-      box-shadow: 0 0 1px inset $grey-dark;
-      padding: 1rem 0;
-
-      label {
-        font-weight: bold;
+      p {
+        margin-bottom: 0;
       }
     }
 
-    .form-item {
-      margin-bottom: 0;
-    }
+    form {
+      display: flex;
 
-    input {
-      &.form-text {
-        max-width: 100%;
-        border: 1px solid $grey-dark;
+      .form-actions {
+        padding-top: .95rem;
       }
 
-      &[type="submit"] {
-        background-color: $ash-grey;
-        color: $white;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin: 0;
-        line-height: 1;
-        font-weight: normal;
-        text-shadow: none;
-        position: relative;
-        box-shadow: none;
-        background-image: none;
-        border: none;
-
-        &:hover {
-          opacity: 1;
-          background: $grey-dark;
-        }
-
-        &:focus {
-          color: #032f50;
-          border-bottom: 3px solid #032f50;
-          background: #ffe66a;
+      input {
+        &.form-text {
+          height: 4rem;
+          max-width: 100%;
+          border: 1px solid $grey-dark;
         }
       }
     }
@@ -159,6 +138,32 @@
     }
   }
 }
+
+.views-exposed-form {
+  p {
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    margin-bottom: 0;
+  }
+
+  form {
+    display: flex;
+
+    .form-actions {
+      padding-top: .95rem;
+    }
+
+    input {
+      &.form-text {
+        max-width: 100%;
+        border: 1px solid $grey-dark;
+      }
+    }
+  }
+}
+
 
 .board-members {
   display: flex;
@@ -210,5 +215,35 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+#sidebar-second {
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
   }
 }
