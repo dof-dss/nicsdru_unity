@@ -113,22 +113,6 @@
       }
     }
 
-    form {
-      display: flex;
-
-      .form-actions {
-        padding-top: .95rem;
-      }
-
-      input {
-        &.form-text {
-          height: 4rem;
-          max-width: 100%;
-          border: 1px solid $grey-dark;
-        }
-      }
-    }
-
     h2 {
       margin-top: 0;
     }
@@ -149,7 +133,7 @@
   }
 
   form {
-    display: flex;
+    //display: flex;
 
     .form-actions {
       padding-top: .95rem;
