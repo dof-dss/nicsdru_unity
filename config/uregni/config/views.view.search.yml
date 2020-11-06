@@ -157,7 +157,7 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: 'Search site'
+          value: ''
           group: 1
           exposed: true
           expose:
@@ -180,7 +180,7 @@ display:
               supervisor_user: '0'
               editor_user: '0'
               admin_user: '0'
-            placeholder: ''
+            placeholder: 'Search site'
           is_grouped: false
           group_info:
             label: ''
@@ -571,7 +571,7 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: 'Search site'
+          value: ''
           group: 1
           exposed: true
           expose:
@@ -594,7 +594,7 @@ display:
               supervisor_user: '0'
               editor_user: '0'
               admin_user: '0'
-            placeholder: ''
+            placeholder: 'Search site'
           is_grouped: false
           group_info:
             label: ''
