@@ -29,7 +29,7 @@ $chroma: add-colors((
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #0f3d0f,
+  brand-primary:          #07601f, //#0f3d0f,
 
   brand-secondary:        #606,
 
@@ -42,11 +42,6 @@ $chroma: add-colors('functional', (
   // Colors used in the main content area.
   text:                   #111,
   headings:               'text',
-
-  link:                   #345ddb,
-  link-hover:             #b500b5,
-  link-visited:           #5e60b5,
-  link-active:            'link',
 
   border:                 'grey-light',
 
@@ -72,12 +67,10 @@ $chroma: add-colors('functional', (
   table-cell-border: #dbdbdb,
   table-cell-text: #747474,
 
-  footer-background: 'brand-primary',
-  footer-border: #a8bd1a,
-  footer-text: #fff,
-  footer-headings: #fff,
-
-  search-submit: #0e6bb3,
+  footer-background: #e7e7e7,
+  footer-border: 'brand-primary',
+  footer-text: 'text',
+  footer-headings: 'text',
 ));
 
 $chroma-active-scheme: 'functional';
@@ -103,10 +96,13 @@ $brand-tertiary: color(brand-tertiary);
 $text: color('text');
 $headings: color(headings);
 
-$link: color(link);
-$link-hover: color(link-hover);
-$link-visited: color(link-visited);
-$link-active: color(link-active);
+$link: #0e6bb3 !default;
+$link-underline: #bbb !default;
+$link-active: #0e6bb3 !default;
+$link-hover: #0e6bb3 !default;
+$link-hover-background: rgba(75%, 75%, 75%, .25) !default;
+$link-visited: #0e6bb3 !default;
+$link-visited-underline: #707070 !default;
 
 $border: color('border');
 
@@ -137,4 +133,4 @@ $footer-border: color(footer-border);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 
-$search-submit: color(search-submit);
+$search-submit: #0e6bb3;
