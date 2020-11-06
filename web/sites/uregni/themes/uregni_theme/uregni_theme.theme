@@ -8,6 +8,8 @@
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Render\Markup;
+use Drupal\Component\Utility\Html;
+
 
 /**
  * Implements hook_preprocess_node().
@@ -160,5 +162,19 @@ function uregni_theme_theme_suggestions_views_view_unformatted_alter(array &$sug
 function uregni_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
   if (isset($variables['element']['#type'])) {
     $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function uregni_theme_preprocess_form(array &$variables) {
+  switch ($variables['element']['#id']) {
+    case "views-exposed-form-publications-search-publication-search-page":
+    case "views-exposed-form-news-search-news-search-page":
+    case "views-exposed-form-consultations-search-consultations-search-page":
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form');
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form--page');
+      break;
   }
 }
