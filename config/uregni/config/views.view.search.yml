@@ -157,7 +157,7 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: ''
+          value: 'Search site'
           group: 1
           exposed: true
           expose:
@@ -571,7 +571,7 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: ''
+          value: 'Search site'
           group: 1
           exposed: true
           expose:
