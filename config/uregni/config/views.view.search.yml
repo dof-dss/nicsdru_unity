@@ -180,7 +180,7 @@ display:
               supervisor_user: '0'
               editor_user: '0'
               admin_user: '0'
-            placeholder: ''
+            placeholder: 'Search site'
           is_grouped: false
           group_info:
             label: ''
@@ -594,7 +594,7 @@ display:
               supervisor_user: '0'
               editor_user: '0'
               admin_user: '0'
-            placeholder: ''
+            placeholder: 'Search site'
           is_grouped: false
           group_info:
             label: ''
