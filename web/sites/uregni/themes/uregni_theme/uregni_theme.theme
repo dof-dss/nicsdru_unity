@@ -7,6 +7,7 @@
 
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_preprocess_node().
@@ -37,6 +38,16 @@ function uregni_theme_preprocess_node(array &$variables) {
     // If the consultation started before and is ending after today's date then show the contact information.
     if ($current_time > $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
       $variables['consultation_in_progress'] = TRUE;
+      // Text to display if the consultation is open or closed. Used in the search result view mode only.
+      $output = t('Open');
+    }
+    else {
+      $output = t('Closed');
+    }
+
+    if ($variables['view_mode'] == 'search_result') {
+      // Replace the dates with text as to whether open or closed consultation.
+      $variables['content']['field_consultation_dates']['status'] = Markup::create($output);
     }
 
   }
