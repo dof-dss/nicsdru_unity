@@ -1,4 +1,4 @@
-uuid: a68e040c-4aab-4d07-8faf-f41a4c14956a
+uuid: 5c390bed-cec5-4b54-9066-33fcce6a210f
 langcode: en
 status: true
 dependencies:
@@ -8,17 +8,16 @@ dependencies:
     - scheduler
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   origins_toc:
-    toc_enable: 1
-    toc_title: Contents
-    toc_source_container: '#block-mainpagecontent'
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
     toc_element: h2
     toc_exclusions: ''
-    toc_location: '#block-mainpagecontent .content'
-    toc_insert: before
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -28,14 +27,14 @@ third_party_settings:
     publish_required: false
     publish_revision: true
     publish_touch: false
-    show_message_after_update: true
+    show_message_after_update: false
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-name: 'Basic page'
-type: page
-description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
-help: 'Use this content type to create pages on your site'
+name: Slide
+type: slide
+description: ''
+help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

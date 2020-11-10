@@ -27,13 +27,28 @@
                     "composer/installers": "^1.2.0"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.8.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2.0"
+                }
+            }
         }
     ],
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "dof-dss/nicsdru_origins_modules": "^0.9.5",
-        "dof-dss/nicsdru_unity_theme": "^0.1.6",
+        "dof-dss/nicsdru_unity_theme": "^0.1.10",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -85,6 +100,8 @@
         "drupal/search_api_solr": "^3.2",
         "drupal/search_api_spellcheck": "^3.0@alpha",
         "drupal/simplei": "^1.1",
+        "drupal/slick": "^2.2",
+        "drupal/slick_views": "^2.3",
         "drupal/structure_sync": "^1.16",
         "drupal/taxonomy_access_fix": "^2.6",
         "drupal/taxonomy_manager": "^1.0@alpha",
@@ -101,6 +118,7 @@
         "drupal/whatlinkshere": "^1.0",
         "drush/drush": "^10.1",
         "harvesthq/chosen": "^1.8",
+        "kenwheeler/slick": "^1.8",
         "oomphinc/composer-installers-extender": "^1.1",
         "platformsh/config-reader": "^2.3",
         "symfony/event-dispatcher": "4.3.4 as 3.4.35",
