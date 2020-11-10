@@ -29,8 +29,8 @@ function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
             $matches2 = [];
             if (preg_match('|http://(.*)|', $original_link, $matches2) ||
               preg_match('|https://(.*)|', $original_link, $matches2)) {
-              // This is an absolute URL does it match one
-              // of the parameters to this plugin?
+              // This is an absolute URL does it match one of the domain names specified
+              // at /admin/config/unity_internal_link_checker/link_checker_form ?
               $body = _convertAbsoluteLink($body, $original_link);
               $entity->body->setValue(['value' => $body, 'format' => $format]);
               // If we have called _convertAbsoluteLink once then all links in the body field
@@ -48,7 +48,9 @@ function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
  * Utility function to convert internal link to relative.
  */
 function _convertAbsoluteLink(&$body_text, $original_link) {
-  // Get list of urls to replace.
+  // Get list of urls to replace
+  // (these have been added at
+  // /admin/config/unity_internal_link_checker/link_checker_form )
   $config = \Drupal::config('unity_internal_link_checker.linksettings');
   $replace_url_list = $config->get('site_url_list');
   $replace_url_list = explode(PHP_EOL, $replace_url_list);
