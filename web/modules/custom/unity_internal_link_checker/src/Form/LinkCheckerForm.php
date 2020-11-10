@@ -2,12 +2,8 @@
 
 namespace Drupal\unity_internal_link_checker\Form;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Messenger\MessengerInterface;
-use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Implements admin form to allow setting of audit text.
@@ -36,10 +32,14 @@ class LinkCheckerForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('unity_internal_link_checker.linksettings');
 
+    $message = "List all domain names here that must be stripped out of absolute links and changed to relative as they are saved.";
+    $message .= "<br/>For example adding 'http://uregni.gov.uk' here will cause any links starting with that domain name to be saved as relative links instead.";
+    $message .= "<br/>You may add as many domain names as you like, along with the appropriate 'http' or 'https' protocol.";
+
     $form['site_url_list'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Site URLs'),
-      '#description' => $this->t("List all domain names here that must be stripped out of absolute links and changed to relative as they are saved. <br/>For example adding 'http://uregni.gov.uk' here will cause any links starting with that domain name to be saved as relative links instead. <br/>You may add as many domain names as you like, along with the appropriate 'http' or 'https' protocol."),
+      '#description' => $this->t($message),
       '#default_value' => $config->get('site_url_list'),
     ];
 
@@ -54,7 +54,7 @@ class LinkCheckerForm extends ConfigFormBase {
       $replace_url_list = explode(PHP_EOL, $form_state->getValue('site_url_list'));
       foreach ($replace_url_list as $replace_url) {
         // Make sure url is 'clean'.
-        $replace_url = str_replace(array("\n", "\t", "\r"), '', $replace_url);
+        $replace_url = str_replace(["\n", "\t", "\r"], '', $replace_url);
         $pass = FALSE;
         if (preg_match('|^http:\/\/|', $replace_url) || preg_match('|^https:\/\/|', $replace_url)) {
           $pass = TRUE;
