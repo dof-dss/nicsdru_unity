@@ -113,22 +113,6 @@
       }
     }
 
-    form {
-      display: flex;
-
-      .form-actions {
-        padding-top: .95rem;
-      }
-
-      input {
-        &.form-text {
-          height: 4rem;
-          max-width: 100%;
-          border: 1px solid $grey-dark;
-        }
-      }
-    }
-
     h2 {
       margin-top: 0;
     }
@@ -149,7 +133,7 @@
   }
 
   form {
-    display: flex;
+    //display: flex;
 
     .form-actions {
       padding-top: .95rem;
@@ -176,7 +160,7 @@
 
   .views-row {
     display: flex;
-    background: #e4e4e4;
+    background: #e6e6e6;
     margin-bottom: 2%;
     padding: 1rem;
 
