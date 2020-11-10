@@ -97,6 +97,27 @@ class LinkCheckerForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    if ($form_state->getValue('site_url_list')) {
+      $replace_url_list = explode(PHP_EOL, $form_state->getValue('site_url_list'));
+      foreach ($replace_url_list as $replace_url) {
+        // Make sure url is 'clean'.
+        $replace_url = str_replace(array("\n", "\t", "\r"), '', $replace_url);
+        $pass = FALSE;
+        if (preg_match('|^http:\/\/|', $replace_url) || preg_match('|^https:\/\/|', $replace_url)) {
+          $pass = TRUE;
+        }
+        if (!$pass) {
+          $form_state->setErrorByName('site_url_list', $this->t("URLs must start with 'http' or 'https'"));
+        }
+      }
+    }
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
