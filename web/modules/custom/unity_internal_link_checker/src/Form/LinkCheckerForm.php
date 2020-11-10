@@ -67,7 +67,7 @@ class LinkCheckerForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'origins_workflow.auditsettings',
+      'unity_internal_link_checker.linksettings',
     ];
   }
 
@@ -75,52 +75,20 @@ class LinkCheckerForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'audit_settings_form';
+    return 'link_checker_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('origins_workflow.auditsettings');
+    $config = $this->config('unity_internal_link_checker.linksettings');
 
-    $form['audit_button_text'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Audit button text'),
-      '#description' => $this->t('Text to be displayed on the button that the editor presses to audit the content.'),
-      '#default_value' => $config->get('audit_button_text'),
-    ];
-
-    $form['audit_button_hover_text'] = [
-      '#type' => 'textfield',
-      '#size' => 130,
-      '#title' => $this->t('Audit button hover text'),
-      '#description' => $this->t('Text to be displayed when the editor hovers their mouse over the audit button.'),
-      '#default_value' => $config->get('audit_button_hover_text'),
-    ];
-
-    $form['audit_confirmation_text'] = [
-      '#type' => 'textfield',
-      '#size' => 130,
-      '#title' => $this->t('Audit confirmation text'),
-      '#description' => $this->t('Ask the editor to confirm that they have audited the content.'),
-      '#default_value' => $config->get('audit_confirmation_text'),
-    ];
-
-    // Get a list of all content types.
-    $options = [];
-    $all_content_types = $this->entityTypeManager->getStorage('node_type')->loadMultiple();
-    foreach ($all_content_types as $machine_name => $content_type) {
-      if (!in_array($machine_name, ['mas_rss', 'webform'])) {
-        $options[$machine_name] = $content_type->label();
-      }
-    }
-
-    $form['audit_content_types'] = [
-      '#type' => 'checkboxes',
-      '#options' => $options,
-      '#title' => $this->t('Content types to be audited'),
-      '#default_value' => $config->get('audit_content_types'),
+    $form['site_url_list'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Site URLs'),
+      '#description' => $this->t("List all domain names here that must be stripped out of absolute links and changed to relative as they are saved. <br/>For example adding 'http://uregni.gov.uk' here will cause any links starting with that domain name to be saved as relative links instead. <br/>You may add as many domain names as you like, along with the appropriate 'http' or 'https' protocol."),
+      '#default_value' => $config->get('site_url_list'),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -132,113 +100,9 @@ class LinkCheckerForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    // Check to see if any new content types have been selected.
-    $config = $this->config('origins_workflow.auditsettings');
-    $old_content_type_list = $config->get('audit_content_types');
-    $new_content_type_list = $form_state->getValue('audit_content_types');
-    // Find content types that have just been added.
-    foreach ($new_content_type_list as $this_type) {
-      if (!$this_type) {
-        continue;
-      }
-      if (!$old_content_type_list[$this_type]) {
-        $this->addAuditField($this_type);
-      }
-    }
-    // Find content types that have just been removed.
-    foreach ($old_content_type_list as $this_type) {
-      if (!$this_type) {
-        continue;
-      }
-      if (!$new_content_type_list[$this_type]) {
-        if (!$this->removeAuditField($this_type)) {
-          return;
-        }
-      }
-    }
-
-    $this->config('origins_workflow.auditsettings')
-      ->set('audit_button_text', $form_state->getValue('audit_button_text'))
-      ->set('audit_button_hover_text', $form_state->getValue('audit_button_hover_text'))
-      ->set('audit_confirmation_text', $form_state->getValue('audit_confirmation_text'))
-      ->set('audit_content_types', $form_state->getValue('audit_content_types'))
+    $this->config('unity_internal_link_checker.linksettings')
+      ->set('site_url_list', $form_state->getValue('site_url_list'))
       ->save();
-  }
-
-  /**
-   * Remove audit field from the content type.
-   */
-  private function removeAuditField($type) {
-    // Remove audit field from this content type.
-    $field = $this->entityTypeManager->getStorage('field_config')->load('node.' . $type . '.field_next_audit_due');
-    if (!empty($field)) {
-      // See if there is any data in this field.
-      $ids = $this->entityTypeManager->getStorage('node')->getQuery()
-        ->condition('type', $type)
-        ->exists('field_next_audit_due')
-        ->execute();
-
-      if (count($ids) > 0) {
-        // Some present, abort.
-        $this->messenger->deleteAll();
-        $this->messenger->addError(t('Audit data exists for @type - auditing cannot be disabled', ['@type' => $type]));
-        return FALSE;
-      }
-
-      $field->delete();
-    }
-
-    // Log it.
-    $this->logger->notice(t("Content auditing disabled for @type", ['@type' => $type]));
-
-    $this->messenger->addMessage(t('Auditing successfully disabled for @type', ['@type' => $type]));
-
-    return TRUE;
-  }
-
-  /**
-   * Add audit field to the content type.
-   */
-  private function addAuditField($type) {
-    // Add an audit field to the content type.
-    $field_storage = $this->entityTypeManager->getStorage('field_storage_config')->load("node.field_next_audit_due");
-    if (!$field_storage) {
-      // Field storage has been deleted, need to re-create.
-      $field_storage = $this->entityTypeManager
-        ->getStorage('field_storage_config')
-        ->create([
-          'type' => 'datetime',
-          'field_name' => 'field_next_audit_due',
-          'entity_type' => 'node',
-          'settings' => ['datetime_type' => 'date'],
-        ]);
-      $field_storage->save();
-    }
-    $field = $this->entityTypeManager->getStorage('field_config')->load('node.' . $type . '.field_next_audit_due');
-    if (empty($field)) {
-      $field = $this->entityTypeManager->getStorage('field_config')->create([
-        'field_storage' => $field_storage,
-        'bundle' => $type,
-        'label' => 'Next audit due',
-        'settings' => ['display_summary' => TRUE],
-        'description' => t('The date when this item is due for audit'),
-      ]);
-      $field->save();
-
-      // Assign widget settings for the default form mode.
-      $entity_form_display = $this->entityTypeManager->getStorage('entity_form_display')->load('node.' . $type . '.default');
-      if (isset($entity_form_display)) {
-        $entity_form_display->setComponent('field_next_audit_due', [
-          'type' => 'datetime_default',
-          'weight' => 1000,
-        ])->save();
-      }
-
-      // Log it.
-      $this->logger->notice(t("Content auditing enabled for @type", ['@type' => $type]));
-
-      $this->messenger->addMessage(t('Auditing successfully enabled for @type', ['@type' => $type]));
-    }
   }
 
 }
