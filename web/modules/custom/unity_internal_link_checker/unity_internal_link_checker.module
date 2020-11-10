@@ -57,6 +57,10 @@ function _convertAbsoluteLink(&$body_text, $original_link) {
   foreach ($replace_url_list as $replace_url) {
     // Make sure url is 'clean'.
     $replace_url = str_replace(array("\n", "\t", "\r"), '', $replace_url);
+    // Strip trailing slash.
+    if (preg_match('|\/$|', $replace_url)) {
+      $replace_url = preg_replace('|\/$|', '', $replace_url);
+    }
     // Does the start of this link match one of the
     // urls that we are looking for ?
     if (strpos($original_link, $replace_url) == 0) {
