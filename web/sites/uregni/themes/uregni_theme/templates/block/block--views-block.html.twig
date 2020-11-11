@@ -30,7 +30,9 @@
  */
 #}
 
+{% if label %}
 <h2>{{ label }}</h2>
+{% endif %}
 
 {% block content %}
   {{ content }}
