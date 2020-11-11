@@ -1,6 +1,10 @@
 services:
   unity_file_migrations.unity_migrate_post_publish_status:
     class: Drupal\unity_file_migrations\Command\UnityMigratePostPublishStatusCommand
-    arguments: []
+    arguments: ['@unity_file_migrations.migrationprocessors']
     tags:
       - { name: drupal.command }
+
+  unity_file_migrations.migrationprocessors:
+    class: 'Drupal\unity_file_migrations\MigrationProcessors'
+    arguments: ['@module_handler', '@entity_type.manager']
