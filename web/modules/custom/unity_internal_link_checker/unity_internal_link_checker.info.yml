@@ -1,0 +1,7 @@
+name: 'Unity Internal Link Checker'
+type: module
+description: 'Unity internal link checking and correction'
+core: 8.x
+package: 'Unity'
+dependencies:
+  - unity_common
