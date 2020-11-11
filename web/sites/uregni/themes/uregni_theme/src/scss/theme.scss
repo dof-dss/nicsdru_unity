@@ -79,12 +79,24 @@
   }
 
   h3 {
-    margin-top: 0;
-    padding-top: 2.4rem;
+    margin: 1rem 0;
     color: $link;
 
     @include breakpoint($tab) {
       @include adjust-font-size-to(16px, 4);
+    }
+  }
+
+  .published-date {
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  .home-latest-news {
+    a[href] {
+      margin: 0;
+      padding: 0;
     }
   }
 }
