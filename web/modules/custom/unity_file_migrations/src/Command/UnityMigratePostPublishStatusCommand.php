@@ -22,37 +22,6 @@ use Drupal\Console\Annotations\DrupalCommand;
 class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
 
   /**
-   * Migration database connection (Drupal 7).
-   *
-   * @var \Drupal\Core\Database\Connection
-   */
-  protected $dbConnMigrate;
-
-  /**
-   * Drupal 8 database connection.
-   *
-   * @var \Drupal\Core\Database\Connection
-   */
-  protected $dbConnDrupal8;
-
-  /**
-   * NodeMigrationProcessors definition.
-   *
-   * @var \Drupal\unity_file_migrations\MigrationProcessors
-   */
-  protected $migrationProcessors;
-
-  /**
-   * {@inheritdoc}
-   */
-  public function __construct() {
-    $this->dbConnMigrate = Database::getConnection('default', 'migrate');
-    $this->dbConnDrupal8 = Database::getConnection('default', 'default');
-    $this->migrationProcessors = $migration_processors;
-    parent::__construct();
-  }
-
-  /**
    * {@inheritdoc}
    */
   protected function configure() {
