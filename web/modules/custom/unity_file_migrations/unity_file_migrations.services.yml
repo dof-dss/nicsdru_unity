@@ -1,6 +1,6 @@
 services:
   unity_file_migrations.eventsubscriber.post:
     class: 'Drupal\unity_file_migrations\EventSubscriber\PostMigrationSubscriber'
-    arguments: ['@entity_type.manager', '@logger.factory']
+    arguments: ['@logger.factory']
     tags:
       - { name: 'event_subscriber' }
