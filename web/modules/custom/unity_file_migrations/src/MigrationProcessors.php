@@ -14,9 +14,14 @@ use Drupal\Core\Database\Driver\mysql\Connection;
 class MigrationProcessors {
 
   public static function updatePublishStatus($io, $node_type = NULL) {
-    $io->info('Sync node publish status values after migration');
-    $io->info(get_class($io));
-    // could be DrupalStyle
+    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
+      // Has been called from drupal console command line.
+      $io->info('Sync node publish status values after migration');
+    } else {
+      // Has been called from post migration subscriber
+      // class will be Drupal\Core\Logger\LoggerChannel.
+      $io->notice('Sync node publish status values after migration');
+    }
 
     $dbConnMigrate = Database::getConnection('default', 'migrate');
     $dbConnDrupal8 = Database::getConnection('default', 'default');
@@ -44,8 +49,13 @@ class MigrationProcessors {
       self::processNodeStatus($dbConnMigrate, $dbConnDrupal8, $row->nid, $row->status);
     }
 
-    $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-    $io->info('Clearing all caches...');
+    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
+      $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+      $io->info('Clearing all caches...');
+    } else {
+      $io->notice('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+      $io->notice('Clearing all caches...');
+    }
     drupal_flush_all_caches();
   }
 
