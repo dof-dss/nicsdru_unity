@@ -53,6 +53,10 @@ function _convert_absolute_link(&$body_text, $original_link) {
   // /admin/config/unity_internal_link_checker/link_checker_form )
   $config = \Drupal::config('unity_internal_link_checker.linksettings');
   $replace_url_list = $config->get('site_url_list');
+  if (strlen($replace_url_list) == 0) {
+    \Drupal::messenger()->addMessage(t("Please set some URLs at /admin/config/unity_internal_link_checker/link_checker_form"), "error");
+    return $body_text;
+  }
   $replace_url_list = explode(PHP_EOL, $replace_url_list);
   foreach ($replace_url_list as $replace_url) {
     // Make sure url is 'clean'.
