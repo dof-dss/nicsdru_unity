@@ -2,12 +2,10 @@
 
 namespace Drupal\unity_file_migrations\EventSubscriber;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\Core\Logger\LoggerChannelFactory;
-use Drupal\unity_file_migrations\MigrationProcessors;
 
 /**
  * Class PostMigrationSubscriber.
@@ -24,26 +22,13 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
   protected $logger;
 
   /**
-   * Stores the entity type manager.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
    * PostMigrationSubscriber constructor.
    *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The Entity manager.
    * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
    *   Drupal logger.
-   * @param \Drupal\migrate_nidirect_utils\MigrationProcessors $migration_processors
-   *   Migration processors.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager,
-                              LoggerChannelFactory $logger) {
+  public function __construct(LoggerChannelFactory $logger) {
     $this->logger = $logger->get('unity_file_migrations');
-    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
@@ -72,4 +57,3 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
   }
 
 }
-

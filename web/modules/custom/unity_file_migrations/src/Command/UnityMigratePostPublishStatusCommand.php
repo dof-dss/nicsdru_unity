@@ -2,14 +2,10 @@
 
 namespace Drupal\unity_file_migrations\Command;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Extension\ModuleHandler;
 use Drupal\unity_file_migrations\MigrationProcessors;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Drupal\Console\Core\Command\ContainerAwareCommand;
-use Drupal\Core\Database\Database;
-use Drupal\Console\Annotations\DrupalCommand;
 
 /**
  * Class UnityMigratePostPublishStatusCommand.
