@@ -6,6 +6,7 @@ use Drupal\unity_file_migrations\MigrationProcessors;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Drupal\Console\Core\Command\ContainerAwareCommand;
+use Drupal\Console\Annotations\DrupalCommand;
 
 /**
  * Class UnityMigratePostPublishStatusCommand.
