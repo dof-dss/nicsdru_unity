@@ -1,14 +1,12 @@
 <?php
 
-namespace Drupal\migrate_nidirect_node\EventSubscriber;
+namespace Drupal\unity_file_migrations\EventSubscriber;
 
-use Drupal\Core\Database\Database;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\Core\Logger\LoggerChannelFactory;
-use Drupal\migrate_nidirect_utils\MigrationProcessors;
 
 /**
  * Class PostMigrationSubscriber.
@@ -23,13 +21,6 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
    * @var \Drupal\Core\Logger\LoggerChannelFactory
    */
   protected $logger;
-
-  /**
-   * NodeMigrationProcessors definition.
-   *
-   * @var \Drupal\migrate_nidirect_utils\MigrationProcessors
-   */
-  protected $migrationProcessors;
 
   /**
    * Stores the entity type manager.
@@ -49,10 +40,8 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
    *   Migration processors.
    */
   public function __construct(EntityTypeManagerInterface $entity_type_manager,
-                              LoggerChannelFactory $logger,
-                              MigrationProcessors $migration_processors) {
+                              LoggerChannelFactory $logger) {
     $this->logger = $logger->get('unity_file_migrations');
-    $this->migrationProcessors = $migration_processors;
     $this->entityTypeManager = $entity_type_manager;
   }
 
@@ -78,7 +67,8 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
     // Only process nodes, nothing else.
     if (substr($event_id, 0, 5) == 'node_') {
       $content_type = substr($event_id, 5);
-      $this->logger->notice($this->migrationProcessors->processNodeStatus($content_type));
+      //$this->logger->notice($this->migrationProcessors->processNodeStatus($content_type));
+      MigrationProcessors::updatePublishStatus($this->logger, $content_type);
       //if (preg_match('/revision_/', $content_type)) {
       //  $this->logger->notice($this->migrationProcessors->revisionStatus($content_type));
       //}

@@ -13,8 +13,10 @@ use Drupal\Core\Database\Driver\mysql\Connection;
  */
 class MigrationProcessors {
 
-  public static function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
+  public static function updatePublishStatus($io, $node_type = NULL) {
     $io->info('Sync node publish status values after migration');
+    $io->info(get_class($io));
+    // could be DrupalStyle
 
     $dbConnMigrate = Database::getConnection('default', 'migrate');
     $dbConnDrupal8 = Database::getConnection('default', 'default');
