@@ -14,6 +14,12 @@ use Drupal\views\Entity\View;
  * Implements hook_entity_presave().
  */
 function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
+  // If this hook has been invoked from a migration, bail out.
+  $page = \Drupal::request()->getRequestUri();
+  if (preg_match('|^\/batch|', $page) || ($page == '/')) {
+    return;
+  }
+  \Drupal::logger('unity_internal_link_checker')->notice('page is ' . $page);
   if ($entity instanceof ContentEntityInterface) {
     if ($entity->hasField('body')) {
       $body = $entity->get('body')->value;
@@ -53,6 +59,10 @@ function _convert_absolute_link(&$body_text, $original_link) {
   // /admin/config/unity_internal_link_checker/link_checker_form )
   $config = \Drupal::config('unity_internal_link_checker.linksettings');
   $replace_url_list = $config->get('site_url_list');
+  if (strlen($replace_url_list) == 0) {
+    \Drupal::messenger()->addMessage(t("Please set some URLs at /admin/config/unity_internal_link_checker/link_checker_form"), "error");
+    return $body_text;
+  }
   $replace_url_list = explode(PHP_EOL, $replace_url_list);
   foreach ($replace_url_list as $replace_url) {
     // Make sure url is 'clean'.
