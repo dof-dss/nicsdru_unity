@@ -52,6 +52,32 @@ class MigrationProcessors {
     $this->dbConnDrupal8 = Database::getConnection('default', 'default');
   }
 
+  public function updatePublishStatus($io) {
+    $io->info('Sync node publish status values after migration');
+
+    // Find all out current node ids in the D8 site so we know what to look for.
+    $d8_nids = [];
+    $query = $this->dbConnDrupal8->query("SELECT nid FROM {node} ORDER BY nid ASC");
+    $d8_nids = $query->fetchAllAssoc('nid');
+
+    // Load source node publish status fields.
+    $query = $this->dbConnMigrate->query("
+      SELECT nid, status FROM {node}
+      WHERE nid IN (:nids[])
+      ORDER BY nid ASC
+    ", [':nids[]' => array_keys($d8_nids)]);
+    $migrate_nid_status = $query->fetchAll();
+
+    // Sync our D8 node publish values and revisions with those from D7.
+    foreach ($migrate_nid_status as $row) {
+      $this->processNodeStatus($row->nid, $row->status);
+    }
+
+    $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+    $io->info('Clearing all caches...');
+    drupal_flush_all_caches();
+  }
+
   /**
    * Updates the status and revisions for the specified node.
    *
