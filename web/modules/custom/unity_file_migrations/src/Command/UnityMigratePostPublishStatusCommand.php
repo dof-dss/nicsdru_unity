@@ -45,7 +45,7 @@ class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
   /**
    * {@inheritdoc}
    */
-  public function __construct(MigrationProcessors $migration_processors) {
+  public function __construct() {
     $this->dbConnMigrate = Database::getConnection('default', 'migrate');
     $this->dbConnDrupal8 = Database::getConnection('default', 'default');
     $this->migrationProcessors = $migration_processors;
@@ -64,7 +64,7 @@ class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
    * {@inheritdoc}
    */
   protected function execute(InputInterface $input, OutputInterface $output) {
-    $this->migrationProcessors->updatePublishStatus($this->getIo());
+    MigrationProcessors::updatePublishStatus($this->getIo());
   }
 
 }
