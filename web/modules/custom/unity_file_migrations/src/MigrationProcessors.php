@@ -3,6 +3,8 @@
 namespace Drupal\unity_file_migrations;
 
 use Drupal\Core\Database\Database;
+use Drupal\Console\Core\Style\DrupalStyle;
+use Drupal\Core\Database\Driver\mysql\Connection;
 
 /**
  * A collection of methods for processing migrations.
@@ -11,7 +13,7 @@ use Drupal\Core\Database\Database;
  */
 class MigrationProcessors {
 
-  public static function updatePublishStatus($io) {
+  public static function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
     $io->info('Sync node publish status values after migration');
 
     $dbConnMigrate = Database::getConnection('default', 'migrate');
@@ -19,8 +21,13 @@ class MigrationProcessors {
 
     // Find all out current node ids in the D8 site so we know what to look for.
     $d8_nids = [];
-    $query = $dbConnDrupal8->query("SELECT nid FROM {node} ORDER BY nid ASC");
-    $d8_nids = $query->fetchAllAssoc('nid');
+    if ($node_type) {
+      $query = $dbConnDrupal8->query("SELECT nid FROM {node} WHERE type = :node_type ORDER BY nid ASC", [':node_type' => $node_type]);
+      $d8_nids = $query->fetchAllAssoc('nid');
+    } else {
+      $query = $dbConnDrupal8->query("SELECT nid FROM {node} ORDER BY nid ASC");
+      $d8_nids = $query->fetchAllAssoc('nid');
+    }
 
     // Load source node publish status fields.
     $query = $dbConnMigrate->query("
@@ -48,7 +55,7 @@ class MigrationProcessors {
    * @param string $status
    *   The status of the node.
    */
-  public static function processNodeStatus($dbConnMigrate, $dbConnDrupal8, int $nid, string $status) {
+  public static function processNodeStatus(Connection $dbConnMigrate, Connection $dbConnDrupal8, int $nid, string $status) {
     // Need to fetch the D8 revision ID for any node as it doesn't
     // always match the source db.
     $d8_vid = $dbConnDrupal8->query(
@@ -135,7 +142,7 @@ class MigrationProcessors {
    * @return string
    *   Current revision id.
    */
-  public static function updateCurrentRevision($dbConnMigrate, $dbConnDrupal8, int $nid, int $vid, int $d8_vid) {
+  public static function updateCurrentRevision(Connection $dbConnMigrate, Connection $dbConnDrupal8, int $nid, int $vid, int $d8_vid) {
     // Does this revision exist in D8 ?
     $check_vid = $dbConnDrupal8->query(
       "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid", [':nid' => $nid, ':vid' => $vid]
