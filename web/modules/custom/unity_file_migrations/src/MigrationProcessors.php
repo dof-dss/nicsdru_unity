@@ -29,7 +29,7 @@ class MigrationProcessors {
     $dbConnMigrate = Database::getConnection('default', 'migrate');
     $dbConnDrupal8 = Database::getConnection('default', 'default');
 
-    // Find all out current node ids in the D8 site so we know what to look for.
+    // Find all node ids in the D8 site so we know what to look for.
     $d8_nids = [];
     if ($node_type) {
       $query = $dbConnDrupal8->query("SELECT nid FROM {node} WHERE type = :node_type ORDER BY nid ASC", [':node_type' => $node_type]);
