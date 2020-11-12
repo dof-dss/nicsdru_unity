@@ -3,21 +3,24 @@
 namespace Drupal\unity_file_migrations;
 
 use Drupal\Core\Database\Database;
-use Drupal\Console\Core\Style\DrupalStyle;
 use Drupal\Core\Database\Driver\mysql\Connection;
 
 /**
  * A collection of methods for processing migrations.
  *
- * @package Drupal\migrate_nidirect_utils
+ * @package Drupal\unity_file_migrations
  */
 class MigrationProcessors {
 
+  /**
+   * Updates the status for nodes.
+   */
   public static function updatePublishStatus($io, $node_type = NULL) {
     if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
       // Has been called from drupal console command line.
       $io->info('Sync node publish status values after migration');
-    } else {
+    }
+    else {
       // Has been called from post migration subscriber
       // class will be Drupal\Core\Logger\LoggerChannel.
       $io->notice('Sync node publish status values after migration');
@@ -31,7 +34,8 @@ class MigrationProcessors {
     if ($node_type) {
       $query = $dbConnDrupal8->query("SELECT nid FROM {node} WHERE type = :node_type ORDER BY nid ASC", [':node_type' => $node_type]);
       $d8_nids = $query->fetchAllAssoc('nid');
-    } else {
+    }
+    else {
       $query = $dbConnDrupal8->query("SELECT nid FROM {node} ORDER BY nid ASC");
       $d8_nids = $query->fetchAllAssoc('nid');
     }
@@ -52,7 +56,8 @@ class MigrationProcessors {
     if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
       $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
       $io->info('Clearing all caches...');
-    } else {
+    }
+    else {
       $io->notice('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
       $io->notice('Clearing all caches...');
     }
@@ -62,6 +67,10 @@ class MigrationProcessors {
   /**
    * Updates the status and revisions for the specified node.
    *
+   * @param Drupal\Core\Database\Driver\mysql\Connection $dbConnMigrate
+   *   Migration source db.
+   * @param Drupal\Core\Database\Driver\mysql\Connection $dbConnDrupal8
+   *   Migration destination db.
    * @param int $nid
    *   The node id.
    * @param string $status
@@ -140,10 +149,13 @@ class MigrationProcessors {
     }
   }
 
-
   /**
    * Updates the current revision for the given node.
    *
+   * @param Drupal\Core\Database\Driver\mysql\Connection $dbConnMigrate
+   *   Migration source db.
+   * @param Drupal\Core\Database\Driver\mysql\Connection $dbConnDrupal8
+   *   Migration destination db.
    * @param int $nid
    *   The node id.
    * @param int $vid
@@ -186,4 +198,3 @@ class MigrationProcessors {
   }
 
 }
-
