@@ -7,6 +7,7 @@ use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\Core\Logger\LoggerChannelFactory;
+use Drupal\unity_file_migrations\MigrationProcessors;
 
 /**
  * Class PostMigrationSubscriber.
@@ -63,15 +64,10 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
    */
   public function onMigratePostImport(MigrateImportEvent $event) {
     $event_id = $event->getMigration()->getBaseId();
-
     // Only process nodes, nothing else.
-    if (substr($event_id, 0, 5) == 'node_') {
-      $content_type = substr($event_id, 5);
-      //$this->logger->notice($this->migrationProcessors->processNodeStatus($content_type));
+    if (preg_match('/^upgrade_d7_node_/', $event_id)) {
+      $content_type = substr($event_id, 16);
       MigrationProcessors::updatePublishStatus($this->logger, $content_type);
-      //if (preg_match('/revision_/', $content_type)) {
-      //  $this->logger->notice($this->migrationProcessors->revisionStatus($content_type));
-      //}
     }
   }
 

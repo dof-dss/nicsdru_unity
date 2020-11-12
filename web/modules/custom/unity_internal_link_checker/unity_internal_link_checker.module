@@ -19,7 +19,6 @@ function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
   if (preg_match('|^\/batch|', $page) || ($page == '/')) {
     return;
   }
-  \Drupal::logger('unity_internal_link_checker')->notice('page is ' . $page);
   if ($entity instanceof ContentEntityInterface) {
     if ($entity->hasField('body')) {
       $body = $entity->get('body')->value;
