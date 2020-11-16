@@ -7,6 +7,7 @@ use Drupal\migrate\Event\MigrateImportEvent;
 use Drupal\unity_file_migrations\MigrationProcessors;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\Core\Logger\LoggerChannelFactory;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Class PostMigrationSubscriber.
