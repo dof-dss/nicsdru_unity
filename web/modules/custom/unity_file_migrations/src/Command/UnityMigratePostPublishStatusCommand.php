@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Drupal\Console\Core\Command\ContainerAwareCommand;
 use Drupal\Console\Annotations\DrupalCommand;
+use Drupal\Core\Database\Database;
 
 /**
  * Class UnityMigratePostPublishStatusCommand.
@@ -17,6 +18,37 @@ use Drupal\Console\Annotations\DrupalCommand;
  * )
  */
 class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
+
+  /**
+   * Migration database connection (Drupal 7).
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $dbConnMigrate;
+
+  /**
+   * Drupal 8 database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $dbConnDrupal8;
+
+  /**
+   * NodeMigrationProcessors definition.
+   *
+   * @var \Drupal\unity_file_migrations\MigrationProcessors
+   */
+  protected $migrationProcessors;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(MigrationProcessors $migration_processors) {
+    $this->dbConnMigrate = Database::getConnection('default', 'migrate');
+    $this->dbConnDrupal8 = Database::getConnection('default', 'default');
+    $this->migrationProcessors = $migration_processors;
+    parent::__construct();
+  }
 
   /**
    * {@inheritdoc}
@@ -30,7 +62,7 @@ class UnityMigratePostPublishStatusCommand extends ContainerAwareCommand {
    * {@inheritdoc}
    */
   protected function execute(InputInterface $input, OutputInterface $output) {
-    MigrationProcessors::updatePublishStatus($this->getIo());
+    $this->migrationProcessors->updatePublishStatus($this->getIo());
   }
 
 }

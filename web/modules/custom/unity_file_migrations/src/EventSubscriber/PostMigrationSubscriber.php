@@ -23,13 +23,35 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
   protected $logger;
 
   /**
+   * NodeMigrationProcessors definition.
+   *
+   * @var \Drupal\migrate_nidirect_utils\MigrationProcessors
+   */
+  protected $migrationProcessors;
+
+  /**
+   * Stores the entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
    * PostMigrationSubscriber constructor.
    *
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The Entity manager.
    * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
    *   Drupal logger.
+   * @param \Drupal\migrate_nidirect_utils\MigrationProcessors $migration_processors
+   *   Migration processors.
    */
-  public function __construct(LoggerChannelFactory $logger) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager,
+                              LoggerChannelFactory $logger,
+                              MigrationProcessors $migration_processors) {
     $this->logger = $logger->get('unity_file_migrations');
+    $this->migrationProcessors = $migration_processors;
+    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
@@ -53,7 +75,7 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
     // Only process nodes, nothing else.
     if (preg_match('/^upgrade_d7_node_/', $event_id)) {
       $content_type = substr($event_id, 16);
-      MigrationProcessors::updatePublishStatus($this->logger, $content_type);
+      $this->migrationProcessors->updatePublishStatus($this->logger, $content_type);
     }
   }
 
