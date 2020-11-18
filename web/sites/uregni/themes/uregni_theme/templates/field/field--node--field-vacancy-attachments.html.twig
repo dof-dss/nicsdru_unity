@@ -58,7 +58,7 @@
   <div{{ attributes }}>
     <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
     {% if multiple %}
-      <ul>
+      <ul class="list--no-bullet">
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>{{ item.content }}</li>
