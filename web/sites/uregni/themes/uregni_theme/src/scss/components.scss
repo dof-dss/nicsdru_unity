@@ -63,16 +63,22 @@
     color: $white;
     background: $brand-secondary;
 
-    &:hover {
-      text-decoration: underline;
-      opacity: 1;
-      background: $grey-dark;
-    }
+    &[href] {
+      padding: .6rem 1.6rem;
 
-    &:focus {
-      color: #032f50;
-      border-bottom: 3px solid #032f50;
-      background: #ffe66a;
+      &:hover {
+        border-bottom: none;
+        outline: none;
+        text-decoration: underline;
+        opacity: 1;
+        background: $grey-dark;
+      }
+
+      &:focus {
+        color: #032f50;
+        border-bottom: 3px solid #032f50;
+        background: #ffe66a;
+      }
     }
   }
 
@@ -120,10 +126,17 @@
   }
 
   a.btn {
-    &:hover {
-      text-decoration: underline;
-      opacity: 1;
-      background: $grey-dark;
+    &[href] {
+      padding: .6rem 1.6rem;
+
+      &:hover {
+        border-bottom: none;
+        outline: none;
+        text-decoration: underline;
+        opacity: 1;
+        background: $grey-dark;
+        color: $white;
+      }
     }
   }
 }
@@ -425,16 +438,25 @@ h2 i {
         }
       }
 
-      .btn:hover {
-        text-decoration: underline;
-        opacity: 1;
-        background: $grey-dark;
-      }
+      a.btn {
+        &[href] {
+          padding: .6rem 1.6rem;
 
-      .btn:focus {
-        color: #032f50;
-        border-bottom: 3px solid #032f50;
-        background: #ffe66a;
+          &:hover {
+            border-bottom: none;
+            outline: none;
+            color: $white;
+            text-decoration: underline;
+            opacity: 1;
+            background: $grey-dark;
+          }
+
+          &:focus {
+            color: #032f50;
+            border-bottom: 3px solid #032f50;
+            background: #ffe66a;
+          }
+        }
       }
     }
   }
