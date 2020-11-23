@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.feature.field_feature_link_url
-    - field.field.node.feature.field_feature_photo
-    - field.field.node.feature.field_feature_teaser
+    - field.field.node.feature.field_link_url
+    - field.field.node.feature.field_photo
+    - field.field.node.feature.field_teaser
     - node.type.feature
   module:
     - content_moderation
@@ -25,7 +25,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_feature_link_url:
+  field_link_url:
     weight: 17
     settings:
       placeholder_url: ''
@@ -33,14 +33,14 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_feature_photo:
-    type: media_library_widget
+  field_photo:
     weight: 15
     settings:
       media_types: {  }
     third_party_settings: {  }
+    type: media_library_widget
     region: content
-  field_feature_teaser:
+  field_teaser:
     weight: 16
     settings:
       size: 60
