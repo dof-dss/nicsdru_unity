@@ -1,19 +1,19 @@
-uuid: 9217f454-59dc-43d8-be2d-4a24780dc6b8
+uuid: cabd0117-7391-4dba-8245-e085d5bc904d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_feature_photo
+    - field.storage.node.field_photo
     - media.type.image
     - node.type.feature
-id: node.feature.field_feature_photo
-field_name: field_feature_photo
+id: node.feature.field_photo
+field_name: field_photo
 entity_type: node
 bundle: feature
 label: Photo
 description: 'Please choose an image  to be displayed with this feature item. '
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
