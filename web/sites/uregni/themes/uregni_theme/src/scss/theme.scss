@@ -100,14 +100,14 @@
           border-bottom: 3px solid $link-underline;
           margin: 0 -1px -3px;
           padding: 0 1px;
+
+          h3 {
+            color: $link-hover;
+          }
         }
       }
     }
   }
-
-  //a:hover > h3 {
-  //  color: $link-hover;
-  //}
 
   .published-date {
     margin-bottom: 0;
