@@ -269,6 +269,15 @@
   }
 }
 
+.subscribe_form2 input[type="email"],
+.webform-submission-form textarea#edit-message {
+  &::placeholder {
+    opacity: 1;
+    color: #333;
+  }
+}
+
+
 select.form-select {
   font-size: 100%;
 }
