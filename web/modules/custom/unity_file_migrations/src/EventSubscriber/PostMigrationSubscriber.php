@@ -38,6 +38,13 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
   protected $entityTypeManager;
 
   /**
+   * Stores the migration prefix.
+   *
+   * @var string
+   */
+  protected $migrationPrefix;
+
+  /**
    * PostMigrationSubscriber constructor.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -46,13 +53,17 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
    *   Drupal logger.
    * @param \Drupal\migrate_nidirect_utils\MigrationProcessors $migration_processors
    *   Migration processors.
+   * @param string $migration_prefix
+   *   To identify node migrations.
    */
   public function __construct(EntityTypeManagerInterface $entity_type_manager,
                               LoggerChannelFactory $logger,
-                              MigrationProcessors $migration_processors) {
+                              MigrationProcessors $migration_processors,
+                              string $migration_prefix) {
     $this->logger = $logger->get('unity_file_migrations');
     $this->migrationProcessors = $migration_processors;
     $this->entityTypeManager = $entity_type_manager;
+    $this->migrationPrefix = $migration_prefix;
   }
 
   /**
@@ -73,8 +84,9 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
    */
   public function onMigratePostImport(MigrateImportEvent $event) {
     $event_id = $event->getMigration()->getBaseId();
-    // Only process nodes, nothing else.
-    if (preg_match('/^upgrade_d7_node_/', $event_id)) {
+    // Only process nodes, nothing else. Use migration prefix
+    // to identify node migrations.
+    if (preg_match('/^' . $this->migrationPrefix . '/', $event_id)) {
       $content_type = substr($event_id, 16);
       $this->migrationProcessors->updatePublishStatus($this->logger, $content_type);
     }
