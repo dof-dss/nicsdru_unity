@@ -7,133 +7,93 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
-    - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
-    - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
+    - field.field.node.consultation.field_respond_online
     - field.field.node.consultation.field_summary
     - node.type.consultation
-    - workflows.workflow.nics_editorial_workflow
   module:
-    - content_moderation
+    - address
     - datetime
     - datetime_range
-    - field_group
-    - media_library
-    - metatag
+    - file
+    - link
     - path
     - text
-third_party_settings:
-  field_group:
-    group_respond:
-      children:
-        - field_email_address
-        - field_postal
-      parent_name: ''
-      weight: 14
-      format_type: fieldset
-      region: content
-      format_settings:
-        description: ''
-        required_fields: true
-        id: ''
-        classes: 'group-respond field-group-fieldset'
-      label: 'Ways to respond'
 _core:
-  default_config_hash: f9XHQzGh4BHgBOCvH9NQ-_5RkHDwLN6qy36xGxBOZTc
+  default_config_hash: 7llgpBrsnQ778iDDM5bqbWH5ysXjd3CQ26Qh0XJS-5M
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
 mode: default
 content:
   body:
-    weight: 12
     type: text_textarea_with_summary
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_attachment:
-    type: media_library_widget
-    weight: 13
+    weight: 125
     settings:
-      media_types: {  }
+      progress_indicator: throbber
     third_party_settings: {  }
+    type: file_generic
     region: content
   field_consultation_dates:
-    weight: 9
-    type: daterange_default
+    weight: 127
     settings: {  }
     third_party_settings: {  }
+    type: daterange_default
     region: content
   field_email_address:
-    weight: 10
-    type: email_default
+    weight: 128
     settings:
-      placeholder: ''
       size: 60
+      placeholder: ''
     third_party_settings: {  }
-    region: content
-  field_meta_tags:
-    weight: 16
-    settings:
-      sidebar: true
-    third_party_settings: {  }
-    type: metatag_firehose
+    type: email_default
     region: content
   field_postal:
-    weight: 52
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_publication_topic:
-    weight: 5
-    type: options_select
+    weight: 129
     settings: {  }
     third_party_settings: {  }
+    type: address_default
     region: content
   field_published_date:
-    weight: 7
-    type: datetime_default
+    weight: 123
     settings: {  }
     third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_respond_online:
+    weight: 126
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_summary:
-    weight: 10
+    weight: 122
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 17
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,26 +101,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 15
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -168,17 +128,11 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
-    third_party_settings: {  }
-  url_redirects:
-    weight: 15
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden: {  }

@@ -5,12 +5,12 @@ dependencies:
   config:
     - node.type.consultation
 _core:
-  default_config_hash: rWnLHmu3Lb7L4hPwpzq4C6toZLprlOaZjkMDHsdd8vc
+  default_config_hash: sy7GF0V-G7wv7Jp9YaUotRUG11CapgQBAhJF9sO6DNw
 id: node.consultation.title
 field_name: title
 entity_type: node
 bundle: consultation
-label: 'Title (Main heading)'
+label: 'Main heading'
 description: ''
 required: true
 translatable: true

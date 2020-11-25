@@ -1,4 +1,3 @@
-uuid: 624aa55e-11d0-4d6a-b1ca-97544a27e8f9
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - filter.format.basic_html
   module:
     - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
 format: basic_html
 editor: ckeditor
 settings:
@@ -19,19 +16,10 @@ settings:
           items:
             - Bold
             - Italic
-            - Blockquote
-            - Superscript
-            - RemoveFormat
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-            - Styles
-            - Table
         -
           name: Linking
           items:
-            - Linkit
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -41,36 +29,24 @@ settings:
         -
           name: Media
           items:
-            - DrupalMediaLibrary
-            - map
+            - Blockquote
+            - DrupalImage
         -
-          name: Tasks
+          name: 'Block Formatting'
           items:
-            - Undo
-            - Redo
+            - Format
         -
           name: Tools
           items:
-            - Cut
-            - Copy
-            - PasteText
-            - PasteFromWord
-            - SpecialChar
-            - Maximize
+            - Source
   plugins:
     stylescombo:
-      styles: "p.info-notice|Information notice\r\na.btn|Button"
-    language:
-      language_list: un
-    linkit:
-      linkit_profile: default
-    tokenbrowser:
-      token_types: {  }
+      styles: ''
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

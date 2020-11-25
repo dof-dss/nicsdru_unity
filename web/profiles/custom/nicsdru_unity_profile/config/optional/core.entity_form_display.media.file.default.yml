@@ -1,4 +1,3 @@
-uuid: bfd003ef-8111-45e5-8d66-852dfcee0b90
 langcode: en
 status: true
 dependencies:
@@ -7,9 +6,6 @@ dependencies:
     - media.type.file
   module:
     - file
-    - path
-_core:
-  default_config_hash: 50n0D6KiBgpTONc-n8sPE24kUJQgu1UafJ2Vshd0q2I
 id: media.file.default
 targetEntityType: media
 bundle: file
@@ -28,19 +24,6 @@ content:
     type: file_generic
     weight: 0
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -55,7 +38,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden:

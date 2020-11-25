@@ -1,12 +1,11 @@
-uuid: cf385948-1582-47a1-9f64-c2211d45b917
 langcode: en
-status: false
+status: true
 dependencies: {  }
-_core:
-  default_config_hash: oz6NyPDAB4HB6N9hgH2LwNVtCd-sXbMG1fbn5KsRIDI
 name: 'Restricted HTML'
 format: restricted_html
 weight: 1
+roles:
+  - anonymous
 filters:
   filter_html:
     id: filter_html

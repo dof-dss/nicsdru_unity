@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.consultation
 _core:
-  default_config_hash: KjFTbqCGKcrFEUhaaKU0nsSmQ7LUhNqnEg1X-06lL9k
+  default_config_hash: qo0g3cfr3qA-S79FAkHEF4ATOBNF6MZ9K2HgNUrMjCc
 id: node.consultation.promote
 field_name: promote
 entity_type: node

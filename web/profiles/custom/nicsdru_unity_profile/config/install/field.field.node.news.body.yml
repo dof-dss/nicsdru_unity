@@ -8,22 +8,17 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: KOuh5MAUkgOHWkSzAERassiaX95sEk_3Itscc8D9wQQ
+  default_config_hash: qFeCHzABeYlcb1kjIjrjsRZuOWcKUVWDksMTLXfj_8M
 id: node.news.body
 field_name: body
 entity_type: node
 bundle: news
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
-default_value:
-  -
-    summary: ''
-    value: ' '
-    format: basic_html
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
-  required_summary: false
 field_type: text_with_summary
