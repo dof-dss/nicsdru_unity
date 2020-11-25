@@ -1,0 +1,18 @@
+uuid: 89460834-f846-4666-af5b-1a5b85abec7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_toc_enable
+field_name: field_toc_enable
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
