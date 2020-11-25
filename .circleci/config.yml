@@ -232,6 +232,60 @@ jobs:
             do
               ../vendor/bin/drush -l $site st | grep "Drupal bootstrap : Successful"
             done
+  # Nightly edge build
+  unity_edge_build:
+    docker:
+      - image: circleci/php:7.3.14-apache-browsers
+    environment:
+      # git variables to avoid empty committer identity errors
+      EMAIL: "circleci@localhost"
+      GIT_COMMITTER_NAME: "Circle CI"
+      GIT_AUTHOR_NAME: "Circle CI"
+    steps:
+      - attach_workspace:
+          at: ./
+      - install_php_os_extensions
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo docker-php-ext-install pcntl posix
+      - run:
+          name: Keyscan Platform.sh region hostnames + GitHub for password-less access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: |
+            curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Re-point dof-dss packages to use latest development code and push.
+          command: |
+            cd ~/project
+            git checkout -b $EDGE_BUILD_BRANCH
+
+            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
+              dof-dss/nicsdru_origins_profile:dev-development
+
+            git add composer.*
+            git commit -m "Set dof-dss packages to HEAD development for build"
+
+            # If edge build branch already exists, delete it before pushing the new one.
+            if git branch -rr | grep $EDGE_BUILD_BRANCH; then
+              git push origin :$EDGE_BUILD_BRANCH
+            fi
+            git push -f origin $EDGE_BUILD_BRANCH
+
+            # Pause for webhook to propagate the change from GH to PSH.
+            sleep 10s
+      - run:
+          name: Activate the environment if not found.
+          command: |
+            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
+              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
+              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            fi
 
 workflows:
   version: 2
@@ -262,3 +316,20 @@ workflows:
       - config_install:
           requires:
             - build
+
+  # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
+  nightly-edge-build:
+    triggers:
+      - schedule:
+          # At 00:30 Monday to Friday
+          cron: "30 0 * * 1-5"
+          filters:
+            branches:
+              only:
+                - development
+    jobs:
+      - build
+      - unity_edge_build:
+          requires:
+            - build
+
