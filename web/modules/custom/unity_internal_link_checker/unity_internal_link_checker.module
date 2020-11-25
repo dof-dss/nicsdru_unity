@@ -66,16 +66,16 @@ function _convert_absolute_link(&$body_text, $original_link) {
   foreach ($replace_url_list as $replace_url) {
     // Make sure url is 'clean'.
     $replace_url = str_replace(["\n", "\t", "\r"], '', $replace_url);
-    // Strip trailing slash.
-    if (preg_match('|\/$|', $replace_url)) {
-      $replace_url = preg_replace('|\/$|', '', $replace_url);
+    // Make sure that there is a trailing slash.
+    if (!preg_match('|\/$|', $replace_url)) {
+      $replace_url .= '/';
     }
     // Does the start of this link match one of the
     // urls that we are looking for ?
-    if (strpos($original_link, $replace_url) == 0) {
+    if (strpos($original_link, $replace_url) !== FALSE) {
       // We have a match, change this absolute link
       // to a relative link.
-      $body_text = str_replace($replace_url, '', $body_text);
+      $body_text = str_replace($replace_url, '/', $body_text);
     }
   }
   return $body_text;
