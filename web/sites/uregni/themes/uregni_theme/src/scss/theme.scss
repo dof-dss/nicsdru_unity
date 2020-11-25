@@ -54,7 +54,7 @@
 // Weight: 1
 //
 // Style guide: theme.views
-.home-latest-news {
+#content .home-latest-news {
   @include breakpoint($tab) {
     display: flex;
     justify-content: space-between;
@@ -70,20 +70,42 @@
     }
   }
 
-  article {
-    clear: right;
-  }
-
-  a:hover > h3 {
-    color: $link-hover;
-  }
-
   h3 {
     margin: 1rem 0;
     color: $link;
 
     @include breakpoint($tab) {
       @include adjust-font-size-to(16px, 4);
+    }
+  }
+
+  article {
+    clear: right;
+    margin-bottom: 2.4rem;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a.news-link{
+      &:hover,
+      &:focus {
+        border-bottom: none;
+        outline: none;
+        background: none;
+
+        .news-article {
+          outline: 3px solid $link-hover-background;
+          background: $link-hover-background;
+          border-bottom: 3px solid $link-underline;
+          margin: 0 -1px -3px;
+          padding: 0 1px;
+
+          h3 {
+            color: $link-hover;
+          }
+        }
+      }
     }
   }
 
