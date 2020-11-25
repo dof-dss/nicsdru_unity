@@ -1891,16 +1891,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.5",
+            "version": "0.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "12615282183f11d6832a2d4c3654df99a075f9c4"
+                "reference": "1d46c66212a11471f7f63e79ae43658008e20e4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/12615282183f11d6832a2d4c3654df99a075f9c4",
-                "reference": "12615282183f11d6832a2d4c3654df99a075f9c4",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/1d46c66212a11471f7f63e79ae43658008e20e4d",
+                "reference": "1d46c66212a11471f7f63e79ae43658008e20e4d",
                 "shasum": ""
             },
             "require": {
@@ -1912,7 +1912,7 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2020-10-28T14:27:41+00:00"
+            "time": "2020-11-16T15:35:34+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
@@ -2340,6 +2340,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-2.9",
                     "datestamp": "1576963005",
@@ -2412,6 +2415,9 @@
             },
             "type": "metapackage",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-2.9",
                     "datestamp": "1576963005",
@@ -2561,6 +2567,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.5",
                     "datestamp": "1572542288",
@@ -2685,6 +2694,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.0-beta3",
                     "datestamp": "1519398184",
@@ -2750,6 +2762,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.4",
                     "datestamp": "1537971780",
