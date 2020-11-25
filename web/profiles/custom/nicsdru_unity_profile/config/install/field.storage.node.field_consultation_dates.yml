@@ -6,13 +6,13 @@ dependencies:
     - datetime_range
     - node
 _core:
-  default_config_hash: 5nz8FVjKWhEvsoMeFG_mCxiaunggyZcabdvS7jOa4pA
+  default_config_hash: sgCdjJoeeV3-uxXvmRWG38plBBBdLRhRGK21YnnjjDU
 id: node.field_consultation_dates
 field_name: field_consultation_dates
 entity_type: node
 type: daterange
 settings:
-  datetime_type: datetime
+  datetime_type: date
 module: datetime_range
 locked: false
 cardinality: 1

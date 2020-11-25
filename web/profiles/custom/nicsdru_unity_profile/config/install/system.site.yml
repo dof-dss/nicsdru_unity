@@ -1,14 +1,11 @@
-name: Uregni
-mail: uregni@gov.uk
+name: ''
+mail: ''
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
-_core:
-  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 69ec746f-0c27-4037-980c-b03885b42eaf

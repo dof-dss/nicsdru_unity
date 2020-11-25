@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_summary
@@ -12,10 +11,11 @@ dependencies:
     - node.type.news
   module:
     - datetime
+    - image
     - text
     - user
 _core:
-  default_config_hash: _v4X_1cfDFziIaQs5YtXu7LCfHP6w3APjbA6F2h2py0
+  default_config_hash: etO7MOX5rGlnrZZHrQ8BDzp6OmFGZXuI_Tm7_GUlU_U
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -24,33 +24,46 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 101
     settings: {  }
     third_party_settings: {  }
     region: content
   field_photo:
-    type: entity_reference_entity_view
-    weight: 1
-    label: hidden
+    weight: 103
+    label: above
     settings:
-      view_mode: landscape_float
-      link: false
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
+    type: image
     region: content
   field_published_date:
-    weight: 0
-    label: hidden
+    weight: 102
+    label: above
     settings:
+      format_type: medium
       timezone_override: ''
-      format_type: uregni_medium
     third_party_settings: {  }
     type: datetime_default
     region: content
-hidden:
-  content_moderation_control: true
-  field_meta_tags: true
-  field_summary: true
-  field_teaser: true
-  langcode: true
-  links: true
-  search_api_excerpt: true
+  field_summary:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_teaser:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

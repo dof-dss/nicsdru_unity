@@ -8,21 +8,16 @@ dependencies:
   module:
     - datetime_range
 _core:
-  default_config_hash: wKZS0mb5mQ_J1safQhXaS8RpWlONzTVRxpZLuGwwUWU
+  default_config_hash: EIVEwEW_oEganDzJ8t0lLEvzBc09UsyHwDVxOoU4Sic
 id: node.consultation.field_consultation_dates
 field_name: field_consultation_dates
 entity_type: node
 bundle: consultation
 label: 'Consultation dates'
-description: 'Enter a start date/time and closing date/time for this consultation.'
-required: true
+description: ''
+required: false
 translatable: false
-default_value:
-  -
-    default_date_type: now
-    default_date: now
-    default_end_date_type: now
-    default_end_date: now
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: daterange

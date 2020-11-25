@@ -7,20 +7,21 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
-    - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
-    - field.field.node.consultation.field_publication_topic
     - field.field.node.consultation.field_published_date
+    - field.field.node.consultation.field_respond_online
     - field.field.node.consultation.field_summary
     - node.type.consultation
   module:
+    - address
     - datetime
     - datetime_range
-    - origins_common
+    - file
+    - link
     - text
     - user
 _core:
-  default_config_hash: klTP-tmG7HZOGRnXSeRaYsK1G0ueA_wO6Fznk8aUL5s
+  default_config_hash: EfI2OGgKsxvJvWmH7vJgSwP56FQUkMmrabH7HcS4gqQ
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -29,64 +30,73 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 101
     settings: {  }
     third_party_settings: {  }
     region: content
   field_attachment:
-    type: html_list_formatter
-    weight: 4
+    weight: 105
     label: above
     settings:
-      list_type: ul
-      list_classes: ''
-      display_item_link: false
+      use_description_as_link_text: true
     third_party_settings: {  }
+    type: file_default
     region: content
   field_consultation_dates:
-    weight: 1
-    label: hidden
+    weight: 107
+    label: above
     settings:
-      timezone_override: ''
-      format_type: medium
       separator: '-'
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
     region: content
   field_email_address:
-    weight: 5
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: email_mailto
-    region: content
-  field_postal:
-    weight: 6
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_published_date:
-    weight: 0
-    label: inline
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_summary:
-    weight: 2
+    weight: 108
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-hidden:
-  content_moderation_control: true
-  field_meta_tags: true
-  field_publication_topic: true
-  langcode: true
-  links: true
-  search_api_excerpt: true
+  field_postal:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_published_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_respond_online:
+    weight: 106
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_summary:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

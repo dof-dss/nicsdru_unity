@@ -1,4 +1,3 @@
-uuid: dbadd6c5-d306-4832-a4cc-57de0f545930
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
   module:
     - file
     - path
-_core:
-  default_config_hash: sgTwk-pCF0BOhAJ5gA_WhEuiUw7AOigvP94bLEp5ZDw
 id: media.audio.default
 targetEntityType: media
 bundle: audio
@@ -28,13 +25,6 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -55,7 +45,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden:

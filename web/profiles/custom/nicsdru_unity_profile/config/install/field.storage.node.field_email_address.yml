@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: f6cRnNVOH59A0bX1y0ZuZgleC8qTkG5PvD_jMO5pOyg
+  default_config_hash: nZEZ9alZURK8vkREqFp30p9WP_wHDU76QaWUw5MllQI
 id: node.field_email_address
 field_name: field_email_address
 entity_type: node

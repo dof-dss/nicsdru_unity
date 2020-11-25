@@ -7,10 +7,9 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
-    - path
     - user
 _core:
-  default_config_hash: '-E6lJyVkEClez5mIFfTpKyx0K5qD1vKt18nTTr1jcOg'
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -25,12 +24,6 @@ content:
   language:
     weight: 0
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
@@ -42,5 +35,4 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden:
-  langcode: true
+hidden: {  }
