@@ -68,11 +68,13 @@
 #}
 
 <article>
-  <a href="{{ url }}" rel="bookmark">
-  {{ content.field_photo }}
-  <h3>
-    {{ label }}
-  </h3>
+  <a href="{{ url }}" rel="bookmark" class="news-link">
+    <div class="news-article">
+      {{ content.field_photo }}
+      <h3>
+        {{ label }}
+      </h3>
+      {{ content | without('field_photo')}}
+    </div>
   </a>
-  {{ content | without('field_photo')}}
 </article>
