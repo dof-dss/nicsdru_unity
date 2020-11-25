@@ -14,6 +14,11 @@ use Drupal\views\Entity\View;
  * Implements hook_entity_presave().
  */
 function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
+  // If this hook has been invoked from a migration, bail out.
+  $page = \Drupal::request()->getRequestUri();
+  if (preg_match('|^\/batch|', $page) || ($page == '/')) {
+    return;
+  }
   if ($entity instanceof ContentEntityInterface) {
     if ($entity->hasField('body')) {
       $body = $entity->get('body')->value;

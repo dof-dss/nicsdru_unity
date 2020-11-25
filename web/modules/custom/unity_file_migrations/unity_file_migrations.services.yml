@@ -1,0 +1,11 @@
+services:
+  unity_file_migrations.eventsubscriber.post:
+    class: 'Drupal\unity_file_migrations\EventSubscriber\PostMigrationSubscriber'
+    arguments: ['@entity_type.manager', '@logger.factory', '@unity_file_migrations.migrationprocessors', 'upgrade_d7_node_']
+    tags:
+      - { name: 'event_subscriber' }
+
+  unity_file_migrations.migrationprocessors:
+    class: 'Drupal\unity_file_migrations\MigrationProcessors'
+    arguments: ['@module_handler', '@entity_type.manager']
+
