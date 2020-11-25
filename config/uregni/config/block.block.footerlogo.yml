@@ -1,4 +1,4 @@
-uuid: c7c98836-43fa-4839-a13e-3c15da44da51
+uuid: 50d63e1f-4786-480c-bb58-73d019a4e30f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic_block:832e1e63-d013-4245-8de7-78ebf653b236'
   module:
     - block_content
+    - block_visibility_groups
   theme:
     - uregni_theme
 id: footerlogo
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
