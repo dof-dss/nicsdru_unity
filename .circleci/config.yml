@@ -286,6 +286,35 @@ jobs:
               echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
               /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
             fi
+  # Nightly edge build deployment
+  unity_edge_build_deploy:
+    docker:
+      - image: circleci/php:7.3.14-apache-browsers
+    steps:
+      - attach_workspace:
+          at: ./
+      - install_php_os_extensions
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo docker-php-ext-install pcntl posix
+      - run:
+          name: Keyscan Platform.sh region hostnames + GitHub for password-less access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: |
+            curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Activate the environment if not found.
+          command: |
+            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
+              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
+              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            fi
 
 workflows:
   version: 2
@@ -330,6 +359,13 @@ workflows:
     jobs:
       - build
       - unity_edge_build:
+          requires:
+            - build
+
+  nightly-edge-build-deploy:
+    jobs:
+      - build
+      - unity_edge_build_deploy:
           requires:
             - build
 
