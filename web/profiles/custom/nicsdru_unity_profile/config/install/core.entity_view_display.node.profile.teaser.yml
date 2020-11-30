@@ -1,4 +1,3 @@
-uuid: b20b455f-c770-4e38-b6a2-1cc99ea10dc0
 langcode: en
 status: true
 dependencies:
@@ -11,8 +10,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: xn-g7_PJVAgSIAMdsVYE34yzRhxNRXuD10RlxHai468
 id: node.profile.teaser
 targetEntityType: node
 bundle: profile

@@ -195,5 +195,3 @@ langcode: en
 third_party_settings:
   captcha:
     replace_administration_mode: true
-_core:
-  default_config_hash: Jw02kzSrlhTQFpGmF2GtP7NrIR9oS6klYkJry0ACvtI

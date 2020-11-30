@@ -1,9 +1,6 @@
-uuid: eb6ca168-c777-4fc4-8813-9589b944580d
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: MvQPTbQx0Vxwy0ordSHyixdZmLCMpvMdLD69dlwkrKc
 id: user
 label: User
 tags:
