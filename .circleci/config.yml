@@ -311,7 +311,10 @@ jobs:
       - run:
           name: Activate the environment if not found.
           command: |
-            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
+            if /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
+              echo "Re-deploying $EDGE_BUILD_BRANCH"
+              /home/circleci/.platformsh/bin/platform environment:redeploy -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            else
               echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
               /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
             fi
