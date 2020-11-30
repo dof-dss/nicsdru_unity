@@ -1,9 +1,6 @@
-uuid: 61cb0202-6a95-41d1-bf4a-7f94517ab373
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: CMuvuRCfGZ5k3XgsXmkEc54rI8etDY1Qz2JP7JzKL-g
 name: linkit_result_thumbnail
 label: 'Linkit result thumbnail'
 effects:

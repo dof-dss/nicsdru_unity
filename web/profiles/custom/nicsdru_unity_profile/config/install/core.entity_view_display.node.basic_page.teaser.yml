@@ -1,4 +1,3 @@
-uuid: 577b53f2-31d7-47e7-b765-f639e53429b5
 langcode: en
 status: true
 dependencies:
@@ -9,8 +8,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: ua6iM3gD-MGUkUXC9QH-US2bZ6IPRXIJafieUFFfMIo
 id: node.basic_page.teaser
 targetEntityType: node
 bundle: basic_page
