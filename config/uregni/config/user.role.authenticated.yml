@@ -17,6 +17,7 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format basic_html_publications'
   - 'view all revisions'
   - 'view media'
   - 'view own unpublished content'
