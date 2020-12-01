@@ -111,3 +111,4 @@ dependencies:
 themes:
   - adminimal_theme
   - nicsdru_unity_theme
+  - stark
