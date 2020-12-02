@@ -1,4 +1,3 @@
-uuid: 16640f49-fd2a-494d-bd82-985cc5cfa482
 langcode: en
 status: true
 dependencies:
@@ -14,8 +13,6 @@ dependencies:
     - datetime
     - node
     - user
-_core:
-  default_config_hash: qmeJXDzqRz-sV5iAHcmJgIoorYcaDuZ4J8TrVdqQ8uk
 id: workflow_moderation
 label: 'Workflow: Moderation'
 module: views
