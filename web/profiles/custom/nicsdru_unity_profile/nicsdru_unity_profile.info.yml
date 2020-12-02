@@ -2,6 +2,8 @@ name: NICS Unity
 type: profile
 description: To provide common functionality for various NICS Unity websites
 core: 8.x
+distribution:
+  name: unity
 install:
   - address
   - admin_toolbar
