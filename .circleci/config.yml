@@ -286,6 +286,85 @@ jobs:
               echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
               /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
             fi
+  # Nightly edge build deployment
+  unity_edge_build_deploy:
+    docker:
+      - image: circleci/php:7.3.14-apache-browsers
+    steps:
+      - attach_workspace:
+          at: ./
+      - install_php_os_extensions
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo docker-php-ext-install pcntl posix
+      - run:
+          name: Keyscan Platform.sh region hostnames + GitHub for password-less access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: |
+            curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Deploy or re-deploy the edge environment.
+          command: |
+            if /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
+              echo "Re-deploying $EDGE_BUILD_BRANCH"
+              /home/circleci/.platformsh/bin/platform environment:redeploy -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            else
+              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
+              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            fi
+  # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
+  sync_data:
+    docker:
+      - image: circleci/php:7.3.14-apache-browsers
+    steps:
+      - checkout_code
+      - run:
+          name: Checkout edge branch
+          command: |
+            cd ~/project
+            git checkout -b $EDGE_BUILD_BRANCH
+      - install_php_os_extensions
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo docker-php-ext-install pcntl posix
+      - run:
+          name: Keyscan Platform.sh region hostnames for password-less access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: |
+            curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Trigger a data sync from master environment to nightly edge build.
+          command: |
+            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+      - run:
+          name: Turn off fastly module to allow for cleaner config import
+          command: |
+            /home/circleci/.platformsh/bin/platform environment:drush pmu fastly -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+      - run:
+          name: Refresh configuration as our db will contain active prod config after sync operation
+          command: |
+            /home/circleci/.platformsh/bin/platform environment:drush cim -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+      - run:
+          name: Force purge of Solr index
+          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST}/solr/default/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST}/solr/default/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+      - run:
+          name: Rebuild the Solr index
+          command: |
+            /home/circleci/.platformsh/bin/platform environment:drush sapi-c -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform environment:drush sapi-r -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform environment:drush sapi-i -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+
 
 workflows:
   version: 2
@@ -330,6 +409,25 @@ workflows:
     jobs:
       - build
       - unity_edge_build:
+          requires:
+            - build
+
+  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
+  nightly-edge-build-deploy:
+    triggers:
+      - schedule:
+          # At 01:00 Monday to Friday
+          cron: "0 1 * * 1-5"
+          filters:
+            branches:
+              only:
+                - development
+    jobs:
+      - build
+      - unity_edge_build_deploy:
+          requires:
+            - build
+      - sync_data:
           requires:
             - build
 
