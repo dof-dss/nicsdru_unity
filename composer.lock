@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14b1e4b0ab2776d221d0c6c665010587",
+    "content-hash": "076eefb770096b546b0bfbf1b6e99cf7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -12423,43 +12423,6 @@
             "time": "2020-05-29T17:27:14+00:00"
         },
         {
-            "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "19e0a2c99b8fb5fde8bef60f1de3ca7a277e4e4c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/19e0a2c99b8fb5fde8bef60f1de3ca7a277e4e4c",
-                "reference": "19e0a2c99b8fb5fde8bef60f1de3ca7a277e4e4c",
-                "shasum": ""
-            },
-            "require": {
-                "dof-dss/nicsdru_origins_modules": "0.*",
-                "drupal/address": "^1.7",
-                "drupal/admin_toolbar": "^2.2",
-                "drupal/adminimal_theme": "^1.5",
-                "drupal/ctools": "^3.2",
-                "drupal/eu_cookie_compliance": "^1.8",
-                "drupal/handy_cache_tags": "^1.0",
-                "drupal/layout_builder_modal": "^1.0@alpha",
-                "drupal/metatag": "^1.10",
-                "drupal/pathauto": "^1.4",
-                "drupal/redirect": "^1.4",
-                "drupal/simple_sitemap": "^3.3",
-                "drupal/simplei": "^1.1",
-                "drupal/token": "^1.5",
-                "drupal/token_filter": "^1.1",
-                "drupal/views_custom_cache_tag": "^1.1"
-            },
-            "type": "drupal-profile",
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Drupal install profile to provide common functionality for NICS websites",
-            "time": "2020-10-02T09:55:35+00:00"
-        },
-        {
             "name": "drupal/coder",
             "version": "8.3.9",
             "source": {
@@ -12666,69 +12629,6 @@
             "homepage": "https://www.drupal.org/project/easy_install",
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_install"
-            }
-        },
-        {
-            "name": "drupal/layout_builder_modal",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "5063c2d5e33265c92bfeed34df6682d74c973c51"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1588175915",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "John Svensson",
-                    "homepage": "https://www.drupal.org/u/johndevman",
-                    "email": "john@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Emil Johnsson",
-                    "homepage": "https://www.drupal.org/u/johnzzon",
-                    "email": "emil@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Henrik Larsson",
-                    "homepage": "https://www.drupal.org/u/henriklarsson",
-                    "email": "henrik@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "twfahey",
-                    "homepage": "https://www.drupal.org/user/3403722"
-                }
-            ],
-            "description": "Open blocks in a modal in the Layout Builder UI.",
-            "homepage": "https://www.drupal.org/project/layout_builder_modal",
-            "support": {
-                "source": "http://cgit.drupalcode.org/layout_builder_modal",
-                "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
             }
         },
         {
@@ -15999,6 +15899,5 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
