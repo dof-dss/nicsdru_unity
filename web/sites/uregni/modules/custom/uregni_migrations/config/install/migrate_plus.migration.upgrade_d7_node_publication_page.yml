@@ -98,10 +98,10 @@ process:
       bypass: true
       source: body/0/format
       map:
-        filtered_html: basic_html
-        filtered_html_with_no_images: basic_html
-        filtered_html_with_tokens: basic_html
-        restricted_html: basic_html
+        filtered_html: basic_html_publications
+        filtered_html_with_no_images: basic_html_publications
+        filtered_html_with_tokens: basic_html_publications
+        restricted_html: basic_html_publications
         plain_text: plain_text
   field_publication_date:
     -
