@@ -152,20 +152,20 @@ class MigrationProcessors {
       ->condition('nid', $nid)
       ->execute();
 
-    // Make sure that we have a 'published' revision.
-    $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
-      ->fields(['moderation_state' => 'published'])
-      ->condition('content_entity_id', $nid)
-      ->condition('content_entity_revision_id', $vid)
-      ->execute();
-
-    $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
-      ->fields(['moderation_state' => 'published'])
-      ->condition('content_entity_id', $nid)
-      ->condition('content_entity_revision_id', $vid)
-      ->execute();
-
     if ($status == 1) {
+      // Make sure that we have a 'published' revision.
+      $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
+        ->fields(['moderation_state' => 'published'])
+        ->condition('content_entity_id', $nid)
+        ->condition('content_entity_revision_id', $vid)
+        ->execute();
+
+      $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
+        ->fields(['moderation_state' => 'published'])
+        ->condition('content_entity_id', $nid)
+        ->condition('content_entity_revision_id', $vid)
+        ->execute();
+
       // Only one row in node_field_revision should be set to
       // 'published' for this nid.
       $query = $this->dbConnDrupal8->update('node_field_revision')
@@ -179,6 +179,28 @@ class MigrationProcessors {
         ->condition('nid', $nid)
         ->condition('vid', $vid)
         ->execute();
+    }
+    else {
+      // See if the moderation state on D7 was 'needs review'.
+      $moderation_status = $this->dbConnMigrate->query("
+        select state from {workbench_moderation_node_history}
+        where hid = (select max(hid) from {workbench_moderation_node_history} where nid = :nid)
+          ", [':nid' => $nid])->fetchField();
+      if ($moderation_status == 'needs_review') {
+        // This node was in 'needs review' status on D7 so we need to make
+        // sure that it also looks like that on D8.
+        $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
+          ->fields(['moderation_state' => 'needs_review'])
+          ->condition('content_entity_id', $nid)
+          ->condition('content_entity_revision_id', $vid)
+          ->execute();
+
+        $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
+          ->fields(['moderation_state' => 'needs_review'])
+          ->condition('content_entity_id', $nid)
+          ->condition('content_entity_revision_id', $vid)
+          ->execute();
+      }
     }
   }
 
