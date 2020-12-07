@@ -179,7 +179,8 @@ class MigrationProcessors {
         ->condition('nid', $nid)
         ->condition('vid', $vid)
         ->execute();
-    } else {
+    }
+    else {
       // See if the moderation state on D7 was 'needs review'.
       $moderation_status = $this->dbConnMigrate->query("
         select state from {workbench_moderation_node_history}
