@@ -214,6 +214,7 @@
 .feedblitz-custom-form,
 .webform-submission-form {
   input[type="submit"] {
+    @include responsive-typo-map($normal-text);
     border: none;
     background-image: none;
     color: #fff;
@@ -224,8 +225,6 @@
     margin: 1rem 0 0;
     text-align: center;
     padding: .6rem 1.6rem;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
     cursor: pointer;
     border-radius: 0;
 
