@@ -87,7 +87,7 @@ class PostMigrationSubscriber implements EventSubscriberInterface {
     // Only process nodes, nothing else. Use migration prefix
     // to identify node migrations.
     if (preg_match('/^' . $this->migrationPrefix . '/', $event_id)) {
-      $content_type = substr($event_id, 16);
+      $content_type = substr($event_id, strlen($this->migrationPrefix));
       $this->migrationProcessors->updatePublishStatus($this->logger, $content_type);
     }
   }
