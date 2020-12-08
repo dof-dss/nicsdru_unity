@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.body
     - node.type.vacancy
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    basic_html_publications: '0'
+    full_html: '0'
+    plain_text: '0'
 id: node.vacancy.body
 field_name: body
 entity_type: node
@@ -15,11 +22,7 @@ label: 'Job description'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    summary: ''
-    value: ' '
-    format: basic_html
+default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
