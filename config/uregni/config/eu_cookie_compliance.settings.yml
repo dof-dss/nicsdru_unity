@@ -17,8 +17,8 @@ popup_bg_hex: ''
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000
-show_more_info: null
-popup_more_info_button_message: null
+show_more_info: false
+popup_more_info_button_message: ''
 popup_enabled: true
 popup_find_more_button_message: 'More info'
 popup_height: null
@@ -67,3 +67,11 @@ domain_all_sites: false
 _core:
   default_config_hash: R5A0_DuaSt9WRwy5rPzLIbeLdqlyFCkRIHjr02fxKxY
 cookie_session: 0
+cookie_policy_version: 1.0.0
+set_cookie_session_zero_on_disagree: 0
+reload_options: null
+reload_routes_list: ''
+automatic_cookies_removal: false
+allowed_cookies: ''
+containing_element: body
+settings_tab_enabled: false
