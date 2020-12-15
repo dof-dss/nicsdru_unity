@@ -546,7 +546,8 @@ textarea {
   padding-left: 6.5rem;
 }
 
-.node-type-publication-page #content .list--no-bullet a[href] {
+.node-type-publication-page #content a[href] {
+  padding-left: 6.5rem;
   margin-bottom: 1.6rem;
 
   &:hover {
