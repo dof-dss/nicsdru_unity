@@ -214,7 +214,6 @@
 .feedblitz-custom-form,
 .webform-submission-form {
   input[type="submit"] {
-    @include responsive-typo-map($normal-text);
     border: none;
     background-image: none;
     color: #fff;
@@ -225,6 +224,8 @@
     margin: 1rem 0 0;
     text-align: center;
     padding: .6rem 1.6rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     cursor: pointer;
     border-radius: 0;
 
@@ -544,4 +545,12 @@ textarea {
 // once v0.1.11 of nicsdru_unity_theme has been released, this can be removed.
 #content .list--no-bullet a[href] {
   padding-left: 6.5rem;
+}
+
+.node-type-publication-page #content .list--no-bullet a[href] {
+  margin-bottom: 1.6rem;
+
+  &:hover {
+    margin-bottom: 1.5rem;
+  }
 }
