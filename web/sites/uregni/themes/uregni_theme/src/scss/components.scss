@@ -553,4 +553,12 @@ textarea {
   &:hover {
     margin-bottom: 1.5rem;
   }
+
+  &:last-child {
+    margin-bottom: 2.4rem;
+
+    &:hover {
+      margin-bottom: 2.3rem;
+    }
+  }
 }
