@@ -47,9 +47,9 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
-        "dof-dss/nicsdru_origins_modules": "^0.9.5",
+        "dof-dss/nicsdru_origins_modules": "^0.9.7",
         "dof-dss/nicsdru_origins_profile": "^0.1.10",
-        "dof-dss/nicsdru_unity_theme": "^0.1.10",
+        "dof-dss/nicsdru_unity_theme": "^0.1.11",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
