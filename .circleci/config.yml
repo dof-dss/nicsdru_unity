@@ -271,6 +271,25 @@ jobs:
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
 
+            # Need to re-build Uregni theme with any Unity changes.
+            cd web/sites/uregni/themes/uregni_theme
+            sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
+
+            # Download and configure node and npm.
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+            sudo apt install nodejs
+            sudo apt install npm
+            sudo apt install automake
+            sudo apt install libjpeg-dev
+
+            # Build Uregni theme.
+            npm install
+            npm rebuild node-sass
+            npm run build
+
+            git add *.css
+            git commit -m "Uregni theme rebuild"
+
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
             git push -f origin $EDGE_BUILD_BRANCH
@@ -384,16 +403,46 @@ workflows:
           requires:
             - build
 
-  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
-  nightly-edge-build-deploy:
+  # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
+  nightly-edge-build:
+    triggers:
+      - schedule:
+          # At 00:30 Monday to Friday
+          cron: "30 0 * * 1-5"
+          filters:
+            branches:
+              only:
+                - development
     jobs:
       - build
       - unity_edge_build:
           requires:
             - build
+
+  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
+  nightly-edge-build-deploy:
+    triggers:
+      - schedule:
+          # At 01:00 Monday to Friday
+          cron: "0 1 * * 1-5"
+          filters:
+            branches:
+              only:
+                - development
+    jobs:
+      - build
       - unity_edge_build_deploy:
           requires:
-            - unity_edge_build
+            - build
       - sync_data:
           requires:
             - unity_edge_build_deploy
+
+  # For testing
+  nightly-edge-build-test:
+    jobs:
+      - build
+      - unity_edge_build:
+          requires:
+            - build
+
