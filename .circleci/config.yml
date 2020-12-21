@@ -438,11 +438,3 @@ workflows:
           requires:
             - unity_edge_build_deploy
 
-  # For testing
-  nightly-edge-build-test:
-    jobs:
-      - build
-      - unity_edge_build:
-          requires:
-            - build
-
