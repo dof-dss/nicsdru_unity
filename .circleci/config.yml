@@ -271,10 +271,8 @@ jobs:
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
 
-            # If edge build branch already exists, delete it before pushing the new one.
-            if git branch -rr | grep $EDGE_BUILD_BRANCH; then
-              git push origin :$EDGE_BUILD_BRANCH
-            fi
+            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
+            # to platform.sh for later steps to use.
             git push -f origin $EDGE_BUILD_BRANCH
 
             # Pause for webhook to propagate the change from GH to PSH.
@@ -369,14 +367,6 @@ workflows:
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
-    triggers:
-      - schedule:
-          # At 00:30 Monday to Friday
-          cron: "30 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
     jobs:
       - build
       - unity_edge_build:
