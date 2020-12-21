@@ -306,7 +306,7 @@ jobs:
           root: ./
           paths:
             - ./
-            -
+
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
     docker:
