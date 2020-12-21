@@ -272,7 +272,7 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
-            # to platform.sh for later steps to use.
+            # to platform.sh for later steps to use. 
             git push -f origin $EDGE_BUILD_BRANCH
 
             # Pause for webhook to propagate the change from GH to PSH.
