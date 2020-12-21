@@ -278,7 +278,7 @@ jobs:
             # Download and configure node and npm.
             curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
             sudo apt install nodejs
-            sudo apt install npm
+            #sudo apt install npm
             sudo apt install automake
             sudo apt install libjpeg-dev
 
