@@ -384,18 +384,16 @@ workflows:
           requires:
             - build
 
-  # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
-  nightly-edge-build:
-    jobs:
-      - build
-      - unity_edge_build:
-          requires:
-            - build
-
   # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
   nightly-edge-build-deploy:
     jobs:
+      - build
+      - unity_edge_build
+          requires:
+            - build
       - unity_edge_build_deploy
+          requires:
+            - unity_edge_build
       - sync_data:
           requires:
             - unity_edge_build_deploy
