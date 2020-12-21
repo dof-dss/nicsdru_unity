@@ -388,10 +388,10 @@ workflows:
   nightly-edge-build-deploy:
     jobs:
       - build
-      - unity_edge_build
+      - unity_edge_build:
           requires:
             - build
-      - unity_edge_build_deploy
+      - unity_edge_build_deploy:
           requires:
             - unity_edge_build
       - sync_data:
