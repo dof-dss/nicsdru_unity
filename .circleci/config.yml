@@ -271,10 +271,27 @@ jobs:
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
 
-            # If edge build branch already exists, delete it before pushing the new one.
-            if git branch -rr | grep $EDGE_BUILD_BRANCH; then
-              git push origin :$EDGE_BUILD_BRANCH
-            fi
+            # Need to re-build Uregni theme with any Unity changes.
+            cd web/sites/uregni/themes/uregni_theme
+            sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
+
+            # Download and configure node and npm.
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+            sudo apt install nodejs
+            #sudo apt install npm
+            sudo apt install automake
+            sudo apt install libjpeg-dev
+
+            # Build Uregni theme.
+            npm install
+            npm rebuild node-sass
+            npm run build
+
+            git add *.css
+            git commit -m "Uregni theme rebuild"
+
+            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
+            # to platform.sh for later steps to use.
             git push -f origin $EDGE_BUILD_BRANCH
 
             # Pause for webhook to propagate the change from GH to PSH.
@@ -286,38 +303,58 @@ jobs:
               echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
               /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
             fi
+
   # Nightly edge build deployment
   unity_edge_build_deploy:
     docker:
       - image: circleci/php:7.3.14-apache-browsers
     steps:
-      - attach_workspace:
-          at: ./
+      - checkout_code
+      - install_php_os_extensions
+      - run:
+          name: Switch to edge build branch
+          command: |
+            cd ~/project
+            git checkout -b $EDGE_BUILD_BRANCH
+      - run:
+          name: Install dev versions of dof-dss packages with composer.
+          command: |
+            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
+                         dof-dss/nicsdru_origins_profile:dev-development
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./
+
+  # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
+  sync_data:
+    docker:
+      - image: circleci/php:7.3.14-apache-browsers
+    steps:
+      - checkout_code
+      - run:
+          name: Checkout edge branch
+          command: |
+            cd ~/project
+            git checkout -b $EDGE_BUILD_BRANCH
       - install_php_os_extensions
       - run:
           name: Add extra OS and PHP extensions/config
           command: |
             sudo docker-php-ext-install pcntl posix
       - run:
-          name: Keyscan Platform.sh region hostnames + GitHub for password-less access
+          name: Keyscan Platform.sh region hostnames for password-less access
           command: |
             mkdir -p ~/.ssh
             ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - run:
           name: Install the Platform.sh CLI tool
           command: |
             curl -sS https://platform.sh/cli/installer | php
       - run:
-          name: Deploy or re-deploy the edge environment.
+          name: Trigger a data sync from master environment to nightly edge build.
           command: |
-            if /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
-              echo "Re-deploying $EDGE_BUILD_BRANCH"
-              /home/circleci/.platformsh/bin/platform environment:redeploy -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
-            else
-              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
-              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
-            fi
+            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
@@ -335,7 +372,6 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-
 
 workflows:
   version: 2
@@ -398,3 +434,7 @@ workflows:
       - unity_edge_build_deploy:
           requires:
             - build
+      - sync_data:
+          requires:
+            - unity_edge_build_deploy
+
