@@ -74,6 +74,7 @@ module:
   options: 0
   origins_ckeditor_enhancements: 0
   origins_common: 0
+  origins_media: 0
   origins_toc: 0
   origins_workflow: 0
   page_cache: 0
@@ -105,7 +106,6 @@ module:
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
-  unity_media: 0
   unity_search_pages: 0
   uregni_breadcrumbs: 0
   user: 0
