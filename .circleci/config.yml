@@ -360,6 +360,10 @@ jobs:
           command: |
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
+          name: Clear cache before config import
+          command: |
+            /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+      - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
             /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
