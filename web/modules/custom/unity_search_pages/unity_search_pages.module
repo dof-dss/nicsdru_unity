@@ -94,3 +94,22 @@ function unity_search_pages_preprocess_views_view_fields(&$variables) {
     $variables['fields']['field_consultation_dates']->content = Markup::create($output);
   }
 }
+
+/**
+ * Implements hook_preprocess_page_title().
+ *
+ * Replaces search results title with a title and subtitle to enable styling.
+ */
+function unity_search_pages_preprocess_page_title(&$variables) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  $title = $variables['title'];
+  $pattern = '/view.\w*search.\w*search_page/';
+
+  if (preg_match($pattern, $current_route)) {
+    if (preg_match('/\w*\b\s- search results/', $title)) {
+      $new_title = strtok($title, ' -');
+      $variables['title'] = t($new_title);
+      $variables['title_subtitle'] = t('search results');
+    }
+  }
+}
