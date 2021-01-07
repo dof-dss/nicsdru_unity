@@ -26,4 +26,5 @@ class SearchPagesRouteSubscriber extends RouteSubscriberBase {
       }
     }
   }
+
 }

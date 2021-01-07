@@ -5,9 +5,6 @@
  * Custom code for search pages.
  */
 
-use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Render\Markup;
-
 /**
  * Implements hook_preprocess_views_view() for views_view.
  *
@@ -20,7 +17,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
   $display_ids = ['publication_search_page',
     'news_search_page',
     'consultations_search_page',
-    'search_page'
+    'search_page',
   ];
 
   foreach ($display_ids as $display_id) {
