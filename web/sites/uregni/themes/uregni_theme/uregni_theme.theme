@@ -214,15 +214,15 @@ function uregni_theme_preprocess_field(&$variables) {
               $file_url = $match[1];
               $file_title = $match2[1];
               $file_size = $match2[4] . ' ' . $match2[5];
-              $file_description = '<span class="meta">' . ucfirst($file_type) . ' (' . $file_size . ')</span>';
-              $body_link = '<a class="file-link file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
+              $file_description = '<span>' . ucfirst($file_type) . ' (' . $file_size . ')</span>';
+              $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
               $body_text = str_replace($match[0], $body_link, $body_text);
             }
             else {
               $file_url = $match[1];
               $file_type = $match[2];
               $file_title = $match[3];
-              $body_link = '<a class="file-link file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . '</a>';
+              $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . '</a>';
               $body_text = str_replace($match[0], $body_link, $body_text);
             }
           }

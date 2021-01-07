@@ -566,8 +566,8 @@ textarea {
 .file {
   &-link {
 
-    &.file--ico {
-      span:first-child {
+    &.publication {
+      span {
         color: $grey;
         font-size: 1.4rem;
         line-height: 2.1rem;
