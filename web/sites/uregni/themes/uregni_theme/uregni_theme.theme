@@ -188,3 +188,46 @@ function uregni_theme_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'sidebar-second';
   }
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function uregni_theme_preprocess_field(&$variables) {
+  if ($variables['element']['#bundle'] == 'publication_page') {
+    if ($variables['element']['#field_name'] == 'body') {
+      $body_format = $variables['items'][0]['content']['#format'];
+      if ($body_format == 'basic_html_publications') {
+        $body_text = &$variables['items'][0]['content']['#text'];
+        $embed_regex = '/<.*><a[\w\s\.]*href="([^"]*?.([a-z]*))"\>(((?!\<\/a\>).)*)\<\/a\>/';
+        // Search for matches in body value.
+        $matches = [];
+        preg_match_all($embed_regex, $body_text, $matches, PREG_SET_ORDER);
+        // Iterate these matches to find publications ( if exists ).
+        if (!empty($matches)) {
+          foreach ($matches as $match) {
+            $strip_tags = strip_tags($match[3]);
+            $decode_string = str_replace('&nbsp;', ' ', $strip_tags);
+            $decode_string = html_entity_decode($decode_string);
+            $match2 = [];
+            if (preg_match('/(.*) (\(([A-Z|a-z]*) ([0-9]*\D?[0-9]*) ([A-Z]*)\))/', $decode_string, $match2)) {
+              $file_type = strtolower($match2[3]);
+              $file_url = $match[1];
+              $file_title = $match2[1];
+              $file_size = $match2[4] . ' ' . $match2[5];
+              $file_description = '<span class="meta">' . ucfirst($file_type) . ' (' . $file_size . ')</span>';
+              $body_link = '<a class="file-link file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
+              $body_text = str_replace($match[0], $body_link, $body_text);
+            }
+            else {
+              $file_url = $match[1];
+              $file_type = $match[2];
+              $file_title = $match[3];
+              $body_link = '<a class="file-link file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . '</a>';
+              $body_text = str_replace($match[0], $body_link, $body_text);
+            }
+          }
+        }
+      }
+    }
+  }
+}
