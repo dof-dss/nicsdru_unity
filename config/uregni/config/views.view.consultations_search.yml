@@ -412,7 +412,7 @@ display:
         type: normal
         title: Consultations
         menu_name: main
-        weight: -44
+        weight: -43
       exposed_block: true
       cache:
         type: search_api_tag
