@@ -17,8 +17,3 @@ site-styling:
     # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
     theme:
       css/theme.css: { minified: true }
-
-uregni-fonts:
-  css:
-    theme:
-      'https://fonts.googleapis.com/css?family=Open+Sans&display=swap': { type: external, minified: true }
