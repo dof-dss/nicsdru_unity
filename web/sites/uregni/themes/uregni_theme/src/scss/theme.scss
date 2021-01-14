@@ -128,12 +128,14 @@
 .path-news,
 .path-publications {
   .search-page {
-    #sidebar-first {
+    #sidebar-first,
+    #search-facets {
       padding-left: 0;
     }
 
     @include breakpoint($lap) {
-      #sidebar-first {
+      #sidebar-first,
+      #search-facets {
         width: 30%;
       }
 
