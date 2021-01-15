@@ -5,9 +5,6 @@
  * Custom code for search pages.
  */
 
-use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Render\Markup;
-
 /**
  * Implements hook_preprocess_views_view() for views_view.
  *
@@ -20,7 +17,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
   $display_ids = ['publication_search_page',
     'news_search_page',
     'consultations_search_page',
-    'search_page'
+    'search_page',
   ];
 
   foreach ($display_ids as $display_id) {
@@ -54,6 +51,25 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
           '#value' => t('0 results'),
         ];
       }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ *
+ * Replaces search results title with a title and subtitle to enable styling.
+ */
+function unity_search_pages_preprocess_page_title(&$variables) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  $title = $variables['title'];
+  $pattern = '/view.\w*search.\w*search_page/';
+
+  if (preg_match($pattern, $current_route)) {
+    if (preg_match('/\w*\b\s- search results/', $title)) {
+      $new_title = strtok($title, ' -');
+      $variables['title'] = t($new_title);
+      $variables['title_subtitle'] = t('search results');
     }
   }
 }
