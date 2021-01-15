@@ -155,15 +155,8 @@
                 "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
                 "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
             },
-            "drupal/config_split": {
-                "General typo issues": "https://www.drupal.org/files/issues/2018-10-02/general_typo_issues-3003865-4.patch",
-                "Capitalize the name of the module in .info.yml file": "https://www.drupal.org/files/issues/2018-10-05/config_split-info-3004751-2.patch",
-                "Config export fails on Drush 9 with config_translation": "https://www.drupal.org/files/issues/2018-11-05/config_export_fails_on-3011363-2.patch"
-            },
             "drupal/taxonomy_manager": {
-                "Add search feature to taxonomy admin form": "https://www.drupal.org/files/issues/2019-08-06/add_search_feature-2906768-21.patch",
-                "Parameter must be an array": "https://www.drupal.org/files/issues/2019-01-14/taxonomy_manager-dev-parameter-count-3025793-3.patch",
-                "Update jquery.fancytree library to version 2.30.1": "https://www.drupal.org/files/issues/2019-01-10/taxonomy_manager-d8-jquery.fancytree_update-3025020-2.patch"
+                "Add search feature to taxonomy admin form": "https://www.drupal.org/files/issues/2019-08-06/add_search_feature-2906768-21.patch"
             },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
@@ -173,9 +166,6 @@
             },
             "drupal/redirect": {
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch"
-            },
-            "drupal/search_api_spellcheck": {
-                "Suggestions Spellcheck views area plugin always hidden": "https://www.drupal.org/files/issues/2020-01-29/suggestions-spellcheck-always-hidden-1.patch"
             },
             "drupal/clientside_validation": {
                 "Clientside validation errors revert to being output as a label in webform wizard pages with ajax enabled": "https://www.drupal.org/files/issues/2020-02-03/cvjquery-ajax-webform-wizard.patch",
