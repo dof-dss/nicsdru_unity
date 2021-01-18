@@ -278,26 +278,26 @@ menus:
     uuid: 928ca973-7b09-42d3-accd-184df1fb1d7b
   -
     menu_name: main
-    title: 'Electricity introduction'
+    title: 'Electricity overview'
     parent: 'menu_link_content:606be2da-cdc5-4307-bd6e-21b2e2ab6473'
     uri: 'entity:node/2'
     link_title: ''
     description: null
-    enabled: '1'
+    enabled: '0'
     expanded: '0'
     weight: '-42'
     langcode: en
     uuid: 78b32f5f-a65e-4fde-84cc-574ae955be15
   -
     menu_name: main
-    title: 'Gas introduction'
+    title: 'Gas overview'
     parent: 'menu_link_content:ef300a3b-ca39-4f0a-9501-b2142fc0d89d'
     uri: 'entity:node/3'
     link_title: ''
     description: null
-    enabled: '1'
+    enabled: '0'
     expanded: '0'
-    weight: '-45'
+    weight: '-44'
     langcode: en
     uuid: 13417de8-71d4-47d0-a90d-d97bee29a038
   -
@@ -307,9 +307,9 @@ menus:
     uri: 'entity:node/4'
     link_title: ''
     description: null
-    enabled: '1'
+    enabled: '0'
     expanded: '0'
-    weight: '-46'
+    weight: '-43'
     langcode: en
     uuid: 4758ef71-ddd9-4198-9051-d544aa47653f
   -
@@ -321,7 +321,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-43'
+    weight: '-41'
     langcode: en
     uuid: 9695acbe-2663-4d0f-a97e-c83b2be64aae
   -
@@ -405,7 +405,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-43'
+    weight: '-42'
     langcode: en
     uuid: a64f4a29-f64a-476b-b843-0e5f1938dfa9
   -
@@ -513,7 +513,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-40'
+    weight: '-39'
     langcode: en
     uuid: fcbeb896-b7c8-4028-9c5a-806a6f008be9
   -
@@ -525,7 +525,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-42'
+    weight: '-39'
     langcode: en
     uuid: b97936d4-b125-4bbb-942a-31c677d227ec
   -
@@ -537,7 +537,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-43'
+    weight: '-40'
     langcode: en
     uuid: 5c789817-dc2f-41dd-81cb-2ac42a1f0747
   -
@@ -549,7 +549,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-38'
+    weight: '-36'
     langcode: en
     uuid: 353f9063-da8d-47da-b4af-426ce7ef50c7
   -
@@ -561,7 +561,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-40'
+    weight: '-38'
     langcode: en
     uuid: 8de2ea43-6e76-4ccb-9623-3e5b561d003f
   -
@@ -573,7 +573,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-41'
+    weight: '-39'
     langcode: en
     uuid: 7a777b1e-d3c6-4358-80d8-403905f5279f
   -
@@ -585,7 +585,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-39'
+    weight: '-37'
     langcode: en
     uuid: 012224e3-9b07-424d-80c9-ccfb71be0fcf
   -
@@ -693,7 +693,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-42'
+    weight: '-41'
     langcode: en
     uuid: 2163e541-ba4f-458a-9459-0413d7f8a2c5
   -
@@ -1293,7 +1293,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-44'
+    weight: '-43'
     langcode: en
     uuid: b2d7c47e-62f1-458b-a7ec-798e823e7b14
   -
@@ -1329,7 +1329,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-45'
+    weight: '-42'
     langcode: en
     uuid: 02f81f88-0ed9-47ac-aa9a-697f21354188
   -
@@ -1341,7 +1341,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-44'
+    weight: '-41'
     langcode: en
     uuid: 20157c98-1a46-4d81-ad82-6d22e6da5c3f
   -
@@ -1497,7 +1497,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-41'
+    weight: '-40'
     langcode: en
     uuid: 32fc5ba8-1447-4c8b-8aed-e6da8a39d8f0
   -
@@ -1593,7 +1593,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-36'
+    weight: '-34'
     langcode: en
     uuid: 0fdd7c1a-1f23-4a92-a8fc-c00201cb5284
   -
@@ -2325,7 +2325,7 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-42'
+    weight: '-40'
     langcode: en
     uuid: edaf2620-e328-4ba4-9978-976caf607967
   -
@@ -2337,15 +2337,15 @@ menus:
     description: null
     enabled: '1'
     expanded: '0'
-    weight: '-37'
+    weight: '-35'
     langcode: en
     uuid: bad7208b-22a1-432e-8530-32d3bea33c9e
   -
     menu_name: menu-footer-links
     title: '© Crown Copyright'
     parent: null
-    uri: 'internal:/'
-    link_title: null
+    uri: 'route:<nolink>'
+    link_title: ''
     description: null
     enabled: '1'
     expanded: '0'
@@ -2392,7 +2392,7 @@ menus:
     menu_name: main
     title: 'About us'
     parent: null
-    uri: 'route:<nolink>'
+    uri: 'entity:node/53'
     link_title: ''
     description: null
     enabled: '1'
@@ -2404,7 +2404,7 @@ menus:
     menu_name: main
     title: Electricity
     parent: null
-    uri: 'route:<nolink>'
+    uri: 'entity:node/3669'
     link_title: ''
     description: null
     enabled: '1'
@@ -2416,7 +2416,7 @@ menus:
     menu_name: main
     title: Gas
     parent: null
-    uri: 'route:<nolink>'
+    uri: 'internal:/node/3'
     link_title: ''
     description: null
     enabled: '1'
@@ -2428,7 +2428,7 @@ menus:
     menu_name: main
     title: Water
     parent: null
-    uri: 'route:<nolink>'
+    uri: 'entity:node/3676'
     link_title: ''
     description: null
     enabled: '1'
@@ -2440,7 +2440,7 @@ menus:
     menu_name: main
     title: 'Consumer information'
     parent: null
-    uri: 'route:<nolink>'
+    uri: 'entity:node/5'
     link_title: ''
     description: null
     enabled: '1'
@@ -2448,3 +2448,75 @@ menus:
     weight: '-42'
     langcode: en
     uuid: f3733189-5120-4079-a8ec-7a3eb78b3446
+  -
+    menu_name: main
+    title: GD23
+    parent: 'menu_link_content:2163e541-ba4f-458a-9459-0413d7f8a2c5'
+    uri: 'entity:node/5621'
+    link_title: null
+    description: 'GD23 Price Control will consider the plans of the three Gas Distribution Network operators'
+    enabled: '1'
+    expanded: '0'
+    weight: '10'
+    langcode: en
+    uuid: a3e72454-166a-4251-88d7-7fb3f20548a4
+  -
+    menu_name: main
+    title: 'GD23 Approach'
+    parent: 'menu_link_content:a3e72454-166a-4251-88d7-7fb3f20548a4'
+    uri: 'entity:node/5622'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '1'
+    langcode: en
+    uuid: d80ac1db-9580-491f-9960-898afcfad264
+  -
+    menu_name: main
+    title: 'PC21 Draft Determination'
+    parent: 'menu_link_content:389e838d-bc4c-404d-995f-0aba61bc60ea'
+    uri: 'entity:node/5759'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '2'
+    langcode: en
+    uuid: cc0c2241-7d00-41fb-97b1-7d3028b1e3a1
+  -
+    menu_name: main
+    title: 'Draft Determination'
+    parent: 'menu_link_content:19c9dc54-9f5f-4ff8-af9c-1c32a8377cde'
+    uri: 'entity:node/5779'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '1'
+    langcode: en
+    uuid: 28ce3229-e76a-4b7c-8730-840643b9aaac
+  -
+    menu_name: main
+    title: 'Annual Information Reporting 2018'
+    parent: 'menu_link_content:7077d731-1b8f-46ac-b618-3e3af3c4be74'
+    uri: 'entity:node/5813'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-4'
+    langcode: en
+    uuid: c44588ba-1b54-410a-8822-0dff101df5d7
+  -
+    menu_name: main
+    title: 'Annual Information Reporting 2019'
+    parent: 'menu_link_content:7077d731-1b8f-46ac-b618-3e3af3c4be74'
+    uri: 'entity:node/5814'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-5'
+    langcode: en
+    uuid: f7ac18f1-115e-4037-a9d0-92a0fe23b8eb
