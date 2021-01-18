@@ -562,3 +562,17 @@ textarea {
     }
   }
 }
+
+.file {
+  &-link {
+
+    &.publication {
+      span {
+        color: $grey;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        display: block;
+      }
+    }
+  }
+}
