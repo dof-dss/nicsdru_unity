@@ -120,27 +120,32 @@
       {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
+      {% endif %}
+      <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
         {% if page.search_facets %}
-          <header id="search-facets">
+          <header id="search-facets" class="sidebar-first-layout">
+            <nav aria-label="Skip links">
+              <a href="#post-content" class="skip-link visually-hidden focusable">
+                {{- 'Skip to results'|t -}}
+              </a>
+            </nav>
             {{ page.search_facets }}
           </header>
         {% endif %}
-      {% endif %}
-      <div id="content">
         {% if page.content %}
-          <main id="post-content">
+          <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
             {{ page.content }}
           </main>
         {% endif %}
       </div>
       {% if page.sidebar_first %}
-        <aside id="sidebar-first">
+        <aside id="sidebar-first" class="sidebar-first-layout">
           {{ page.sidebar_first }}
         </aside>
       {% endif %}
     </div>
     {% if page.sidebar_second %}
-      <aside id="sidebar-second">
+      <aside id="sidebar-second" class="sidebar-second-layout">
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
