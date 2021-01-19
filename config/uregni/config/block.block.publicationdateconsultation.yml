@@ -11,8 +11,8 @@ dependencies:
     - uregni_theme
 id: publicationdateconsultation
 theme: uregni_theme
-region: sidebar_first
-weight: 3
+region: search_facets
+weight: -7
 provider: null
 plugin: 'facet_block:publication_date_consultation'
 settings:
