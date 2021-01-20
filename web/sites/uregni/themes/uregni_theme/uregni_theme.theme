@@ -219,19 +219,41 @@ function uregni_theme_preprocess_field(&$variables) {
             // Ensure the matched decoded string matches a pattern.
             // E.g. Switchgear TNPP - Final Decision (PDF 258 KB).
             // Use the file type and size to rebuild the HTML.
-            if (preg_match('/(.*) (\(([A-Z|a-z]*) ([0-9]*\D?[0-9]*) ([A-Z]*)\))/', $strip_tags, $file_description_matches)) {
+            if (preg_match('/(.*) (\(([A-Z|a-z]+)\W+([0-9]*\D?[0-9]*)\W+([A-Z]+)\))/', $strip_tags, $file_description_matches)) {
               $file_type = strtolower($file_description_matches[3]);
               $file_url = $match[1];
               $file_title = $file_description_matches[1];
               $file_size = $file_description_matches[4] . ' ' . $file_description_matches[5];
               $file_description = '<span>' . ucfirst($file_type) . ' (' . $file_size . ')</span>';
-              $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
+              $body_link = '<a class="file-link publication file--ico file--ico__'. $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
               $body_text = str_replace($match[0], $body_link, $body_text);
             }
             // If there is no file type/size in the matched string then just output the string and use filetype for styling.
             else {
+              $file_extension = $match[2];
+
+              // Set the file type for styling purposes.
+              switch ($file_extension) {
+                case 'pdf':
+                  $file_type = 'pdf';
+                  break;
+
+                case 'doc':
+                case 'docx':
+                  $file_type = 'word';
+                  break;
+
+                case 'pptx':
+                  $file_type = 'powerPoint';
+                  break;
+
+                case 'xlsx':
+                case 'xls':
+                case 'xlsm':
+                  $file_type = 'excel';
+                  break;
+              }
               $file_url = $match[1];
-              $file_type = $match[2];
               $file_title = $match[3];
               $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . '</a>';
               $body_text = str_replace($match[0], $body_link, $body_text);
