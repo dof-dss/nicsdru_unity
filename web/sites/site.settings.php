@@ -23,7 +23,8 @@ $settings['hash_salt'] = getenv('HASH_SALT');
 // Temp directory.
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 
-// Set config split environment; environment specific values is set near the end of this file.
+// Set config split environment; environment specific values
+// is set near the end of this file.
 $config['config_split.config_split.local']['status'] = FALSE;
 $config['config_split.config_split.hosted']['status'] = FALSE;
 
@@ -44,7 +45,7 @@ $settings['config_readonly_whitelist_patterns'] = [
 $config['geolocation.settings']['google_map_api_key'] = getenv('GOOGLE_MAP_API_KEY');
 
 // Environment indicator defaults.
-$env_colour = !empty(getenv('SIMPLEI_ENV_COLOR')) ? getenv('SIMPLEI_ENV_COLOR') : '#000000';;
+$env_colour = !empty(getenv('SIMPLEI_ENV_COLOR')) ? getenv('SIMPLEI_ENV_COLOR') : '#000000';
 $env_name = !empty(getenv('SIMPLEI_ENV_NAME')) ? getenv('SIMPLEI_ENV_NAME') : getenv('PLATFORM_BRANCH');
 
 // If we're running on platform.sh, check for and load relevant settings.
