@@ -128,16 +128,16 @@
 .path-news,
 .path-publications {
   .search-page {
-    #sidebar-first {
+    .sidebar-first-layout {
       padding-left: 0;
     }
 
     @include breakpoint($lap) {
-      #sidebar-first {
+      .sidebar-first-layout {
         width: 30%;
       }
 
-      #content {
+      .main-content {
         width: 65%;
       }
     }
@@ -237,7 +237,7 @@
   }
 }
 
-#sidebar-second {
+.sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;
 
