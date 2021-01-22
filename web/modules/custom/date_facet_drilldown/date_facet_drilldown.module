@@ -1,0 +1,55 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_facets_search_api_query_type_mapping_alter.
+ */
+function date_facet_drilldown_facets_search_api_query_type_mapping_alter($backend_plugin_id, array &$query_types) {
+  // This will direct the queries to our SearchApiDateFacetDrilldown class.
+  $query_types['date'] = 'search_api_datefacetdrilldown';
+}
+
+/**
+ * Implements hook_preprocess_facets_item_list().
+ */
+function date_facet_drilldown_preprocess_facets_item_list(array &$variables) {
+  // The purpose of this function is to correct the URL for the active year
+  // facet, as this does not work otherwise.
+  // Not ideal to do this in a preprocessor but the alternative was to
+  // implement an entire new facet URL processor as well as a route subscriber
+  // - this not only introduced a lot of code but involved copying route
+  // subscriber code over from facets_pretty_paths which did not feel good.
+  if (!empty($variables["facet"])) {
+    if ($procs = $variables['facet']->getProcessorConfigs()) {
+      // Check that our 'date_facet_drilldown' processor has been selected.
+      if (isset($procs['date_facet_drilldown'])) {
+        // We only need to make the change if we have drilled down to
+        // month level, which means that there will be at least two
+        // active facets.
+        if (count($variables['facet']->getActiveItems()) > 1) {
+          foreach ($variables['items'] as $key => $item) {
+            if (preg_match('/^\d{4}$/', $key)) {
+              // This must be a 4 digit year.
+              $current_route = \Drupal::routeMatch()->getRouteName();
+              $route_params = \Drupal::routeMatch()->getParameters();
+              $params = $route_params->getIterator()['facets_query'];
+              // Manipulate the parameters, removing the date facets.
+              $url_alias = $variables['facet']->getUrlAlias();
+              $params = preg_replace('|' . $url_alias . '\/\d{4}-\d{2}|', '', $params); // Remove 'date/YYYY-MM'
+              $params = preg_replace('|' . $url_alias . '\/\d{4}|', '', $params); // Remove 'date/YYYY'
+              $params = preg_replace('|\/\/|', '/', $params); // Replace double slash with single
+              $params = preg_replace('|^\/|', '', $params); // Remove leading slash.
+              // Cater for any arguments on the URL.
+              $args_input = \Drupal::request()->query->all();
+              // Rebuild the URL.
+              $url = Url::fromRoute($current_route, ['facets_query' => $params], ['query' => $args_input]);
+              // Substitute our new URL for the existing one.
+              $variables['items'][$key]['#url'] = $url;
+            }
+          }
+        }
+      }
+    }
+  }
+}

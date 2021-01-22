@@ -1,0 +1,10 @@
+name: 'Date Facet Drilldown'
+type: module
+description: 'Date facets - allow drilldown to month'
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9
+project: 'date_facet_drilldown'
+dependencies:
+  - drupal:facets
+  - drupal:facets_pretty_paths
+  - drupal:search_api
