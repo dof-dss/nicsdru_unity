@@ -540,12 +540,6 @@ textarea {
   }
 }
 
-// This rule is also in nicsdru_unity_theme/src/scss/components/field/_file-link.scss
-// once v0.1.11 of nicsdru_unity_theme has been released, this can be removed.
-#content .list--no-bullet a[href] {
-  padding-left: 6.5rem;
-}
-
 .node-type-publication-page #content a.file-link[href] {
   padding-left: 6.5rem;
   margin-bottom: 1.6rem;
@@ -559,6 +553,20 @@ textarea {
 
     &:hover {
       margin-bottom: 2.3rem;
+    }
+  }
+}
+
+.file {
+  &-link {
+
+    &.publication {
+      span {
+        color: $grey;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        display: block;
+      }
     }
   }
 }

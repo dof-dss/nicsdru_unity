@@ -12,8 +12,8 @@ dependencies:
     - uregni_theme
 id: publisheddate
 theme: uregni_theme
-region: sidebar_first
-weight: 1
+region: search_facets
+weight: -9
 provider: null
 plugin: 'facet_block:published_date'
 settings:
