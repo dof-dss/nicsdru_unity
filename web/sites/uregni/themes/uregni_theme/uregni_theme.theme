@@ -206,7 +206,7 @@ function uregni_theme_preprocess_field(&$variables) {
         // Set a regex pattern to look for body links. We don't want to target body links nested in text.
         // A pattern we want to match is:
         // <div><a href="https://www.uregni.gov.uk/sites/uregni/files/media-files/2019-11-22%20Switchgear%20TNPP%20-%20Final%20Decision.pdf"></a>
-        $embed_regex = '/<.*><a[\w\s\.]*href="([^"]*?.([a-z]*))"\>(((?!\<\/a\>).)*)\<\/a\>/';
+        $embed_regex = '/<[a-z]{2,3}><a[\w\s\.]*href="([^"]*?.([a-z]*))"\>(((?!\<\/a\>).)*)\<\/a\>/';
         $matches = [];
         // Search the body text for the regex pattern and split the result in matches to be used.
         preg_match_all($embed_regex, $body_text, $matches, PREG_SET_ORDER);
