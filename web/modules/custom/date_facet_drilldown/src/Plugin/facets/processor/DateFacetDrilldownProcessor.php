@@ -21,6 +21,12 @@ use Drupal\facets\Result\Result;
  * )
  */
 class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildProcessorInterface {
+
+  /**
+   * Build facets.
+   *
+   * @inheritdoc
+   */
   public function build(FacetInterface $facet, array $results) {
     $month_facets = FALSE;
     foreach ($results as $id => $result) {
@@ -53,7 +59,7 @@ class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildPr
    * @param $activeItem
    * @param $results
    */
-  private function createActiveFacet($facet, $activeItem, &$results) {
+  private function createActiveFacet(FacetInterface $facet, $activeItem, &$results) {
     $matches = [];
     // Take YYYY from the start of the active item.
     if (preg_match('/^(\d{4})/', $activeItem, $matches)) {

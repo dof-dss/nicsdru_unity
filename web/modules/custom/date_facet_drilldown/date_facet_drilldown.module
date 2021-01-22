@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains date_facet_drilldown.module.
+ */
+
 use Drupal\Core\Url;
 
 /**
@@ -36,10 +41,14 @@ function date_facet_drilldown_preprocess_facets_item_list(array &$variables) {
               $params = $route_params->getIterator()['facets_query'];
               // Manipulate the parameters, removing the date facets.
               $url_alias = $variables['facet']->getUrlAlias();
-              $params = preg_replace('|' . $url_alias . '\/\d{4}-\d{2}|', '', $params); // Remove 'date/YYYY-MM'
-              $params = preg_replace('|' . $url_alias . '\/\d{4}|', '', $params); // Remove 'date/YYYY'
-              $params = preg_replace('|\/\/|', '/', $params); // Replace double slash with single
-              $params = preg_replace('|^\/|', '', $params); // Remove leading slash.
+              // Remove 'date/YYYY-MM'.
+              $params = preg_replace('|' . $url_alias . '\/\d{4}-\d{2}|', '', $params);
+              // Remove 'date/YYYY'.
+              $params = preg_replace('|' . $url_alias . '\/\d{4}|', '', $params);
+              // Replace double slash with single.
+              $params = preg_replace('|\/\/|', '/', $params);
+              // Remove leading slash.
+              $params = preg_replace('|^\/|', '', $params);
               // Cater for any arguments on the URL.
               $args_input = \Drupal::request()->query->all();
               // Rebuild the URL.

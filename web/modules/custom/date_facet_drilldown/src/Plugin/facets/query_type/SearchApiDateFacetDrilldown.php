@@ -19,6 +19,9 @@ use Drupal\facets\QueryType\QueryTypeRangeBase;
  */
 class SearchApiDateFacetDrilldown extends QueryTypeRangeBase {
 
+  /**
+   * @inheritdoc
+   */
   public function __construct(array $configuration, $plugin_id, $plugin_definition) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -44,7 +47,8 @@ class SearchApiDateFacetDrilldown extends QueryTypeRangeBase {
       // This must be a year (YYYY).
       $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value . '-01-01T00:00:00');
       $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value . '-12-31T23:59:59');
-    } else {
+    }
+    else {
       // This must be a year and month (YYYY-MM).
       $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value . '-01T00:00:00');
       // Use format('t') to retrieve the number of days in the month.
@@ -75,13 +79,14 @@ class SearchApiDateFacetDrilldown extends QueryTypeRangeBase {
     $active_items = $this->facet->getActiveItems();
     if (isset($active_items) && (count($active_items) > 0)) {
       $format = 'Y-m';
-    } else {
+    }
+    else {
       $format = 'Y';
     }
 
     return [
       'display' => $date->format($format),
-      'raw' => $date->format($format)
+      'raw' => $date->format($format),
     ];
   }
 
