@@ -11,8 +11,8 @@ dependencies:
     - uregni_theme
 id: topicconsultation
 theme: uregni_theme
-region: sidebar_first
-weight: 1
+region: search_facets
+weight: -8
 provider: null
 plugin: 'facet_block:topic_consultation'
 settings:
