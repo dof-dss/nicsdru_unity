@@ -6,7 +6,6 @@ dependencies:
     - user.role.admin_user
     - user.role.administrator
     - user.role.author_user
-    - user.role.editor_user
     - user.role.supervisor_user
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -37,7 +36,6 @@ display:
             administrator: administrator
             author_user: author_user
             supervisor_user: supervisor_user
-            editor_user: editor_user
             admin_user: admin_user
       cache:
         type: tag
@@ -821,7 +819,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -875,7 +872,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -1070,7 +1066,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -1121,7 +1116,6 @@ display:
               administrator: '0'
               author_user: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
             placeholder: ''
             operator_limit_selection: false
@@ -1169,7 +1163,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -1221,7 +1214,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -1277,7 +1269,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -1330,7 +1321,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -2136,7 +2126,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -2187,7 +2176,6 @@ display:
               administrator: '0'
               author_user: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
             placeholder: ''
             operator_limit_selection: false
@@ -2235,7 +2223,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -2287,7 +2274,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -2343,7 +2329,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -3112,7 +3097,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -3166,7 +3150,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -3220,7 +3203,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -3909,7 +3891,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -3963,7 +3944,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
@@ -4017,7 +3997,6 @@ display:
               gp_supervisor_user: '0'
               news_supervisor: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
               apps_user: '0'
               health_condition_author_user: '0'
