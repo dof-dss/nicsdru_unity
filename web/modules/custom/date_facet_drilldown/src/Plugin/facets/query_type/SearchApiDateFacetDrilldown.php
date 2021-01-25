@@ -69,7 +69,7 @@ class SearchApiDateFacetDrilldown extends QueryTypeRangeBase {
    * @return array
    *   An array with a start and end date as unix timestamps.
    */
-  public function calculateResultFilter(int $value) {
+  public function calculateResultFilter($value) {
     // Create a new DrupalDateTime from the value passed in.
     $date = new DrupalDateTime();
     $date->setTimestamp($value);
