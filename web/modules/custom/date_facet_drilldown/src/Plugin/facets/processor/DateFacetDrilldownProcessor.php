@@ -26,7 +26,9 @@ class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildPr
    * Build facets.
    *
    * @param Drupal\facets\FacetInterface $facet
+   *   The facet.
    * @param array $results
+   *   The current results array.
    */
   public function build(FacetInterface $facet, array $results) {
     $month_facets = FALSE;
@@ -57,8 +59,11 @@ class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildPr
    * Create an active year facet.
    *
    * @param Drupal\facets\FacetInterface $facet
+   *   The facet.
    * @param string $activeItem
+   *   The current active item.
    * @param array $results
+   *   The results array.
    */
   private function createActiveFacet(FacetInterface $facet, string $activeItem, array &$results) {
     $matches = [];
