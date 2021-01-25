@@ -41,7 +41,7 @@ class SearchApiDateFacetDrilldown extends QueryTypeRangeBase {
    * @throws \Exception
    *   Thrown when creating a date fails.
    */
-  public function calculateRange(int $value) {
+  public function calculateRange($value) {
     $dateTime = new DrupalDateTime();
     if (preg_match('/^\d{4}$/', $value)) {
       // This must be a year (YYYY).
