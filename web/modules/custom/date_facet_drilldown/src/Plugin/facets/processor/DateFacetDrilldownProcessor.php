@@ -25,7 +25,8 @@ class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildPr
   /**
    * Build facets.
    *
-   * @inheritdoc
+   * @param Drupal\facets\FacetInterface $facet
+   * @param array $results
    */
   public function build(FacetInterface $facet, array $results) {
     $month_facets = FALSE;
@@ -55,11 +56,11 @@ class DateFacetDrilldownProcessor extends ProcessorPluginBase implements BuildPr
    *
    * Create an active year facet.
    *
-   * @param $facet
-   * @param $activeItem
-   * @param $results
+   * @param Drupal\facets\FacetInterface $facet
+   * @param string $activeItem
+   * @param array $results
    */
-  private function createActiveFacet(FacetInterface $facet, $activeItem, &$results) {
+  private function createActiveFacet(FacetInterface $facet, string $activeItem, array &$results) {
     $matches = [];
     // Take YYYY from the start of the active item.
     if (preg_match('/^(\d{4})/', $activeItem, $matches)) {
