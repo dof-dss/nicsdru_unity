@@ -49,6 +49,8 @@ $chroma: add-colors('functional', (
   button-disabled:        'charcoal',
   button-action:          #3fa940,
 
+  info-notice:            #004695,
+
   mark-bg:                #ff0,
   error:                  'dark-red',
   error-bg:               'light-pink',
@@ -86,6 +88,7 @@ $grey-medium: color(grey-medium);
 $white: color('white');
 $offwhite: color(offwhite);
 $hc-red: color(hc-red);
+$info-notice: color(info-notice);
 
 $brand-primary: color(brand-primary);
 
