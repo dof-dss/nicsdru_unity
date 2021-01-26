@@ -183,9 +183,11 @@ function uregni_theme_preprocess_form(array &$variables) {
  * Implements hook_preprocess_html().
  */
 function uregni_theme_preprocess_html(&$variables) {
-  if ($variables['node_type'] == 'consultation') {
-    $variables['attributes']['class'][] = 'one-sidebar';
-    $variables['attributes']['class'][] = 'sidebar-second';
+  if (isset($variables['node_type'])) {
+    if ($variables['node_type'] == 'consultation') {
+      $variables['attributes']['class'][] = 'one-sidebar';
+      $variables['attributes']['class'][] = 'sidebar-second';
+    }
   }
 }
 
