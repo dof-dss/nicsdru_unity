@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9c9abd780096423c0166d2dc4e7538b",
+    "content-hash": "726ace043f622c73a7c50c80ee437217",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -228,16 +228,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "2450ca97631042faf786855db206a2e48fb7dbb7"
+                "reference": "6df5c0eea9d1f370095585eef1b08f4dff73d51f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/2450ca97631042faf786855db206a2e48fb7dbb7",
-                "reference": "2450ca97631042faf786855db206a2e48fb7dbb7",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/6df5c0eea9d1f370095585eef1b08f4dff73d51f",
+                "reference": "6df5c0eea9d1f370095585eef1b08f4dff73d51f",
                 "shasum": ""
             },
             "require": {
@@ -283,7 +283,7 @@
                 "localization",
                 "postal"
             ],
-            "time": "2020-11-29T18:48:07+00:00"
+            "time": "2020-12-05T18:16:35+00:00"
         },
         {
             "name": "composer/installers",
@@ -1926,16 +1926,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.10",
+            "version": "0.9.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "c881cd40bdba05c9aac7adfd0e669842570a60a3"
+                "reference": "0b1d83d2da18e219e1869792f1dece7660acacbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/c881cd40bdba05c9aac7adfd0e669842570a60a3",
-                "reference": "c881cd40bdba05c9aac7adfd0e669842570a60a3",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/0b1d83d2da18e219e1869792f1dece7660acacbd",
+                "reference": "0b1d83d2da18e219e1869792f1dece7660acacbd",
                 "shasum": ""
             },
             "require": {
@@ -1947,7 +1947,7 @@
                 "MIT"
             ],
             "description": "Generic modules for DOF-DSS Drupal sites",
-            "time": "2021-01-13T13:23:17+00:00"
+            "time": "2021-01-20T13:07:52+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
@@ -3213,16 +3213,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ec7ac2bd2b7fa7f06df654c637b7f29f019d356f"
+                "reference": "a53db77b55a035453d7229e0c3069f8591cb4cb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ec7ac2bd2b7fa7f06df654c637b7f29f019d356f",
-                "reference": "ec7ac2bd2b7fa7f06df654c637b7f29f019d356f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/a53db77b55a035453d7229e0c3069f8591cb4cb6",
+                "reference": "a53db77b55a035453d7229e0c3069f8591cb4cb6",
                 "shasum": ""
             },
             "require": {
@@ -3249,7 +3249,7 @@
                 "laminas/laminas-diactoros": "^1.8",
                 "laminas/laminas-feed": "^2.12",
                 "masterminds/html5": "^2.1",
-                "pear/archive_tar": "^1.4.11",
+                "pear/archive_tar": "^1.4.12",
                 "php": "^7.0.8",
                 "psr/log": "^1.0",
                 "stack/builder": "^1.0",
@@ -3444,11 +3444,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2021-01-06T23:44:11+00:00"
+            "time": "2021-01-19T23:11:00+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3495,7 +3495,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -3533,16 +3533,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "06d3680bf56fda259679f538ef90da44770f92a8"
+                "reference": "7a940fd5b64d2b22366680e2a60d96bf2c10089d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/06d3680bf56fda259679f538ef90da44770f92a8",
-                "reference": "06d3680bf56fda259679f538ef90da44770f92a8",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/7a940fd5b64d2b22366680e2a60d96bf2c10089d",
+                "reference": "7a940fd5b64d2b22366680e2a60d96bf2c10089d",
                 "shasum": ""
             },
             "require": {
@@ -3554,7 +3554,7 @@
                 "doctrine/common": "v2.7.3",
                 "doctrine/inflector": "v1.2.0",
                 "doctrine/lexer": "1.0.2",
-                "drupal/core": "8.9.12",
+                "drupal/core": "8.9.13",
                 "easyrdf/easyrdf": "0.9.1",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
@@ -3567,7 +3567,7 @@
                 "laminas/laminas-zendframework-bridge": "1.0.4",
                 "masterminds/html5": "2.3.0",
                 "paragonie/random_compat": "v9.99.99",
-                "pear/archive_tar": "1.4.11",
+                "pear/archive_tar": "1.4.12",
                 "pear/console_getopt": "v1.4.3",
                 "pear/pear-core-minimal": "v1.10.10",
                 "pear/pear_exception": "v1.0.1",
@@ -3611,7 +3611,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2021-01-06T23:44:11+00:00"
+            "time": "2021-01-19T23:11:00+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -6263,35 +6263,36 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "3.9.0",
+            "version": "4.1.10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "8.x-3.9"
+                "reference": "4.1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-3.9.zip",
-                "reference": "8.x-3.9",
-                "shasum": "185913ab3a7c3daf44babb7e7d13f43d56b22ef5"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.10.zip",
+                "reference": "4.1.10",
+                "shasum": "b91fb84785d92b26b9c456e4491aa07553c397b3"
             },
             "require": {
-                "consolidation/annotated-command": "^2.12",
-                "drupal/core": "^8.7.7 || ^9",
-                "drupal/search_api": "~1.15",
+                "consolidation/annotated-command": "^2.12|^4.1",
+                "drupal/core": "^8.8 || ^9",
+                "drupal/search_api": "~1.17",
                 "ext-dom": "*",
                 "ext-json": "*",
                 "ext-simplexml": "*",
-                "maennchen/zipstream-php": "^1.2.0",
-                "php": "^7.1.3",
-                "solarium/solarium": "~5.0.3|~5.1.5",
-                "zendframework/zend-stdlib": "^3.0.1"
+                "laminas/laminas-stdlib": "^3.2",
+                "maennchen/zipstream-php": "^1.2|^2.0",
+                "php": "^7.2",
+                "solarium/solarium": "^6.0.4"
             },
             "conflict": {
+                "drupal/acquia_search_solr": "<1.0.0-beta8",
                 "drupal/search_api_solr_multilingual": "<3.0.0"
             },
             "require-dev": {
-                "drupal/devel": "2.x-dev",
+                "drupal/devel": "^4.0",
                 "drupal/facets": "1.x-dev",
                 "drupal/geofield": "1.x-dev",
                 "drupal/search_api_autocomplete": "1.x-dev",
@@ -6309,8 +6310,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.9",
-                    "datestamp": "1581700341",
+                    "version": "4.1.10",
+                    "datestamp": "1605773021",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6324,7 +6325,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -6357,7 +6358,7 @@
             "support": {
                 "source": "http://git.drupal.org/project/search_api_solr.git",
                 "issues": "https://www.drupal.org/project/issues/search_api_solr",
-                "irc": "https://drupalchat.me/channel/search"
+                "chat": "https://drupalchat.me/channel/search"
             }
         },
         {
@@ -7435,29 +7436,34 @@
         },
         {
             "name": "drupal/whatlinkshere",
-            "version": "1.5.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/whatlinkshere.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/whatlinkshere-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "02214e42473381e6a61f1449c93136910668274e"
+                "url": "https://ftp.drupal.org/files/projects/whatlinkshere-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "991f16731620e3ebd2ba7d4ae0d223a8a99d83d1"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1589375324",
+                    "version": "8.x-1.7",
+                    "datestamp": "1611582479",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
                     }
                 }
             },
@@ -7857,16 +7863,16 @@
         },
         {
             "name": "gasparesganga/php-shapefile",
-            "version": "v3.3.3",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gasparesganga/php-shapefile.git",
-                "reference": "839475272ef8c7585f5afa31939c95d6d02371a6"
+                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/839475272ef8c7585f5afa31939c95d6d02371a6",
-                "reference": "839475272ef8c7585f5afa31939c95d6d02371a6",
+                "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/3c7e4cb80edb40ff184e3971458577a04845f8da",
+                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da",
                 "shasum": ""
             },
             "require": {
@@ -7901,7 +7907,7 @@
                 "shp",
                 "wkt"
             ],
-            "time": "2020-09-17T08:22:36+00:00"
+            "time": "2021-01-23T08:10:45+00:00"
         },
         {
             "name": "giggsey/libphonenumber-for-php",
@@ -8816,23 +8822,23 @@
         },
         {
             "name": "maennchen/zipstream-php",
-            "version": "1.2.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "6373eefe0b3274d7b702d81f2c99aa977ff97dc2"
+                "reference": "c4c5803cc1f93df3d2448478ef79394a5981cc58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/6373eefe0b3274d7b702d81f2c99aa977ff97dc2",
-                "reference": "6373eefe0b3274d7b702d81f2c99aa977ff97dc2",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/c4c5803cc1f93df3d2448478ef79394a5981cc58",
+                "reference": "c4c5803cc1f93df3d2448478ef79394a5981cc58",
                 "shasum": ""
             },
             "require": {
-                "ext-mbstring": "*",
                 "myclabs/php-enum": "^1.5",
                 "php": ">= 7.1",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0",
+                "symfony/polyfill-mbstring": "^1.0"
             },
             "require-dev": {
                 "ext-zip": "*",
@@ -8856,12 +8862,12 @@
                     "email": "pabs@pablotron.org"
                 },
                 {
-                    "name": "Jesse Donat",
-                    "email": "donatj@gmail.com"
-                },
-                {
                     "name": "Jonatan Männchen",
                     "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com"
                 },
                 {
                     "name": "András Kolesár",
@@ -8873,7 +8879,7 @@
                 "stream",
                 "zip"
             ],
-            "time": "2019-07-17T11:01:58+00:00"
+            "time": "2020-05-30T13:11:16+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -9164,16 +9170,16 @@
         },
         {
             "name": "pear/archive_tar",
-            "version": "1.4.11",
+            "version": "1.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Archive_Tar.git",
-                "reference": "17d355cb7d3c4ff08e5729f29cd7660145208d9d"
+                "reference": "19bb8e95490d3e3ad92fcac95500ca80bdcc7495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/17d355cb7d3c4ff08e5729f29cd7660145208d9d",
-                "reference": "17d355cb7d3c4ff08e5729f29cd7660145208d9d",
+                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/19bb8e95490d3e3ad92fcac95500ca80bdcc7495",
+                "reference": "19bb8e95490d3e3ad92fcac95500ca80bdcc7495",
                 "shasum": ""
             },
             "require": {
@@ -9226,7 +9232,7 @@
                 "archive",
                 "tar"
             ],
-            "time": "2020-11-19T22:10:24+00:00"
+            "time": "2021-01-18T19:32:54+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -9499,6 +9505,153 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
+            "name": "psr/http-client",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-client.git",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP clients",
+            "homepage": "https://github.com/php-fig/http-client",
+            "keywords": [
+                "http",
+                "http-client",
+                "psr",
+                "psr-18"
+            ],
+            "time": "2020-06-29T06:28:15+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2019-04-30T12:38:16+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -9597,16 +9750,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.5",
+            "version": "v0.10.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "7c710551d4a2653afa259c544508dc18a9098956"
+                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7c710551d4a2653afa259c544508dc18a9098956",
-                "reference": "7c710551d4a2653afa259c544508dc18a9098956",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6f990c19f91729de8b31e639d6e204ea59f19cf3",
+                "reference": "6f990c19f91729de8b31e639d6e204ea59f19cf3",
                 "shasum": ""
             },
             "require": {
@@ -9635,7 +9788,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.10.x-dev"
+                    "dev-main": "0.10.x-dev"
                 }
             },
             "autoload": {
@@ -9665,7 +9818,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-12-04T02:51:30+00:00"
+            "time": "2021-01-18T15:53:43+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -9753,33 +9906,37 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "5.1.6",
+            "version": "6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "9e073cc32c0144fc23215fe205cd0cb44e68b6ad"
+                "reference": "efdbb4c3cad33fbb8ac971f45405f5c1856b506b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/9e073cc32c0144fc23215fe205cd0cb44e68b6ad",
-                "reference": "9e073cc32c0144fc23215fe205cd0cb44e68b6ad",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/efdbb4c3cad33fbb8ac971f45405f5c1856b506b",
+                "reference": "efdbb4c3cad33fbb8ac971f45405f5c1856b506b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.1.3",
-                "symfony/event-dispatcher": "^4.3 || ^5.0"
+                "php": "^7.2 || ^8.0",
+                "psr/event-dispatcher": "^1.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "symfony/event-dispatcher-contracts": "^1.0 || ^2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "guzzlehttp/guzzle": "^3.8 || ^6.2",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^8.0",
-                "squizlabs/php_codesniffer": "^3.4",
-                "zendframework/zend-http": "^2.8"
-            },
-            "suggest": {
-                "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
+                "escapestudios/symfony2-coding-standard": "^3.11",
+                "guzzlehttp/guzzle": "^7.2",
+                "nyholm/psr7": "^1.2",
+                "php-http/guzzle7-adapter": "^0.1",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^8.5 || ^9.4",
+                "roave/security-advisories": "dev-master",
+                "symfony/event-dispatcher": "^4.3 || ^5.0"
             },
             "type": "library",
             "autoload": {
@@ -9794,7 +9951,7 @@
             "authors": [
                 {
                     "name": "See GitHub contributors",
-                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
+                    "homepage": "https://github.com/solariumphp/solarium/contributors"
                 }
             ],
             "description": "PHP Solr client",
@@ -9804,7 +9961,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2020-02-14T15:18:59+00:00"
+            "time": "2020-11-05T17:28:49+00:00"
         },
         {
             "name": "stack/builder",
@@ -10375,16 +10532,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.3.4",
+            "version": "v4.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2"
+                "reference": "75f99d7489409207d09c6cd75a6c773ccbb516d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
-                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/75f99d7489409207d09c6cd75a6c773ccbb516d5",
+                "reference": "75f99d7489409207d09c6cd75a6c773ccbb516d5",
                 "shasum": ""
             },
             "require": {
@@ -10441,7 +10598,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T08:55:16+00:00"
+            "time": "2020-01-09T13:17:05+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -11990,16 +12147,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "e1d57f62db3db00d9139078cbedf262280701479"
+                "reference": "b786088918a884258c9e3e27405c6a4cf2ee246e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/e1d57f62db3db00d9139078cbedf262280701479",
-                "reference": "e1d57f62db3db00d9139078cbedf262280701479",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b786088918a884258c9e3e27405c6a4cf2ee246e",
+                "reference": "b786088918a884258c9e3e27405c6a4cf2ee246e",
                 "shasum": ""
             },
             "require": {
@@ -12009,7 +12166,7 @@
             "require-dev": {
                 "ext-filter": "*",
                 "ext-pcre": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7.27"
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20"
             },
             "suggest": {
                 "ext-filter": "Required to use the boolean validator.",
@@ -12048,7 +12205,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-07-14T17:54:18+00:00"
+            "time": "2021-01-20T14:39:13+00:00"
         },
         {
             "name": "webflo/drupal-finder",
@@ -12856,7 +13013,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -13829,21 +13986,21 @@
         },
         {
             "name": "nette/bootstrap",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/bootstrap.git",
-                "reference": "87b56eac5de9359f95b587304e42e918847282da"
+                "reference": "efe6c30fc009451f59fe56f3b309eb85c48b2baf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/bootstrap/zipball/87b56eac5de9359f95b587304e42e918847282da",
-                "reference": "87b56eac5de9359f95b587304e42e918847282da",
+                "url": "https://api.github.com/repos/nette/bootstrap/zipball/efe6c30fc009451f59fe56f3b309eb85c48b2baf",
+                "reference": "efe6c30fc009451f59fe56f3b309eb85c48b2baf",
                 "shasum": ""
             },
             "require": {
                 "nette/di": "^3.0.5",
-                "nette/utils": "^3.0",
+                "nette/utils": "^3.2.1",
                 "php": ">=7.2 <8.1"
             },
             "conflict": {
@@ -13902,7 +14059,7 @@
                 "configurator",
                 "nette"
             ],
-            "time": "2020-12-31T19:03:24+00:00"
+            "time": "2021-01-25T00:31:21+00:00"
         },
         {
             "name": "nette/di",
@@ -14102,16 +14259,16 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v3.5.1",
+            "version": "v3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "fe54415cd22d01bee1307a608058bf131978610a"
+                "reference": "41dcc5d1cb322835e5950a76515166c90923c6b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/fe54415cd22d01bee1307a608058bf131978610a",
-                "reference": "fe54415cd22d01bee1307a608058bf131978610a",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/41dcc5d1cb322835e5950a76515166c90923c6b7",
+                "reference": "41dcc5d1cb322835e5950a76515166c90923c6b7",
                 "shasum": ""
             },
             "require": {
@@ -14162,7 +14319,7 @@
                 "php",
                 "scaffolding"
             ],
-            "time": "2020-11-04T11:26:26+00:00"
+            "time": "2021-01-19T13:02:23+00:00"
         },
         {
             "name": "nette/robot-loader",
@@ -14229,16 +14386,16 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "3b6b9702a2a54170c81d157b65570fac871caba0"
+                "reference": "9962564311f4affebd63f9cab014ab69266306ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/3b6b9702a2a54170c81d157b65570fac871caba0",
-                "reference": "3b6b9702a2a54170c81d157b65570fac871caba0",
+                "url": "https://api.github.com/repos/nette/schema/zipball/9962564311f4affebd63f9cab014ab69266306ce",
+                "reference": "9962564311f4affebd63f9cab014ab69266306ce",
                 "shasum": ""
             },
             "require": {
@@ -14253,7 +14410,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -14283,7 +14440,7 @@
                 "config",
                 "nette"
             ],
-            "time": "2020-12-20T22:18:49+00:00"
+            "time": "2021-01-21T14:49:23+00:00"
         },
         {
             "name": "nette/utils",
@@ -15239,25 +15396,27 @@
         },
         {
             "name": "previousnext/phpunit-finder",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/previousnext/phpunit-finder.git",
-                "reference": "40d9946365d972f7266d4a84ef2298277fa01507"
+                "reference": "4e3ee1b77efda62a195bfed67e4759b9388b803a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/previousnext/phpunit-finder/zipball/40d9946365d972f7266d4a84ef2298277fa01507",
-                "reference": "40d9946365d972f7266d4a84ef2298277fa01507",
+                "url": "https://api.github.com/repos/previousnext/phpunit-finder/zipball/4e3ee1b77efda62a195bfed67e4759b9388b803a",
+                "reference": "4e3ee1b77efda62a195bfed67e4759b9388b803a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
+                "php": "^7.2||^8.0",
                 "phpunit/phpunit": "^6.4||^7.0||^8.0",
                 "symfony/console": "^3.4||^4.4"
             },
             "require-dev": {
-                "drupal/coder": ">=8.2.12"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "drupal/coder": "~8.3.12",
+                "phpcompatibility/php-compatibility": "^9.3"
             },
             "bin": [
                 "phpunit-finder"
@@ -15283,7 +15442,7 @@
                 }
             ],
             "description": "PHP lib for finding and outputting all tests from a phpunit.xml config file.",
-            "time": "2020-06-17T06:17:12+00:00"
+            "time": "2021-01-20T01:30:28+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -15946,16 +16105,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.10.1",
+            "version": "v2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "c6716a98fe7bee25d31306e14fb62c3ffa16d70a"
+                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/c6716a98fe7bee25d31306e14fb62c3ffa16d70a",
-                "reference": "c6716a98fe7bee25d31306e14fb62c3ffa16d70a",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/0775e0c683badad52c03b11c2cd86a9fdecb937a",
+                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a",
                 "shasum": ""
             },
             "require": {
@@ -15990,7 +16149,7 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
-            "time": "2020-12-12T18:28:57+00:00"
+            "time": "2021-01-08T16:31:05+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -16259,7 +16418,7 @@
         {
             "alias": "3.4.41",
             "alias_normalized": "3.4.41.0",
-            "version": "4.3.4.0",
+            "version": "4.3.11.0",
             "package": "symfony/event-dispatcher"
         }
     ],
@@ -16271,7 +16430,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/media_browser_responsive_images": 20,
         "drupal/search_api_location": 15,
-        "drupal/search_api_spellcheck": 15,
+        "drupal/search_api_spellcheck": 10,
         "drupal/taxonomy_manager": 15,
         "drupal/telephone_plus": 20,
         "drupal/ultimate_cron": 15,
