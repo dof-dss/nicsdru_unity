@@ -18,6 +18,7 @@ permissions:
   - 'add terms in site_topics'
   - 'add terms in themes'
   - 'administer book outlines'
+  - 'administer main menu items'
   - 'administer redirects'
   - 'audit content'
   - 'create application content'
