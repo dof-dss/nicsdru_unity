@@ -143,7 +143,6 @@
     <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
   </analyzer>
 </fieldType>
-<fieldType name="collated_ja" class="solr.ICUCollationField" locale="ja" strength="primary" caseLevel="false"/>
 <!--
   Language Undefined Text Field
   7.0.0
