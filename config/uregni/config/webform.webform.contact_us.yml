@@ -12,7 +12,7 @@ id: contact_us
 title: 'Contact us'
 description: ''
 category: ''
-elements: "your_details:\n  '#type': fieldset\n  '#title': 'Your details'\n  '#description_display': invisible\n  your_name:\n    '#type': textfield\n    '#title': 'Your name'\n    '#required': true\n  your_email:\n    '#type': email\n    '#title': 'Your email'\n    '#required': true\n  address_line_1:\n    '#type': textfield\n    '#title': 'Address line 1'\n  address_line_2:\n    '#type': textfield\n    '#title': 'Address line 2'\n  postcode:\n    '#type': textfield\n    '#title': Postcode\n    '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'\n    '#pattern_error': 'Enter a valid UK postcode.'\n  telephone:\n    '#type': tel\n    '#title': Telephone\n    '#pattern': '^[0-9\\(\\) \\+\\-]{6,20}$'\n    '#pattern_error': 'Enter a valid phone number.'\nfeedback:\n  '#type': fieldset\n  '#title': Feedback\n  your_enquiry:\n    '#type': select\n    '#title': 'What is the nature of your enquiry?'\n    '#title_display': inline\n    '#options':\n      Feedback/Complaint: Feedback/Complaint\n    '#empty_option': 'General Enquiry'\n  message:\n    '#type': textarea\n    '#title': Message\n    '#maxlength': 750\n    '#placeholder': 'Plain text only, 750 characters maximum.'\n    '#required': true\n    '#required_error': 'Please fill in this field'"
+elements: "your_details:\n  '#type': fieldset\n  '#title': 'Your details'\n  '#description_display': invisible\n  your_name:\n    '#type': textfield\n    '#title': 'Your name'\n    '#required': true\n  your_email:\n    '#type': email\n    '#title': 'Your email'\n    '#required': true\n  address_line_1:\n    '#type': textfield\n    '#title': 'Address line 1'\n  address_line_2:\n    '#type': textfield\n    '#title': 'Address line 2'\n  postcode:\n    '#type': textfield\n    '#title': Postcode\n    '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'\n    '#pattern_error': 'Enter a valid UK postcode.'\n  telephone:\n    '#type': tel\n    '#title': Telephone\n    '#pattern': '^[0-9\\(\\) \\+\\-]{6,20}$'\n    '#pattern_error': 'Enter a valid phone number.'\nfeedback:\n  '#type': fieldset\n  '#title': Feedback\n  your_enquiry:\n    '#type': select\n    '#title': 'What is the nature of your enquiry?'\n    '#title_display': inline\n    '#options':\n      'General Enquiry': 'General Enquiry'\n      Feedback/Complaint: Feedback/Complaint\n    '#empty_option': 'General Enquiry'\n    '#empty_value': 'General Enquiry'\n  message:\n    '#type': textarea\n    '#title': Message\n    '#maxlength': 750\n    '#placeholder': 'Plain text only, 750 characters maximum.'\n    '#required': true\n    '#required_error': 'Please fill in this field'"
 css: ''
 javascript: ''
 settings:
@@ -125,21 +125,25 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
-  limit_user_message: ''
+  limit_user: 5
+  limit_user_interval: 86400
+  limit_user_message: 'Maximum submissions per user per day is 5. You have reached your maximum.'
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: none
-  purge_days: null
+  purge: completed
+  purge_days: 1
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
   token_view: false
   token_update: false
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -191,6 +195,7 @@ handlers:
   email:
     id: email
     label: Email
+    notes: ''
     handler_id: email
     status: true
     conditions: {  }
@@ -207,8 +212,8 @@ handlers:
       from_mail: '[webform_submission:values:your_email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:your_name:raw]'
-      subject: 'Feedback form submission'
-      body: "&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\r\n[webform_submission:values]"
+      subject: 'Feedback form submission from: Contact us'
+      body: "Submitted on [webform_submission:created]<br />\r\nSubmitted values are:<br />\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
