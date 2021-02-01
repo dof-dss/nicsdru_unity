@@ -44,6 +44,11 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
+  date_facet_drilldown:
+    processor_id: date_facet_drilldown
+    weights:
+      build: 1
+    settings: {  }
   date_item:
     processor_id: date_item
     weights:
