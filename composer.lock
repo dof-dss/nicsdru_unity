@@ -1988,16 +1988,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.11",
+            "version": "v0.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "09c4f59fc8d48afb3925a44e04dc0a1d55d5bf39"
+                "reference": "2c7ff03a72752d346e70276cf158473d73d88c02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/09c4f59fc8d48afb3925a44e04dc0a1d55d5bf39",
-                "reference": "09c4f59fc8d48afb3925a44e04dc0a1d55d5bf39",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/2c7ff03a72752d346e70276cf158473d73d88c02",
+                "reference": "2c7ff03a72752d346e70276cf158473d73d88c02",
                 "shasum": ""
             },
             "require": {
@@ -2020,7 +2020,7 @@
                 "drupal",
                 "theme"
             ],
-            "time": "2020-12-16T09:28:50+00:00"
+            "time": "2021-02-01T12:34:30+00:00"
         },
         {
             "name": "drupal/address",
