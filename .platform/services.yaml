@@ -13,6 +13,10 @@ db:
       - fictcommissiondb
       - liofadb
       - uregnidb
+      - odscnidb
+      - attorneygeneralnidb
+      - employmenttribunalsnidb
+      - hatecrimereviewnidb
     endpoints:
       fictcommission:
         default_schema: fictcommissiondb
@@ -26,6 +30,18 @@ db:
         default_schema: liofadb
         privileges:
           liofadb: admin
+      odscni:
+        default_schema: odscnidb
+        priviledges: admin
+      attorneygeneralni:
+        default_schema: attorneygeneralnidb
+        priviledges: admin
+      employmenttribunalsni:
+        default_schema: employmenttribunalsnidb
+        priviledges: admin
+      hatecrimereviewni:
+        default_schema: hatecrimereviewnidb
+        priviledges: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
