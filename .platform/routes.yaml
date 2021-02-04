@@ -40,3 +40,59 @@
 "https://www.liofa.eu.{default}/":
   type: redirect
   to: "https://liofa.eu.{default}/"
+
+"https://odscni.org.uk.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: true
+    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
+    default_ttl: 3600
+    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://www.odscni.org.uk.{default}/":
+  type: redirect
+  to: "https://odscni.org.uk.{default}/"
+
+"https://attorneygeneralni.gov.uk.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: true
+    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
+    default_ttl: 3600
+    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://www.attorneygeneralni.gov.uk.{default}/":
+  type: redirect
+  to: "https://attorneygeneralni.gov.uk.{default}/"
+
+"https://employmenttribunalsni.co.uk.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: true
+    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
+    default_ttl: 3600
+    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://www.employmenttribunalsni.co.uk.{default}/":
+  type: redirect
+  to: "https://employmenttribunalsni.co.uk.{default}/"
+
+"https://hatecrimereviewni.org.uk.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: true
+    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
+    default_ttl: 3600
+    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://www.hatecrimereviewni.org.uk.{default}/":
+  type: redirect
+  to: "https://hatecrimereviewni.org.uk.{default}/"
