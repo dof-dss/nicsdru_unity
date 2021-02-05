@@ -4,6 +4,10 @@ proxy:
     - liofa.eu.lndo.site
     - fictcommission.org.lndo.site
     - community-relations.org.uk.lndo.site
+    - odscni.org.uk.lndo.site
+    - attorneygeneralni.gov.uk.lndo.site
+    - employmenttribunalsni.co.uk.lndo.site
+    - hatecrimereviewni.org.uk.lndo.site
 services:
   uregni_solr:
     type: solr:7
