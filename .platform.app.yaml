@@ -21,6 +21,10 @@ relationships:
   fictcommission: 'db:fictcommission'
   uregni: 'db:uregni'
   liofa: 'db:liofa'
+  odscni: 'db:odscni'
+  attorneygeneralni: 'db:attorneygeneralni'
+  employmenttribunalsni: 'db:employmenttribunalsni'
+  hatecrimereviewni: 'db:hatecrimereviewni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 20480
@@ -60,7 +64,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni liofa fictcommission
+    for site in uregni liofa fictcommission odscni attorneygeneralni employmenttribunalsni hatecrimereviewni
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/uregni
