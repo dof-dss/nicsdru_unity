@@ -32,16 +32,20 @@ db:
           liofadb: admin
       odscni:
         default_schema: odscnidb
-        priviledges: admin
+        privileges:
+          odscnidb: admin
       attorneygeneralni:
         default_schema: attorneygeneralnidb
-        priviledges: admin
+        privileges:
+          attorneygeneralnidb: admin
       employmenttribunalsni:
         default_schema: employmenttribunalsnidb
-        priviledges: admin
+        privileges:
+          employmenttribunalsnidb: admin
       hatecrimereviewni:
         default_schema: hatecrimereviewnidb
-        priviledges: admin
+        privileges:
+          hatecrimereviewnidb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
