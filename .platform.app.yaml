@@ -71,7 +71,7 @@ hooks:
       drush -l $site -y cache-rebuild
       drush -l $site -y updatedb
       drush -l $site -y config-import
-      drush -l $site import_all_if_installed safe
+      drush -l $site import-all-if-installed safe
     done
 
 # The configuration of app when it is exposed to the web.
