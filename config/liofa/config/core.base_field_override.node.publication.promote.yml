@@ -1,11 +1,11 @@
-uuid: e45027b9-4584-4e38-9824-d0d92e7dea21
+uuid: 8dec6746-2773-4144-a447-cd61402ebcb3
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.publication
 _core:
-  default_config_hash: stiLuS1DBK9I8i5YYXy6WkfxpmI1-nGGaL0xmU67R-8
+  default_config_hash: RZReXxGt6xMN6rIDO654C-FmUbPmLjNOLeddn_iFPTc
 id: node.publication.promote
 field_name: promote
 entity_type: node

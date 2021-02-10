@@ -1,9 +1,9 @@
-uuid: 2dd3daa3-598a-433e-b4ee-53c06383d6c4
+uuid: 52583c14-81da-4605-8ef4-b73e9e13ce2d
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: ZYXUW_x2nfhQCeL3sP1FPwEpBfP-bE_fXXay7--0Zuw
+  default_config_hash: Da5YWhJdKLxaJ9gDRI1u5oCbm5WBxiiDgA4M1QrOEPQ
 id: '403'
 label: '403 access denied'
 tags:

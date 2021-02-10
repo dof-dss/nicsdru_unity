@@ -1,0 +1,42 @@
+uuid: 5e8a3771-02de-49fd-9fc6-7c3d6bca776a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - origins_toc
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  origins_toc:
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    show_message_after_update: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: XQ1Kus2sR_0ixCd47EgR3B2ecREcxD7wjkdONJYh7EA
+name: 'Featured content list'
+type: featured_content_list
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

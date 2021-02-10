@@ -1,0 +1,43 @@
+uuid: de739a57-6b2d-4623-9291-c41b025f8808
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - origins_toc
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  origins_toc:
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    show_message_after_update: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: Y4v15EG6vw4NTve8qt5OBPx8tBcq2Rl3Eo_BvtwO1gM
+name: Feature
+type: feature
+description: 'Use this content type to generate items of featured content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,23 @@
+uuid: c907680e-fbfa-4d36-93a7-a8f0ad5f6697
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+_core:
+  default_config_hash: 8k2QD1JQ3Ft6W2Hp_k3lztl18RG9e7NjEAmQWjdhpdo
+id: media.video.media_library
+targetEntityType: media
+bundle: video
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_video_file: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

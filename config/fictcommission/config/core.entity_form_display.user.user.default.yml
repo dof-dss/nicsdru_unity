@@ -1,4 +1,4 @@
-uuid: 981f9df9-f7bb-4693-8a85-c54c7cf87701
+uuid: 88a7e7cb-aa91-493e-b18e-27658c340122
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     - path
     - user
 _core:
-  default_config_hash: '-E6lJyVkEClez5mIFfTpKyx0K5qD1vKt18nTTr1jcOg'
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -42,4 +42,5 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden: {  }
+hidden:
+  langcode: true

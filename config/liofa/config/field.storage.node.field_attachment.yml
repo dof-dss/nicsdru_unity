@@ -1,4 +1,4 @@
-uuid: 377863a5-6805-4bb5-90fd-881331d0814b
+uuid: f10bb74a-30df-4092-b5ac-babba92bc596
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - file
     - node
 _core:
-  default_config_hash: nCiR2GmGlzXXHoSdsl6Iprm9MlG7khSXY1I1Ob3WJus
+  default_config_hash: pSiQmTrw0f_xBBBRT8rnpsKdZVduOegcgWB37lP-lHo
 id: node.field_attachment
 field_name: field_attachment
 entity_type: node

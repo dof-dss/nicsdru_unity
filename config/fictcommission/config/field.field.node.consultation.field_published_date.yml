@@ -1,4 +1,4 @@
-uuid: 5f23fa70-0b8b-43d3-9ac8-21edcd553c14
+uuid: 2b73d4f7-7f91-446e-b3c9-8eaf3269f525
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - datetime
 _core:
-  default_config_hash: gj3JcUDlYjIgFiOzy02qQPGaSQMmn0VeiRQpkioLu4M
+  default_config_hash: JJhRyo0EyyzVhrd1T3-_NKH16AgdOgkjfObzFIqKSvI
 id: node.consultation.field_published_date
 field_name: field_published_date
 entity_type: node

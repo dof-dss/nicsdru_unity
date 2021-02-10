@@ -1,0 +1,22 @@
+uuid: 51d80fb1-0e70-48ed-896a-af92b033403c
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: 41Cktum5-qsEi_dl25nTRJ-SwbSSEvzqdq0C55THMhk
+id: node.field_next_audit_due
+field_name: field_next_audit_due
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

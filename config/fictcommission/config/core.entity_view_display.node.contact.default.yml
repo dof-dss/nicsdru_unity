@@ -1,4 +1,4 @@
-uuid: 11b440a9-2ea8-4be7-b840-6a072b8e27cc
+uuid: c9caed9a-c39a-4e31-9992-0decdae190e3
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: wd4UdqNBN_ftSHa4pVg6nvhqAkdTp0Fqks4myRc6ZtM
+  default_config_hash: qgg-RsYAiNisMuDKtiHw5pGPRa9iSBN-lOxeeY3s20I
 id: node.contact.default
 targetEntityType: node
 bundle: contact
@@ -27,4 +27,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  langcode: true
