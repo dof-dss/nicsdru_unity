@@ -1,4 +1,4 @@
-uuid: d5f7ee39-9759-487e-873a-910315f0aad1
+uuid: 2295dd03-339f-45d8-998f-82f1620749dd
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
     - options
     - user
 _core:
-  default_config_hash: 2yvOmXsvA_VJWBnnxiJjEJq7L23YylGKizYail6Zaw0
+  default_config_hash: qqTZoIAJxc9ZRH_eys3JD9s1IB5qDl4Z14Db1fgNxtA
 id: node.link.default
 targetEntityType: node
 bundle: link
@@ -41,4 +41,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,38 @@
+uuid: 9ab32e66-37a9-4bd4-bc6b-62f72cc68c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.nigov_portrait_med_450_x1
+    - image.style.nigov_portrait_med_900_x2
+    - image.style.nigov_portrait_xl_1240_x2
+    - image.style.nigov_portrait_xl_620_x1
+  theme:
+    - nicsdru_unity_theme
+_core:
+  default_config_hash: gO5iwZ9o0vHcOTTWqdTszpngaYKgxgsQKdUVTq1m_c0
+id: portrait_float_expandable
+label: 'Portrait float expandable'
+image_style_mappings:
+  -
+    breakpoint_id: nicsdru_unity_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: nigov_portrait_xl_620_x1
+  -
+    breakpoint_id: nicsdru_unity_theme.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: nigov_portrait_xl_1240_x2
+  -
+    breakpoint_id: nicsdru_unity_theme.base
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: nigov_portrait_med_450_x1
+  -
+    breakpoint_id: nicsdru_unity_theme.base
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: nigov_portrait_med_900_x2
+breakpoint_group: nicsdru_unity_theme
+fallback_image_style: nigov_portrait_xl_620_x1

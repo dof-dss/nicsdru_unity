@@ -1,4 +1,4 @@
-uuid: b20b455f-c770-4e38-b6a2-1cc99ea10dc0
+uuid: db61b7e7-dde7-487a-ae57-f460059e4a16
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 2sNOVaWjAQbiyd9LAfkFc3sYBaMm2nOgF8PlTk_-DC4
+  default_config_hash: 6fXj4qBUTRiGsIxiJQSurVAYS3hXMBkDJoinCTnitp4
 id: node.profile.teaser
 targetEntityType: node
 bundle: profile
@@ -34,3 +34,4 @@ content:
 hidden:
   field_photo: true
   field_summary: true
+  langcode: true

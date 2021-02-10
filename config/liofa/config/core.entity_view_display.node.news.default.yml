@@ -1,9 +1,10 @@
-uuid: 210b78d2-97a9-4c95-b038-55e11b998af5
+uuid: 7d76d016-4ae5-4db5-ad83-93bc0675faf9
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_summary
@@ -15,7 +16,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: _v4X_1cfDFziIaQs5YtXu7LCfHP6w3APjbA6F2h2py0
+  default_config_hash: etO7MOX5rGlnrZZHrQ8BDzp6OmFGZXuI_Tm7_GUlU_U
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -66,4 +67,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_meta_tags: true
+  langcode: true

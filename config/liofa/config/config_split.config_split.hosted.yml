@@ -1,11 +1,13 @@
-uuid: 3e35e375-2447-419b-b42c-cf933637aa6b
+uuid: 6f0f9387-3829-45fa-8b04-2425c1b51430
 langcode: en
 status: false
 dependencies: {  }
+_core:
+  default_config_hash: 1X24INUtQNTMuB9BaIvzqkFncJ9MAUlpYtar7E_IB-0
 id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
-folder: ../config/liofa/hosted
+folder: ../config/uregni/hosted
 module: {  }
 theme: {  }
 blacklist: {  }

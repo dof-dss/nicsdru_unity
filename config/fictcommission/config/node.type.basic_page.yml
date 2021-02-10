@@ -1,4 +1,4 @@
-uuid: f52ac042-4ec6-40f5-96e4-c3629a4582b2
+uuid: a428508a-6887-4c36-9830-a4acacc7b4d3
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: KBgxXt24f5UgPK1U1oTlk8Yrugb1Mo4lIyoLqT6TFiU
+  default_config_hash: En2bzcXy3f-IX9BqWTsiLvqKn5f-Ihs77tQTY17Ltnw
 name: 'Basic page'
 type: basic_page
 description: 'Use this content type for basic pages on your site.'

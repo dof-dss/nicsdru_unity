@@ -1,4 +1,4 @@
-uuid: 1154e23e-7b33-404a-b782-b4d5c23be62b
+uuid: c393e6ef-b8d8-40bb-9acb-aaafbb2e3c22
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - datetime
     - node
 _core:
-  default_config_hash: FnfZhL5VJ6EgRsx2LKY5lRmbhuXhbctiTcdd6aUdNxA
+  default_config_hash: 41Cktum5-qsEi_dl25nTRJ-SwbSSEvzqdq0C55THMhk
 id: node.field_next_audit_due
 field_name: field_next_audit_due
 entity_type: node

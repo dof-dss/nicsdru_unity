@@ -1,4 +1,4 @@
-uuid: 3c4380ca-5454-4146-bfb3-47f24d49421b
+uuid: 428b2da3-8c29-4cdf-a467-47d84207cc89
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: KLdSmprN2a3o-jiy1ITPJGabw-Wxd2QSTZL5y2tmEHg
+  default_config_hash: H2nxWCHTg7oru2XUM4qTNedu3_pJX1KUan90fu803aE
 id: node.profile.field_photo
 field_name: field_photo
 entity_type: node

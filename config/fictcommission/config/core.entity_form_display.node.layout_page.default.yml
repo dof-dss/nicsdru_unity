@@ -1,4 +1,4 @@
-uuid: 226a3605-e696-41cd-b186-d6c23ecb1258
+uuid: 5ba4b00f-95b8-454a-a2aa-16ee37b717c9
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,10 @@ dependencies:
     - node.type.layout_page
   module:
     - path
+    - scheduler
+    - scheduler_content_moderation_integration
 _core:
-  default_config_hash: FrLxkcaCgM4UgIpEuOeJ10RjEviV8g1pKI0cZWrcJB0
+  default_config_hash: hWHiYGjFlqIwHycTIHXMfilVMoYG8QV2GE2F6fF4CwA
 id: node.layout_page.default
 targetEntityType: node
 bundle: layout_page
@@ -20,6 +22,13 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -33,6 +42,18 @@ content:
       display_label: true
     weight: 15
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -66,6 +87,23 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   body: true
   layout_builder__layout: true

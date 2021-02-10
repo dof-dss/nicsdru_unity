@@ -1,0 +1,20 @@
+uuid: ebc36da6-3428-41e7-8679-4810bdd05a62
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: En2bzcXy3f-IX9BqWTsiLvqKn5f-Ihs77tQTY17Ltnw
+name: 'Basic page'
+type: basic_page
+description: 'Use this content type for basic pages on your site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

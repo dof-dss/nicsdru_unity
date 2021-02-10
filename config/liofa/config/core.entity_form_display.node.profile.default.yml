@@ -1,4 +1,4 @@
-uuid: 17edb275-bfa4-4b55-8db7-53987ce7a90e
+uuid: 7d40f5a7-6e2e-4c9c-956a-3755e0e128da
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,11 @@ dependencies:
   module:
     - image
     - path
+    - scheduler
+    - scheduler_content_moderation_integration
     - text
 _core:
-  default_config_hash: 98YJvv__reoKeUNA0diRbN8zRVXDYglxLe96rqz9MBs
+  default_config_hash: CS_F8HXQDoCs5-Wz8mbP3HgjPJh6uId2lDoImc1fUjg
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -50,6 +52,13 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -62,6 +71,18 @@ content:
       display_label: true
     weight: 15
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -95,4 +116,21 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

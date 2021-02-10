@@ -1,9 +1,9 @@
-uuid: e0937393-25cb-4d94-b1b5-ff2443e7ccff
+uuid: 2bb51d31-e590-4a6b-9fe7-1bb1cf03205a
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 70bSXdfg3nlJ_VvJ6BdyAONpvgMBG9FgnlkiIaihgxU
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
 id: front
 label: 'Front page'
 tags:

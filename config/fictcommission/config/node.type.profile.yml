@@ -1,4 +1,4 @@
-uuid: 2ef748cf-de0e-4078-82f2-5c01f84d0903
+uuid: 24241671-0037-40a6-8949-768828a71acf
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: 8oTzNpg52AXiK_g-47Tu80JeTX9bU5cicHIrgwx0vFU
+  default_config_hash: WZNB9ctrBtz3s3ruBQgjYZyaZcU2DbNU_iOgyaN8yJM
 name: Profile
 type: profile
 description: 'Use this content type for profiles.'

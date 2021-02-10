@@ -1,4 +1,4 @@
-uuid: 3af2ad75-a0c3-42a0-8ac5-e1b696eb3cd5
+uuid: b17f2f59-f229-41ee-b00f-1a0566ce7dad
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: lepjnMhreFGZZ5tISJQUK8BTd8mcfP_tCyFAJ-RidQM
+  default_config_hash: 94_MR61n9melPGY7eehAAykfpbRtKLqN6Dgbu3pT790
 name: News
 type: news
 description: 'Use this content type for news items, press releases and announcements.'
