@@ -1,4 +1,4 @@
-uuid: 577b53f2-31d7-47e7-b765-f639e53429b5
+uuid: 235ec6f1-4e3a-4a53-b92c-370698fca3b5
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: R5-Hv6nudUrMqcIBaXPS87V0b9QHZZVAQaOFLUXAqgI
+  default_config_hash: ua6iM3gD-MGUkUXC9QH-US2bZ6IPRXIJafieUFFfMIo
 id: node.basic_page.teaser
 targetEntityType: node
 bundle: basic_page
@@ -29,4 +29,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  langcode: true

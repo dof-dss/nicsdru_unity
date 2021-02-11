@@ -1,4 +1,4 @@
-uuid: 21f75f48-0e25-4764-99e9-b416f42a08f0
+uuid: d3244bdf-5a67-4ef7-aa35-de0aea55edd5
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: JTIgHM2ZHKT8XCYfoXx008957ADRrmQH6a3FyvhlwLw
+  default_config_hash: Qg3m7rmc1j1dBqLJn6_N8rah72nWZ22-FQqWFnnnZV8
 id: node.publication.teaser
 targetEntityType: node
 bundle: publication
@@ -38,3 +38,4 @@ hidden:
   field_publication_type: true
   field_published_date: true
   field_summary: true
+  langcode: true

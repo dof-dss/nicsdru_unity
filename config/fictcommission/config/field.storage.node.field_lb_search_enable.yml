@@ -1,11 +1,11 @@
-uuid: 9f6a9793-6675-44a0-8c5f-2848cc97ed8b
+uuid: 147cf53f-b9db-4669-9ae9-ba449bdb0898
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: KngDDlWEezO5fK-f5E8nv9sxmhr9gGQpgru3RybMctk
+  default_config_hash: ReXBrh1vkNGpd9DKVUGV2zb6QhTY43BUEcxqMk3I5vc
 id: node.field_lb_search_enable
 field_name: field_lb_search_enable
 entity_type: node

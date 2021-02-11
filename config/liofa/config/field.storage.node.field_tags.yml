@@ -1,4 +1,4 @@
-uuid: 0932dba7-bd6e-4efc-9340-2740e9b01e1b
+uuid: 1b293e1d-2b08-45b2-bd44-f3e4b5f78ede
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - node
     - taxonomy
 _core:
-  default_config_hash: LucfqDgJ5823haXhcbqqjWuDxX7ly5WFvEU-66WsBtQ
+  default_config_hash: WpOE_bs8Bs_HY2ns7n2r__de-xno0-Bxkqep5-MsHAs
 id: node.field_tags
 field_name: field_tags
 entity_type: node

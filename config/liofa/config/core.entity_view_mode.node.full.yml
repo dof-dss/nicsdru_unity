@@ -1,11 +1,11 @@
-uuid: c1a6e387-b2b6-4fe4-856f-294733dccb2d
+uuid: 962c2de9-7e97-48b8-8872-59758696d8b6
 langcode: en
 status: false
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 4yn93setBYOM_hgw61Ki5KJ-mYtH9VQJUafQWm_EH7c
+  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
 id: node.full
 label: 'Full content'
 targetEntityType: node

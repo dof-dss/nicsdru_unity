@@ -1,0 +1,49 @@
+uuid: d5816d3c-b533-4fcf-93dc-c640180226ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.consultation.body
+    - field.field.node.consultation.field_attachment
+    - field.field.node.consultation.field_consultation_dates
+    - field.field.node.consultation.field_email_address
+    - field.field.node.consultation.field_meta_tags
+    - field.field.node.consultation.field_postal
+    - field.field.node.consultation.field_published_date
+    - field.field.node.consultation.field_respond_online
+    - field.field.node.consultation.field_summary
+    - node.type.consultation
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: cx_IWacgy28aV4A8Ns3P4mttB8dyREhfBed9kpWfji8
+id: node.consultation.teaser
+targetEntityType: node
+bundle: consultation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachment: true
+  field_consultation_dates: true
+  field_email_address: true
+  field_meta_tags: true
+  field_postal: true
+  field_published_date: true
+  field_respond_online: true
+  field_summary: true
+  langcode: true

@@ -1,0 +1,20 @@
+uuid: 6877b127-d4bd-4832-9998-c07cb70278e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: Ehps-YqvdCRzNSsFmQmRtt5AS8_KkymeU0JQZA8VKDg
+name: Contact
+type: contact
+description: 'Use this content type for pages containing contact information.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

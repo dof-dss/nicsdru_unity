@@ -1,4 +1,4 @@
-uuid: de5e80f3-880e-4dea-8dad-bd52265b508f
+uuid: 36d1c798-b3ba-4236-b6bf-61b8d6482902
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: YTw9I2a5Tpo_HsM1K21Jn_vY-eqXKaMroWkymMisMtY
+  default_config_hash: DGMKp3ma_4-AQt-O0HIq29nZX9XwDdFha0WkRAg_AKI
 name: 'Layout page'
 type: layout_page
 description: 'Use this content type for pages on your site that use layout builder e.g. landing pages.'

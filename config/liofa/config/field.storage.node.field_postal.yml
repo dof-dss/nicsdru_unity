@@ -1,4 +1,4 @@
-uuid: a6879c6d-b24f-4ec8-a068-0d3114f3ac9a
+uuid: 280f3afb-73de-4a44-b7a7-63ef16099305
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - address
     - node
 _core:
-  default_config_hash: oBFTY5VfemehCfczOnftxlyJ7yNtj4RB8k8V-am96HI
+  default_config_hash: OYV1GzxN9zuBTN2vpvDwi71TCqW7abG_LKf03n6DHx4
 id: node.field_postal
 field_name: field_postal
 entity_type: node

@@ -1,4 +1,4 @@
-uuid: 798316b6-571b-4716-b246-bb6714d45307
+uuid: 714b9078-3c8c-4000-864f-c89aa8689fdb
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - node
     - options
 _core:
-  default_config_hash: w8MuUQ3iK5J3MFwn2C2cMQMRiUNzPe1VEDaIH3GsO8I
+  default_config_hash: KE7Z4urHN3XEgnoVtWjM_bU7i7TpMN1alfJNkbrJZ00
 id: node.field_publication_type
 field_name: field_publication_type
 entity_type: node

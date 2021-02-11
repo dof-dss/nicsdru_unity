@@ -1,4 +1,4 @@
-uuid: 5ef3765f-3231-43f0-b688-40e28b539fa0
+uuid: aa0473b4-0493-408f-9324-247549efb7c5
 langcode: en
 status: true
 dependencies:
@@ -13,9 +13,11 @@ dependencies:
     - datetime
     - file
     - path
+    - scheduler
+    - scheduler_content_moderation_integration
     - text
 _core:
-  default_config_hash: 2VChHHOiNFymXR9f3EwEYHT1BcPXdy-jlvmTDQMmcGY
+  default_config_hash: GRSchbTAtzaEVhd0BSY2kljgoOYA3x4xzs896Px3_tE
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -63,6 +65,13 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -75,6 +84,18 @@ content:
       display_label: true
     weight: 15
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -108,4 +129,21 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

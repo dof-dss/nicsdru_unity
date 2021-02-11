@@ -1,11 +1,11 @@
-uuid: d89e1ba5-2f6b-4428-b4d2-4dcf05729bdc
+uuid: 2f91ed90-ed46-47c2-9bc9-6d1ed3dce137
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 1DO9UBEn52ChpFO8yWpIgZAXCiadRYUw9kdTgDkNpeQ
+  default_config_hash: QBkSJ4W84RYS3M4L1pWJIlsD3ujTJRB-U06WPRNelKw
 id: node.field_toc_enable
 field_name: field_toc_enable
 entity_type: node

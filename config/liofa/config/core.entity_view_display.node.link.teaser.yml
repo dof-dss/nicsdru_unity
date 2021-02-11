@@ -1,4 +1,4 @@
-uuid: b8eff655-bb19-450b-b5cd-3d3bb32ae61e
+uuid: 9a6ed6d5-a3bb-4006-ad23-cc3bd26cd4f1
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: HvNWXC7Sv-dwpz4CW2xd7gH6fLyST9xxTKVXlbZpzZ4
+  default_config_hash: F59hnLaiG1pVUhLEy9IXYjE3zgrY6J_rpKfASd9zLXk
 id: node.link.teaser
 targetEntityType: node
 bundle: link
@@ -24,3 +24,4 @@ content:
 hidden:
   field_link_type: true
   field_link_url: true
+  langcode: true

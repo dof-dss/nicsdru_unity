@@ -1,0 +1,17 @@
+uuid: 8b2aea75-b969-41ce-af08-2de5add9983c
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 1X24INUtQNTMuB9BaIvzqkFncJ9MAUlpYtar7E_IB-0
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+folder: ../config/uregni/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

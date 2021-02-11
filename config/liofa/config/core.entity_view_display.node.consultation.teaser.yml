@@ -1,4 +1,4 @@
-uuid: 9000ee1c-d58f-4efa-bb91-8ee200fbff8b
+uuid: b3d5ff71-2b11-47ce-b2e1-78b0154e2d7d
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
     - field.field.node.consultation.field_email_address
+    - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
     - field.field.node.consultation.field_published_date
     - field.field.node.consultation.field_respond_online
@@ -17,7 +18,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: Z4pIsWkLvqgdk2cXPjfSod-U_RuGrm7sssldUyBXp6s
+  default_config_hash: cx_IWacgy28aV4A8Ns3P4mttB8dyREhfBed9kpWfji8
 id: node.consultation.teaser
 targetEntityType: node
 bundle: consultation
@@ -40,7 +41,9 @@ hidden:
   field_attachment: true
   field_consultation_dates: true
   field_email_address: true
+  field_meta_tags: true
   field_postal: true
   field_published_date: true
   field_respond_online: true
   field_summary: true
+  langcode: true

@@ -1,9 +1,9 @@
-uuid: 23f4da65-e06d-473d-b8d3-3324ca0c75fa
+uuid: 86cc6aae-d13f-46eb-a089-f65e24f54270
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: t6n-Kp2r7AEurWJwMZWMGP48HbWUHHNCvueI-7yg5Os
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
 id: taxonomy_term
 label: 'Taxonomy term'
 tags:
