@@ -1,11 +1,11 @@
-uuid: b6298ab4-22ea-4704-b267-66a108f7ebcb
+uuid: b0bad279-db2c-4594-a549-349529d31608
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.link
 _core:
-  default_config_hash: 5wM9Rt2XRyo8cTHHz4xPc6D5Yyz5aoWklwwu1p2puAA
+  default_config_hash: mEYKSzyTPxxOPnhFd7LCm5Voc5YAJ3UW0czx2VR4E40
 id: node.link.promote
 field_name: promote
 entity_type: node

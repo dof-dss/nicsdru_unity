@@ -1,4 +1,4 @@
-uuid: cc098daa-7ab6-47c9-92be-71e5f8199241
+uuid: a1eb5fca-24d2-417d-81df-1cffb76683d4
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: eNjmq3rwwXcG0G-KgwMdograNhsOCRxYyYMkG6sdBfY
+  default_config_hash: Ehps-YqvdCRzNSsFmQmRtt5AS8_KkymeU0JQZA8VKDg
 name: Contact
 type: contact
 description: 'Use this content type for pages containing contact information.'

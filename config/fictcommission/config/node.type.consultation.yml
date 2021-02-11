@@ -1,4 +1,4 @@
-uuid: e45deb5b-3fdc-430a-8584-6984e68c6b9f
+uuid: fe4f2037-0b16-4ffd-b32e-0fb3a23220a1
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: xzHFwCCVjLDmkJUuW8riSxMaf7WfnCZDNFNqgb35HdU
+  default_config_hash: 5XlxsmhuDKU4ibiXPVifRhybs-SyKauBJlhsyLoMjpI
 name: Consultation
 type: consultation
 description: 'Use this content type for consultations.'

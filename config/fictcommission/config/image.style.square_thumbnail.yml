@@ -1,0 +1,18 @@
+uuid: 0769187b-03e8-4012-8a13-7e923881440e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: URjPoArWEDwl2Mvk5CxptnJF37s630iAvveinxtzHhk
+name: square_thumbnail
+label: square_thumbnail
+effects:
+  72d41558-6959-4ebe-bc31-c9f8bfc7f748:
+    uuid: 72d41558-6959-4ebe-bc31-c9f8bfc7f748
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 100
+      height: 100
+      weight: 0
+      anchor: center-center

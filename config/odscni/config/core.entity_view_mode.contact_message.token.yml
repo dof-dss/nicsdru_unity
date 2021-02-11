@@ -1,0 +1,12 @@
+uuid: 7f0f98aa-b927-44e4-8c3f-8834e4a5260f
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+_core:
+  default_config_hash: X-u-oHfskJg3f8koTCKJndfJyBWavJ5aWeHGYn2arnE
+id: contact_message.token
+label: Token
+targetEntityType: contact_message
+cache: true

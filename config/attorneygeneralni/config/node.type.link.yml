@@ -1,0 +1,20 @@
+uuid: 74f21b27-342d-4a99-abcd-caf84bffa5cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: IpcxSmYIsaVyzrzR391jzaVGOQC3pt-alvZV9ypmP8M
+name: Link
+type: link
+description: 'Use this content type to create links.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
