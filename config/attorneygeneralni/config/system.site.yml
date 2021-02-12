@@ -1,5 +1,5 @@
-name: Liofa
-mail: admin@liofa.eu
+name: 'Attorney General for Northern Ireland'
+mail: admin@attorneygeneralni.gov.uk
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,5 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 8f57e357-3301-4fc7-a9e7-53ffe1c6b6b7
+uuid: 368e9ece-3fd1-4a1f-810f-30871f29c4d5
 frontpage_title: 'Welcome to Drupal site'

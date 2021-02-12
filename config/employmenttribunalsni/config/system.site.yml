@@ -1,5 +1,5 @@
-name: Liofa
-mail: admin@liofa.eu
+name: 'Employment Tribunals NI'
+mail: admin@employmenttribunalsni.co.uk
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,5 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 8f57e357-3301-4fc7-a9e7-53ffe1c6b6b7
+uuid: f93a58d0-1aa4-4ac6-9ed4-8ba7c281a924
 frontpage_title: 'Welcome to Drupal site'
