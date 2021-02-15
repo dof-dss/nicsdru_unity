@@ -1,5 +1,5 @@
-name: FICTCOMMISSION
-mail: a@a.com
+name: 'Commission on Flags, Identity, Culture and Tradition'
+mail: admin@fictcommission.org
 slogan: ''
 page:
   403: ''
@@ -11,4 +11,6 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 9a8eae0d-15d6-4201-95af-cd6090ce21ce
+uuid: d149e516-aae6-485a-835a-9131fbe7d188
+frontpage_title: 'Welcome to Drupal site'
+frontpage_show_title: 0
