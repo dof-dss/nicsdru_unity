@@ -91,7 +91,8 @@ process:
     -
       plugin: site_files_filter
       from_ref: sites/uregni.gov.uk/files
-      to_ref: files/uregni  body/0/format:
+      to_ref: files/uregni
+  body/0/format:
     -
       plugin: static_map
       bypass: true
