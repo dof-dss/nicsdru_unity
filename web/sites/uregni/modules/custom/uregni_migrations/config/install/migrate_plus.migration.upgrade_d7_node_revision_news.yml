@@ -139,7 +139,6 @@ migration_dependencies:
     - upgrade_d7_node_consultation
     - upgrade_d7_node_news
     - upgrade_d7_node_page
-    - upgrade_d7_node_project_page
     - upgrade_d7_node_publication_page
     - upgrade_d7_node_staff_member
     - upgrade_d7_node_vacancy
