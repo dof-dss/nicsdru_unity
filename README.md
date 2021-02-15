@@ -31,15 +31,15 @@ Or, if available, you may also fetch the database and import this:
 
 You will first need to get hold of a Drupal 7 database dump for your chosen site to act as the source of the migration.
 
-Taking uregni as an example, the database dump can be downloaded from Platform.sh using the 'platform db:dump' command 
-and selecting 'Software-responsive' and 'uregni'. 
+Taking uregni as an example, the database dump can be downloaded from Platform.sh using the 'platform db:dump' command
+and selecting 'Software-responsive' and 'uregni'.
 
-Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive' 
-and 'public_html/sites/uregni/files'. In the case of Uregni, this process should then be repeated for 
+Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive'
+and 'public_html/sites/uregni/files'. In the case of Uregni, this process should then be repeated for
 'public_html/sites/uregni.gov.uk/files'.
 
-The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni. 
-Note that the path './imports/files/sites/uregni/files/styles' should exist. 
+The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni.
+Note that the path './imports/files/sites/uregni/files/styles' should exist.
 Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk' .
 
 ## Running migrations
@@ -128,7 +128,7 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory
 name should be just 'uregni'
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
-- Create a new directory /config/sync/<short sitename> and place a .gitkeep file in it so that git recognises the new directory
+- Create a new directory /config/<short sitename> and within this create 3 new directories, config, hosted and local. Place a .gitkeep file in each of these directories so that git recognises them
 - Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver
 e.g. uregni.gov.uk.lndo.site
 - If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when
@@ -139,6 +139,14 @@ configuring the server in search_api)
 under 'Advanced Server Configuration' set the solr.install.dir to '../../..'
 - Edit web/sites/sites.lando.php and add a new mapping from your local url (with '.lndo.site' suffix) to the short site name
 - N.B. After adding a new site, you will need to run 'lando rebuild' before you can access your new site
+- Run through the local site install
+- Enable and configure the config_split module
+- Export the config, push to the development and then merge into master
+- Run through the Drupal site install on the master branch
+- Connect to the Platform server using `platform ssh` and clear the cache for each of the sites
+- If there are any uuid errors in the deploy log, update the system.site uuid to match that in system.site.yml
+  `drush cset system.site uuid <uuid>`
+- If you get the error 'Can not delete the default language' update the language.entity.en uuid to match that in language.entity.en.yml `drush cset language.entity.en uuid <uuid>`
 
 Under multi site, Lando commands may be run as follows:
 lando drush -l uregni cr
