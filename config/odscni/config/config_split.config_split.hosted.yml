@@ -7,7 +7,7 @@ _core:
 id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
-folder: ../config/uregni/hosted
+folder: ../config/odscni/hosted
 module: {  }
 theme: {  }
 blacklist: {  }

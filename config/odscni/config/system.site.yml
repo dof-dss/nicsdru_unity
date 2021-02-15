@@ -1,5 +1,5 @@
-name: Liofa
-mail: admin@liofa.eu
+name: 'The Office of the Discretionary Support Commissioner'
+mail: admin@odscni.gov.uk
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,6 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 8f57e357-3301-4fc7-a9e7-53ffe1c6b6b7
+uuid: c3db4695-813b-48b7-a28d-881c1e1e35a6
 frontpage_title: 'Welcome to Drupal site'
+frontpage_show_title: 0
