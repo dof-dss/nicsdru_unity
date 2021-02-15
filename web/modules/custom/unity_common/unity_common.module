@@ -24,3 +24,18 @@ function unity_common_form_linkit_editor_dialog_form_alter(array &$form, FormSta
     . '<p>' . t('To reference an e-mail address type the full address and select the "E-mail" option from the dropdown list.')
     . '</p>';
 }
+
+function unity_common_preprocess_node_add_list(&$variables) {
+  $sorted_list = [];
+  foreach ($variables['types'] as $type) {
+    $thislink = $type['add_link'];
+    $label = $thislink->getGeneratedLink();
+    $bare_label = strip_tags($label);
+    $sorted_list[$bare_label] = $type;
+  }
+  ksort($sorted_list);
+  $variables['types'] = [];
+  foreach($sorted_list as $item) {
+    $variables['types'][$item['type']] = $item;
+  }
+}
