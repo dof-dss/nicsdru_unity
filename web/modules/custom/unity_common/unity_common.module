@@ -25,15 +25,21 @@ function unity_common_form_linkit_editor_dialog_form_alter(array &$form, FormSta
     . '</p>';
 }
 
+/**
+ * Implements hook_preprocess_node_add_list().
+ */
 function unity_common_preprocess_node_add_list(&$variables) {
+  // Sort the list of content types on the node/add page
+  // by label rather than machine name.
   $sorted_list = [];
   foreach ($variables['types'] as $type) {
-    $thislink = $type['add_link'];
-    $label = $thislink->getGeneratedLink();
-    $bare_label = strip_tags($label);
-    $sorted_list[$bare_label] = $type;
+    $label = strip_tags($type['add_link']->getGeneratedLink());
+    // Store in new array keyed on label.
+    $sorted_list[$label] = $type;
   }
+  // Sort the new list.
   ksort($sorted_list);
+  // Reset the original array and re-populate.
   $variables['types'] = [];
   foreach($sorted_list as $item) {
     $variables['types'][$item['type']] = $item;
