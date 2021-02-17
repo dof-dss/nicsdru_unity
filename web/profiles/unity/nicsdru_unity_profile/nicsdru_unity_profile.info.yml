@@ -19,7 +19,6 @@ install:
   - clientside_validation_jquery
   - config
   - config_filter
-  - config_split
   - contact
   - content_moderation
   - contextual
