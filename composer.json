@@ -168,6 +168,9 @@
             },
             "drupal/redirect": {
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch"
+            },
+            "drupal/core": {
+                "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
             }
         },
         "composer-exit-on-patch-failure": true,
