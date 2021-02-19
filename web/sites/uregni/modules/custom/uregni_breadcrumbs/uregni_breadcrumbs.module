@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains nidirect_breadcrumbs.module.
+ */
+
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ *
+ * Altering the search view page breadcrumbs, when facets are selected the breadcrumb trail is overwritten.
+ */
+function unity_search_pages_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
+  $links = $breadcrumb->getLinks();
+  $route_name = $route_match->getRouteName();
+
+  // The publications view page has an extra breadcrumb.
+  if ($route_name == 'view.publications_search.publication_search_page') {
+    $about_us_link[] = Link::fromTextandUrl(t('About us'), Url::fromUri('entity:node/53'));
+    array_splice($links, 1, 0, $about_us_link);
+  }
+
+  // Loop through the links for links that have facet queries added to them and unset the link of the last breadcrumb.
+  // The facets module breadcrumb links them all by default.
+  foreach ($links as $link) {
+    $params = $link->getUrl()->getRouteParameters();
+    if (!empty($params['facets_query'])) {
+      // Remove link from breadcrumb link.
+      end($links)->setUrl(Url::fromRoute('<none>'));
+      $breadcrumb = new Breadcrumb();
+      $breadcrumb->setLinks($links);
+      $breadcrumb->addCacheContexts(['url.path']);
+    }
+  }
+}
