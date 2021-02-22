@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e3c4d96059e878a24a35455ab5a257a",
+    "content-hash": "a3c44147fbb01a01e3e7d0d871cd7e20",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3419,8 +3419,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
-                    "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
+                    "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
                 }
             },
             "autoload": {
