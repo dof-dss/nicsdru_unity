@@ -4,11 +4,6 @@ services:
     arguments: ['@request_stack', '@title_resolver']
     tags:
       - { name: breadcrumb_builder, priority: 100 }
-  uregni_breadcrumbs.breadcrumb.publication_view_page:
-    class: Drupal\uregni_breadcrumbs\PublicationViewPageBreadcrumb
-    arguments: ['@request_stack', '@title_resolver']
-    tags:
-      - { name: breadcrumb_builder, priority: 100 }
   uregni_breadcrumbs.breadcrumb.news:
     class: Drupal\uregni_breadcrumbs\NewsBreadcrumb
     arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
