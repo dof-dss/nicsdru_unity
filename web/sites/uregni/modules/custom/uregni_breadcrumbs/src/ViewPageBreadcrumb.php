@@ -18,6 +18,7 @@ use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -67,6 +68,7 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
     $view_names = [
       'view.consultations_search.consultations_search_page',
       'view.news_search.news_search_page',
+      'view.publications_search.publication_search_page',
     ];
 
     foreach ($view_names as $view_name) {
@@ -82,9 +84,15 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
    * {@inheritdoc}
    */
   public function build(RouteMatchInterface $route_match) {
+    $route_name = $route_match->getRouteName();
     $breadcrumb = new Breadcrumb();
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     $links[] = Link::createFromRoute(t('Home'), '<front>');
+
+    if ($route_name == 'view.publications_search.publication_search_page') {
+      $links[] = Link::fromTextandUrl(t('About us'), Url::fromUri('entity:node/53'));
+    }
+
     $links[] = Link::createFromRoute($title_resolver, '<none>');
     $breadcrumb->setLinks($links);
     $breadcrumb->addCacheContexts(['url.path']);
