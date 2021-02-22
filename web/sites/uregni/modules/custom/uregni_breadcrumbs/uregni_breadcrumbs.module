@@ -35,7 +35,7 @@ function uregni_breadcrumbs_system_breadcrumb_alter(Breadcrumb &$breadcrumb, Rou
 
     $params = $link->getUrl()->getRouteParameters();
     if (!empty($params['facets_query'])) {
-      // Remove link from breadcrumb link.
+      // Remove link from the last breadcrumb link.
       end($links)->setUrl(Url::fromRoute('<none>'));
       $breadcrumb = new Breadcrumb();
       $breadcrumb->setLinks($links);
