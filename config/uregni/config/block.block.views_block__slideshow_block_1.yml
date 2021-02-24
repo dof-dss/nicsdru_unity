@@ -1,22 +1,23 @@
-uuid: de37ab51-213f-4894-8da9-15850b60a11c
+uuid: 53ea8522-6636-444a-bf56-9ea43712b293
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.slick_slideshow
+    - views.view.slideshow
   module:
     - block_visibility_groups
+    - system
     - views
   theme:
     - uregni_theme
-id: views_block__slick_slideshow_block_1
+id: views_block__slideshow_block_1
 theme: uregni_theme
 region: slideshow
 weight: 0
 provider: null
-plugin: 'views_block:slick_slideshow-block_1'
+plugin: 'views_block:slideshow-block_1'
 settings:
-  id: 'views_block:slick_slideshow-block_1'
+  id: 'views_block:slideshow-block_1'
   label: ''
   provider: views
   label_display: '0'
@@ -27,4 +28,9 @@ visibility:
     id: condition_group
     negate: false
     block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
     context_mapping: {  }
