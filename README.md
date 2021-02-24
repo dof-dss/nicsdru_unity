@@ -35,16 +35,48 @@ Taking uregni as an example, the database dump can be downloaded from Platform.s
 and selecting 'Software-responsive' and 'uregni'.
 
 Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive'
-and 'public_html/sites/uregni/files'. In the case of Uregni, this process should then be repeated for
-'public_html/sites/uregni.gov.uk/files'.
+and 'public_html/sites/uregni/files' (or whichever directory appropriate for your site).
+In the case of Uregni, this process should then be repeated for 'public_html/sites/uregni.gov.uk/files'.
 
-The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni.
+The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni (this directory name should
+match the one under web/sites).
 Note that the path './imports/files/sites/uregni/files/styles' should exist.
-Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk' .
+Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk'.
 
-## Running migrations
+## Migrating a site for the first time
 
-1. Import the database into the Drupal 7 database your chosen site. Using our example site this will be 'uregni_legacy'.
+1. Once you have downloaded the database and files as described above, you will need to import the database into the Drupal 7 database
+for your chosen site. Using our example site this will be 'uregni_legacy'.
+Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
+`lando db-import -d <sitename>_legacy -f <downloaded db>`
+
+2. Make sure that the following modules are installed in your Drupal 8 site: migrate_upgrade, migrate_plus, migrate_tools
+
+3. Run the migrate-upgrade command to generate migrations for you (run this from inside your web/sites/sitename directory).
+   Here is an example for the odscni site:
+
+   lando drush migrate-upgrade --legacy-db-url=mysql://drupal8:drupal8@database/odscni_legacy
+   --legacy-root=https://www.odscni.org.uk/ --configure-only
+
+4. You will now be able to see migrations in your database (lando drush migrate-status). The next step is to export the migrations
+which may be done by exporting config (land drush config-export). You will now see lots of migration Yaml files (starting
+   with 'migrate_plus...') in your config/<sitename> directory.
+
+5. Create a new custom module for your site. An example of this is web/sites/uregni/modules/custom/uregni_migrations. Your new module
+should have a config/install directory.
+
+6. Move the migrations that you exported from the config/<sitenam> directory into the config/install directory of your new module using
+commands like this:
+   mv migrate_plus.migration.* ../../../web/sites/odscni/modules/custom/odscni_migrations/config/install
+   mv migrate_plus.migration_group.migrate_*.yml ../../../web/sites/odscni/modules/custom/odscni_migrations/config/install
+
+7. The migrations should now be controlled from your custom module. (You will need to remove some of the migrations like 'field_instance'
+and 'content_types' as these only need to be run once).
+
+
+## Re-running migrations
+
+1. Import the database into the Drupal 7 database for your chosen site. Using our example site this will be 'uregni_legacy'.
 Note that the -d sitename must have a '_legacy' suffix, please make sure that you do not overwrite your Drupal 8 database by mistake !:
 `lando db-import -d <sitename>_legacy -f <downloaded db>`
 
