@@ -34,14 +34,11 @@ You will first need to get hold of a Drupal 7 database dump for your chosen site
 Taking uregni as an example, the database dump can be downloaded from Platform.sh using the 'platform db:dump' command
 and selecting 'Software-responsive' and 'uregni'.
 
-Files may be downloaded from Platform.sh using the 'platform mount:download' command and selecting 'Software-responsive'
-and 'public_html/sites/uregni/files' (or whichever directory appropriate for your site).
-In the case of Uregni, this process should then be repeated for 'public_html/sites/uregni.gov.uk/files'.
+Files may be downloaded from Platform.sh using the 'platform mount:download' command, selecting 'Software-responsive'
+and then download files from 'public_html/sites/<sitename>/files' e.g. for ODSCNI files would be downloaded from
+'public_html/sites/odscni/files'.
 
-The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/uregni (this directory name should
-match the one under web/sites).
-Note that the path './imports/files/sites/uregni/files/styles' should exist.
-Also for uregni, there should be another set of files at './imports/files/sites/uregni.gov.uk'.
+The downloaded files should be placed in the imports/files directory e.g. imports/files/sites/odscni.
 
 ## Migrating a site for the first time
 
