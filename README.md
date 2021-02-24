@@ -66,12 +66,11 @@ which may be done by exporting config (land drush config-export). You will now s
 should have a config/install directory.
 
 6. Move the migrations that you exported from the config/<sitenam> directory into the config/install directory of your new module using
-commands like this:
-   mv migrate_plus.migration.* ../../../web/sites/odscni/modules/custom/odscni_migrations/config/install
-   mv migrate_plus.migration_group.migrate_*.yml ../../../web/sites/odscni/modules/custom/odscni_migrations/config/install
+a command like this:
+   mv migrate_plus.migration* ../../../web/sites/odscni/modules/custom/odscni_migrations/config/install
 
 7. The migrations should now be controlled from your custom module. (You will need to remove some of the migrations like 'field_instance'
-and 'content_types' as these only need to be run once).
+and 'node_type' as these only need to be run once).
 
 
 ## Re-running migrations
