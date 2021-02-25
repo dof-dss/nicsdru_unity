@@ -60,7 +60,7 @@ display:
       style:
         type: slick
         options:
-          vanilla: false
+          vanilla: true
           optionset: uregni
           skin: default
           layout: right
@@ -85,7 +85,7 @@ display:
           thumbnail: ''
           overlay: ''
           title: ''
-          link: ''
+          link: nothing
           class: ''
           id: ''
           override: false
@@ -99,7 +99,7 @@ display:
             randomize: '0'
             variableWidth: '0'
           cache: 0
-          current_view_mode: block_1
+          current_view_mode: slideshow
           thumbnail_effect: ''
       row:
         type: fields
@@ -117,7 +117,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -288,7 +288,7 @@ display:
           click_sort_column: uri
           type: link
           settings:
-            trim_length: 80
+            trim_length: null
             url_only: true
             url_plain: true
             rel: '0'
@@ -416,11 +416,11 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
+            alter_text: true
             text: '<a href="{{ nothing }}">{{ field_photo }}</a>'
             make_link: false
-            path: ''
-            absolute: false
+            path: '{{ nothing }}'
+            absolute: true
             external: false
             replace_spaces: false
             path_case: none
@@ -506,7 +506,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: slide__caption
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -617,9 +617,9 @@ display:
         - 'config:field.storage.node.field_link_url'
         - 'config:field.storage.node.field_photo'
         - 'config:field.storage.node.field_teaser'
-  block_1:
+  slideshow:
     display_plugin: block
-    id: block_1
+    id: slideshow
     display_title: Block
     position: 1
     display_options:
