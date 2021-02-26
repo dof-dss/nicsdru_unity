@@ -266,3 +266,16 @@
     }
   }
 }
+
+#block-footerextralogos {
+  margin-top: 3rem;
+
+  img {
+    max-width: 290px;
+  }
+
+  @include breakpoint(860px) {
+    float: right;
+    margin-top: 0;
+  }
+}
