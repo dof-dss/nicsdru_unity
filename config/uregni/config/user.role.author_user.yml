@@ -158,6 +158,7 @@ permissions:
   - 'view gp_practice revisions'
   - 'view health_condition revisions'
   - 'view landing_page revisions'
+  - 'view latest version'
   - 'view link revisions'
   - 'view news revisions'
   - 'view own files'
