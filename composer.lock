@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3c44147fbb01a01e3e7d0d871cd7e20",
+    "content-hash": "d28bf5d0eeca5caa899e40e8a3ef6ae8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1485,6 +1485,18 @@
                 "resolver"
             ],
             "time": "2012-10-28T21:08:28+00:00"
+        },
+        {
+            "name": "dinbror/blazy",
+            "version": "1.8.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.2.0"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -16547,5 +16559,6 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
