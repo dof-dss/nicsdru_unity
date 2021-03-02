@@ -7,7 +7,11 @@
 name: 'unity'
 
 # The runtime the application uses.
-type: 'php:7.3'
+type: 'php:7.4'
+
+dependencies:
+  php:
+    composer/composer: '^2'
 
 # The relationships of the application with services or other applications.
 #

@@ -2,7 +2,7 @@ recipe: drupal8
 config:
   webroot: web
   database: mariadb
-  php: '7.3'
+  php: '7.4'
   config:
     php: .lando/config/php.ini
     database: .lando/config/my.cnf
