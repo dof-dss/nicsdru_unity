@@ -63,7 +63,7 @@ jobs:
   # Tests the integrity of the build, stores the results in a workspace for re-use in later jobs.
   build:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
     steps:
       - checkout_code
       - install_php_os_extensions
@@ -75,7 +75,7 @@ jobs:
   # Test for coding standards and deprecated code.
   static_analysis:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
     steps:
       - attach_workspace:
           at: ./
@@ -91,7 +91,7 @@ jobs:
   # Run any unit tests and any kernel tests against a vanilla D8 site + our site config imported over it (no predefined content).
   unit_kernel_tests:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
       - image: circleci/mysql:5.7.27
         environment:
           - CONFIG_SYNC_DIRECTORY: "../config/uregni/config"
@@ -177,7 +177,7 @@ jobs:
   # Nightly config install test.
   config_install:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
       - image: circleci/mysql:5.7.27
     steps:
       - attach_workspace:
@@ -235,7 +235,7 @@ jobs:
   # Nightly edge build
   unity_edge_build:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
@@ -307,7 +307,7 @@ jobs:
   # Nightly edge build deployment
   unity_edge_build_deploy:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
     steps:
       - checkout_code
       - install_php_os_extensions
@@ -329,7 +329,7 @@ jobs:
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
     docker:
-      - image: circleci/php:7.3.14-apache-browsers
+      - image: circleci/php:7.4.15-apache-browsers
     steps:
       - checkout_code
       - run:
