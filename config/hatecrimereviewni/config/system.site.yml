@@ -11,5 +11,5 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 0cb87db7-e4d6-45e6-b45c-771bb21e7b02
+uuid: 1a291f6a-dc36-43b3-8c57-cb44712eae1d
 frontpage_title: 'Welcome to Drupal site'
