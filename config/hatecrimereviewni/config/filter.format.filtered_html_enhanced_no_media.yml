@@ -1,0 +1,14 @@
+uuid: 6e72842d-a2d0-4fba-81e8-2be380dff068
+langcode: en
+status: false
+dependencies: {  }
+name: 'Filtered HTML enhanced no media'
+format: filtered_html_enhanced_no_media
+weight: 0
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

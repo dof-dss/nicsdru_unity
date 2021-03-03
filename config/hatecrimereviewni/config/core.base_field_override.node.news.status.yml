@@ -1,11 +1,9 @@
-uuid: 7766df68-6ec1-4a53-990e-8f4418b3b619
+uuid: 0027bef1-eca6-4275-8a36-429ae478d4a1
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.news
-_core:
-  default_config_hash: 6TLpJasXIYoKxuaDwrqfE0zc4dgMLh0X27CVf0ItDb8
 id: node.news.status
 field_name: status
 entity_type: node
