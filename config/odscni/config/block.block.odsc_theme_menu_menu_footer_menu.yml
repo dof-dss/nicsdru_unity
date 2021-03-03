@@ -1,0 +1,25 @@
+uuid: 3a18c413-324a-4e4e-a7c0-b28f8ff79c0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-menu
+  module:
+    - system
+  theme:
+    - stark
+id: odsc_theme_menu_menu_footer_menu
+theme: stark
+region: content
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-menu'
+settings:
+  id: 'system_menu_block:menu-footer-menu'
+  label: '<none>'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
