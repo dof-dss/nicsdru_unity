@@ -1,0 +1,10 @@
+uuid: 91e025ab-b64e-4f92-b15c-2c539876b981
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.image_with_caption
+label: image_with_caption
+targetEntityType: file
+cache: true
