@@ -1,0 +1,19 @@
+uuid: 52ddabd2-fd86-4da4-a127-0a59d183288f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.news
+id: node.news.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: news
+label: Teaser
+description: 'Enter some short teaser text for this news item. This will be used to link to this page on other pages on this site.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
