@@ -3,9 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.contact
+    - node.type.page
     - node.type.news
-    - node.type.webform
   module:
     - content_moderation
 _core:
@@ -98,7 +97,6 @@ type_settings:
       weight: 2
   entity_types:
     node:
-      - contact
+      - page
       - news
-      - webform
   default_moderation_state: draft
