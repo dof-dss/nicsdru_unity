@@ -17,10 +17,10 @@
             "type": "package",
             "package": {
                 "name": "harvesthq/chosen",
-                "version": "1.8.2",
+                "version": "1.8.7",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -42,21 +42,37 @@
                     "composer/installers": "^1.2.0"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2.0"
+                }
+            }
         }
     ],
     "require": {
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.5",
+        "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^0.9.7",
         "dof-dss/nicsdru_origins_profile": "^0.1.10",
-        "dof-dss/nicsdru_unity_theme": "^0.1.11",
+        "dof-dss/nicsdru_unity_theme": "^0.1.12",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
         "drupal/allowed_formats": "^1.3",
         "drupal/block_blacklist": "^1.0",
         "drupal/block_visibility_groups": "^1.3",
-        "drupal/chosen": "^2.9",
+        "drupal/chosen": "^3.0",
         "drupal/clientside_validation": "^3.0",
         "drupal/config_filter": "^1.4",
         "drupal/config_ignore": "^2.1",
@@ -124,7 +140,7 @@
         "drush/drush": "^10.1",
         "harvesthq/chosen": "^1.8",
         "kenwheeler/slick": "^1.8",
-        "oomphinc/composer-installers-extender": "^1.1",
+        "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.3",
         "symfony/event-dispatcher": "4.3.11 as 3.4.41",
         "vlucas/phpdotenv": "^2.4",
@@ -155,7 +171,8 @@
         "patches": {
             "drupal/core": {
                 "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
-                "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
+                "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
+                "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
             },
             "drupal/taxonomy_manager": {
                 "Add search feature to taxonomy admin form": "https://www.drupal.org/files/issues/2019-08-06/add_search_feature-2906768-21.patch"
@@ -168,9 +185,6 @@
             },
             "drupal/redirect": {
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch"
-            },
-            "drupal/core": {
-                "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
             }
         },
         "composer-exit-on-patch-failure": true,
@@ -182,9 +196,6 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": [
-            "library"
-        ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": [
