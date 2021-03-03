@@ -11,10 +11,10 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: 94_MR61n9melPGY7eehAAykfpbRtKLqN6Dgbu3pT790
-name: News
+name: 'News page'
 type: news
-description: 'Use this content type for news items, press releases and announcements.'
+description: 'Use <em>news pages</em> for your news items, press releases and announcements.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
-display_submitted: false
+display_submitted: true

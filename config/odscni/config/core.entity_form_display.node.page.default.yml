@@ -1,29 +1,33 @@
-uuid: 8b2202ff-7dfa-43d5-ad2b-fa08fa57722e
+uuid: 12b50aa4-207c-4438-89a8-b89f6419025c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.basic_page.body
-    - node.type.basic_page
+    - field.field.node.page.body
+    - field.field.node.page.field_enable_toc
+    - field.field.node.page.field_metatag
+    - field.field.node.page.field_toc_enable
+    - node.type.page
   module:
+    - content_moderation
+    - metatag
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-_core:
-  default_config_hash: HV-wiMbZetwvisJTWx_fO8tUcRAaMSvIFv8isFt9vmA
-id: node.basic_page.default
+id: node.page.default
 targetEntityType: node
-bundle: basic_page
+bundle: page
 mode: default
 content:
   body:
+    weight: 1
     type: text_textarea_with_summary
-    weight: 121
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -32,12 +36,40 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_enable_toc:
+    weight: 2
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_metatag:
+    weight: 123
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_toc_enable:
+    type: boolean_checkbox
+    label: above
+    settings:
+      display_label: true
+    weight: 124
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

@@ -1,25 +1,26 @@
-uuid: 6bbbb3c6-1d14-4d89-a37b-be10d26a120f
+uuid: 85189e37-dc83-44f1-b05b-bfd2c156e38e
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.basic_page.body
-    - node.type.basic_page
+    - field.field.node.page.body
+    - field.field.node.page.field_enable_toc
+    - field.field.node.page.field_metatag
+    - field.field.node.page.field_toc_enable
+    - node.type.page
   module:
     - text
     - user
-_core:
-  default_config_hash: ua6iM3gD-MGUkUXC9QH-US2bZ6IPRXIJafieUFFfMIo
-id: node.basic_page.teaser
+id: node.page.teaser
 targetEntityType: node
-bundle: basic_page
+bundle: page
 mode: teaser
 content:
   body:
     label: hidden
+    weight: 0
     type: text_summary_or_trimmed
-    weight: 101
     settings:
       trim_length: 600
     third_party_settings: {  }
@@ -30,4 +31,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_enable_toc: true
+  field_metatag: true
+  field_toc_enable: true
   langcode: true
