@@ -1,0 +1,20 @@
+uuid: 1ee69eb0-f284-448a-99f9-5a5f3d38e4d7
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - software_responsive_theme
+id: software_responsive_theme_system_main
+theme: software_responsive_theme
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }
