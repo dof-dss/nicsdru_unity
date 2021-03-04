@@ -7,8 +7,8 @@ _core:
 name: square_thumbnail
 label: square_thumbnail
 effects:
-  72d41558-6959-4ebe-bc31-c9f8bfc7f748:
-    uuid: 72d41558-6959-4ebe-bc31-c9f8bfc7f748
+  890cc9d8-3cd0-417a-9cb5-a4be91cf9736:
+    uuid: 890cc9d8-3cd0-417a-9cb5-a4be91cf9736
     id: image_scale_and_crop
     weight: 0
     data:

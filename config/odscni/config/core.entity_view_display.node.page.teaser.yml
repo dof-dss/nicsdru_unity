@@ -1,0 +1,37 @@
+uuid: 85189e37-dc83-44f1-b05b-bfd2c156e38e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_enable_toc
+    - field.field.node.page.field_metatag
+    - field.field.node.page.field_toc_enable
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_enable_toc: true
+  field_metatag: true
+  field_toc_enable: true
+  langcode: true
