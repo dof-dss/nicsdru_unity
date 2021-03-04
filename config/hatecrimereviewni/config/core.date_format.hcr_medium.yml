@@ -1,0 +1,8 @@
+uuid: e2863f48-aae7-41ed-9659-b4d22e6d0161
+langcode: en
+status: true
+dependencies: {  }
+id: hcr_medium
+label: 'HCR medium'
+locked: false
+pattern: 'j F Y'

@@ -1,0 +1,19 @@
+uuid: 5a49304f-99b7-4312-84b1-bb1e3fb9fdd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.preview
+    - field.field.file.document.field_file_language
+    - field.field.file.document.field_file_title
+  module:
+    - file
+id: file.document.preview
+targetEntityType: file
+bundle: document
+mode: preview
+content: {  }
+hidden:
+  field_file_language: true
+  field_file_title: true
+  langcode: true

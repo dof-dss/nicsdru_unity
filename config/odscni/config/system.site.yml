@@ -1,10 +1,10 @@
-name: 'The Office of the Discretionary Support Commissioner'
-mail: admin@odscni.gov.uk
+name: 'Office of the Discretionary Support Commissioner'
+mail: odsc@test.com
 slogan: ''
 page:
-  403: ''
-  404: ''
-  front: /node
+  403: /
+  404: /
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
