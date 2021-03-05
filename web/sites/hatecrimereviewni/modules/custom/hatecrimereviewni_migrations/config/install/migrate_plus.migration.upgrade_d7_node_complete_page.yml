@@ -76,10 +76,16 @@ process:
     -
       plugin: get
       source: comment
-  body:
+  body/0/format:
     -
-      plugin: get
-      source: body
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
   field_enable_toc:
     -
       plugin: get
