@@ -17,12 +17,15 @@ module:
   config_filter: 0
   config_split: 0
   contact: 0
+  content_lock: 0
+  content_lock_timeout: 0
   content_moderation: 0
   contextual: 0
   ctools: 0
   date_facet_drilldown: 0
   datetime: 0
   datetime_range: 0
+  dblog: 0
   diff: 0
   dynamic_page_cache: 0
   editor: 0
@@ -63,6 +66,11 @@ module:
   menu_breadcrumb: 0
   menu_ui: 0
   metatag: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
   moderation_sidebar: 0
   node: 0
   noreferrer: 0
@@ -80,6 +88,7 @@ module:
   responsive_image: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  search: 0
   search_api: 0
   search_api_location: 0
   search_api_location_views: 0
