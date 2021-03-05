@@ -20,6 +20,8 @@ install:
   - config
   - config_filter
   - contact
+  - content_lock
+  - content_lock_timeout
   - content_moderation
   - contextual
   - ctools
