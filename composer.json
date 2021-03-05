@@ -80,6 +80,7 @@
         "drupal/config_split": "^1.4",
         "drupal/config_update": "^1.6",
         "drupal/console": "^1.9",
+        "drupal/content_lock": "^2.2",
         "drupal/core-composer-scaffold": "^8.9.12",
         "drupal/core-project-message": "^8.9.12",
         "drupal/core-recommended": "^8.9.12",
