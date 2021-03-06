@@ -364,7 +364,7 @@ h2 i {
     }
 
     @media screen and (min-width: 556px) and (max-width: $tab) {
-      width: 50%;
+      //width: 50%;
       float: left;
     }
 
@@ -374,6 +374,12 @@ h2 i {
 
     li {
       border: none;
+    }
+  }
+
+  .column:first-child {
+    #block-footerlogo {
+      padding-right: 10px;
     }
   }
 
@@ -412,7 +418,9 @@ h2 i {
 
 #footer-menu {
   a {
-    display: block;
+    @include breakpoint($mob) {
+      display: block;
+    }
   }
 }
 
