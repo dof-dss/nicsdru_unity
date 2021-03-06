@@ -142,19 +142,20 @@ taxonomies:
       parent: '0'
       uuid: f0193b13-e976-4438-8b78-03fe4f69186b
   tags: {  }
-menus:
+blocks:
   -
-    menu_name: main
-    title: Home
-    parent: null
-    uri: 'internal:/'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-50'
+    info: 'Licences : home'
     langcode: en
-    uuid: 928ca973-7b09-42d3-accd-184df1fb1d7b
+    uuid: 38810365-e710-46ec-bd28-0607a55766d7
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<h2>Licences</h2>\r\n\r\n<div class=\"content\">\r\n<p>We issue and maintain licences for gas, electricity and water companies to operate in Northern Ireland.</p>\r\n\r\n<p><a class=\"btn\" href=\"licences\">Find out more</a></p>\r\n</div>\r\n"
+          summary: ''
+          format: basic_html
   -
     menu_name: menu-footer-links
     title: 'Privacy Policy'
