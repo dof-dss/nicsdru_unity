@@ -156,54 +156,6 @@ menus:
     langcode: en
     uuid: 928ca973-7b09-42d3-accd-184df1fb1d7b
   -
-    menu_name: main
-    title: 'Electricity overview'
-    parent: 'menu_link_content:606be2da-cdc5-4307-bd6e-21b2e2ab6473'
-    uri: 'entity:node/2'
-    link_title: ''
-    description: null
-    enabled: '0'
-    expanded: '0'
-    weight: '-42'
-    langcode: en
-    uuid: 78b32f5f-a65e-4fde-84cc-574ae955be15
-  -
-    menu_name: main
-    title: 'Gas overview'
-    parent: 'menu_link_content:ef300a3b-ca39-4f0a-9501-b2142fc0d89d'
-    uri: 'entity:node/3'
-    link_title: ''
-    description: null
-    enabled: '0'
-    expanded: '0'
-    weight: '-44'
-    langcode: en
-    uuid: 13417de8-71d4-47d0-a90d-d97bee29a038
-  -
-    menu_name: main
-    title: 'Water introduction'
-    parent: 'menu_link_content:3a11f5bf-d0b0-492d-a50b-20bdcff1aeae'
-    uri: 'entity:node/4'
-    link_title: ''
-    description: null
-    enabled: '0'
-    expanded: '0'
-    weight: '-43'
-    langcode: en
-    uuid: 4758ef71-ddd9-4198-9051-d544aa47653f
-  -
-    menu_name: main
-    title: 'Consumer information overview'
-    parent: 'menu_link_content:f3733189-5120-4079-a8ec-7a3eb78b3446'
-    uri: 'entity:node/5'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-41'
-    langcode: en
-    uuid: 9695acbe-2663-4d0f-a97e-c83b2be64aae
-  -
     menu_name: menu-footer-links
     title: 'Privacy Policy'
     parent: null
@@ -227,18 +179,6 @@ menus:
     weight: '-18'
     langcode: en
     uuid: ded0c51b-1bb9-4c5f-a719-fec6ac0b6b00
-  -
-    menu_name: main
-    title: Introduction
-    parent: 'menu_link_content:b4596e97-6b9b-4fd0-bb34-331895bcf299'
-    uri: 'entity:node/53'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-43'
-    langcode: en
-    uuid: 257147b4-8ef4-4fe2-b9c1-30b213ddc3ff
   -
     menu_name: menu-useful-links
     title: 'Working for us'
@@ -2283,7 +2223,7 @@ menus:
     menu_name: main
     title: Electricity
     parent: null
-    uri: 'entity:node/3669'
+    uri: 'internal:/electricity'
     link_title: ''
     description: null
     enabled: '1'
@@ -2307,7 +2247,7 @@ menus:
     menu_name: main
     title: Water
     parent: null
-    uri: 'entity:node/3676'
+    uri: 'internal:/water'
     link_title: ''
     description: null
     enabled: '1'
@@ -2399,6 +2339,18 @@ menus:
     weight: '-5'
     langcode: en
     uuid: f7ac18f1-115e-4037-a9d0-92a0fe23b8eb
+  -
+    menu_name: main
+    title: Electricity
+    parent: null
+    uri: 'entity:node/2'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: und
+    uuid: bd9212c0-d9df-4c3c-bcf9-144a70fb460b
 blocks:
   -
     info: 'Licences : home'
@@ -2540,6 +2492,6 @@ blocks:
     fields:
       body:
         -
-          value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"a586705d-3b39-43a6-93b0-dfa4b9dad81d\"></drupal-media>\r\n"
+          value: "<p><img alt=\"Investors in People logo\" src=\"/sites/uregni/themes/uregni_theme/images/iip-logo.png\" /></p>\r\n"
           summary: ''
-          format: basic_html
+          format: full_html
