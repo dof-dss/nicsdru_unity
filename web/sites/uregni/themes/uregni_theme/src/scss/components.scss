@@ -28,12 +28,18 @@
 }
 
 .breadcrumb {
+  padding: 0;
+
   .breadcrumb--list {
     margin-left: .4rem;
 
     @media screen and (min-width: $lap) {
       margin-left: 2rem;
     }
+  }
+
+  .breadcrumb--item a {
+    padding: 0 1px;
   }
 }
 
