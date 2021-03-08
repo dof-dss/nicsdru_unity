@@ -393,30 +393,33 @@ h2 i {
     line-height: 2.4rem;
   }
 
-  .social-icons {
-    a {
-      border: 0;
-      color: $text;
+  #block-footercontactinformation {
+    .social-icons {
+      a {
+        border-bottom: 0;
+        color: $text;
 
-      &:hover,
-      &:focus {
-        outline: 0;
+        &:hover,
+        &:focus {
+          outline: 0;
+          background: none;
 
-        i {
-          background: $text;
-          color: $footer-background;
+          i {
+            background: $text;
+            color: $footer-background;
+          }
         }
       }
-    }
 
-    i {
-      font-size: 2.4rem;
-      border: 1px solid;
-      padding: .5rem .7rem;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 100%;
-      line-height: 3rem;
+      i {
+        font-size: 2.4rem;
+        border: 1px solid;
+        padding: .5rem .7rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        line-height: 3rem;
+      }
     }
   }
 }
@@ -564,9 +567,9 @@ textarea {
   &:last-child {
     margin-bottom: 2.4rem;
 
-    &:hover {
-      margin-bottom: 2.3rem;
-    }
+    //&:hover {
+    //  margin-bottom: 2.3rem;
+    //}
   }
 }
 
