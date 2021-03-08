@@ -100,7 +100,7 @@ $text: color('text');
 $headings: color(headings);
 
 $link: #0e6bb3 !default;
-$link-underline: #bbb !default;
+$link-underline: color('charcoal') !default;
 $link-active: #0e6bb3 !default;
 $link-hover: #0e6bb3 !default;
 $link-hover-background: rgba(75%, 75%, 75%, .25) !default;
