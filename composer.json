@@ -113,6 +113,7 @@
         "drupal/pathauto": "^1.4",
         "drupal/redirect": "^1.3",
         "drupal/redis": "^1.5",
+        "drupal/scheduled_transitions": "^2.0",
         "drupal/scheduler": "^1.3",
         "drupal/scheduler_content_moderation_integration": "^1.1",
         "drupal/schema_metatag": "^1.4",
@@ -186,6 +187,9 @@
             },
             "drupal/redirect": {
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch"
+            },
+            "drupal/clientside_validation": {
+                "Avoid TypeError": "https://www.drupal.org/files/issues/2021-03-09/clientside_validation_typerror_3202453.patch"
             }
         },
         "composer-exit-on-patch-failure": true,

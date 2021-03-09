@@ -2,6 +2,8 @@ uuid: 2b1a02d6-14cc-4810-886d-2b4a9ab6495c
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.admin
   module:
     - node
     - scheduler
@@ -996,12 +998,12 @@ display:
     display_options:
       path: admin/content/scheduled
       menu:
-        type: tab
+        type: normal
         title: Scheduled
         description: ''
         expanded: false
         parent: system.admin_content
-        weight: -10
+        weight: 1
         context: '0'
         menu_name: admin
       tab_options:
