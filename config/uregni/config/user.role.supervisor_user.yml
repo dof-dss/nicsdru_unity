@@ -47,6 +47,7 @@ permissions:
   - 'create publication_page content'
   - 'create remote_video media'
   - 'create staff_member content'
+  - 'create url aliases'
   - 'create vacancy content'
   - 'create video media'
   - 'delete all revisions'
