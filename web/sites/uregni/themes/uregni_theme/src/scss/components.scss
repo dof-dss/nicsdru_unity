@@ -374,10 +374,6 @@ h2 i {
       margin: 1rem 0;
     }
 
-    //@media screen and (min-width: 556px) and (max-width: $tab) {
-    //  float: left;
-    //}
-
     @include breakpoint($tab) {
       width: 32.5%;
     }
