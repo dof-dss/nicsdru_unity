@@ -364,13 +364,14 @@ h2 i {
   .column:first-child {
     padding-left: 0;
     float: left;
+    margin-left: 1%;
 
-    @media screen and (max-width: $lap) {
-      margin: 0;
+    @media screen and (max-width: $tab) {
+      margin: 1rem 2rem 1rem 0;
     }
 
-    @media screen and (min-width: 556px) and (max-width: $tab) {
-      float: left;
+    @media screen and (max-width: $mob) {
+      margin: 1rem 0;
     }
 
     @include breakpoint($tab) {
@@ -383,6 +384,8 @@ h2 i {
   }
 
   .column:first-child {
+    margin-left: 0;
+
     #block-footerlogo {
       padding-right: 10px;
     }
@@ -556,7 +559,7 @@ textarea {
   }
 }
 
-.node-type-publication-page #content a.file-link[href] {
+.node-type-publication-page #content a.publication.file-link[href] {
   padding-left: 6.5rem;
   margin-bottom: 1.6rem;
 
