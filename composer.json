@@ -65,7 +65,7 @@
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^0.9.7",
         "dof-dss/nicsdru_origins_profile": "^0.1.10",
-        "dof-dss/nicsdru_unity_theme": "^0.1.13",
+        "dof-dss/nicsdru_unity_theme": "^0.1.15",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
