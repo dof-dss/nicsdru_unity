@@ -35,6 +35,8 @@ services:
     hogfrom:
       - appserver
 tooling:
+  drupal:
+    cmd: "/app/vendor/bin/drupal --root=/app/web"
   xdebug-on:
     service: appserver
     description: Enable xdebug
