@@ -266,6 +266,8 @@
     }
 
     a {
+      border-bottom: 1px solid $link;
+
       &:hover {
         border-bottom: 2px solid $link-underline;
         margin-bottom: 0;
