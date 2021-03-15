@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_enable_toc
     - field.field.node.page.field_metatag
     - field.field.node.page.field_toc_enable
     - node.type.page
@@ -23,13 +22,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
+  toc_display:
+    weight: -10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
-  field_enable_toc: true
   field_metatag: true
   field_toc_enable: true
   langcode: true
