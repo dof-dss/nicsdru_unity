@@ -1,0 +1,10 @@
+uuid: 3ae8a65a-ec0c-4039-a533-024b8aaa6a50
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.embed
+label: Embed
+targetEntityType: paragraph
+cache: true
