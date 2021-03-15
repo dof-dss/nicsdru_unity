@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_enable_toc
     - field.field.node.page.field_metatag
     - field.field.node.page.field_toc_enable
     - node.type.page
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - metatag
@@ -36,13 +36,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_enable_toc:
-    weight: 2
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    region: content
   field_metatag:
     weight: 123
     settings:
