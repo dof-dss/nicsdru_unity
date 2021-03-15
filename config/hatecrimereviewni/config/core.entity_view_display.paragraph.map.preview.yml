@@ -1,0 +1,29 @@
+uuid: 54515979-6cab-4c6f-bcdf-1043d266ca22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.map.field_location
+    - paragraphs.paragraphs_type.map
+  module:
+    - geolocation
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.map.preview
+targetEntityType: paragraph
+bundle: map
+mode: preview
+content:
+  field_location:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+hidden:
+  search_api_excerpt: true
