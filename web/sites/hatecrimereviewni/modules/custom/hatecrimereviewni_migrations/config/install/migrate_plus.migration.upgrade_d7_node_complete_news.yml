@@ -80,6 +80,33 @@ process:
     -
       plugin: get
       source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: filter_absolute_links
+      replace_urls:
+        http://www.hatecrimereviewni.org.uk
+        https://www.hatecrimereviewni.org.uk
+        http://test-hcr.nigov.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/hatecrimereviewni/files
+      to_ref: files/hatecrimereviewni
+    -
+      plugin: site_files_filter
+      from_ref: sites/hatecrimereviewni.org.uk/files
+      to_ref: files/uregni
+  body/0/format:
+    -
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
   field_photo:
     -
       plugin: sub_process
