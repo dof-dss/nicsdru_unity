@@ -19,10 +19,19 @@ settings:
           items:
             - Bold
             - Italic
+            - Blockquote
+            - Superscript
+            - RemoveFormat
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+            - Table
         -
           name: Linking
           items:
-            - DrupalLink
+            - Linkit
             - DrupalUnlink
         -
           name: Lists
@@ -32,23 +41,24 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
-            - DrupalImage
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
+            - DrupalMediaLibrary
+            - map
         -
           name: Tools
           items:
-            - Source
+            - Cut
+            - Copy
+            - PasteText
+            - PasteFromWord
+            - SpecialChar
+            - Maximize
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "p.info-notice|Information notice\r\na.btn|Button"
     linkit:
-      linkit_profile: ''
+      linkit_profile: default
     tokenbrowser:
       token_types: {  }
 image_upload:
