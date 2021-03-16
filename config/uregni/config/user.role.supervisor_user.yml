@@ -173,6 +173,7 @@ permissions:
   - 'edit any vacancy content'
   - 'edit any video files'
   - 'edit any video media'
+  - 'edit basic meta tags'
   - 'edit own application content'
   - 'edit own article content'
   - 'edit own audio files'

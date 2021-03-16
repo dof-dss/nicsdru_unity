@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.staff_member.body
     - field.field.node.staff_member.field_member_image
     - field.field.node.staff_member.field_member_role
-    - field.field.node.staff_member.field_metatag
+    - field.field.node.staff_member.field_meta_tags
     - node.type.staff_member
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -54,13 +54,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_metatag:
-    type: metatag_firehose
-    weight: 7
-    region: content
+  field_meta_tags:
+    weight: 31
     settings:
       sidebar: true
     third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   langcode:
     type: language_select
     weight: 3
