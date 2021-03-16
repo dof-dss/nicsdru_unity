@@ -17,7 +17,7 @@
   type: upstream
   upstream: "unity:http"
   cache:
-    enabled: true
+    enabled: false
     headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
     default_ttl: 3600
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
