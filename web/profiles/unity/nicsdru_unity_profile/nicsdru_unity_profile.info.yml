@@ -71,6 +71,8 @@ install:
   - options
   - origins_ckeditor_enhancements
   - origins_common
+  - origins_media
+  - origins_metatag
   - origins_toc
   - origins_workflow
   - page_cache
