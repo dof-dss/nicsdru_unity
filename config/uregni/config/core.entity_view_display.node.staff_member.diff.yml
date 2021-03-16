@@ -7,12 +7,11 @@ dependencies:
     - field.field.node.staff_member.body
     - field.field.node.staff_member.field_member_image
     - field.field.node.staff_member.field_member_role
-    - field.field.node.staff_member.field_metatag
+    - field.field.node.staff_member.field_meta_tags
     - node.type.staff_member
   module:
     - field_group
     - layout_builder
-    - metatag
     - text
     - user
 third_party_settings:
@@ -67,15 +66,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_metatag:
-    type: metatag_empty_formatter
-    weight: 5
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_meta_tags: true
   langcode: true
   links: true
   search_api_excerpt: true

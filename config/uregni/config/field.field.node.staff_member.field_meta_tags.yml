@@ -1,14 +1,14 @@
-uuid: 8e57366a-265c-41aa-8f87-442b244236a8
+uuid: e38fc0b9-7c51-4ce6-b38f-2cf0f331cc3f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_metatag
+    - field.storage.node.field_meta_tags
     - node.type.staff_member
   module:
     - metatag
-id: node.staff_member.field_metatag
-field_name: field_metatag
+id: node.staff_member.field_meta_tags
+field_name: field_meta_tags
 entity_type: node
 bundle: staff_member
 label: 'Meta tags'
