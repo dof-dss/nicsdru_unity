@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80a267c341b4f0dbc075096d199d262a",
+    "content-hash": "b3d6718d7e5bebb214496b6c0aab1032",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3492,7 +3492,8 @@
                 "patches_applied": {
                     "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
                     "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
-                    "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
+                    "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch",
+                    "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch"
                 }
             },
             "autoload": {
@@ -3825,7 +3826,8 @@
             "homepage": "https://www.drupal.org/project/date_facet_drilldown",
             "support": {
                 "source": "https://git.drupalcode.org/project/date_facet_drilldown"
-            }
+            },
+            "time": "2021-03-11T14:09:28+00:00"
         },
         {
             "name": "drupal/diff",
@@ -16789,10 +16791,10 @@
     ],
     "aliases": [
         {
-            "package": "symfony/event-dispatcher",
-            "version": "4.3.11.0",
             "alias": "3.4.41",
-            "alias_normalized": "3.4.41.0"
+            "alias_normalized": "3.4.41.0",
+            "version": "4.3.11.0",
+            "package": "symfony/event-dispatcher"
         }
     ],
     "minimum-stability": "dev",
@@ -16816,5 +16818,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
