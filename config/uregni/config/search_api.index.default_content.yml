@@ -47,6 +47,9 @@ third_party_settings:
       maxntp: 2000
       boost: false
       interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
     advanced:
       index_prefix: ''
       collection: ''
@@ -61,6 +64,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: body
     type: 'solr_text_custom_omit_norms:edge'
+    boost: 0.5
     dependencies:
       config:
         - field.storage.node.body
@@ -134,6 +138,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: 'solr_text_custom_omit_norms:edge'
+    boost: !!float 21
     dependencies:
       module:
         - node
@@ -149,7 +154,10 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected: {  }
+      selected:
+        - feature
+        - featured_content_list
+        - webform
     languages:
       default: true
       selected: {  }

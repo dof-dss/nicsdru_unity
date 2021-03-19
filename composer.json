@@ -65,7 +65,7 @@
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^0.9.7",
         "dof-dss/nicsdru_origins_profile": "^0.1.10",
-        "dof-dss/nicsdru_unity_theme": "^0.1.15",
+        "dof-dss/nicsdru_unity_theme": "^0.1.16",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -96,6 +96,7 @@
         "drupal/geolocation": "3.x",
         "drupal/handy_cache_tags": "^1.0",
         "drupal/hms_field": "^1.0@beta",
+        "drupal/honeypot": "^2.0",
         "drupal/http_cache_control": "^1.0",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/linkit": "^4.3",
@@ -174,7 +175,8 @@
             "drupal/core": {
                 "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
                 "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
-                "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch"
+                "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch",
+                "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch"
             },
             "drupal/taxonomy_manager": {
                 "Add search feature to taxonomy admin form": "https://www.drupal.org/files/issues/2019-08-06/add_search_feature-2906768-21.patch"

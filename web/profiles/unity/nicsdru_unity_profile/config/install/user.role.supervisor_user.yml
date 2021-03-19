@@ -45,6 +45,7 @@ permissions:
   - 'create staff_member content'
   - 'create vacancy content'
   - 'create video media'
+  - 'edit basic meta tags'
   - 'create webform content'
   - 'delete all revisions'
   - 'delete any application content'
