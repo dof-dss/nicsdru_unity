@@ -203,6 +203,7 @@ permissions:
   - 'edit any publication content'
   - 'edit any video files'
   - 'edit any webform content'
+  - 'edit basic meta tags'
   - 'edit field_taxonomy_rank'
   - 'edit meta tag: robots'
   - 'edit meta tags'

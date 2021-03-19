@@ -53,6 +53,7 @@ module:
   handy_cache_tags: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
@@ -74,6 +75,7 @@ module:
   origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_media: 0
+  origins_metatag: 0
   origins_toc: 0
   origins_workflow: 0
   page_cache: 0
@@ -83,9 +85,8 @@ module:
   redirect: 0
   responsive_image: 0
   scheduled_transitions: 0
-  scheduler: 0
-  scheduler_content_moderation_integration: 0
   search_api: 0
+  search_api_autocomplete: 0
   search_api_location: 0
   search_api_location_views: 0
   search_api_solr: 0
@@ -101,6 +102,7 @@ module:
   token_filter: 0
   toolbar: 0
   twig_tweak: 0
+  ultimate_cron: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
