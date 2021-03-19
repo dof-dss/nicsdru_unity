@@ -24,3 +24,17 @@ function unity_common_form_linkit_editor_dialog_form_alter(array &$form, FormSta
     . '<p>' . t('To reference an e-mail address type the full address and select the "E-mail" option from the dropdown list.')
     . '</p>';
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function unity_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (preg_match('/webform/', $form_id)) {
+    // Add in a hidden honeypot field to all webforms.
+    honeypot_add_form_protection(
+      $form,
+      $form_state,
+      ['honeypot', 'time_restriction']
+    );
+  }
+}
