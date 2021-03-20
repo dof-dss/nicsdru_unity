@@ -77,3 +77,9 @@ $max-editable-width: ($max-grid-width * .7);
 .cke_show_borders > table.cke_show_border > tfoot > tr > th {
   border: 1px solid $table-border !important; // Overrides inline style sheet ckeditor adds.
 }
+
+address {
+  margin-bottom: 2.4rem;
+  line-height: 3rem;
+  font-style: normal;
+}
