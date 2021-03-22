@@ -1,0 +1,268 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the hcr_theme theme.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Render\Markup;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function hcr_theme_preprocess_node(array &$variables) {
+  // Only use this code for consultations content type.
+  if ($variables['node']->getType() === 'consultation') {
+
+    // Get the current time to gauge consultation start and end dates off.
+    $current_time = \Drupal::time()->getCurrentTime();
+
+    // Convert consultation start date to a timestamp.
+    $consultation_start_date = $variables['node']->get('field_consultation_dates')->value;
+    $consultation_start_date_date_time = new DrupalDateTime($consultation_start_date, 'UTC');
+    $consultation_start_date_timestamp = $consultation_start_date_date_time->getTimestamp();
+
+    // Convert consultation end date to a timestamp.
+    $consultation_end_date = $variables['node']->get('field_consultation_dates')->end_value;
+    $consultation_end_date_date_time = new DrupalDateTime($consultation_end_date, 'UTC');
+    $consultation_end_date_timestamp = $consultation_end_date_date_time->getTimestamp();
+
+    // Set a variable to be used in the twig template for the consultation end date time.
+    $variables['consultation_end_time'] = date('H:i', $consultation_end_date_timestamp);
+
+    // Set a variable to be used in the twig template for the ways to respond fieldgroup, initially set to 0.
+    $variables['consultation_in_progress'] = FALSE;
+
+    // If the consultation started before and is ending after today's date then show the contact information.
+    if ($current_time > $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+      $variables['consultation_in_progress'] = TRUE;
+      // Text to display if the consultation is open or closed. Used in the search result view mode only.
+      $output = t('Open');
+    }
+    else {
+      $output = t('Closed');
+    }
+
+    if ($variables['view_mode'] == 'search_result') {
+      // Replace the dates with text as to whether open or closed consultation.
+      $variables['content']['field_consultation_dates']['status'] = Markup::create($output);
+    }
+
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function hcr_theme_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  if (isset($variables['view']->element['#display_id'])) {
+    $suggestions[] = 'views_view__' . $variables['view']->element['#display_id'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hcr_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#view_mode'])) {
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ *
+ * Pass block region value to content so this can be used in
+ * hcr_theme_theme_suggestions_menu_alter.
+ */
+function hcr_theme_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+
+  // Check if the block is an exposed filter block.
+  if ($variables['base_plugin_id'] == 'views_exposed_filter_block') {
+    // Add search page name ensuring they are in the exposed block machine name.
+    $search_pages = [
+      'news',
+      'consultations',
+      'publications',
+    ];
+
+    $plugin_id = $variables['plugin_id'];
+
+    foreach ($search_pages as $search_page) {
+      // Search the machine name for search page name and set variable to this.
+      if (str_contains($plugin_id, $search_page)) {
+        $variables['search_page_name'] = $search_page;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_menu_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function hcr_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function hcr_theme_preprocess_page(&$variables) {
+  // Initially set the new variable for search pages to False.
+  $variables['search_page'] = FALSE;
+  // A list of search page titles on the hcr site.
+  $search_pages = [
+    'News',
+    'Consultations',
+    'Publications',
+    'Search',
+  ];
+
+  // If a search page set the variable to true.
+  foreach ($search_pages as $search_page) {
+    if ($variables['page']['#title'] == $search_page) {
+      $variables['search_page'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_unformatted_alter().
+ */
+function hcr_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+
+  $search_pages = [
+    'consultations_search_page',
+    'publication_search_page',
+    'news_search_page',
+    'search_page',
+  ];
+
+  foreach ($search_pages as $search_page) {
+    if ($variables['view']->element['#display_id'] == $search_page) {
+      $suggestions[] = 'views_view_unformatted__search_result_page';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function hcr_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function hcr_theme_preprocess_form(array &$variables) {
+  switch ($variables['element']['#id']) {
+    case "views-exposed-form-publications-search-publication-search-page":
+    case "views-exposed-form-news-search-news-search-page":
+    case "views-exposed-form-consultations-search-consultations-search-page":
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form');
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form--page');
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function hcr_theme_preprocess_html(&$variables) {
+  if (isset($variables['node_type'])) {
+    if ($variables['node_type'] == 'consultation') {
+      $variables['attributes']['class'][] = 'one-sidebar';
+      $variables['attributes']['class'][] = 'sidebar-second';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ *
+ * D7 files were added in as body links, rather than trying to migrate these into the media browser this function will
+ * search the publications body field for publication links and take its filename and size to overwrite the existing
+ * link with a new link which will make it look like it has been added through the media browser.
+ *
+ */
+function hcr_theme_preprocess_field(&$variables) {
+  if ($variables['element']['#bundle'] == 'publication_page') {
+    if ($variables['element']['#field_name'] == 'body') {
+      $body_format = $variables['items'][0]['content']['#format'];
+      if ($body_format == 'basic_html_publications') {
+        $body_text = &$variables['items'][0]['content']['#text'];
+        // Set a regex pattern to look for body links. We don't want to target body links nested in text.
+        // A pattern we want to match is:
+        // <div><a href="https://www.hcr.gov.uk/sites/hcr/files/media-files/2019-11-22%20Switchgear%20TNPP%20-%20Final%20Decision.pdf"></a>
+        $embed_regex = '/<[a-z]{1,3}><a[\w\s\.]*href="([^"]*?.([a-z]*))"\>(((?!\<\/a\>).)*)\<\/a\>/';
+        $matches = [];
+        // Search the body text for the regex pattern and split the result in matches to be used.
+        preg_match_all($embed_regex, $body_text, $matches, PREG_SET_ORDER);
+        if (!empty($matches)) {
+          foreach ($matches as $match) {
+            // Strip HTML tags and entities from the matched string.
+            $decode_string = html_entity_decode($match[3]);
+            $strip_tags = strip_tags($decode_string);
+            $file_description_matches = [];
+            // Ensure the matched decoded string matches a pattern.
+            // E.g. Switchgear TNPP - Final Decision (PDF 258 KB).
+            // Use the file type and size to rebuild the HTML.
+            if (preg_match('/(.*) (\(([A-Z|a-z]+)\W+([0-9]*\D?[0-9]*)\W+([A-Z]+)\))/', $strip_tags, $file_description_matches)) {
+              $file_type = strtolower($file_description_matches[3]);
+              $file_url = $match[1];
+              $file_title = $file_description_matches[1];
+              $file_size = $file_description_matches[4] . ' ' . $file_description_matches[5];
+              $file_description = '<span>' . ucfirst($file_type) . ' (' . $file_size . ')</span>';
+              $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . $file_description . '</a>';
+              $body_text = str_replace($match[0], $body_link, $body_text);
+            }
+            // If there is no file type/size in the matched string then just output the string and use filetype for styling.
+            else {
+              $file_extension = $match[2];
+
+              // Set the file type for styling purposes.
+              switch ($file_extension) {
+                case 'pdf':
+                  $file_type = 'pdf';
+                  break;
+
+                case 'doc':
+                case 'docx':
+                  $file_type = 'word';
+                  break;
+
+                case 'pptx':
+                  $file_type = 'powerPoint';
+                  break;
+
+                case 'xlsx':
+                case 'xls':
+                case 'xlsm':
+                  $file_type = 'excel';
+                  break;
+              }
+              $file_url = $match[1];
+              $file_title = $match[3];
+              $body_link = '<a class="file-link publication file--ico file--ico__' . $file_type . '" href ="' . $file_url . '">' . $file_title . '</a>';
+              $body_text = str_replace($match[0], $body_link, $body_text);
+            }
+          }
+        }
+      }
+    }
+  }
+}
