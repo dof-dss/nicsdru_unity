@@ -15,7 +15,7 @@ module.exports = (ctx) => ({
       cachebuster: true,
       relative: true,
       loadPaths: ['images'],
-      baseUrl: '/themes/custom/STARTERKIT/'
+      baseUrl: '/themes/odscni_theme/'
     }
   }
 })
