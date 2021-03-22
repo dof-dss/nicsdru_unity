@@ -13,9 +13,9 @@ $base-font-family: 'Open Sans', sans-serif;
 $font-monospace:   'Courier New', 'DejaVu Sans Mono', monospace, sans-serif;;
 
 // The font sizes for h1-h6.
-$h1-font-size: 2.4 * $base-font-size;
-$h2-font-size: 2 * $base-font-size;
-$h3-font-size: 1.8 * $base-font-size;
+$h1-font-size: 2.5 * $base-font-size;
+$h2-font-size: 1.9 * $base-font-size;
+$h3-font-size: 1.6 * $base-font-size;
 $h4-font-size: 1.6 * $base-font-size;
 $h5-font-size: 1.6 * $base-font-size;
 $h6-font-size: 1.6 * $base-font-size;
@@ -26,15 +26,15 @@ $normal-text: (
 );
 
 $h1-text: (
-  null: (24px, null, 0 0 .6rem)
+  null: (25px, null, 2.3rem 0)
 );
 
 $h2-text: (
-  null: (20px, null, 3.6rem 0 1.2rem)
+  null: (19px, null, 3.6rem 0 1.2rem)
 );
 
 $h3-text: (
-  null: (18px, null, 2.4rem 0 1.2rem)
+  null: (16px, null, 2.4rem 0 1.2rem)
 );
 
 $h4-text: (
