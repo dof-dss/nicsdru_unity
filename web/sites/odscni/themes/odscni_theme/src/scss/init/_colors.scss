@@ -29,9 +29,9 @@ $chroma: add-colors((
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #002e62,
+  brand-primary:          #00adb5,
 
-  brand-secondary:        #002e62,
+  brand-secondary:        #000,
 
   brand-tertiary:         #002e62,
 ));
@@ -41,10 +41,10 @@ $chroma: define-color-scheme('functional', 'Colors used by functional parts of t
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
   text:                   #373737,
-  headings:               #373737,
+  headings:               'brand-primary',
 
-  link:                   #16a085,
-  link-hover:             #16a085,
+  link:                   #007c82,
+  link-hover:             'brand-secondary',
   link-visited:           #5e60b5,
   link-active:            'link',
 
@@ -60,11 +60,11 @@ $chroma: add-colors('functional', (
   error:                  'dark-red',
   error-bg:               'light-pink',
 
-  menu-background:        #002e62,
-  menu-item-hover:        #3e1151,
+  menu-background:        'brand-secondary',
+  menu-item-hover:        'brand-primary',
   menu-separator:         #fff,
-  menu-sub-item-background: lighten(#002e62, 10),
-  menu-sub-item-hover:    #1abc9c,
+  menu-sub-item-background: 'brand-primary',
+  menu-sub-item-hover:    'brand-secondary',
 
   table-background:       #fff,
   table-border:           #bbb,
@@ -74,10 +74,10 @@ $chroma: add-colors('functional', (
   table-cell-border: #dbdbdb,
   table-cell-text: #747474,
 
-  footer-background: 'brand-primary',
-  footer-border: #00a583,
-  footer-text: #fff,
-  footer-headings: #fff,
+  footer-background: #e7e7e7,
+  footer-border: 'brand-primary',
+  footer-text: 'text',
+  footer-headings: 'text',
 
   search-submit: #0e6bb3,
 ));
