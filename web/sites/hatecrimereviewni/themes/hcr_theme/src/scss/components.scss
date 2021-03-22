@@ -1,0 +1,129 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+// Components / modules
+//
+// Components / modules are the reusable, modular parts of any design. They are the callouts, the sidebar sections,
+// the product lists and so on.
+//
+// Weight: -6
+//
+// Style guide: components
+
+#logo {
+  a {
+    display: block;
+
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: 0.3rem dashed #949494;
+      outline-offset: 1.2rem;
+    }
+  }
+}
+
+.breadcrumb {
+  padding: 0;
+
+  .breadcrumb--list {
+    margin-left: .4rem;
+
+    @media screen and (min-width: $lap) {
+      margin-left: 2rem;
+    }
+  }
+
+  .breadcrumb--item a {
+    padding: 0 1px;
+  }
+}
+
+.field-photo {
+  @include breakpoint($mob) {
+    float: right;
+    max-width: 250px;
+    margin: 0 0 1rem 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.ico-elink {
+  background: resolve("new-window.gif") no-repeat;
+}
+
+.node-type-page {
+  .content {
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.front {
+  .container-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+#footer {
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
+  }
+
+  .footer-menu {
+    margin: 4% auto;
+
+    li {
+      padding-left: 0;
+
+      @include breakpoint($mob) {
+        display: inline-block;
+        padding: 0 .8rem 0 0;
+        line-height: 1.8rem;
+        margin-right: .5rem;
+      }
+    }
+  }
+}
+
+#footer-menu {
+  a {
+    @include breakpoint($mob) {
+      display: block;
+    }
+  }
+}
+
+a.btn {
+  text-decoration: underline;
+
+  &:focus {
+    color: #032f50;
+    border-bottom: 3px solid #032f50;
+    background: #ffe66a;
+  }
+}
