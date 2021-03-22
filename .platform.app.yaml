@@ -143,6 +143,18 @@ web:
 
 # The configuration of scheduled execution.
 crons:
-  drupal:
+  uregni:
     spec: '*/5 * * * *'
-    cmd: 'cd web ; drush core-cron'
+    cmd: 'cd web/sites/uregni ; drush core-cron'
+  odscni:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/odscni ; drush core-cron'
+  attorneygeneralni:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
+  employmenttribunalsni:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
+  hatecrimereviewni:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/hatecrimereviewni ; drush core-cron'
