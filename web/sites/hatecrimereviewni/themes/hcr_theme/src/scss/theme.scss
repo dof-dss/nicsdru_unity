@@ -1,0 +1,95 @@
+/*
+ * @file
+ * Provides very specific styling for hcr theme.
+ */
+@import 'init/index';
+
+// Theme
+//
+// Theme rules are similar to state rules in that they describe how components or modules or layouts might look in a
+// given context / scenario, however the difference here is that is it is a very specific context and unlikely to be
+// re-usable.
+//
+// Weight: -2
+//
+// Style guide: theme
+
+// Entities
+//
+// Provides very specific styling for entities / content types.
+//
+// Weight: 1
+//
+// Style guide: theme.entities
+
+.path-news {
+  .search-page {
+    .sidebar-first-layout {
+      padding-left: 0;
+    }
+
+    @include breakpoint($lap) {
+      .sidebar-first-layout {
+        width: 30%;
+      }
+
+      .main-content {
+        width: 65%;
+      }
+    }
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.views-exposed-form {
+  p {
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    margin-bottom: 0;
+  }
+
+  form {
+    //display: flex;
+
+    .form-actions {
+      padding-top: .95rem;
+    }
+
+    input {
+      &.form-text {
+        max-width: 100%;
+        border: 1px solid $grey-dark;
+      }
+    }
+  }
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
