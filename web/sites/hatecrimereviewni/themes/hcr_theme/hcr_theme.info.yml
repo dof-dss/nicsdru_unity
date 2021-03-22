@@ -6,8 +6,6 @@ core: 8.x
 
 libraries:
   - hcr_theme/site-styling
-  - nicsdru_unity_theme/unity-slider
-  - nicsdru_unity_theme/autocomplete
 
 ckeditor_stylesheets:
   - css/ckeditor.css
