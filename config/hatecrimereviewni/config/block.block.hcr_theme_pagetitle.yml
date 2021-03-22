@@ -1,0 +1,18 @@
+uuid: 03b5bbe3-cabe-4728-9db1-1280da207e10
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hcr_theme
+id: hcr_theme_pagetitle
+theme: hcr_theme
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
