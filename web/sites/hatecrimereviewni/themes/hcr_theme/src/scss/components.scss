@@ -27,13 +27,69 @@
   }
 }
 
+#header {
+  @media screen and (max-width: $lap) {
+    margin: 0;
+  }
+}
+
+#inner_header_wrapper {
+  background: $brand-primary;
+
+  @include breakpoint($lap) {
+    padding: 3.8rem 0 7rem;
+  }
+}
+
+#main-menu {
+  .nav-main {
+    min-height: 0;
+  }
+  .menu-main {
+    @include breakpoint($lap)  {
+      float: right;
+      margin-top: -14.5rem;
+    }
+  }
+
+  .menu-link {
+    border-bottom: none;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    min-width: 44px;
+    text-align: center;
+    padding: 1.1rem;
+
+  }
+
+  .menu-item {
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu .is-active,
+  .menu-link:hover {
+    background: $white;
+    color: $black;
+    box-shadow: inset 0 -5px 0 $black;
+  }
+
+  .menu-link:focus {
+    background-color: $brand-tertiary;
+    color: #000;
+    box-shadow: inset 0 -5px 0 $black;
+    outline: none;
+  }
+}
+
 .breadcrumb {
   padding: 0;
 
   .breadcrumb--list {
     margin-left: .4rem;
 
-    @media screen and (min-width: $lap) {
+    @include breakpoint($lap)  {
       margin-left: 2rem;
     }
   }
@@ -79,7 +135,7 @@
 
 .front {
   .container-wrap {
-    margin-bottom: 0;
+    padding: 4.2rem 0 10rem;
   }
 }
 
@@ -90,12 +146,49 @@
 }
 
 #footer {
-  @media screen and (max-width: $tab) {
-    padding-left: 1rem;
+  max-width: 100%;
+  padding-left: 1rem;
+
+  @include breakpoint($tab)  {
+    padding: 5% 2% 4%;
+  }
+
+  #footer_wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    a {
+      border-bottom-color: $white;
+      padding: .1rem;
+      @include adjust-font-size-to(16px);
+
+      &:hover {
+        background-color: #fff;
+        color: #333;
+        border-bottom: 5px solid $brand-tertiary;
+        margin-bottom: -5px;
+        outline: none;
+      }
+
+      &:focus,
+      &.is-active {
+        background-color: $brand-tertiary;
+        color: #000;
+        border-bottom: 5px solid #000;
+        margin-bottom: -5px;
+        outline: none;
+      }
+    }
+  }
+
+  address,
+  p,
+  a {
+    color: $white;
   }
 
   .footer-menu {
-    margin: 4% auto;
+    margin-top: 10rem;
 
     li {
       padding-left: 0;
@@ -107,6 +200,45 @@
         margin-right: .5rem;
       }
     }
+  }
+
+  .secondary-menu {
+    li {
+      border-bottom: none;
+    }
+  }
+}
+
+#footer-content {
+  .column,
+  .column:first-child {
+    padding-left: 0;
+    float: left;
+    margin-left: 1%;
+
+    @media screen and (max-width: $tab) {
+      margin: 1rem 2rem 1rem 0;
+    }
+
+    @media screen and (max-width: $mob) {
+      margin: 1rem 0;
+    }
+
+    @include breakpoint($tab) {
+      width: 32.5%;
+    }
+
+    li {
+      border: none;
+    }
+  }
+
+  .column:first-child {
+    margin-left: 0;
+  }
+
+  address {
+    line-height: 2.4rem;
   }
 }
 

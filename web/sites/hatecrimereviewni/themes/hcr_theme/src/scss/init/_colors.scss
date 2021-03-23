@@ -29,11 +29,11 @@ $chroma: add-colors((
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #07601f, //#0f3d0f,
+  brand-primary:          #28556c, //#0f3d0f,
 
   brand-secondary:        #606,
 
-  brand-tertiary:         #002e62,
+  brand-tertiary:         #fae029,
 ));
 
 // Define color names for functional uses.
@@ -69,10 +69,10 @@ $chroma: add-colors('functional', (
   table-cell-border:      #dbdbdb,
   table-cell-text:        'text',
 
-  footer-background:      #e7e7e7,
-  footer-border:          'brand-primary',
-  footer-text:            'text',
-  footer-headings:        'text',
+  footer-background:      'charcoal',
+  footer-border:          'charcoal',
+  footer-text:            #fff,
+  footer-headings:        #fff,
 ));
 
 $chroma-active-scheme: 'functional';
