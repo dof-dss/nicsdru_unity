@@ -4,3 +4,29 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#main-menu {
+  .menu-item {
+    flex-grow: 0;
+
+    .menu-link {
+      padding: 1.1rem 2rem .4rem;
+    }
+  }
+}
+
+#footer-menu {
+  .menu {
+    list-style: none;
+
+    @media screen and (max-width: $mob) {
+      text-align: center;
+    }
+
+    .menu-item {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      margin-right: .5rem;
+    }
+  }
+}
