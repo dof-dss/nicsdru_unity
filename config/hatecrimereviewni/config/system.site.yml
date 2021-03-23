@@ -12,5 +12,5 @@ default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: 1a291f6a-dc36-43b3-8c57-cb44712eae1d
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Hate Crime Legislation in Northern Ireland'
 frontpage_show_title: 0
