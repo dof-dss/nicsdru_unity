@@ -1,30 +1,3 @@
-blocks:
-  -
-    info: 'Footer Contact information'
-    langcode: en
-    uuid: 6245254b-4901-4d7a-8705-6e312a2d46e5
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<p>Telephone: 028 9026 1395<br />\r\nEmail: <a href=\"mailto:enquiries@hatecrimereviewni.org.uk\">enquiries@hatecrimereviewni.org.uk</a><br />\r\n&nbsp;</p>\r\n"
-          summary: ''
-          format: basic_html
-  -
-    info: 'Footer Address information'
-    langcode: en
-    uuid: 3d8f1e48-b6fb-4bca-a637-280852bc16ce
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<address>Room 1.8, Block 1 Knockview Buildings<br />\r\nStormont Estate<br />\r\nBelfast<br />\r\nBT4 3SG</address>\r\n"
-          summary: ''
-          format: basic_html
 menus:
   -
     menu_name: menu-secondary-menu
@@ -170,3 +143,30 @@ menus:
     weight: '-47'
     langcode: en
     uuid: 2fa39d5f-ff29-4b43-8657-8dcec0f90c69
+blocks:
+  -
+    info: 'Footer Contact information'
+    langcode: en
+    uuid: 6245254b-4901-4d7a-8705-6e312a2d46e5
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>Telephone: 028 9026 1395<br />\r\nEmail: <a href=\"mailto:enquiries@hatecrimereviewni.org.uk\">enquiries@hatecrimereviewni.org.uk</a><br />\r\n&nbsp;</p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Footer Address information'
+    langcode: en
+    uuid: 3d8f1e48-b6fb-4bca-a637-280852bc16ce
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<address>Room 1.8, Block 1<br />\r\nKnockview Buildings<br />\r\nStormont Estate<br />\r\nBelfast<br />\r\nBT4 3SG</address>\r\n"
+          summary: ''
+          format: basic_html
