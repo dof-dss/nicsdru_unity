@@ -1,0 +1,172 @@
+blocks:
+  -
+    info: 'Footer Contact information'
+    langcode: en
+    uuid: 6245254b-4901-4d7a-8705-6e312a2d46e5
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>Telephone: 028 9026 1395<br />\r\nEmail: <a href=\"mailto:enquiries@hatecrimereviewni.org.uk\">enquiries@hatecrimereviewni.org.uk</a><br />\r\n&nbsp;</p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Footer Address information'
+    langcode: en
+    uuid: 3d8f1e48-b6fb-4bca-a637-280852bc16ce
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<address>Room 1.8, Block 1 Knockview Buildings<br />\r\nStormont Estate<br />\r\nBelfast<br />\r\nBT4 3SG</address>\r\n"
+          summary: ''
+          format: basic_html
+menus:
+  -
+    menu_name: menu-secondary-menu
+    title: Support
+    parent: null
+    uri: 'entity:node/7'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-47'
+    langcode: en
+    uuid: 26f10386-a499-4923-aef2-8cb55b28b004
+  -
+    menu_name: menu-secondary-menu
+    title: 'Contact us'
+    parent: null
+    uri: 'entity:node/8'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: edc302ed-bb3f-406a-953d-c39a1da9b298
+  -
+    menu_name: menu-footer-menu
+    title: '@ Crown Copyright'
+    parent: null
+    uri: 'entity:node/9'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 8f5b0ed9-e85c-48f5-ac7f-f7dfb8292182
+  -
+    menu_name: menu-footer-menu
+    title: 'Terms and Conditions'
+    parent: null
+    uri: 'entity:node/10'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: d2e2e36b-1995-4f32-be85-f25c2f83a060
+  -
+    menu_name: menu-footer-menu
+    title: 'Complaints procedure'
+    parent: null
+    uri: 'entity:node/11'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 5a88fefd-bcd2-401f-8913-02e9cf7e446a
+  -
+    menu_name: menu-footer-menu
+    title: 'Site map'
+    parent: null
+    uri: 'entity:node/12'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 6f56293e-1dbc-430c-b79f-d8ec1f2d38cf
+  -
+    menu_name: menu-footer-menu
+    title: Cookies
+    parent: null
+    uri: 'entity:node/13'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: c8476c2b-3fb9-40ab-87ff-7e3e303bcc72
+  -
+    menu_name: main
+    title: Support
+    parent: null
+    uri: 'entity:node/7'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: c0fc5ec3-c304-4fdf-b83d-43d114ed101e
+  -
+    menu_name: main
+    title: 'Contact us'
+    parent: null
+    uri: 'entity:node/8'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-45'
+    langcode: en
+    uuid: d8d320c6-53bf-4e8e-84dc-67044ac3f398
+  -
+    menu_name: main
+    title: Home
+    parent: null
+    uri: 'internal:/'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: en
+    uuid: f2bb394f-7237-4c8a-8eca-d31cda38dc36
+  -
+    menu_name: main
+    title: 'Key Documents'
+    parent: null
+    uri: 'entity:node/29'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: en
+    uuid: e8d6c908-ea69-41ea-bdc5-334c6dac2db8
+  -
+    menu_name: main
+    title: Members
+    parent: null
+    uri: 'entity:node/30'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-47'
+    langcode: en
+    uuid: 2fa39d5f-ff29-4b43-8657-8dcec0f90c69
