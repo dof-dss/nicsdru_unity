@@ -1,0 +1,133 @@
+menus:
+  -
+    menu_name: menu-footer-menu
+    title: '© Crown Copyright'
+    parent: null
+    uri: 'internal:/'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: en
+    uuid: f0453b8c-ee05-45b1-9f0a-b0255482c490
+  -
+    menu_name: menu-footer-menu
+    title: Cookies
+    parent: null
+    uri: 'entity:node/2'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: fd49c742-3f9a-461d-91b6-5d739bb8df8c
+  -
+    menu_name: main
+    title: Home
+    parent: null
+    uri: 'internal:/'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 240c421a-4a33-4b2c-877e-b23dce23a88a
+  -
+    menu_name: main
+    title: Reports
+    parent: null
+    uri: 'entity:node/3'
+    link_title: null
+    description: 'Page containing reports relevant to odsc'
+    enabled: '1'
+    expanded: '0'
+    weight: '3'
+    langcode: en
+    uuid: 5c5b9b0a-ecf6-45f5-b0f5-011bd9ab7866
+  -
+    menu_name: main
+    title: About
+    parent: null
+    uri: 'entity:node/4'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '1'
+    langcode: en
+    uuid: db0e09c6-98e3-443e-934c-6750c3c678e7
+  -
+    menu_name: main
+    title: Eligibility
+    parent: 'menu_link_content:db0e09c6-98e3-443e-934c-6750c3c678e7'
+    uri: 'entity:node/5'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 0d5cd8d5-d0c1-4e7a-859e-aa12f130f37b
+  -
+    menu_name: main
+    title: 'The review process'
+    parent: 'menu_link_content:db0e09c6-98e3-443e-934c-6750c3c678e7'
+    uri: 'entity:node/6'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '1'
+    langcode: en
+    uuid: 3625642c-779b-4bee-bf2e-b225ad9c024e
+  -
+    menu_name: main
+    title: Contact
+    parent: null
+    uri: 'entity:node/7'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '4'
+    langcode: en
+    uuid: 9125ca32-be0a-42d2-bfe0-1b436baa0c03
+  -
+    menu_name: main
+    title: 'Useful links'
+    parent: 'menu_link_content:9125ca32-be0a-42d2-bfe0-1b436baa0c03'
+    uri: 'entity:node/8'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: ddb843cc-4022-41a2-8cdd-8c34c44efa77
+  -
+    menu_name: menu-footer-menu
+    title: 'Accessibility statement'
+    parent: null
+    uri: 'entity:node/9'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 812109dd-5560-435f-ab06-bdecf1d33e8b
+  -
+    menu_name: menu-footer-menu
+    title: 'Privacy Statement'
+    parent: null
+    uri: 'entity:node/10'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 3f490881-848c-4cb1-9772-2e4bb826c1ca
