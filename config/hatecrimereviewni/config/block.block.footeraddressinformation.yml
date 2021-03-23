@@ -1,0 +1,25 @@
+uuid: 875b7be3-b419-4bf8-8f1d-da6a9d740523
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:3d8f1e48-b6fb-4bca-a637-280852bc16ce'
+  module:
+    - block_content
+  theme:
+    - hcr_theme
+id: footeraddressinformation
+theme: hcr_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:3d8f1e48-b6fb-4bca-a637-280852bc16ce'
+settings:
+  id: 'block_content:3d8f1e48-b6fb-4bca-a637-280852bc16ce'
+  label: 'Footer Address information'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

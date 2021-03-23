@@ -1,0 +1,25 @@
+uuid: bbd5c450-c7f4-4a51-b057-19b931819c74
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:6245254b-4901-4d7a-8705-6e312a2d46e5'
+  module:
+    - block_content
+  theme:
+    - hcr_theme
+id: footercontactinformation
+theme: hcr_theme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'block_content:6245254b-4901-4d7a-8705-6e312a2d46e5'
+settings:
+  id: 'block_content:6245254b-4901-4d7a-8705-6e312a2d46e5'
+  label: 'Footer Contact information'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
