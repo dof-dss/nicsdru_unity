@@ -2,6 +2,8 @@ uuid: 03b5bbe3-cabe-4728-9db1-1280da207e10
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - hcr_theme
 id: hcr_theme_pagetitle
@@ -15,4 +17,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
