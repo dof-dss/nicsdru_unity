@@ -159,6 +159,8 @@
 
     a {
       border-bottom-color: $white;
+      padding: .1rem;
+      @include adjust-font-size-to(16px);
 
       &:hover {
         background-color: #fff;
