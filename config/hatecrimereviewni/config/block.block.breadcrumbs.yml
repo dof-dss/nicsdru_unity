@@ -1,0 +1,20 @@
+uuid: cc61a8cd-1e54-4e67-96b5-cb5a3273e922
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hcr_theme
+id: breadcrumbs
+theme: hcr_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
