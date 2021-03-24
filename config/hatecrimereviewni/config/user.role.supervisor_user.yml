@@ -40,6 +40,7 @@ permissions:
   - 'edit any document files'
   - 'edit any image files'
   - 'edit any video files'
+  - 'edit basic meta tags'
   - 'edit own audio files'
   - 'edit own document files'
   - 'edit own image files'
