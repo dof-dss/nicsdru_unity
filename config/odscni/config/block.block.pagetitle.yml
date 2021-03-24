@@ -1,6 +1,6 @@
 uuid: d3404cf6-4f9a-4a3a-9718-01d150ad3ed8
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - odscni_theme

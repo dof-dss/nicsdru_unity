@@ -4,3 +4,33 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.content {
+  ul {
+    li {
+      list-style: none;
+      position: relative;
+
+      &::before {
+        content: "-";
+        position: absolute;
+        left: -20px;
+        top: 0;
+      }
+    }
+  }
+}
+
+.region-content {
+  .content {
+    padding-bottom: 40px;
+  }
+}
+
+.toc-menu {
+  border-color: #ccc;
+}
+
+.breadcrumb {
+  padding: 0;
+}
