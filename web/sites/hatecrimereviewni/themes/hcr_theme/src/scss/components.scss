@@ -144,35 +144,6 @@
   #footer_wrapper {
     max-width: 1024px;
     margin: 0 auto;
-
-    a {
-      border-bottom-color: $white;
-      padding: .1rem;
-      @include adjust-font-size-to(16px);
-
-      &:hover {
-        background-color: #fff;
-        color: #333;
-        border-bottom: 5px solid $brand-tertiary;
-        margin-bottom: -5px;
-        outline: none;
-      }
-
-      &:focus,
-      &.is-active {
-        background-color: $brand-tertiary;
-        color: #000;
-        border-bottom: 5px solid #000;
-        margin-bottom: -5px;
-        outline: none;
-      }
-    }
-  }
-
-  address,
-  p,
-  a {
-    color: $white;
   }
 
   .footer-menu {
@@ -235,15 +206,5 @@
     @include breakpoint($mob) {
       display: block;
     }
-  }
-}
-
-a.btn {
-  text-decoration: underline;
-
-  &:focus {
-    color: #032f50;
-    border-bottom: 3px solid #032f50;
-    background: #ffe66a;
   }
 }
