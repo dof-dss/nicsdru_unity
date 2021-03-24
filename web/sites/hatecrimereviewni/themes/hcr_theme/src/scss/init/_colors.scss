@@ -69,10 +69,10 @@ $chroma: add-colors('functional', (
   table-cell-border:      #dbdbdb,
   table-cell-text:        'text',
 
-  footer-background:      'charcoal',
-  footer-border:          'charcoal',
-  footer-text:            #fff,
-  footer-headings:        #fff,
+  footer-background:      #e7e7e7,
+  footer-border:          'brand-primary',
+  footer-text:            'text',
+  footer-headings:        'text',
 ));
 
 $chroma-active-scheme: 'functional';
