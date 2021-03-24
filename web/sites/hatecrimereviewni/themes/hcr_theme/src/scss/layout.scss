@@ -4,3 +4,21 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.front {
+  .container-wrap {
+    padding: 4.2rem 0 10rem;
+  }
+}
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+@include breakpoint($tab) {
+  .content-sidebar-wrap {
+    width: 70%;
+  }
+}
