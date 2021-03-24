@@ -1,14 +1,12 @@
-uuid: 670a2d03-97a0-4f75-b1c8-5908d33a2f10
-langcode: und
+uuid: b12c0b20-8745-456b-8961-8b67857e82fa
+langcode: en
 status: true
 dependencies:
   module:
     - metatag
     - node
-_core:
-  default_config_hash: e847CiGeXOrMr5OXVKIaGRKuNwPUD5C2WoPPvz3PHkY
-id: node.field_metatag
-field_name: field_metatag
+id: node.field_meta_tags
+field_name: field_meta_tags
 entity_type: node
 type: metatag
 settings: {  }

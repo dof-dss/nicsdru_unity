@@ -79,6 +79,7 @@ permissions:
   - 'edit any remote_video media'
   - 'edit any video files'
   - 'edit any video media'
+  - 'edit basic meta tags'
   - 'edit own audio files'
   - 'edit own audio media'
   - 'edit own document files'
