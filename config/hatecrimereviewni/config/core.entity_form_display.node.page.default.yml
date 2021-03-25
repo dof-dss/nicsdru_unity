@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_metatag
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_toc_enable
     - node.type.page
   module:
@@ -34,8 +34,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_metatag:
-    weight: 123
+  field_meta_tags:
+    weight: 125
     settings:
       sidebar: true
     third_party_settings: {  }
