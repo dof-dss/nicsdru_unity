@@ -358,20 +358,39 @@ jobs:
           name: Turn off fastly module to allow for cleaner config import
           command: |
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Clear cache before config import
           command: |
             /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
             /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Force purge of Solr index
           command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
       - run:
           name: Rebuild the Solr index
           command: |
+            /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
