@@ -256,6 +256,7 @@ display:
         type: normal
         title: News
         menu_name: main
+        weight: -48
       exposed_block: true
       cache:
         type: none
