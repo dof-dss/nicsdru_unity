@@ -82,7 +82,6 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
    * {@inheritdoc}
    */
   public function build(RouteMatchInterface $route_match) {
-    $route_name = $route_match->getRouteName();
     $breadcrumb = new Breadcrumb();
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     $links[] = Link::createFromRoute(t('Home'), '<front>');
