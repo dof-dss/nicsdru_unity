@@ -11,7 +11,6 @@ module:
   ckeditor: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
-  comment: 0
   config: 0
   config_filter: 0
   config_split: 0
@@ -32,7 +31,6 @@ module:
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
-  facets_summary: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -107,7 +105,6 @@ module:
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
-  unity_search_pages: 0
   user: 0
   views_custom_cache_tag: 0
   webform: 0
