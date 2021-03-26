@@ -1,0 +1,11 @@
+services:
+  hatecrimereviewni_breadcrumbs.breadcrumb.view_page:
+    class: Drupal\hatecrimereviewni_breadcrumbs\ViewPageBreadcrumb
+    arguments: ['@request_stack', '@title_resolver']
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  hatecrimereviewni_breadcrumbs.breadcrumb.news:
+    class: Drupal\hatecrimereviewni_breadcrumbs\NewsBreadcrumb
+    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
