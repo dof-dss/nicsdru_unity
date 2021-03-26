@@ -90,12 +90,12 @@ process:
         http://test-hcr.nigov.net
     -
       plugin: site_files_filter
-      from_ref: sites/hatecrimereviewni/files
+      from_ref: sites/hcr/files
       to_ref: files/hatecrimereviewni
     -
       plugin: site_files_filter
       from_ref: sites/hatecrimereviewni.org.uk/files
-      to_ref: files/uregni
+      to_ref: files/hatecrimereviewni
   body/0/format:
     -
       plugin: static_map

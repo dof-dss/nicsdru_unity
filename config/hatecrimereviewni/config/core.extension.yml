@@ -45,6 +45,7 @@ module:
   geolocation_google_static_maps: 0
   geolocation_search_api: 0
   handy_cache_tags: 0
+  hatecrimereviewni_breadcrumbs: 0
   help: 0
   history: 0
   image: 0
@@ -88,6 +89,7 @@ module:
   scheduler_content_moderation_integration: 0
   search: 0
   search_api: 0
+  search_api_db: 0
   search_api_location: 0
   search_api_location_views: 0
   simplei: 0
