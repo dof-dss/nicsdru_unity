@@ -1,0 +1,29 @@
+uuid: 5c96e378-40fd-431e-acf7-f314dcd9d4ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_search_api
+  module:
+    - system
+    - views
+  theme:
+    - hcr_theme
+id: exposedformnews_search_page
+theme: hcr_theme
+region: search_facets
+weight: -5
+provider: null
+plugin: 'views_exposed_filter_block:news_search_api-news_search_page'
+settings:
+  id: 'views_exposed_filter_block:news_search_api-news_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false
+    context_mapping: {  }
