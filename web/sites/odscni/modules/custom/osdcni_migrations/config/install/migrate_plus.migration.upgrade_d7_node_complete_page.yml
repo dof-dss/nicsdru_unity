@@ -80,7 +80,32 @@ process:
     -
       plugin: get
       source: body
-  field_enable_toc:
+    -
+      plugin: filter_absolute_links
+      replace_urls:
+        http://www.odscni.org.uk
+        https://www.odscni.org.uk
+        http://odsc-drupal.nigov.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/odsc/files
+      to_ref: files/odscni
+    -
+      plugin: site_files_filter
+      from_ref: sites/odscni.org.uk/files
+      to_ref: files/odscni
+  body/0/format:
+    -
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
+  field_toc_enable:
     -
       plugin: get
       source: field_enable_toc
