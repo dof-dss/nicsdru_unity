@@ -2,6 +2,10 @@ uuid: 6e6a92f1-6ae9-4267-a386-82eddff60e44
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.book
+    - node.type.news
+    - node.type.page
   module:
     - content_moderation
 _core:
@@ -92,5 +96,9 @@ type_settings:
         - published
       to: needs_review
       weight: 2
-  entity_types: {  }
+  entity_types:
+    node:
+      - book
+      - news
+      - page
   default_moderation_state: draft
