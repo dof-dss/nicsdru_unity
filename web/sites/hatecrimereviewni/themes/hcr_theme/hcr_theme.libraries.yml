@@ -17,3 +17,8 @@ site-styling:
     # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
     theme:
       css/theme.css: { minified: true }
+
+hatecrimereviewni-fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap': { type: external, minified: true }
