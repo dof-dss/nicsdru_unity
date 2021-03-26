@@ -1,0 +1,29 @@
+uuid: 1c235686-78f3-41a3-a0c4-7fa3e0fe7e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.news_publication_date
+  module:
+    - facets
+    - system
+  theme:
+    - hcr_theme
+id: publicationdate
+theme: hcr_theme
+region: search_facets
+weight: -4
+provider: null
+plugin: 'facet_block:news_publication_date'
+settings:
+  id: 'facet_block:news_publication_date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: publicationdate
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false
+    context_mapping: {  }
