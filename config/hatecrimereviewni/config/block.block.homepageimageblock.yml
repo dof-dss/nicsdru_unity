@@ -1,0 +1,31 @@
+uuid: 7e53e54a-6749-4f26-b1a0-c121f0fc7595
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:1a01f892-e9b6-4364-b752-e3caf6fa92de'
+  module:
+    - block_content
+    - system
+  theme:
+    - hcr_theme
+id: homepageimageblock
+theme: hcr_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:1a01f892-e9b6-4364-b752-e3caf6fa92de'
+settings:
+  id: 'block_content:1a01f892-e9b6-4364-b752-e3caf6fa92de'
+  label: 'Homepage image block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
