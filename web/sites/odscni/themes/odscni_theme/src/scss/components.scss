@@ -74,3 +74,16 @@
 #main-menu .hamburger {
   top: -5.2rem;
 }
+
+.content .media-image-embed {
+  clear: right;
+  float: right;
+  width: 48%;
+  margin: 2.1rem 0 0 2.7rem;
+  max-width: 670px;
+}
+
+.image-caption {
+  margin-bottom: 1.8rem;
+  color: $headings;
+}
