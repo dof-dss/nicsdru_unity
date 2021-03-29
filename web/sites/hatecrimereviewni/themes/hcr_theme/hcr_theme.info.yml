@@ -6,6 +6,7 @@ core: 8.x
 
 libraries:
   - hcr_theme/site-styling
+  - hcr_theme/hatecrimereviewni-fonts
 
 ckeditor_stylesheets:
   - css/ckeditor.css
