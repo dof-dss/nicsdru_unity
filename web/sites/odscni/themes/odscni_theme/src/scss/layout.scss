@@ -35,3 +35,15 @@
     padding: 0 20px 9999px;
   }
 }
+
+#header {
+  margin: 5px auto;
+
+  @media screen and (max-width: $tab) {
+    margin-bottom: 0;
+  }
+
+  .top_left {
+    min-height: 135px;
+  }
+}
