@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.news
     - node.type.page
   module:
     - content_moderation
@@ -97,6 +96,5 @@ type_settings:
       weight: 2
   entity_types:
     node:
-      - news
       - page
   default_moderation_state: draft

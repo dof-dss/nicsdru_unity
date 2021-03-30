@@ -12,6 +12,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'diff view changes'
+  - 'display eu cookie compliance popup'
   - 'search content'
   - 'view files'
   - 'view media'
