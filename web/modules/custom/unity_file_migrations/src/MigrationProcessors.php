@@ -130,7 +130,7 @@ class MigrationProcessors {
       )->fetchField();
       if (!empty($check_vid)) {
         // Revision exists, make it current (and publish if necessary)
-        $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
+        $revision = $this->nodeStorage->loadRevision($vid);
         $revision->isDefaultRevision(TRUE);
         if ($status == 1) {
           $revision->setpublished();
@@ -141,7 +141,7 @@ class MigrationProcessors {
 
     if ($status == 1) {
       // If node was published on D7, make sure that it is published on D8.
-      $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+      $node = $this->nodeStorage->load($nid);
       $node->status = 1;
       $node->set('moderation_state', 'published');
       $node->save();
@@ -154,7 +154,7 @@ class MigrationProcessors {
           ", [':nid' => $nid])->fetchField();
       if ($moderation_status == 'needs_review') {
         // Make sure state is 'needs review' on D8.
-        $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+        $node = $this->nodeStorage->load($nid);
         $node->set('moderation_state', 'needs_review');
         $node->save();
       }
