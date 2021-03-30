@@ -125,13 +125,20 @@ class MigrationProcessors {
 
     // Update the current revision if necessary.
     if ($vid != $d8_vid) {
-      $io->info('Updating node ' . $nid . ' with old revision ' . $vid);
-      $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
-      $revision->isDefaultRevision(TRUE);
-      if ($status == 1) {
-        $revision->setpublished();
+      // Does this revision exist in D8 ?
+      $check_vid = $this->dbConnDrupal8->query(
+        "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
+        [':nid' => $nid, ':vid' => $vid]
+      )->fetchField();
+      if (!empty($check_vid)) {
+        $io->info('Updating node ' . $nid . ' with old revision ' . $vid);
+        $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
+        $revision->isDefaultRevision(TRUE);
+        if ($status == 1) {
+          $revision->setpublished();
+        }
+        $revision->save();
       }
-      $revision->save();
     }
 
     if ($status == 1) {
