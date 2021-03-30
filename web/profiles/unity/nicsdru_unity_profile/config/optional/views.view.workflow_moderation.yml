@@ -5,7 +5,6 @@ dependencies:
     - user.role.admin_user
     - user.role.administrator
     - user.role.author_user
-    - user.role.editor_user
     - user.role.supervisor_user
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -34,7 +33,6 @@ display:
             administrator: administrator
             author_user: author_user
             supervisor_user: supervisor_user
-            editor_user: editor_user
             admin_user: admin_user
       cache:
         type: tag
