@@ -29,6 +29,7 @@ install:
   - datetime_range
   - dblog
   - diff
+  - dynamic_entity_reference
   - dynamic_page_cache
   - easy_install
   - editor
@@ -37,8 +38,10 @@ install:
   - entity_browser_entity_form
   - entity_embed
   - entity_reference_revisions
+  - eu_cookie_compliance
   - facets
   - facets_pretty_paths
+  - facets_summary
   - field
   - field_group
   - field_ui
@@ -57,6 +60,8 @@ install:
   - linkit
   - media
   - media_library
+  - media_library_edit
+  - menu_admin_per_menu
   - menu_breadcrumb
   - menu_ui
   - metatag
@@ -81,8 +86,7 @@ install:
   - rdf
   - redirect
   - responsive_image
-  - scheduler
-  - scheduler_content_moderation_integration
+  - scheduled_transitions
   - search
   - simplei
   - structure_sync
@@ -93,11 +97,11 @@ install:
   - token_filter
   - toolbar
   - twig_tweak
+  - ultimate_cron
   - unity_common
   - unity_frontpage
   - unity_image_styles
   - unity_internal_link_checker
-  - unity_media
   - user
   - views_custom_cache_tag
   - webform
