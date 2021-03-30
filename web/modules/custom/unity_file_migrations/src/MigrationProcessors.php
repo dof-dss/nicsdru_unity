@@ -86,9 +86,8 @@ class MigrationProcessors {
     $migrate_nid_status = $query->fetchAll();
 
     // Sync our D8 node publish values and revisions with those from D7.
-    //$this->processNodeStatus(3531, 1);
     foreach ($migrate_nid_status as $row) {
-      $this->processNodeStatus($row->nid, $row->status, $io);
+      $this->processNodeStatus($row->nid, $row->status);
     }
 
     if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
@@ -110,7 +109,7 @@ class MigrationProcessors {
    * @param string $status
    *   The status of the node.
    */
-  public function processNodeStatus(int $nid, string $status, $io) {
+  public function processNodeStatus(int $nid, string $status) {
     // Need to fetch the D8 revision ID for any node as it doesn't
     // always match the source db.
     $d8_vid = $this->dbConnDrupal8->query(
@@ -122,7 +121,6 @@ class MigrationProcessors {
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-
     // Update the current revision if necessary.
     if ($vid != $d8_vid) {
       // Does this revision exist in D8 ?
@@ -131,7 +129,7 @@ class MigrationProcessors {
         [':nid' => $nid, ':vid' => $vid]
       )->fetchField();
       if (!empty($check_vid)) {
-        $io->info('Updating node ' . $nid . ' with old revision ' . $vid);
+        // Revision exists, make it current (and publish if necessary)
         $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
         $revision->isDefaultRevision(TRUE);
         if ($status == 1) {
@@ -142,6 +140,7 @@ class MigrationProcessors {
     }
 
     if ($status == 1) {
+      // If node was published on D7, make sure that it is published on D8.
       $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
       $node->status = 1;
       $node->set('moderation_state', 'published');
@@ -154,60 +153,11 @@ class MigrationProcessors {
         where hid = (select max(hid) from {workbench_moderation_node_history} where nid = :nid)
           ", [':nid' => $nid])->fetchField();
       if ($moderation_status == 'needs_review') {
+        // Make sure state is 'needs review' on D8.
         $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
         $node->set('moderation_state', 'needs_review');
         $node->save();
       }
-    }
-  }
-
-  /**
-   * Updates the current revision for the given node.
-   *
-   * @param int $nid
-   *   The node id.
-   * @param int $vid
-   *   The target revision id (from D7).
-   * @param int $d8_vid
-   *   The current D8 revision id.
-   *
-   * @return string
-   *   Current revision id.
-   */
-  public function updateCurrentRevision(int $nid, int $vid, int $d8_vid) {
-    // Does this revision exist in D8 ?
-    $check_vid = $this->dbConnDrupal8->query(
-      "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
-      [':nid' => $nid, ':vid' => $vid]
-    )->fetchField();
-    if (!empty($check_vid)) {
-      // Does the current D8 revision exist in D7 ?
-      $check_d7_vid = $this->dbConnMigrate->query(
-        "SELECT vid FROM {node_revision} WHERE nid = :nid and vid = :vid",
-        [':nid' => $nid, ':vid' => $d8_vid]
-      )->fetchField();
-      if (!empty($check_d7_vid)) {
-        // Make the D7 revision the current revision in D8.
-        // N.B. This will only work in the 'one hit' migration scenario, it may
-        // cause problems if the migration runs again and in the meantime the
-        // editors have reverted to an older revision that also came from D7.
-        $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
-        $revision->isDefaultRevision(TRUE);
-        $revision->setpublished();
-        $revision->save();
-        /*$query = $this->dbConnDrupal8->update('node')
-          ->fields(['vid' => $vid])
-          ->condition('nid', $nid)
-          ->execute();
-        $query = $this->dbConnDrupal8->update('node_field_data')
-          ->fields(['vid' => $vid])
-          ->condition('nid', $nid)
-          ->execute();*/
-      }
-      return $vid;
-    }
-    else {
-      return $d8_vid;
     }
   }
 
