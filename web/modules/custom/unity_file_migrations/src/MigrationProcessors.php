@@ -117,70 +117,28 @@ class MigrationProcessors {
       "SELECT vid FROM {node_field_data} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-    // Run an update statement per item. Refinement might be to run a
-    // cross-DB SELECT query to power an UPDATE using a JOIN.
-    $query = $this->dbConnDrupal8->update('node_field_data')
-      ->fields(['status' => $status])
-      ->condition('nid', $nid)
-      ->execute();
-
     // Get the D7 revision id.
     $vid = $this->dbConnMigrate->query(
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['status' => $status])
-      ->condition('nid', $nid)
-      ->condition('vid', $vid)
-      ->execute();
 
     // Update the current revision if necessary.
     if ($vid != $d8_vid) {
       $io->info('Updating node ' . $nid . ' with old revision ' . $vid);
-      $vid = $this->updateCurrentRevision($nid, $vid, $d8_vid);
+      $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
+      $revision->isDefaultRevision(TRUE);
+      if ($status == 1) {
+        $revision->setpublished();
+      }
+      $revision->save();
     }
 
-    // The 'revision_translation_affected' field is poorly documented (and
-    // understood) in Drupal core, and is sometimes set to NULL after migrating
-    // content from Drupal 7. There is much discussion at
-    // https://www.drupal.org/project/drupal/issues/2746541 but after testing
-    // and investigation I am yet to find a case where it should not be
-    // set to '1'.
-    // Hence, we set it to '1' across the board to solve the problem
-    // of revisions not appearing on the revisions tab.
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['revision_translation_affected' => 1])
-      ->condition('nid', $nid)
-      ->execute();
-
     if ($status == 1) {
-      // Make sure that we have a 'published' revision.
-      $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
-        ->fields(['moderation_state' => 'published'])
-        ->condition('content_entity_id', $nid)
-        ->condition('content_entity_revision_id', $vid)
-        ->execute();
-
-      $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
-        ->fields(['moderation_state' => 'published'])
-        ->condition('content_entity_id', $nid)
-        ->condition('content_entity_revision_id', $vid)
-        ->execute();
-
-      // Only one row in node_field_revision should be set to
-      // 'published' for this nid.
-      $query = $this->dbConnDrupal8->update('node_field_revision')
-        ->fields(['status' => 0])
-        ->condition('nid', $nid)
-        ->condition('vid', $vid, '<>')
-        ->execute();
-
-      $query = $this->dbConnDrupal8->update('node_field_revision')
-        ->fields(['status' => 1])
-        ->condition('nid', $nid)
-        ->condition('vid', $vid)
-        ->execute();
+      $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+      $node->status = 1;
+      $node->set('moderation_state', 'published');
+      $node->save();
     }
     else {
       // See if the moderation state on D7 was 'needs review'.
@@ -189,19 +147,9 @@ class MigrationProcessors {
         where hid = (select max(hid) from {workbench_moderation_node_history} where nid = :nid)
           ", [':nid' => $nid])->fetchField();
       if ($moderation_status == 'needs_review') {
-        // This node was in 'needs review' status on D7 so we need to make
-        // sure that it also looks like that on D8.
-        $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
-          ->fields(['moderation_state' => 'needs_review'])
-          ->condition('content_entity_id', $nid)
-          ->condition('content_entity_revision_id', $vid)
-          ->execute();
-
-        $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
-          ->fields(['moderation_state' => 'needs_review'])
-          ->condition('content_entity_id', $nid)
-          ->condition('content_entity_revision_id', $vid)
-          ->execute();
+        $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+        $node->set('moderation_state', 'needs_review');
+        $node->save();
       }
     }
   }
