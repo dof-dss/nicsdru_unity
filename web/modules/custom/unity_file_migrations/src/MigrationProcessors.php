@@ -86,8 +86,9 @@ class MigrationProcessors {
     $migrate_nid_status = $query->fetchAll();
 
     // Sync our D8 node publish values and revisions with those from D7.
+    //$this->processNodeStatus(3531, 1);
     foreach ($migrate_nid_status as $row) {
-      $this->processNodeStatus($row->nid, $row->status);
+      $this->processNodeStatus($row->nid, $row->status, $io);
     }
 
     if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
@@ -109,7 +110,7 @@ class MigrationProcessors {
    * @param string $status
    *   The status of the node.
    */
-  public function processNodeStatus(int $nid, string $status) {
+  public function processNodeStatus(int $nid, string $status, $io) {
     // Need to fetch the D8 revision ID for any node as it doesn't
     // always match the source db.
     $d8_vid = $this->dbConnDrupal8->query(
@@ -123,19 +124,20 @@ class MigrationProcessors {
       ->condition('nid', $nid)
       ->execute();
 
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['status' => $status])
-      ->condition('nid', $nid)
-      ->condition('vid', $d8_vid)
-      ->execute();
-
     // Get the D7 revision id.
     $vid = $this->dbConnMigrate->query(
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
+    $query = $this->dbConnDrupal8->update('node_field_revision')
+      ->fields(['status' => $status])
+      ->condition('nid', $nid)
+      ->condition('vid', $vid)
+      ->execute();
+
     // Update the current revision if necessary.
     if ($vid != $d8_vid) {
+      $io->info('Updating node ' . $nid . ' with old revision ' . $vid);
       $vid = $this->updateCurrentRevision($nid, $vid, $d8_vid);
     }
 
@@ -234,14 +236,18 @@ class MigrationProcessors {
         // N.B. This will only work in the 'one hit' migration scenario, it may
         // cause problems if the migration runs again and in the meantime the
         // editors have reverted to an older revision that also came from D7.
-        $query = $this->dbConnDrupal8->update('node')
+        $revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
+        $revision->isDefaultRevision(TRUE);
+        $revision->setpublished();
+        $revision->save();
+        /*$query = $this->dbConnDrupal8->update('node')
           ->fields(['vid' => $vid])
           ->condition('nid', $nid)
           ->execute();
         $query = $this->dbConnDrupal8->update('node_field_data')
           ->fields(['vid' => $vid])
           ->condition('nid', $nid)
-          ->execute();
+          ->execute();*/
       }
       return $vid;
     }
