@@ -27,6 +27,7 @@ permissions:
   - 'administer content types'
   - 'administer image styles'
   - 'administer login destination settings'
+  - 'administer main menu items'
   - 'administer main-menu menu items'
   - 'administer media browser'
   - 'administer modules'

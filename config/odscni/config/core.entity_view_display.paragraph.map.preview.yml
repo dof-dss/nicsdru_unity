@@ -1,0 +1,47 @@
+uuid: 72e86304-6900-4f55-9c91-5715aaba0078
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.map.field_location
+    - filter.format.plain_text
+    - paragraphs.paragraphs_type.map
+  module:
+    - geolocation
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.map.preview
+targetEntityType: paragraph
+bundle: map
+mode: preview
+content:
+  field_location:
+    weight: 0
+    label: hidden
+    settings:
+      title: ''
+      set_marker: true
+      common_map: true
+      show_delta_label: false
+      data_provider_settings: {  }
+      map_provider_id: google_maps
+      centre:
+        fit_bounds:
+          enable: true
+          weight: -101
+          map_center_id: fit_bounds
+          settings:
+            reset_zoom: true
+      map_provider_settings: {  }
+      info_text:
+        value: ''
+        format: plain_text
+      use_overridden_map_settings: false
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+hidden: {  }
