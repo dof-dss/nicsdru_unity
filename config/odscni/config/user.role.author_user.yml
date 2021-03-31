@@ -13,6 +13,7 @@ permissions:
   - 'access administration pages'
   - 'access ckeditor link'
   - 'add media from remote sources'
+  - 'administer main menu items'
   - 'administer main-menu menu items'
   - 'create audio media'
   - 'create document media'

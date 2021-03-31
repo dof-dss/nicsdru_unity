@@ -1,0 +1,25 @@
+uuid: c1543bcf-4ff3-4315-aaf8-4d6c78a41f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - paragraphs.paragraphs_type.map
+  module:
+    - entity_embed
+    - paragraphs
+label: Map
+id: map
+type_id: entity
+type_settings:
+  entity_type: paragraph
+  bundles:
+    - map
+  display_plugins:
+    - 'view_mode:paragraph.preview'
+  entity_browser: ''
+  entity_browser_settings: {  }
+icon:
+  data: iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABnUlEQVRYhb2WPU8CQRCGHz9iLAyxsFCjxtrS0hAKCwprSktKQusPIPwIww+wJFTGGCuFhIKKkpIQQiioSEwosLg9P3eWndvFN5mE7M7M8x65m13Q6QCoAo/ACFiYGJm1qsmJrl2gDsyB5YqYm9zdWPBzoO8B/h19UxukM2CYAZ7G0PTIpB2gFwBPo2d6WbXlMHAH3Dr2O8AD0AY2gFMh7wh4B14dvf4oB8ywP9EMKFpqiitqchoDZaHRUoB/NyHVlTUGmkKTtkdtW6ht2pI3hSaXwvqbhwEpx9pTMnDsAdLqUGNAWs97gKScbY/aT02I/xKONQZeHI2yfIZL4NkGkv6WJ+Ba2Ns3+x2+Xrg8cOV4ICQDkk5IjtnQMZzGwvRUqRHRQEMLh+RT9Dn/V8WcgM+6HsFAPSsckgNkGgCfojyEbKoEGKiEwiG5TAwywAc4LiJalTIYKMWCp+oq4N3YcICCwkBhHQYAWh7w1rrgABe4R/TC5KxV9w4DmUauVtKIDhq5WtUsBmr/BQfY4+etaUKEkavVDck1a2x+Z9IHJtFW3WCJ+vMAAAAASUVORK5CYII=
+  uri: 'public://embed_buttons/pin.png'
+icon_uuid: null
