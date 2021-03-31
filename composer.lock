@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1054ec03056c11ce7774491d5cd16b69",
+    "content-hash": "b3fe221c1c286036c9321c201337aaa8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3461,6 +3461,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Disable XSS for tag settings to allow HTML output": "https://gist.githubusercontent.com/omahm/eb99bc8278b57798a7d82bf06c27b8d1/raw/d9d75e06300a102b072dd8166f82ec381f211b9d/cookie_content_blocker_disable_xss"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
