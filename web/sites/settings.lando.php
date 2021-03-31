@@ -35,6 +35,9 @@ $databases['migrate']['default'] = $databases[$subsite_id . '7']['default'];
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
+// Add trusted host pattern for Lando sites, in Lando config.
+$settings['trusted_host_patterns'][] = '^.+\.lndo\.site$';
+
 // Assume all Lando sites should use 'local' config for devlopment.
 $config['config_split.config_split.local']['status'] = TRUE;
 $config['config_split.config_split.hosted']['status'] = FALSE;
