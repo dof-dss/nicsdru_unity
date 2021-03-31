@@ -6,6 +6,11 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\file\Entity\File;
+use Drupal\file\FileInterface;
+use Drupal\media\MediaInterface;
+use Drupal\views\Render\ViewsRenderPipelineMarkup;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -36,5 +41,149 @@ function unity_common_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form_state,
       ['honeypot', 'time_restriction']
     );
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_field().
+ *
+ * Injects the usage value of a media item into the table display.
+ */
+function unity_common_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field_id = $variables['field']->field;
+
+  if ($view->id() == 'media_library' &&
+    in_array($view->current_display, ['default_page', 'widget_table'])) {
+
+    if ($field_id == 'filemime') {
+      $pretty_mimes = \Drupal::service('origins_media.pretty_mime_types')->getMimeTypes();
+      $mime_type_key = '';
+
+      if (empty($variables['output'])) {
+        // If empty, try checking mime type for an image.
+        $media = $variables['row']->_entity;
+
+        if ($media instanceof MediaInterface && $media->bundle() == 'image') {
+          // Need to load the file behind it to check what it is.
+          $file = File::load($media->field_media_image->target_id);
+
+          if ($file instanceof FileInterface) {
+            $mime_type_key = $file->getMimeType();
+          }
+        }
+      }
+      else {
+        $mime_type_key = $variables['output']->__toString();
+      }
+
+      // Replace with prettier version.
+      $variables['output'] = ViewsRenderPipelineMarkup::create($pretty_mimes[$mime_type_key]);
+    }
+
+    if ($field_id == 'nothing') {
+      $mid = $variables['row']->mid;
+      $usage = \Drupal::service('whatlinkshere.linkmanager')->getReferenceContent(
+        $variables['row']->_entity,
+        PHP_INT_MAX,
+        0);
+
+      $ref_count = $usage['total'];
+
+      $link = Link::createFromRoute(
+        t('@count places', ['@count' => $ref_count]),
+        'whatlinkshere.references.media',
+        ['media' => $mid]
+      );
+
+      $variables['output'] = ViewsRenderPipelineMarkup::create($link->toString());
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_media().
+ */
+function unity_common_preprocess_media(array &$variables) {
+  $x = 1;
+  if ($variables['view_mode'] === 'media_library' && $variables['media']->bundle() === 'document') {
+    $media_entity = &$variables['media'];
+    $file_storage = \Drupal::entityTypeManager()->getStorage('file');
+
+    // Get the underlying file associated with this document entity.
+    $file = $file_storage->load($media_entity->field_media_file->target_id);
+
+    if ($file instanceof FileInterface === FALSE) {
+      return;
+    }
+
+    $mimetype = $file->getMimeType();
+
+    // There shouldn't be an image file here, but just in case, screen for it as if
+    // it's genuine it likely has its own thumbnail so we would want to keep that.
+    if (preg_match('/jpeg|jpg|gif|png/', $mimetype)) {
+      return;
+    }
+
+    $simple_mimetypes = \Drupal::service('origins_media.pretty_mime_types')->getSimpleMimeTypes();
+    $pretty_mimetypes = \Drupal::service('origins_media.pretty_mime_types')->getMimeTypes();
+
+    // Replace the original image_style render element with a bespoke HTML element
+    // with our custom CSS attached to render the file icon as background CSS.
+    $variables['content']['thumbnail'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#attributes' => [
+        'class' => [
+          'file--media-library-preview',
+          'file--ico',
+          'file--ico__' . $simple_mimetypes[$mimetype]
+        ],
+        'aria-label' => $pretty_mimetypes[$mimetype],
+      ],
+      '#attached' => [
+        'library' => 'nicsdru_unity_theme/media_library_styles',
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_image_formatter().
+ */
+function unity_common_preprocess_image_formatter(array &$variables) {
+  $x = 1;
+  if (empty($variables['url']) || $variables['image_style'] != 'thumbnail') {
+    return;
+  }
+
+  // Derive the media entity linked to from the URL.
+  $url = &$variables['url'];
+  $media_entity = $url->getOption('entity');
+
+  if ($media_entity instanceof MediaInterface && $media_entity->bundle() === 'document') {
+    $file_storage = \Drupal::entityTypeManager()->getStorage('file');
+    // Get the underlying file associated with this document entity.
+    $file = $file_storage->load($media_entity->field_media_file->target_id);
+    $mimetype = $file->getMimeType();
+    $simple_mimetypes = \Drupal::service('origins_media.pretty_mime_types')->getSimpleMimeTypes();
+
+    // Replace the original image_style render element with a bespoke HTML element
+    // with our custom CSS attached to render the file icon as background CSS.
+    $variables['image'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#attributes' => [
+        'class' => [
+          'file--media-library-preview',
+          'file--ico',
+          'file--ico__' . $simple_mimetypes[$mimetype]
+        ],
+        'aria-label' => $pretty_mimetypes[$mimetype],
+      ],
+      '#attached' => [
+        'library' => 'nicsdru_unity_theme/media_library_styles',
+      ],
+    ];
   }
 }
