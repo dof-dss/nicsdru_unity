@@ -102,6 +102,7 @@ install:
   - unity_frontpage
   - unity_image_styles
   - unity_internal_link_checker
+  - unity_map_embed
   - user
   - views_custom_cache_tag
   - webform
