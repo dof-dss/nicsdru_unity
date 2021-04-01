@@ -157,9 +157,8 @@
         "drupal/migrate_plus": "^4.2",
         "drupal/migrate_tools": "4.x-dev",
         "drupal/permissions_filter": "^1.1",
-        "drupal/stage_file_proxy": "^1.0@beta",
-        "mglaman/drupal-check": "^1.0",
-        "phpstan/phpstan": "0.11.16",
+        "drupal/stage_file_proxy": "^1.1",
+        "mglaman/drupal-check": "^1.1",
         "previousnext/phpunit-finder": "^1.0@alpha"
     },
     "conflict": {

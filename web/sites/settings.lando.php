@@ -35,6 +35,14 @@ $databases['migrate']['default'] = $databases[$subsite_id . '7']['default'];
 $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 $settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
+// Add trusted host pattern for Lando sites, in Lando config.
+$settings['trusted_host_patterns'][] = '^.+\.lndo\.site$';
+
+// Set stage file proxy config, if there's an envvar to support it.
+if (!empty(getenv('STAGE_FILE_PROXY_ORIGIN'))) {
+  $config['stage_file_proxy.settings']['origin'] = getenv('STAGE_FILE_PROXY_ORIGIN');
+}
+
 // Assume all Lando sites should use 'local' config for devlopment.
 $config['config_split.config_split.local']['status'] = TRUE;
 $config['config_split.config_split.hosted']['status'] = FALSE;
