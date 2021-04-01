@@ -45,63 +45,6 @@ function unity_common_form_alter(&$form, FormStateInterface $form_state, $form_i
 }
 
 /**
- * Implements hook_preprocess_views_view_field().
- *
- * Injects the usage value of a media item into the table display.
- */
-function unity_common_preprocess_views_view_field(&$variables) {
-  $view = $variables['view'];
-  $field_id = $variables['field']->field;
-
-  if ($view->id() == 'media_library' &&
-    in_array($view->current_display, ['default_page', 'widget_table'])) {
-
-    if ($field_id == 'filemime') {
-      $pretty_mimes = \Drupal::service('origins_media.pretty_mime_types')->getMimeTypes();
-      $mime_type_key = '';
-
-      if (empty($variables['output'])) {
-        // If empty, try checking mime type for an image.
-        $media = $variables['row']->_entity;
-
-        if ($media instanceof MediaInterface && $media->bundle() == 'image') {
-          // Need to load the file behind it to check what it is.
-          $file = File::load($media->field_media_image->target_id);
-
-          if ($file instanceof FileInterface) {
-            $mime_type_key = $file->getMimeType();
-          }
-        }
-      }
-      else {
-        $mime_type_key = $variables['output']->__toString();
-      }
-
-      // Replace with prettier version.
-      $variables['output'] = ViewsRenderPipelineMarkup::create($pretty_mimes[$mime_type_key]);
-    }
-
-    if ($field_id == 'nothing') {
-      $mid = $variables['row']->mid;
-      $usage = \Drupal::service('whatlinkshere.linkmanager')->getReferenceContent(
-        $variables['row']->_entity,
-        PHP_INT_MAX,
-        0);
-
-      $ref_count = $usage['total'];
-
-      $link = Link::createFromRoute(
-        t('@count places', ['@count' => $ref_count]),
-        'whatlinkshere.references.media',
-        ['media' => $mid]
-      );
-
-      $variables['output'] = ViewsRenderPipelineMarkup::create($link->toString());
-    }
-  }
-}
-
-/**
  * Implements hook_preprocess_media().
  */
 function unity_common_preprocess_media(array &$variables) {
