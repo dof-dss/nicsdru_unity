@@ -86,7 +86,7 @@ Note that the -d sitename must have a '_legacy' suffix, please make sure that yo
 
 4. You may need to run the 'migrate-import' command a few times until it completes.
 
-5. When all content has been migrated, make sure that all nodes are published if appropriate:
+5. When all content has been migrated, make sure that all nodes are published if appropriate (see note below):
 `lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
 
 6. Import config again:
@@ -94,6 +94,11 @@ Note that the -d sitename must have a '_legacy' suffix, please make sure that yo
 
 7. Import blocks saved in config using the 'structure sync' module (select option 1 - 'Full'):
 `lando drush import-blocks`
+
+N.B. You should only run the publish status script (step 7) after ALL node and revision migrations have completed.
+This process will correctly set current revision and publish status for all nodes but it will create new revisions.
+This means that once this has been run there should be no more 'top up' migrations, the only option is to roll back
+all revision and node migrations and start from scratch.
 
 
 ## Code workflow
