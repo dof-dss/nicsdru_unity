@@ -25,7 +25,7 @@ Or, if available, you may also fetch the database and import this:
 
 `platform db:dump` (you'll need to select project, environment and required site e.g. 'uregni')
 
-`lando db-import -d <sitename/database> -f <downloaded sql file>` (where 'site name' may be 'uregni', 'liofa' etc)
+`lando db-import -d <sitename> -f <downloaded sql file>` (where 'sitename' may be 'uregni', 'liofa' etc)
 
 ## Preparing to run migrations
 
