@@ -6,6 +6,7 @@ use Drupal\Core\Database\Database;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Extension\ModuleHandler;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Console\Core\Style\DrupalStyle;
 
 /**
  * A collection of methods for processing migrations.
@@ -55,7 +56,7 @@ class MigrationProcessors {
   /**
    * Updates the status for nodes.
    */
-  public function updatePublishStatus($io, $node_type = NULL) {
+  public function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
     // This update should be run from the Drupal console after ALL node
     // and revision migrations have completed. Note that this process
     // will correctly set current revision and publish status for all
