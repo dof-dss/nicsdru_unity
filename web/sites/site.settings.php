@@ -66,8 +66,13 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       break;
 
     case 'D8UN-edge':
-      // Edge environment config adjustments.
+      // Edge environment orange toolbar.
       $env_colour = '#e56716';
+      break;
+
+    case 'D8UN-uat':
+      // UAT environment purple toolbar.
+      $env_colour = '#9370DB';
       break;
 
     default:
@@ -76,11 +81,9 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   }
   $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 }
-else {
-  // Lando config.
-  if (file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
-    include $app_root . '/' . $site_path . '/../settings.lando.php';
-  }
+
+if (getenv('LANDO') && file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
+  include $app_root . '/' . $site_path . '/../settings.lando.php';
 }
 
 // Configure file paths.

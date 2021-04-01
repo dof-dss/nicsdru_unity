@@ -16,6 +16,7 @@ permissions:
   - 'add media from remote sources'
   - 'add scheduled transitions node page'
   - 'administer book outlines'
+  - 'administer main menu items'
   - 'administer main-menu menu items'
   - 'administer redirects'
   - 'audit content'
