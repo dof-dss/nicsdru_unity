@@ -63,10 +63,10 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   if (file_exists($app_root . '/sites/sites.platformsh.php')) {
     include $app_root . '/sites/sites.platformsh.php';
   }
-} else {
+}
+
+if (getenv('LANDO') && file_exists($app_root . '/sites/sites.lando.php')) {
   // Running in Lando locally, include appropriate sites file.
-  if (file_exists($app_root . '/sites/sites.lando.php')) {
-    include $app_root . '/sites/sites.lando.php';
-  }
+  include $app_root . '/sites/sites.lando.php';
 }
 
