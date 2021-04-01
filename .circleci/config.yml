@@ -71,16 +71,27 @@ jobs:
           root: ./
           paths:
             - ./
-  # Test for coding standards and deprecated code.
-  static_analysis:
+
+  # Test for coding standards.
+  coding_standards:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
     steps:
       - attach_workspace:
           at: ./
+      - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
-          name: PHPCS static analysis
+          name: PHPCS analysis
           command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/sites /home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom /home/circleci/project/web/profiles/unity /home/circleci/project/web/profiles/origins"
+
+  # Test for coding standards and deprecated code.
+  deprecated_code:
+    docker:
+      - image: circleci/php:7.4.15-apache-browsers
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
           name: Deprecated code check
           command: |
@@ -400,7 +411,10 @@ workflows:
   build-test-deploy:
     jobs:
       - build
-      - static_analysis:
+      - coding_standards:
+          requires:
+            - build
+      - deprecated_code:
           requires:
             - build
       - unit_kernel_tests:
