@@ -66,8 +66,13 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       break;
 
     case 'D8UN-edge':
-      // Edge environment config adjustments.
+      // Edge environment orange toolbar.
       $env_colour = '#e56716';
+      break;
+
+    case 'D8UN-uat':
+      // UAT environment purple toolbar.
+      $env_colour = '#9370DB';
       break;
 
     default:
