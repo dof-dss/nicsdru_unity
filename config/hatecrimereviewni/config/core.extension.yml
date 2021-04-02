@@ -31,6 +31,7 @@ module:
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
+  facets_summary: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -45,6 +46,7 @@ module:
   geolocation_google_static_maps: 0
   geolocation_search_api: 0
   handy_cache_tags: 0
+  hatecrimereviewni_breadcrumbs: 0
   help: 0
   history: 0
   image: 0
@@ -75,6 +77,7 @@ module:
   origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_media: 0
+  origins_metatag: 0
   origins_toc: 0
   origins_workflow: 0
   page_cache: 0
@@ -87,6 +90,7 @@ module:
   scheduler_content_moderation_integration: 0
   search: 0
   search_api: 0
+  search_api_db: 0
   search_api_location: 0
   search_api_location_views: 0
   simplei: 0
@@ -102,6 +106,7 @@ module:
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
+  unity_search_pages: 0
   user: 0
   views_custom_cache_tag: 0
   webform: 0
@@ -121,6 +126,7 @@ theme:
   seven: 0
   adminimal_theme: 0
   nicsdru_unity_theme: 0
+  hcr_theme: 0
 profile: nicsdru_unity_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

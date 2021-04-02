@@ -4,16 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_enable_toc
     - field.field.node.page.field_metatag
     - field.field.node.page.field_toc_enable
     - node.type.page
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - metatag
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - text
 id: node.page.default
 targetEntityType: node
@@ -36,13 +34,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_enable_toc:
-    weight: 2
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    region: content
   field_metatag:
     weight: 123
     settings:
@@ -85,17 +76,17 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 127
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   publish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
+    weight: 125
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -129,17 +120,17 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 128
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   unpublish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
+    weight: 126
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   url_redirects:
     weight: 50
     settings: {  }

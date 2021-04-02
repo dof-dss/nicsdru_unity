@@ -10,7 +10,7 @@ id: node.consultation.title
 field_name: title
 entity_type: node
 bundle: consultation
-label: 'Title (Main heading)'
+label: 'Consultation title'
 description: ''
 required: true
 translatable: true

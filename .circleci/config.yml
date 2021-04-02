@@ -71,16 +71,27 @@ jobs:
           root: ./
           paths:
             - ./
-  # Test for coding standards and deprecated code.
-  static_analysis:
+
+  # Test for coding standards.
+  coding_standards:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
     steps:
       - attach_workspace:
           at: ./
+      - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
-          name: PHPCS static analysis
+          name: PHPCS analysis
           command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/sites /home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom /home/circleci/project/web/profiles/unity /home/circleci/project/web/profiles/origins"
+
+  # Test for coding standards and deprecated code.
+  deprecated_code:
+    docker:
+      - image: circleci/php:7.4.15-apache-browsers
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
           name: Deprecated code check
           command: |
@@ -358,20 +369,39 @@ jobs:
           name: Turn off fastly module to allow for cleaner config import
           command: |
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Clear cache before config import
           command: |
             /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
             /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Force purge of Solr index
           command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
       - run:
           name: Rebuild the Solr index
           command: |
+            /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
@@ -381,7 +411,10 @@ workflows:
   build-test-deploy:
     jobs:
       - build
-      - static_analysis:
+      - coding_standards:
+          requires:
+            - build
+      - deprecated_code:
           requires:
             - build
       - unit_kernel_tests:

@@ -1,0 +1,220 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+// Components / modules
+//
+// Components / modules are the reusable, modular parts of any design. They are the callouts, the sidebar sections,
+// the product lists and so on.
+//
+// Weight: -6
+//
+// Style guide: components
+
+#logo {
+  a {
+    display: block;
+
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: 0.3rem dashed #949494;
+      outline-offset: 1.2rem;
+    }
+  }
+}
+
+#header {
+  @media screen and (max-width: $lap) {
+    margin: 0;
+  }
+}
+
+#inner_header_wrapper {
+  background: $brand-primary;
+
+  @include breakpoint($lap) {
+    padding: 3.8rem 0 7rem;
+  }
+}
+
+#main-menu {
+  .nav-main {
+    min-height: 0;
+  }
+  .menu-main {
+    @include breakpoint($lap)  {
+      float: right;
+      margin-top: -14.5rem;
+    }
+  }
+
+  .menu-link {
+    border-bottom: none;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    min-width: 44px;
+    text-align: center;
+    padding: 1.1rem;
+
+  }
+
+  .menu-item {
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu .is-active,
+  .menu-link:hover {
+    background: $white;
+    color: $black;
+    box-shadow: inset 0 -5px 0 $black;
+  }
+
+  .menu-link:focus {
+    background-color: $brand-tertiary;
+    color: #000;
+    box-shadow: inset 0 -5px 0 $black;
+    outline: none;
+  }
+}
+
+.breadcrumb {
+  padding: 0;
+
+  .breadcrumb--list {
+    margin-left: .4rem;
+
+    @include breakpoint($lap)  {
+      margin-left: 2rem;
+    }
+  }
+
+  .breadcrumb--item a {
+    padding: 0 1px;
+  }
+}
+
+.field-photo {
+  @include breakpoint($mob) {
+    float: right;
+    max-width: 250px;
+    margin: 0 0 1rem 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.ico-elink {
+  background: resolve("new-window.gif") no-repeat;
+}
+
+.node-type-page {
+  .content {
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  max-width: 100%;
+  padding-left: 1rem;
+
+  @include breakpoint($tab)  {
+    padding: 5% 2% 4%;
+  }
+
+  #footer_wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .footer-menu {
+    margin-top: 10rem;
+
+    li {
+      padding-left: 0;
+
+      @include breakpoint($mob) {
+        display: inline-block;
+        padding: 0 .8rem 0 0;
+        line-height: 1.8rem;
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  .secondary-menu {
+    li {
+      border-bottom: none;
+    }
+  }
+}
+
+#footer-content {
+  .column,
+  .column:first-child {
+    padding-left: 0;
+    float: left;
+    margin-left: 1%;
+
+    @media screen and (max-width: $tab) {
+      margin: 1rem 2rem 1rem 0;
+    }
+
+    @media screen and (max-width: $mob) {
+      margin: 1rem 0;
+    }
+
+    @include breakpoint($tab) {
+      width: 32.5%;
+    }
+
+    li {
+      border: none;
+    }
+  }
+
+  .column:first-child {
+    margin-left: 0;
+  }
+
+  address {
+    line-height: 2.4rem;
+  }
+}
+
+#footer-menu {
+  a {
+    @include breakpoint($mob) {
+      display: block;
+    }
+  }
+}
+
+.image-caption {
+  font-family: $secondary-font-family;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  color: #28556c;
+  font-weight: bold;
+  margin-bottom: 0;
+  width: 220px;
+}

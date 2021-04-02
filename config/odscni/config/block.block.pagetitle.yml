@@ -1,0 +1,18 @@
+uuid: d3404cf6-4f9a-4a3a-9718-01d150ad3ed8
+langcode: en
+status: false
+dependencies:
+  theme:
+    - odscni_theme
+id: pagetitle
+theme: odscni_theme
+region: content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

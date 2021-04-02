@@ -1,0 +1,52 @@
+uuid: 7945b020-5809-4889-a8a1-8814f107a5a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_location
+    - paragraphs.paragraphs_type.map
+  module:
+    - geolocation_google_maps
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_location:
+    weight: 0
+    settings:
+      centre:
+        fit_bounds:
+          enable: true
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      hide_textfield_form: false
+      google_map_settings:
+        map_features:
+          marker_infowindow:
+            enabled: true
+          control_locate:
+            enabled: true
+          control_zoom:
+            enabled: true
+          control_maptype:
+            enabled: true
+          control_geocoder:
+            enabled: true
+            weight: -100
+          control_recenter:
+            enabled: true
+        type: ROADMAP
+        zoom: 10
+        height: 400px
+        width: 100%
+        minZoom: 0
+        maxZoom: 20
+        gestureHandling: auto
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+    region: content
+hidden:
+  created: true
+  status: true
