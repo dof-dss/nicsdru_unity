@@ -13,10 +13,10 @@ third_party_settings:
     parent: 'main:'
   origins_toc:
     toc_enable: 1
-    toc_title: Contents
-    toc_location: '#block-mainpagecontent .content'
+    toc_title: 'On this page'
+    toc_location: '#block-hcr-theme-mainpagecontent .content'
     toc_insert: before
-    toc_source_container: '#block-mainpagecontent'
+    toc_source_container: '#block-hcr-theme-mainpagecontent'
     toc_element: h2
     toc_exclusions: ''
   scheduler:
