@@ -6,6 +6,7 @@ use Drupal\Core\Database\Database;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Extension\ModuleHandler;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Console\Core\Style\DrupalStyle;
 
 /**
  * A collection of methods for processing migrations.
@@ -55,16 +56,15 @@ class MigrationProcessors {
   /**
    * Updates the status for nodes.
    */
-  public function updatePublishStatus($io, $node_type = NULL) {
-    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
-      // Has been called from drupal console command line.
-      $io->info('Sync node publish status values after migration');
-    }
-    else {
-      // Has been called from post migration subscriber
-      // class will be Drupal\Core\Logger\LoggerChannel.
-      $io->notice('Sync node publish status values after migration');
-    }
+  public function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
+    // This update should be run from the Drupal console after ALL node
+    // and revision migrations have completed. Note that this process
+    // will correctly set current revision and publish status for all
+    // nodes but it will create new revisions. This means that once this
+    // has been run there should be no more 'top up' migrations, the only
+    // option is to roll back all revision and node migrations and start
+    // from scratch.
+    $io->info('Sync node publish status values after migration');
 
     // Find all node ids in the D8 site so we know what to look for.
     $d8_nids = [];
@@ -90,14 +90,8 @@ class MigrationProcessors {
       $this->processNodeStatus($row->nid, $row->status);
     }
 
-    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
-      $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-      $io->info('Clearing all caches...');
-    }
-    else {
-      $io->notice('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-      $io->notice('Clearing all caches...');
-    }
+    $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+    $io->info('Clearing all caches...');
     drupal_flush_all_caches();
   }
 
