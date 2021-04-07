@@ -2746,9 +2746,6 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "Avoid TypeError": "https://www.drupal.org/files/issues/2021-03-09/clientside_validation_typerror_3202453.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3461,9 +3458,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Disable XSS for tag settings to allow HTML output": "https://gist.githubusercontent.com/omahm/eb99bc8278b57798a7d82bf06c27b8d1/raw/d9d75e06300a102b072dd8166f82ec381f211b9d/cookie_content_blocker_disable_xss"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3707,12 +3701,6 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
-                },
-                "patches_applied": {
-                    "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
-                    "Fixing error on status report page caused by the core media module": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
-                    "Sort content types by label on 'add content' admin page": "https://www.drupal.org/files/issues/2021-02-04/2693485-144.patch",
-                    "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch"
                 }
             },
             "autoload": {
@@ -4054,8 +4042,7 @@
             "homepage": "https://www.drupal.org/project/date_facet_drilldown",
             "support": {
                 "source": "https://git.drupalcode.org/project/date_facet_drilldown"
-            },
-            "time": "2021-03-11T14:09:28+00:00"
+            }
         },
         {
             "name": "drupal/diff",
@@ -5647,9 +5634,6 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
-                },
-                "patches_applied": {
-                    "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5666,8 +5650,7 @@
             "homepage": "https://www.drupal.org/project/media_browser_responsive_images",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_browser_responsive_images"
-            },
-            "time": "2019-12-11T15:24:56+00:00"
+            }
         },
         {
             "name": "drupal/media_entity_browser",
@@ -6407,9 +6390,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7446,9 +7426,6 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "Add search feature to taxonomy admin form": "https://www.drupal.org/files/issues/2019-08-06/add_search_feature-2906768-21.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7529,8 +7506,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/telephone_plus",
                 "issues": "https://www.drupal.org/project/issues/telephone_plus"
-            },
-            "time": "2020-11-04T20:09:30+00:00"
+            }
         },
         {
             "name": "drupal/token",
@@ -8060,28 +8036,8 @@
                     "role": "Contributor"
                 },
                 {
-                    "name": "fenstrat",
-                    "homepage": "https://www.drupal.org/user/362649"
-                },
-                {
-                    "name": "jrockowitz",
-                    "homepage": "https://www.drupal.org/user/371407"
-                },
-                {
-                    "name": "podarok",
-                    "homepage": "https://www.drupal.org/user/116002"
-                },
-                {
                     "name": "quicksketch",
                     "homepage": "https://www.drupal.org/user/35821"
-                },
-                {
-                    "name": "sanchiz",
-                    "homepage": "https://www.drupal.org/user/1671246"
-                },
-                {
-                    "name": "tedbow",
-                    "homepage": "https://www.drupal.org/user/240860"
                 },
                 {
                     "name": "torotil",
@@ -14718,9 +14674,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -14799,8 +14752,7 @@
                 "source": "http://cgit.drupalcode.org/migrate_tools",
                 "issues": "http://drupal.org/project/migrate_tools",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
-            },
-            "time": "2020-06-05T20:48:48+00:00"
+            }
         },
         {
             "name": "drupal/permissions_filter",
@@ -18288,10 +18240,10 @@
     ],
     "aliases": [
         {
-            "alias": "3.4.41",
-            "alias_normalized": "3.4.41.0",
+            "package": "symfony/event-dispatcher",
             "version": "4.3.11.0",
-            "package": "symfony/event-dispatcher"
+            "alias": "3.4.41",
+            "alias_normalized": "3.4.41.0"
         }
     ],
     "minimum-stability": "dev",
@@ -18315,5 +18267,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
