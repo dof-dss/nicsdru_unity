@@ -17,6 +17,8 @@ db:
       - attorneygeneralnidb
       - employmenttribunalsnidb
       - hatecrimereviewnidb
+      - fiscalcommission
+      - fiscalcouncil
     endpoints:
       fictcommission:
         default_schema: fictcommissiondb
@@ -46,6 +48,14 @@ db:
         default_schema: hatecrimereviewnidb
         privileges:
           hatecrimereviewnidb: admin
+      fiscalcommission:
+        default_schema: fiscalcommissiondb
+        privileges:
+          fiscalcommissiondb: admin
+      fiscalcouncil:
+        default_schema: fiscalcouncildb
+        privileges:
+          fiscalcouncildb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
