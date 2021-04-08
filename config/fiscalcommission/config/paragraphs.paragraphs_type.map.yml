@@ -1,0 +1,12 @@
+uuid: c2e2c2b6-83d9-46ea-a87a-aed1c0a7c7c9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: J_CH8GQ5gqtEQPI-H_eC96e47bnJP7XDAVhK2DNjjM4
+id: map
+label: Map
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
