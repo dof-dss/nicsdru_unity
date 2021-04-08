@@ -6,6 +6,7 @@ use Drupal\Core\Database\Database;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Extension\ModuleHandler;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Console\Core\Style\DrupalStyle;
 
 /**
  * A collection of methods for processing migrations.
@@ -55,16 +56,15 @@ class MigrationProcessors {
   /**
    * Updates the status for nodes.
    */
-  public function updatePublishStatus($io, $node_type = NULL) {
-    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
-      // Has been called from drupal console command line.
-      $io->info('Sync node publish status values after migration');
-    }
-    else {
-      // Has been called from post migration subscriber
-      // class will be Drupal\Core\Logger\LoggerChannel.
-      $io->notice('Sync node publish status values after migration');
-    }
+  public function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
+    // This update should be run from the Drupal console after ALL node
+    // and revision migrations have completed. Note that this process
+    // will correctly set current revision and publish status for all
+    // nodes but it will create new revisions. This means that once this
+    // has been run there should be no more 'top up' migrations, the only
+    // option is to roll back all revision and node migrations and start
+    // from scratch.
+    $io->info('Sync node publish status values after migration');
 
     // Find all node ids in the D8 site so we know what to look for.
     $d8_nids = [];
@@ -90,14 +90,8 @@ class MigrationProcessors {
       $this->processNodeStatus($row->nid, $row->status);
     }
 
-    if (get_class($io) == 'Drupal\Console\Core\Style\DrupalStyle') {
-      $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-      $io->info('Clearing all caches...');
-    }
-    else {
-      $io->notice('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-      $io->notice('Clearing all caches...');
-    }
+    $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+    $io->info('Clearing all caches...');
     drupal_flush_all_caches();
   }
 
@@ -116,19 +110,6 @@ class MigrationProcessors {
       "SELECT vid FROM {node_field_data} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-    // Run an update statement per item. Refinement might be to run a
-    // cross-DB SELECT query to power an UPDATE using a JOIN.
-    $query = $this->dbConnDrupal8->update('node_field_data')
-      ->fields(['status' => $status])
-      ->condition('nid', $nid)
-      ->execute();
-
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['status' => $status])
-      ->condition('nid', $nid)
-      ->condition('vid', $d8_vid)
-      ->execute();
-
     // Get the D7 revision id.
     $vid = $this->dbConnMigrate->query(
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
@@ -136,49 +117,28 @@ class MigrationProcessors {
 
     // Update the current revision if necessary.
     if ($vid != $d8_vid) {
-      $vid = $this->updateCurrentRevision($nid, $vid, $d8_vid);
+      // Does this revision exist in D8 ?
+      $check_vid = $this->dbConnDrupal8->query(
+        "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
+        [':nid' => $nid, ':vid' => $vid]
+      )->fetchField();
+      if (!empty($check_vid)) {
+        // Revision exists, make it current (and publish if necessary)
+        $revision = $this->nodeStorage->loadRevision($vid);
+        $revision->isDefaultRevision(TRUE);
+        if ($status == 1) {
+          $revision->setpublished();
+        }
+        $revision->save();
+      }
     }
 
-    // The 'revision_translation_affected' field is poorly documented (and
-    // understood) in Drupal core, and is sometimes set to NULL after migrating
-    // content from Drupal 7. There is much discussion at
-    // https://www.drupal.org/project/drupal/issues/2746541 but after testing
-    // and investigation I am yet to find a case where it should not be
-    // set to '1'.
-    // Hence, we set it to '1' across the board to solve the problem
-    // of revisions not appearing on the revisions tab.
-    $query = $this->dbConnDrupal8->update('node_field_revision')
-      ->fields(['revision_translation_affected' => 1])
-      ->condition('nid', $nid)
-      ->execute();
-
     if ($status == 1) {
-      // Make sure that we have a 'published' revision.
-      $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
-        ->fields(['moderation_state' => 'published'])
-        ->condition('content_entity_id', $nid)
-        ->condition('content_entity_revision_id', $vid)
-        ->execute();
-
-      $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
-        ->fields(['moderation_state' => 'published'])
-        ->condition('content_entity_id', $nid)
-        ->condition('content_entity_revision_id', $vid)
-        ->execute();
-
-      // Only one row in node_field_revision should be set to
-      // 'published' for this nid.
-      $query = $this->dbConnDrupal8->update('node_field_revision')
-        ->fields(['status' => 0])
-        ->condition('nid', $nid)
-        ->condition('vid', $vid, '<>')
-        ->execute();
-
-      $query = $this->dbConnDrupal8->update('node_field_revision')
-        ->fields(['status' => 1])
-        ->condition('nid', $nid)
-        ->condition('vid', $vid)
-        ->execute();
+      // If node was published on D7, make sure that it is published on D8.
+      $node = $this->nodeStorage->load($nid);
+      $node->status = 1;
+      $node->set('moderation_state', 'published');
+      $node->save();
     }
     else {
       // See if the moderation state on D7 was 'needs review'.
@@ -187,66 +147,11 @@ class MigrationProcessors {
         where hid = (select max(hid) from {workbench_moderation_node_history} where nid = :nid)
           ", [':nid' => $nid])->fetchField();
       if ($moderation_status == 'needs_review') {
-        // This node was in 'needs review' status on D7 so we need to make
-        // sure that it also looks like that on D8.
-        $query = $this->dbConnDrupal8->update('content_moderation_state_field_data')
-          ->fields(['moderation_state' => 'needs_review'])
-          ->condition('content_entity_id', $nid)
-          ->condition('content_entity_revision_id', $vid)
-          ->execute();
-
-        $query = $this->dbConnDrupal8->update('content_moderation_state_field_revision')
-          ->fields(['moderation_state' => 'needs_review'])
-          ->condition('content_entity_id', $nid)
-          ->condition('content_entity_revision_id', $vid)
-          ->execute();
+        // Make sure state is 'needs review' on D8.
+        $node = $this->nodeStorage->load($nid);
+        $node->set('moderation_state', 'needs_review');
+        $node->save();
       }
-    }
-  }
-
-  /**
-   * Updates the current revision for the given node.
-   *
-   * @param int $nid
-   *   The node id.
-   * @param int $vid
-   *   The target revision id (from D7).
-   * @param int $d8_vid
-   *   The current D8 revision id.
-   *
-   * @return string
-   *   Current revision id.
-   */
-  public function updateCurrentRevision(int $nid, int $vid, int $d8_vid) {
-    // Does this revision exist in D8 ?
-    $check_vid = $this->dbConnDrupal8->query(
-      "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
-      [':nid' => $nid, ':vid' => $vid]
-    )->fetchField();
-    if (!empty($check_vid)) {
-      // Does the current D8 revision exist in D7 ?
-      $check_d7_vid = $this->dbConnMigrate->query(
-        "SELECT vid FROM {node_revision} WHERE nid = :nid and vid = :vid",
-        [':nid' => $nid, ':vid' => $d8_vid]
-      )->fetchField();
-      if (!empty($check_d7_vid)) {
-        // Make the D7 revision the current revision in D8.
-        // N.B. This will only work in the 'one hit' migration scenario, it may
-        // cause problems if the migration runs again and in the meantime the
-        // editors have reverted to an older revision that also came from D7.
-        $query = $this->dbConnDrupal8->update('node')
-          ->fields(['vid' => $vid])
-          ->condition('nid', $nid)
-          ->execute();
-        $query = $this->dbConnDrupal8->update('node_field_data')
-          ->fields(['vid' => $vid])
-          ->condition('nid', $nid)
-          ->execute();
-      }
-      return $vid;
-    }
-    else {
-      return $d8_vid;
     }
   }
 
