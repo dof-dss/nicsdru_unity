@@ -1,22 +1,13 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.media.embed
-    - core.entity_view_mode.media.landscape_float
-    - core.entity_view_mode.media.landscape_float_xp
-    - core.entity_view_mode.media.landscape_full
-    - core.entity_view_mode.media.landscape_full_xp
-    - core.entity_view_mode.media.portrait_float
-    - core.entity_view_mode.media.portrait_float_xp
-    - core.entity_view_mode.media.portrait_full
-    - core.entity_view_mode.media.uregni_logo
   module:
     - editor
     - entity_embed
     - media
     - noreferrer
     - token_filter
+    - unity_image_styles
 name: 'Basic HTML'
 format: basic_html
 weight: 0
