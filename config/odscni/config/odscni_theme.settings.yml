@@ -5,8 +5,9 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: ''
+  path: 'public://logo.png'
 favicon:
   use_default: 1
 ga_tracking_disabled: 1
 ga_tracking_disabled_eu: 0
+

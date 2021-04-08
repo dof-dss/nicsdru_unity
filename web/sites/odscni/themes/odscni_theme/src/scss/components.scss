@@ -41,6 +41,16 @@
 
     .menu-link {
       padding: 1.1rem 2rem .4rem;
+
+      @media screen and (max-width: $tab) {
+        padding: 13px 2%;
+      }
+    }
+  }
+
+  .menu-main_sub {
+    .menu-item {
+      background: lighten($menu-background, 30%);
     }
   }
 }
@@ -59,4 +69,21 @@
       margin-right: .5rem;
     }
   }
+}
+
+#main-menu .hamburger {
+  top: -5.2rem;
+}
+
+.content .media-image-embed {
+  clear: right;
+  float: right;
+  width: 48%;
+  margin: 2.1rem 0 0 2.7rem;
+  max-width: 670px;
+}
+
+.image-caption {
+  margin-bottom: 1.8rem;
+  color: $headings;
 }
