@@ -41,7 +41,6 @@ install:
   - eu_cookie_compliance
   - facets
   - facets_pretty_paths
-  - facets_summary
   - field
   - field_group
   - field_ui
