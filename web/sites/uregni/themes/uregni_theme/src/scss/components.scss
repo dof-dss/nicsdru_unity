@@ -360,27 +360,30 @@ h2 i {
 }
 
 #footer-content {
+  @include breakpoint($phab) {
+    display: flex;
+    flex-flow: wrap;
+  }
+
   .column,
   .column:first-child {
-    padding-left: 0;
-    float: left;
-    margin-left: 1%;
+    padding: 1%;
 
-    @media screen and (max-width: $tab) {
-      margin: 1rem 2rem 1rem 0;
+    @include breakpoint($phab) {
+      flex-basis: 49%;
     }
 
-    @media screen and (max-width: $mob) {
-      margin: 1rem 0;
-    }
-
-    @include breakpoint($tab) {
-      width: 32.5%;
+    @include breakpoint(870px) {
+      flex-basis: 33%;
     }
 
     li {
       border: none;
     }
+  }
+
+  .column.logo {
+    align-self: center;
   }
 
   .column:first-child {
@@ -484,6 +487,14 @@ h2 i {
           }
         }
       }
+    }
+  }
+
+  .footer-area .column {
+    @media screen and (max-width: $tab) {
+      width: 100%;
+      float: none;
+      margin: 0;
     }
   }
 
