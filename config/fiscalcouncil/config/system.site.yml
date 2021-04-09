@@ -1,0 +1,15 @@
+name: 'Fiscal Council'
+mail: admin@fiscalcouncil.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 54b462f2-78aa-46c0-8736-e97a33f4eed7
+frontpage_title: 'Welcome to Drupal site'
