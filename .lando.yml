@@ -8,8 +8,8 @@ proxy:
     - attorneygeneralni.gov.uk.lndo.site
     - employmenttribunalsni.co.uk.lndo.site
     - hatecrimereviewni.org.uk.lndo.site
-    - fiscalcommissionni.org.uk.lndo.site
-    - nifiscalcouncil.org.uk.lndo.site
+    - fiscalcommissionni.org.lndo.site
+    - nifiscalcouncil.org.lndo.site
 services:
   uregni_solr:
     type: solr:7
