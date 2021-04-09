@@ -35,6 +35,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'notify of path changes'
+  - 'opt-in or out of google analytics tracking'
   - 'revert page revisions'
   - 'revert revisions'
   - 'search content'
