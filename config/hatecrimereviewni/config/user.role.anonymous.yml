@@ -11,6 +11,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'diff view changes'
-  - 'display eu cookie compliance popup'
   - 'view files'
   - 'view media'
