@@ -43,4 +43,6 @@ regions:
   footer_second: 'Second Bottom'
   footer_third: 'Third Bottom'
   footer_fourth: 'Fourth Bottom'
+  footer_fifth: 'Fifth Bottom'
+  footer_sixth: 'Sixth Bottom'
   footer: 'Footer Bottom'
