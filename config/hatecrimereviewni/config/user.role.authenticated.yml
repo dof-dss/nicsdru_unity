@@ -16,7 +16,6 @@ permissions:
   - 'diff view changes'
   - 'edit any news content'
   - 'edit any page content'
-  - 'opt-in or out of google analytics tracking'
   - 'revert revisions'
   - 'use media wysiwyg'
   - 'use text format basic_html'
