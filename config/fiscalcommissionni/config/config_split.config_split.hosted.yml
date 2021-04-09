@@ -1,0 +1,15 @@
+uuid: 07641976-ab0d-4f1b-83ae-66e6417ea196
+langcode: en
+status: false
+dependencies: {  }
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+folder: ../config/fiscalcommissionni/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

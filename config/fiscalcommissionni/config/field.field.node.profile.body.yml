@@ -1,0 +1,25 @@
+uuid: fc070ceb-5b40-4467-9136-fd4474a234ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profile
+  module:
+    - text
+_core:
+  default_config_hash: ktlhpQXjFvgVaAnb9CgAdtOhVD0yfuJ7TNyz3bxIeBg
+id: node.profile.body
+field_name: body
+entity_type: node
+bundle: profile
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

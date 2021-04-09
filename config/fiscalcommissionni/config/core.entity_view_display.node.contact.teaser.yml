@@ -1,0 +1,33 @@
+uuid: d9b8883d-2096-4975-9ff3-1d240207950e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contact.body
+    - node.type.contact
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: t4QU2_pmIx7dmbP0DkF-OIt8Nuk07j9NtT7xQkxUnrI
+id: node.contact.teaser
+targetEntityType: node
+bundle: contact
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

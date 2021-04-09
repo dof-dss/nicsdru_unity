@@ -1,0 +1,15 @@
+name: 'Fiscal Commission NI'
+mail: admin@fiscalcommissionni.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 7498d4a6-3b65-49c9-88bf-f48cec64777f
+frontpage_title: 'Welcome to Drupal site'
