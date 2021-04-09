@@ -1,0 +1,27 @@
+uuid: bae76724-e716-4dea-a47d-d111b1ada4d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: cRfS39Vb-mPG2ciV1K9IKBto5SPXajzKtMooL8-sDGc
+id: default
+label: Default
+description: ''
+attributes:
+  target:
+    id: target
+    weight: 0
+    settings:
+      widget_type: simple_checkbox
+matchers:
+  8250b0de-30d1-4f86-82cc-d18dba7b3241:
+    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
