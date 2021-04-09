@@ -1,0 +1,17 @@
+uuid: 142736d6-b5be-4546-ae9e-88f6c4bef3f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock_timeout
+title: 'Default cron handler'
+id: content_lock_timeout_cron
+weight: 0
+module: content_lock_timeout
+callback: content_lock_timeout_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

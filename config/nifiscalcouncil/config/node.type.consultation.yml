@@ -1,0 +1,20 @@
+uuid: 4ef28a2c-7064-415a-8c5e-1d2cef5ef812
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 5XlxsmhuDKU4ibiXPVifRhybs-SyKauBJlhsyLoMjpI
+name: Consultation
+type: consultation
+description: 'Use this content type for consultations.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
