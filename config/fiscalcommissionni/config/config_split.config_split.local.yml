@@ -1,0 +1,24 @@
+uuid: 6fe4af71-d4f9-4ef8-8e27-6cc430971bde
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: local
+description: "Local development split. \r\nEnables debugging and development modules"
+folder: ../config/fiscalcommissionni/local
+module:
+  dblog: 0
+  easy_install: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  update: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
