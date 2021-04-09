@@ -48,12 +48,12 @@ db:
         default_schema: hatecrimereviewnidb
         privileges:
           hatecrimereviewnidb: admin
-      fiscalcommission:
-        default_schema: fiscalcommissiondb
+      fiscalcommissionni:
+        default_schema: fiscalcommissionnidb
         privileges:
           fiscalcommissiondb: admin
-      fiscalcouncil:
-        default_schema: fiscalcouncildb
+      nifiscalcouncil:
+        default_schema: nifiscalcouncildb
         privileges:
           fiscalcouncildb: admin
 

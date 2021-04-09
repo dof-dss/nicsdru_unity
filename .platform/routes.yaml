@@ -97,7 +97,7 @@
   type: redirect
   to: "https://hatecrimereviewni.org.uk.{default}/"
 
-"https://fiscalcommission.org.uk.{default}/":
+"https://fiscalcommissionni.org.{default}/":
   type: upstream
   upstream: "unity:http"
   cache:
@@ -107,11 +107,11 @@
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
     cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://www.fiscalcommission.org.uk.{default}/":
+"https://www.fiscalcommissionni.org.{default}/":
   type: redirect
-  to: "https://fiscalcommission.org.uk.{default}/"
+  to: "https://fiscalcommissionni.org.{default}/"
 
-"https://fiscalcouncil.org.uk.{default}/":
+"https://nifiscalcouncil.org.{default}/":
   type: upstream
   upstream: "unity:http"
   cache:
@@ -121,6 +121,6 @@
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
     cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://www.fiscalcouncil.org.uk.{default}/":
+"https://www.nifiscalcouncil.org.{default}/":
   type: redirect
-  to: "https://fiscalcouncil.org.uk.{default}/"
+  to: "https://nifiscalcouncil.org.{default}/"
