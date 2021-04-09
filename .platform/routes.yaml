@@ -109,7 +109,7 @@
 
 "https://www.fiscalcommissionni.org.{default}/":
   type: redirect
-  to: "https://fiscalcommissionni.org.uk.{default}/"
+  to: "https://fiscalcommissionni.org.{default}/"
 
 "https://nifiscalcouncil.org.{default}/":
   type: upstream
