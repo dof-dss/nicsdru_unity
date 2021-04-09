@@ -4,10 +4,8 @@ features:
   comment_user_verification: true
   favicon: 1
 logo:
-  use_default: 0
-  path: 'public://logo.png'
+  use_default: 1
 favicon:
   use_default: 1
 ga_tracking_disabled: 1
 ga_tracking_disabled_eu: 0
-
