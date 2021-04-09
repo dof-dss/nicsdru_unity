@@ -35,8 +35,8 @@ relationships:
   attorneygeneralni: 'db:attorneygeneralni'
   employmenttribunalsni: 'db:employmenttribunalsni'
   hatecrimereviewni: 'db:hatecrimereviewni'
-  fiscalcommission: 'db:fiscalcommission'
-  fiscalcouncil: 'db:fiscalcouncil'
+  fiscalcommissionni: 'db:fiscalcommissionni'
+  nifiscalcouncil: 'db:nifiscalcouncil'
 
 # The size of the persistent disk of the application (in MB).
 disk: 20480
@@ -75,7 +75,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni hatecrimereviewni fiscalcommission fiscalcouncil attorneygeneralni employmenttribunalsni liofa fictcommission
+    for site in uregni odscni hatecrimereviewni nifiscalcommission fiscalcouncilni attorneygeneralni employmenttribunalsni liofa fictcommission
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site

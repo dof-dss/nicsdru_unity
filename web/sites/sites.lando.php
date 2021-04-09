@@ -14,5 +14,5 @@ $sites['odscni.org.uk.lndo.site'] = 'odscni';
 $sites['attorneygeneralni.gov.uk.lndo.site'] = 'attorneygeneralni';
 $sites['employmenttribunalsni.co.uk.lndo.site'] = 'employmenttribunalsni';
 $sites['hatecrimereviewni.org.uk.lndo.site'] = 'hatecrimereviewni';
-$sites['fiscalcommission.org.uk.lndo.site'] = 'fiscalcommission';
-$sites['fiscalcouncil.org.uk.lndo.site'] = 'fiscalcouncil';
+$sites['fiscalcommissionni.org.uk.lndo.site'] = 'fiscalcommissionni';
+$sites['nifiscalcouncil.org.uk.lndo.site'] = 'nifiscalcouncil';
