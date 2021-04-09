@@ -2495,3 +2495,29 @@ blocks:
           value: "<p><img alt=\"Investors in People logo\" src=\"/sites/uregni/themes/uregni_theme/images/iip-logo.png\" /></p>\r\n"
           summary: ''
           format: full_html
+  -
+    info: 'Diversity Mark'
+    langcode: en
+    uuid: a2e573eb-b012-4880-9cc7-9ac974195e20
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><img alt=\"Diversity Mark logo\" src=\"/sites/uregni/themes/uregni_theme/images/diversity-mark-logo.png\" /></p>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Disability Confident'
+    langcode: en
+    uuid: 8d49e3ec-7a63-4639-948f-17c50b30b0ea
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><img alt=\"Disability Confident logo\" src=\"/sites/uregni/themes/uregni_theme/images/disability-confident-logo.png\" /></p>\r\n"
+          summary: ''
+          format: full_html
