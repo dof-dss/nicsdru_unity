@@ -29,7 +29,7 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
+            - Linkit
             - DrupalUnlink
         -
           name: Lists
@@ -61,7 +61,7 @@ settings:
     stylescombo:
       styles: "p.info-notice|Information notice\r\na.btn|Button"
     linkit:
-      linkit_profile: ''
+      linkit_profile: default
     tokenbrowser:
       token_types: {  }
 image_upload:
