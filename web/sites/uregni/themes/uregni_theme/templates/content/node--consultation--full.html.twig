@@ -108,7 +108,9 @@
     <div class="summary">
       <div class="consultation-dates">
         {{ 'Consultation opened on'|t }}
+        {% apply spaceless %}
         <strong>{{ content.field_consultation_dates[0].start_date }}</strong>{{ '.'|t }}
+        {% endapply %}
         {{ 'Closing date '|t }}
         <strong>{{ content.field_consultation_dates[0].end_date }}</strong>
         {{ 'at '|t }}
