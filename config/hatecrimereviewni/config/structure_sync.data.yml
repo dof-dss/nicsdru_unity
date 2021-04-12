@@ -9,7 +9,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p><img alt=\"Judge Desmond Marrinan - Head of the review\" src=\"/sites/hatecrimereviewni/themes/hcr_theme/images/judge-marrinan.png\" /></p>\r\n"
+          value: "<p><img alt=\"Judge Desmond Marrinan - Head of the review\" src=\"/sites/hatecrimereviewni/themes/hcr_theme/images/judge-marrinan.png\" /></p><p class='image-caption'>Judge Desmond Marrion Head of the Review </p>\r\n"
           summary: ''
           format: basic_html
   -
