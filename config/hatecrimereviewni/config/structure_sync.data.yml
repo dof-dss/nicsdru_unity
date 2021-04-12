@@ -9,7 +9,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p><img alt=\"Judge Desmond Marrinan - Head of the review\" src=\"/sites/hatecrimereviewni/themes/hcr_theme/images/judge-marrinan.jpg\" /></p><p class='image-caption'>Judge Desmond Marrion Head of the Review </p>\r\n"
+          value: '<div class="media-image" data-align="center"><picture data-picture-mapping="portrait_float"><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="/files/hatecrimereviewni/styles/nigov_portrait_300_x1/public/2021-03/judge-marrinan.jpg?itok=nD1M9cn4 1x, /files/hatecrimereviewni/styles/nigov_portrait_600_x2/public/2021-03/judge-marrinan.jpg?itok=hx_2W3XY 2x" media="all and (min-width: 0px)" type="image/jpeg"><!--[if IE 9]></video><![endif]--><img src="/files/hatecrimereviewni/styles/nigov_portrait_300_x1/public/2021-03/judge-marrinan.jpg?itok=nD1M9cn4" alt="Judge Desmond Marrion - Head of the review" typeof="foaf:Image"></picture><p class="image-caption">Judge Desmond Marrion Head of the Review</p></div>\r\n'
           summary: ''
           format: basic_html
   -
