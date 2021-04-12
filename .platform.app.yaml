@@ -75,7 +75,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni hatecrimereviewni nifiscalcommission fiscalcouncilni attorneygeneralni employmenttribunalsni liofa fictcommission
+    for site in uregni odscni hatecrimereviewni fiscalcommissionni nifiscalcouncil attorneygeneralni employmenttribunalsni liofa fictcommission
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
