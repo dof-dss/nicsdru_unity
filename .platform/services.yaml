@@ -51,11 +51,11 @@ db:
       fiscalcommissionni:
         default_schema: fiscalcommissionnidb
         privileges:
-          fiscalcommissiondb: admin
+          fiscalcommissionnidb: admin
       nifiscalcouncil:
         default_schema: nifiscalcouncildb
         privileges:
-          fiscalcouncildb: admin
+          nifiscalcouncildb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
