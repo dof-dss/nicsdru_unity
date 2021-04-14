@@ -11,7 +11,7 @@ dependencies:
     - uregni_theme
 id: diversitymark
 theme: uregni_theme
-region: footer_fifth
+region: footer_sixth
 weight: -17
 provider: null
 plugin: 'block_content:a2e573eb-b012-4880-9cc7-9ac974195e20'
