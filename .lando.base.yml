@@ -10,7 +10,7 @@ config:
 compose:
   - docker-compose.yml
 env_file:
-  - .lando/config/local.envvars
+  - .lando/config/.env
 services:
   appserver:
     xdebug: false
