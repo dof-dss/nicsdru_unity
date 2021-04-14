@@ -14,6 +14,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access media browser'
+  - 'access media overview'
   - 'access site-wide contact form'
   - 'access statistics'
   - 'access toolbar'
