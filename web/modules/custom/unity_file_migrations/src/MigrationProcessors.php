@@ -135,7 +135,7 @@ class MigrationProcessors {
       $revision->save();
     }
 
-
+    // Publish node if necessary.
     if ($status == 1) {
       // If node was published on D7, make sure that it is published on D8.
       $node = $this->nodeStorage->load($nid);
