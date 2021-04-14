@@ -18,6 +18,9 @@ We recommend Lando for local development. To get started, ensure you have the fo
 
 - Clone this repo
 - at the command line, 'cd' into your new directory
+- Set up your local environment variables: `cp .lando/config/.env.sample .lando/config/.env`
+- Env vars are divided into safe values for local development (eg: Lando defaults) and sensitive values which
+  you will need to source from a project member or from one of the active project environments.
 - `composer install`
 - `lando start`
 
