@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the fiscalcommissionni_theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function fiscalcommissionni_theme_preprocess_html(&$variables) {
+  if (isset($variables['node_type'])) {
+    if ($variables['node_type'] == 'basic_page') {
+      $variables['attributes']['class'][] = 'one-sidebar';
+      $variables['attributes']['class'][] = 'sidebar-second';
+    }
+  }
+}
