@@ -58,10 +58,10 @@ settings:
             - SpecialChar
             - Maximize
   plugins:
-    stylescombo:
-      styles: "p.info-notice|Information notice\r\na.btn|Button"
     language:
       language_list: un
+    stylescombo:
+      styles: "p.info-notice|Information notice\r\na.btn|Button"
     linkit:
       linkit_profile: default
     tokenbrowser:
