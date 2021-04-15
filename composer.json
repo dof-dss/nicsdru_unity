@@ -61,7 +61,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
-        "cweagans/composer-patches": "^1.6.5",
+        "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^0.9.17",
         "dof-dss/nicsdru_origins_profile": "^0.1.10",
@@ -82,9 +82,9 @@
         "drupal/console": "^1.9",
         "drupal/content_lock": "^2.2",
         "drupal/cookie_content_blocker": "^1.7",
-        "drupal/core-composer-scaffold": "^8.9.12",
-        "drupal/core-project-message": "^8.9.12",
-        "drupal/core-recommended": "^8.9.12",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
         "drupal/date_facet_drilldown": "2.x-dev",
         "drupal/diff": "^1.0",
         "drupal/entity_embed": "^1.0",
@@ -142,18 +142,15 @@
         "drupal/views_custom_cache_tag": "^1.1",
         "drupal/webform": "^5.4",
         "drupal/whatlinkshere": "^2.0",
-        "drush/drush": "^10.1",
+        "drush/drush": "^10.4",
         "harvesthq/chosen": "^1.8",
         "kenwheeler/slick": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.3",
-        "symfony/event-dispatcher": "4.3.11 as 3.4.41",
-        "vlucas/phpdotenv": "^2.4",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "^8.9.12",
         "drupal/devel": "^2.1",
         "drupal/easy_install": "^10.1",
         "drupal/migrate_plus": "^4.2",
@@ -198,32 +195,49 @@
                 "Disable XSS for tag settings to allow HTML output": "https://gist.githubusercontent.com/omahm/eb99bc8278b57798a7d82bf06c27b8d1/raw/d9d75e06300a102b072dd8166f82ec381f211b9d/cookie_content_blocker_disable_xss"
             }
         },
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
             }
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
+            "web/core": [
+                "type:drupal-core"
+            ],
             "web/libraries/{$name}": [
                 "type:drupal-library",
                 "harvesthq/chosen"
             ],
-            "web/modules/origins": ["dof-dss/nicsdru_origins_modules"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "web/profiles/origins/{$name}": ["dof-dss/nicsdru_origins_profile"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+            "web/modules/origins": [
+                "dof-dss/nicsdru_origins_modules"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/profiles/origins/{$name}": [
+                "dof-dss/nicsdru_origins_profile"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-core-project-message": {
-            "include-keys": ["homepage", "support"],
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
                 "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
@@ -231,7 +245,6 @@
                 "<bg=blue;fg=white>                                                         </>",
                 "",
                 "<bg=yellow;fg=black>Next steps</>:",
-
                 "  * Install the site: https://www.drupal.org/docs/8/install",
                 "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
                 "  * Get support: https://www.drupal.org/support",
