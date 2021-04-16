@@ -83,3 +83,19 @@ address {
   line-height: 3rem;
   font-style: normal;
 }
+
+.media-image {
+  clear: right;
+  float: right;
+  width: 48.3871%;
+  max-width: 300px;
+  margin: 2.1rem 0 0 2.7rem;
+
+  .image-caption {
+    color: $brand-primary;
+    padding: 9px 0;
+    margin: 0 0 1.8rem 0;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}

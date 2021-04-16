@@ -16,6 +16,7 @@ types:
   webform_submission: {  }
   menu_link_content: {  }
   paragraph: {  }
+  scheduled_transition: {  }
 types_translation_lock: {  }
 types_js_lock: {  }
 form_op_lock:
@@ -66,6 +67,9 @@ form_op_lock:
     mode: 0
     values: {  }
   paragraph:
+    mode: 0
+    values: {  }
+  scheduled_transition:
     mode: 0
     values: {  }
 _core:

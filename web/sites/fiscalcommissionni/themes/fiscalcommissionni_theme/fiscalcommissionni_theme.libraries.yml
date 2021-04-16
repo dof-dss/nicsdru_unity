@@ -17,4 +17,4 @@ site-styling:
 fonts:
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Manrope&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Manrope&family=Barlow&display=swap': { type: external, minified: true }

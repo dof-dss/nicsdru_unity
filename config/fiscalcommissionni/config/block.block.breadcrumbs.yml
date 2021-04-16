@@ -1,0 +1,34 @@
+uuid: 2a695089-fc6c-4bef-baf1-3cd4541adf0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+  theme:
+    - fiscalcommissionni_theme
+id: breadcrumbs
+theme: fiscalcommissionni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

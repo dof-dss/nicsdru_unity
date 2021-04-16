@@ -4,3 +4,23 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#logo {
+  img {
+    height: 80px;
+  }
+}
+
+#post-content {
+  .media-image {
+    clear: right;
+    float: right;
+    width: 48.3871%;
+    max-width: 300px;
+    margin: 2.1rem 0 0 2.7rem;
+
+    .image-caption {
+      color: $brand-primary;
+    }
+  }
+}
