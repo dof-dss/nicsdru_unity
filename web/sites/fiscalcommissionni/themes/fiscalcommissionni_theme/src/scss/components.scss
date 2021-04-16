@@ -6,6 +6,16 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #logo {
+  a {
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: .3rem dashed #949494;
+      outline-offset: 1.2rem;
+      display: block;
+    }
+  }
+
   img {
     height: 80px;
   }
@@ -44,8 +54,63 @@
   }
 }
 
+.region-primary-menu .menu_wrapper {
+  @include breakpoint($tab) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $charcoal;
+    //padding: 1rem 0;
+  }
+}
+
 #main-menu {
+  font-family: $heading-font;
+
+  .menu {
+    .is-active {
+      background: $menu-item-hover;
+      border-bottom-color: $brand-primary;
+      color: #fff;
+    }
+  }
+
+  .menu-item {
+    border-right: 1px solid #fff;
+    font-size: $p-font-size;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
   .menu-link {
     color: $charcoal;
+
+    &:hover {
+      color: #fff;
+      border-bottom-color: $brand-primary;
+    }
+
+    &:focus {
+      background-color: #fae029;
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+}
+
+#footer .footer-menu li {
+  padding-left: 0;
+  font-size: 1.4rem;
+
+  @include breakpoint($mob) {
+    display: inline-block;
+    padding: 0 .8rem 0 0;
+    line-height: 1.8rem;
+    margin-right: .5rem;
+  }
+
+  a {
+    display: block;
   }
 }
