@@ -29,3 +29,17 @@
   font-size: $h2-font-size;
   line-height: 3.6rem;
 }
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
