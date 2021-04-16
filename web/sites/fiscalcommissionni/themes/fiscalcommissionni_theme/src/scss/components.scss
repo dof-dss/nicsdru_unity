@@ -24,3 +24,17 @@
     }
   }
 }
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
