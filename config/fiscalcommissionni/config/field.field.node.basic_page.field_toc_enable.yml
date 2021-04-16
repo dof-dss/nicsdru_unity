@@ -1,0 +1,21 @@
+uuid: 3e4b0156-ac6a-4691-a20f-48c05b289e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toc_enable
+    - node.type.basic_page
+id: node.basic_page.field_toc_enable
+field_name: field_toc_enable
+entity_type: node
+bundle: basic_page
+label: 'Display Table of Contents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

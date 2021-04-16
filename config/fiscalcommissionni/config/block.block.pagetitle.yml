@@ -1,0 +1,18 @@
+uuid: ee0a3544-a310-462b-af36-ce541dd66609
+langcode: en
+status: true
+dependencies:
+  theme:
+    - fiscalcommissionni_theme
+id: pagetitle
+theme: fiscalcommissionni_theme
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
