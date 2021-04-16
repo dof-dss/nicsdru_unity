@@ -17,6 +17,10 @@
   }
 }
 
+.top_left {
+  min-height: 110px;
+}
+
 #headerHero {
   @media screen and (max-width: $tab) {
     background-color: $brand-secondary;
