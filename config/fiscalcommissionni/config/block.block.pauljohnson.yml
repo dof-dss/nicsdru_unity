@@ -1,23 +1,29 @@
-uuid: ee0a3544-a310-462b-af36-ce541dd66609
+uuid: 813f8d5a-efac-4453-b7a9-d6e0f67bf7c9
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic_block:f6ca355d-cebc-4069-8382-630cfba54c75'
   module:
+    - block_content
     - block_visibility_groups
     - system
   theme:
     - fiscalcommissionni_theme
-id: pagetitle
+id: pauljohnson
 theme: fiscalcommissionni_theme
-region: content
+region: sidebar_second
 weight: 0
 provider: null
-plugin: page_title_block
+plugin: 'block_content:f6ca355d-cebc-4069-8382-630cfba54c75'
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: 'block_content:f6ca355d-cebc-4069-8382-630cfba54c75'
+  label: 'Paul Johnson'
+  provider: block_content
   label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
 visibility:
   condition_group:
     id: condition_group
@@ -27,5 +33,5 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false
     context_mapping: {  }
