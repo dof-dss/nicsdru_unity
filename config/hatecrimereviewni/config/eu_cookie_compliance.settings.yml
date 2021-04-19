@@ -36,7 +36,7 @@ mobile_breakpoint: 768
 popup_link: '<front>'
 popup_link_new_window: true
 popup_position: true
-fixed_top_position: true
+fixed_top_position: false
 popup_text_hex: ''
 popup_width: ''
 use_bare_css: true
@@ -49,7 +49,7 @@ use_mobile_message: false
 method: opt_in
 disagree_button_label: 'Reject cookies'
 disabled_javascripts: ''
-automatic_cookies_removal: true
+automatic_cookies_removal: false
 allowed_cookies: ''
 consent_storage_method: do_not_store
 withdraw_message:
