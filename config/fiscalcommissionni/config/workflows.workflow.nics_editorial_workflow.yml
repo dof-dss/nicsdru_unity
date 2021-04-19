@@ -4,14 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-    - node.type.consultation
-    - node.type.contact
-    - node.type.feature
-    - node.type.featured_content_list
-    - node.type.layout_page
-    - node.type.link
     - node.type.news
-    - node.type.profile
     - node.type.publication
     - node.type.webform
   module:
@@ -107,14 +100,7 @@ type_settings:
   entity_types:
     node:
       - basic_page
-      - consultation
-      - contact
-      - feature
-      - featured_content_list
-      - layout_page
-      - link
       - news
-      - profile
       - publication
       - webform
   default_moderation_state: draft
