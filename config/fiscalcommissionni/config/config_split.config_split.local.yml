@@ -8,6 +8,8 @@ description: "Local development split. \r\nEnables debugging and development mod
 folder: ../config/fiscalcommissionni/local
 module:
   dblog: 0
+  devel: 0
+  devel_generate: 0
   easy_install: 0
   migrate: 0
   migrate_drupal: 0
