@@ -87,6 +87,7 @@ module:
   scheduled_transitions: 0
   search: 0
   search_api: 0
+  search_api_db: 0
   search_api_location: 0
   search_api_location_views: 0
   simplei: 0
