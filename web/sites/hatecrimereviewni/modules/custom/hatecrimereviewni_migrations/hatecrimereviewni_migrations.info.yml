@@ -1,7 +1,7 @@
 name: 'Migrate Hatecrime'
 type: module
 description: 'Hatecrime complete migrations'
-core: 8.x
+core_version_requirement: 8.x || ^9
 package: 'Custom'
 migration_dependencies:
  required: { }

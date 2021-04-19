@@ -2,7 +2,7 @@ name: HCR Theme
 type: theme
 description: 'Base theme for Hatecrimereviewni D8'
 package: NICS
-core: 8.x
+core_version_requirement: 8.x || ^9
 
 libraries:
   - hcr_theme/site-styling
