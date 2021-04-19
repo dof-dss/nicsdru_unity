@@ -1,31 +1,31 @@
-uuid: ee0a3544-a310-462b-af36-ce541dd66609
+uuid: 87cdb078-478f-4505-bbab-b7082b1e167a
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.menu-footer-links
   module:
     - block_visibility_groups
     - system
   theme:
     - fiscalcommissionni_theme
-id: pagetitle
+id: footerlinks
 theme: fiscalcommissionni_theme
-region: content
+region: footer
 weight: 0
 provider: null
-plugin: page_title_block
+plugin: 'system_menu_block:menu-footer-links'
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: 'system_menu_block:menu-footer-links'
+  label: 'Footer links'
+  provider: system
   label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
 visibility:
   condition_group:
     id: condition_group
     negate: false
     block_visibility_group: ''
-    context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: true
     context_mapping: {  }
