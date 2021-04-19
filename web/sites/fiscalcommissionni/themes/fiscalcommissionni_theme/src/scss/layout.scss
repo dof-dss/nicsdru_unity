@@ -4,3 +4,34 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+.front {
+  .sidebar-second-layout {
+    width: 35%;
+  }
+}
+
+.top_left {
+  min-height: 110px;
+}
+
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background-color: $brand-secondary;
+  }
+}
+
+#footer {
+  max-width: 100%;
+  //
+  //#footer_wrapper {
+  //  max-width: $max-grid-width;
+  //  margin: 0 auto;
+  //}
+}
