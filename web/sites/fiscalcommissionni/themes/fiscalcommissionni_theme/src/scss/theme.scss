@@ -80,5 +80,52 @@
   }
 }
 
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.path-news,
+.path-publications {
+  .search-page {
+    .sidebar-first-layout {
+      padding-left: 0;
+    }
+
+    @include breakpoint($lap) {
+      .sidebar-first-layout {
+        width: 30%;
+      }
+
+      .main-content {
+        width: 65%;
+      }
+    }
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
 
 
