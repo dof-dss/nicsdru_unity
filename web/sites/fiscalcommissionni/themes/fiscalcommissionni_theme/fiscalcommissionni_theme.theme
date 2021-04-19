@@ -52,8 +52,7 @@ function fiscalcommissionni_theme_preprocess_page(&$variables) {
 /**
  * Implements hook_theme_suggestions_views_view_unformatted_alter().
  */
-function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array
-$variables) {
+function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
 
   $search_pages = [
     'publication_search_page',
