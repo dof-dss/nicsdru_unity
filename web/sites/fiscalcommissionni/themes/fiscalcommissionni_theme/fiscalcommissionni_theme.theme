@@ -5,6 +5,8 @@
  * Functions to support theming in the fiscalcommissionni_theme theme.
  */
 
+use Drupal\Component\Utility\Html;
+
 /**
  * Implements hook_preprocess_html().
  */
@@ -14,5 +16,67 @@ function fiscalcommissionni_theme_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'one-sidebar';
       $variables['attributes']['class'][] = 'sidebar-second';
     }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function fiscalcommissionni_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#view_mode'])) {
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function fiscalcommissionni_theme_preprocess_page(&$variables) {
+  // Initially set the new variable for search pages to False.
+  $variables['search_page'] = FALSE;
+  // A list of search page titles on the fiscalcommissionni site.
+  $search_pages = [
+    'News',
+    'Publications',
+    'Search',
+  ];
+
+  // If a search page set the variable to true.
+  foreach ($search_pages as $search_page) {
+    if ($variables['page']['#title'] == $search_page) {
+      $variables['search_page'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_unformatted_alter().
+ */
+function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array
+$variables) {
+
+  $search_pages = [
+    'publication_search_page',
+    'news_search_page',
+    'search_page',
+  ];
+
+  foreach ($search_pages as $search_page) {
+    if ($variables['view']->element['#display_id'] == $search_page) {
+      $suggestions[] = 'views_view_unformatted__search_result_page';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function fiscalcommissionni_theme_preprocess_form(array &$variables) {
+  switch ($variables['element']['#id']) {
+    case "views-exposed-form-publications-search-publication-search-page":
+    case "views-exposed-form-news-search-news-search-page":
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form');
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form--page');
+      break;
   }
 }
