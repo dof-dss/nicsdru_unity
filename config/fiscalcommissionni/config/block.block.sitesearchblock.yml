@@ -1,22 +1,23 @@
-uuid: ee0a3544-a310-462b-af36-ce541dd66609
+uuid: a4a77bb3-6a0d-4582-a5bd-694f05e11368
 langcode: en
 status: true
 dependencies:
   module:
     - block_visibility_groups
     - system
+    - unity_search_pages
   theme:
     - fiscalcommissionni_theme
-id: pagetitle
+id: sitesearchblock
 theme: fiscalcommissionni_theme
-region: content
+region: search
 weight: 0
 provider: null
-plugin: page_title_block
+plugin: site_search_block
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: site_search_block
+  label: 'Site search block'
+  provider: unity_search_pages
   label_display: '0'
 visibility:
   condition_group:
@@ -26,6 +27,6 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: '/search*'
     negate: true
     context_mapping: {  }

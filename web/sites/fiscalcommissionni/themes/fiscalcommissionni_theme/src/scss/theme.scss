@@ -1,0 +1,84 @@
+/*
+ * @file
+ * Provides very specific styling for uregni theme.
+ */
+@import 'init/index';
+
+// Theme
+//
+// Theme rules are similar to state rules in that they describe how components or modules or layouts might look in a
+// given context / scenario, however the difference here is that is it is a very specific context and unlikely to be
+// re-usable.
+//
+// Weight: -2
+//
+// Style guide: theme
+
+// Entities
+//
+// Provides very specific styling for entities / content types.
+//
+// Weight: 1
+//
+// Style guide: theme.entities
+
+.front {
+  .content-sidebar-wrap {
+    p {
+      line-height: 28px;
+      margin-bottom: 30px;
+
+      @include breakpoint($tab) {
+        font-size: 2.1rem;
+        margin-bottom: 40px;
+      }
+    }
+
+    .home-intro p,
+    p:first-child {
+      font-size: 2rem;
+      line-height: 30px;
+
+      @include breakpoint($tab) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .image-caption {
+    padding: 9px 0;
+    margin: 0 0 1.8rem 0;
+    font-size: 1.8rem;
+
+    .home-name p {
+      line-height: 28px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .home-role p {
+      font-family: $heading-font;
+      line-height: 21px;
+      //color: $brand-primary;
+    }
+  }
+
+  .front-banner {
+    max-width: 1160px;
+    margin: 0 auto 40px;
+
+    img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 10% 13%;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+
+
