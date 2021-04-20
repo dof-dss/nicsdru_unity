@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - block_visibility_groups
-    - node
     - system
   theme:
     - fiscalcommissionni_theme
@@ -25,10 +24,8 @@ visibility:
     negate: false
     block_visibility_group: ''
     context_mapping: {  }
-  node_type:
-    id: node_type
-    bundles:
-      basic_page: basic_page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
