@@ -1,18 +1,17 @@
-uuid: 740afaf0-68a7-4ec4-aaaf-015ae19fa111
+uuid: bbec8f38-0675-44e3-b0b3-27f4aafe431b
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_teaser
     - node.type.publication
-_core:
-  default_config_hash: x3tINTrEzhQZzD6ZJ8nGMWhvRMCSQe7wvvCHa1h36EQ
-id: node.publication.title
-field_name: title
+id: node.publication.field_teaser
+field_name: field_teaser
 entity_type: node
 bundle: publication
-label: 'Publication title'
+label: Teaser
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
