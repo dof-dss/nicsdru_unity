@@ -1,0 +1,117 @@
+uuid: 147efa45-d88f-4227-9c70-75f0068d428f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_published_date
+    - field.storage.node.field_teaser
+    - search_api.server.default
+  module:
+    - node
+    - search_api
+id: news
+name: News
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_published_date:
+    label: 'Published date'
+    datasource_id: 'entity:node'
+    property_path: field_published_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_published_date
+  field_teaser:
+    label: Teaser
+    datasource_id: 'entity:node'
+    property_path: field_teaser
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_teaser
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 5
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - news
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    all_fields: false
+    fields:
+      - body
+      - field_teaser
+      - title
+    title: false
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - field_teaser
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default

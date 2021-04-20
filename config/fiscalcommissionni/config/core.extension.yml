@@ -23,6 +23,7 @@ module:
   contextual: 0
   cookie_content_blocker: 0
   ctools: 0
+  date_facet_drilldown: 0
   datetime: 0
   datetime_range: 0
   diff: 0
@@ -36,11 +37,13 @@ module:
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
+  facets_summary: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  fiscalcommissionni_breadcrumbs: 0
   geocoder: 0
   geocoder_address: 0
   geocoder_field: 0
@@ -117,9 +120,9 @@ module:
   menu_admin_per_menu: 1
   pathauto: 1
   views: 10
-  eu_cookie_compliance: 11
   paragraphs: 11
   nicsdru_unity_profile: 1000
+  eu_cookie_compliance: 1001
 theme:
   stark: 0
   stable: 0

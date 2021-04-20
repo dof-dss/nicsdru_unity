@@ -1,0 +1,35 @@
+uuid: a0349b56-19aa-4e4f-9dfb-d9e5df567be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_search
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - fiscalcommissionni_theme
+id: exposedformnews_searchnews_search_page
+theme: fiscalcommissionni_theme
+region: search_facets
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:news_search-news_search_page'
+settings:
+  id: 'views_exposed_filter_block:news_search-news_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false
+    context_mapping: {  }
