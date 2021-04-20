@@ -14,7 +14,12 @@ site-styling:
     component:
       css/components.css: { minified: true }
 
+    # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
+    theme:
+      css/theme.css: { minified: true }
+
 fonts:
   css:
     theme:
-      'https://fonts.googleapis.com/css2?family=Manrope&family=Barlow&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap': { type: external, minified: true }

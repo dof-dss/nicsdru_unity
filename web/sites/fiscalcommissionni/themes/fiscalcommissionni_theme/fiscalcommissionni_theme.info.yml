@@ -5,8 +5,8 @@ package: NICS
 core: 8.x
 
 libraries:
-  - fiscalcommissionni_theme/site-styling
   - fiscalcommissionni_theme/fonts
+  - fiscalcommissionni_theme/site-styling
 
 ckeditor_stylesheets:
   - css/ckeditor.css

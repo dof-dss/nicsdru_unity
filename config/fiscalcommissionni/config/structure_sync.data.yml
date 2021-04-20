@@ -1,0 +1,200 @@
+taxonomies:
+  publications_topics: {  }
+  site_topics: {  }
+  tags: {  }
+blocks:
+  -
+    info: 'Paul Johnson'
+    langcode: en
+    uuid: f6ca355d-cebc-4069-8382-630cfba54c75
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"be591737-92bd-475b-b4be-712cbd868cd9\"></drupal-media>\r\n\r\n<div class=\"image-caption\">\r\n<div class=\"home-name\">\r\n<p>Paul Johnson</p>\r\n</div>\r\n\r\n<div class=\"home-role\">\r\n<p>Chairman of the Independent Fiscal Commission for Northern Ireland&nbsp;</p>\r\n</div>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Front banner'
+    langcode: en
+    uuid: 7b257e58-2f7b-400d-b74b-b3da127f1c6b
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"8660cfe7-3c2a-48b6-ab84-ce83c70bc308\"></drupal-media>\r\n"
+          summary: ''
+          format: basic_html
+menus:
+  -
+    menu_name: main
+    title: 'Terms of Reference'
+    parent: null
+    uri: 'entity:node/7'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: en
+    uuid: 4b57952f-d231-471d-bf23-88cab7f8eab7
+  -
+    menu_name: main
+    title: Commissioners
+    parent: null
+    uri: 'entity:node/8'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: en
+    uuid: a06e14c0-d0f1-4731-b12c-4db645aefa48
+  -
+    menu_name: main
+    title: News
+    parent: null
+    uri: 'entity:node/9'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-47'
+    langcode: en
+    uuid: 92fd5712-4407-4ff0-a8c7-39c5d8be9ed5
+  -
+    menu_name: main
+    title: Reports
+    parent: null
+    uri: 'entity:node/10'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: 7bbeb8ca-0eb6-43e0-a435-023b764f5185
+  -
+    menu_name: main
+    title: FAQs
+    parent: null
+    uri: 'entity:node/12'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-44'
+    langcode: en
+    uuid: b737bab3-1e9e-4aa2-89bc-43181ce1fc96
+  -
+    menu_name: main
+    title: 'Contact us'
+    parent: null
+    uri: 'entity:node/13'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-43'
+    langcode: en
+    uuid: 394988d0-2470-4c66-bf22-3b984e7dacff
+  -
+    menu_name: main
+    title: Links
+    parent: null
+    uri: 'entity:node/14'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-42'
+    langcode: en
+    uuid: 89663f37-30e4-42c6-b437-63f5239fd34a
+  -
+    menu_name: main
+    title: Evidence
+    parent: null
+    uri: 'entity:node/11'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: aa1980da-6c17-41a9-a3a5-42825e2c2862
+  -
+    menu_name: main
+    title: Evidence
+    parent: null
+    uri: 'internal:/evidence'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-45'
+    langcode: en
+    uuid: c809f11b-6403-4108-9b11-c9d4d05c2bce
+  -
+    menu_name: main
+    title: Home
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: en
+    uuid: b9dd6149-c198-4f14-be7d-064d6696b8f5
+  -
+    menu_name: menu-footer-links
+    title: '© Crown Copyright'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: en
+    uuid: e389b02d-45b6-4af5-af24-9581b5aba3ea
+  -
+    menu_name: menu-footer-links
+    title: 'Terms and Conditions'
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: en
+    uuid: ec76d7c5-9d51-45e4-94d4-9dc468aafae7
+  -
+    menu_name: menu-footer-links
+    title: Cookies
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: en
+    uuid: ab8fc63b-7a06-405f-bf9c-90b63940884e
+  -
+    menu_name: menu-footer-links
+    title: 'Accessibility Statement'
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-47'
+    langcode: en
+    uuid: 5416d1da-89d9-4ce7-8567-107dabd05242
