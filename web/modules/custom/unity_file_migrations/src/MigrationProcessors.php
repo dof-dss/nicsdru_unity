@@ -115,13 +115,13 @@ class MigrationProcessors {
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-    // Does the current revision exist in D8?
+    // Does the D7 revision exist in D8?
     $check_vid = $this->dbConnDrupal8->query(
       "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
       [':nid' => $nid, ':vid' => $vid]
     )->fetchField();
     if (empty($check_vid)) {
-      // Revision does not exist in D8, use the D8 one.
+      // D7 revision does not exist in D8, use the D8 one.
       $vid = $d8_vid;
     }
 
