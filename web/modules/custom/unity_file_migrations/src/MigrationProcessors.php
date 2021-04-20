@@ -115,30 +115,35 @@ class MigrationProcessors {
       "SELECT vid FROM {node} WHERE nid = :nid", [':nid' => $nid]
     )->fetchField();
 
-    // Update the current revision if necessary.
-    if ($vid != $d8_vid) {
-      // Does this revision exist in D8 ?
-      $check_vid = $this->dbConnDrupal8->query(
-        "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
-        [':nid' => $nid, ':vid' => $vid]
-      )->fetchField();
-      if (!empty($check_vid)) {
-        // Revision exists, make it current (and publish if necessary)
-        $revision = $this->nodeStorage->loadRevision($vid);
-        $revision->isDefaultRevision(TRUE);
-        if ($status == 1) {
-          $revision->setpublished();
-        }
-        $revision->save();
-      }
+    // Does the D7 revision exist in D8?
+    $check_vid = $this->dbConnDrupal8->query(
+      "SELECT vid FROM {node_field_revision} WHERE nid = :nid AND vid = :vid",
+      [':nid' => $nid, ':vid' => $vid]
+    )->fetchField();
+    if (empty($check_vid)) {
+      // D7 revision does not exist in D8, use the D8 one.
+      $vid = $d8_vid;
     }
 
+    // Make the revision current and publish if necessary.
+    $revision = $this->nodeStorage->loadRevision($vid);
+    if (!empty($revision)) {
+      $revision->isDefaultRevision(TRUE);
+      if ($status == 1) {
+        $revision->setpublished();
+      }
+      $revision->save();
+    }
+
+    // Publish node if necessary.
     if ($status == 1) {
       // If node was published on D7, make sure that it is published on D8.
       $node = $this->nodeStorage->load($nid);
-      $node->status = 1;
-      $node->set('moderation_state', 'published');
-      $node->save();
+      if (!empty($node)) {
+        $node->status = 1;
+        $node->set('moderation_state', 'published');
+        $node->save();
+      }
     }
     else {
       // See if the moderation state on D7 was 'needs review'.

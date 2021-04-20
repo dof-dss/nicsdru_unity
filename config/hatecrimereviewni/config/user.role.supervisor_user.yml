@@ -77,6 +77,8 @@ permissions:
   - 'edit any file media'
   - 'edit any image files'
   - 'edit any image media'
+  - 'edit any news content'
+  - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any video files'
   - 'edit any video media'
