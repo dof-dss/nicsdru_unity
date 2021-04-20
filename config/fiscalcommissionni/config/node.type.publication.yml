@@ -4,16 +4,24 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - origins_toc
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
+  origins_toc:
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
 _core:
   default_config_hash: g0hiOyM6vMgdn7vw7gh11mt7K2AyvJkje6zy28fqm00
 name: Publication
 type: publication
-description: 'Use this content type for generic non-HTML content such as PDF documents.'
+description: 'Content type designed for publication articles'
 help: ''
 new_revision: true
 preview_mode: 1
