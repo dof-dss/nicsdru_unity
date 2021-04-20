@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01fa1b838502f39c768cd3053ed8e2a3",
+    "content-hash": "4041e2e38c22d641bfe58ed8362c9c77",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1908,22 +1908,21 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "dev-development",
+            "version": "dev-d9upgrade",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "0169ef28a322b78af84b8a7c95abee9dc03acae1"
+                "reference": "dc49ed430ca8427f3428a316b3946f46ef119e4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/0169ef28a322b78af84b8a7c95abee9dc03acae1",
-                "reference": "0169ef28a322b78af84b8a7c95abee9dc03acae1",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/dc49ed430ca8427f3428a316b3946f46ef119e4a",
+                "reference": "dc49ed430ca8427f3428a316b3946f46ef119e4a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-theme",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1942,9 +1941,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/development"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/d9upgrade"
             },
-            "time": "2021-04-16T15:16:20+00:00"
+            "time": "2021-04-20T10:15:13+00:00"
         },
         {
             "name": "drupal/address",

@@ -65,7 +65,7 @@
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "dev-development",
         "dof-dss/nicsdru_origins_profile": "dev-development",
-        "dof-dss/nicsdru_unity_theme": "dev-development",
+        "dof-dss/nicsdru_unity_theme": "dev-d9upgrade",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
