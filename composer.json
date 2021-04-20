@@ -156,6 +156,7 @@
         "drupal/migrate_tools": "^5.0",
         "drupal/permissions_filter": "^1.1",
         "drupal/stage_file_proxy": "^1.1",
+        "kint-php/kint": "^3.3",
         "mglaman/drupal-check": "^1.1",
         "previousnext/phpunit-finder": "^1.0@alpha"
     },
