@@ -2047,16 +2047,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.17",
+            "version": "0.9.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "328361efd635f1739316b4f556ab2bec7b014fae"
+                "reference": "fa0582db9767ef451eeaaa9032ed462dc6e83bd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/328361efd635f1739316b4f556ab2bec7b014fae",
-                "reference": "328361efd635f1739316b4f556ab2bec7b014fae",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/fa0582db9767ef451eeaaa9032ed462dc6e83bd3",
+                "reference": "fa0582db9767ef451eeaaa9032ed462dc6e83bd3",
                 "shasum": ""
             },
             "require": {
@@ -2070,26 +2070,26 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/0.9.17"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/0.9.18"
             },
-            "time": "2021-04-07T13:27:16+00:00"
+            "time": "2021-04-21T10:17:29+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.10",
+            "version": "0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "c297780f157bda7b99e934e5fe8be28c9a25debc"
+                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/c297780f157bda7b99e934e5fe8be28c9a25debc",
-                "reference": "c297780f157bda7b99e934e5fe8be28c9a25debc",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
+                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
                 "shasum": ""
             },
             "require": {
-                "dof-dss/nicsdru_origins_modules": "0.*",
+                "dof-dss/nicsdru_origins_modules": "*",
                 "drupal/address": "^1.7",
                 "drupal/admin_toolbar": "^2.2",
                 "drupal/adminimal_theme": "^1.5",
@@ -2110,22 +2110,22 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.10"
+                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.11"
             },
-            "time": "2020-11-11T14:33:13+00:00"
+            "time": "2021-04-21T10:20:46+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.19",
+            "version": "v0.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "4dce55cb1dfcf6350034807c66cbf42cb58e6171"
+                "reference": "573109af1c6641672619f0167608d273729bcb99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/4dce55cb1dfcf6350034807c66cbf42cb58e6171",
-                "reference": "4dce55cb1dfcf6350034807c66cbf42cb58e6171",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/573109af1c6641672619f0167608d273729bcb99",
+                "reference": "573109af1c6641672619f0167608d273729bcb99",
                 "shasum": ""
             },
             "require": {
@@ -2149,9 +2149,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.19"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.20"
             },
-            "time": "2021-04-13T10:25:50+00:00"
+            "time": "2021-04-21T10:35:55+00:00"
         },
         {
             "name": "drupal/address",
