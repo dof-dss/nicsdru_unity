@@ -5,8 +5,6 @@ dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: Gr3u649O44K_LNU90FRCFbiRzL7ZBqCa04mA5q6llLk
 open: null
 close: null
 weight: 0
@@ -38,7 +36,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -227,13 +225,13 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
-      parameters: {  }
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
   email_notification:
     id: email
     label: 'Email notification'
@@ -264,11 +262,13 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
-      parameters: {  }
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
+_core:
+  default_config_hash: Gr3u649O44K_LNU90FRCFbiRzL7ZBqCa04mA5q6llLk
