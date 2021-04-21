@@ -32,7 +32,7 @@ settings:
         -
           name: Linking
           items:
-            - Linkit
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -64,10 +64,11 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
-    linkit:
-      linkit_profile: default
     tokenbrowser:
       token_types: {  }
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
 image_upload:
   status: true
   scheme: public
