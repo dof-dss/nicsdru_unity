@@ -20,7 +20,6 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
    */
   protected $routeMatch;
 
-
   /**
    * The current request stack.
    *
@@ -29,10 +28,10 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
   protected $request;
 
   /**
-   * Creates a new ModerationStateConstraintValidator instance.
+   * Class constructor.
    *
    * @param \Drupal\Core\Routing\CurrentRouteMatch $route_match
-   *   The entity type manager.
+   *   The current route match.
    * @param \Symfony\Component\HttpFoundation\RequestStack $request
    *   The current request.
    */
@@ -51,7 +50,6 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
     );
   }
 
-
   /**
    * Controller callback for the page title.
    *
@@ -63,7 +61,7 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
    */
   public function getTitle($route = NULL) {
     if ($route === NULL) {
-      $route =  $this->routeMatch->getRouteName();
+      $route = $this->routeMatch->getRouteName();
     }
 
     $facet = $this->request->get('facets_query');
