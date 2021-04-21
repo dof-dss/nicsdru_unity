@@ -187,6 +187,9 @@
             },
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
+            },
+            "drupal/ultimate_cron": {
+                "Fix test function issue": "https://www.drupal.org/files/issues/2021-04-13/kernel_test-3208608-1.patch"
             }
         },
         "drupal-scaffold": {
