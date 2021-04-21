@@ -2,7 +2,7 @@ name: Uregni Theme
 type: theme
 description: 'Base theme for Uregni D8'
 package: NICS
-core: 8.x
+core_version_requirement: 8.x || ^9
 
 libraries:
   - uregni_theme/site-styling
