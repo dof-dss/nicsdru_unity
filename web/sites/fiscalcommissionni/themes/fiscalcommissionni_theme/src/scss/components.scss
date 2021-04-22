@@ -153,3 +153,16 @@
     display: block;
   }
 }
+
+.node-type-publication #content #post-content a.file-link[href] {
+  padding-left: 6.5rem;
+  margin-bottom: 1.6rem;
+
+  &:hover {
+    margin-bottom: 1.5rem;
+  }
+
+  &:last-child {
+    margin-bottom: 2.4rem;
+  }
+}
