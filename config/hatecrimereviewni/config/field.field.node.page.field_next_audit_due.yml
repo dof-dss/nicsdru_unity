@@ -1,0 +1,21 @@
+uuid: c0454275-5a47-4d15-957d-8fbc6dae0e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next_audit_due
+    - node.type.page
+  module:
+    - datetime
+id: node.page.field_next_audit_due
+field_name: field_next_audit_due
+entity_type: node
+bundle: page
+label: field_next_audit_due
+description: 'The date when this item is due for audit'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
