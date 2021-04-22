@@ -13,7 +13,7 @@ dependencies:
 id: publisheddate
 theme: fiscalcommissionni_theme
 region: search_facets
-weight: -3
+weight: -4
 provider: null
 plugin: 'facet_block:published_date'
 settings:

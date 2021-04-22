@@ -23,7 +23,7 @@
   }
 }
 
-#post-content {
+.page-content {
   .media-image {
     margin: 1rem;
 
@@ -33,6 +33,24 @@
       width: 48.3871%;
       max-width: 300px;
       margin: 2.1rem 0 0 2.7rem;
+    }
+  }
+}
+
+.node-type-staff-member {
+  .field-member-image {
+    margin: 1rem;
+
+    @include breakpoint($mob) {
+      float: right;
+      margin: 0 0 1rem 2rem;
+    }
+
+    .media-image {
+      float: none;
+      width: unset;
+      max-width: unset;
+      margin: 0;
     }
   }
 }
@@ -151,5 +169,18 @@
 
   a {
     display: block;
+  }
+}
+
+.node-type-publication #content #post-content a.file-link[href] {
+  padding-left: 6.5rem;
+  margin-bottom: 1.6rem;
+
+  &:hover {
+    margin-bottom: 1.5rem;
+  }
+
+  &:last-child {
+    margin-bottom: 2.4rem;
   }
 }

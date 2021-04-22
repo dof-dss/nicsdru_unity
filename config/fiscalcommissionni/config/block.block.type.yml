@@ -1,0 +1,35 @@
+uuid: 2bed062b-3738-4560-9206-c8aeeda9f484
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type
+  module:
+    - block_visibility_groups
+    - facets
+    - system
+  theme:
+    - fiscalcommissionni_theme
+id: type
+theme: fiscalcommissionni_theme
+region: search_facets
+weight: -2
+provider: null
+plugin: 'facet_block:type'
+settings:
+  id: 'facet_block:type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: type
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/type/*\r\n/publications/date/*\r\n"
+    negate: false
+    context_mapping: {  }
