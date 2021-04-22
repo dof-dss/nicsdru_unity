@@ -25,6 +25,10 @@
       outline-offset: 1.2rem;
     }
   }
+
+  img {
+    min-height: 8.9rem;
+  }
 }
 
 #header {
@@ -48,7 +52,7 @@
   .menu-main {
     @include breakpoint($lap)  {
       float: right;
-      margin-top: -14.5rem;
+      margin-top: -16.5rem;
     }
   }
 
