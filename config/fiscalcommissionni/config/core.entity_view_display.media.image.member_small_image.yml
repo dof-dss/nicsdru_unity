@@ -1,13 +1,13 @@
-uuid: 84592aa6-59c3-4a55-aedb-210a01b1895f
+uuid: 3decd69f-53c1-4605-bb16-321ca9d4c64e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.portrait_float
+    - core.entity_view_mode.media.member_small_image
     - field.field.media.image.field_caption_text
     - field.field.media.image.field_media_image
     - media.type.image
-    - responsive_image.styles.portrait_float
+    - responsive_image.styles.member_small_image
   module:
     - layout_builder
     - responsive_image
@@ -16,16 +16,16 @@ third_party_settings:
     allow_custom: false
     enabled: false
 _core:
-  default_config_hash: pVPlrC83-1V07Z4BksXvPVTiQ2hJkTZvKCDpkGQoDiU
-id: media.image.portrait_float
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.member_small_image
 targetEntityType: media
 bundle: image
-mode: portrait_float
+mode: member_small_image
 content:
   field_media_image:
     label: visually_hidden
     settings:
-      responsive_image_style: portrait_float
+      responsive_image_style: member_small_image
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
