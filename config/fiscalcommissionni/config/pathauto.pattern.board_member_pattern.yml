@@ -1,0 +1,22 @@
+uuid: 350e25e6-3b3c-4136-b584-f1cd471ec390
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: board_member_pattern
+label: 'Board member pattern'
+type: 'canonical_entities:node'
+pattern: 'commissioners/[node:title]'
+selection_criteria:
+  dea9ca4a-5bd0-4e5f-b3b5-2ef0314466c5:
+    id: node_type
+    bundles:
+      staff_member: staff_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: dea9ca4a-5bd0-4e5f-b3b5-2ef0314466c5
+selection_logic: and
+weight: -5
+relationships: {  }
