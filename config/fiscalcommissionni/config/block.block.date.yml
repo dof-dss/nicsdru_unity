@@ -1,23 +1,27 @@
-uuid: ee0a3544-a310-462b-af36-ce541dd66609
+uuid: 3ff3302c-ba12-45e2-925f-423308357566
 langcode: en
 status: true
 dependencies:
+  config:
+    - facets.facet.date
   module:
     - block_visibility_groups
+    - facets
     - system
   theme:
     - fiscalcommissionni_theme
-id: pagetitle
+id: date
 theme: fiscalcommissionni_theme
-region: content
-weight: 0
+region: search_facets
+weight: -1
 provider: null
-plugin: page_title_block
+plugin: 'facet_block:date'
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
-  label_display: '0'
+  id: 'facet_block:date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: date
 visibility:
   condition_group:
     id: condition_group
@@ -26,6 +30,6 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/type/*\r\n/publications/date/*"
-    negate: true
+    pages: "/publications\r\n/publications/type/*\r\n/publications/date/*"
+    negate: false
     context_mapping: {  }
