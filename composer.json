@@ -170,6 +170,10 @@
     },
     "extra": {
         "patches": {
+            "drupal/core": {
+                "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
+                "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch"
+            },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
             },
@@ -177,6 +181,7 @@
                 "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch"
             },
             "drupal/redirect": {
+                "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch",
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch",
                 "Fix ajax error when creating redirects": "https://www.drupal.org/files/issues/2020-12-14/validation-issue-3057250-29.patch"
             },
