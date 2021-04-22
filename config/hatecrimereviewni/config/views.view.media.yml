@@ -1,6 +1,6 @@
 uuid: af9f1afe-b477-40f6-ba35-a759492b5aef
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - image.style.thumbnail
