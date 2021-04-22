@@ -12,7 +12,16 @@ field_name: field_publication_type
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: reports
+      label: Reports
+    -
+      value: evidence
+      label: Evidence
+    -
+      value: other
+      label: Other
   allowed_values_function: ''
 module: options
 locked: false
