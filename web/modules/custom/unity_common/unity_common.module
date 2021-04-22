@@ -106,6 +106,11 @@ function unity_common_preprocess_image_formatter(array &$variables) {
     $file_storage = \Drupal::entityTypeManager()->getStorage('file');
     // Get the underlying file associated with this document entity.
     $file = $file_storage->load($media_entity->field_media_file->target_id);
+
+    if ($file instanceof FileInterface === FALSE) {
+      return;
+    }
+
     $mimetype = $file->getMimeType();
     $simple_mimetypes = \Drupal::service('origins_media.pretty_mime_types')->getSimpleMimeTypes();
     $pretty_mimetypes = \Drupal::service('origins_media.pretty_mime_types')->getMimeTypes();
