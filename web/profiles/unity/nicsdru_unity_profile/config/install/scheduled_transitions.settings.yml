@@ -12,13 +12,37 @@ _core:
 bundles:
   -
     entity_type: node
+    bundle: basic_page
+  -
+    entity_type: node
     bundle: consultation
+  -
+    entity_type: node
+    bundle: contact
+  -
+    entity_type: node
+    bundle: feature
+  -
+    entity_type: node
+    bundle: featured_content_list
+  -
+    entity_type: node
+    bundle: layout_page
+  -
+    entity_type: node
+    bundle: link
+  -
+    entity_type: node
+    bundle: profile
   -
     entity_type: node
     bundle: news
   -
     entity_type: node
     bundle: page
+  -
+    entity_type: node
+    bundle: publication
   -
     entity_type: node
     bundle: publication_page
@@ -28,3 +52,6 @@ bundles:
   -
     entity_type: node
     bundle: vacancy
+  -
+    entity_type: node
+    bundle: webform
