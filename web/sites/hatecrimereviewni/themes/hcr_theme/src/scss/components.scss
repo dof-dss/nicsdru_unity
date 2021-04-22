@@ -27,7 +27,11 @@
   }
 
   img {
-    min-height: 8.9rem;
+    height: 7.9rem;
+
+    @include breakpoint($lap) {
+      height: 8.9rem;
+    }
   }
 }
 
