@@ -56,64 +56,16 @@ menus:
     uuid: a06e14c0-d0f1-4731-b12c-4db645aefa48
   -
     menu_name: main
-    title: News
-    parent: null
-    uri: 'entity:node/9'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-47'
-    langcode: en
-    uuid: 92fd5712-4407-4ff0-a8c7-39c5d8be9ed5
-  -
-    menu_name: main
     title: Reports
     parent: null
-    uri: 'entity:node/10'
-    link_title: null
+    uri: 'internal:/publications/type/reports'
+    link_title: ''
     description: null
     enabled: '1'
     expanded: '0'
     weight: '-46'
     langcode: en
     uuid: 7bbeb8ca-0eb6-43e0-a435-023b764f5185
-  -
-    menu_name: main
-    title: FAQs
-    parent: null
-    uri: 'entity:node/12'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-44'
-    langcode: en
-    uuid: b737bab3-1e9e-4aa2-89bc-43181ce1fc96
-  -
-    menu_name: main
-    title: 'Contact us'
-    parent: null
-    uri: 'entity:node/13'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-43'
-    langcode: en
-    uuid: 394988d0-2470-4c66-bf22-3b984e7dacff
-  -
-    menu_name: main
-    title: Links
-    parent: null
-    uri: 'entity:node/14'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-42'
-    langcode: en
-    uuid: 89663f37-30e4-42c6-b437-63f5239fd34a
   -
     menu_name: main
     title: Evidence
@@ -130,7 +82,7 @@ menus:
     menu_name: main
     title: Evidence
     parent: null
-    uri: 'internal:/evidence'
+    uri: 'internal:/publications/type/evidence'
     link_title: ''
     description: null
     enabled: '1'
@@ -198,3 +150,39 @@ menus:
     weight: '-47'
     langcode: en
     uuid: 5416d1da-89d9-4ce7-8567-107dabd05242
+  -
+    menu_name: main
+    title: 'About us'
+    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
+    uri: 'internal:/about-us'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 67b0557f-afe9-4bc5-b629-dc2821e9626e
+  -
+    menu_name: main
+    title: 'Menu link 2'
+    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: a38ee551-f30c-4576-b3ea-712e3ae3b2dc
+  -
+    menu_name: main
+    title: 'Menu link 3'
+    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: 9620a20f-8274-492d-9605-0724ae9ac091
