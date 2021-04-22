@@ -258,6 +258,7 @@ permissions:
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'use nics_editorial_workflow transition unpublish'
   - 'use text format basic_html'
+  - 'use text format basic_html_publications'
   - 'use workbench_moderation my drafts tab'
   - 'use workbench_moderation needs review tab'
   - 'view all revisions'

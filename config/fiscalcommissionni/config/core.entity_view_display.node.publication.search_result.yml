@@ -1,9 +1,9 @@
-uuid: 5b3ac804-0c21-42d8-ae4e-c97058f7a974
+uuid: eb665034-43ea-409e-a1f7-3939581dfa4a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.search_result
     - field.field.node.publication.body
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
@@ -12,33 +12,43 @@ dependencies:
     - field.field.node.publication.field_teaser
     - node.type.publication
   module:
+    - datetime
+    - layout_builder
+    - options
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
-  default_config_hash: Qg3m7rmc1j1dBqLJn6_N8rah72nWZ22-FQqWFnnnZV8
-id: node.publication.teaser
+  default_config_hash: JEXKz_Us6K6M-PZZTov7oUncjiUBseqZxIupAmhU3Xo
+id: node.publication.search_result
 targetEntityType: node
 bundle: publication
-mode: teaser
+mode: search_result
 content:
-  field_teaser:
-    type: string
+  field_publication_type:
+    type: list_default
     weight: 1
     region: content
     label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+  field_published_date:
+    weight: 0
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
 hidden:
   body: true
   content_moderation_control: true
   field_attachment: true
   field_meta_tags: true
-  field_publication_type: true
-  field_published_date: true
+  field_teaser: true
   langcode: true
+  links: true
   search_api_excerpt: true
