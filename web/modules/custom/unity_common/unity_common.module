@@ -13,6 +13,17 @@ use Drupal\media\MediaInterface;
 use Drupal\views\Render\ViewsRenderPipelineMarkup;
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function unity_common_preprocess_page(&$variables) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+  // Apply link manager library to all non-admin pages.
+  $variables['#attached']['library'][] = 'unity_common/link_manager';
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  *
  * Form alter hook for the LinkIt dialogue box
