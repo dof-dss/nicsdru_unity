@@ -119,18 +119,6 @@ menus:
     menu_name: main
     title: Evidence
     parent: null
-    uri: 'entity:node/11'
-    link_title: null
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: aa1980da-6c17-41a9-a3a5-42825e2c2862
-  -
-    menu_name: main
-    title: Evidence
-    parent: null
     uri: 'internal:/publications/type/evidence'
     link_title: ''
     description: null
@@ -199,39 +187,3 @@ menus:
     weight: '-47'
     langcode: en
     uuid: 5416d1da-89d9-4ce7-8567-107dabd05242
-  -
-    menu_name: main
-    title: 'About us'
-    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
-    uri: 'internal:/about-us'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 67b0557f-afe9-4bc5-b629-dc2821e9626e
-  -
-    menu_name: main
-    title: 'Menu link 2'
-    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
-    uri: 'internal:/'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: a38ee551-f30c-4576-b3ea-712e3ae3b2dc
-  -
-    menu_name: main
-    title: 'Menu link 3'
-    parent: 'menu_link_content:4b57952f-d231-471d-bf23-88cab7f8eab7'
-    uri: 'internal:/'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
-    langcode: en
-    uuid: 9620a20f-8274-492d-9605-0724ae9ac091
