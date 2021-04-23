@@ -1,0 +1,30 @@
+uuid: ef415f34-7506-4f38-9e88-d68a947e1a24
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:743164f5-75d6-441e-b6c1-dcd3ccb8c322'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - fiscalcommissionni_theme
+id: contactus
+theme: fiscalcommissionni_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:743164f5-75d6-441e-b6c1-dcd3ccb8c322'
+settings:
+  id: 'block_content:743164f5-75d6-441e-b6c1-dcd3ccb8c322'
+  label: 'Contact us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
