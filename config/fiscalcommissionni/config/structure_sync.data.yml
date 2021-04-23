@@ -29,6 +29,19 @@ blocks:
           value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"8660cfe7-3c2a-48b6-ab84-ce83c70bc308\"></drupal-media>\r\n"
           summary: ''
           format: basic_html
+  -
+    info: 'Contact us'
+    langcode: en
+    uuid: 743164f5-75d6-441e-b6c1-dcd3ccb8c322
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>General email: <a href=\"mailto:info@FiscalCommissionNI.org\_\">info@FiscalCommissionNI.org&nbsp;</a></p>\r\n\r\n<p>For press queries: <a href=\"mailto:press@FiscalCommissionNI.org\">press@FiscalCommissionNI.org</a></p>\r\n"
+          summary: ''
+          format: basic_html
 menus:
   -
     menu_name: main
@@ -66,6 +79,42 @@ menus:
     weight: '-46'
     langcode: en
     uuid: 7bbeb8ca-0eb6-43e0-a435-023b764f5185
+  -
+    menu_name: main
+    title: FAQs
+    parent: null
+    uri: 'entity:node/12'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-44'
+    langcode: en
+    uuid: b737bab3-1e9e-4aa2-89bc-43181ce1fc96
+  -
+    menu_name: main
+    title: 'Contact us'
+    parent: null
+    uri: 'entity:node/13'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-43'
+    langcode: en
+    uuid: 394988d0-2470-4c66-bf22-3b984e7dacff
+  -
+    menu_name: main
+    title: Links
+    parent: null
+    uri: 'entity:node/14'
+    link_title: null
+    description: null
+    enabled: '0'
+    expanded: '0'
+    weight: '-42'
+    langcode: en
+    uuid: 89663f37-30e4-42c6-b437-63f5239fd34a
   -
     menu_name: main
     title: Evidence
