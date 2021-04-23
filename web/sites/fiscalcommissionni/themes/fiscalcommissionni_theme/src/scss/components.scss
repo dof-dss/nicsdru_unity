@@ -8,6 +8,10 @@
 #logo {
   margin-top: 1.5rem;
 
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
   a {
     &:focus {
       background: none;
@@ -20,6 +24,10 @@
 
   img {
     height: 80px;
+
+    @media screen and (max-width: $mob) {
+      height: 55px;
+    }
   }
 }
 
