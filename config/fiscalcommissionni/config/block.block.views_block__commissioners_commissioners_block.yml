@@ -1,0 +1,34 @@
+uuid: 62fb1a2e-2c7e-44dc-be4a-74ab207562ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.commissioners
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - fiscalcommissionni_theme
+id: views_block__commissioners_commissioners_block
+theme: fiscalcommissionni_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:commissioners-commissioners_block'
+settings:
+  id: 'views_block:commissioners-commissioners_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: /commissioners
+    negate: false

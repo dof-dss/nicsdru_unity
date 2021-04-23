@@ -127,3 +127,37 @@
     }
   }
 }
+
+.board-members {
+  display: flex;
+  flex-flow: column;
+
+  @include breakpoint($mob) {
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .views-row {
+    display: flex;
+    background: #e6e6e6;
+    margin-bottom: 2%;
+    padding: 1rem;
+
+    @include breakpoint($mob) {
+      flex-basis: 49%;
+    }
+
+    .group-left {
+      flex-basis: 40%;
+    }
+
+    .group-right {
+      flex-basis: 60%;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+}
