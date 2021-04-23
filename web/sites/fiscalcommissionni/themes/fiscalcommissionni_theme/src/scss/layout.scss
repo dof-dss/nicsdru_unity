@@ -19,6 +19,10 @@
 
 .top_left {
   min-height: 110px;
+
+  @media screen and (max-width: $mob) {
+    min-height: 80px;
+  }
 }
 
 #headerHero {
