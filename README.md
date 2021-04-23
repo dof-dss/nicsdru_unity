@@ -201,22 +201,15 @@ site URLs will be duplicated and Lando will attempt to set up 'uregni.gov.uk.lnd
 
 ## Uploading files to platform.sh
 
-- Navigate to files directory in lando local copy of unity.
-  - Cd web/files.
-- For multi-site:
-  - Group all the files within the site files folder name within the site files directory.
-    - E.g. uregni > uregni > all_uregni_files.
-  - We do this because there is no option to upload files into web/files/uregni on platform so the files simply go into
-    web/files and they have to be moved manually via ssh in platform.
 - Run the command platform mount:upload.
-- Follow the wizard for the site:
-  - Select 3 for web/files.
-- Run.
-- If the upload fails at any point just run through the platform mount:upload again, it will start from where it left off.
-- To check the files are there.
-  - platform ssh.
-  - Follow the wizard for the site.
-  - cd web/files/uregni and all the uploaded files should be there.
+- Select the project and environment and then select option 3 for web/files.
+- Supply the path to your local web/files directory
+- Any new files in your local web/files directory will be uploaded
+- Note that this is a 'non destructive' upload, so if you have deleted any files locally they will not be deleted on the
+  server by the 'mount:upload' command
+- Note also that it is fine if your local web/files directory only has one subdirectory for one of the multi sites (like 'liofa'
+  for example) - in this case new files will just be uploaded from your web/files/liofa directory and none of the other
+  sub-directories on the server will be affected.
 
 ## Running Nightwatch tests
 - Nightwatch tests may appear in the /tests directory of any module
