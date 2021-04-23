@@ -162,6 +162,14 @@
         border-bottom: none;
       }
 
+      span.link__self {
+        background: $link-hover-background;
+        border-bottom: 4px solid #333;
+        color: #333;
+        display: block;
+        padding: 1rem 1.5rem .6rem;
+      }
+
       a {
         border-bottom: 4px solid transparent;
         color: #555;
@@ -174,12 +182,6 @@
           background: #ccc;
           color: #333;
           outline: 1px solid;
-        }
-
-        &.is-active {
-          background: $link-hover-background;
-          border-bottom-color: #333;
-          color: #333;
         }
       }
 
