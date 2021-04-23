@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_meta_tags
     - field.field.node.basic_page.field_next_audit_due
     - field.field.node.basic_page.field_toc_enable
     - node.type.basic_page
@@ -36,6 +37,7 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_meta_tags: true
   field_next_audit_due: true
   field_toc_enable: true
   langcode: true
