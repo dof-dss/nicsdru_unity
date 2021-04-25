@@ -9,12 +9,6 @@ _core:
 id: default
 label: Default
 description: ''
-attributes:
-  target:
-    id: target
-    weight: 0
-    settings:
-      widget_type: simple_checkbox
 matchers:
   8250b0de-30d1-4f86-82cc-d18dba7b3241:
     uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
@@ -25,3 +19,11 @@ matchers:
       bundles: {  }
       group_by_bundle: true
       include_unpublished: false
+      metadata: ''
+      substitution_type: canonical
+      limit: 100
+  25be53ed-e676-4adf-93cd-583a3f95fb7b:
+    uuid: 25be53ed-e676-4adf-93cd-583a3f95fb7b
+    id: email
+    weight: 0
+    settings: {  }
