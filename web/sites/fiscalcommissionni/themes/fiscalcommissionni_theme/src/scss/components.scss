@@ -95,34 +95,35 @@
   font-family: $heading-font;
 
   .menu {
-    .is-active {
-      background: $menu-item-hover;
-      border-bottom-color: $brand-primary;
-      color: #fff;
-    }
-  }
+    .menu-item {
+      border-right: 1px solid #fff;
+      font-size: $p-font-size;
 
-  .menu-item {
-    border-right: 1px solid #fff;
-    font-size: $p-font-size;
+      @media screen and (max-width: $tab) {
+        border-right: none;
+      }
 
-    @media screen and (max-width: $tab) {
-      border-right: none;
-    }
+      &:last-child {
+        border-right: 0;
+      }
 
-    &:last-child {
-      border-right: 0;
-    }
+      &.open {
+        .menu-toggle-btn {
+          background-color: $brand-primary;
+          font-weight: normal;
+        }
+      }
 
-    &.open {
-      .menu-toggle-btn {
-        background-color: $brand-primary;
-        font-weight: normal;
+      .active {
+        background: $menu-item-hover;
+        border-bottom-color: $brand-primary;
+        color: #fff;
       }
     }
   }
 
-  .menu-link {
+  .menu-link,
+  .menu .active {
     color: $charcoal;
     border-bottom: 5px solid transparent;
 
@@ -151,12 +152,13 @@
       }
     }
 
-    .menu-link {
+    .menu-link,
+    .menu-item span.active {
       @media screen and (max-width: $tab) {
         text-align: center;
       }
 
-      &.is-active {
+      &.active {
         background: lighten($charcoal, 10%);
         font-weight: normal;
       }
