@@ -13,7 +13,7 @@ dependencies:
 id: views_block__commissioners_commissioners_block
 theme: fiscalcommissionni_theme
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'views_block:commissioners-commissioners_block'
 settings:

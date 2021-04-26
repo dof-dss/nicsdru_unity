@@ -1,0 +1,25 @@
+uuid: f2337779-4692-4fad-a2a5-537b89fc5223
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - fiscalcommissionni_theme
+id: mainpagecontent
+theme: fiscalcommissionni_theme
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
