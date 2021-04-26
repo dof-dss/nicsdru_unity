@@ -363,18 +363,6 @@ menus:
     uuid: 4758ef71-ddd9-4198-9051-d544aa47653f
   -
     menu_name: main
-    title: 'Consumer information overview'
-    parent: 'menu_link_content:f3733189-5120-4079-a8ec-7a3eb78b3446'
-    uri: 'entity:node/5'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-41'
-    langcode: en
-    uuid: 9695acbe-2663-4d0f-a97e-c83b2be64aae
-  -
-    menu_name: main
     title: Introduction
     parent: 'menu_link_content:b4596e97-6b9b-4fd0-bb34-331895bcf299'
     uri: 'entity:node/53'
