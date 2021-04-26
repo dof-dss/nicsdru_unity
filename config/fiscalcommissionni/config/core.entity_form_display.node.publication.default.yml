@@ -8,15 +8,16 @@ dependencies:
     - field.field.node.publication.field_meta_tags
     - field.field.node.publication.field_publication_type
     - field.field.node.publication.field_published_date
-    - field.field.node.publication.field_teaser
     - node.type.publication
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - datetime
     - media_library
+    - media_library_edit
     - metatag
     - path
+    - scheduler
     - text
 _core:
   default_config_hash: GRSchbTAtzaEVhd0BSY2kljgoOYA3x4xzs896Px3_tE
@@ -46,7 +47,9 @@ content:
     weight: 26
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     region: content
   field_meta_tags:
     weight: 13
@@ -66,14 +69,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_teaser:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   langcode:
     type: language_select

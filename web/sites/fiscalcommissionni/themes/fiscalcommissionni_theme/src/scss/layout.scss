@@ -19,6 +19,10 @@
 
 .top_left {
   min-height: 110px;
+
+  @media screen and (max-width: $mob) {
+    min-height: 80px;
+  }
 }
 
 #headerHero {
@@ -29,9 +33,29 @@
 
 #footer {
   max-width: 100%;
-  //
-  //#footer_wrapper {
-  //  max-width: $max-grid-width;
-  //  margin: 0 auto;
-  //}
+
+  .footer-area {
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 1rem;
+
+    .column {
+      float: none;
+      width: unset;
+      flex-basis: 33%;
+      flex-grow: 1;
+
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+
+    h2 {
+      @include responsive-typo-map($h2-text);
+      color: $headings;
+      margin-top: 0;
+    }
+  }
 }
+

@@ -16,6 +16,7 @@ dependencies:
     - cookie_content_blocker
     - editor
     - entity_embed
+    - linkit
     - media
     - noreferrer
     - origins_common
