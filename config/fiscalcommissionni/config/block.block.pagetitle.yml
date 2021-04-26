@@ -10,7 +10,7 @@ dependencies:
 id: pagetitle
 theme: fiscalcommissionni_theme
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
