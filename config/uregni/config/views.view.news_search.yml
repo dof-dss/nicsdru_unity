@@ -305,7 +305,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: ''
+            label: 'Search news'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -321,9 +321,10 @@ display:
               administrator: '0'
               author_user: '0'
               supervisor_user: '0'
-              editor_user: '0'
               admin_user: '0'
             placeholder: Keywords
+            expose_fields: false
+            searched_fields_id: ''
           is_grouped: false
           group_info:
             label: ''
