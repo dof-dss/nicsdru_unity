@@ -6,7 +6,8 @@ id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
 folder: ../config/fiscalcommissionni/hosted
-module: {  }
+module:
+  fastly: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
