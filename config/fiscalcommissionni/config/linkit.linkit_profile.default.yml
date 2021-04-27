@@ -20,3 +20,9 @@ matchers:
       include_unpublished: false
       substitution_type: canonical
       metadata: ''
+      limit: 100
+  7827f5b9-4db1-40c1-a791-2309a33c87ee:
+    uuid: 7827f5b9-4db1-40c1-a791-2309a33c87ee
+    id: email
+    weight: 0
+    settings: {  }
