@@ -17,6 +17,7 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
   $display_ids = ['publication_search_page',
     'news_search_page',
     'consultations_search_page',
+    'evidence_search_page',
     'search_page',
   ];
 

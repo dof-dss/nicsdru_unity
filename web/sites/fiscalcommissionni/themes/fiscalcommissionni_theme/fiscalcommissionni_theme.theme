@@ -13,7 +13,7 @@ use Drupal\Component\Utility\Html;
 function fiscalcommissionni_theme_preprocess_html(&$variables) {
   if (isset($variables['node_type'])) {
     if (($variables['node_type'] == 'basic_page') || ($variables['node_type'] == 'news') || ($variables['node_type']
-        == 'publication')) {
+        == 'evidence') || ($variables['node_type'] == 'publication')) {
       $variables['attributes']['class'][] = 'one-sidebar';
       $variables['attributes']['class'][] = 'sidebar-second';
     }
@@ -39,6 +39,7 @@ function fiscalcommissionni_theme_preprocess_page(&$variables) {
   $search_pages = [
     'News',
     'Publications',
+    'Evidence',
     'Search',
   ];
 
@@ -57,6 +58,7 @@ function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter
 
   $search_pages = [
     'publication_search_page',
+    'evidence_search_page',
     'news_search_page',
     'search_page',
   ];
@@ -74,6 +76,7 @@ function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter
 function fiscalcommissionni_theme_preprocess_form(array &$variables) {
   switch ($variables['element']['#id']) {
     case "views-exposed-form-publications-search-publication-search-page":
+    case "views-exposed-form-evidence-search-evidence-search-page":
     case "views-exposed-form-news-search-news-search-page":
       $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form');
       $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form--page');
