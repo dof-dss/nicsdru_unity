@@ -1,4 +1,4 @@
-uuid: a4a77bb3-6a0d-4582-a5bd-694f05e11368
+uuid: 8f47d4fe-0e55-4946-9c40-879293053942
 langcode: en
 status: true
 dependencies:
@@ -24,9 +24,7 @@ visibility:
     id: condition_group
     negate: false
     block_visibility_group: ''
-    context_mapping: {  }
   request_path:
     id: request_path
-    pages: '/search*'
+    pages: /search
     negate: true
-    context_mapping: {  }

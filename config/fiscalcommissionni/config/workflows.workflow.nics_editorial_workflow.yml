@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
+    - node.type.evidence
     - node.type.news
     - node.type.publication
     - node.type.staff_member
@@ -41,6 +42,8 @@ type_settings:
     archive:
       label: Archive
       from:
+        - draft
+        - needs_review
         - published
       to: archived
       weight: 3
@@ -66,6 +69,7 @@ type_settings:
       label: 'Quick Publish'
       from:
         - draft
+        - published
       to: published
       weight: -1
     reject:
@@ -92,15 +96,10 @@ type_settings:
         - draft
       to: needs_review
       weight: -2
-    unpublish:
-      label: Unpublish
-      from:
-        - published
-      to: needs_review
-      weight: 2
   entity_types:
     node:
       - basic_page
+      - evidence
       - news
       - publication
       - staff_member

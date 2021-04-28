@@ -1,0 +1,33 @@
+uuid: ad44bc0e-8177-45d3-b532-abae5ffe6920
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.evidence_date
+  module:
+    - block_visibility_groups
+    - facets
+    - system
+  theme:
+    - fiscalcommissionni_theme
+id: date_2
+theme: fiscalcommissionni_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:evidence_date'
+settings:
+  id: 'facet_block:evidence_date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: date_2
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n"
+    negate: false

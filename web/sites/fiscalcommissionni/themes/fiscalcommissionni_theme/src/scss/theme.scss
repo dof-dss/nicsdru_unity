@@ -35,6 +35,14 @@
     }
   }
 
+  .region-sidebar-second {
+    #block-pauljohnson {
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
   .image-caption {
     padding: 9px 0;
     margin: 0 0 1.8rem 0;
@@ -85,7 +93,8 @@
 }
 
 .path-news,
-.path-publications {
+.path-publications,
+.path-evidence {
   .search-page {
     .sidebar-first-layout {
       padding-left: 0;
@@ -134,6 +143,11 @@
 
     @include breakpoint($mob) {
       flex-basis: 49%;
+
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        /* IE10+ specific styles go here */
+        flex-basis: 46%;
+      }
     }
 
     .group-left {

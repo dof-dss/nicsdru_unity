@@ -13,7 +13,7 @@ env_file:
   - .lando/config/.env
 services:
   appserver:
-    xdebug: false
+    xdebug: debug
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
   database:

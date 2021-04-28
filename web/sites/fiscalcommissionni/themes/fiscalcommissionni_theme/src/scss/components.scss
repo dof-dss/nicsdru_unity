@@ -7,6 +7,7 @@
 
 #logo {
   margin-top: 1.5rem;
+  width: 100%;
 
   @media screen and (max-width: $tab) {
     padding: 0 1rem;
@@ -182,15 +183,43 @@
   }
 }
 
-.node-type-publication #content #post-content a.file-link[href] {
-  padding-left: 6.5rem;
-  margin-bottom: 1.6rem;
+.node-type-publication,
+.node-type-evidence {
+  #content #post-content a.file-link[href] {
+    padding-left: 6.5rem;
+    margin-bottom: 1.6rem;
 
-  &:hover {
-    margin-bottom: 1.5rem;
+    &:hover {
+      margin-bottom: 1.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.block.block-views-blocklatest-news-latest-news-block {
+  background: #f4f4f4;
+
+  h2 {
+    @include responsive-typo-map($h2-text);
+    background: $headings;
+    color: $white;
+    padding-left: 2rem;
+    margin: 0;
   }
 
-  &:last-child {
-    margin-bottom: 2.4rem;
+  .content {
+    padding: 1rem 2rem;
+  }
+
+  ul {
+    margin: 1.2rem 0 1.8rem 2.4rem;
+
+    .published-date {
+      margin-bottom: 0;
+      line-height: 2;
+    }
   }
 }

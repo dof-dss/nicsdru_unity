@@ -15,6 +15,7 @@ module:
   clientside_validation_jquery: 0
   config: 0
   config_filter: 0
+  config_ignore: 0
   config_split: 0
   contact: 0
   content_lock: 0
@@ -38,6 +39,7 @@ module:
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
+  fastly: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -85,7 +87,6 @@ module:
   redirect: 0
   responsive_image: 0
   scheduled_transitions: 0
-  scheduler: 0
   search: 0
   search_api: 0
   search_api_db: 0

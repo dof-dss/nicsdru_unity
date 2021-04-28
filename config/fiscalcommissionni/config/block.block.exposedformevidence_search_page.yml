@@ -1,0 +1,33 @@
+uuid: d3961b3a-d2e3-4ed0-8855-c755c0614a6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.evidence_search
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - fiscalcommissionni_theme
+id: exposedformevidence_search_page
+theme: fiscalcommissionni_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'views_exposed_filter_block:evidence_search-evidence_search_page'
+settings:
+  id: 'views_exposed_filter_block:evidence_search-evidence_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n"
+    negate: false

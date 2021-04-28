@@ -13,7 +13,7 @@ dependencies:
 id: type
 theme: fiscalcommissionni_theme
 region: search_facets
-weight: -2
+weight: -5
 provider: null
 plugin: 'facet_block:type'
 settings:

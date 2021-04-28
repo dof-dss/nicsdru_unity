@@ -1,0 +1,22 @@
+uuid: 5d2bb91f-158c-46a0-a2ff-499168202a86
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: evidence_pattern
+label: 'Evidence pattern'
+type: 'canonical_entities:node'
+pattern: 'evidence/[node:title]'
+selection_criteria:
+  c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc:
+    id: node_type
+    bundles:
+      evidence: evidence
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc
+selection_logic: and
+weight: -5
+relationships: {  }
