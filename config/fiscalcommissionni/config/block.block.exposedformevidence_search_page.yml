@@ -1,23 +1,23 @@
-uuid: 4e6eb7a9-effc-48fd-9a25-0c7243c182fe
+uuid: d3961b3a-d2e3-4ed0-8855-c755c0614a6f
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.publications_search
+    - views.view.evidence_search
   module:
     - block_visibility_groups
     - system
     - views
   theme:
     - fiscalcommissionni_theme
-id: exposedformpublications_search_page
+id: exposedformevidence_search_page
 theme: fiscalcommissionni_theme
 region: search_facets
-weight: -6
+weight: -3
 provider: null
-plugin: 'views_exposed_filter_block:publications_search-publication_search_page'
+plugin: 'views_exposed_filter_block:evidence_search-evidence_search_page'
 settings:
-  id: 'views_exposed_filter_block:publications_search-publication_search_page'
+  id: 'views_exposed_filter_block:evidence_search-evidence_search_page'
   label: ''
   provider: views
   label_display: '0'
@@ -27,9 +27,7 @@ visibility:
     id: condition_group
     negate: false
     block_visibility_group: ''
-    context_mapping: {  }
   request_path:
     id: request_path
-    pages: "/publications\r\n/publications/type/*\r\n/publications/date/*\r\n"
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n"
     negate: false
-    context_mapping: {  }
