@@ -14,14 +14,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: reports
-      label: Reports
+      value: presentations
+      label: Presentations
     -
       value: evidence
       label: Evidence
-    -
-      value: other
-      label: Other
   allowed_values_function: ''
 module: options
 locked: false
