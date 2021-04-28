@@ -85,7 +85,6 @@ module:
   redirect: 0
   responsive_image: 0
   scheduled_transitions: 0
-  scheduler: 0
   search: 0
   search_api: 0
   search_api_db: 0

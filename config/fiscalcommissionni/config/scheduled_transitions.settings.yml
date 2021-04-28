@@ -13,3 +13,15 @@ bundles:
   -
     entity_type: node
     bundle: basic_page
+  -
+    entity_type: node
+    bundle: evidence
+  -
+    entity_type: node
+    bundle: news
+  -
+    entity_type: node
+    bundle: publication
+  -
+    entity_type: node
+    bundle: staff_member
