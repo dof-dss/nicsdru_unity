@@ -14,7 +14,6 @@ dependencies:
     - datetime
     - metatag
     - path
-    - scheduler
     - text
 _core:
   default_config_hash: HV-wiMbZetwvisJTWx_fO8tUcRAaMSvIFv8isFt9vmA
@@ -87,11 +86,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 8
-    region: content
+    weight: 26
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -125,11 +124,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 9
-    region: content
+    weight: 27
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 10
     region: content
