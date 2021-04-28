@@ -197,3 +197,28 @@
     }
   }
 }
+
+.block.block-views-blocklatest-news-latest-news-block {
+  background: #f4f4f4;
+
+  h2 {
+    @include responsive-typo-map($h2-text);
+    background: $headings;
+    color: $white;
+    padding-left: 2rem;
+    margin: 0;
+  }
+
+  .content {
+    padding: 1rem 2rem;
+  }
+
+  ul {
+    margin: 1.2rem 0 1.8rem 2.4rem;
+
+    .published-date {
+      margin-bottom: 0;
+      line-height: 2;
+    }
+  }
+}
