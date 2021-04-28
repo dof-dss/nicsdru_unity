@@ -1,0 +1,40 @@
+uuid: b6166a9a-b978-42ae-8e66-9858210664c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - origins_toc
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  origins_toc:
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
+  scheduler:
+    expand_fieldset: null
+    fields_display_mode: null
+    publish_enable: false
+    publish_past_date: null
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Evidence
+type: evidence
+description: 'Content type designed for evidence'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
