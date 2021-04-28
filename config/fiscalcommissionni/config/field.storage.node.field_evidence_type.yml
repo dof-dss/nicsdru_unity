@@ -1,14 +1,12 @@
-uuid: 6483007d-6ca9-45ba-80ea-cff466e2305e
+uuid: 4967e91f-c11e-406d-8824-a1069ea3d2c3
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-_core:
-  default_config_hash: KE7Z4urHN3XEgnoVtWjM_bU7i7TpMN1alfJNkbrJZ00
-id: node.field_publication_type
-field_name: field_publication_type
+id: node.field_evidence_type
+field_name: field_evidence_type
 entity_type: node
 type: list_string
 settings:

@@ -1,0 +1,21 @@
+uuid: aaf768f5-2974-478d-acc5-4d5e3f69ae83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.evidence
+  module:
+    - metatag
+id: node.evidence.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: evidence
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
