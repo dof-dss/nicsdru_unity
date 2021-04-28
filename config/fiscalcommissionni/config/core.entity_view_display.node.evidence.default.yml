@@ -1,0 +1,51 @@
+uuid: 3a110494-42fa-45e4-b1a4-80f239db6428
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.evidence.body
+    - field.field.node.evidence.field_attachment
+    - field.field.node.evidence.field_evidence_type
+    - field.field.node.evidence.field_meta_tags
+    - field.field.node.evidence.field_published_date
+    - node.type.evidence
+  module:
+    - datetime
+    - text
+    - user
+id: node.evidence.default
+targetEntityType: node
+bundle: evidence
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachment:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_published_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  field_evidence_type: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

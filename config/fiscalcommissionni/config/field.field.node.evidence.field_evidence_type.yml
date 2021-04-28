@@ -1,0 +1,21 @@
+uuid: 01dadc71-1e63-4c9a-92b3-d10a4720370c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evidence_type
+    - node.type.evidence
+  module:
+    - options
+id: node.evidence.field_evidence_type
+field_name: field_evidence_type
+entity_type: node
+bundle: evidence
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
