@@ -111,14 +111,6 @@
   type: redirect
   to: "https://fiscalcommissionni.org/"
 
-"http://fiscalcommissionni.org/":
-  type: redirect
-  to: "https://fiscalcommissionni.org/"
-
-"http://www.fiscalcommissionni.org/":
-  type: redirect
-  to: "https://fiscalcommissionni.org/"
-
 "https://nifiscalcouncil.org/":
   type: upstream
   upstream: "unity:http"
@@ -142,7 +134,7 @@
     default_ttl: 3600
     # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
     cookies: ['*']
-
+    
 "https://{all}/":
   type: redirect
   to: "https://www.{all}/"
