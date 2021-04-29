@@ -363,18 +363,6 @@ menus:
     uuid: 4758ef71-ddd9-4198-9051-d544aa47653f
   -
     menu_name: main
-    title: Introduction
-    parent: 'menu_link_content:b4596e97-6b9b-4fd0-bb34-331895bcf299'
-    uri: 'entity:node/53'
-    link_title: ''
-    description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-43'
-    langcode: en
-    uuid: 257147b4-8ef4-4fe2-b9c1-30b213ddc3ff
-  -
-    menu_name: main
     title: 'Who we are'
     parent: 'menu_link_content:b4596e97-6b9b-4fd0-bb34-331895bcf299'
     uri: 'entity:node/55'

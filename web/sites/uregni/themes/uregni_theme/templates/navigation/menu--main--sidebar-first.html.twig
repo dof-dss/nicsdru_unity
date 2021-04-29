@@ -19,34 +19,52 @@
  */
 #}
 {% import _self as menus %}
-
 {#
-  We call a macro which calls itself to render the full tree.
-  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+We call a macro which calls itself to render the full tree.
+@see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {{ menus.menu_links(items, attributes, 0) }}
-
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, parent) %}
   {% import _self as menus %}
   {% if items %}
-    <ul{{ attributes.addClass('menu').removeAttribute('region') }}>
+    {%
+      set parent_classes = [
+      'menu-item',
+      'leaf',
+      'first'
+    ]
+    %}
+    {% if menu_level != 0 %}
+      <ul{{ attributes.addClass('menu').removeAttribute('region') }}>
+      {% if menu_level == 1 %}
+        <li{{ parent.attributes.addClass(parent_classes) }}>
+          <a href="{{ parent.url }}">{{ parent.title }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
     {% for item in items %}
       {%
         set classes = [
-          'menu-item',
-          item.is_expanded ? 'expanded' : 'leaf',
-          item.is_collapsed ? 'collapsed',
-          item.in_active_trail ? 'active-trail',
-          loop.first ? 'first',
-          loop.last ? 'last',
-        ]
+        'menu-item',
+        item.is_expanded ? 'expanded' : 'leaf',
+        item.is_collapsed ? 'collapsed',
+        item.in_active_trail ? 'active-trail',
+        loop.last ? 'last',
+      ]
       %}
-      <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url) }}
+      {% if menu_level == 0 %}
         {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% set parent = item %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1, parent) }}
         {% endif %}
-      </li>
+      {% else %}
+        <li{{ item.attributes.addClass(classes) }}>
+          {{ link(item.title, item.url) }}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endif %}
     {% endfor %}
     </ul>
   {% endif %}
