@@ -13,7 +13,7 @@ dependencies:
 id: pauljohnson
 theme: fiscalcommissionni_theme
 region: sidebar_second
-weight: 0
+weight: -8
 provider: null
 plugin: 'block_content:f6ca355d-cebc-4069-8382-630cfba54c75'
 settings:
