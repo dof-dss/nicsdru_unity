@@ -23,7 +23,7 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
     // host is www.fiscalcommissionni.org
     // host is hatecrimereviewni.org.uk.master-7rqtwti-6tlkpwbr6tndk.uk-1.platformsh.site
     $newhost = str_replace('www.','',$host);
-    $subdomain = substr($host, 0, strpos($newhost, '.'));
+    $subdomain = substr($newhost, 0, strpos($newhost, '.'));
     $sites[$host] = $subdomain;
   }
 }
