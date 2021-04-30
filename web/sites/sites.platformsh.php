@@ -20,7 +20,10 @@ if (!$platformsh->inRuntime()) {
 foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route) {
   $host = parse_url($route['url'], PHP_URL_HOST);
   if ($host !== FALSE) {
-    $subdomain = substr($host, 0, strpos($host, '.'));
+    // host is www.fiscalcommissionni.org
+    // host is fiscalcommissionni.org.master-7rqtwti-6tlkpwbr6tndk.uk-1.platformsh.site
+    $newhost = str_replace('www.','',$host);
+    $subdomain = substr($host, 0, strpos($newhost, '.'));
     $sites[$host] = $subdomain;
   }
 }
