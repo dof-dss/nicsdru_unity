@@ -1,139 +1,153 @@
 # Each route describes how an incoming URL is going to be processed by Platform.sh.
-"https://fictcommission.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
-
 "https://www.fictcommission.org/":
-  type: redirect
-  to: "https://fictcommission.org/"
-
-"https://uregni.gov.uk/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://fictcommission.org.{default}/":
+  type: redirect
+  to: "http://www.fictcommission.org.{default}/"
+
+"http://fictcommission.org/":
+  type: redirect
+  to: "http://www.fictcommission.org/"
+
+#---------------------------------
 
 "https://www.uregni.gov.uk/":
-  type: redirect
-  to: "https://uregni.gov.uk/"
-
-"https://liofa.eu/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://uregni.gov.uk.{default}/":
+  type: redirect
+  to: "http://www.uregni.gov.uk.{default}/"
+
+"http://uregni.gov.uk/":
+  type: redirect
+  to: "http://www.uregni.gov.uk/"
+
+#---------------------------------
 
 "https://www.liofa.eu/":
-  type: redirect
-  to: "https://liofa.eu/"
-
-"https://odscni.org.uk/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://liofa.eu.{default}/":
+  type: redirect
+  to: "http://www.liofa.eu.{default}/"
+
+"http://liofa.eu/":
+  type: redirect
+  to: "http://www.liofa.eu/"
+
+#---------------------------------
 
 "https://www.odscni.org.uk/":
-  type: redirect
-  to: "https://odscni.org.uk/"
-
-"https://attorneygeneralni.gov.uk/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://odscni.org.uk.{default}/":
+  type: redirect
+  to: "http://www.odscni.org.uk.{default}/"
+
+"http://odscni.org.uk/":
+  type: redirect
+  to: "http://www.odscni.org.uk/"
+
+#---------------------------------
 
 "https://www.attorneygeneralni.gov.uk/":
-  type: redirect
-  to: "https://attorneygeneralni.gov.uk/"
-
-"https://employmenttribunalsni.co.uk/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://attorneygeneralni.gov.uk.{default}/":
+  type: redirect
+  to: "http://www.attorneygeneralni.gov.uk.{default}/"
+
+"http://attorneygeneralni.gov.uk/":
+  type: redirect
+  to: "http://www.attorneygeneralni.gov.uk/"
+
+#---------------------------------
 
 "https://www.employmenttribunalsni.co.uk/":
-  type: redirect
-  to: "https://employmenttribunalsni.co.uk/"
-
-"https://hatecrimereviewni.org.uk/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://employmenttribunalsni.co.uk.{default}/":
+  type: redirect
+  to: "http://www.employmenttribunalsni.co.uk.{default}/"
+
+"http://employmenttribunalsni.co.uk/":
+  type: redirect
+  to: "http://www.employmenttribunalsni.co.uk/"
+
+#---------------------------------
 
 "https://www.hatecrimereviewni.org.uk/":
-  type: redirect
-  to: "https://hatecrimereviewni.org.uk/"
-
-"https://fiscalcommissionni.org/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://hatecrimereviewni.org.uk.{default}/":
+  type: redirect
+  to: "http://www.hatecrimereviewni.org.uk.{default}/"
+
+"http://hatecrimereviewni.org.uk/":
+  type: redirect
+  to: "http://www.hatecrimereviewni.org.uk/"
+
+#---------------------------------
 
 "https://www.fiscalcommissionni.org/":
-  type: redirect
-  to: "https://fiscalcommissionni.org/"
-
-"https://nifiscalcouncil.org/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"http://fiscalcommissionni.org.{default}/":
+  type: redirect
+  to: "http://www.fiscalcommissionni.org.{default}/"
+
+"http://fiscalcommissionni.org/":
+  type: redirect
+  to: "http://www.fiscalcommissionni.org/"
+
+#---------------------------------
 
 "https://www.nifiscalcouncil.org/":
-  type: redirect
-  to: "https://nifiscalcouncil.org/"
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
 
+"http://nifiscalcouncil.org.{default}/":
+  type: redirect
+  to: "http://www.nifiscalcouncil.org.{default}/"
+
+"http://nifiscalcouncil.org/":
+  type: redirect
+  to: "http://nifiscalcouncil.org/"
+
+#---------------------------------
+# Catch all.
 "https://www.{all}/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
-    headers: ['Accept', 'Accept-Language', 'X-Language-Locale']
-    default_ttl: 3600
-    # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-    cookies: ['*']
 
 "https://{all}/":
   type: redirect
