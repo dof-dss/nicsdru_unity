@@ -4,23 +4,16 @@ namespace Drupal\unity_file_migrations;
 
 use Drupal\Core\Database\Database;
 use Drupal\Core\Database\Driver\mysql\Connection;
-use Drupal\Core\Extension\ModuleHandler;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Console\Core\Style\DrupalStyle;
+use Drush\Commands\DrushCommands;
 
 /**
  * A collection of methods for processing migrations.
  *
  * @package Drupal\unity_file_migrations
  */
-class MigrationProcessors {
-
-  /**
-   * Drupal\Core\Extension\ModuleHandler definition.
-   *
-   * @var \Drupal\Core\Extension\ModuleHandler
-   */
-  protected $moduleHandler;
+class MigrationProcessors extends DrushCommands {
 
   /**
    * Node Storage definition.
@@ -46,17 +39,18 @@ class MigrationProcessors {
   /**
    * {@inheritdoc}
    */
-  public function __construct(ModuleHandler $module_handler, EntityTypeManagerInterface $entity_type_manager) {
-    $this->moduleHandler = $module_handler;
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
     $this->nodeStorage = $entity_type_manager->getStorage('node');
     $this->dbConnMigrate = Database::getConnection('default', 'migrate');
     $this->dbConnDrupal8 = Database::getConnection('default', 'default');
   }
 
   /**
-   * Updates the status for nodes.
+   * Drush command to publish Unity nodes after migration.
+   *
+   * @command post-migrate-publish
    */
-  public function updatePublishStatus(DrupalStyle $io, $node_type = NULL) {
+  public function updatePublishStatus($node_type = NULL) {
     // This update should be run from the Drupal console after ALL node
     // and revision migrations have completed. Note that this process
     // will correctly set current revision and publish status for all
@@ -64,7 +58,8 @@ class MigrationProcessors {
     // has been run there should be no more 'top up' migrations, the only
     // option is to roll back all revision and node migrations and start
     // from scratch.
-    $io->info('Sync node publish status values after migration');
+
+    $this->output()->writeln('Sync node publish status values after migration');
 
     // Find all node ids in the D8 site so we know what to look for.
     $d8_nids = [];
@@ -90,8 +85,8 @@ class MigrationProcessors {
       $this->processNodeStatus($row->nid, $row->status);
     }
 
-    $io->info('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
-    $io->info('Clearing all caches...');
+    $this->output()->writeln('Updated revisions on ' . count($migrate_nid_status) . ' nodes.');
+    $this->output()->writeln('Clearing all caches...');
     drupal_flush_all_caches();
   }
 
