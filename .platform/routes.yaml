@@ -5,13 +5,13 @@
   cache:
     enabled: false
 
-"http://fictcommission.org.{default}/":
+"https://fictcommission.org.{default}/":
   type: redirect
-  to: "http://www.fictcommission.org.{default}/"
+  to: "https://www.fictcommission.org.{default}/"
 
-"http://fictcommission.org/":
+"https://fictcommission.org/":
   type: redirect
-  to: "http://www.fictcommission.org/"
+  to: "https://www.fictcommission.org/"
 
 #---------------------------------
 
@@ -21,13 +21,13 @@
   cache:
     enabled: false
 
-"http://uregni.gov.uk.{default}/":
+"https://uregni.gov.uk.{default}/":
   type: redirect
-  to: "http://www.uregni.gov.uk.{default}/"
+  to: "https://www.uregni.gov.uk.{default}/"
 
-"http://uregni.gov.uk/":
+"https://uregni.gov.uk/":
   type: redirect
-  to: "http://www.uregni.gov.uk/"
+  to: "https://www.uregni.gov.uk/"
 
 #---------------------------------
 
@@ -37,13 +37,13 @@
   cache:
     enabled: false
 
-"http://liofa.eu.{default}/":
+"https://liofa.eu.{default}/":
   type: redirect
-  to: "http://www.liofa.eu.{default}/"
+  to: "https://www.liofa.eu.{default}/"
 
-"http://liofa.eu/":
+"https://liofa.eu/":
   type: redirect
-  to: "http://www.liofa.eu/"
+  to: "https://www.liofa.eu/"
 
 #---------------------------------
 
@@ -53,13 +53,13 @@
   cache:
     enabled: false
 
-"http://odscni.org.uk.{default}/":
+"https://odscni.org.uk.{default}/":
   type: redirect
-  to: "http://www.odscni.org.uk.{default}/"
+  to: "https://www.odscni.org.uk.{default}/"
 
-"http://odscni.org.uk/":
+"https://odscni.org.uk/":
   type: redirect
-  to: "http://www.odscni.org.uk/"
+  to: "https://www.odscni.org.uk/"
 
 #---------------------------------
 
@@ -69,13 +69,13 @@
   cache:
     enabled: false
 
-"http://attorneygeneralni.gov.uk.{default}/":
+"https://attorneygeneralni.gov.uk.{default}/":
   type: redirect
-  to: "http://www.attorneygeneralni.gov.uk.{default}/"
+  to: "https://www.attorneygeneralni.gov.uk.{default}/"
 
-"http://attorneygeneralni.gov.uk/":
+"https://attorneygeneralni.gov.uk/":
   type: redirect
-  to: "http://www.attorneygeneralni.gov.uk/"
+  to: "https://www.attorneygeneralni.gov.uk/"
 
 #---------------------------------
 
@@ -85,29 +85,29 @@
   cache:
     enabled: false
 
-"http://employmenttribunalsni.co.uk.{default}/":
+"https://employmenttribunalsni.co.uk.{default}/":
   type: redirect
-  to: "http://www.employmenttribunalsni.co.uk.{default}/"
+  to: "https://www.employmenttribunalsni.co.uk.{default}/"
 
-"http://employmenttribunalsni.co.uk/":
+"https://employmenttribunalsni.co.uk/":
   type: redirect
-  to: "http://www.employmenttribunalsni.co.uk/"
+  to: "https://www.employmenttribunalsni.co.uk/"
 
 #---------------------------------
 
-"https://www.hatecrimereviewni.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"http://hatecrimereviewni.org.uk.{default}/":
-  type: redirect
-  to: "http://www.hatecrimereviewni.org.uk.{default}/"
-
-"http://hatecrimereviewni.org.uk/":
-  type: redirect
-  to: "http://www.hatecrimereviewni.org.uk/"
+#"https://www.hatecrimereviewni.org.uk/":
+#  type: upstream
+#  upstream: "unity:http"
+#  cache:
+#    enabled: false
+#
+#"http://hatecrimereviewni.org.uk.{default}/":
+#  type: redirect
+#  to: "http://www.hatecrimereviewni.org.uk.{default}/"
+#
+#"http://hatecrimereviewni.org.uk/":
+#  type: redirect
+#  to: "http://www.hatecrimereviewni.org.uk/"
 
 #---------------------------------
 
@@ -117,13 +117,9 @@
   cache:
     enabled: false
 
-"http://fiscalcommissionni.org.{default}/":
+"https://fiscalcommissionni.org/":
   type: redirect
-  to: "http://www.fiscalcommissionni.org.{default}/"
-
-"http://fiscalcommissionni.org/":
-  type: redirect
-  to: "http://www.fiscalcommissionni.org/"
+  to: "https://www.fiscalcommissionni.org/"
 
 #---------------------------------
 
@@ -133,13 +129,10 @@
   cache:
     enabled: false
 
-"http://nifiscalcouncil.org.{default}/":
+"https://nifiscalcouncil.org.{default}/":
   type: redirect
-  to: "http://www.nifiscalcouncil.org.{default}/"
+  to: "https://www.nifiscalcouncil.org.{default}/"
 
-"http://nifiscalcouncil.org/":
-  type: redirect
-  to: "http://nifiscalcouncil.org/"
 
 #---------------------------------
 # Catch all.
