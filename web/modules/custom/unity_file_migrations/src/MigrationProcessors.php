@@ -51,7 +51,7 @@ class MigrationProcessors extends DrushCommands {
    * @command post-migrate-publish
    */
   public function updatePublishStatus($node_type = NULL) {
-    // This update should be run from the Drupal console after ALL node
+    // This update should be run from drush after ALL node
     // and revision migrations have completed. Note that this process
     // will correctly set current revision and publish status for all
     // nodes but it will create new revisions. This means that once this
