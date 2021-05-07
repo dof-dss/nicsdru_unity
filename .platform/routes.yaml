@@ -15,7 +15,7 @@
 
 #---------------------------------
 
-"https://www.uregni.gov.uk/":
+"https://www.uregni.gov.uk.{default}/":
   type: upstream
   upstream: "unity:http"
   cache:
