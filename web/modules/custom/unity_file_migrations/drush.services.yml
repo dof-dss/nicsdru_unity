@@ -1,0 +1,5 @@
+services:
+  unity_file_migrations.commands:
+    class: \Drupal\unity_file_migrations\Commands\UnityMigrationDrushCommands
+    tags:
+      - { name: drush.command }
