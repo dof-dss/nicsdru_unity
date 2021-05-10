@@ -83,15 +83,6 @@
   }
 }
 
-.region-primary-menu .menu_wrapper {
-  @include breakpoint($tab) {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: $charcoal;
-    //padding: 1rem 0;
-  }
-}
-
 #main-menu {
   font-family: $heading-font;
 
