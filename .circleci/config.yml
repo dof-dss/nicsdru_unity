@@ -406,37 +406,37 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
 
-    # Rebuild solr on each deployment.
-    deploy_solr_rebuild:
-      docker:
-        - image: circleci/php:7.4.15-apache-browsers
-      steps:
-        - attach_workspace:
-            at: ./
-        - install_php_os_extensions
-        - run:
-            name: Add extra OS and PHP extensions/config
-            command: |
-              sudo docker-php-ext-install pcntl posix
-        - run:
-            name: Keyscan Platform.sh region hostnames for password-less access
-            command: |
-              mkdir -p ~/.ssh
-              ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
-        - run:
-            name: Install the Platform.sh CLI tool
-            command: |
-              curl -sS https://platform.sh/cli/installer | php
-        - run:
-            name: Force purge of Solr index
-            command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
-        - run:
-            name: Rebuild the Solr index
-            command: |
-              /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+  # Rebuild solr on each deployment.
+  deploy_solr_rebuild:
+    docker:
+      - image: circleci/php:7.4.15-apache-browsers
+    steps:
+      - attach_workspace:
+          at: ./
+      - install_php_os_extensions
+      - run:
+          name: Add extra OS and PHP extensions/config
+          command: |
+            sudo docker-php-ext-install pcntl posix
+      - run:
+          name: Keyscan Platform.sh region hostnames for password-less access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: |
+            curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Force purge of Solr index
+          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+      - run:
+          name: Rebuild the Solr index
+          command: |
+            /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
 
 workflows:
   version: 2
