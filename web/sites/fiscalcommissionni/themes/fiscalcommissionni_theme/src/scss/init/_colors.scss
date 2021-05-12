@@ -65,6 +65,7 @@ $chroma: add-colors('functional', (
   menu-separator:         #fff,
   menu-sub-item-background: lighten(#333, 10),
   menu-sub-item-hover:    #1abc9c,
+  menu-borders:           'charcoal',
 
   table-background:       #fff,
   table-border:           #bbb,
@@ -127,6 +128,7 @@ $menu-item-hover: color(menu-item-hover);
 $menu-separator: color(menu-separator);
 $menu-sub-item-background: color(menu-sub-item-background);
 $menu-sub-item-hover: color(menu-sub-item-hover);
+$menu-borders: color(menu-borders);
 
 $table-background: color(table-background);
 $table-border: color(table-border);
