@@ -28,7 +28,7 @@ process:
       method: process
       source: uid
     -
-      plugin: migration
+      plugin: migration_lookup
       migration: upgrade_d7_user
   status: status
   created: timestamp
