@@ -90,7 +90,7 @@ Note that the -d sitename must have a '_legacy' suffix, please make sure that yo
 4. You may need to run the 'migrate-import' command a few times until it completes.
 
 5. When all content has been migrated, make sure that all nodes are published if appropriate (see note below):
-`lando drupal --uri=http://uregni.gov.uk.lndo.site unity:migrate:post:publish_status`
+`lando drush -l uregni post-migrate-publish`
 
 6. Import config again:
 `lando drush import-config`
