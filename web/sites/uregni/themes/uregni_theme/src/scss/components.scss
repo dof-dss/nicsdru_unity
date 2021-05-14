@@ -66,18 +66,13 @@
   }
 
   a.btn {
-    color: $white;
     background: $brand-secondary;
+    border-color: $brand-secondary;
 
     &[href] {
-      padding: .6rem 1.6rem;
-
       &:hover {
-        border-bottom: none;
-        outline: none;
-        text-decoration: underline;
-        opacity: 1;
-        background: $grey-dark;
+        background: #e8d4e8;
+        color: $brand-secondary;
       }
 
       &:focus {
@@ -93,6 +88,27 @@
       width: 30%;
       padding: 3rem 0 0 2rem;
     }
+  }
+}
+
+a[href].btn,
+input[type="submit"].btn {
+  padding: .6rem 1.6rem;
+  border-bottom: 3px solid $brand-primary;
+  color: $white;
+
+  &:hover {
+    outline: none;
+    text-decoration: underline;
+    opacity: 1;
+    background: #d0e8d7;
+    color: $brand-primary;
+  }
+
+  &:focus {
+    color: #032f50;
+    border-bottom: 3px solid #032f50;
+    background: #ffe66a;
   }
 }
 
@@ -128,21 +144,6 @@
     h2 {
       font-weight: 200;
       letter-spacing: -.3px;
-    }
-  }
-
-  a.btn {
-    &[href] {
-      padding: .6rem 1.6rem;
-
-      &:hover {
-        border-bottom: none;
-        outline: none;
-        text-decoration: underline;
-        opacity: 1;
-        background: $grey-dark;
-        color: $white;
-      }
     }
   }
 }
@@ -251,11 +252,13 @@
 .feedblitz-custom-form {
   input[type="submit"] {
     background: $brand-secondary;
+    border-bottom: 3px solid $brand-secondary;
 
     &:hover {
       text-decoration: underline;
       opacity: 1;
-      background: $grey-dark;
+      background: #e8d4e8;
+      color: $brand-secondary;
     }
   }
 
@@ -452,6 +455,12 @@ h2 i {
         h2 i,
         .btn {
           background: #cc4630;
+          border-color: #cc4630;
+
+          &:hover {
+            background: #cc463014;
+            color: #cc4630;
+          }
         }
       }
 
@@ -459,6 +468,12 @@ h2 i {
         h2 i,
         .btn {
           background: #8561af;
+          border-color: #8561af;
+
+          &:hover {
+            background: #8561af0d;
+            color: #8561af;
+          }
         }
       }
 
@@ -466,26 +481,11 @@ h2 i {
         h2 i,
         .btn {
           background: #345ddb;
-        }
-      }
-
-      a.btn {
-        &[href] {
-          padding: .6rem 1.6rem;
+          border-color: #345ddb;
 
           &:hover {
-            border-bottom: none;
-            outline: none;
-            color: $white;
-            text-decoration: underline;
-            opacity: 1;
-            background: $grey-dark;
-          }
-
-          &:focus {
-            color: #032f50;
-            border-bottom: 3px solid #032f50;
-            background: #ffe66a;
+            background: #345ddb0d;
+            color: #345ddb;
           }
         }
       }
