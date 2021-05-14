@@ -1066,7 +1066,7 @@ display:
           group_type: group
           admin_label: ''
           operator: contains
-          value: ''
+          value: 'Contains text...'
           group: 1
           exposed: true
           expose:
@@ -1075,6 +1075,8 @@ display:
             description: ''
             use_operator: false
             operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: title
             required: false
             remember: false
@@ -1083,19 +1085,10 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              gp_author_user: '0'
               author_user: '0'
-              gp_supervisor_user: '0'
-              news_supervisor: '0'
               supervisor_user: '0'
               admin_user: '0'
-              apps_user: '0'
-              health_condition_author_user: '0'
-              health_condition_supervisor_user: '0'
-              driving_instructor_supervisor_user: '0'
-            placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: 'Contains text...'
           is_grouped: false
           group_info:
             label: ''
@@ -1119,7 +1112,7 @@ display:
           group_type: group
           admin_label: ''
           operator: contains
-          value: ''
+          value: 'Contains text...'
           group: 1
           exposed: true
           expose:
@@ -1128,6 +1121,8 @@ display:
             description: ''
             use_operator: false
             operator: body_summary_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: body_summary
             required: false
             remember: false
@@ -1139,9 +1134,7 @@ display:
               author_user: '0'
               supervisor_user: '0'
               admin_user: '0'
-            placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: 'Contains text...'
           is_grouped: false
           group_info:
             label: ''
@@ -1163,7 +1156,7 @@ display:
           group_type: group
           admin_label: ''
           operator: contains
-          value: ''
+          value: 'Contains text...'
           group: 1
           exposed: true
           expose:
@@ -1172,6 +1165,8 @@ display:
             description: ''
             use_operator: false
             operator: body_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: body_value
             required: false
             remember: false
@@ -1180,19 +1175,10 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              gp_author_user: '0'
               author_user: '0'
-              gp_supervisor_user: '0'
-              news_supervisor: '0'
               supervisor_user: '0'
               admin_user: '0'
-              apps_user: '0'
-              health_condition_author_user: '0'
-              health_condition_supervisor_user: '0'
-              driving_instructor_supervisor_user: '0'
-            placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: 'Contains text...'
           is_grouped: false
           group_info:
             label: ''
@@ -1950,7 +1936,7 @@ display:
           group_type: group
           admin_label: ''
           operator: contains
-          value: ''
+          value: 'Contains text...'
           group: 1
           exposed: true
           expose:
@@ -1959,6 +1945,8 @@ display:
             description: ''
             use_operator: false
             operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: title
             required: false
             remember: false
@@ -1967,19 +1955,10 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              gp_author_user: '0'
               author_user: '0'
-              gp_supervisor_user: '0'
-              news_supervisor: '0'
               supervisor_user: '0'
               admin_user: '0'
-              apps_user: '0'
-              health_condition_author_user: '0'
-              health_condition_supervisor_user: '0'
-              driving_instructor_supervisor_user: '0'
-            placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: 'Contains text...'
           is_grouped: false
           group_info:
             label: ''
