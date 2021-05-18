@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - image.style.nigov_landscape_med_450x300_x1
+    - image.style.nigov_landscape_med_900x600_x2
     - image.style.unity_3_col_desktop
     - image.style.unity_3_col_desktop_retina
 _core:
@@ -17,6 +19,8 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
+        - nigov_landscape_med_450x300_x1
+        - nigov_landscape_med_900x600_x2
         - unity_3_col_desktop
         - unity_3_col_desktop_retina
 breakpoint_group: responsive_image
