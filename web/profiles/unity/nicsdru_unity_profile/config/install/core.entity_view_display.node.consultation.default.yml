@@ -15,8 +15,7 @@ dependencies:
     - address
     - datetime
     - datetime_range
-    - file
-    - link
+    - origins_common
     - text
     - user
 id: node.consultation.default
@@ -33,11 +32,12 @@ content:
     region: content
   field_attachment:
     weight: 105
-    label: above
+    label: hidden
     settings:
-      use_description_as_link_text: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: file_default
+    type: entity_reference_entity_view
     region: content
   field_consultation_dates:
     weight: 107
