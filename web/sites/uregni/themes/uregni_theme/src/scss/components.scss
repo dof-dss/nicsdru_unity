@@ -67,20 +67,6 @@
 
   a.btn {
     background: $brand-secondary;
-    border-color: $brand-secondary;
-
-    &[href] {
-      &:hover {
-        background: #e8d4e8;
-        color: $brand-secondary;
-      }
-
-      &:focus {
-        color: #032f50;
-        border-bottom: 3px solid #032f50;
-        background: #ffe66a;
-      }
-    }
   }
 
   .content {
@@ -91,25 +77,12 @@
   }
 }
 
-a[href].btn,
+a.btn,
 input[type="submit"].btn {
+  background: $brand-primary;
   padding: .6rem 1.6rem;
-  border-bottom: 3px solid $brand-primary;
   color: $white;
-
-  &:hover {
-    outline: none;
-    text-decoration: underline;
-    opacity: 1;
-    background: #d0e8d7;
-    color: $brand-primary;
-  }
-
-  &:focus {
-    color: #032f50;
-    border-bottom: 3px solid #032f50;
-    background: #ffe66a;
-  }
+  text-decoration: underline;
 }
 
 .front {
@@ -224,12 +197,13 @@ input[type="submit"].btn {
 .webform-submission-form {
   input[type="submit"] {
     @include responsive-typo-map($normal-text);
-    border: none;
+    border: 3px solid transparent;
     background-image: none;
     color: #fff;
     font-weight: normal;
     text-shadow: none;
     text-decoration: underline;
+    text-underline-offset: .25em;
     box-shadow: none;
     margin: 1rem 0 0;
     text-align: center;
@@ -240,26 +214,12 @@ input[type="submit"].btn {
     &:hover {
       box-shadow: none;
     }
-
-    &:focus {
-      color: #032f50;
-      border-bottom: 3px solid #032f50;
-      background: #ffe66a;
-    }
   }
 }
 
 .feedblitz-custom-form {
   input[type="submit"] {
     background: $brand-secondary;
-    border-bottom: 3px solid $brand-secondary;
-
-    &:hover {
-      text-decoration: underline;
-      opacity: 1;
-      background: #e8d4e8;
-      color: $brand-secondary;
-    }
   }
 
   input[type="email"]:focus {
@@ -272,10 +232,10 @@ input[type="submit"].btn {
     background: $brand-primary;
     min-width: 13rem;
 
-    &:hover {
-      background: #4d004d;
-      border-color: #4d004d;
-    }
+    //&:hover {
+    //  background: #4d004d;
+    //  border-color: #4d004d;
+    //}
   }
 }
 
@@ -455,12 +415,6 @@ h2 i {
         h2 i,
         .btn {
           background: #cc4630;
-          border-color: #cc4630;
-
-          &:hover {
-            background: #cc463014;
-            color: #cc4630;
-          }
         }
       }
 
@@ -468,12 +422,6 @@ h2 i {
         h2 i,
         .btn {
           background: #8561af;
-          border-color: #8561af;
-
-          &:hover {
-            background: #8561af0d;
-            color: #8561af;
-          }
         }
       }
 
@@ -481,12 +429,6 @@ h2 i {
         h2 i,
         .btn {
           background: #345ddb;
-          border-color: #345ddb;
-
-          &:hover {
-            background: #345ddb0d;
-            color: #345ddb;
-          }
         }
       }
     }
@@ -540,16 +482,6 @@ h2 i {
   }
 }
 
-a.btn {
-  text-decoration: underline;
-
-  &:focus {
-    color: #032f50;
-    border-bottom: 3px solid #032f50;
-    background: #ffe66a;
-  }
-}
-
 //#main-menu .menu-link:focus {
 //  border-bottom: none;
 //}
@@ -596,5 +528,23 @@ textarea {
         display: block;
       }
     }
+  }
+}
+
+#bottom_wrapper .energy .column a.btn,
+#block-consumerinformationhome a.btn,
+.webform-submission-form input[type="submit"],
+a.btn,
+input[type="submit"].btn {
+  &:hover,
+  &:focus {
+    background: $ash-grey;
+    outline: none;
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: $black;
   }
 }
