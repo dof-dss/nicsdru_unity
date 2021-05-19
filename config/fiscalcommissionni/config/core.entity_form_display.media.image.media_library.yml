@@ -33,10 +33,17 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   langcode: true
-  name: true
   path: true
   status: true
   uid: true
