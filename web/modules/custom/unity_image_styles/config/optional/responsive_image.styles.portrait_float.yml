@@ -5,8 +5,6 @@ dependencies:
   config:
     - image.style.nigov_portrait_300_x1
     - image.style.nigov_portrait_600_x2
-    - image.style.nigov_portrait_med_450_x1
-    - image.style.nigov_portrait_med_900_x2
 id: portrait_float
 label: 'Portrait float'
 image_style_mappings:
@@ -19,7 +17,5 @@ image_style_mappings:
       sizes_image_styles:
         - nigov_portrait_300_x1
         - nigov_portrait_600_x2
-        - nigov_portrait_med_450_x1
-        - nigov_portrait_med_900_x2
 breakpoint_group: responsive_image
 fallback_image_style: nigov_portrait_300_x1
