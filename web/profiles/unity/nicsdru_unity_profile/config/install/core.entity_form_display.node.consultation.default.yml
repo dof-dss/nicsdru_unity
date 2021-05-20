@@ -15,7 +15,8 @@ dependencies:
     - address
     - datetime
     - datetime_range
-    - file
+    - media_library
+    - media_library_edit
     - link
     - path
     - text
@@ -42,9 +43,11 @@ content:
   field_attachment:
     weight: 125
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_consultation_dates:
     weight: 127

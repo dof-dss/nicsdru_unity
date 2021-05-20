@@ -10,8 +10,10 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - file
     - path
+    - link
+    - media_library
+    - media_library_edit
     - text
 id: node.publication.default
 targetEntityType: node
@@ -36,9 +38,11 @@ content:
   field_attachment:
     weight: 122
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_publication_type:
     weight: 125
