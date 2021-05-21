@@ -174,18 +174,6 @@ input[type="submit"].btn {
   }
 }
 
-.field-photo {
-  @include breakpoint($mob) {
-    float: right;
-    max-width: 250px;
-    margin: 0 0 1rem 1rem;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
 .feedblitz-custom-form,
 .webform-submission-form {
   input[type="submit"] {
