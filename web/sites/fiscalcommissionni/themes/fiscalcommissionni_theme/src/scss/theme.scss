@@ -152,6 +152,10 @@
 
     .group-left {
       flex-basis: 40%;
+
+      .field-member-image {
+        max-width: 10rem;
+      }
     }
 
     .group-right {

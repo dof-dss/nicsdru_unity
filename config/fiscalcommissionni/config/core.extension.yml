@@ -72,6 +72,7 @@ module:
   metatag: 0
   moderation_sidebar: 0
   node: 0
+  node_edit_protection: 0
   noreferrer: 0
   options: 0
   origins_ckeditor_enhancements: 0
@@ -79,6 +80,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_toc: 0
+  origins_unique_title: 0
   origins_workflow: 0
   page_cache: 0
   path: 0

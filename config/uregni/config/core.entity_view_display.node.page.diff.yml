@@ -78,14 +78,10 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-  toc_display:
-    weight: -10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_next_audit_due: true
   langcode: true
   links: true
   search_api_excerpt: true
+  toc_display: true

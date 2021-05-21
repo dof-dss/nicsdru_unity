@@ -5,22 +5,19 @@ dependencies:
   config:
     - image.style.member_small_image_x1
     - image.style.member_small_image_x2
-  theme:
-    - nicsdru_unity_theme
 _core:
   default_config_hash: _s-HOTbDrdASW-EGIPW9z9y5QbVymql_-gCf6rWYHMQ
 id: member_small_image
 label: 'Member small image'
 image_style_mappings:
   -
-    breakpoint_id: nicsdru_unity_theme.base
+    breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: member_small_image_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: member_small_image_x2
-breakpoint_group: nicsdru_unity_theme
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - member_small_image_x1
+        - member_small_image_x2
+breakpoint_group: responsive_image
 fallback_image_style: member_small_image_x1

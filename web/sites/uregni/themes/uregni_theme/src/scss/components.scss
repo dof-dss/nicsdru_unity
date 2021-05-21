@@ -66,26 +66,7 @@
   }
 
   a.btn {
-    color: $white;
     background: $brand-secondary;
-
-    &[href] {
-      padding: .6rem 1.6rem;
-
-      &:hover {
-        border-bottom: none;
-        outline: none;
-        text-decoration: underline;
-        opacity: 1;
-        background: $grey-dark;
-      }
-
-      &:focus {
-        color: #032f50;
-        border-bottom: 3px solid #032f50;
-        background: #ffe66a;
-      }
-    }
   }
 
   .content {
@@ -94,6 +75,14 @@
       padding: 3rem 0 0 2rem;
     }
   }
+}
+
+a.btn,
+input[type="submit"].btn {
+  background: $brand-primary;
+  padding: .6rem 1.6rem;
+  color: $white;
+  text-decoration: underline;
 }
 
 .front {
@@ -128,21 +117,6 @@
     h2 {
       font-weight: 200;
       letter-spacing: -.3px;
-    }
-  }
-
-  a.btn {
-    &[href] {
-      padding: .6rem 1.6rem;
-
-      &:hover {
-        border-bottom: none;
-        outline: none;
-        text-decoration: underline;
-        opacity: 1;
-        background: $grey-dark;
-        color: $white;
-      }
     }
   }
 }
@@ -212,23 +186,17 @@
   }
 }
 
-.node-type-staff-member {
-  .field-member-image {
-    float: right;
-    margin-left: 2rem;
-  }
-}
-
 .feedblitz-custom-form,
 .webform-submission-form {
   input[type="submit"] {
     @include responsive-typo-map($normal-text);
-    border: none;
+    border: 3px solid transparent;
     background-image: none;
     color: #fff;
     font-weight: normal;
     text-shadow: none;
     text-decoration: underline;
+    text-underline-offset: .25em;
     box-shadow: none;
     margin: 1rem 0 0;
     text-align: center;
@@ -239,24 +207,12 @@
     &:hover {
       box-shadow: none;
     }
-
-    &:focus {
-      color: #032f50;
-      border-bottom: 3px solid #032f50;
-      background: #ffe66a;
-    }
   }
 }
 
 .feedblitz-custom-form {
   input[type="submit"] {
     background: $brand-secondary;
-
-    &:hover {
-      text-decoration: underline;
-      opacity: 1;
-      background: $grey-dark;
-    }
   }
 
   input[type="email"]:focus {
@@ -269,10 +225,10 @@
     background: $brand-primary;
     min-width: 13rem;
 
-    &:hover {
-      background: #4d004d;
-      border-color: #4d004d;
-    }
+    //&:hover {
+    //  background: #4d004d;
+    //  border-color: #4d004d;
+    //}
   }
 }
 
@@ -468,27 +424,6 @@ h2 i {
           background: #345ddb;
         }
       }
-
-      a.btn {
-        &[href] {
-          padding: .6rem 1.6rem;
-
-          &:hover {
-            border-bottom: none;
-            outline: none;
-            color: $white;
-            text-decoration: underline;
-            opacity: 1;
-            background: $grey-dark;
-          }
-
-          &:focus {
-            color: #032f50;
-            border-bottom: 3px solid #032f50;
-            background: #ffe66a;
-          }
-        }
-      }
     }
   }
 
@@ -540,16 +475,6 @@ h2 i {
   }
 }
 
-a.btn {
-  text-decoration: underline;
-
-  &:focus {
-    color: #032f50;
-    border-bottom: 3px solid #032f50;
-    background: #ffe66a;
-  }
-}
-
 //#main-menu .menu-link:focus {
 //  border-bottom: none;
 //}
@@ -596,5 +521,23 @@ textarea {
         display: block;
       }
     }
+  }
+}
+
+#bottom_wrapper .energy .column a.btn,
+#block-consumerinformationhome a.btn,
+.webform-submission-form input[type="submit"],
+a.btn,
+input[type="submit"].btn {
+  &:hover,
+  &:focus {
+    background: $ash-grey;
+    outline: none;
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: $black;
   }
 }
