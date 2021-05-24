@@ -11,7 +11,7 @@ langcode: en
 popup_agreed:
   value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>You can now hide this message or find out more about cookies.</p>\r\n"
   format: 'basic_html'
-popup_agree_button_message: 'Accept cookies new'
+popup_agree_button_message: 'Accept cookies'
 popup_agreed_enabled: false
 popup_bg_hex: ''
 popup_clicking_confirmation: false
