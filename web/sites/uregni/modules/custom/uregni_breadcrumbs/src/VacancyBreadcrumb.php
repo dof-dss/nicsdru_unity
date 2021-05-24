@@ -108,7 +108,7 @@ class VacancyBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('About us'), Url::fromUri('entity:node/53'));
+      $links[] = Link::fromTextandUrl(t('About us'), Url::fromUri('internal:/about-us'));
       $links[] = Link::fromTextandUrl(t('Working for us'), Url::fromRoute('view.vacancies.vacancies'));
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
