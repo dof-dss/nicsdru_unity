@@ -2,8 +2,8 @@ name: 'Office of the Discretionary Support Commissioner'
 mail: odsc@test.com
 slogan: ''
 page:
-  403: /
-  404: /
+  403: ''
+  404: ''
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100

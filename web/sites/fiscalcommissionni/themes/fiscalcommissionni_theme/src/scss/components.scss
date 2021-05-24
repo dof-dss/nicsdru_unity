@@ -32,38 +32,6 @@
   }
 }
 
-.page-content {
-  .media-image {
-    margin: 1rem;
-
-    @include breakpoint($mob) {
-      clear: right;
-      float: right;
-      width: 48.3871%;
-      max-width: 300px;
-      margin: 2.1rem 0 0 2.7rem;
-    }
-  }
-}
-
-.node-type-staff-member {
-  .field-member-image {
-    margin: 1rem;
-
-    @include breakpoint($mob) {
-      float: right;
-      margin: 0 0 1rem 2rem;
-    }
-
-    .media-image {
-      float: none;
-      width: unset;
-      max-width: unset;
-      margin: 0;
-    }
-  }
-}
-
 .toc-menu .menu-title {
   font-size: $h2-font-size;
   line-height: 3.6rem;

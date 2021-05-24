@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_file_image_caption_text
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
@@ -23,7 +23,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_file_image_caption_text:
+  field_caption:
     weight: 26
     settings:
       size: 60

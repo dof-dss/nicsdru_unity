@@ -1,11 +1,11 @@
-uuid: 7d229c7f-325f-4ca3-b338-4fb7ef55045f
+uuid: b8333102-7abf-4e3f-ab4c-01ffc0671be2
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.field_file_image_caption_text
-field_name: field_file_image_caption_text
+id: media.field_caption
+field_name: field_caption
 entity_type: media
 type: string
 settings:

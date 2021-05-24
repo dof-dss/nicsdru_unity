@@ -71,6 +71,7 @@ install:
   - migrate_upgrade
   - moderation_sidebar
   - node
+  - node_edit_protection
   - noreferrer
   - options
   - origins_ckeditor_enhancements
@@ -78,6 +79,7 @@ install:
   - origins_media
   - origins_metatag
   - origins_toc
+  - origins_unique_title
   - origins_workflow
   - page_cache
   - path
