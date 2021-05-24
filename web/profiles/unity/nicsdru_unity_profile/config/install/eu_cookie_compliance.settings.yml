@@ -1,4 +1,3 @@
-uuid: 2b13381d-c3c6-4f59-90c4-fc80f57b726c
 cookie_lifetime: 365
 containing_element: body
 domain: ''
@@ -11,8 +10,8 @@ exclude_admin_theme: false
 langcode: en
 popup_agreed:
   value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>You can now hide this message or find out more about cookies.</p>\r\n"
-  format: basic_html
-popup_agree_button_message: 'Accept cookies'
+  format: 'basic_html'
+popup_agree_button_message: 'Accept cookies new'
 popup_agreed_enabled: false
 popup_bg_hex: ''
 popup_clicking_confirmation: false
@@ -26,11 +25,11 @@ popup_height: null
 popup_hide_agreed: false
 popup_hide_button_message: Hide
 popup_info:
-  value: "<p>Cookies on the [site:name] website</p>\r\n\r\n<p>We use some essential cookies to make this work. We'd like to set additional cookies so we can remember your settings, understand how people use the service and make improvements. Some of our pages allow selected third parties to set cookies - for example, pages that contain YouTube videos or Google Maps.</p>\r\n\r\n<p><a href=\"/cookies\">Find out more about how we use cookies</a></p>\r\n"
-  format: basic_html
+  value: "<p>Cookies on the [site:name] website</p>\r\n\r\n<p>We use some essential cookies to make this service work. We'd like to set additional cookies so we can remember your settings, understand how people use the service and make improvements. Some of our pages allow selected third parties to set cookies - for example, pages that contain YouTube videos or Google Maps.</p>\r\n\r\n<p><a href=\"/cookies\">Find out more about how we use cookies</a></p>\r\n"
+  format: 'basic_html'
 mobile_popup_info:
   value: ''
-  format: basic_html
+  format: 'basic_html'
 popup_info_template: new
 mobile_breakpoint: 768
 popup_link: '<front>'
@@ -54,7 +53,7 @@ allowed_cookies: ''
 consent_storage_method: do_not_store
 withdraw_message:
   value: "<h2>We use cookies on this site to enhance your user experience</h2>\r\n\r\n<p>You have given your consent for us to set cookies.</p>\r\n"
-  format: basic_html
+  format: 'basic_html'
 withdraw_action_button_label: 'Withdraw consent'
 withdraw_tab_button_label: 'Privacy settings'
 withdraw_enabled: false
