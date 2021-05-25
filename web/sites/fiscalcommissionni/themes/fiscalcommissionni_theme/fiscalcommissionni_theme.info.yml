@@ -16,6 +16,7 @@ libraries-override:
     css:
       theme:
         css/styles.css: false
+  nicsdru_unity_theme/unity-fonts: false
 
 base theme: nicsdru_unity_theme
 
