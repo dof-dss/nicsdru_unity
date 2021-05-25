@@ -90,7 +90,7 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
     $links[] = Link::createFromRoute(t('Home'), '<front>');
 
     if ($route_name == 'view.publications_search.publication_search_page') {
-      $links[] = Link::fromTextandUrl(t('About us'), Url::fromUri('entity:node/53'));
+      $links[] = Link::fromTextandUrl(t('About us'), Url::fromUri('internal:/about-us'));
     }
 
     $links[] = Link::createFromRoute($title_resolver, '<none>');
