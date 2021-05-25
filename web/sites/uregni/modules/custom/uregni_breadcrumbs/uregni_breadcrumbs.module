@@ -21,7 +21,7 @@ function uregni_breadcrumbs_system_breadcrumb_alter(Breadcrumb &$breadcrumb, Rou
 
   // The publications view page has an extra breadcrumb linked to the about us page so we need to add this in to keep the existing structure.
   if ($route_name == 'view.publications_search.publication_search_page') {
-    $about_us_link[] = Link::fromTextandUrl(t('About us'), Url::fromUri('entity:node/53'));
+    $about_us_link[] = Link::fromTextandUrl(t('About us'), Url::fromUri('internal:/about-us'));
     array_splice($links, 1, 0, $about_us_link);
   }
 
