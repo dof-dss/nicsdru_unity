@@ -1,6 +1,6 @@
 {
   "masterPicture": "images/favicon.svg",
-  "iconsPath": "sites/fiscalcommissionni/themes/custom/fiscalcommissionni_theme/images/favicons/",
+  "iconsPath": "sites/fiscalcommissionni/themes/fiscalcommissionni_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",
