@@ -40,12 +40,15 @@ class UnityDrushCommands extends DrushCommands {
   }
 
   /**
-   * Drush command replace SITE_FOLDER_NAME and STARTERKIT text in a unity site sub-theme.
+   * Drush command replace SITE_FOLDER_NAME and STARTERKIT text in a unity site
+   * sub-theme.
    *
    * @param string $site_folder_name
    *   Argument for user to enter the site directory they wish to target.
    * @param string $starterkit
-   *   Argument for user to add the new name of the sub-theme, replacing STARTERKIT.
+   *   Argument for user to add the new name of the sub-theme, replacing
+   *   STARTERKIT.
+   *
    * @command update-starterkit-text
    * @aliases upst
    * @usage update-starterkit-text --site_folder_name --new_theme_name
@@ -66,12 +69,19 @@ class UnityDrushCommands extends DrushCommands {
     }
 
     // Loop through the new theme directories and update any STARTERKIT and SITE_DIRECTORY_TEXT text.
-    $site_directories = [glob($new_theme_path . '/config/*'), glob($new_theme_path . '/*')];
+    $site_directories = [
+      glob($new_theme_path . '/config/*'),
+      glob($new_theme_path . '/*'),
+    ];
     foreach ($site_directories as $site_directory) {
       foreach ($site_directory as $file) {
         $file_contents = file_get_contents($file);
-        $strings = ['STARTERKIT', 'SITE_DIRECTORY_NAME'];
-        $string_replacements = [$starterkit, $site_folder_name];
+        $strings = ['STARTERKIT',
+          'SITE_DIRECTORY_NAME'
+        ];
+        $string_replacements = [$starterkit,
+          $site_folder_name
+        ];
         $file_contents = str_replace($strings, $string_replacements, $file_contents);
         if (!is_dir($file)) {
           file_put_contents($file, $file_contents);
