@@ -21,21 +21,31 @@ class UnityDrushCommands extends DrushCommands {
   public function importAllIfInstalled($option = 'safe') {
     // Only import if the structure_sync module is installed.
     if (\Drupal::moduleHandler()->moduleExists('structure_sync')) {
-      // Import blocks.
-      StructureSyncHelper::importCustomBlocks([
-        'style' => $option,
-        'drush' => TRUE,
-      ]);
-      // Import taxonomies.
-      StructureSyncHelper::importTaxonomies([
-        'style' => $option,
-        'drush' => TRUE,
-      ]);
-      // Import menus.
-      StructureSyncHelper::importMenuLinks([
-        'style' => $option,
-        'drush' => TRUE,
-      ]);
+      $config = \Drupal::config('structure_sync.data');
+      // Import blocks if necessary.
+      $blocks = $config->get('blocks');
+      if (!empty($blocks)) {
+        StructureSyncHelper::importCustomBlocks([
+          'style' => $option,
+          'drush' => TRUE,
+        ]);
+      }
+      // Import taxonomies if necessary.
+      $taxonomies = $config->get('taxonomies');
+      if (!empty($taxonomies)) {
+        StructureSyncHelper::importTaxonomies([
+          'style' => $option,
+          'drush' => TRUE,
+        ]);
+      }
+      // Import menus if necessary.
+      $menus = $config->get('menus');
+      if (!empty($menus)) {
+        StructureSyncHelper::importMenuLinks([
+          'style' => $option,
+          'drush' => TRUE,
+        ]);
+      }
     }
   }
 

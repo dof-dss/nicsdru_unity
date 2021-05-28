@@ -1,6 +1,6 @@
 {
-  "masterPicture": "src/images/favicon.svg",
-  "iconsPath": "/themes/custom/STARTERKIT/images/favicons/",
+  "masterPicture": "images/favicon.svg",
+  "iconsPath": "sites/odscni/themes/odscni_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",
@@ -12,7 +12,7 @@
         "precomposedIcons": false,
         "declareOnlyDefaultIcon": true
       },
-      "appName": "unity"
+      "appName": "odscni"
     },
     "desktopBrowser": {},
     "windows": {
@@ -28,13 +28,13 @@
           "rectangle": false
         }
       },
-      "appName": "unity"
+      "appName": "odscni"
     },
     "androidChrome": {
       "pictureAspect": "noChange",
       "themeColor": "#ffffff",
       "manifest": {
-        "name": "unity",
+        "name": "odscni",
         "display": "standalone",
         "orientation": "notSet",
         "onConflict": "override",

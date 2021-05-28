@@ -494,8 +494,8 @@ workflows:
   nightly-edge-build-deploy:
     triggers:
       - schedule:
-          # At 01:00 Monday to Friday
-          cron: "0 1 * * 1-5"
+          # At 01:23 Monday to Friday
+          cron: "23 1 * * 1-5"
           filters:
             branches:
               only:
