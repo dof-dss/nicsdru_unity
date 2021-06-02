@@ -6,11 +6,9 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Link;
-use Drupal\file\Entity\File;
 use Drupal\file\FileInterface;
 use Drupal\media\MediaInterface;
-use Drupal\views\Render\ViewsRenderPipelineMarkup;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess_page().
@@ -51,6 +49,16 @@ function unity_common_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form_state,
       ['honeypot', 'time_restriction']
     );
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function unity_common_views_pre_render(ViewExecutable $view) {
+  // Attach origins media library styles to media library views.
+  if ($view->id() === 'media_library') {
+    $view->element['#attached']['library'][] = 'nicsdru_unity_theme/media_library_styles';
   }
 }
 
