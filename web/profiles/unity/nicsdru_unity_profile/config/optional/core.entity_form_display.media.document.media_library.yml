@@ -3,11 +3,13 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
-    - field.field.media.remote_video.field_media_oembed_video
-    - media.type.remote_video
-id: media.remote_video.media_library
+    - field.field.media.document.field_media_file
+    - media.type.document
+_core:
+  default_config_hash: fVDlRZPTBXIuUxrDnu3buCABgU5plor9ijycYg3nGds
+id: media.document.media_library
 targetEntityType: media
-bundle: remote_video
+bundle: document
 mode: media_library
 content:
   name:
@@ -20,7 +22,7 @@ content:
     region: content
 hidden:
   created: true
-  field_media_oembed_video: true
+  field_media_file: true
   langcode: true
   path: true
   status: true
