@@ -1,6 +1,6 @@
 {
-  "masterPicture": "src/images/favicon.svg",
-  "iconsPath": "/themes/uregni_theme/images/favicons/",
+  "masterPicture": "images/favicon.svg",
+  "iconsPath": "sites/uregni/themes/uregni_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",
@@ -12,7 +12,7 @@
         "precomposedIcons": false,
         "declareOnlyDefaultIcon": true
       },
-      "appName": "unity"
+      "appName": "uregni"
     },
     "desktopBrowser": {},
     "windows": {
@@ -28,13 +28,13 @@
           "rectangle": false
         }
       },
-      "appName": "unity"
+      "appName": "uregni"
     },
     "androidChrome": {
       "pictureAspect": "noChange",
       "themeColor": "#ffffff",
       "manifest": {
-        "name": "unity",
+        "name": "uregni",
         "display": "standalone",
         "orientation": "notSet",
         "onConflict": "override",
