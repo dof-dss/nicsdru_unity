@@ -365,6 +365,13 @@ jobs:
           name: Trigger a data sync from master environment to nightly edge build.
           command: |
             /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+      - run
+          name: Backup data sync if the previous attempt failed.
+          command: |
+            # Pause for the blocking activity to finish.
+            sleep 90s
+            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+          when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
