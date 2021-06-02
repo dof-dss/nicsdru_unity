@@ -80,7 +80,9 @@
 <article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id) }}>
   {% endif %}
 
+  {% if not is_front %}
   {{ drupal_block('page_title_block', wrapper=false) }}
+  {% endif %}
 
   <div{{ content_attributes.addClass('content') }}>
     {{ content }}
