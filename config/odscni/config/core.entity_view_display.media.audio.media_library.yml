@@ -1,13 +1,12 @@
-uuid: baf72803-d1ac-47cc-ad50-a3ce4ce4d85c
+uuid: e9f735c2-dea0-4fad-934e-650ee0a7fcd3
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - field.field.media.image.field_caption
-    - field.field.media.image.field_media_image
+    - field.field.media.audio.field_media_audio_file
     - image.style.medium
-    - media.type.image
+    - media.type.audio
   module:
     - image
     - layout_builder
@@ -16,25 +15,24 @@ third_party_settings:
     allow_custom: false
     enabled: false
 _core:
-  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
-id: media.image.media_library
+  default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
+id: media.audio.media_library
 targetEntityType: media
-bundle: image
+bundle: audio
 mode: media_library
 content:
-  field_media_image:
+  thumbnail:
+    type: image
+    weight: 0
+    region: content
     label: hidden
     settings:
       image_style: medium
       image_link: ''
     third_party_settings: {  }
-    type: image
-    weight: 1
-    region: content
 hidden:
   created: true
-  field_caption: true
+  field_media_audio_file: true
   langcode: true
   name: true
-  thumbnail: true
   uid: true
