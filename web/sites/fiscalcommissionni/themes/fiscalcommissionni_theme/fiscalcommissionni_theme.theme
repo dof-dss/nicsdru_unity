@@ -49,6 +49,14 @@ function fiscalcommissionni_theme_preprocess_page(&$variables) {
       $variables['search_page'] = TRUE;
     }
   }
+
+  // Set the variable for evidence search page to FALSE initially.
+  $variables['evidence_search'] = FALSE;
+
+  // If evidence search page, set variable to TRUE.
+  if ($variables['page']['#title'] == 'Evidence') {
+    $variables['evidence_search'] = TRUE;
+  }
 }
 
 /**
