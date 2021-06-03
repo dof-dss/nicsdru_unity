@@ -7,14 +7,17 @@
 
 .container-wrap {
   margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (max-width: $lap) {
     margin: 0 1rem;
+    display: block;
   }
 }
 
 .content-sidebar-wrap {
-  @media screen and (max-width: $tab) {
+  @media screen and (max-width: $lap) {
     width: 100%;
   }
 }
@@ -24,15 +27,11 @@
   overflow: hidden;
   background: #f3f3f3;
   padding-top: 1rem;
-  margin-bottom: -9999px;
   margin-top: 0;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (max-width: $lap) {
     background: none;
-  }
-
-  .region-sidebar-second {
-    padding: 0 20px 9999px;
+    width: 0;
   }
 }
 
