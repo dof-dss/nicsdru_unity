@@ -79,7 +79,6 @@ $max-editable-width: ($max-grid-width * .7);
 }
 
 address {
-  margin-bottom: 2.4rem;
-  line-height: 3rem;
-  font-style: normal;
+  font-style: italic;
+  display: block;
 }

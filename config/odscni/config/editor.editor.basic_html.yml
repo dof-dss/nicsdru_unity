@@ -31,7 +31,7 @@ settings:
         -
           name: Linking
           items:
-            - Linkit
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -58,12 +58,13 @@ settings:
             - SpecialChar
             - Maximize
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
     language:
       language_list: un
     stylescombo:
       styles: 'p.info-notice|Information notice'
-    linkit:
-      linkit_profile: default
     tokenbrowser:
       token_types: {  }
 image_upload:
