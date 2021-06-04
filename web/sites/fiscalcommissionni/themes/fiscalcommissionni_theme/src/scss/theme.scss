@@ -92,7 +92,20 @@
   }
 }
 
-.path-news,
+.path-news {
+  .search-page {
+    @include breakpoint($lap) {
+      width: 65%;
+    }
+
+    .main-content {
+      @include breakpoint($lap) {
+        float: none;
+      }
+    }
+  }
+}
+
 .path-publications,
 .path-evidence {
   .search-page {
