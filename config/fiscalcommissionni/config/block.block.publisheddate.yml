@@ -1,6 +1,6 @@
 uuid: 8b5af1b6-e476-4768-95a0-67117c82c738
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.published_date

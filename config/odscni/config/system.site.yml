@@ -12,5 +12,5 @@ default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: c3db4695-813b-48b7-a28d-881c1e1e35a6
-frontpage_title: 'Welcome to Drupal site'
-frontpage_show_title: 0
+frontpage_title: 'The Office of the Discretionary Support Commissioner'
+frontpage_show_title: 1

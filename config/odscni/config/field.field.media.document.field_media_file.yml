@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt doc docx pdf'
+  file_extensions: 'pdf doc docx xls xlsx xlsm ppt pptx odt ods odp dot zip'
   max_filesize: 30MB
   description_field: false
   handler: 'default:file'
