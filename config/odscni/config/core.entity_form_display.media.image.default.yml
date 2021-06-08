@@ -24,7 +24,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_caption:
-    weight: 26
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -37,7 +37,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    weight: 0
+    weight: 1
     region: content
   langcode:
     type: language_select
@@ -45,6 +45,14 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -69,5 +77,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  name: true
+hidden: {  }

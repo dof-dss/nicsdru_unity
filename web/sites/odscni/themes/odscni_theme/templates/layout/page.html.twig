@@ -82,12 +82,6 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {% if drupal_config('system.site', 'frontpage_title') %}
-    <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
-      {{ drupal_config('system.site', 'frontpage_title') }}
-    </h1>
-  {% endif %}
-
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
@@ -128,6 +122,13 @@
         {% endif %}
         {% if page.content %}
           <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
+            {% if is_front %}
+              {% if drupal_config('system.site', 'frontpage_title') %}
+                <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+                  {{ drupal_config('system.site', 'frontpage_title') }}
+                </h1>
+              {% endif %}
+            {% endif %}
             {{ page.content }}
           </main>
         {% endif %}
