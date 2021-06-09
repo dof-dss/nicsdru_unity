@@ -85,6 +85,7 @@
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.0.0",
+        "drupal/csp": "^1.15",
         "drupal/date_facet_drilldown": "2.x-dev",
         "drupal/diff": "^1.0",
         "drupal/entity_embed": "^1.0",
@@ -93,6 +94,7 @@
         "drupal/facets_pretty_paths": "^1.0@beta",
         "drupal/fastly": "^3.9",
         "drupal/field_group": "^3.0",
+        "drupal/filelog": "^2.0",
         "drupal/geocoder": "^3.20",
         "drupal/geolocation": "3.x",
         "drupal/google_analytics": "^3.1",
@@ -198,6 +200,9 @@
             },
             "drupal/ultimate_cron": {
                 "Fix test function issue": "https://www.drupal.org/files/issues/2021-04-13/kernel_test-3208608-1.patch"
+            },
+            "drupal/filelog": {
+                "Whole Log gets loaded into Memory when gzipping": "https://www.drupal.org/files/issues/2021-04-07/filelog-3157650-21.patch"
             }
         },
         "drupal-scaffold": {
