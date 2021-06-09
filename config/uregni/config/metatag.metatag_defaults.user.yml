@@ -10,3 +10,7 @@ tags:
   canonical_url: '[user:url]'
   description: '[site:name]'
   title: '[user:display-name] | [site:name]'
+  og_title: '[user:display-name]'
+  og_type: profile
+  profile_username: '[user:display-name]'
+  twitter_cards_title: '[user:display-name]'
