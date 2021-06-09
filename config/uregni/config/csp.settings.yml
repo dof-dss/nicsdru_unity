@@ -13,6 +13,7 @@ report-only:
       sources:
         - 'https://themes.googleusercontent.com'
         - 'https://fonts.gstatic.com'
+        - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
       base: self
@@ -62,6 +63,7 @@ enforce:
       sources:
         - 'https://themes.googleusercontent.com'
         - 'https://fonts.gstatic.com'
+        - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
       base: self
