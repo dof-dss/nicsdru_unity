@@ -2,6 +2,7 @@
 
 namespace Drupal\unity_common\Commands;
 
+use Drupal\Core\Database\Database;
 use Drush\Commands\DrushCommands;
 use Drupal\structure_sync\StructureSyncHelper;
 
@@ -9,6 +10,22 @@ use Drupal\structure_sync\StructureSyncHelper;
  * Drush custom commands.
  */
 class UnityDrushCommands extends DrushCommands {
+
+  /**
+   * Core EntityTypeManager instance.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Class constructor.
+   */
+  public function __construct() {
+    parent::__construct();
+    $this->entityTypeManager = \Drupal::entityTypeManager();
+  }
+
 
   /**
    * Drush command import blocks, taxonomies and menus  using structure_sync.
@@ -97,6 +114,37 @@ class UnityDrushCommands extends DrushCommands {
           file_put_contents($file, $file_contents);
         }
       }
+    }
+  }
+
+  /**
+   * Remove select content from the site.
+   *
+   * @command unity-migrate:content-purge
+   *
+   * @param string $content_type
+   *   Argument to select content type to purge (machine name).
+   *
+   * @aliases mig-purge
+   * @usage mig-purge <machine name of content type>
+   */
+  public function contentPurge($content_type = NULL) {
+    // Load all nodes of this content type.
+    $storage = $this->entityTypeManager->getStorage('node');
+    $entities = $storage->loadByProperties(["type" => $content_type]);
+
+    $rows[] = [
+      'entity' => 'node',
+      'bundle' => $content_type,
+      'total' => count($entities),
+    ];
+    // Show the user a count of nodes.
+    $this->io()->table(['Entity', 'Bundle', 'Total'], $rows);
+
+    // Ask user to confirm
+    if ($this->io()->confirm("Are you sure you want to delete all $content_type content", TRUE)) {
+      $storage->delete($entities);
+      $this->io()->write("<comment>$bundle content deleted</comment>", TRUE);
     }
   }
 
