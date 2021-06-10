@@ -26,7 +26,6 @@ class UnityDrushCommands extends DrushCommands {
     $this->entityTypeManager = \Drupal::entityTypeManager();
   }
 
-
   /**
    * Drush command import blocks, taxonomies and menus  using structure_sync.
    *
@@ -145,7 +144,7 @@ class UnityDrushCommands extends DrushCommands {
     // Show the user a count of nodes.
     $this->io()->table(['Entity', 'Bundle', 'Total'], $rows);
 
-    // Ask user to confirm
+    // Ask user to confirm.
     if ($this->io()->confirm("Are you sure you want to delete all $content_type content", TRUE)) {
       $storage->delete($entities);
       $this->io()->write("<comment>$bundle content deleted</comment>", TRUE);
