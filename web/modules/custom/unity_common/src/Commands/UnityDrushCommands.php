@@ -129,6 +129,10 @@ class UnityDrushCommands extends DrushCommands {
    * @usage mig-purge <machine name of content type>
    */
   public function contentPurge($content_type = NULL) {
+    if (empty($content_type)) {
+      $this->io()->write("Please specify the machine name of a content type to purge", TRUE);
+      return;
+    }
     // Load all nodes of this content type.
     $storage = $this->entityTypeManager->getStorage('node');
     $entities = $storage->loadByProperties(["type" => $content_type]);
