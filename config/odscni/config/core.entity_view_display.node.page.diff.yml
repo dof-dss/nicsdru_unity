@@ -1,21 +1,17 @@
-uuid: 53679a17-a05c-4f60-84eb-d827ab11d8de
+uuid: 41858508-af3f-4116-bc8e-1b97e8f02d85
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.evidence.body
-    - field.field.node.evidence.field_attachment
-    - field.field.node.evidence.field_evidence_type
-    - field.field.node.evidence.field_meta_tags
-    - field.field.node.evidence.field_published_date
-    - node.type.evidence
+    - field.field.node.page.body
+    - field.field.node.page.field_metatag
+    - field.field.node.page.field_toc_enable
+    - node.type.page
   module:
-    - datetime
     - field_group
     - layout_builder
     - metatag
-    - options
     - text
     - user
 third_party_settings:
@@ -25,10 +21,10 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - field_evidence_type
-        - field_meta_tags
+        - field_metatag
+        - field_toc_enable
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: html_element
       region: content
       format_settings:
@@ -42,52 +38,37 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
-id: node.evidence.diff
+id: node.page.diff
 targetEntityType: node
-bundle: evidence
+bundle: page
 mode: diff
 content:
   body:
     label: hidden
+    weight: 0
     type: text_default
-    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_attachment:
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: embed
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_evidence_type:
-    type: list_default
+  field_metatag:
+    type: metatag_empty_formatter
     weight: 5
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_meta_tags:
-    type: metatag_empty_formatter
+  field_toc_enable:
+    type: boolean
     weight: 6
     region: content
     label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_published_date:
-    weight: 0
-    label: hidden
     settings:
-      timezone_override: ''
-      format_type: unity_date
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: datetime_default
-    region: content
 hidden:
   content_moderation_control: true
   langcode: true
   links: true
-  search_api_excerpt: true
+  toc_display: true

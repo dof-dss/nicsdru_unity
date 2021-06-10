@@ -44,6 +44,7 @@ content:
     type: datetime_default
     region: content
 hidden:
+  content_moderation_control: true
   field_evidence_type: true
   field_meta_tags: true
   langcode: true
