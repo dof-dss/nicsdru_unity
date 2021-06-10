@@ -22,11 +22,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   toc_display:
     weight: 0
     region: content
@@ -37,3 +32,4 @@ hidden:
   field_metatag: true
   field_toc_enable: true
   langcode: true
+  links: true
