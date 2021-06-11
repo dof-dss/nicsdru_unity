@@ -64,6 +64,9 @@ install:
   - menu_breadcrumb
   - menu_ui
   - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - metatag_views
   - migrate
   - migrate_drupal
   - migrate_plus
