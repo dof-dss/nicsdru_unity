@@ -170,7 +170,7 @@ display:
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: query
+            identifier: search
             required: false
             remember: false
             multiple: false
@@ -262,7 +262,8 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: evidence
       menu:
         type: normal
@@ -271,7 +272,8 @@ display:
         weight: -46
       exposed_block: true
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
