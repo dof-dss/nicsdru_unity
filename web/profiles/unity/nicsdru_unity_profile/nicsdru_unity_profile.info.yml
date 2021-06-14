@@ -24,6 +24,7 @@ install:
   - content_lock_timeout
   - content_moderation
   - contextual
+  - csp
   - ctools
   - datetime
   - datetime_range
