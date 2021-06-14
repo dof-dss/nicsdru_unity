@@ -1,26 +1,23 @@
-uuid: 5ff39a6e-0513-4e47-ae2a-f7fb630bf661
+uuid: 64e5c23e-fd76-4a9b-a748-27b2b8ba1fcd
 langcode: en
 status: true
 dependencies:
   config:
     - image.style.nigov_portrait_300_x1
     - image.style.nigov_portrait_600_x2
-  theme:
-    - nicsdru_unity_theme
 _core:
-  default_config_hash: U0vLGeMzwK5DxY3l_lJU1mG0w5jDUE7xev6JQ_dmja8
+  default_config_hash: HjS2woohcT1Ac59rjEXWjay5IhYsVDLSzxx_QjNp8uc
 id: portrait_float
 label: 'Portrait float'
 image_style_mappings:
   -
-    breakpoint_id: nicsdru_unity_theme.base
+    breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_300_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_600_x2
-breakpoint_group: nicsdru_unity_theme
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - nigov_portrait_300_x1
+        - nigov_portrait_600_x2
+breakpoint_group: responsive_image
 fallback_image_style: nigov_portrait_300_x1

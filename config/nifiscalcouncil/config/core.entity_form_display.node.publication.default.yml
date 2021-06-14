@@ -1,4 +1,4 @@
-uuid: 6920d150-077e-4cd1-8c58-758c5085cd5f
+uuid: e9180d8b-acbe-49e1-9ba0-846e16e1c08f
 langcode: en
 status: true
 dependencies:
@@ -11,11 +11,12 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - file
+    - media_library
+    - media_library_edit
     - path
     - text
 _core:
-  default_config_hash: GRSchbTAtzaEVhd0BSY2kljgoOYA3x4xzs896Px3_tE
+  default_config_hash: szIikHcOvlyyCEUqr0sRVDxpGdk6W6CHlDeruB48Kc4
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -39,9 +40,11 @@ content:
   field_attachment:
     weight: 122
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_publication_type:
     weight: 125
@@ -112,7 +115,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:

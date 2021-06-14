@@ -1,4 +1,4 @@
-uuid: daf91dc4-b8db-4446-8ccb-65ed9c0c59e4
+uuid: ac9ff2f1-3638-49b7-aac5-72e158f0f03f
 langcode: en
 status: true
 dependencies:
@@ -7,32 +7,21 @@ dependencies:
     - image.style.nigov_landscape_med_900x600_x2
     - image.style.nigov_landscape_xl_1240x826_x2
     - image.style.nigov_landscape_xl_620x413_x1
-  theme:
-    - nicsdru_unity_theme
 _core:
-  default_config_hash: nQ0UvhHT5DseqYAX2_f5NAMrMH6inU9SBs9XlDZA6vk
+  default_config_hash: agI4gG7p6HrQOJL3yIX15WTi90gdy8Y4vRNOyQzo2mo
 id: inline_expandable
 label: 'Landscape float expandable'
 image_style_mappings:
   -
-    breakpoint_id: nicsdru_unity_theme.mobile
+    breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: nigov_landscape_xl_620x413_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.mobile
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: nigov_landscape_xl_1240x826_x2
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: nigov_landscape_med_450x300_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: nigov_landscape_med_900x600_x2
-breakpoint_group: nicsdru_unity_theme
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - nigov_landscape_med_450x300_x1
+        - nigov_landscape_med_900x600_x2
+        - nigov_landscape_xl_1240x826_x2
+        - nigov_landscape_xl_620x413_x1
+breakpoint_group: responsive_image
 fallback_image_style: nigov_landscape_xl_620x413_x1

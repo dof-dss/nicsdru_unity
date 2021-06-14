@@ -1,4 +1,4 @@
-uuid: dcf93ec3-7fde-43f2-9a82-cd637b4c7d70
+uuid: b02531f2-b9e3-4d87-8f4d-d55c38eebbf3
 langcode: en
 status: true
 dependencies:
@@ -7,17 +7,24 @@ dependencies:
     - field.field.media.file.field_media_file
     - media.type.file
 _core:
-  default_config_hash: IBoLmnCny88y9JUCuPxBHUjFeEklxNQpnXouyfeXO6w
+  default_config_hash: JTto574eIgaEDZ_s7GVh0ipF-RLDcBmqHhop7e-VzEo
 id: media.file.media_library
 targetEntityType: media
 bundle: file
 mode: media_library
-content: {  }
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   field_media_file: true
   langcode: true
-  name: true
   path: true
   status: true
   uid: true

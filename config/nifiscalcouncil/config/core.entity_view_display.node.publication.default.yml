@@ -1,4 +1,4 @@
-uuid: 31820568-85c1-4881-af71-5a3bfa41c37c
+uuid: 6eb0ff6f-4dee-4375-9243-b619a62fbed7
 langcode: en
 status: true
 dependencies:
@@ -11,12 +11,11 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - file
     - options
     - text
     - user
 _core:
-  default_config_hash: JEXKz_Us6K6M-PZZTov7oUncjiUBseqZxIupAmhU3Xo
+  default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -31,11 +30,12 @@ content:
     region: content
   field_attachment:
     weight: 102
-    label: above
+    label: hidden
     settings:
-      use_description_as_link_text: true
+      view_mode: embed
+      link: false
     third_party_settings: {  }
-    type: file_default
+    type: entity_reference_entity_view
     region: content
   field_publication_type:
     weight: 105

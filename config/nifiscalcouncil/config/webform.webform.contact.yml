@@ -1,4 +1,4 @@
-uuid: 75e679ec-5404-4afd-b1a4-23686333bd55
+uuid: 087962dc-fa8e-4296-9f31-99efd6817fca
 langcode: en
 status: open
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: Gr3u649O44K_LNU90FRCFbiRzL7ZBqCa04mA5q6llLk
+  default_config_hash: Q4QShRpLvlheaOjtXj4lKYXCOGMiuBopVI6GYCCWRK8
 open: null
 close: null
 weight: 0
@@ -38,7 +38,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false

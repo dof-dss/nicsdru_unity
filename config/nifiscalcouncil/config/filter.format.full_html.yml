@@ -1,7 +1,16 @@
-uuid: 0cb19e03-0776-4631-a78b-155aabe12206
+uuid: 33a2b533-a18b-4b83-b1d9-e3e5eca5c31f
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embed
+    - core.entity_view_mode.media.landscape_float
+    - core.entity_view_mode.media.landscape_float_xp
+    - core.entity_view_mode.media.landscape_full
+    - core.entity_view_mode.media.landscape_full_xp
+    - core.entity_view_mode.media.portrait_float
+    - core.entity_view_mode.media.portrait_float_xp
+    - core.entity_view_mode.media.portrait_full
   module:
     - editor
     - entity_embed

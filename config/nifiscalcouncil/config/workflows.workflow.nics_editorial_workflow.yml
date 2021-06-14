@@ -1,4 +1,4 @@
-uuid: ad5eb231-4d2b-4d12-9088-27b2ed61eb80
+uuid: 9308e432-0e4f-4712-9ef5-2b713a43fa45
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,7 @@ dependencies:
   module:
     - content_moderation
 _core:
-  default_config_hash: i4jivQkSLEaiLB7qlNRDW9rBQCOSSZQZHIHhXRSKK84
+  default_config_hash: qBaBqyIdQPZcpmPNMyldLolFWqVTKBP_vLpimj2_co0
 id: nics_editorial_workflow
 label: 'NICS Editorial Workflow'
 type: content_moderation

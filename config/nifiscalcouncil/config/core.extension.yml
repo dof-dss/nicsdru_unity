@@ -62,8 +62,12 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  metatag_views: 0
   moderation_sidebar: 0
   node: 0
+  node_edit_protection: 0
   noreferrer: 0
   options: 0
   origins_ckeditor_enhancements: 0
@@ -71,7 +75,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_toc: 0
-  origins_workflow: 0
+  origins_unique_title: 0
   page_cache: 0
   path: 0
   path_alias: 0
@@ -105,15 +109,15 @@ module:
   workflows: 0
   menu_admin_per_menu: 1
   pathauto: 1
+  origins_workflow: 2
   views: 10
   eu_cookie_compliance: 11
   paragraphs: 11
   nicsdru_unity_profile: 1000
 theme:
   stark: 0
-  stable: 0
-  classy: 0
   seven: 0
+  stable: 0
   adminimal_theme: 0
   nicsdru_unity_theme: 0
 profile: nicsdru_unity_profile

@@ -1,22 +1,19 @@
-uuid: 2f134175-1c82-4403-ba69-903a70018c5d
+uuid: 1294caa3-b1f9-4cae-96db-6b01acce81fa
 langcode: en
 status: true
 dependencies:
   module:
-    - file
+    - media
     - node
 _core:
-  default_config_hash: pSiQmTrw0f_xBBBRT8rnpsKdZVduOegcgWB37lP-lHo
+  default_config_hash: JYcnwK1cziS7mHN29hd78z6_OYXihUxujliRqVhcBnI
 id: node.field_attachment
 field_name: field_attachment
 entity_type: node
-type: file
+type: entity_reference
 settings:
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  target_type: file
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: -1
 translatable: true
