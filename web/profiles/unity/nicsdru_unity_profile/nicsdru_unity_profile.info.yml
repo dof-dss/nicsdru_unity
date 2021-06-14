@@ -46,6 +46,7 @@ install:
   - field_ui
   - file
   - filter
+  - flag
   - handy_cache_tags
   - help
   - history

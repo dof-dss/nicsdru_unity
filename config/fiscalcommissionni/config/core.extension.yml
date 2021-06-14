@@ -46,6 +46,7 @@ module:
   file: 0
   filter: 0
   fiscalcommissionni_breadcrumbs: 0
+  flag: 0
   geolocation: 0
   geolocation_address: 0
   geolocation_google_maps: 0
