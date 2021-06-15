@@ -1,4 +1,4 @@
-uuid: f6196cb3-8ab7-4392-a526-00ac6c292819
+uuid: 983aef7c-21a7-43e2-a98b-e31218fad0b7
 langcode: en
 status: true
 dependencies:
@@ -7,32 +7,21 @@ dependencies:
     - image.style.nigov_portrait_med_900_x2
     - image.style.nigov_portrait_xl_1240_x2
     - image.style.nigov_portrait_xl_620_x1
-  theme:
-    - nicsdru_unity_theme
 _core:
-  default_config_hash: gaPHHaprRkLnxQU3KCRVvXfdI2K76yZyf7UsCtnIcQw
+  default_config_hash: gyzUP9qcaWAYfBuA646ToZkJ81AmdeupytEcmX8qxos
 id: portrait_full_width
 label: 'Portrait full width'
 image_style_mappings:
   -
-    breakpoint_id: nicsdru_unity_theme.mobile
+    breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_xl_620_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.mobile
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_xl_1240_x2
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_med_450_x1
-  -
-    breakpoint_id: nicsdru_unity_theme.base
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: nigov_portrait_med_900_x2
-breakpoint_group: nicsdru_unity_theme
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - nigov_portrait_med_450_x1
+        - nigov_portrait_med_900_x2
+        - nigov_portrait_xl_1240_x2
+        - nigov_portrait_xl_620_x1
+breakpoint_group: responsive_image
 fallback_image_style: nigov_portrait_xl_620_x1

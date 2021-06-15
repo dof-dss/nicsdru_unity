@@ -1,4 +1,4 @@
-uuid: b00a2f0a-bf1e-4b28-941b-5f7f4f182aa0
+uuid: 3b5de166-d047-47b1-92cc-28d24f0f57e1
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
     - image.style.max_325x325
     - image.style.max_650x650
 _core:
-  default_config_hash: fpe1VtjfmmkKkR7qjomnyPorSM2SKdw6rgkdE2jE1rI
+  default_config_hash: Sw2ubSkO3CVOiLhtH_5RlJzEpW3cVUdhR-GPny6h2jM
 id: narrow
 label: Narrow
 image_style_mappings:
