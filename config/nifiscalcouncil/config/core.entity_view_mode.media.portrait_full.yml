@@ -1,11 +1,11 @@
-uuid: d05ead7b-7885-485b-a41b-8ae9b4699b06
+uuid: 28e49be7-2377-4de1-8f09-ba11dc46205c
 langcode: en
 status: true
 dependencies:
   module:
     - media
 _core:
-  default_config_hash: b9w-A4lqY_PpBdQcFjYERw23S5ZpobpLLcjUH056Do8
+  default_config_hash: 0OPwF1OAUUKWrI9K8a1LWWKit2kgR8e0mzisgI3_9IU
 id: media.portrait_full
 label: 'Portrait full'
 targetEntityType: media

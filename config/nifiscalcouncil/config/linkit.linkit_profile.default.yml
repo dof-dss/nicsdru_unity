@@ -1,4 +1,4 @@
-uuid: 27b82922-5bc6-4990-a87c-7f8f85ced9e6
+uuid: 174e8f62-b427-468f-b8d6-0ea3014d553e
 langcode: en
 status: true
 dependencies:
@@ -9,12 +9,6 @@ _core:
 id: default
 label: Default
 description: ''
-attributes:
-  target:
-    id: target
-    weight: 0
-    settings:
-      widget_type: simple_checkbox
 matchers:
   8250b0de-30d1-4f86-82cc-d18dba7b3241:
     uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
@@ -25,3 +19,6 @@ matchers:
       bundles: {  }
       group_by_bundle: true
       include_unpublished: false
+      metadata: ''
+      substitution_type: canonical
+      limit: 100

@@ -1,14 +1,13 @@
-uuid: 6b65df1d-56d1-4dd1-93d5-cd59524db60a
+uuid: cc0a7f3e-977f-4e61-be1d-8d5b5e1d57e1
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_attachment
+    - media.type.document
     - node.type.consultation
-  module:
-    - file
 _core:
-  default_config_hash: CTtEBmpfya5mFmZ3DWGZmMFFsVh2fp_4hl6jX73VhPk
+  default_config_hash: eLbYf5A_jjL2S2C7MdrxsZqEH_lMq1BiApoeHJdY7kU
 id: node.consultation.field_attachment
 field_name: field_attachment
 entity_type: node
@@ -20,10 +19,13 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: consultations
-  file_extensions: 'pdf doc docx xls xlsx xlsm ppt pptx odt ods odp dot zip'
-  max_filesize: ''
-  description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
