@@ -152,3 +152,16 @@ function unity_common_preprocess_image_formatter(array &$variables) {
     ];
   }
 }
+
+/**
+ * Implements hook_config_ignore_settings_alter().
+ */
+function unity_common_config_ignore_settings_alter(array &$settings) {
+  // This hook is called just before config is imported (as long as this module
+  // and the 'config ignore' module are installed) and is even invoked when there
+  // are no config changes to import.
+  // The code in UpdateConfigAfterImport will then ensure that the Google Analytics
+  // key is overwritten during config import.
+  $config_update_service = \Drupal::service('unity_common.update_config_from_environment');
+  $config_update_service->updateApiKey('google_analytics.settings', 'account', 'UREGNI_GOOGLE_ANALYTICS_KEY');
+}
