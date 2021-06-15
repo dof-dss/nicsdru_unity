@@ -53,10 +53,10 @@ class UpdateConfigAfterImport implements EventSubscriberInterface {
   public function onConfigImport(ConfigImporterEvent $event) {
     $change_list = $event->getChangelist();
     if (!empty($change_list)) {
-      //if ((isset($change_list['update']) && ($change_list['update'][0] == 'google_analytics.settings')) ||
-      //  (isset($change_list['create']) && ($change_list['create'][0] == 'google_analytics.settings'))) {
+      if ((isset($change_list['update']) && ($change_list['update'][0] == 'google_analytics.settings')) ||
+        (isset($change_list['create']) && ($change_list['create'][0] == 'google_analytics.settings'))) {
         $this->updateEnvService->updateApiKey('google_analytics.settings', 'account', 'UREGNI_GOOGLE_ANALYTICS_KEY');
-      //}
+      }
     }
   }
 
