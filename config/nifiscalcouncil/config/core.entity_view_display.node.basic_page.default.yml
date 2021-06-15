@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_meta_tags
+    - field.field.node.basic_page.field_next_audit_due
+    - field.field.node.basic_page.field_toc_enable
     - node.type.basic_page
   module:
     - text
@@ -18,14 +21,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  toc_display:
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  field_next_audit_due: true
+  field_toc_enable: true
   langcode: true
+  links: true
