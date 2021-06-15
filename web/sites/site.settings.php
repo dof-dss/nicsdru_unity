@@ -50,6 +50,8 @@ if (!empty($subsite_id)) {
   // Geolocation/geocoder API keys.
   $config['geolocation_google_maps.settings']['google_map_api_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_KEY');
   $config['geolocation_google_maps.settings']['google_map_api_server_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_SERVER_KEY');
+  // Google Analytics keys.
+  $config['google_analytics.settings']['account'] = getenv($site_id . '_' . 'GOOGLE_ANALYTICS_KEY');
 }
 
 // Environment indicator defaults.
