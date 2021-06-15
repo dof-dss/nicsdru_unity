@@ -1,4 +1,4 @@
-uuid: 7ca37a78-8c3b-4ca9-b8e0-f5a9779d1e23
+uuid: 79819953-5d8a-4506-97dd-341c75875c91
 langcode: en
 status: true
 dependencies:
@@ -17,12 +17,13 @@ dependencies:
     - address
     - datetime
     - datetime_range
-    - file
     - link
+    - media_library
+    - media_library_edit
     - path
     - text
 _core:
-  default_config_hash: 7llgpBrsnQ778iDDM5bqbWH5ysXjd3CQ26Qh0XJS-5M
+  default_config_hash: uvpRBKOy1wXoRDYoHowMG8z-wKNXW-D1FkJaJQ9q9_c
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -46,9 +47,11 @@ content:
   field_attachment:
     weight: 125
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_consultation_dates:
     weight: 127
@@ -141,7 +144,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
