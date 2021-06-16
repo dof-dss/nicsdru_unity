@@ -60,7 +60,7 @@ db:
       niauditoffice:
         default_schema: niauditofficedb
         privileges:
-          nifiscalcouncildb: admin
+          niauditofficedb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
