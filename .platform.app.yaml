@@ -155,7 +155,7 @@ crons:
     cmd: 'cd web/sites/odscni ; drush core-cron'
   fiscalcommissionni:
     spec: '*/5 * * * *'
-    cmd: 'cd web/sites/fiscalcommissionnii ; drush core-cron'
+    cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
   niauditoffice:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/niauditoffice ; drush core-cron'
