@@ -1,19 +1,23 @@
-uuid: 2b36a8c4-9233-494e-b9fd-6682a403c6d8
+uuid: 341bd78b-f047-42f6-9d97-7f0fa028e517
 langcode: en
-status: false
+status: true
 dependencies: {  }
-_core:
-  default_config_hash: VyuolI6mebq9B-JacjbiVLqJpuVLugDLmce6Skak9VQ
 id: local
 label: local
 description: "Local development split. \r\nEnables debugging and development modules"
-folder: ../config/employmenttribunalsni/local
+folder: ../config/niauditoffice/local
 module:
+  dblog: 0
+  devel: 0
   easy_install: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  stage_file_proxy: 0
   update: 0
   views_ui: 0
-  devel: 0
-  stage_file_proxy: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }

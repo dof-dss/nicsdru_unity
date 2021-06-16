@@ -1,8 +1,9 @@
-uuid: 056dd529-cea9-47eb-b298-e999d938ffe0
+uuid: a8713ee4-0812-41b3-9bf3-8793577607c1
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - media.type.image
   module:
@@ -25,6 +26,7 @@ content:
     region: content
 hidden:
   created: true
+  field_caption: true
   langcode: true
   name: true
   thumbnail: true

@@ -1,4 +1,4 @@
-uuid: 16640f49-fd2a-494d-bd82-985cc5cfa482
+uuid: 7124e6ee-0e83-4562-805e-22383bc6c6d3
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: fRZeGmz6ZpMJKI_WmhRNxsv6EWHcMIrOU5aUkfiP5MI
+  default_config_hash: y_-GvoDgNUYfjIDQkXhdgit0MS-B5O7sG5z6E5rQd6c
 id: workflow_moderation
 label: 'Workflow: Moderation'
 module: views

@@ -1,13 +1,11 @@
-uuid: 2f1c65d0-4eec-4bf7-9089-416389b69a1e
+uuid: 7c23ec0e-b748-4baa-a5f4-f970e6616446
 langcode: en
 status: false
 dependencies: {  }
-_core:
-  default_config_hash: 1X24INUtQNTMuB9BaIvzqkFncJ9MAUlpYtar7E_IB-0
 id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
-folder: ../config/employmenttribunalsni/hosted
+folder: ../config/niauditoffice/hosted
 module: {  }
 theme: {  }
 blacklist: {  }

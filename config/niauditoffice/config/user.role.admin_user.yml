@@ -1,9 +1,9 @@
-uuid: ae80f89e-6c1d-4160-987b-f8ed655cca69
+uuid: 739d3a2d-4d83-43bd-b968-75550c74a9ca
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: VNLyEGIdCENJ96tGcBUdr1KihcrzfP-T9VE2VSj5Zn8
+  default_config_hash: v2w93ktGCs9_AH5HaUneeeDgZP-uK3RY1ZtX22-NIGQ
 id: admin_user
 label: 'admin user'
 weight: 7
@@ -194,8 +194,11 @@ permissions:
   - 'edit any publication content'
   - 'edit any video files'
   - 'edit any webform content'
+  - 'edit basic meta tags'
   - 'edit field_taxonomy_rank'
   - 'edit meta tag: robots'
+  - 'edit meta tag: robots'
+  - 'edit meta tags'
   - 'edit meta tags'
   - 'edit own application content'
   - 'edit own article content'
@@ -291,6 +294,7 @@ permissions:
   - 'use nics_editorial_workflow transition restore_to_draft'
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'use nics_editorial_workflow transition unpublish'
+  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'use text format filtered_html_with_tokens'

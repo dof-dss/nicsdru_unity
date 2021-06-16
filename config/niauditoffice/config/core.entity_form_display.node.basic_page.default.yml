@@ -1,4 +1,4 @@
-uuid: 5ee281a2-a486-4436-844c-aa31006d6c7d
+uuid: 350e0d2b-9408-4541-896e-c5db67c36878
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.basic_page
   module:
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - text
 _core:
   default_config_hash: HV-wiMbZetwvisJTWx_fO8tUcRAaMSvIFv8isFt9vmA
@@ -52,18 +50,6 @@ content:
     weight: 15
     region: content
     third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -93,20 +79,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
-    third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  unpublish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 50

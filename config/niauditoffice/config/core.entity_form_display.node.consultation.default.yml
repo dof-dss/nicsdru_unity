@@ -1,4 +1,4 @@
-uuid: 8c0edf82-7f44-4429-9907-26f54ef8e3c6
+uuid: ce1eb363-6773-4e9b-ab87-e0b6e8d6acb1
 langcode: en
 status: true
 dependencies:
@@ -17,14 +17,13 @@ dependencies:
     - address
     - datetime
     - datetime_range
-    - file
     - link
+    - media_library
+    - media_library_edit
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - text
 _core:
-  default_config_hash: 7llgpBrsnQ778iDDM5bqbWH5ysXjd3CQ26Qh0XJS-5M
+  default_config_hash: uvpRBKOy1wXoRDYoHowMG8z-wKNXW-D1FkJaJQ9q9_c
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -48,9 +47,11 @@ content:
   field_attachment:
     weight: 125
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_consultation_dates:
     weight: 127
@@ -114,18 +115,6 @@ content:
     weight: 15
     region: content
     third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -155,20 +144,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
-    third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  unpublish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 50
