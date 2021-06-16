@@ -53,6 +53,13 @@ filters:
         iframe: iframe
       media_switch: ''
       use_data_uri: '0'
+  cookie_content_blocker_filter:
+    id: cookie_content_blocker_filter
+    provider: cookie_content_blocker
+    status: true
+    weight: 0
+    settings:
+      disable_xss: '1'
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -149,10 +156,3 @@ filters:
     weight: -40
     settings:
       replace_empty: '0'
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: true
-    weight: 0
-    settings:
-      disable_xss: '1'
