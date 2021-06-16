@@ -18,6 +18,7 @@ third_party_settings:
     toc_exclusions: ''
     toc_location: '#block-mainpagecontent .content'
     toc_insert: before
+    toc_screen_depth: 2
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
