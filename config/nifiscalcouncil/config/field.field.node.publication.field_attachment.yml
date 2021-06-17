@@ -1,14 +1,13 @@
-uuid: b455bbc7-dfdc-455b-b1d4-c211189310ea
+uuid: 04c7bcee-5857-4304-851c-802109100224
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_attachment
+    - media.type.document
     - node.type.publication
-  module:
-    - file
 _core:
-  default_config_hash: f9dws2W7ll-PX52l0BOn9ehGxGVfJ3ShlQTm4a_0E_4
+  default_config_hash: vvW9PTT1tHEC7y1peVajxklRzfzcj7qYBVQo2JAQTUQ
 id: node.publication.field_attachment
 field_name: field_attachment
 entity_type: node
@@ -20,10 +19,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: publications
-  file_extensions: 'pdf doc docx xls xlsx xlsm ppt pptx odt ods odp dot zip'
-  max_filesize: '30 MB'
-  description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
