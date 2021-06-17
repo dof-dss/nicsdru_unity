@@ -145,9 +145,6 @@ web:
 
 # The configuration of scheduled execution.
 crons:
-  uregni:
-    spec: '*/5 * * * *'
-    cmd: 'cd web/sites/uregni ; drush core-cron'
   odscni:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/odscni ; drush core-cron'
