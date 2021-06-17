@@ -10,8 +10,15 @@ proxy:
     - hatecrimereviewni.org.uk.lndo.site
     - fiscalcommissionni.org.lndo.site
     - nifiscalcouncil.org.lndo.site
+    - niauditoffice.gov.uk.lndo.site
 services:
   uregni_solr:
+    type: solr:7
+    portforward: true
+    core: default
+    config:
+      dir: .lando/config/solr/7.x/default
+  niauditoffice_solr:
     type: solr:7
     portforward: true
     core: default

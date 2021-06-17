@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_metatag
-    - field.field.node.page.field_toc_enable
     - node.type.page
   module:
     - text
@@ -30,6 +29,5 @@ content:
 hidden:
   content_moderation_control: true
   field_metatag: true
-  field_toc_enable: true
   langcode: true
   links: true

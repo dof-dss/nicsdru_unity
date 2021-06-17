@@ -111,6 +111,22 @@
 
 #---------------------------------
 
+"https://www.niauditoffice.gov.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://niauditoffice.gov.uk.{default}/":
+  type: redirect
+  to: "https://www.niauditoffice.gov.uk.{default}/"
+
+"https://niauditoffice.gov.uk/":
+  type: redirect
+  to: "https://www.niauditoffice.gov.uk/"
+
+#---------------------------------
+
 "https://www.fiscalcommissionni.org/":
   type: upstream
   upstream: "unity:http"

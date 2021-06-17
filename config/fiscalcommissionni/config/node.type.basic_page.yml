@@ -18,6 +18,7 @@ third_party_settings:
     toc_source_container: '#post-content .page-content'
     toc_element: h2
     toc_exclusions: ''
+    toc_screen_depth: 2
 _core:
   default_config_hash: En2bzcXy3f-IX9BqWTsiLvqKn5f-Ihs77tQTY17Ltnw
 name: 'Basic page'

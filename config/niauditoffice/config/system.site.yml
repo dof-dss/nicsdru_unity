@@ -1,0 +1,15 @@
+name: 'Northern Ireland Audit Office'
+mail: test@test.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: f29df4cb-3b8b-41fe-86c6-a8d76e4c2553
+frontpage_title: 'Welcome to Drupal site'

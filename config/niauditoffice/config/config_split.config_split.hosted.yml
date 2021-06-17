@@ -1,0 +1,15 @@
+uuid: 7c23ec0e-b748-4baa-a5f4-f970e6616446
+langcode: en
+status: false
+dependencies: {  }
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+folder: ../config/niauditoffice/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,26 @@
+uuid: 341bd78b-f047-42f6-9d97-7f0fa028e517
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: local
+description: "Local development split. \r\nEnables debugging and development modules"
+folder: ../config/niauditoffice/local
+module:
+  dblog: 0
+  devel: 0
+  easy_install: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  stage_file_proxy: 0
+  update: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

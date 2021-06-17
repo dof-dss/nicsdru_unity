@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.diff
     - field.field.node.page.body
     - field.field.node.page.field_metatag
-    - field.field.node.page.field_toc_enable
     - node.type.page
   module:
     - field_group
@@ -56,16 +55,6 @@ content:
     region: content
     label: inline
     settings: {  }
-    third_party_settings: {  }
-  field_toc_enable:
-    type: boolean
-    weight: 6
-    region: content
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
