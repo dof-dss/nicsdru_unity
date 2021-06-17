@@ -1,9 +1,9 @@
-uuid: 9065962c-984b-4829-b535-22ebe8581538
+uuid: 22f73805-7e86-4848-b89f-3a4c55fce385
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 6KHSG3yK9MZVKwi_2OQaZ-DVTJMpl4CeRUMK-AGwi-4
+  default_config_hash: ueOB4q4hq3Zoeqdq5ylT25ZiU-VPwTfxjlPsvjg3eNM
 name: slideshow_x2
 label: 'Slideshow x2'
 effects:

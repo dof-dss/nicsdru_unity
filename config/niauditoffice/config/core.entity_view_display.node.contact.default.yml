@@ -1,0 +1,31 @@
+uuid: 377754b6-be30-418f-8d0f-ecb18b7ed42e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact.body
+    - node.type.contact
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: qgg-RsYAiNisMuDKtiHw5pGPRa9iSBN-lOxeeY3s20I
+id: node.contact.default
+targetEntityType: node
+bundle: contact
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

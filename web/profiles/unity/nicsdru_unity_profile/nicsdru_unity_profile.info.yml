@@ -24,6 +24,7 @@ install:
   - content_lock_timeout
   - content_moderation
   - contextual
+  - csp
   - ctools
   - datetime
   - datetime_range
@@ -46,6 +47,7 @@ install:
   - field_ui
   - file
   - filter
+  - flag
   - handy_cache_tags
   - help
   - history

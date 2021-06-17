@@ -16,3 +16,4 @@ $sites['employmenttribunalsni.co.uk.lndo.site'] = 'employmenttribunalsni';
 $sites['hatecrimereviewni.org.uk.lndo.site'] = 'hatecrimereviewni';
 $sites['fiscalcommissionni.org.lndo.site'] = 'fiscalcommissionni';
 $sites['nifiscalcouncil.org.lndo.site'] = 'nifiscalcouncil';
+$sites['niauditoffice.gov.uk.lndo.site'] = 'niauditoffice';

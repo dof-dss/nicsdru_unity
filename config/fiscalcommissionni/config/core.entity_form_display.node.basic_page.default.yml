@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.basic_page.body
     - field.field.node.basic_page.field_meta_tags
     - field.field.node.basic_page.field_next_audit_due
-    - field.field.node.basic_page.field_toc_enable
     - node.type.basic_page
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -49,14 +48,6 @@ content:
     type: datetime_default
     weight: 14
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_toc_enable:
-    type: boolean_checkbox
-    label: above
-    settings:
-      display_label: true
-    weight: 15
     third_party_settings: {  }
     region: content
   langcode:
