@@ -7,6 +7,7 @@ use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\ConfigEvents;
 use Drupal\Core\Config\ConfigImporterEvent;
 use Drupal\Core\Config\Importer\MissingContentEvent;
+use Drupal\Core\Site\Settings;
 use Drupal\unity_common\UpdateConfigFromEnvironment;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -55,7 +56,9 @@ class UpdateConfigAfterImport implements EventSubscriberInterface {
     if (!empty($change_list)) {
       if ((isset($change_list['update']) && ($change_list['update'][0] == 'google_analytics.settings')) ||
         (isset($change_list['create']) && ($change_list['create'][0] == 'google_analytics.settings'))) {
-        $this->updateEnvService->updateApiKey('google_analytics.settings', 'account', 'UREGNI_GOOGLE_ANALYTICS_KEY');
+        if (Settings::get('subsite_id')) {
+          $this->updateEnvService->updateApiKey('google_analytics.settings', 'account', Settings::get('subsite_id') . '_GOOGLE_ANALYTICS_KEY');
+        }
       }
     }
   }
