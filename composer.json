@@ -182,7 +182,8 @@
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
             },
             "drupal/easy_install": {
-                "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch"
+                "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch",
+                "non-existent service entity.manager": "https://www.drupal.org/files/issues/2020-12-08/3162621-4.patch"
             },
             "drupal/redirect": {
                 "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch",
