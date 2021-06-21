@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\file\FileInterface;
 use Drupal\media\MediaInterface;
 use Drupal\views\ViewExecutable;
@@ -162,6 +163,8 @@ function unity_common_config_ignore_settings_alter(array &$settings) {
   // are no config changes to import.
   // The code in UpdateConfigAfterImport will then ensure that the Google Analytics
   // key is overwritten during config import.
-  $config_update_service = \Drupal::service('unity_common.update_config_from_environment');
-  $config_update_service->updateApiKey('google_analytics.settings', 'account', 'UREGNI_GOOGLE_ANALYTICS_KEY');
+  if (Settings::get('subsite_id')) {
+    $config_update_service = \Drupal::service('unity_common.update_config_from_environment');
+    $config_update_service->updateApiKey('google_analytics.settings', 'account', Settings::get('subsite_id') . '_GOOGLE_ANALYTICS_KEY');
+  }
 }
