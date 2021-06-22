@@ -92,6 +92,7 @@
         "drupal/eu_cookie_compliance": "1.x-dev@dev",
         "drupal/facets": "^1.5",
         "drupal/facets_pretty_paths": "^1.0@beta",
+        "drupal/faqfield": "^7.0",
         "drupal/fastly": "^3.9",
         "drupal/field_group": "^3.0",
         "drupal/flag": "^4.0@beta",
