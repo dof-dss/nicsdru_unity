@@ -22,7 +22,7 @@ content:
     type: datetime_default
     weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
