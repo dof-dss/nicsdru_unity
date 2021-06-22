@@ -1,17 +1,12 @@
-uuid: e7f946b8-21e6-4159-8237-44977d7fc9e1
+uuid: df99e5a6-75f4-440d-8b54-2b3e92fb066d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webform_node
   module:
     - node
     - webform
-_core:
-  default_config_hash: SJRNyZvo1lWcPLKxH_u6giTk1y51ymXvpKX65YUNd7w
-id: node.webform
-field_name: webform
+id: node.field_webform
+field_name: field_webform
 entity_type: node
 type: webform
 settings:
