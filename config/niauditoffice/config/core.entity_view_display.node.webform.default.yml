@@ -18,14 +18,14 @@ mode: default
 content:
   body:
     weight: 0
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_webform:
     weight: 1
-    label: above
+    label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
