@@ -1,18 +1,18 @@
-uuid: 516426fb-db9a-4686-8369-33ed01e73b7e
+uuid: f5951701-9203-4903-bc65-253d2a34cb92
 langcode: en
 status: true
 dependencies:
   module:
-    - metatag
+    - faqfield
     - node
-id: node.field_meta_tags
-field_name: field_meta_tags
+id: node.field_faq
+field_name: field_faq
 entity_type: node
-type: metatag
+type: faqfield
 settings: {  }
-module: metatag
+module: faqfield
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
