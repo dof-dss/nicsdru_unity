@@ -1,0 +1,37 @@
+uuid: 12e63e52-7a71-4548-8007-e8210319f0ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_meta_tags
+    - field.field.node.publication_page.field_niao_publication_image
+    - field.field.node.publication_page.field_publication_date
+    - field.field.node.publication_page.field_publication_type
+    - node.type.publication_page
+  module:
+    - datetime
+    - user
+id: node.publication_page.teaser
+targetEntityType: node
+bundle: publication_page
+mode: teaser
+content:
+  field_publication_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_meta_tags: true
+  field_niao_publication_image: true
+  field_publication_type: true
+  langcode: true
+  links: true
