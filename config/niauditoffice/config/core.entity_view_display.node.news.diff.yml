@@ -55,7 +55,7 @@ content:
     region: content
   field_meta_tags:
     weight: 8
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
@@ -80,7 +80,7 @@ content:
     region: content
   field_teaser:
     weight: 7
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

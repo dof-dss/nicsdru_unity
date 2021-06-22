@@ -22,10 +22,10 @@ content:
     type: datetime_default
     weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
 hidden:
   body: true
