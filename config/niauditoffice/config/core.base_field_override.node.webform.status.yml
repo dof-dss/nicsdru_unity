@@ -1,13 +1,13 @@
-uuid: 6f691d2b-68fa-43b2-9937-f0e2401e5628
+uuid: 2d7d123e-cea1-4fa1-a7ba-c53da0237e7e
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.news
-id: node.news.status
+    - node.type.webform
+id: node.webform.status
 field_name: status
 entity_type: node
-bundle: news
+bundle: webform
 label: Published
 description: ''
 required: false
