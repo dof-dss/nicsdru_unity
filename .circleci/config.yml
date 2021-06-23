@@ -136,7 +136,7 @@ jobs:
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
             # Site install for each multi site (un-comment as necessary).
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for site in uregni odscni fiscalcommissionni
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
               cd /home/circleci/project/web
@@ -220,7 +220,7 @@ jobs:
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
             # Site install for each multi site (un-comment as necessary).
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for site in uregni odscni fiscalcommissionni
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
               cd /home/circleci/project/web
@@ -238,7 +238,7 @@ jobs:
           command: |
             cd /home/circleci/project/web
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for site in uregni odscni fiscalcommissionni
             do
               ../vendor/bin/drush -l $site st | grep "Drupal bootstrap : Successful"
             done
@@ -281,8 +281,11 @@ jobs:
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
 
-            # Need to re-build Uregni theme with any Unity changes.
-            cd web/sites/uregni/themes/uregni_theme
+            # Need to re-build site theme with any Unity changes.
+            # for site in uregni liofa fictcommission
+            for site in uregni odscni fiscalcommissionni
+            do
+            cd web/sites/$site/themes/$site_theme
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
@@ -292,13 +295,14 @@ jobs:
             sudo apt install automake
             sudo apt install libjpeg-dev
 
-            # Build Uregni theme.
+            # Build site themes.
             npm install
             npm rebuild node-sass
             npm run build
 
             git add *.css
-            git commit -m "Uregni theme rebuild"
+            git commit -m "$site theme rebuild"
+            done
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
@@ -382,6 +386,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Clear cache before config import
           command: |
@@ -392,6 +397,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
@@ -402,6 +408,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Force purge of Solr index
           command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
