@@ -90,6 +90,8 @@ module:
   responsive_image: 0
   scheduled_transitions: 0
   search: 0
+  search_api: 0
+  search_api_db: 0
   simplei: 0
   structure_sync: 0
   system: 0
