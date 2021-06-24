@@ -37,6 +37,8 @@ relationships:
   hatecrimereviewni: 'db:hatecrimereviewni'
   fiscalcommissionni: 'db:fiscalcommissionni'
   nifiscalcouncil: 'db:nifiscalcouncil'
+  niauditoffice: 'db:niauditoffice'
+  niauditoffice_solr: 'solr:niauditoffice'
 
 # The size of the persistent disk of the application (in MB).
 disk: 20480
@@ -75,7 +77,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni
+    for site in uregni odscni fiscalcommissionni niauditoffice
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -151,12 +153,9 @@ crons:
   odscni:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/odscni ; drush core-cron'
-  attorneygeneralni:
+  fiscalcommissionni:
     spec: '*/5 * * * *'
-    cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
-  employmenttribunalsni:
+    cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
+  niauditoffice:
     spec: '*/5 * * * *'
-    cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
-  hatecrimereviewni:
-    spec: '*/5 * * * *'
-    cmd: 'cd web/sites/hatecrimereviewni ; drush core-cron'
+    cmd: 'cd web/sites/niauditoffice ; drush core-cron'

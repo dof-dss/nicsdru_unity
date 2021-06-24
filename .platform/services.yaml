@@ -19,6 +19,7 @@ db:
       - hatecrimereviewnidb
       - fiscalcommissionnidb
       - nifiscalcouncildb
+      - niauditofficedb
     endpoints:
       fictcommission:
         default_schema: fictcommissiondb
@@ -56,6 +57,10 @@ db:
         default_schema: nifiscalcouncildb
         privileges:
           nifiscalcouncildb: admin
+      niauditoffice:
+        default_schema: niauditofficedb
+        privileges:
+          niauditofficedb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
@@ -65,14 +70,17 @@ solr:
     cores:
       uregni_index:
         conf_dir: !archive "solr_config/"
-#     fictcommission_index:
-#       conf_dir: !archive "solr_config/"
+      niauditoffice_index:
+        conf_dir: !archive "solr_config/"
+      #     fictcommission_index:
+      #       conf_dir: !archive "solr_config/"
     endpoints:
       uregni:
         core: uregni_index
+      niauditoffice:
+        core: niauditoffice_index
 #     fictcommission:
 #       core: fictcommission_index
-
 
 redis:
   type: redis:6.0

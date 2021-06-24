@@ -1,0 +1,37 @@
+uuid: 7e243c09-a7d3-4aea-93a0-ce61df6b8703
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_photo
+    - field.field.node.news.field_published_date
+    - field.field.node.news.field_teaser
+    - node.type.news
+  module:
+    - datetime
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  field_published_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_meta_tags: true
+  field_news_photo: true
+  field_teaser: true
+  langcode: true
+  links: true
