@@ -1,11 +1,10 @@
-uuid: 516426fb-db9a-4686-8369-33ed01e73b7e
+uuid: 2de933df-a4a1-47a9-9674-549ed617144b
 langcode: en
 status: true
 dependencies:
   module:
     - metatag
     - node
-_core:
 id: node.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
