@@ -1,16 +1,15 @@
-uuid: eb9f5e91-5962-4809-a18d-1e96ea93b087
+uuid: 950e8ad6-acf1-4f6c-b65f-852048f47cc0
 langcode: und
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.body
-field_name: body
+id: node.field_enable_toc
+field_name: field_enable_toc
 entity_type: node
-type: text_with_summary
+type: boolean
 settings: {  }
-module: text
+module: core
 locked: false
 cardinality: 1
 translatable: true
