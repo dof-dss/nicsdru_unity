@@ -80,6 +80,33 @@ process:
     -
       plugin: get
       source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: filter_absolute_links
+      replace_urls:
+        http://www.niauditoffice.gov.uk
+        https://www.niauditoffice.gov.uk
+        http://test-niao.nigov.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/niao/files
+      to_ref: files/niauditoffice
+    -
+      plugin: site_files_filter
+      from_ref: sites/niauditoffice.gov.uk/files
+      to_ref: files/niauditoffice
+  body/0/format:
+    -
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
   field_publication_type:
     -
       plugin: get
@@ -94,7 +121,7 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: Y-m-d
           source: value
-  field_publication_image:
+  field_niao_publication_image:
     -
       plugin: sub_process
       source: field_publication_image
