@@ -1,16 +1,16 @@
-uuid: 59480bcb-f8d3-4805-bcd5-56c93d75cb95
+uuid: 0e3df771-f174-43a6-a9af-ead9a73cee94
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_meta_tags
-    - node.type.news
+    - node.type.webform
   module:
     - metatag
-id: node.news.field_meta_tags
+id: node.webform.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
-bundle: news
+bundle: webform
 label: 'Meta tags'
 description: ''
 required: false

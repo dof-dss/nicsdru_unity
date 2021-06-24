@@ -46,6 +46,7 @@ if (!empty($subsite_id)) {
   // Convert it to uppercase as that's our format for ENV vars
   // eg: UREGNI_GOOGLE_MAP_API_KEY.
   $site_id = strtoupper($subsite_id);
+  $settings['subsite_id'] = $site_id;
 
   // Geolocation/geocoder API keys.
   $config['geolocation_google_maps.settings']['google_map_api_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_KEY');

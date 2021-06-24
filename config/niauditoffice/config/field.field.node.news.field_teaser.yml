@@ -1,20 +1,18 @@
-uuid: 7a859b69-727f-4a67-bef5-8f743d0628e3
+uuid: 96617b99-adf0-4b3c-8fea-848b26f4fc8d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_teaser
     - node.type.news
-_core:
-  default_config_hash: 1FsJzihApN0_v47zULsftJea1AD2-XwJVE7XzbgssC4
 id: node.news.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: news
 label: Teaser
-description: 'Enter some short teaser text for this news item. This can be displayed on the site home page.'
+description: 'Enter some short teaser text for this news item. This will be used to link to this page on other pages on this site.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

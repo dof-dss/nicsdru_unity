@@ -1,17 +1,17 @@
-uuid: f8b54734-6816-4eac-83db-0cb27f62179f
-langcode: und
+uuid: df99e5a6-75f4-440d-8b54-2b3e92fb066d
+langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_published_date
-field_name: field_published_date
+    - webform
+id: node.field_webform
+field_name: field_webform
 entity_type: node
-type: datetime
+type: webform
 settings:
-  datetime_type: date
-module: datetime
+  target_type: webform
+module: webform
 locked: false
 cardinality: 1
 translatable: true
