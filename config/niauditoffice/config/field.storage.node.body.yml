@@ -1,12 +1,10 @@
-uuid: 250c919a-4ac3-48a1-b9af-bda4ca7ebe89
-langcode: en
+uuid: eb9f5e91-5962-4809-a18d-1e96ea93b087
+langcode: und
 status: true
 dependencies:
   module:
     - node
     - text
-_core:
-  default_config_hash: EBUo7qOWqaiZaQ_RC9sLY5IoDKphS34v77VIHSACmVY
 id: node.body
 field_name: body
 entity_type: node
@@ -17,5 +15,5 @@ locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
-persist_with_no_fields: true
+persist_with_no_fields: false
 custom_storage: false

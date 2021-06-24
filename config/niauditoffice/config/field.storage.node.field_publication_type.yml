@@ -1,18 +1,55 @@
-uuid: 1291e798-91be-476a-b238-cdb12469fc5f
-langcode: en
+uuid: 398010fd-e657-411a-aefc-451fad3b433b
+langcode: und
 status: true
 dependencies:
   module:
     - node
     - options
-_core:
-  default_config_hash: KE7Z4urHN3XEgnoVtWjM_bU7i7TpMN1alfJNkbrJZ00
 id: node.field_publication_type
 field_name: field_publication_type
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: consultation
+      label: 'Consultation - Code of Audit Practice'
+    -
+      value: financialAudit
+      label: 'Financial Auditing and Reporting'
+    -
+      value: goodPractice
+      label: 'Good Practice'
+    -
+      value: localGover
+      label: 'Local Government Annual Reports'
+    -
+      value: valueForMoney
+      label: 'Value for Money'
+    -
+      value: workInProgress
+      label: 'Work in Progress'
+    -
+      value: Financial
+      label: Financial
+    -
+      value: FinancialAuditHealthSocialCareReports
+      label: 'Financial Audit - Health and Social Care Reports'
+    -
+      value: FinancialAuditOtherPublications
+      label: 'Financial Audit - Other Publications'
+    -
+      value: LocalGovernmentOtherReports
+      label: 'Local Government - Other Reports'
+    -
+      value: LocalGovernmentPublicInterestReports
+      label: 'Local Government - Public Interest Reports'
+    -
+      value: localgov
+      label: 'Local Government'
+    -
+      value: other
+      label: Other
   allowed_values_function: ''
 module: options
 locked: false

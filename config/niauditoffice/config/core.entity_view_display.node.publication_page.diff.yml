@@ -1,0 +1,92 @@
+uuid: 5f9b062d-82ec-4938-aee6-6ce24f0d851e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_meta_tags
+    - field.field.node.publication_page.field_niao_publication_image
+    - field.field.node.publication_page.field_publication_date
+    - field.field.node.publication_page.field_publication_type
+    - node.type.publication_page
+  module:
+    - datetime
+    - field_group
+    - layout_builder
+    - metatag
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_a:
+      children:
+        - field_publication_type
+        - field_meta_tags
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.publication_page.diff
+targetEntityType: node
+bundle: publication_page
+mode: diff
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_meta_tags:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_niao_publication_image:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_publication_date:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_publication_type:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
