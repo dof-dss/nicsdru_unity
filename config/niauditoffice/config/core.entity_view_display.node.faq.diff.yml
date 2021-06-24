@@ -1,0 +1,68 @@
+uuid: cf671b51-e79d-47ff-b727-a19265682b09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.faq.field_faq
+    - field.field.node.faq.field_meta_tags
+    - node.type.faq
+  module:
+    - faqfield
+    - field_group
+    - layout_builder
+    - metatag
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_meta_tags
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.faq.diff
+targetEntityType: node
+bundle: faq
+mode: diff
+content:
+  field_faq:
+    weight: 0
+    label: hidden
+    settings:
+      active: 0
+      heightStyle: auto
+      collapsible: true
+      event: click
+      animate:
+        duration: 200
+        easing: linear
+    third_party_settings: {  }
+    type: faqfield_accordion
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true

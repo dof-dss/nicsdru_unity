@@ -1,16 +1,16 @@
-uuid: 3c6444aa-c27f-4322-bc67-6dabefc7ef7f
+uuid: 0596ca64-91fe-44ee-81de-12174497b5dd
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-_core:
-  default_config_hash: QBkSJ4W84RYS3M4L1pWJIlsD3ujTJRB-U06WPRNelKw
-id: node.field_toc_enable
-field_name: field_toc_enable
+id: node.field_news_photo
+field_name: field_news_photo
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1
