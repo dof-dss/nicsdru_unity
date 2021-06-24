@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\file\FileInterface;
 use Drupal\media\MediaInterface;
 use Drupal\views\ViewExecutable;
@@ -150,5 +151,20 @@ function unity_common_preprocess_image_formatter(array &$variables) {
         'library' => 'nicsdru_unity_theme/media_library_styles',
       ],
     ];
+  }
+}
+
+/**
+ * Implements hook_config_ignore_settings_alter().
+ */
+function unity_common_config_ignore_settings_alter(array &$settings) {
+  // This hook is called just before config is imported (as long as this module
+  // and the 'config ignore' module are installed) and is even invoked when there
+  // are no config changes to import.
+  // The code in UpdateConfigAfterImport will then ensure that the Google Analytics
+  // key is overwritten during config import.
+  if (Settings::get('subsite_id')) {
+    $config_update_service = \Drupal::service('unity_common.update_config_from_environment');
+    $config_update_service->updateApiKey('google_analytics.settings', 'account', Settings::get('subsite_id') . '_GOOGLE_ANALYTICS_KEY');
   }
 }
