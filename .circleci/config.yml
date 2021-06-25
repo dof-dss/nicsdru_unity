@@ -140,7 +140,7 @@ jobs:
             cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
             # >> Workaround to install from config; can't yet due to issue in Drupal core.
             sed -i -e "s/origins:/minimal:/g" ../config/$site/config/core.extension.yml
-            sed -i -e "s/profile: origins/profile: minimal/g" ../config/$site/config/core.extension.yml
+            sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
             # Install Drupal (or restore from DB dump at this point).
             mysql -h 127.0.0.1 -u root -e "create schema $site"
             cd sites/$site
