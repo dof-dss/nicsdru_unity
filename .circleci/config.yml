@@ -286,9 +286,9 @@ jobs:
 
             # Need to re-build site theme with any Unity changes.
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for site in uregni/themes/uregni_theme odscni/theme/odscni_theme fiscalcommissionni/themes/fiscalcommissionni_theme
             do
-            cd web/sites/$site/themes/$site<<parameter.theme>>
+            cd web/sites/$theme
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
