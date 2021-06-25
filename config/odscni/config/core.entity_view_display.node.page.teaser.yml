@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_metatag
+    - field.field.node.page.field_next_audit_due
     - node.type.page
   module:
     - text
@@ -36,4 +37,5 @@ content:
 hidden:
   content_moderation_control: true
   field_metatag: true
+  field_next_audit_due: true
   langcode: true
