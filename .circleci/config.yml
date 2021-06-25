@@ -104,7 +104,7 @@ jobs:
       - image: circleci/php:7.4.15-apache-browsers
       - image: circleci/mysql:5.7.27
         environment:
-          - CONFIG_SYNC_DIRECTORY: "../config/odscni/config"
+          - CONFIG_SYNC_DIRECTORY: "../config/uregni/config"
     steps:
       - attach_workspace:
           at: ./
@@ -136,7 +136,7 @@ jobs:
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
             # Site install for each multi site (un-comment as necessary).
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for site in uregni odscni fiscalcommissionni
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
               cd /home/circleci/project/web
