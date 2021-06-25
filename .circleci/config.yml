@@ -308,26 +308,26 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
 
             # Need to re-build site theme with any Unity changes.
-            # for theme in uregni/theme/uregni_theme liofa/theme/liofa_theme
-            for theme in uregni/themes/uregni_theme odscni/themes/odscni_theme fiscalcommissionni/theme/fiscalcommissionni_theme
+            # for site in uregni liofa fictcommission
+            for site in uregni
             do
-            cd web/sites/$theme
-            sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
+              cd web/sites/$site/themes/uregni_theme
+              sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
-            # Download and configure node and npm.
-            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-            sudo apt install nodejs
-            #sudo apt install npm
-            sudo apt install automake
-            sudo apt install libjpeg-dev
+              # Download and configure node and npm.
+              curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+              sudo apt install nodejs
+              #sudo apt install npm
+              sudo apt install automake
+              sudo apt install libjpeg-dev
+  
+              # Build site themes.
+              npm install
+              npm rebuild node-sass
+              npm run build
 
-            # Build site themes.
-            npm install
-            npm rebuild node-sass
-            npm run build
-
-            git add *.css
-            git commit -m "$theme rebuild"
+              git add *.css
+              git commit -m "$site rebuild"
             done
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
