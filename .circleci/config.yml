@@ -104,7 +104,7 @@ jobs:
       - image: circleci/php:7.4.15-apache-browsers
       - image: circleci/mysql:5.7.27
         environment:
-          - CONFIG_SYNC_DIRECTORY: "../config/uregni/config"
+          - CONFIG_SYNC_DIRECTORY: "../config/odscni/config"
     steps:
       - attach_workspace:
           at: ./
