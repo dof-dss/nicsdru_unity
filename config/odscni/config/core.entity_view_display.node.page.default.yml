@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_metatag
+    - field.field.node.page.field_next_audit_due
     - node.type.page
   module:
     - text
@@ -16,7 +17,7 @@ mode: default
 content:
   body:
     label: hidden
-    weight: 1
+    weight: 0
     type: text_default
     settings: {  }
     third_party_settings: {  }
@@ -29,5 +30,6 @@ content:
 hidden:
   content_moderation_control: true
   field_metatag: true
+  field_next_audit_due: true
   langcode: true
   links: true
