@@ -134,15 +134,16 @@ jobs:
             cp sites/default/default.services.yml sites/default/services.yml
             # Copy PHPUnit config into core folder.
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
+
             # for site in uregni as it uses a different install profile (origins).
             # Copy in our environment specific settings to the selected multi site settings.php file.
             cd /home/circleci/project/web
-            cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
+            cp /home/circleci/project/.circleci/drupal.settings.php sites/uregni/settings.local.php
             # >> Workaround to install from config; can't yet due to issue in Drupal core.
-            sed -i -e "s/origins:/minimal:/g" ../config/$site/config/core.extension.yml
+            sed -i -e "s/origins:/minimal:/g" ../config/uregni/config/core.extension.yml
             sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
             # Install Drupal (or restore from DB dump at this point).
-            mysql -h 127.0.0.1 -u root -e "create schema $site"
+            mysql -h 127.0.0.1 -u root -e "create schema uregni"
             cd sites/$site
             ../../../vendor/bin/drush site-install -y --existing-config
 
@@ -230,16 +231,29 @@ jobs:
             cp sites/default/default.services.yml sites/default/services.yml
             # Copy PHPUnit config into core folder.
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
+
+            # for site in uregni as it uses a different install profile (origins).
+            # Copy in our environment specific settings to the selected multi site settings.php file.
+            cd /home/circleci/project/web
+            cp /home/circleci/project/.circleci/drupal.settings.php sites/uregni/settings.local.php
+            # >> Workaround to install from config; can't yet due to issue in Drupal core.
+            sed -i -e "s/origins:/minimal:/g" ../config/uregni/config/core.extension.yml
+            sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
+            # Install Drupal (or restore from DB dump at this point).
+            mysql -h 127.0.0.1 -u root -e "create schema uregni"
+            cd sites/$site
+            ../../../vendor/bin/drush site-install -y --existing-config
+
             # Site install for each multi site (un-comment as necessary).
             # for site in uregni liofa fictcommission
-            for site in uregni odscni fiscalcommissionni
+            for site in odscni fiscalcommissionni
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
               cd /home/circleci/project/web
               cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
               # >> Workaround to install from config; can't yet due to issue in Drupal core.
-              sed -i -e "s/origins:/minimal:/g" ../config/$site/config/core.extension.yml
-              sed -i -e "s/profile: origins/profile: minimal/g" ../config/$site/config/core.extension.yml
+              sed -i -e "s/nicsdru_unity_profile:/minimal:/g" ../config/$site/config/core.extension.yml
+              sed -i -e "s/profile: nicsdru_unity_profile/profile: minimal/g" ../config/$site/config/core.extension.yml
               # Install Drupal (or restore from DB dump at this point).
               mysql -h 127.0.0.1 -u root -e "create schema $site"
               cd sites/$site
