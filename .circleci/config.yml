@@ -273,7 +273,7 @@ jobs:
           name: Re-point dof-dss packages to use latest development code and push.
           command: |
             cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
+            git checkout -b D8UN-edge-msd
 
             composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
               dof-dss/nicsdru_origins_profile:dev-development
@@ -306,16 +306,16 @@ jobs:
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
-            git push -f origin $EDGE_BUILD_BRANCH
+            git push -f origin D8UN-edge-msd
 
             # Pause for webhook to propagate the change from GH to PSH.
             sleep 10s
       - run:
           name: Activate the environment if not found.
           command: |
-            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
-              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
-              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q D8UN-edge-msd; then
+              echo "No active environment for D8UN-edge-msd found, attempt to activate one."
+              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd -y
             fi
 
   # Nightly edge build deployment
@@ -329,7 +329,7 @@ jobs:
           name: Switch to edge build branch
           command: |
             cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
+            git checkout -b D8UN-edge-msd
       - run:
           name: Install dev versions of dof-dss packages with composer.
           command: |
@@ -350,7 +350,7 @@ jobs:
           name: Checkout edge branch
           command: |
             cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
+            git checkout -b D8UN-edge-msd
       - install_php_os_extensions
       - run:
           name: Add extra OS and PHP extensions/config
@@ -368,57 +368,57 @@ jobs:
       - run:
           name: Trigger a data sync from master environment to nightly edge build.
           command: |
-            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd -y
       - run:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
             sleep 90s
-            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd -y
           when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l odscni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l liofa'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
       - run:
           name: Clear cache before config import
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l odscni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l liofa'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cr -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l odscni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l liofa'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'cim -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
       - run:
           name: Force purge of Solr index
-          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
       - run:
           name: Rebuild the Solr index
           command: |
-            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
 
   # Rebuild solr on each deployment.
   deploy_solr_rebuild:
@@ -443,14 +443,14 @@ jobs:
             curl -sS https://platform.sh/cli/installer | php
       - run:
           name: Force purge of Solr index
-          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
       - run:
           name: Rebuild the Solr index
           command: |
-            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
+            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e D8UN-edge-msd
           no_output_timeout: 30m
 
 workflows:
@@ -491,14 +491,6 @@ workflows:
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
-    triggers:
-      - schedule:
-          # At 00:30 Monday to Friday
-          cron: "30 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
     jobs:
       - build
       - unity_edge_build:
