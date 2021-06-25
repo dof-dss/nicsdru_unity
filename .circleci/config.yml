@@ -254,7 +254,7 @@ jobs:
     parameters:
       theme:
         type: string
-        default: "_theme"
+        default: "-theme"
     steps:
       - attach_workspace:
           at: ./
