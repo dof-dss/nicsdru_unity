@@ -136,7 +136,7 @@ jobs:
             cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
             # Site install for each multi site (un-comment as necessary).
             # for site in uregni liofa fictcommission
-            for site in odscni
+            for site in fiscalcommissionni
             do
               # Copy in our environment specific settings to the selected multi site settings.php file.
               cd /home/circleci/project/web
