@@ -285,7 +285,7 @@ jobs:
             # for site in uregni liofa fictcommission
             for site in uregni odscni fiscalcommissionni
             do
-            cd web/sites/$site/themes/$site_theme
+            cd web/sites/$site/themes/[$site, '-theme']
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
