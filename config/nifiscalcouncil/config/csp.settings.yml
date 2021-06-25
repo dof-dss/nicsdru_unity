@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: rl8AmIE0lzl5PrOA9RVmIqZUeqKyCtNmOhaQMJaRQoE
 report-only:
   enable: true
   directives:
@@ -21,13 +23,17 @@ report-only:
       base: self
     img-src:
       sources:
+        - 'https://translate.google.com'
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
         - 'https://cdn.jsdelivr.net'
         - 'https://i.ytimg.com'
+        - 'https://www.gstatic.com'
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
+      base: self
+    manifest-src:
       base: self
     script-src:
       sources:
@@ -101,5 +107,3 @@ enforce:
     block-all-mixed-content: true
   reporting:
     plugin: sitelog
-_core:
-  default_config_hash: rl8AmIE0lzl5PrOA9RVmIqZUeqKyCtNmOhaQMJaRQoE
