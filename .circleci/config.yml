@@ -253,8 +253,7 @@ jobs:
       GIT_AUTHOR_NAME: "Circle CI"
     parameters:
       theme:
-        type: string
-        default: "-theme"
+        default: "_theme"
     steps:
       - attach_workspace:
           at: ./
@@ -289,7 +288,7 @@ jobs:
             # for site in uregni liofa fictcommission
             for site in uregni
             do
-            cd web/sites/$site/themes/uregni_theme
+            cd web/sites/$site/themes/$site<<parameter.theme>>
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
