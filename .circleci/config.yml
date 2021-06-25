@@ -253,8 +253,8 @@ jobs:
       GIT_AUTHOR_NAME: "Circle CI"
     parameters:
       theme:
-        default: "_theme"
         type: string
+        default: _theme
     steps:
       - attach_workspace:
           at: ./
