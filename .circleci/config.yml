@@ -308,10 +308,10 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
 
             # Need to re-build site theme with any Unity changes.
-            # for site in uregni liofa fictcommission
-            for site in uregni odscni fiscalcommissionni
+            # for theme in uregni/theme/uregni_theme liofa/theme/liofa_theme
+            for theme in uregni/themes/uregni_theme odscni/themes/odscni_theme fiscalcommissionni/theme/fiscalcommissionni_theme
             do
-            cd web/sites/$site/themes/$site_theme
+            cd web/sites/$theme
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
@@ -327,7 +327,7 @@ jobs:
             npm run build
 
             git add *.css
-            git commit -m "$site theme rebuild"
+            git commit -m "$theme rebuild"
             done
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
@@ -441,7 +441,7 @@ jobs:
       - run:
           name: Rebuild the Solr index
           command: |
-            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
@@ -473,7 +473,7 @@ jobs:
       - run:
           name: Rebuild the Solr index
           command: |
-            # /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            /home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
