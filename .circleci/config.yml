@@ -251,10 +251,6 @@ jobs:
       EMAIL: "circleci@localhost"
       GIT_COMMITTER_NAME: "Circle CI"
       GIT_AUTHOR_NAME: "Circle CI"
-    parameters:
-      theme:
-        type: string
-        default: _theme
     steps:
       - attach_workspace:
           at: ./
@@ -275,6 +271,10 @@ jobs:
             curl -sS https://platform.sh/cli/installer | php
       - run:
           name: Re-point dof-dss packages to use latest development code and push.
+          parameters:
+            theme:
+              type: string
+              default: "-theme"
           command: |
             cd ~/project
             git checkout -b D8UN-edge-msd
@@ -287,9 +287,9 @@ jobs:
 
             # Need to re-build site theme with any Unity changes.
             # for site in uregni liofa fictcommission
-            for site in uregni
+            for theme in uregni/themes/uregni_theme
             do
-            cd web/sites/$site/themes/$site<<parameters.theme>>
+            cd web/sites/$theme
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
