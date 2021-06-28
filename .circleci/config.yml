@@ -286,7 +286,7 @@ jobs:
 
             # Need to re-build site theme with any Unity changes.
             # for site in uregni liofa fictcommission
-            for theme in fiscalcommissionni/themes/fiscalcommissionni_theme
+            for theme in fiscalcommissionni/themes/fiscalcommissionni_theme uregni/themes/uregni_theme
             do
             cd web/sites/$theme
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
@@ -304,8 +304,8 @@ jobs:
             npm run build
 
             git add *.css
-            git commit -m "$site theme rebuild"
             done
+            git commit -m "$site theme rebuild"
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
