@@ -13,6 +13,8 @@ dependencies:
   module:
     - content_moderation
     - datetime
+    - media_library
+    - media_library_edit
     - metatag
     - path
     - text
@@ -47,12 +49,11 @@ content:
   field_niao_publication_image:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_publication_date:
     weight: 2

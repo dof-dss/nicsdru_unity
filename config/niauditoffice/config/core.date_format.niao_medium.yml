@@ -1,0 +1,8 @@
+uuid: 5172a465-2c32-4910-9026-e56bf6a2fa46
+langcode: en
+status: true
+dependencies: {  }
+id: niao_medium
+label: 'NIAO medium'
+locked: false
+pattern: 'd F Y'

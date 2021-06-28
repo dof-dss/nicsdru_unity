@@ -1,0 +1,25 @@
+uuid: c773dca7-ffc2-4693-be10-07f6bd031a93
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - nifiscalcouncil_theme
+id: mainmenu
+theme: nifiscalcouncil_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
