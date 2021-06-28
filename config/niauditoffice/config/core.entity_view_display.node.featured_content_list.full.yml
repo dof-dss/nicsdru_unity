@@ -31,6 +31,7 @@ content:
     type: entity_reference_entity_view
     region: content
 hidden:
+  content_moderation_control: true
   field_tags: true
   langcode: true
   links: true
