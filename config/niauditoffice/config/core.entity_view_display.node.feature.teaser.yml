@@ -1,6 +1,6 @@
 uuid: a0bc344f-5580-4872-8b5a-378a626c54c2
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.feature.field_teaser
     - node.type.feature
   module:
+    - link
     - user
 _core:
   default_config_hash: L_CZCugYfpEt0UscmGqRgKufHXunYwF0iylAuLj9dMQ
@@ -17,19 +18,37 @@ targetEntityType: node
 bundle: feature
 mode: teaser
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
+  field_link_url:
+    type: link
+    weight: 2
     region: content
-  links:
-    weight: 100
-    settings: {  }
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
+  field_photo:
+    type: entity_reference_entity_view
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_teaser:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
-  field_link_url: true
-  field_photo: true
-  field_teaser: true
+  content_moderation_control: true
   langcode: true
+  links: true
   search_api_excerpt: true
