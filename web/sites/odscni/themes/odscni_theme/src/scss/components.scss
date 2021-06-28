@@ -52,6 +52,14 @@
   .menu-main_sub {
     .menu-item {
       background: lighten($menu-background, 30%);
+
+      span.active {
+        padding-left: 2rem;
+
+        @media screen and (max-width: $tab) {
+          padding-left: 2%;
+        }
+      }
     }
   }
 }

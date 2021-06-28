@@ -1,4 +1,4 @@
-uuid: d280a5ab-2cf5-49e2-8ff8-259d15bf66cb
+uuid: 59480bcb-f8d3-4805-bcd5-56c93d75cb95
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.news
   module:
     - metatag
-_core:
-  default_config_hash: N4ifpekUhQVgounHS0ixrnuJUw1vpzLkOSQLOSSCpvA
 id: node.news.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
