@@ -291,7 +291,7 @@ jobs:
             # for site in uregni liofa fictcommission
             for theme in <<parameters.sites>>
             do
-            cd web/sites/$theme/themes/<<parameters.sites>>_<<parameters.theme>>
+            cd web/sites/$theme/themes/$theme_<<parameters.theme>>
             sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
             # Download and configure node and npm.
