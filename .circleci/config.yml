@@ -308,10 +308,10 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
 
             # Need to re-build site theme with any Unity changes.
-            # for theme in uregni/themes/uregni_theme liofa/themes/liofa_theme fictcommission/themes/fictcommission_theme
-            for theme in uregni/themes/uregni_theme odscni/themes/odscni_theme fiscalcommissionni/themes/fiscalcommissionni_theme
+            # for site in uregni liofa fictcommission
+            for site in uregni odscni fiscalcommissionni
             do
-              cd web/sites/$theme
+              cd web/sites/$site/themes/*theme
               sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
               # Download and configure node and npm.
