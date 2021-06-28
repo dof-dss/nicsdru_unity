@@ -46,6 +46,7 @@ if (!empty($subsite_id)) {
   // Convert it to uppercase as that's our format for ENV vars
   // eg: UREGNI_GOOGLE_MAP_API_KEY.
   $site_id = strtoupper($subsite_id);
+  $settings['subsite_id'] = $site_id;
 
   // Geolocation/geocoder API keys.
   $config['geolocation_google_maps.settings']['google_map_api_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_KEY');
@@ -68,9 +69,9 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
 
   // Environment specific settings and services.
   switch (getenv('PLATFORM_BRANCH')) {
-    case 'master':
+    case 'main':
       // De-facto production settings.
-      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../services.yml';
       break;
 
     case 'D8UN-edge':

@@ -1,0 +1,18 @@
+uuid: 35fdc37b-d02b-4e0c-8013-0cbf66b96fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.staff_member
+id: node.staff_member.title
+field_name: title
+entity_type: node
+bundle: staff_member
+label: 'Member name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
