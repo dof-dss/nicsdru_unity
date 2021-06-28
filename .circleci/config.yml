@@ -308,10 +308,10 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
 
             # Need to re-build site theme with any Unity changes.
-            # for site in uregni liofa fictcommission
-            for site in uregni
+            # for theme in uregni/themes/uregni_theme liofa/themes/liofa_theme fictcommission/themes/fictcommission_theme
+            for theme in uregni/themes/uregni_theme odscni/themes/odscni_theme fiscalcommissionni/themes/fiscalcommissionni_theme
             do
-              cd web/sites/$site/themes/uregni_theme
+              cd web/sites/$theme
               sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
 
               # Download and configure node and npm.
@@ -320,14 +320,15 @@ jobs:
               #sudo apt install npm
               sudo apt install automake
               sudo apt install libjpeg-dev
-  
+
               # Build site themes.
               npm install
               npm rebuild node-sass
               npm run build
 
               git add *.css
-              git commit -m "$site rebuild"
+              git commit -m "Theme rebuild"
+              cd ~/project
             done
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
