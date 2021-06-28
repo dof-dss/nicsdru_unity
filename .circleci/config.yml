@@ -304,6 +304,7 @@ jobs:
             npm run build
 
             git add *.css
+            cd ../../
             done
             git commit -m "$site theme rebuild"
 
