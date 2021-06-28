@@ -28,6 +28,7 @@ permissions:
   - 'create files'
   - 'create image media'
   - 'create new books'
+  - 'create page content'
   - 'create remote_video media'
   - 'create video media'
   - 'delete all revisions'

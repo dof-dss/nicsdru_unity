@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_metatag
+    - field.field.node.page.field_next_audit_due
     - node.type.page
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - datetime
     - metatag
     - path
     - text
@@ -39,6 +41,17 @@ content:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_next_audit_due:
+    weight: 129
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  flag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
   langcode:
     type: language_select
