@@ -1,0 +1,20 @@
+uuid: ab67beee-02be-418f-832a-a43d56cfa993
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - niauditoffice_theme
+id: breadcrumbs
+theme: niauditoffice_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
