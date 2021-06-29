@@ -64,7 +64,7 @@
   }
 }
 
-#footer-menu {
+#footer #footer-menu {
   .menu {
     list-style: none;
 
@@ -72,10 +72,14 @@
       text-align: center;
     }
 
-    .menu-item {
+    li.menu-item {
       display: inline-block;
       padding: 0 .8rem 0 0;
       margin-right: .5rem;
+
+      a {
+        margin: 0;
+      }
     }
   }
 }
