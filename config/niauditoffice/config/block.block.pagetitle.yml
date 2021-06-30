@@ -2,6 +2,8 @@ uuid: f268d115-53ec-4a37-b77d-490358730c10
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - niauditoffice_theme
 id: pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: true
