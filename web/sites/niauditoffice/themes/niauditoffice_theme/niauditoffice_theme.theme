@@ -15,11 +15,11 @@ function niauditoffice_theme_theme_suggestions_views_view_alter(array &$suggesti
 }
 
 /**
-* Implements hook_theme_suggestions_HOOK_alter().
-*/
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function niauditoffice_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
   if (isset($variables['element']['#view_mode'])) {
-  $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
   }
 }
 
