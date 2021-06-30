@@ -1,0 +1,24 @@
+uuid: f268d115-53ec-4a37-b77d-490358730c10
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - niauditoffice_theme
+id: pagetitle
+theme: niauditoffice_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: true

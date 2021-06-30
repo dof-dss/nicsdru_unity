@@ -69,9 +69,9 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
 
   // Environment specific settings and services.
   switch (getenv('PLATFORM_BRANCH')) {
-    case 'master':
+    case 'main':
       // De-facto production settings.
-      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+      $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../services.yml';
       break;
 
     case 'D8UN-edge':

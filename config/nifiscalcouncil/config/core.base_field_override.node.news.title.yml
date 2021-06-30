@@ -10,7 +10,7 @@ id: node.news.title
 field_name: title
 entity_type: node
 bundle: news
-label: 'Main heading'
+label: Title
 description: ''
 required: true
 translatable: true

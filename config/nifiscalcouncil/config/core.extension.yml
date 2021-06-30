@@ -90,6 +90,8 @@ module:
   responsive_image: 0
   scheduled_transitions: 0
   search: 0
+  search_api: 0
+  search_api_db: 0
   simplei: 0
   structure_sync: 0
   system: 0
@@ -126,6 +128,7 @@ theme:
   stable: 0
   adminimal_theme: 0
   nicsdru_unity_theme: 0
+  nifiscalcouncil_theme: 0
 profile: nicsdru_unity_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
