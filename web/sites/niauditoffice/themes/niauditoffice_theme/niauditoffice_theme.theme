@@ -27,8 +27,6 @@ function niauditoffice_theme_theme_suggestions_field_alter(array &$suggestions, 
  * Implements hook_preprocess_page().
  */
 function niauditoffice_theme_preprocess_page(&$variables) {
-  // Initially set the new variable for search pages to False.
-  $variables['search_page'] = FALSE;
   // A list of search page titles on the Uregni site.
   $search_pages = [
     'News',
@@ -36,12 +34,8 @@ function niauditoffice_theme_preprocess_page(&$variables) {
     'Search',
   ];
 
-  // If a search page set the variable to true.
-  foreach ($search_pages as $search_page) {
-    if ($variables['page']['#title'] == $search_page) {
-      $variables['search_page'] = TRUE;
-    }
-  }
+  $variables['search_page'] = in_array($variables['page']['#title'], $search_pages);
+
 }
 
 /**
@@ -52,7 +46,7 @@ function niauditoffice_theme_theme_suggestions_views_view_unformatted_alter(arra
   $search_pages = [
     'consultations_search_page',
     'publication_search_page',
-    'news_page_search',
+    'news_search_page',
     'search_page',
   ];
 
