@@ -309,7 +309,7 @@ jobs:
 
             # Need to re-build site theme with any Unity changes.
             # for site in uregni liofa fictcommission
-            for site in uregni odscni fiscalcommissionni niauditoffice
+            for site in uregni odscni fiscalcommissionni
             do
               cd web/sites/$site/themes/*theme
               sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
@@ -414,7 +414,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            # /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Clear cache before config import
           command: |
@@ -426,7 +426,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cr -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            # /home/circleci/.platformsh/bin/platform drush 'cr -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
@@ -438,7 +438,7 @@ jobs:
             /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
             /home/circleci/.platformsh/bin/platform drush 'cim -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            # /home/circleci/.platformsh/bin/platform drush 'cim -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
       - run:
           name: Force purge of Solr index
           command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
