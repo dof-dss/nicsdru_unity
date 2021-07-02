@@ -29,8 +29,8 @@ content:
       answer_widget: text_format
       question_title: Question
       answer_title: Answer
-      question_field_required: false
-      answer_field_required: false
+      question_field_required: true
+      answer_field_required: true
       advanced:
         question_length: 255
         question_size: 100
@@ -106,7 +106,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
