@@ -1,23 +1,18 @@
-uuid: 767638d3-70f6-4da7-af17-6f8221380297
+uuid: 1c95a7a1-94b8-4f3d-9598-08dcd4d90935
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform
-_core:
-  default_config_hash: Q4QShRpLvlheaOjtXj4lKYXCOGMiuBopVI6GYCCWRK8
+dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: null
+uid: 71
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: contact_us
+title: 'Contact us'
+description: ''
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "your_details:\n  '#type': fieldset\n  '#title': 'Your details'\n  '#description_display': invisible\n  name:\n    '#type': textfield\n    '#title': Name\n    '#placeholder': 'Please enter your name'\n    '#required': true\n  organisation:\n    '#type': textfield\n    '#title': Organisation\n    '#placeholder': 'Please enter your organisation'\n  email_address:\n    '#type': email\n    '#title': 'Email address'\n    '#placeholder': 'Please enter your email '\n    '#required': true\nyour_query:\n  '#type': fieldset\n  '#title': 'Your query'\n  '#description_display': invisible\n  nature_of_query:\n    '#type': select\n    '#title': 'Nature of query'\n    '#title_display': inline\n    '#options':\n      Complaints: Complaints\n      'Publication feedback': 'Publication feedback'\n      'Freedom of Information': 'Freedom of Information'\n      Whistleblowing: Whistleblowing\n      'General enquiries': 'General enquiries'\n    '#required': true\n  queries_or_comments:\n    '#type': textarea\n    '#title': 'Queries or comments'\n    '#maxlength': 750\n    '#placeholder': 'Plain text only, 750 characters maximum.'\n    '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -30,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -117,10 +112,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: 'Thank you for your submission.'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -132,16 +127,16 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
-  limit_user_message: ''
+  limit_user: 5
+  limit_user_interval: 86400
+  limit_user_message: 'Maximum submissions per user per day is 5. You have reached your maximum.'
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: none
-  purge_days: null
+  purge: completed
+  purge_days: 1
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
@@ -197,65 +192,28 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    label: 'Email confirmation'
+    label: Email
     notes: ''
-    handler_id: email_confirmation
+    handler_id: email
     status: true
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[current-user:mail]'
+      to_mail: test@test.com
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    notes: ''
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: '[webform_submission:values:email_address:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'Feedback form submission from: Contact us'
+      body: "Submitted on [webform_submission:created]<br />\r\nSubmitted values are:<br />\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -264,11 +222,11 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
-      parameters: {  }
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
