@@ -5,6 +5,7 @@
  * Functions to support theming in the niauditoffice_theme theme.
  */
 
+use Drupal\block\Entity\Block;
 use Drupal\Component\Utility\Html;
 
 /**
@@ -60,8 +61,16 @@ function niauditoffice_theme_theme_suggestions_views_view_unformatted_alter(arra
 
 /**
  * Implements hook_preprocess_block().
+ *
+ * Pass block region value to content so this can be used in
+ * niauditoffice_theme_theme_suggestions_menu_alter.
  */
 function niauditoffice_theme_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+
   // Check if the block is an exposed filter block.
   if ($variables['base_plugin_id'] == 'views_exposed_filter_block') {
     // Add search page name ensuring they are in the exposed block machine name.
@@ -78,6 +87,17 @@ function niauditoffice_theme_preprocess_block(&$variables) {
         $variables['search_page_name'] = $search_page;
       }
     }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_menu_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function niauditoffice_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
   }
 }
 
