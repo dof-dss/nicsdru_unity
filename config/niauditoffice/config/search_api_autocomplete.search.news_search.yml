@@ -1,6 +1,6 @@
 uuid: 6622027e-62d2-4fc5-a342-befc21c9f365
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - search_api.index.news_index

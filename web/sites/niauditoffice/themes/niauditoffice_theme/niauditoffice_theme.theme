@@ -6,6 +6,7 @@
  */
 
 use Drupal\block\Entity\Block;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_theme_suggestions_views_view_alter().
@@ -97,5 +98,18 @@ function niauditoffice_theme_preprocess_block(&$variables) {
 function niauditoffice_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
   if (isset($variables['attributes']['region'])) {
     $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function niauditoffice_theme_preprocess_form(array &$variables) {
+  switch ($variables['element']['#id']) {
+    case "views-exposed-form-publications-search-publication-search-page":
+    case "views-exposed-form-news-search-news-search-page":
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form');
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('search-form--page');
+      break;
   }
 }
