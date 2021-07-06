@@ -107,10 +107,13 @@ $brand-tertiary: color(brand-tertiary);
 $text: color('text');
 $headings: color(headings);
 
-$link: color(link);
-$link-hover: color(link-hover);
-$link-visited: color(link-visited);
-$link-active: color(link-active);
+$link: #0e6bb3 !default;
+$link-underline: color('charcoal') !default;
+$link-active: #0e6bb3 !default;
+$link-hover: #0e6bb3 !default;
+$link-hover-background: rgba(75%, 75%, 75%, .25) !default;
+$link-visited: #0e6bb3 !default;
+$link-visited-underline: #707070 !default;
 
 $border: color('border');
 

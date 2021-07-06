@@ -41,7 +41,7 @@ relationships:
   niauditoffice_solr: 'solr:niauditoffice'
 
 # The size of the persistent disk of the application (in MB).
-disk: 20480
+disk: 30720
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
