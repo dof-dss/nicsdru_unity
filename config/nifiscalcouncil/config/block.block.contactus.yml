@@ -1,0 +1,25 @@
+uuid: e9d8564b-c47a-48a2-8f9d-6e4918966c9d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:67257ad0-f172-4348-8745-931a230e09e5'
+  module:
+    - block_content
+  theme:
+    - nifiscalcouncil_theme
+id: contactus
+theme: nifiscalcouncil_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:67257ad0-f172-4348-8745-931a230e09e5'
+settings:
+  id: 'block_content:67257ad0-f172-4348-8745-931a230e09e5'
+  label: 'Contact us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
