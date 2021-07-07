@@ -73,6 +73,44 @@
   }
 }
 
+.webform-submission-form {
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #333;
+    }
+
+  input[type="submit"] {
+    background: $brand-primary none;
+    min-width: 13rem;
+    @include responsive-typo-map($normal-text);
+    border: 3px solid transparent;
+    color: #fff;
+    font-weight: normal;
+    text-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: .25em;
+    box-shadow: none;
+    margin: 1rem 0 0;
+    text-align: center;
+    padding: .6rem 1.6rem;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      background: $ash-grey;
+      outline: none;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &:focus {
+      border-color: $black;
+    }
+  }
+}
+
 .block-views-blocknews-search-news-latest-news {
   margin-bottom: 2rem;
 
