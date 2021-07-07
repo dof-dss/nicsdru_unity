@@ -12,7 +12,15 @@ expire: 300
 form_settings:
   user_register_form: false
   user_pass: false
-  feedback_contact_message_form: false
-  _contact_message_form: false
+  contact_message_feedback_form: false
+  contact_message_personal_form: false
+  node_faq_form: false
+  node_feature_form: false
+  node_featured_content_list_form: false
+  node_news_form: false
+  node_page_form: false
+  node_publication_page_form: false
+  node_staff_member_form: false
+  node_webform_form: false
 _core:
   default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw
