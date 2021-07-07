@@ -1,0 +1,25 @@
+uuid: 6622027e-62d2-4fc5-a342-befc21c9f365
+langcode: en
+status: false
+dependencies:
+  config:
+    - search_api.index.news_index
+    - views.view.news_search
+  module:
+    - views
+    - search_api_autocomplete
+id: news_search
+label: 'News search'
+index_id: news_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:news_search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

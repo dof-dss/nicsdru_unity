@@ -12,6 +12,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - metatag
     - text
     - user
 third_party_settings:
@@ -20,7 +21,8 @@ third_party_settings:
     enabled: false
   field_group:
     group_additional_content_details:
-      children: {  }
+      children:
+        - field_meta_tags
       parent_name: ''
       weight: 3
       format_type: html_element
@@ -65,8 +67,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
   langcode: true
   links: true

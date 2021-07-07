@@ -1,0 +1,28 @@
+uuid: 70e348ab-267c-4e9e-98bf-ec754497ddc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.news_date_facet
+  module:
+    - facets
+    - system
+  theme:
+    - niauditoffice_theme
+id: date
+theme: niauditoffice_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:news_date_facet'
+settings:
+  id: 'facet_block:news_date_facet'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: date
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false

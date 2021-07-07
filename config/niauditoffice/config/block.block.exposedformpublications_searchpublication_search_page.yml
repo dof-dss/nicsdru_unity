@@ -1,0 +1,28 @@
+uuid: 61c28689-0ee0-4fed-b143-862af8080ea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications_search
+  module:
+    - system
+    - views
+  theme:
+    - niauditoffice_theme
+id: exposedformpublications_searchpublication_search_page
+theme: niauditoffice_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'views_exposed_filter_block:publications_search-publication_search_page'
+settings:
+  id: 'views_exposed_filter_block:publications_search-publication_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
+    negate: false
