@@ -5,6 +5,14 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
+.container-wrap {
+  @include breakpoint($lap) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
 .path-news,
 .path-publications {
   .search-page {
@@ -48,8 +56,6 @@
   }
 
   form {
-    //display: flex;
-
     .form-actions {
       padding-top: .95rem;
     }
