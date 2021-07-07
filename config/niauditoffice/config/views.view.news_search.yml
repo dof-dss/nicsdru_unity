@@ -180,22 +180,47 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.news_index'
-  block_1:
+  news_latest_news:
     display_plugin: block
-    id: block_1
-    display_title: Block
+    id: news_latest_news
+    display_title: 'News page latest news'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       title: 'Latest news'
       defaults:
         title: false
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        style: false
+        row: false
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 4
           offset: 0
+      display_description: ''
+      use_more: true
+      use_more_always: false
+      use_more_text: 'More news ...'
+      style:
+        type: html_list
+        options:
+          row_class: item
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              news: teaser
     cache_metadata:
       max-age: -1
       contexts:

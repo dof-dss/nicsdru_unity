@@ -1,21 +1,22 @@
-uuid: 416a293c-9d44-48c7-8f2e-6df9888c9c8b
+uuid: 577281f1-2978-4d4d-ae3d-bb928b58f460
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node_staff_member
-label: 'Content - Board member'
+id: board_member_pattern
+label: 'Board member pattern'
 type: 'canonical_entities:node'
 pattern: 'senior-management/[node:title]'
 selection_criteria:
-  -
+  36bbfaf3-0e8c-48cd-96ba-24c62bafff83:
     id: node_type
     bundles:
       staff_member: staff_member
     negate: false
     context_mapping:
       node: node
+    uuid: 36bbfaf3-0e8c-48cd-96ba-24c62bafff83
 selection_logic: and
-weight: 0
+weight: -5
 relationships: {  }
