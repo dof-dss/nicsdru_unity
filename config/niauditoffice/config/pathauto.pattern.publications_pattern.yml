@@ -1,21 +1,22 @@
-uuid: 48c882bf-f53a-4beb-83e5-2fbc326e1e26
+uuid: 23f0723d-441e-4261-8495-d463f1635e04
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node_publication_page
-label: 'Content - Publication page'
+id: publications_pattern
+label: 'Publications pattern'
 type: 'canonical_entities:node'
 pattern: 'publications/[node:title]'
 selection_criteria:
-  -
+  17bf68d4-1d15-4d0a-bd71-e668ba42c548:
     id: node_type
     bundles:
       publication_page: publication_page
     negate: false
     context_mapping:
       node: node
+    uuid: 17bf68d4-1d15-4d0a-bd71-e668ba42c548
 selection_logic: and
-weight: 0
+weight: -5
 relationships: {  }

@@ -1,0 +1,29 @@
+uuid: a754a67a-aba8-43ef-b3db-85631f99dcde
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - niauditoffice_theme
+id: sidemenu
+theme: niauditoffice_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sidebar navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/news\r\n/news/*\r\n/publications\r\n/publications/*\r\n/search*"
+    negate: true
