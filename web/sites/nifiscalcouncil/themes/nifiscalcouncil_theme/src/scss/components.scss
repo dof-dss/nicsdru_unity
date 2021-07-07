@@ -18,7 +18,9 @@
 }
 
 #headerHero {
-  background: #6d6e71;
+  @media screen and (max-width: $tab) {
+    background: #6d6e71;
+  }
 }
 
 #main-menu {
@@ -267,6 +269,20 @@
       height: 4rem;
       border-radius: 100%;
       line-height: 3rem;
+    }
+  }
+}
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
     }
   }
 }
