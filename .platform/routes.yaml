@@ -133,6 +133,10 @@
   cache:
     enabled: false
 
+"https://fiscalcommissionni.org.{default}/":
+  type: redirect
+  to: "https://www.fiscalcommissionni.org.{default}/"
+
 "https://fiscalcommissionni.org/":
   type: redirect
   to: "https://www.fiscalcommissionni.org/"
@@ -148,6 +152,10 @@
 "https://nifiscalcouncil.org.{default}/":
   type: redirect
   to: "https://www.nifiscalcouncil.org.{default}/"
+
+"https://nifiscalcouncil.org/":
+  type: redirect
+  to: "https://www.nifiscalcouncil.org/"
 
 
 #---------------------------------
