@@ -1,0 +1,24 @@
+uuid: 0aad72d6-3da9-4a96-ba75-cfb8a4b25a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nifiscalcouncil_theme
+id: breadcrumbs
+theme: nifiscalcouncil_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
