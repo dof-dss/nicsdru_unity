@@ -152,6 +152,10 @@
               @include breakpoint($tab) {
                 font-size: 2.4vw;
               }
+
+              @include breakpoint($max-grid-width) {
+                font-size: 2.5rem;
+              }
             }
           }
 
