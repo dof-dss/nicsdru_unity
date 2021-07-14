@@ -74,6 +74,7 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../services.yml';
       // Use 'production' config split for the Platform.sh production site.
       $config['config_split.config_split.production']['status'] = TRUE;
+      $config['config_split.config_split.hosted']['status'] = FALSE;
       break;
 
     case 'D8UN-edge':
