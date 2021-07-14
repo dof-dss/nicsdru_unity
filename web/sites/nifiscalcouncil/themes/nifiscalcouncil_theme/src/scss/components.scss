@@ -139,6 +139,10 @@
           margin: 0;
           width: 100%;
 
+          .content {
+            position: relative;
+          }
+
           .front-bottom-text {
             position: absolute;
             z-index: 99;
