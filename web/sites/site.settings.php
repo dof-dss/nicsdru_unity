@@ -64,7 +64,7 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
     include $app_root . '/' . $site_path . '/../settings.platformsh.php';
   }
 
-  // For now, use 'hosted' config split for all Platform.sh sites.
+  // Use 'hosted' config split for all Platform.sh sites apart from production.
   $config['config_split.config_split.hosted']['status'] = TRUE;
 
   // Environment specific settings and services.
@@ -72,6 +72,9 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
     case 'main':
       // De-facto production settings.
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../services.yml';
+      // Use 'production' config split for the Platform.sh production site.
+      $config['config_split.config_split.production']['status'] = TRUE;
+      $config['config_split.config_split.hosted']['status'] = FALSE;
       break;
 
     case 'D8UN-edge':

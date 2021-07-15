@@ -1,0 +1,17 @@
+uuid: 88ae2bb6-39d1-4c98-b80a-2d65a8707b95
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+folder: ../config/odscni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
