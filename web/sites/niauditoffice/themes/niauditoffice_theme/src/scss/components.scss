@@ -4,3 +4,152 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#block-sidemenu {
+  ul {
+    border: 1px solid #ccc;
+    margin: .5rem 0;
+    list-style: none;
+
+    li {
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+      padding: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      span.link__self {
+        background: $link-hover-background;
+        border-bottom: 4px solid #333;
+        color: #333;
+        display: block;
+        padding: 1rem 1.5rem .6rem;
+      }
+
+      a {
+        border-bottom: 4px solid transparent;
+        color: #555;
+        //text-decoration: underline;
+        display: block;
+        padding: 1rem 1.5rem .6rem;
+
+        &:hover,
+        &:focus {
+          background: #ccc;
+          color: #333;
+          outline: 1px solid;
+        }
+      }
+
+      ul {
+        border: none;
+
+        li {
+          padding-left: 1rem;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.webform-submission-form {
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #333;
+    }
+
+  input[type="submit"] {
+    background: $brand-primary none;
+    min-width: 13rem;
+    @include responsive-typo-map($normal-text);
+    border: 3px solid transparent;
+    color: #fff;
+    font-weight: normal;
+    text-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: .25em;
+    box-shadow: none;
+    margin: 1rem 0 0;
+    text-align: center;
+    padding: .6rem 1.6rem;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      background: $ash-grey;
+      outline: none;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &:focus {
+      border-color: $black;
+    }
+  }
+}
+
+.block-views-blocknews-search-news-latest-news {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0 1.6rem;
+
+    li {
+      .meta {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: .6rem 0 0;
+      }
+    }
+  }
+
+  a {
+    border-bottom: 1px solid $link;
+
+    &:hover {
+      border-bottom: 2px solid $link-underline;
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      border-bottom: none;
+      outline: 2px solid $link;
+      outline-offset: 0;
+    }
+  }
+}
+
+.sidebar-second-layout {
+  position: relative;
+  overflow: hidden;
+  background: #f2f2f2;
+  padding: 1rem;
+  margin-top: 0;
+}

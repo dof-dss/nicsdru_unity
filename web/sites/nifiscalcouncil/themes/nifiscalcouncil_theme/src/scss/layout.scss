@@ -4,3 +4,65 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.front {
+  .container-wrap {
+    padding: 0 1rem;
+  }
+
+  .content-sidebar-wrap {
+    padding: 2.5rem;
+    width: 70%;
+
+    @media screen and (min-width: $mob) and (max-width: $lap) {
+      padding-right: 1rem;
+      width: 55% !important;
+      float: left;
+    }
+
+    .content {
+      p {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 3rem;
+
+        @media screen and (max-width: $tab) {
+          font-size: 2.1rem;
+          //line-height: 2.4rem;
+          //margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .sidebar-second-layout {
+    width: 26%;
+
+    @media screen and (min-width: $mob) and (max-width: $lap) {
+      width: 40% !important;
+      float: right;
+    }
+  }
+}
+
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding-left: 2.5rem;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  img {
+    height: 80px;
+  }
+}
+
+.top_left {
+  min-height: 105px;
+}
+
+#footer {
+  max-width: unset;
+}
