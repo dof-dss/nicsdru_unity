@@ -198,6 +198,44 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_published_date'
+  home_latest_news:
+    display_plugin: block
+    id: home_latest_news
+    display_title: 'Latest news home'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      defaults:
+        style: false
+        row: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      use_more: true
+      use_more_always: false
+      use_more_text: 'View all news'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_published_date'
   news_latest_news:
     display_plugin: block
     id: news_latest_news
