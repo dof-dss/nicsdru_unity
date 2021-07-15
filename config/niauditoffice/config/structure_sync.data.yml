@@ -1,0 +1,14 @@
+blocks:
+  -
+    info: 'What we do'
+    langcode: en
+    uuid: 8710f557-2dab-40d0-a4af-a0a19ba08a9b
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<h3>Financial Audit</h3>\r\n\r\n<ul>\r\n\t<li><a href=\"/node/30\">Central Government Audits</a></li>\r\n\t<li><a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"78ed7a8b-2e96-4c00-ab32-d25f0c5f8719\" href=\"/node/31\">Local Government Audits</a></li>\r\n</ul>\r\n\r\n<h3>Value for money audit</h3>\r\n\r\n<p><a href=\"/node/32\"><span>Read more</span></a></p>\r\n"
+          summary: ''
+          format: basic_html
