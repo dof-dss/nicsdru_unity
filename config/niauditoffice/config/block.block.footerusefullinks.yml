@@ -1,0 +1,25 @@
+uuid: f4764153-2ebd-4b33-9dce-abead54feb85
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:735e1f34-f69d-44f2-97da-b4a43be6df5f'
+  module:
+    - block_content
+  theme:
+    - niauditoffice_theme
+id: footerusefullinks
+theme: niauditoffice_theme
+region: footer_second
+weight: -10
+provider: null
+plugin: 'block_content:735e1f34-f69d-44f2-97da-b4a43be6df5f'
+settings:
+  id: 'block_content:735e1f34-f69d-44f2-97da-b4a43be6df5f'
+  label: 'Useful links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
