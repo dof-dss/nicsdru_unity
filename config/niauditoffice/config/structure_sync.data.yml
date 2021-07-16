@@ -1,5 +1,44 @@
 blocks:
   -
+    info: 'Footer subscription'
+    langcode: en
+    uuid: 8dc9a7f3-2fdb-4848-bf4a-ca89e2fc142c
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<h2>Subscribe to our news email alert service</h2>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Footer Useful links'
+    langcode: en
+    uuid: 735e1f34-f69d-44f2-97da-b4a43be6df5f
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<ul>\r\n\t<li><a href=\"http://www.nao.gov.uk/\">National Audit Office</a></li>\r\n\t<li><a href=\"http://www.audit-scotland.gov.uk/\">Audit Scotland</a></li>\r\n\t<li><a href=\"http://www.wao.gov.uk/\">Audit Wales</a></li>\r\n\t<li><a href=\"http://audgen.gov.ie/\">Office of the C&amp;AG Dublin</a></li>\r\n</ul>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Footer Contact information'
+    langcode: en
+    uuid: 7853c171-cf18-4d0d-9133-3c2f7cc34147
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<address>Northern Ireland Audit Office<br />\r\n1 Bradford Court, Upper Galwally<br />\r\nBelfast<br />\r\nBT8 6RB<br />\r\nT: (028) 9025 1000<br />\r\nF: (028) 9025 1106 or (028) 9025 1051<br />\r\nE:&nbsp;<a href=\"mailto:info@niauditoffice.gov.uk\">info@niauditoffice.gov.uk</a></address>\r\n"
+          summary: ''
+          format: basic_html
+  -
     info: 'What we do'
     langcode: en
     uuid: 8710f557-2dab-40d0-a4af-a0a19ba08a9b
@@ -12,3 +51,64 @@ blocks:
           value: "<h3>Financial Audit</h3>\r\n\r\n<ul>\r\n\t<li><a href=\"/node/30\">Central Government Audits</a></li>\r\n\t<li><a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"78ed7a8b-2e96-4c00-ab32-d25f0c5f8719\" href=\"/node/31\">Local Government Audits</a></li>\r\n</ul>\r\n\r\n<h3>Value for money audit</h3>\r\n\r\n<p><a href=\"/node/32\"><span>Read more</span></a></p>\r\n"
           summary: ''
           format: basic_html
+menus:
+  -
+    menu_name: footer-menu
+    title: '© Northern Ireland Audit Office'
+    parent: null
+    uri: 'entity:node/7'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-50'
+    langcode: en
+    uuid: 53048506-7c5d-4fa3-b317-9badad8de7c7
+  -
+    menu_name: footer-menu
+    title: 'Terms and Conditions'
+    parent: null
+    uri: 'entity:node/8'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-49'
+    langcode: en
+    uuid: 89e7992d-934f-4f81-acf5-74bbd8184829
+  -
+    menu_name: footer-menu
+    title: 'Complaints procedure'
+    parent: null
+    uri: 'entity:node/9'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: en
+    uuid: f435428b-417a-4a7c-b8b5-e8cff87d1299
+  -
+    menu_name: footer-menu
+    title: Accessibility
+    parent: null
+    uri: 'entity:node/388'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-47'
+    langcode: en
+    uuid: dd227511-0719-457d-a7ab-901ed73cae28
+  -
+    menu_name: footer-menu
+    title: 'Privacy notice'
+    parent: null
+    uri: 'entity:node/357'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: 14076b44-ce2e-43ed-8d2b-5b9679decf38
