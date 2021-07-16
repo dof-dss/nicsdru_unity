@@ -68,3 +68,52 @@
     }
   }
 }
+
+#top-area {
+  text-align: left;
+
+  .column {
+    background: $grey-light;
+    padding: 2rem;
+
+    @include breakpoint($lap) {
+      width: 32.6%;
+    }
+
+    h2 {
+      @include adjust-font-size-to(30px);
+      text-align: center;
+    }
+
+    .item {
+      list-style: none;
+      padding: 2.3rem 0 .5rem 0;
+      border-bottom: 1px solid $grey-dark;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.block-block-content {
+  h3 {
+    margin-top: 0;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: .5rem 0 1.5rem;
+      border-bottom: 1px solid $grey-dark;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+

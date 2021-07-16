@@ -1,0 +1,25 @@
+uuid: 61aa0ecf-7cec-49ac-bd64-3e8e962c0240
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7853c171-cf18-4d0d-9133-3c2f7cc34147'
+  module:
+    - block_content
+  theme:
+    - niauditoffice_theme
+id: footercontactinformation
+theme: niauditoffice_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:7853c171-cf18-4d0d-9133-3c2f7cc34147'
+settings:
+  id: 'block_content:7853c171-cf18-4d0d-9133-3c2f7cc34147'
+  label: 'Contact information'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

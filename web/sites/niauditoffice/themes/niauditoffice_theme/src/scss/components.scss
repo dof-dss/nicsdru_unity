@@ -5,6 +5,36 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+@mixin submit-button {
+  background: $brand-primary none;
+  min-width: 13rem;
+  @include responsive-typo-map($normal-text);
+  border: 3px solid transparent;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  box-shadow: none;
+  margin: 1rem 0 0;
+  text-align: center;
+  padding: .6rem 1.6rem;
+  cursor: pointer;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    background: $ash-grey;
+    outline: none;
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: $black;
+  }
+}
+
 #block-sidemenu {
   ul {
     border: 1px solid #ccc;
@@ -81,37 +111,11 @@
     }
 
   input[type="submit"] {
-    background: $brand-primary none;
-    min-width: 13rem;
-    @include responsive-typo-map($normal-text);
-    border: 3px solid transparent;
-    color: #fff;
-    font-weight: normal;
-    text-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: .25em;
-    box-shadow: none;
-    margin: 1rem 0 0;
-    text-align: center;
-    padding: .6rem 1.6rem;
-    cursor: pointer;
-    border-radius: 0;
-
-    &:hover,
-    &:focus {
-      background: $ash-grey;
-      outline: none;
-      text-decoration: underline;
-      opacity: 1;
-    }
-
-    &:focus {
-      border-color: $black;
-    }
+    @include submit-button;
   }
 }
 
-.block-views-blocknews-search-news-latest-news {
+.block-views-blocklatest-news-news-latest-news {
   margin-bottom: 2rem;
 
   h2 {
@@ -152,4 +156,182 @@
   background: #f2f2f2;
   padding: 1rem;
   margin-top: 0;
+}
+
+#footer {
+  padding: 1% 0 0;
+  address,
+  a,
+  p,
+  h2,
+  label {
+    color: $white;
+  }
+
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
+  }
+
+  .footer_credit {
+    background: $brand-secondary;
+    padding: 1% 2% 2% 2%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    .footer-menu {
+      margin: 4% auto;
+
+      li {
+        padding-left: 0;
+
+        @include breakpoint($mob) {
+          display: inline-block;
+          padding: 0 .8rem 0 0;
+          line-height: 1.8rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+
+  #footer-content {
+    a {
+      color: $white;
+      border-bottom-color: $white;
+
+      &:hover {
+        border-bottom-color: $white;
+      }
+
+      &:focus {
+        color: #fff;
+        background-color: rgba(0,0,0,0);
+        outline: 3px solid #fff;
+      }
+    }
+
+    .social-icons a {
+      border-bottom: none;
+    }
+  }
+}
+
+#footer-content {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 2rem;
+
+  @include breakpoint($phab) {
+    flex-flow: wrap;
+  }
+
+  .column {
+    flex-basis: 33%;
+    padding-left: 2%;
+
+    li {
+      border: none;
+    }
+  }
+}
+
+#block-footersubscription {
+  h2 {
+    @include adjust-font-size-to(24px);
+    margin: .5rem 0 1.5rem;
+    padding: 1rem 0;
+  }
+
+  label {
+    display: inline;
+  }
+
+  input {
+    &::placeholder {
+      opacity: 1;
+    }
+
+    &[type="email"] {
+      &:focus {
+        outline: 3px solid #fae029;
+        outline-offset: -2px;
+        position: relative;
+        z-index: 101;
+      }
+    }
+
+    &[type="submit"] {
+      @include submit-button;
+      background: $white none;
+      color: $text;
+      padding: .3rem .6rem;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+
+      &:focus {
+        border-color: $white;
+      }
+    }
+  }
+}
+
+#footer #footer-menu .menu li.menu-item a {
+  @include adjust-font-size-to(14px);
+  margin: 0;
+  color: $white;
+  border-bottom-color: $white;
+
+  &:hover {
+    border-bottom-color: $white;
+  }
+
+  &:focus {
+    color: #fff;
+    background-color: rgba(0,0,0,0);
+    outline: 3px solid $white;
+    outline-offset: 3px;
+  }
+}
+
+#block-footercontactinformation {
+  .social-icons {
+    margin-top: 2.4rem;
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      padding-right: .5rem;
+    }
+
+    a {
+      border-bottom: none;
+      color: $text;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        background: none;
+
+        i {
+          background: $white;
+          color: $footer-background;
+        }
+      }
+    }
+
+    i {
+      font-size: 2.4rem;
+      border: 1px solid;
+      padding: .5rem .7rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      line-height: 3rem;
+    }
+  }
 }
