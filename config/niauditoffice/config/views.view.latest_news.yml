@@ -208,11 +208,14 @@ display:
         metatag_display_extender: {  }
       display_description: ''
       style:
-        type: default
+        type: html_list
         options:
-          row_class: ''
+          row_class: item
           default_row_class: false
           uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
       defaults:
         style: false
         row: false
