@@ -78,7 +78,7 @@ display:
         options:
           view_modes:
             'entity:node':
-              news: teaser
+              news: search_result
       fields:
         body:
           table: search_api_index_news

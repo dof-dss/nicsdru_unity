@@ -77,7 +77,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni niauditoffice
+    for site in uregni odscni fiscalcommissionni niauditoffice nifiscalcouncil
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -159,3 +159,6 @@ crons:
   niauditoffice:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/niauditoffice ; drush core-cron'
+  nifiscalcouncil:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
