@@ -1,0 +1,32 @@
+uuid: 184265f0-0748-4489-bedb-a101debf2bc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - ctools
+    - views
+  theme:
+    - niauditoffice_theme
+id: views_block__latest_news_news_latest_news
+theme: niauditoffice_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-news_latest_news'
+settings:
+  id: 'views_block:latest_news-news_latest_news'
+  label: 'Latest news'
+  provider: views
+  label_display: visible
+  views_label: 'Latest news'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -6,13 +6,6 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #logo {
-  margin-top: 1.5rem;
-  width: 100%;
-
-  @media screen and (max-width: $tab) {
-    padding: 0 1rem;
-  }
-
   a {
     &:focus {
       background: none;
@@ -22,13 +15,11 @@
       display: block;
     }
   }
+}
 
-  img {
-    height: 80px;
-
-    @media screen and (max-width: $mob) {
-      height: 55px;
-    }
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background: #6d6e71;
   }
 }
 
@@ -101,6 +92,205 @@
         background: lighten($charcoal, 10%);
         font-weight: normal;
       }
+    }
+  }
+}
+
+.front {
+  #block-chair {
+    .media-image {
+      img {
+        margin-top: 4.5rem;
+      }
+    }
+
+    .image-caption {
+      padding: 9px 0;
+      margin: 0 0 1.8rem 0;
+      font-size: 1.8rem;
+
+      .home-name p {
+        line-height: 28px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .home-role p {
+        line-height: 21px;
+        //color: $brand-primary;
+      }
+    }
+  }
+
+  .bottom_widget {
+    .footer-area {
+      @include breakpoint($tab) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &#bottom-area-2 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+        .column {
+          flex-basis: 50%;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+
+          .content {
+            position: relative;
+          }
+
+          .front-bottom-text {
+            position: absolute;
+            z-index: 99;
+
+            h2 {
+              text-align: center;
+              font-size: 4.8vw;
+              line-height: 1.5;
+              margin-top: 6%;
+
+              @include breakpoint($tab) {
+                font-size: 2.4vw;
+              }
+
+              @include breakpoint($max-grid-width) {
+                font-size: 2.5rem;
+              }
+            }
+          }
+
+          &:first-of-type {
+            h2 {
+              padding-right: 4rem;
+              padding-left: 2rem;
+            }
+          }
+
+          &:nth-child(2) {
+            h2 {
+              padding-right: 2rem;
+              padding-left: 4rem;
+            }
+          }
+        }
+        .front-bottom-image-link {
+          display: inline-block;
+          border-bottom: none;
+
+          &:hover {
+            border-bottom: none;
+            filter: brightness(0.95);
+          }
+        }
+      }
+    }
+
+    #bottom-area {
+      .column {
+        background-color: $grey-light;
+        width: 100%;
+        margin: 2rem 0;
+        float: none;
+
+        @include breakpoint($tab) {
+          flex-basis: 30%;
+          padding: 0;
+        }
+
+        .front-column-text {
+          padding: 0 1.8rem 2rem;
+
+          h2 {
+            @include responsive-typo-map($h3-text);
+            margin-top: 1.8rem;
+            margin-bottom: 2rem;
+          }
+
+          .views-row {
+            padding-bottom: 1rem;
+
+            time {
+              font-weight: bold;
+
+              &:after {
+                content: ' -  ';
+              }
+            }
+          }
+
+          .more-link {
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  .footer-menu li {
+    padding-left: 0;
+    font-size: 1.6rem;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  #block-contactus .social-icons {
+    @media screen and (max-width: $tab) {
+      margin-top: 1rem;
+    }
+
+    a {
+      border-bottom: 0;
+      color: $text;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        background: none;
+
+        i {
+          background: $text;
+          color: $footer-background;
+        }
+      }
+    }
+
+    i {
+      font-size: 2.4rem;
+      border: 1px solid;
+      padding: .5rem .7rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      line-height: 3rem;
+    }
+  }
+}
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
     }
   }
 }

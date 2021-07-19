@@ -1,0 +1,30 @@
+uuid: 44e8c4a0-96f7-4dc9-b37d-d3fcc407b308
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:f2e0a5bc-46e9-4eb0-9eb6-a282ac3b4fcf'
+  module:
+    - block_content
+    - system
+  theme:
+    - nifiscalcouncil_theme
+id: termsofreference
+theme: nifiscalcouncil_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:f2e0a5bc-46e9-4eb0-9eb6-a282ac3b4fcf'
+settings:
+  id: 'block_content:f2e0a5bc-46e9-4eb0-9eb6-a282ac3b4fcf'
+  label: 'Terms of reference'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

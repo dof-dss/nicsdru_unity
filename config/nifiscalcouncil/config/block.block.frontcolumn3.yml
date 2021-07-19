@@ -1,0 +1,30 @@
+uuid: d5462293-adf9-4a6f-b5be-93bf80d7b3f6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:front_3_col:33104c25-ab1f-4f87-b622-9995dd8a9276'
+  module:
+    - block_content
+    - system
+  theme:
+    - nifiscalcouncil_theme
+id: frontcolumn3
+theme: nifiscalcouncil_theme
+region: bottom_widget_3
+weight: 0
+provider: null
+plugin: 'block_content:33104c25-ab1f-4f87-b622-9995dd8a9276'
+settings:
+  id: 'block_content:33104c25-ab1f-4f87-b622-9995dd8a9276'
+  label: 'Front Column 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

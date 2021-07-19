@@ -1,0 +1,24 @@
+uuid: c2bbc048-992c-4d5f-b90a-f1f3d6ff0d33
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_publications
+  module:
+    - views
+  theme:
+    - niauditoffice_theme
+id: views_block__latest_publications_publications_latest
+theme: niauditoffice_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_publications-publications_latest'
+settings:
+  id: 'views_block:latest_publications-publications_latest'
+  label: 'Recent reports'
+  provider: views
+  label_display: visible
+  views_label: 'Recent reports'
+  items_per_page: none
+visibility: {  }

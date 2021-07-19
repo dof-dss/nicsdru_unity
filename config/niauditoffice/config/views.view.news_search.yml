@@ -180,31 +180,6 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.news_index'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      title: 'Latest news'
-      defaults:
-        title: false
-        pager: false
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:search_api.index.news_index'
   news_search_page:
     display_plugin: page
     id: news_search_page

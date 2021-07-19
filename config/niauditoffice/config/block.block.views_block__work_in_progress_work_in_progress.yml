@@ -1,0 +1,24 @@
+uuid: a7db0f19-ba57-451d-b8a1-37906112da52
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.work_in_progress
+  module:
+    - views
+  theme:
+    - niauditoffice_theme
+id: views_block__work_in_progress_work_in_progress
+theme: niauditoffice_theme
+region: top_third
+weight: 0
+provider: null
+plugin: 'views_block:work_in_progress-work_in_progress'
+settings:
+  id: 'views_block:work_in_progress-work_in_progress'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 428aba32-122d-4da6-9389-7bacca4b0221
+langcode: en
+status: true
+dependencies: {  }
+id: front_3_col
+label: 'Front 3 col'
+revision: 0
+description: 'This block contains an image, a link and some text'

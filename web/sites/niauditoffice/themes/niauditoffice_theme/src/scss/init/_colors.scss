@@ -19,8 +19,8 @@ $chroma: add-colors((
   charcoal:               #333,
   ash-grey:               #666,
   'grey':                 #999,
-  grey-dark:              #4d4d4d,
-  grey-light:             #e8e7e7,
+  grey-dark:              #ccc,
+  grey-light:             #f8f7f7,
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
@@ -29,9 +29,9 @@ $chroma: add-colors((
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #002e62,
+  brand-primary:          #1d2997,
 
-  brand-secondary:        #002e62,
+  brand-secondary:        #151d68,
 
   brand-tertiary:         #002e62,
 ));
@@ -60,8 +60,8 @@ $chroma: add-colors('functional', (
   error:                  'dark-red',
   error-bg:               'light-pink',
 
-  menu-background:        #002e62,
-  menu-item-hover:        #3e1151,
+  menu-background:        'brand-primary',
+  menu-item-hover:        'brand-secondary',
   menu-separator:         #fff,
   menu-sub-item-background: lighten(#002e62, 10),
   menu-sub-item-hover:    #1abc9c,
@@ -75,10 +75,10 @@ $chroma: add-colors('functional', (
   table-cell-border: #dbdbdb,
   table-cell-text: #747474,
 
-  footer-background: 'brand-primary',
-  footer-border: #00a583,
-  footer-text: #fff,
-  footer-headings: #fff,
+  footer-background:      #e7e7e7,
+  footer-border:          'brand-primary',
+  footer-text:            'text',
+  footer-headings:        'text',
 
   search-submit: #0e6bb3,
 ));
@@ -107,10 +107,13 @@ $brand-tertiary: color(brand-tertiary);
 $text: color('text');
 $headings: color(headings);
 
-$link: color(link);
-$link-hover: color(link-hover);
-$link-visited: color(link-visited);
-$link-active: color(link-active);
+$link: #0e6bb3 !default;
+$link-underline: color('charcoal') !default;
+$link-active: #0e6bb3 !default;
+$link-hover: #0e6bb3 !default;
+$link-hover-background: rgba(75%, 75%, 75%, .25) !default;
+$link-visited: #0e6bb3 !default;
+$link-visited-underline: #707070 !default;
 
 $border: color('border');
 
@@ -138,7 +141,7 @@ $table-cell-border: color(table-cell-border);
 $table-cell-text: color(table-cell-text);
 
 $footer-background: color(footer-background);
-$footer-border: color(footer-border);
+$footer-border: color(brand-primary);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 

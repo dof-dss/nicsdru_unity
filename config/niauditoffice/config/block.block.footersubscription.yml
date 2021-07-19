@@ -1,0 +1,25 @@
+uuid: 41a197e2-b8e9-40b9-bb0c-5782cd776971
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:8dc9a7f3-2fdb-4848-bf4a-ca89e2fc142c'
+  module:
+    - block_content
+  theme:
+    - niauditoffice_theme
+id: footersubscription
+theme: niauditoffice_theme
+region: footer_second
+weight: -9
+provider: null
+plugin: 'block_content:8dc9a7f3-2fdb-4848-bf4a-ca89e2fc142c'
+settings:
+  id: 'block_content:8dc9a7f3-2fdb-4848-bf4a-ca89e2fc142c'
+  label: 'Subscribe to our news email alert service'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

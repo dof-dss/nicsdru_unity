@@ -1,0 +1,25 @@
+uuid: 9cb9f707-5ae0-44f0-873f-540a64a89530
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu
+  module:
+    - system
+  theme:
+    - niauditoffice_theme
+id: footermenu
+theme: niauditoffice_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu'
+settings:
+  id: 'system_menu_block:footer-menu'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
