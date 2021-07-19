@@ -13,7 +13,7 @@ use Drupal\Component\Utility\Html;
  */
 function niauditoffice_theme_preprocess_node(array &$variables) {
   // Only use this code for publications content type.
-  if ($variables['node']->getType() === 'publication_page') {
+  if ($variables['node']->bundle() === 'publication_page') {
     $variables['work_in_progress'] = FALSE;
 
     $publication_type = $variables['node']->get('field_publication_type')->value;
