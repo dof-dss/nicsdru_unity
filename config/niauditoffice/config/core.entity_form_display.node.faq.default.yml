@@ -29,13 +29,13 @@ content:
       answer_widget: text_format
       question_title: Question
       answer_title: Answer
-      question_field_required: true
-      answer_field_required: true
       advanced:
         question_length: 255
         question_size: 100
         question_rows: 0
         answer_rows: 3
+      question_field_required: false
+      answer_field_required: false
     third_party_settings: {  }
     type: faqfield_default
     region: content
