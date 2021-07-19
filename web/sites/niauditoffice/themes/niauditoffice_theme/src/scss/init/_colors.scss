@@ -75,10 +75,10 @@ $chroma: add-colors('functional', (
   table-cell-border: #dbdbdb,
   table-cell-text: #747474,
 
-  footer-background: 'brand-primary',
-  footer-border: #00a583,
-  footer-text: #fff,
-  footer-headings: #fff,
+  footer-background:      #e7e7e7,
+  footer-border:          'brand-primary',
+  footer-text:            'text',
+  footer-headings:        'text',
 
   search-submit: #0e6bb3,
 ));
@@ -141,7 +141,7 @@ $table-cell-border: color(table-cell-border);
 $table-cell-text: color(table-cell-text);
 
 $footer-background: color(footer-background);
-$footer-border: color(footer-background);
+$footer-border: color(brand-primary);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 
