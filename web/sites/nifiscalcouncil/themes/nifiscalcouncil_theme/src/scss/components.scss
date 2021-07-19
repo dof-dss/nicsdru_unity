@@ -18,7 +18,9 @@
 }
 
 #headerHero {
-  background: #6d6e71;
+  @media screen and (max-width: $tab) {
+    background: #6d6e71;
+  }
 }
 
 #main-menu {
@@ -137,6 +139,10 @@
           margin: 0;
           width: 100%;
 
+          .content {
+            position: relative;
+          }
+
           .front-bottom-text {
             position: absolute;
             z-index: 99;
@@ -149,6 +155,10 @@
 
               @include breakpoint($tab) {
                 font-size: 2.4vw;
+              }
+
+              @include breakpoint($max-grid-width) {
+                font-size: 2.5rem;
               }
             }
           }
@@ -267,6 +277,20 @@
       height: 4rem;
       border-radius: 100%;
       line-height: 3rem;
+    }
+  }
+}
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
     }
   }
 }
