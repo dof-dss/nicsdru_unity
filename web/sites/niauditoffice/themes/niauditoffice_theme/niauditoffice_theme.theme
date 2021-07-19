@@ -9,6 +9,22 @@ use Drupal\block\Entity\Block;
 use Drupal\Component\Utility\Html;
 
 /**
+ * Implements hook_preprocess_node().
+ */
+function niauditoffice_theme_preprocess_node(array &$variables) {
+  // Only use this code for publications content type.
+  if ($variables['node']->bundle() === 'publication_page') {
+    $variables['work_in_progress'] = FALSE;
+
+    $publication_type = $variables['node']->get('field_publication_type')->value;
+    // Set variable to true if publication is of type work in progress.
+    if ($publication_type == 'workInProgress') {
+      $variables['work_in_progress'] = TRUE;
+    }
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_views_view_alter().
  */
 function niauditoffice_theme_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
