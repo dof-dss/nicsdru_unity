@@ -494,9 +494,10 @@ workflows:
       - deprecated_code:
           requires:
             - build
-      - unit_kernel_tests:
-          requires:
-            - build
+#  Comment out the tests until there are some to run !
+#      - unit_kernel_tests:
+#          requires:
+#            - build
       - deploy_solr_rebuild:
           requires:
             - build
