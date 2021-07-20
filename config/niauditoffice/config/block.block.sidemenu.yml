@@ -16,14 +16,14 @@ provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Sidebar navigation'
+  label: 'In this section'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/news\r\n/news/*\r\n/publications\r\n/publications/*\r\n/search*\r\n/senior-management/*"
+    pages: "<front>\r\n/news\r\n/news-centre/*\r\n/publications\r\n/publications/*\r\n/search*\r\n/senior-management/*"
     negate: true
