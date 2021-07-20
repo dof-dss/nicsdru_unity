@@ -19,7 +19,7 @@ content:
     label: hidden
     settings:
       active: 0
-      heightStyle: auto
+      heightStyle: content
       collapsible: true
       event: click
       animate:
@@ -33,3 +33,4 @@ hidden:
   field_meta_tags: true
   langcode: true
   links: true
+  search_api_excerpt: true
