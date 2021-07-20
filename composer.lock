@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af5e9ed788866479f80d95c8eba11af2",
+    "content-hash": "d586b4861d6c9aeaa46e30b780d635da",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1909,22 +1909,21 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "dev-development",
+            "version": "v0.1.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "c463ec300ae964aedbcf675760285a710b1cee06"
+                "reference": "f5bb7c1e3f2e7c18bcb715254175ddac7a69adea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/c463ec300ae964aedbcf675760285a710b1cee06",
-                "reference": "c463ec300ae964aedbcf675760285a710b1cee06",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/f5bb7c1e3f2e7c18bcb715254175ddac7a69adea",
+                "reference": "f5bb7c1e3f2e7c18bcb715254175ddac7a69adea",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-theme",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1943,9 +1942,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/development"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.29"
             },
-            "time": "2021-06-11T09:35:38+00:00"
+            "time": "2021-07-19T12:14:45+00:00"
         },
         {
             "name": "drupal/address",
@@ -19161,7 +19160,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "dof-dss/nicsdru_origins_profile": 20,
-        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
         "drupal/eu_cookie_compliance": 20,
