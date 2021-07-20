@@ -494,7 +494,7 @@ workflows:
       - deprecated_code:
           requires:
             - build
-#  Comment out the tests until tehre are some to run !
+#  Comment out the tests until there are some to run !
 #      - unit_kernel_tests:
 #          requires:
 #            - build
