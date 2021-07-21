@@ -8,6 +8,7 @@ dependencies:
     - node
     - text
     - user
+    - views_custom_cache_tag
 id: work_in_progress
 label: 'Work in progress'
 module: views
@@ -27,8 +28,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'node_list:page'
       query:
         type: views_query
         options:
