@@ -13,6 +13,7 @@ dependencies:
     - node
     - slick_views
     - user
+    - views_custom_cache_tag
 id: slideshow
 label: Slideshow
 module: views
@@ -32,8 +33,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: "node_list:feature\r\nnode_list:featured_content_list"
       query:
         type: views_query
         options:
