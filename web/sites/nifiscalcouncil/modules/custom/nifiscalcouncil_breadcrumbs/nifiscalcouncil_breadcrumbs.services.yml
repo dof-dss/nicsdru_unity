@@ -14,3 +14,8 @@ services:
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
     tags:
       - { name: breadcrumb_builder, priority: 100 }
+  nifiscalcouncil_breadcrumbs.breadcrumb.page:
+    class: Drupal\nifiscalcouncil_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
