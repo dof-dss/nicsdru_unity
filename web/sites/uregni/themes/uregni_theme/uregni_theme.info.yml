@@ -9,9 +9,6 @@ libraries:
   - nicsdru_unity_theme/unity-slider
   - nicsdru_unity_theme/autocomplete
 
-ckeditor_stylesheets:
-  - css/ckeditor.css
-
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:
     css:
