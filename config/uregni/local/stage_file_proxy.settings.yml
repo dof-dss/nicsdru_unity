@@ -1,6 +1,6 @@
 hotlink: false
-origin: ''
-origin_dir: ''
+origin: 'https://www.uregni.gov.uk'
+origin_dir: files/uregni
 use_imagecache_root: true
 verify: true
 _core:
