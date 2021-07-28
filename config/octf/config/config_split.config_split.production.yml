@@ -1,0 +1,15 @@
+uuid: 596ec3e2-7056-46ca-ac04-50238a95e735
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+folder: ../config/octf/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

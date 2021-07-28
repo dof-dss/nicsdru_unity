@@ -1,0 +1,15 @@
+name: 'Organised Crime Task Force'
+mail: octf@example.gov.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 2203f22f-0b97-47da-ba52-893565b91155
+frontpage_title: 'Welcome to Drupal site'
