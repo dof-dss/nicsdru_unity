@@ -1,0 +1,23 @@
+uuid: 4c554bea-8cad-4203-9a76-9c3a48ec6449
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_type
+    - node.type.publication
+  module:
+    - options
+_core:
+  default_config_hash: MTRaADBWAbEAFDBof89qeak17Pj1GHtXt-ibMPgBJEo
+id: node.publication.field_publication_type
+field_name: field_publication_type
+entity_type: node
+bundle: publication
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
