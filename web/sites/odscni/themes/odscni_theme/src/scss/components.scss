@@ -62,6 +62,13 @@
       }
     }
   }
+
+  .menu {
+    .menu-item .active,
+    .menu-item .active + .menu-main_sub .title a {
+      border-bottom-color: $brand-primary;
+    }
+  }
 }
 
 #footer #footer-menu {
