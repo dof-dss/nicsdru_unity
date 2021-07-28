@@ -9,11 +9,10 @@
 
 $sites['uregni.gov.uk.lndo.site'] = 'uregni';
 $sites['liofa.eu.lndo.site'] = 'liofa';
-$sites['fictcommission.org.lndo.site'] = 'fictcommission';
 $sites['odscni.org.uk.lndo.site'] = 'odscni';
 $sites['attorneygeneralni.gov.uk.lndo.site'] = 'attorneygeneralni';
 $sites['employmenttribunalsni.co.uk.lndo.site'] = 'employmenttribunalsni';
-$sites['hatecrimereviewni.org.uk.lndo.site'] = 'hatecrimereviewni';
 $sites['fiscalcommissionni.org.lndo.site'] = 'fiscalcommissionni';
 $sites['nifiscalcouncil.org.lndo.site'] = 'nifiscalcouncil';
 $sites['niauditoffice.gov.uk.lndo.site'] = 'niauditoffice';
+$sites['octf.gov.uk.lndo.site'] = 'octf';

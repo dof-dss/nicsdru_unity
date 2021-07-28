@@ -10,21 +10,16 @@ db:
   disk: 40960
   configuration:
     schemas:
-      - fictcommissiondb
       - liofadb
       - uregnidb
       - odscnidb
       - attorneygeneralnidb
       - employmenttribunalsnidb
-      - hatecrimereviewnidb
       - fiscalcommissionnidb
       - nifiscalcouncildb
       - niauditofficedb
+      - octfdb
     endpoints:
-      fictcommission:
-        default_schema: fictcommissiondb
-        privileges:
-          fictcommissiondb: admin
       uregni:
         default_schema: uregnidb
         privileges:
@@ -45,10 +40,6 @@ db:
         default_schema: employmenttribunalsnidb
         privileges:
           employmenttribunalsnidb: admin
-      hatecrimereviewni:
-        default_schema: hatecrimereviewnidb
-        privileges:
-          hatecrimereviewnidb: admin
       fiscalcommissionni:
         default_schema: fiscalcommissionnidb
         privileges:
@@ -61,6 +52,10 @@ db:
         default_schema: niauditofficedb
         privileges:
           niauditofficedb: admin
+      octf:
+        default_schema: octfdb
+        privileges:
+          octfdb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:

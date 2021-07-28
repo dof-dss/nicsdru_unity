@@ -1,0 +1,23 @@
+uuid: f0ae22d0-fb6e-47f3-b0f1-636e54bfdeec
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 8Wbw7PMMzKhOJdZvbc8CXVUgHE3Ygpdv_oEfFqJDJ1w
+id: media.field_caption
+field_name: field_caption
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
