@@ -1,20 +1,4 @@
 # Each route describes how an incoming URL is going to be processed by Platform.sh.
-"https://www.fictcommission.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://fictcommission.org.{default}/":
-  type: redirect
-  to: "https://www.fictcommission.org.{default}/"
-
-"https://fictcommission.org/":
-  type: redirect
-  to: "https://www.fictcommission.org/"
-
-#---------------------------------
-
 "https://www.uregni.gov.uk/":
   type: upstream
   upstream: "unity:http"
@@ -95,22 +79,6 @@
 
 #---------------------------------
 
-#"https://www.hatecrimereviewni.org.uk/":
-#  type: upstream
-#  upstream: "unity:http"
-#  cache:
-#    enabled: false
-#
-#"http://hatecrimereviewni.org.uk.{default}/":
-#  type: redirect
-#  to: "http://www.hatecrimereviewni.org.uk.{default}/"
-#
-#"http://hatecrimereviewni.org.uk/":
-#  type: redirect
-#  to: "http://www.hatecrimereviewni.org.uk/"
-
-#---------------------------------
-
 "https://www.niauditoffice.gov.uk/":
   type: upstream
   upstream: "unity:http"
@@ -156,6 +124,22 @@
 "https://nifiscalcouncil.org/":
   type: redirect
   to: "https://www.nifiscalcouncil.org/"
+
+#---------------------------------
+
+"https://www.octf.gov.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://octf.gov.uk.{default}/":
+  type: redirect
+  to: "https://www.octf.gov.uk.{default}/"
+
+"https://octf.gov.uk/":
+  type: redirect
+  to: "https://www.octf.gov.uk/"
 
 
 #---------------------------------

@@ -25,7 +25,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       exposed_form:
@@ -262,7 +262,8 @@ display:
   page_1:
     display_options:
       path: node
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       enabled: true
     display_plugin: page
     display_title: Page

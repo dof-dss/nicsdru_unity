@@ -48,6 +48,9 @@ tooling:
     description: Disable xdebug
     cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
     user: root
+  npm:
+    service: appserver
+    cmd: /usr/bin/npm
   yarn:
     service: appserver
     cmd: yarn
