@@ -9,14 +9,15 @@ label: 'Publications pattern'
 type: 'canonical_entities:node'
 pattern: 'publications/[node:title]'
 selection_criteria:
-  3b5ab4ff-1f01-41e1-9162-6bb541984d59:
+  f9787736-2f54-4319-9d73-31f5938ff543:
     id: node_type
     bundles:
+      html_document: html_document
       publication_page: publication_page
     negate: false
     context_mapping:
       node: node
-    uuid: 3b5ab4ff-1f01-41e1-9162-6bb541984d59
+    uuid: f9787736-2f54-4319-9d73-31f5938ff543
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.consultation
+    - node.type.html_document
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -96,10 +97,11 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - page
-      - staff_member
       - consultation
+      - html_document
       - news
+      - page
       - publication_page
+      - staff_member
       - vacancy
   default_moderation_state: draft
