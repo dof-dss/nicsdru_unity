@@ -84,13 +84,19 @@ class PageBreadcrumb implements BreadcrumbBuilderInterface {
     $route_name = $route_match->getRouteName();
     if ($route_name == 'entity.node.canonical') {
       $this->node = $route_match->getParameter('node');
+    }
+
+    if ($route_name == 'entity.node.preview') {
+      $this->node = $route_match->getParameter('node_preview');
+    }
+
+    if (!empty($this->node)) {
       if ($this->node instanceof NodeInterface == FALSE) {
-        $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
+        $this->node = $this->entityTypeManager->getStorage('node');
       }
-      if (!empty($this->node)) {
-        if ($this->node->bundle() == 'page') {
-          $match = TRUE;
-        }
+
+      if ($this->node->bundle() == 'page') {
+        $match = TRUE;
       }
     }
     return $match;
@@ -102,11 +108,9 @@ class PageBreadcrumb implements BreadcrumbBuilderInterface {
   public function build(RouteMatchInterface $route_match) {
     $breadcrumb = new Breadcrumb();
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
-    if ($this->node) {
-      $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::createFromRoute($title_resolver, '<none>');
-      $breadcrumb->setLinks($links);
-    }
+    $links[] = Link::createFromRoute(t('Home'), '<front>');
+    $links[] = Link::createFromRoute($title_resolver, '<none>');
+    $breadcrumb->setLinks($links);
     $breadcrumb->addCacheContexts(['url.path']);
     return $breadcrumb;
   }
