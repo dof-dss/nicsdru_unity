@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dca5d6bda6b228522a1cc0399b86155a",
+    "content-hash": "63f91db713d33891464c31d6c2b720a5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1909,16 +1909,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.30",
+            "version": "dev-D8UN-628",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "23a32ef44cd062eceb37ac042d6e3511d326f154"
+                "reference": "c7b70ad4028c277c4734ee5790bbbe45d9e5b8f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/23a32ef44cd062eceb37ac042d6e3511d326f154",
-                "reference": "23a32ef44cd062eceb37ac042d6e3511d326f154",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/c7b70ad4028c277c4734ee5790bbbe45d9e5b8f0",
+                "reference": "c7b70ad4028c277c4734ee5790bbbe45d9e5b8f0",
                 "shasum": ""
             },
             "require": {
@@ -1942,9 +1942,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.30"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/D8UN-628"
             },
-            "time": "2021-07-29T10:05:05+00:00"
+            "time": "2021-07-30T14:59:18+00:00"
         },
         {
             "name": "drupal/address",
@@ -19160,6 +19160,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "dof-dss/nicsdru_origins_profile": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
         "drupal/eu_cookie_compliance": 20,
@@ -19176,5 +19177,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
