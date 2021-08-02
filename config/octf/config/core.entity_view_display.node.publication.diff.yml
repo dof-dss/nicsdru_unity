@@ -1,8 +1,9 @@
-uuid: 5fe8aa9e-0bd4-4787-9f55-96189ead6093
+uuid: 077f8233-4d1b-4d24-92f3-cbd5e42b1219
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.diff
     - field.field.node.publication.body
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
@@ -11,14 +12,42 @@ dependencies:
     - node.type.publication
   module:
     - datetime
+    - field_group
+    - layout_builder
+    - metatag
+    - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_publication_type
+        - field_meta_tags
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
 _core:
   default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
-id: node.publication.default
+id: node.publication.diff
 targetEntityType: node
 bundle: publication
-mode: default
+mode: diff
 content:
   body:
     label: hidden
@@ -36,6 +65,20 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 7
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_type:
+    type: list_default
+    weight: 6
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_published_date:
     weight: 0
     label: hidden
@@ -47,7 +90,5 @@ content:
     region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
-  field_publication_type: true
   langcode: true
   links: true
