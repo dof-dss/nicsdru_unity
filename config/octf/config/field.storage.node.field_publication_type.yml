@@ -12,7 +12,43 @@ field_name: field_publication_type
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: assets-recovery-community-scheme
+      label: 'Assets Recovery Community Scheme'
+    -
+      value: octf-annual-report-threat-assessments
+      label: 'OCTF Annual Report & Threat Assessments'
+    -
+      value: cross-border-organised-crime-assessments
+      label: 'Cross Border Organised Crime Assessments'
+    -
+      value: cyber-crime
+      label: 'Cyber Crime'
+    -
+      value: general
+      label: General
+    -
+      value: government-reports
+      label: 'Government Reports'
+    -
+      value: human-trafficking
+      label: 'Human Trafficking'
+    -
+      value: human-trafficking-know-your-rights-leaflets
+      label: 'Human Trafficking - Know Your Rights Leaflets'
+    -
+      value: human-trafficking-teacher-pack
+      label: 'Human Trafficking Teacher''s Pack'
+    -
+      value: ni-organised-crime-strategy
+      label: 'N.I. Organised Crime Strategy'
+    -
+      value: statistics-research-branch
+      label: 'Statistics & Research Branch'
+    -
+      value: update-bulletins
+      label: 'Update Bulletins'
   allowed_values_function: ''
 module: options
 locked: false
