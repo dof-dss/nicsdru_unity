@@ -88,22 +88,33 @@ jobs:
           paths:
             - ./
 
-  # Test for coding standards.
+  # Test for coding standards - will inherit the workspace/filesystem changes from build step, above.
   coding_standards:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
+    environment:
+      PROJECT_ROOT: "/home/circleci/project"
     steps:
       - attach_workspace:
           at: ./
       - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
           name: PHPCS analysis
-          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/sites /home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom /home/circleci/project/web/profiles/unity /home/circleci/project/web/profiles/origins"
+          command: |
+            CHECK_DIRS="${PROJECT_ROOT}/web/sites"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/custom"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/origins"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/custom"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/unity"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/origins"
+            ~/project/phpcs.sh ${PROJECT_ROOT} $CHECK_DIRS
 
-  # Test for coding standards and deprecated code.
+  # Test for deprecated code - will inherit the workspace/filesystem changes from build step, above.
   deprecated_code:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
+    environment:
+      PROJECT_ROOT: "/home/circleci/project"
     steps:
       - attach_workspace:
           at: ./
@@ -112,7 +123,9 @@ jobs:
           name: Deprecated code check
           command: |
             cd /home/circleci/project
-            vendor/bin/drupal-check /home/circleci/project/web/modules/custom /home/circleci/project/web/modules/origins
+            CHECK_DIRS="${PROJECT_ROOT}/web/modules/custom"
+            CHECK_DIRS="$CHECK_DIRS ${PROJECT_ROOT}/web/modules/origins"
+            vendor/bin/drupal-check $CHECK_DIRS
 
   # Run any unit tests and any kernel tests against a vanilla D8 site + our site config imported over it (no predefined content).
   unit_kernel_tests:
