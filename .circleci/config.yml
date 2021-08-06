@@ -5,11 +5,7 @@ commands:
   checkout_code:
     description: "Handle composer access tokens, SSH key fingerprints and code checkout"
     steps:
-#      - run:
-#          name: Add GitHub access token for composer
-#          command: echo 'composer config -g github-oauth.github.com $GITHUB_TOKEN' >> $BASH_ENV
       # Add SSH user key so we can access related repositories as part of our initial clone + composer install command.
-      # 63:d5 >> GitHub user key fingerprint
       - add_ssh_keys:
           fingerprints:
             - "63:d5:d9:74:c7:9c:80:83:9a:67:da:28:d2:a5:d3:e5"
@@ -41,6 +37,23 @@ commands:
           name: Fetch dependencies with composer
           command: |
             composer install --no-interaction --optimize-autoloader
+  composer_tasks__edge_packages:
+    description: "Switch dof-dss packages to HEAD on development branch"
+    steps:
+      - run:
+          name: Switch dof-dss packages to HEAD on develelopment branch
+          command: |
+            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
+                          dof-dss/nicsdru_origins_profile:dev-development
+  install_psh_cli:
+    description: "Install the Platform.sh CLI tool"
+    steps:
+      - run:
+          name: Install the Platform.sh CLI tool
+          command: curl -sS https://platform.sh/cli/installer | php
+      - run:
+          name: Add platform cli tool to $PATH
+          command: echo 'export PATH="$HOME/"'.platformsh/bin':"$PATH"' >> $BASH_ENV
 
   install_php_os_extensions:
     description: "Install a standard group of extensions and packages"
@@ -51,13 +64,16 @@ commands:
             sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
             sudo apt-get update
             sudo apt-get install -y libpng-dev
-            sudo docker-php-ext-install gd
-  github_hosts_workaround:
+            sudo docker-php-ext-install gd pcntl posix
+  hosts_keyscan:
     description: "Adds github.com to known hosts in container; for working locally."
     steps:
       - run:
-          name: Keyscan for github.com
-          command: mkdir -p ~/.ssh && ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          name: Keyscan for hosts that require SSH access
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
 jobs:
   # Tests the integrity of the build, stores the results in a workspace for re-use in later jobs.
   build:
@@ -72,22 +88,33 @@ jobs:
           paths:
             - ./
 
-  # Test for coding standards.
+  # Test for coding standards - will inherit the workspace/filesystem changes from build step, above.
   coding_standards:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
+    environment:
+      PROJECT_ROOT: "/home/circleci/project"
     steps:
       - attach_workspace:
           at: ./
       - run: sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
       - run:
           name: PHPCS analysis
-          command: /home/circleci/project/phpcs.sh /home/circleci/project "/home/circleci/project/web/sites /home/circleci/project/web/modules/origins /home/circleci/project/web/modules/custom /home/circleci/project/web/themes/custom /home/circleci/project/web/profiles/unity /home/circleci/project/web/profiles/origins"
+          command: |
+            CHECK_DIRS="${PROJECT_ROOT}/web/sites"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/custom"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/origins"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/custom"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/unity"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/origins"
+            ~/project/phpcs.sh ${PROJECT_ROOT} $CHECK_DIRS
 
-  # Test for coding standards and deprecated code.
+  # Test for deprecated code - will inherit the workspace/filesystem changes from build step, above.
   deprecated_code:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
+    environment:
+      PROJECT_ROOT: "/home/circleci/project"
     steps:
       - attach_workspace:
           at: ./
@@ -96,392 +123,124 @@ jobs:
           name: Deprecated code check
           command: |
             cd /home/circleci/project
-            vendor/bin/drupal-check /home/circleci/project/web/modules/custom /home/circleci/project/web/modules/origins
+            CHECK_DIRS="${PROJECT_ROOT}/web/modules/custom"
+            CHECK_DIRS="$CHECK_DIRS ${PROJECT_ROOT}/web/modules/origins"
+            vendor/bin/drupal-check $CHECK_DIRS
 
-  # Run any unit tests and any kernel tests against a vanilla D8 site + our site config imported over it (no predefined content).
-  unit_kernel_tests:
-    docker:
-      - image: circleci/php:7.4.15-apache-browsers
-      - image: circleci/mysql:5.7.27
-        environment:
-          - CONFIG_SYNC_DIRECTORY: "../config/uregni/config"
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Add extra OS and PHP extensions/config
-          command: |
-            sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
-            sudo apt-get --allow-releaseinfo-change update
-            sudo apt-get install -y libpng-dev mariadb-client rsync
-            sudo docker-php-ext-install gd pdo_mysql
-      - run:
-          name: Copy vhost into place
-          command: |
-            sudo cp .circleci/drupal.vhost /etc/apache2/sites-available/drupal.conf
-      - run:
-          name: Enable web server and vhosts
-          command: |
-            sudo a2enmod rewrite
-            sudo a2dissite 000-default
-            sudo a2ensite drupal
-            sudo service apache2 start
-      - run:
-          name: Install Drupal and configure settings
-          command: |
-            # Should be scaffolded by now.
-            cd /home/circleci/project/web
-            cp sites/default/default.services.yml sites/default/services.yml
-            # Copy PHPUnit config into core folder.
-            cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
-
-            # For uregni as it uses a different install profile (origins).
-            # Copy in our environment specific settings to the selected multi site settings.php file.
-            cd /home/circleci/project/web
-            cp /home/circleci/project/.circleci/drupal.settings.php sites/uregni/settings.local.php
-            # >> Workaround to install from config; can't yet due to issue in Drupal core.
-            sed -i -e "s/origins:/minimal:/g" ../config/uregni/config/core.extension.yml
-            sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
-            # Install Drupal (or restore from DB dump at this point).
-            mysql -h 127.0.0.1 -u root -e "create schema uregni"
-            cd sites/uregni
-            ../../../vendor/bin/drush site-install -y --existing-config
-
-            # Site install for each multi site except uregni (un-comment as necessary).
-            # for site in liofa fictcommission
-            for site in odscni fiscalcommissionni niauditoffice
-            do
-              # Copy in our environment specific settings to the selected multi site settings.php file.
-              cd /home/circleci/project/web
-              cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
-              # >> Workaround to install from config; can't yet due to issue in Drupal core.
-              sed -i -e "s/nicsdru_unity_profile:/minimal:/g" ../config/$site/config/core.extension.yml
-              sed -i -e "s/profile: nicsdru_unity_profile/profile: minimal/g" ../config/$site/config/core.extension.yml
-              # Install Drupal (or restore from DB dump at this point).
-              mysql -h 127.0.0.1 -u root -e "create schema $site"
-              cd sites/$site
-              ../../../vendor/bin/drush site-install -y --existing-config
-            done
-
-      - run:
-          name: Copy files into webroot
-          command: |
-            # Copy our build into position (./ suffix ensures hidden files are copied too).
-            sudo rsync -avq /home/circleci/project/. /var/www/html
-      - run:
-          name: PHPUnit tests (unit)
-          command: |
-            cd /var/www/html/web/core
-            ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite unit --group unity
-      - run:
-          name: PHPUnit tests (kernel)
-          command: |
-            cd /var/www/html/web/core
-            ../../vendor/bin/phpunit -c /var/www/html/web/core/phpunit.circleci.xml --testsuite kernel --group unity
-
-
-  # Deploy task.
-  deploy:
-    docker:
-      - image: circleci/php:7.3.14-apache-node-browsers
-    steps:
-      - checkout_code
-      - run:
-          name: Add platform.sh hosts to SSH known hosts
-          command: mkdir -p ~/.ssh && ssh-keyscan -H git.uk-1.platform.sh >> ~/.ssh/known_hosts
-      - run:
-          name: Relay to platform.sh
-          command: |
-            # Code is checked out under /home/circleci/project
-            cd /home/circleci/project
-            git remote add platform ${PLATFORM_REPO_URL}
-            git push -f platform ${CIRCLE_BRANCH}
-
-  # Nightly config install test.
-  config_install:
-    docker:
-      - image: circleci/php:7.4.15-apache-browsers
-      - image: circleci/mysql:5.7.27
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Add extra OS and PHP extensions/config
-          command: |
-            sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
-            sudo apt-get --allow-releaseinfo-change update
-            sudo apt-get install -y libpng-dev mariadb-client rsync
-            sudo docker-php-ext-install gd pdo_mysql
-      - run:
-          name: Copy vhost into place
-          command: |
-            sudo cp .circleci/drupal.vhost /etc/apache2/sites-available/drupal.conf
-      - run:
-          name: Enable web server and vhosts
-          command: |
-            sudo a2enmod rewrite
-            sudo a2dissite 000-default
-            sudo a2ensite drupal
-            sudo service apache2 start
-      - run:
-          name: Install Drupal and configure settings
-          command: |
-            # Should be scaffolded by now.
-            cd /home/circleci/project/web
-            cp sites/default/default.services.yml sites/default/services.yml
-            # Copy PHPUnit config into core folder.
-            cp /home/circleci/project/.circleci/phpunit.circleci.xml core/
-
-            # For uregni as it uses a different install profile (origins).
-            # Copy in our environment specific settings to the selected multi site settings.php file.
-            cd /home/circleci/project/web
-            cp /home/circleci/project/.circleci/drupal.settings.php sites/uregni/settings.local.php
-            # >> Workaround to install from config; can't yet due to issue in Drupal core.
-            sed -i -e "s/origins:/minimal:/g" ../config/uregni/config/core.extension.yml
-            sed -i -e "s/profile: origins/profile: minimal/g" ../config/uregni/config/core.extension.yml
-            # Install Drupal (or restore from DB dump at this point).
-            mysql -h 127.0.0.1 -u root -e "create schema uregni"
-            cd sites/uregni
-            ../../../vendor/bin/drush site-install -y --existing-config
-
-            # Site install for each multi site except uregni (un-comment as necessary).
-            # for site in liofa fictcommission
-            for site in odscni fiscalcommissionni niauditoffice
-            do
-              # Copy in our environment specific settings to the selected multi site settings.php file.
-              cd /home/circleci/project/web
-              cp /home/circleci/project/.circleci/drupal.settings.php sites/$site/settings.local.php
-              # >> Workaround to install from config; can't yet due to issue in Drupal core.
-              sed -i -e "s/nicsdru_unity_profile:/minimal:/g" ../config/$site/config/core.extension.yml
-              sed -i -e "s/profile: nicsdru_unity_profile/profile: minimal/g" ../config/$site/config/core.extension.yml
-              # Install Drupal (or restore from DB dump at this point).
-              mysql -h 127.0.0.1 -u root -e "create schema $site"
-              cd sites/$site
-              ../../../vendor/bin/drush site-install -y --existing-config
-            done
-      - run:
-          name: Test for successful bootstraps on all Drupal sites
-          command: |
-            cd /home/circleci/project/web
-            # for site in uregni liofa fictcommission
-            for site in uregni odscni fiscalcommissionni niauditoffice
-            do
-              ../vendor/bin/drush -l $site st | grep "Drupal bootstrap : Successful"
-            done
   # Nightly edge build
-  unity_edge_build:
+  edge_build:
     docker:
-      - image: circleci/php:7.4.15-apache-browsers
+      - image: circleci/php:7.4.15-apache-node-browsers
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
       GIT_COMMITTER_NAME: "Circle CI"
       GIT_AUTHOR_NAME: "Circle CI"
+      EDGE_BUILD_BRANCH: "D8UN-edge"
+      PLATFORM_REGION: "uk-1.platform.sh"
     steps:
-      - attach_workspace:
-          at: ./
+      - hosts_keyscan
+      - checkout_code
       - install_php_os_extensions
+      - install_psh_cli
       - run:
-          name: Add extra OS and PHP extensions/config
-          command: |
-            sudo docker-php-ext-install pcntl posix
+          name: Switch to edge branch
+          command: git checkout $EDGE_BUILD_BRANCH
+      - composer_tasks__edge_packages
       - run:
-          name: Keyscan Platform.sh region hostnames + GitHub for password-less access
+          name: Push composer package updates back to GitHub
           command: |
-            mkdir -p ~/.ssh
-            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-      - run:
-          name: Install the Platform.sh CLI tool
-          command: |
-            curl -sS https://platform.sh/cli/installer | php
-      - run:
-          name: Re-point dof-dss packages to use latest development code and push.
-          command: |
-            cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
-
-            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
-              dof-dss/nicsdru_origins_profile:dev-development
-
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
-
+      - run:
+          name: Re-build site theme npm dependencies
+          command: |
             # Need to re-build site theme with any Unity changes.
-            # for site in uregni liofa fictcommission
-            for site in uregni odscni fiscalcommissionni niauditoffice
+            # Download and configure node and npm.
+            sudo apt install libjpeg-dev automake
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
-              cd web/sites/$site/themes/*theme
-              sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
-
-              # Download and configure node and npm.
-              curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-              sudo apt install nodejs
-              #sudo apt install npm
-              sudo apt install automake
-              sudo apt install libjpeg-dev
-
-              # Build site themes.
-              npm install
-              npm rebuild node-sass
-              npm run build
-
-              git add *.css
-              git commit -m "Theme rebuild"
-              cd ~/project
+              if [[ -d ~/project/web/sites/${site}/themes/${site}_theme ]]; then
+                cd ~/project/web/sites/${site}/themes/${site}_theme
+                sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
+                npm install
+                npm rebuild node-sass
+                npm run build
+              else
+                echo "No theme folder detected under ~/project/web/sites/${site}/themes/${site}_theme, skipping."
+              fi
             done
 
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
             git push -f origin $EDGE_BUILD_BRANCH
 
-            # Pause for webhook to propagate the change from GH to PSH.
-            sleep 10s
-      - run:
-          name: Activate the environment if not found.
-          command: |
-            if ! /home/circleci/.platformsh/bin/platform environment:list -p $PLATFORM_PROJECT_ID -I --no-header --pipe | grep -q $EDGE_BUILD_BRANCH; then
-              echo "No active environment for $EDGE_BUILD_BRANCH found, attempt to activate one."
-              /home/circleci/.platformsh/bin/platform environment:activate -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
-            fi
-
-  # Nightly edge build deployment
-  unity_edge_build_deploy:
-    docker:
-      - image: circleci/php:7.4.15-apache-browsers
-    steps:
-      - checkout_code
-      - install_php_os_extensions
-      - run:
-          name: Switch to edge build branch
-          command: |
-            cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
-      - run:
-          name: Install dev versions of dof-dss packages with composer.
-          command: |
-            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
-                         dof-dss/nicsdru_origins_profile:dev-development
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - ./
-
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
     docker:
       - image: circleci/php:7.4.15-apache-browsers
     steps:
+      - hosts_keyscan
       - checkout_code
-      - run:
-          name: Checkout edge branch
-          command: |
-            cd ~/project
-            git checkout -b $EDGE_BUILD_BRANCH
       - install_php_os_extensions
-      - run:
-          name: Add extra OS and PHP extensions/config
-          command: |
-            sudo docker-php-ext-install pcntl posix
-      - run:
-          name: Keyscan Platform.sh region hostnames for password-less access
-          command: |
-            mkdir -p ~/.ssh
-            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
-      - run:
-          name: Install the Platform.sh CLI tool
-          command: |
-            curl -sS https://platform.sh/cli/installer | php
+      - install_psh_cli
       - run:
           name: Trigger a data sync from master environment to nightly edge build.
           command: |
-            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
       - run:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
             sleep 90s
-            /home/circleci/.platformsh/bin/platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+            platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'pmu fastly -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            do
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ ! -n $result ]]; then
+                platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              fi
+            done
       - run:
           name: Clear cache before config import
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'cr -l uregni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cr -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            do
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ ! -n $result ]]; then
+                platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              fi
+            done
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
-            /home/circleci/.platformsh/bin/platform drush 'cim -l uregni' -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l odscni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l hatecrimereviewni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l liofa'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l fictcommission'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l employmenttribunalsni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l attorneygeneralni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l fiscalcommissionni'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'cim -l niauditoffice'  -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            do
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ ! -n $result ]]; then
+                platform drush "cim -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              fi
+            done
       - run:
           name: Force purge of Solr index
-          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+          command: |
+            for site in uregni
+            do
+              uc_site=$(echo ${site} | tr '[:lower:]' '[:upper:]')
+              platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH \
+               "curl http://${PLATFORM_SOLR_HOST_${uc_site}/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
+                && curl http://${PLATFORM_SOLR_HOST_${uc_site}}/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+            done
       - run:
           name: Rebuild the Solr index
           command: |
-            #/home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-
-  # Rebuild solr on each deployment.
-  deploy_solr_rebuild:
-    docker:
-      - image: circleci/php:7.4.15-apache-browsers
-    steps:
-      - attach_workspace:
-          at: ./
-      - install_php_os_extensions
-      - run:
-          name: Add extra OS and PHP extensions/config
-          command: |
-            sudo docker-php-ext-install pcntl posix
-      - run:
-          name: Keyscan Platform.sh region hostnames for password-less access
-          command: |
-            mkdir -p ~/.ssh
-            ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
-      - run:
-          name: Install the Platform.sh CLI tool
-          command: |
-            curl -sS https://platform.sh/cli/installer | php
-      - run:
-          name: Force purge of Solr index
-          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
-      - run:
-          name: Rebuild the Solr index
-          command: |
-            #/home/circleci/.platformsh/bin/platform drush 'sapi-rt -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            /home/circleci/.platformsh/bin/platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-          no_output_timeout: 30m
+            platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
 
 workflows:
   version: 2
@@ -492,31 +251,6 @@ workflows:
           requires:
             - build
       - deprecated_code:
-          requires:
-            - build
-#  Comment out the tests until there are some to run !
-#      - unit_kernel_tests:
-#          requires:
-#            - build
-      - deploy_solr_rebuild:
-          requires:
-            - build
-#      - deploy:
-#          requires:
-#            - static_analysis
-#            - unit_kernel_tests
-  nightly:
-    triggers:
-      - schedule:
-          # At 00:00 on every day-of-week from Monday through Friday
-          cron: "0 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
-    jobs:
-      - build
-      - config_install:
           requires:
             - build
 
@@ -531,13 +265,10 @@ workflows:
               only:
                 - development
     jobs:
-      - build
-      - unity_edge_build:
-          requires:
-            - build
+      - edge_build
 
   # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
-  nightly-edge-build-deploy:
+  nightly-edge-build-post-build-tasks:
     triggers:
       - schedule:
           # At 01:23 Monday to Friday
@@ -545,13 +276,6 @@ workflows:
           filters:
             branches:
               only:
-                - development
+                - D8UN-edge
     jobs:
-      - build
-      - unity_edge_build_deploy:
-          requires:
-            - build
-      - sync_data:
-          requires:
-            - unity_edge_build_deploy
-
+      - sync_data
