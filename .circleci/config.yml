@@ -145,7 +145,7 @@ jobs:
       - install_psh_cli
       - run:
           name: Switch to edge branch
-          command: git checkout $EDGE_BUILD_BRANCH
+          command: git checkout -b $EDGE_BUILD_BRANCH
       - composer_tasks__edge_packages
       - run:
           name: Push composer package updates back to GitHub
