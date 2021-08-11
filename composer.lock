@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53db5d87c83da762258a77422c650bfd",
+    "content-hash": "99b7d70480122be2f56f954cffe35219",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1865,16 +1865,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.13",
+            "version": "0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "fce81b8d01935ff060ee050ad9229f9da5d648eb"
+                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/fce81b8d01935ff060ee050ad9229f9da5d648eb",
-                "reference": "fce81b8d01935ff060ee050ad9229f9da5d648eb",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
+                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
                 "shasum": ""
             },
             "require": {
@@ -1900,9 +1900,9 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.13"
+                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.11"
             },
-            "time": "2021-08-11T09:50:44+00:00"
+            "time": "2021-04-21T10:20:46+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",

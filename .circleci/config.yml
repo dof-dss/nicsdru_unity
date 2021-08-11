@@ -43,8 +43,7 @@ commands:
       - run:
           name: Switch dof-dss packages to HEAD on develelopment branch
           command: |
-            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development \
-                          dof-dss/nicsdru_origins_profile:dev-development
+            composer require dof-dss/nicsdru_unity_theme:dev-development dof-dss/nicsdru_origins_modules:dev-development
   install_psh_cli:
     description: "Install the Platform.sh CLI tool"
     steps:
