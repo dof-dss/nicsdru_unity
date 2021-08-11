@@ -200,7 +200,7 @@ jobs:
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
-              if [[ ! -n $result ]]; then
+              if [[ -n $result ]]; then
                 platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
@@ -210,7 +210,7 @@ jobs:
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
-              if [[ ! -n $result ]]; then
+              if [[ -n $result ]]; then
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
@@ -220,7 +220,7 @@ jobs:
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
-              if [[ ! -n $result ]]; then
+              if [[ -n $result ]]; then
                 platform drush "cim -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
@@ -237,9 +237,12 @@ jobs:
       - run:
           name: Rebuild the Solr index
           command: |
-            platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-            platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            for site in uregni
+            do
+              platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+            done
 
 workflows:
   version: 2
