@@ -8,9 +8,6 @@ libraries:
   - fiscalcommissionni_theme/fonts
   - fiscalcommissionni_theme/site-styling
 
-ckeditor_stylesheets:
-  - css/ckeditor.css
-
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:
     css:
