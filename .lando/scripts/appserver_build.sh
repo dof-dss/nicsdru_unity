@@ -10,9 +10,6 @@ DRUPAL_CUSTOM_CODE=$DRUPAL_ROOT/modules/custom
 # of supporting software or config files.
 NODE_YARN_INSTALLED=/etc/NODE_YARN_INSTALLED
 
-# Add hirak/prestissimo to speed up composer downloads.
-composer global require hirak/prestissimo --no-interaction
-
 # Create export directories for config and data.
 if [ ! -d "/app/.lando/exports" ]; then
   echo "Creating export directories"
