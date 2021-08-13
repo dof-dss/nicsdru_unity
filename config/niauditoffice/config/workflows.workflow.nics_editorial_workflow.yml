@@ -6,6 +6,7 @@ dependencies:
     - node.type.faq
     - node.type.feature
     - node.type.featured_content_list
+    - node.type.html_document
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -103,6 +104,7 @@ type_settings:
       - faq
       - feature
       - featured_content_list
+      - html_document
       - news
       - page
       - publication_page

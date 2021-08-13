@@ -1,0 +1,28 @@
+uuid: e11a875f-470e-4fa8-a1e6-55f57ef7c659
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_html
+    - node.type.html_document
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html_publications: basic_html_publications
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.html_document.field_html
+field_name: field_html
+entity_type: node
+bundle: html_document
+label: HTML
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

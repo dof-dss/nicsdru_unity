@@ -3,6 +3,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  allowed_formats: 0
   automated_cron: 0
   blazy: 0
   block: 0
@@ -115,6 +116,7 @@ module:
   ultimate_cron: 0
   unity_common: 0
   unity_frontpage: 0
+  unity_html_publications: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
   unity_map_embed: 0

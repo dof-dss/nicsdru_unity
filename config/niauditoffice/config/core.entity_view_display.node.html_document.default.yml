@@ -1,0 +1,35 @@
+uuid: 140ae145-47d6-4e21-af05-ca1e6110e08f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.html_document.field_html
+    - node.type.html_document
+  module:
+    - text
+    - user
+id: node.html_document.default
+targetEntityType: node
+bundle: html_document
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_html:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true
