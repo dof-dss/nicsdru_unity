@@ -63,8 +63,8 @@ $chroma: add-colors('functional', (
   menu-background:        'brand-primary',
   menu-item-hover:        'brand-secondary',
   menu-separator:         #fff,
-  menu-sub-item-background: lighten(#002e62, 10),
-  menu-sub-item-hover:    #1abc9c,
+  menu-sub-item-background: 'brand-primary',
+  menu-sub-item-hover:    'brand-primary',
   menu-borders:           'charcoal',
 
   table-background:       #fff,
@@ -125,7 +125,7 @@ $mark-bg: color(mark-bg);
 $error: color(error);
 $error-bg: color(error-bg);
 
-$menu-background: color(menu-background);
+$menu-background: transparent;
 $menu-item-hover: color(menu-item-hover);
 $menu-separator: color(menu-separator);
 $menu-sub-item-background: color(menu-sub-item-background);
