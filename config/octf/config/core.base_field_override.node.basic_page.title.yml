@@ -1,0 +1,18 @@
+uuid: 01a46e08-4450-407f-a8ed-9b42556a5b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+id: node.basic_page.title
+field_name: title
+entity_type: node
+bundle: basic_page
+label: 'Title (Main heading)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

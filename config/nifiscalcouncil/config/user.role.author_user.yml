@@ -17,6 +17,7 @@ permissions:
   - 'access media overview'
   - 'access toolbar'
   - 'add media from remote sources'
+  - 'administer main menu items'
   - 'create application content'
   - 'create article content'
   - 'create audio media'

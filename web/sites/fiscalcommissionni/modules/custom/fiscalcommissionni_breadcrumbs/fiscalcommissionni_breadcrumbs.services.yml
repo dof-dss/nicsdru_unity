@@ -24,3 +24,8 @@ services:
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
     tags:
       - { name: breadcrumb_builder, priority: 100 }
+  fiscalcommissionni_breadcrumbs.breadcrumb.page:
+    class: Drupal\fiscalcommissionni_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }

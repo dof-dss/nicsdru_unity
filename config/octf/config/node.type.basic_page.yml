@@ -4,17 +4,28 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - origins_toc
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
+  origins_toc:
+    toc_enable: 1
+    toc_title: 'On this page'
+    toc_location: '#post-content .page-content'
+    toc_insert: before
+    toc_source_container: '#post-content .page-content'
+    toc_element: h2
+    toc_exclusions: ''
+    toc_screen_depth: '2'
+    toc_debug: 0
 _core:
   default_config_hash: En2bzcXy3f-IX9BqWTsiLvqKn5f-Ihs77tQTY17Ltnw
 name: 'Basic page'
 type: basic_page
-description: 'Use this content type for basic pages on your site.'
-help: ''
+description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+help: 'Use this content type to create pages on your site'
 new_revision: true
 preview_mode: 1
 display_submitted: false
