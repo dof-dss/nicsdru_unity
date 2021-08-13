@@ -7,9 +7,6 @@ core_version_requirement: 8.x || ^9
 libraries:
   - odscni_theme/site-styling
 
-ckeditor_stylesheets:
-  - css/ckeditor.css
-
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:
     css:
