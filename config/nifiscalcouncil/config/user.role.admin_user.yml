@@ -43,6 +43,7 @@ permissions:
   - 'administer files'
   - 'administer image styles'
   - 'administer login destination settings'
+  - 'administer main menu items'
   - 'administer media browser'
   - 'administer modules'
   - 'administer nodes'
