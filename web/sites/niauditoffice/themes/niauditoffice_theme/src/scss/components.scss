@@ -60,6 +60,7 @@
   .menu .active,
   .menu-item.open .menu-toggle-btn {
     color: $brand-primary;
+    @include adjust-font-size-to(14px);
   }
 
   .menu-link {
@@ -107,15 +108,19 @@
 }
 
 .webform-submission-form {
-    input::placeholder,
-    textarea::placeholder {
-      opacity: 1;
-      color: #333;
-    }
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    color: #333;
+  }
 
   input[type="submit"] {
     @include submit-button;
   }
+}
+
+.block h2 {
+  @include adjust-font-size-to(22px);
 }
 
 #block-sidemenu {
@@ -230,7 +235,7 @@
 
 #block-footersubscription {
   h2 {
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(22px);
     margin: .5rem 0 1.5rem;
     padding: 1rem 0;
   }
