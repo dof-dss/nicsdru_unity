@@ -240,7 +240,7 @@
     padding: 1rem 0;
   }
 
-  label {
+  ul label {
     display: inline;
   }
 
@@ -250,17 +250,14 @@
     }
 
     &[type="email"] {
+      max-width: 100%;
+
       &:focus {
         outline: 3px solid #fae029;
         outline-offset: -2px;
         position: relative;
         z-index: 101;
       }
-    }
-
-    &[type="submit"] {
-      @include submit-button;
-      padding: .3rem .6rem;
     }
   }
 }
@@ -271,6 +268,10 @@
 }
 
 #block-footercontactinformation {
+  address {
+    padding-top: 0.3rem;
+  }
+
   .social-icons {
     margin-top: 2.4rem;
 
