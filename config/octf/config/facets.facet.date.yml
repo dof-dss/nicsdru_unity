@@ -1,4 +1,4 @@
-uuid: b552c1fc-c771-4189-830b-4356b9a945c9
+uuid: f4cc5864-9bfe-45e3-b7f0-32d443cb3003
 langcode: en
 status: true
 dependencies:
@@ -10,14 +10,14 @@ dependencies:
     - search_api
 third_party_settings:
   facets_pretty_paths:
-    coder: taxonomy_term_coder
-id: type
-name: Type
-url_alias: type
+    coder: default_coder
+id: date
+name: 'Published date'
+url_alias: date
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_publication_type
+field_identifier: field_published_date
 facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
 widget:
   type: links
@@ -44,17 +44,25 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
-  count_widget_order:
-    processor_id: count_widget_order
+  date_facet_drilldown:
+    processor_id: date_facet_drilldown
     weights:
-      sort: 30
+      build: 1
+    settings: {  }
+  date_item:
+    processor_id: date_item
+    weights:
+      build: 35
+    settings:
+      date_display: actual_date
+      granularity: 6
+      date_format: ''
+  raw_value_widget_order:
+    processor_id: raw_value_widget_order
+    weights:
+      sort: 50
     settings:
       sort: DESC
-  list_item:
-    processor_id: list_item
-    weights:
-      build: 5
-    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
