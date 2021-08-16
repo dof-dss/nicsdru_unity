@@ -2,15 +2,16 @@ uuid: 04415a93-5ae4-4c1a-ab1a-6b913e9d79d8
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.body
-    - field.storage.node.field_published_date
-    - field.storage.node.field_teaser
-    - search_api.server.default
   module:
     - node
     - user
     - search_api
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_published_date
+    - field.storage.node.field_teaser
+    - field.storage.node.field_publication_type
+    - search_api.server.default
 id: default_content
 name: 'Default content'
 description: ''
@@ -33,6 +34,14 @@ field_settings:
     dependencies:
       module:
         - node
+  field_publication_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_publication_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publication_type
   field_published_date:
     label: 'Published date'
     datasource_id: 'entity:node'
@@ -46,9 +55,18 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_teaser
     type: text
+    boost: !!float 3
     dependencies:
       config:
         - field.storage.node.field_teaser
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
   name:
     label: 'Authored by » User » Name'
     datasource_id: 'entity:node'
@@ -118,7 +136,9 @@ processor_settings:
     all_fields: true
     fields:
       - body
+      - field_publication_type
       - field_teaser
+      - langcode
       - name
       - summary
       - title
@@ -138,7 +158,9 @@ processor_settings:
     all_fields: true
     fields:
       - body
+      - field_publication_type
       - field_teaser
+      - langcode
       - name
       - summary
       - title
