@@ -319,7 +319,9 @@ display:
         menu_name: main
       exposed_block: true
       cache:
-        type: none
+        type: custom_tag
+        options:
+          custom_tag: 'node_list:news'
       defaults:
         cache: false
     cache_metadata:
