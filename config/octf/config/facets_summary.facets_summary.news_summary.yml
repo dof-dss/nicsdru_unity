@@ -1,16 +1,16 @@
-uuid: c994ceee-72e5-46df-9ba0-1882060a8e85
+uuid: c79b863e-764d-47b0-82c7-d095134506b1
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.news
+    - search_api.index.default_content
     - views.view.news_search
   module:
     - search_api
 id: news_summary
 name: 'News summary'
 facets:
-  news_published_date:
+  published_date:
     checked: true
     label: 'Published date'
     separator: ', '
