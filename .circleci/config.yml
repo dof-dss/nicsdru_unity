@@ -227,13 +227,13 @@ jobs:
       - run:
           name: Force purge of Solr index
           command: |
-            for site in uregni
-            do
-              uc_site=$(echo ${site} | tr '[:lower:]' '[:upper:]')
+            #for site in uregni
+            #do
+              #uc_site=$(echo ${site} | tr '[:lower:]' '[:upper:]')
               platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH \
-               "curl http://${PLATFORM_SOLR_HOST}_${uc_site}/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
-                && curl http://${PLATFORM_SOLR_HOST}_${uc_site}}/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
-            done
+               "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
+                && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+            #done
       - run:
           name: Rebuild the Solr index
           command: |
