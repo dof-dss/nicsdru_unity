@@ -19,6 +19,7 @@ db:
       - nifiscalcouncildb
       - niauditofficedb
       - octfdb
+      - urologyservicesinquirydb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -56,6 +57,10 @@ db:
         default_schema: octfdb
         privileges:
           octfdb: admin
+      urologyservicesinquiry:
+        default_schema: urologyservicesinquirydb
+        privileges:
+          urologyservicesinquirydb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
