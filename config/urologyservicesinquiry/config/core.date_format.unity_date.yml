@@ -1,0 +1,8 @@
+uuid: e676432b-7b0e-4944-a279-55f569fbd381
+langcode: en
+status: true
+dependencies: {  }
+id: unity_date
+label: 'Unity date'
+locked: false
+pattern: 'd F Y'
