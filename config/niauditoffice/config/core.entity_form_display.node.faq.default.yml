@@ -1,4 +1,4 @@
-uuid: 9bf4d836-e5f0-4f26-9f5b-61b62b5ebd75
+uuid: bfd5ad18-c0d3-4eda-9413-b69a6361a929
 langcode: en
 status: true
 dependencies:
@@ -6,11 +6,10 @@ dependencies:
     - field.field.node.faq.field_faq
     - field.field.node.faq.field_meta_tags
     - node.type.faq
-    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
-    - faqfield
     - metatag
+    - paragraphs
     - path
 id: node.faq.default
 targetEntityType: node
@@ -24,23 +23,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_faq:
-    weight: 121
+    type: entity_reference_paragraphs
+    weight: 122
     settings:
-      answer_widget: text_format
-      question_title: Question
-      answer_title: Answer
-      advanced:
-        question_length: 255
-        question_size: 100
-        question_rows: 0
-        answer_rows: 3
-      question_field_required: false
-      answer_field_required: false
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: faqfield_default
     region: content
   field_meta_tags:
-    weight: 122
+    weight: 123
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -106,7 +101,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

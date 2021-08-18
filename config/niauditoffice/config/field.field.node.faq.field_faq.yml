@@ -1,12 +1,13 @@
-uuid: 4ab0cb46-2e86-4ff5-9c67-7a6a2388a28c
+uuid: e1e29db5-89db-47dd-838f-9b1297902286
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_faq
     - node.type.faq
+    - paragraphs.paragraphs_type.faq_accordion
   module:
-    - faqfield
+    - entity_reference_revisions
 id: node.faq.field_faq
 field_name: field_faq
 entity_type: node
@@ -18,5 +19,16 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  default_format: basic_html
-field_type: faqfield
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      faq_accordion: faq_accordion
+    target_bundles_drag_drop:
+      faq_accordion:
+        enabled: true
+        weight: 3
+      map:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions
