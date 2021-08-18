@@ -10,15 +10,15 @@ dependencies:
     - nifiscalcouncil_theme
 id: contactus
 theme: nifiscalcouncil_theme
-region: footer
-weight: 0
+region: footer_first
+weight: -7
 provider: null
 plugin: 'block_content:67257ad0-f172-4348-8745-931a230e09e5'
 settings:
   id: 'block_content:67257ad0-f172-4348-8745-931a230e09e5'
   label: 'Contact us'
   provider: block_content
-  label_display: '0'
+  label_display: visible
   status: true
   info: ''
   view_mode: full

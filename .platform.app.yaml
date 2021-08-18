@@ -38,6 +38,7 @@ relationships:
   niauditoffice: 'db:niauditoffice'
   niauditoffice_solr: 'solr:niauditoffice'
   octf: 'db:octf'
+  urologyservicesinquiry: 'db:urologyservicesinquiry'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -76,7 +77,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni niauditoffice nifiscalcouncil octf
+    for site in uregni odscni fiscalcommissionni niauditoffice nifiscalcouncil octf urologyservicesinquiry
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -164,3 +165,6 @@ crons:
   octf:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/octf ; drush core-cron'
+  urologyservicesinquiry:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'

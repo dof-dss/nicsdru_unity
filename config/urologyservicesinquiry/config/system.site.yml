@@ -1,0 +1,15 @@
+name: 'Urology Services Inquiry'
+mail: admin@usi.org.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 4bd8e87f-40cc-4a1d-8722-d122094e3f68
+frontpage_title: 'Welcome to Drupal site'
