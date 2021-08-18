@@ -141,8 +141,24 @@
   type: redirect
   to: "https://www.octf.gov.uk/"
 
+#---------------------------------
+
+"https://www.urologyservicesinquiry.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://urologyservicesinquiry.org.uk.{default}/":
+  type: redirect
+  to: "https://www.urologyservicesinquiry.org.uk.{default}/"
+
+"https://urologyservicesinquiry.org.uk/":
+  type: redirect
+  to: "https://www.urologyservicesinquiry.org.uk/"
 
 #---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream
