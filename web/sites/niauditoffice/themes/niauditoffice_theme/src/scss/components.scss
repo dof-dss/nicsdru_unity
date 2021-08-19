@@ -35,7 +35,7 @@
 
 .content-sidebar-wrap {
   ul {
-    li {
+    li:not(.pager__item) {
       list-style: none;
       position: relative;
 
@@ -62,7 +62,8 @@
   }
 
   .menu-link {
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
     }
   }
