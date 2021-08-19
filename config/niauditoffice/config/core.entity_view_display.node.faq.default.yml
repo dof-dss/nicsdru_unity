@@ -1,4 +1,4 @@
-uuid: 9ab35519-4719-42c2-919c-bb2fa172e576
+uuid: 790eb2d9-c1f0-477b-9c30-ec7c950e3def
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.faq.field_meta_tags
     - node.type.faq
   module:
-    - faqfield
+    - entity_reference_revisions
     - user
 id: node.faq.default
 targetEntityType: node
@@ -15,21 +15,15 @@ bundle: faq
 mode: default
 content:
   field_faq:
+    type: entity_reference_revisions_entity_view
     weight: 0
     label: hidden
     settings:
-      active: 0
-      heightStyle: content
-      collapsible: true
-      event: click
-      animate:
-        duration: 200
-        easing: linear
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: faqfield_accordion
     region: content
 hidden:
-  content_moderation_control: true
   field_meta_tags: true
   langcode: true
   links: true

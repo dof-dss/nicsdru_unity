@@ -1,16 +1,16 @@
-uuid: d0df70f3-bfd7-4ff7-812c-2bc5fa1d1331
+uuid: beb584ce-6c5b-4a29-be53-a276229b3ce8
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.publications
+    - search_api.index.default_content
     - views.view.publications_search
   module:
     - search_api
 id: publications_summary
 name: 'Publications summary'
 facets:
-  published_date:
+  date:
     checked: true
     label: 'Published date'
     separator: ', '

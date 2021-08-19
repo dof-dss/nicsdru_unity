@@ -1,16 +1,16 @@
-uuid: cf99c7fc-7e69-45a0-b71b-171726fab7bc
+uuid: b552c1fc-c771-4189-830b-4356b9a945c9
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.publications
+    - search_api.index.default_content
     - views.view.publications_search
   module:
     - facets_pretty_paths
     - search_api
 third_party_settings:
   facets_pretty_paths:
-    coder: taxonomy_term_coder
+    coder: default_coder
 id: type
 name: Type
 url_alias: type

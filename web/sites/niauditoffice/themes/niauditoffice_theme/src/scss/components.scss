@@ -13,7 +13,6 @@
   color: #fff;
   font-weight: normal;
   text-shadow: none;
-  text-decoration: underline;
   text-underline-offset: .25em;
   box-shadow: none;
   margin: 1rem 0 0;
@@ -26,7 +25,6 @@
   &:focus {
     background: $ash-grey;
     outline: none;
-    text-decoration: underline;
     opacity: 1;
   }
 
@@ -51,6 +49,47 @@
   }
 }
 
+.region-primary-menu .menu_wrapper {
+  border-color: $brand-primary;
+}
+
+#main-menu {
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $brand-primary;
+    @include adjust-font-size-to(14px);
+  }
+
+  .menu-link {
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .menu .menu-item .active {
+    border-color: $brand-primary;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      .active {
+        color: $white;
+        border-color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          background: #0089d1;
+        }
+      }
+    }
+  }
+}
+
 .search-result {
   border-bottom: 1px solid #d3d7d9;
   padding-bottom: 1.5rem;
@@ -67,15 +106,19 @@
 }
 
 .webform-submission-form {
-    input::placeholder,
-    textarea::placeholder {
-      opacity: 1;
-      color: #333;
-    }
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    color: #333;
+  }
 
   input[type="submit"] {
     @include submit-button;
   }
+}
+
+.block h2 {
+  @include adjust-font-size-to(22px);
 }
 
 #block-sidemenu {
@@ -190,12 +233,12 @@
 
 #block-footersubscription {
   h2 {
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(22px);
     margin: .5rem 0 1.5rem;
     padding: 1rem 0;
   }
 
-  label {
+  ul label {
     display: inline;
   }
 
@@ -205,6 +248,8 @@
     }
 
     &[type="email"] {
+      max-width: 100%;
+
       &:focus {
         outline: 3px solid #fae029;
         outline-offset: -2px;
@@ -226,6 +271,10 @@
 }
 
 #block-footercontactinformation {
+  address {
+    padding-top: 0.3rem;
+  }
+
   .social-icons {
     margin-top: 2.4rem;
 

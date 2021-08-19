@@ -1,0 +1,28 @@
+uuid: 8a15fc1a-dc82-4818-a0c6-43d2c5ca9e88
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type
+  module:
+    - facets
+    - system
+  theme:
+    - octf_theme
+id: type
+theme: octf_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:type'
+settings:
+  id: 'facet_block:type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: type
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*\r\n"
+    negate: false
