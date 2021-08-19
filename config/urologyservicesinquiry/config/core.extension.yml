@@ -3,6 +3,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  allowed_formats: 0
   automated_cron: 0
   blazy: 0
   block: 0
@@ -20,6 +21,7 @@ module:
   content_lock_timeout: 0
   content_moderation: 0
   contextual: 0
+  cookie_content_blocker: 0
   csp: 0
   ctools: 0
   datetime: 0
@@ -86,7 +88,8 @@ module:
   redirect: 0
   responsive_image: 0
   scheduled_transitions: 0
-  search: 0
+  search_api: 0
+  search_api_db: 0
   simplei: 0
   structure_sync: 0
   system: 0
@@ -102,6 +105,7 @@ module:
   unity_image_styles: 0
   unity_internal_link_checker: 0
   unity_map_embed: 0
+  unity_search_pages: 0
   user: 0
   views_custom_cache_tag: 0
   webform: 0
@@ -114,9 +118,9 @@ module:
   pathauto: 1
   origins_workflow: 2
   views: 10
-  eu_cookie_compliance: 11
   paragraphs: 11
   nicsdru_unity_profile: 1000
+  eu_cookie_compliance: 1001
 theme:
   stark: 0
   seven: 0

@@ -84,6 +84,7 @@
     h2 {
       @include adjust-font-size-to(30px);
       text-align: center;
+      color: $text;
     }
 
     .item {
