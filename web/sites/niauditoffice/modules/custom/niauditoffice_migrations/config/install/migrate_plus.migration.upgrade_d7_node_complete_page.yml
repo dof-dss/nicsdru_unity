@@ -96,6 +96,10 @@ process:
       plugin: site_files_filter
       from_ref: sites/niauditoffice.gov.uk/files
       to_ref: files/niauditoffice
+    -
+      plugin: site_files_filter
+      from_ref: sites/niao-drupal.nigov.net/files
+      to_ref: files/niauditoffice
   body/0/format:
     -
       plugin: static_map
