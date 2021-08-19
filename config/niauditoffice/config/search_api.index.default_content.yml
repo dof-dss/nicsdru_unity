@@ -6,11 +6,13 @@ dependencies:
     - search_api_solr
     - node
     - user
+    - paragraphs
     - search_api
   config:
     - field.storage.node.body
     - field.storage.node.field_publication_date
     - field.storage.node.field_faq
+    - field.storage.paragraph.field_answer
     - field.storage.node.field_member_role
     - field.storage.node.field_published_date
     - field.storage.node.field_teaser
@@ -62,15 +64,6 @@ name: 'Default content'
 description: ''
 read_only: false
 field_settings:
-  answer_format:
-    label: 'FAQ » Answer text format'
-    datasource_id: 'entity:node'
-    property_path: 'field_faq:answer_format'
-    type: 'solr_text_custom_omit_norms:edge'
-    boost: 0.5
-    dependencies:
-      config:
-        - field.storage.node.field_faq
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -88,6 +81,18 @@ field_settings:
     dependencies:
       module:
         - node
+  field_answer:
+    label: 'FAQ » Paragraph » Answer'
+    datasource_id: 'entity:node'
+    property_path: 'field_faq:entity:field_answer'
+    type: 'solr_text_custom_omit_norms:edge'
+    boost: 0.5
+    dependencies:
+      config:
+        - field.storage.node.field_faq
+        - field.storage.paragraph.field_answer
+      module:
+        - paragraphs
   field_member_role:
     label: 'Member role'
     datasource_id: 'entity:node'
@@ -192,8 +197,8 @@ processor_settings:
   html_filter:
     all_fields: true
     fields:
-      - answer_format
       - body
+      - field_answer
       - field_member_role
       - field_publication_type
       - field_teaser

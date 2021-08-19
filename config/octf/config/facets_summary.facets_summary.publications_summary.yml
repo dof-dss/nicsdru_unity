@@ -1,0 +1,31 @@
+uuid: beb584ce-6c5b-4a29-be53-a276229b3ce8
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_content
+    - views.view.publications_search
+  module:
+    - search_api
+id: publications_summary
+name: 'Publications summary'
+facets:
+  date:
+    checked: true
+    label: 'Published date'
+    separator: ', '
+    weight: 0
+    show_count: false
+  type:
+    checked: true
+    label: Type
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }

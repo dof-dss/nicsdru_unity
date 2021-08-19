@@ -10,6 +10,7 @@ proxy:
     - nifiscalcouncil.org.lndo.site
     - niauditoffice.gov.uk.lndo.site
     - octf.gov.uk.lndo.site
+    - urologyservicesinquiry.org.uk.lndo.site
 services:
   uregni_solr:
     type: solr:7
