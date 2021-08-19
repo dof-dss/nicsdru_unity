@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the urologyservicesinquiry_theme theme.
+ */
+
+/**
+ * Implements template_preprocess_views_view()
+ * @param array $variables
+ */
+function urologyservicesinquiry_theme_preprocess_views_view(&$variables)
+{
+  $view = $variables['view'];
+  switch ($view->storage->id()) {
+    case 'latest_news':
+      if ($view->current_display == 'home_latest_news')  {
+        $variables['more']['#options']['attributes']['class'] = 'btn';
+      }
+  }
+}
