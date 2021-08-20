@@ -16,6 +16,18 @@
       outline-offset: 1.2rem;
     }
   }
+
+  img {
+    @media screen and (max-width: $tab) {
+      height: 60px;
+    }
+  }
+}
+
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+  }
 }
 
 #main-menu {
@@ -34,8 +46,9 @@
 
       &.open {
         .menu-toggle-btn {
-          background-color: $brand-primary;
+          background-color: $white;
           font-weight: normal;
+          color: $brand-primary;
         }
       }
 
@@ -69,11 +82,13 @@
   }
 
   .menu-main_sub {
-    background: $charcoal;
+    background: $menu-sub-item-background;
 
     .menu-item {
+      border-right: none;
+
       @media screen and (max-width: $tab) {
-        background: $charcoal;
+        background: $brand-primary;
       }
     }
 
@@ -93,6 +108,11 @@
 
 #footer {
   max-width: 1160px;
+  padding: 2rem;
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
 
   .footer-menu li {
     padding-left: 0;
@@ -106,19 +126,50 @@
     }
 
     a {
-      display: block;
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
     }
   }
 }
 
 .front {
   #top-area {
+    padding: 0;
+
+    @include breakpoint($phab) {
+      padding: 0 2rem;
+    }
+
     .column {
       text-align: left;
       padding: 1rem 2.5rem;
+      background: $grey-light;
+      margin: 1rem;
+
+      @include breakpoint($tab) {
+        margin: 0;
+      }
 
       h2 {
         font-weight: bold;
+        color: $headings;
+      }
+
+      article.node--type-news {
+        padding-bottom: 1.5rem;
+
+        h3 {
+          margin: 0;
+        }
+
+        .content {
+          padding: .5rem 0;
+
+          time {
+            font-size: 1.6rem;
+          }
+        }
       }
     }
   }

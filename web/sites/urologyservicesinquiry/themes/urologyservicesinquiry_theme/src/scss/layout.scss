@@ -22,18 +22,24 @@
 .front {
   .front-banner {
     max-width: 1160px;
-    margin: 0 auto 40px;
+    margin: 0 auto 2rem;
+
+    @include breakpoint($tab) {
+      margin: 0 auto 4rem;
+    }
   }
 
   #top-area {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4rem;
+    @include breakpoint($tab) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4rem;
 
-    .column {
-      flex-basis: 45%;
-      width: 100%;
-      background: $grey-light;
+      .column {
+        flex-basis: 45%;
+        width: 100%;
+      }
     }
+
   }
 }
