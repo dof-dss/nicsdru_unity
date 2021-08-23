@@ -5,6 +5,8 @@
  * Functions to support theming in the urologyservicesinquiry_theme theme.
  */
 
+use Drupal\block\Entity\Block;
+
 /**
  * Implements template_preprocess_views_view().
  */
@@ -15,5 +17,30 @@ function urologyservicesinquiry_theme_preprocess_views_view(array &$variables) {
       if ($view->current_display == 'home_latest_news') {
         $variables['more']['#options']['attributes']['class'] = 'btn';
       }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ *
+ * Pass block region value to content so this can be used in
+ * urologyservicesinquiry_theme_theme_suggestions_menu_alter.
+ */
+function urologyservicesinquiry_theme_preprocess_block(&$variables)
+{
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_menu_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function urologyservicesinquiry_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
   }
 }

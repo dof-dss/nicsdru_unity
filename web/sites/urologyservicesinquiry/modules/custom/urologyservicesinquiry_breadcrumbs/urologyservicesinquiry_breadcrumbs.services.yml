@@ -1,0 +1,21 @@
+services:
+  urologyservicesinquiry_breadcrumbs.breadcrumb.view_page:
+    class: Drupal\urologyservicesinquiry_breadcrumbs\ViewPageBreadcrumb
+    arguments: ['@request_stack', '@title_resolver']
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  urologyservicesinquiry_breadcrumbs.breadcrumb.news:
+    class: Drupal\urologyservicesinquiry_breadcrumbs\NewsBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  urologyservicesinquiry_breadcrumbs.breadcrumb.publication:
+    class: Drupal\urologyservicesinquiry_breadcrumbs\PublicationBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  urologyservicesinquiry_breadcrumbs.breadcrumb.page:
+    class: Drupal\urologyservicesinquiry_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
