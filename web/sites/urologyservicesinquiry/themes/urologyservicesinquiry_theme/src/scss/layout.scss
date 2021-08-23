@@ -1,0 +1,45 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding-left: 2.5rem;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  img {
+    height: 80px;
+  }
+}
+
+.front {
+  .front-banner {
+    max-width: 1160px;
+    margin: 0 auto 2rem;
+
+    @include breakpoint($tab) {
+      margin: 0 auto 4rem;
+    }
+  }
+
+  #top-area {
+    @include breakpoint($tab) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+
+      .column {
+        flex-basis: 45%;
+        width: 100%;
+      }
+    }
+
+  }
+}
