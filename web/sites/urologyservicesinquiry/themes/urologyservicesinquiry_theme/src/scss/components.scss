@@ -48,7 +48,7 @@
         .menu-toggle-btn {
           background-color: $white;
           font-weight: normal;
-          color: $brand-primary;
+          color: $text;
         }
       }
 
@@ -88,7 +88,7 @@
       border-right: none;
 
       @media screen and (max-width: $tab) {
-        background: $brand-primary;
+        background: $menu-sub-item-background;
       }
     }
 
