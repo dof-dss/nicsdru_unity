@@ -26,8 +26,7 @@ function urologyservicesinquiry_theme_preprocess_views_view(array &$variables) {
  * Pass block region value to content so this can be used in
  * urologyservicesinquiry_theme_theme_suggestions_menu_alter.
  */
-function urologyservicesinquiry_theme_preprocess_block(&$variables)
-{
+function urologyservicesinquiry_theme_preprocess_block(&$variables) {
   if (isset($variables['elements']['#id'])) {
     $region = Block::load($variables['elements']['#id'])->getRegion();
     $variables['content']['#attributes']['region'] = $region;
