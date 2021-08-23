@@ -6,15 +6,13 @@
  */
 
 /**
- * Implements template_preprocess_views_view()
- * @param array $variables
+ * Implements template_preprocess_views_view().
  */
-function urologyservicesinquiry_theme_preprocess_views_view(&$variables)
-{
+function urologyservicesinquiry_theme_preprocess_views_view(array &$variables) {
   $view = $variables['view'];
   switch ($view->storage->id()) {
     case 'latest_news':
-      if ($view->current_display == 'home_latest_news')  {
+      if ($view->current_display == 'home_latest_news') {
         $variables['more']['#options']['attributes']['class'] = 'btn';
       }
   }
