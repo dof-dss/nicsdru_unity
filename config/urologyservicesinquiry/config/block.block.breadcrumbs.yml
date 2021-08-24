@@ -1,0 +1,24 @@
+uuid: 959f50d1-4812-4e9f-be89-80840ce95f15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: breadcrumbs
+theme: urologyservicesinquiry_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
