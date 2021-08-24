@@ -235,3 +235,30 @@
     }
   }
 }
+
+.path-news {
+  .search-page {
+    h2 {
+      margin-top: 0;
+    }
+
+    .sidebar-first-layout {
+      padding: 0;
+    }
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
