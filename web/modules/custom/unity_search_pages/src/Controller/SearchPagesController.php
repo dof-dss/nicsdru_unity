@@ -100,8 +100,7 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
     $route_parts = explode('.', $route);
     if ((count($route_parts) > 2) && isset($route_parts[2])) {
       $title = $route_parts[2];
-      $title = str_replace('search_page','',$title);
-      $title = str_replace('_','',$title);
+      $title = str_replace(['search_page','_'],'',$title);
       if (strlen($title) == 0) {
         // This must be the site search page.
         $title = 'Search';
