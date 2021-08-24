@@ -238,18 +238,12 @@
 
 .path-news {
   .search-page {
-    &.content-sidebar-wrap {
-      padding: 0;
-    }
-
     h2 {
       margin-top: 0;
     }
 
-    .main-content .region-content {
-      @media screen and (max-width: $lap) {
-        padding: 0 1rem;
-      }
+    .sidebar-first-layout {
+      padding: 0;
     }
 
     .views-exposed-form {
