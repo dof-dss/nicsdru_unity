@@ -3,7 +3,7 @@ services:
     class: Drupal\urologyservicesinquiry_breadcrumbs\ViewPageBreadcrumb
     arguments: ['@request_stack', '@title_resolver']
     tags:
-      - { name: breadcrumb_builder, priority: 100 }
+      - { name: breadcrumb_builder, priority: 1011 }
   urologyservicesinquiry_breadcrumbs.breadcrumb.news:
     class: Drupal\urologyservicesinquiry_breadcrumbs\NewsBreadcrumb
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
