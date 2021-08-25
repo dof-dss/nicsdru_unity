@@ -296,9 +296,18 @@
 }
 
 #block-sidemenu {
+  background: #f3f3f3;
+  border-top: 5px solid $charcoal;
+  padding: 1rem;
+
+  @include breakpoint($lap) {
+    margin-top: 2rem;
+  }
+
   h2 {
     margin: .5rem 0 1rem;
     padding: 1rem;
+    font-size: 3rem;
   }
 
   .menu {
