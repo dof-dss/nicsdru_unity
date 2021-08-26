@@ -1,0 +1,30 @@
+uuid: dfc930f1-59af-40d4-a747-377d64228f4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:1e99ba1c-48c4-4b30-a65a-9564ab4dfacb'
+  module:
+    - block_content
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: abouttheinquiry
+theme: urologyservicesinquiry_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'block_content:1e99ba1c-48c4-4b30-a65a-9564ab4dfacb'
+settings:
+  id: 'block_content:1e99ba1c-48c4-4b30-a65a-9564ab4dfacb'
+  label: 'About the inquiry'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
