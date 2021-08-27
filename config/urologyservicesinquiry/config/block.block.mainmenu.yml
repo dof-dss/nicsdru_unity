@@ -1,0 +1,25 @@
+uuid: 5de61bd2-3b8d-48f8-94a1-40a99f22d16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: mainmenu
+theme: urologyservicesinquiry_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
