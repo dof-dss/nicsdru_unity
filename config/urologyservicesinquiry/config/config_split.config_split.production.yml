@@ -1,0 +1,17 @@
+uuid: e0f3b2a4-3fe0-44fb-8b01-19576f1f22c9
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+folder: ../config/urologyservicesinquiry/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

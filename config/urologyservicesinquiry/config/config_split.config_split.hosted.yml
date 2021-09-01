@@ -1,0 +1,15 @@
+uuid: 679cfc40-ee96-416f-b741-4ce15d0e20b0
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any that are 'hosted' and not running locally, apart from production (which has its own split).\t"
+folder: ../config/urologyservicesinquiry/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
