@@ -1,6 +1,6 @@
 uuid: fdec8cfb-d20d-4a4b-8cf9-928762436d5c
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.published_date
@@ -11,7 +11,7 @@ dependencies:
     - urologyservicesinquiry_theme
 id: publisheddate
 theme: urologyservicesinquiry_theme
-region: header
+region: search_facets
 weight: 0
 provider: null
 plugin: 'facet_block:published_date'
