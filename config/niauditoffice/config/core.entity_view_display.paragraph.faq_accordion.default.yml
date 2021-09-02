@@ -1,0 +1,32 @@
+uuid: afe0d0c1-d405-4575-9baa-11ace69d2a3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_accordion.field_answer
+    - field.field.paragraph.faq_accordion.field_question
+    - paragraphs.paragraphs_type.faq_accordion
+  module:
+    - text
+id: paragraph.faq_accordion.default
+targetEntityType: paragraph
+bundle: faq_accordion
+mode: default
+content:
+  field_answer:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_question:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

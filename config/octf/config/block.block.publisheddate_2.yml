@@ -1,0 +1,28 @@
+uuid: 731bfd18-2c73-4e67-b543-372689adda40
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date
+  module:
+    - facets
+    - system
+  theme:
+    - octf_theme
+id: publisheddate_2
+theme: octf_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:date'
+settings:
+  id: 'facet_block:date'
+  label: 'Published date'
+  provider: facets
+  label_display: visible
+  block_id: publisheddate_2
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*\r\n"
+    negate: false

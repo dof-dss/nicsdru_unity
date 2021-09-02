@@ -82,7 +82,6 @@ input[type="submit"].btn {
   background: $brand-primary;
   padding: .6rem 1.6rem;
   color: $white;
-  text-decoration: underline;
 }
 
 .front {
@@ -147,7 +146,6 @@ input[type="submit"].btn {
       a {
         border-bottom: 4px solid transparent;
         color: #555;
-        //text-decoration: underline;
         display: block;
         padding: 1rem 1.5rem .6rem;
 
@@ -183,7 +181,6 @@ input[type="submit"].btn {
     color: #fff;
     font-weight: normal;
     text-shadow: none;
-    text-decoration: underline;
     text-underline-offset: .25em;
     box-shadow: none;
     margin: 1rem 0 0;
@@ -521,7 +518,6 @@ input[type="submit"].btn {
   &:focus {
     background: $ash-grey;
     outline: none;
-    text-decoration: underline;
     opacity: 1;
   }
 

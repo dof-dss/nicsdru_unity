@@ -1,0 +1,33 @@
+uuid: e580b6ff-3363-4d63-8433-e1cc088f75f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - node
+    - views
+  theme:
+    - urologyservicesinquiry_theme
+id: views_block__latest_news_latest_news_list
+theme: urologyservicesinquiry_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-latest_news'
+settings:
+  id: 'views_block:latest_news-latest_news'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '4'
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

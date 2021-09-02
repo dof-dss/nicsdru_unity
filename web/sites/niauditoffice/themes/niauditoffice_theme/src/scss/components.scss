@@ -13,7 +13,6 @@
   color: #fff;
   font-weight: normal;
   text-shadow: none;
-  text-decoration: underline;
   text-underline-offset: .25em;
   box-shadow: none;
   margin: 1rem 0 0;
@@ -26,7 +25,6 @@
   &:focus {
     background: $ash-grey;
     outline: none;
-    text-decoration: underline;
     opacity: 1;
   }
 
@@ -37,7 +35,7 @@
 
 .content-sidebar-wrap {
   ul {
-    li {
+    li:not(.pager__item) {
       list-style: none;
       position: relative;
 
@@ -64,7 +62,8 @@
   }
 
   .menu-link {
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
     }
   }
@@ -258,6 +257,11 @@
         position: relative;
         z-index: 101;
       }
+    }
+
+    &[type="submit"] {
+      @include submit-button;
+      padding: .3rem .6rem;
     }
   }
 }

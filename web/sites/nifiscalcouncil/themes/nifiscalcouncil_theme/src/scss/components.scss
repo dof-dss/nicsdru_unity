@@ -294,3 +294,38 @@
     }
   }
 }
+
+#block-sidemenu {
+  background: #f3f3f3;
+  border-top: 5px solid $charcoal;
+  padding: 1rem;
+
+  @include breakpoint($lap) {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    margin: .5rem 0 1rem;
+    padding: 0;
+    font-size: 2.1rem;
+  }
+
+  .menu {
+    padding: 0 1rem;
+    margin: 0 1.6rem;
+
+    a {
+      border-bottom: 1px solid $link;
+      margin: 0 -1px;
+      padding: 0 1px;
+
+      &:hover {
+        border-bottom: 2px solid $link-underline;
+      }
+    }
+
+    .menu {
+      list-style: circle;
+    }
+  }
+}
