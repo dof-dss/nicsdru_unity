@@ -1,0 +1,29 @@
+uuid: 7e8e3fa0-4c73-4a72-a230-39bde0294881
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications_search
+  module:
+    - system
+    - views
+  theme:
+    - octf_theme
+id: views_block__publications_search_home_publications
+theme: octf_theme
+region: bottom_widget_2
+weight: -6
+provider: null
+plugin: 'views_block:publications_search-home_publications'
+settings:
+  id: 'views_block:publications_search-home_publications'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
