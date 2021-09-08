@@ -2,6 +2,8 @@ uuid: 54d89585-4637-43ea-b665-fd9a9ec426e7
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - octf_theme
 id: pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
