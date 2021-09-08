@@ -82,7 +82,7 @@ display:
               link: default
               news: default
               profile: default
-              publication: teaser
+              publication: search_result
       fields:
         body:
           table: search_api_index_default_content
