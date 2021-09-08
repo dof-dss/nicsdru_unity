@@ -111,7 +111,6 @@ function octf_theme_preprocess_block(&$variables) {
     // Add search page name ensuring they are in the exposed block machine name.
     $search_pages = [
       'news',
-      'consultations',
       'publications',
     ];
 
