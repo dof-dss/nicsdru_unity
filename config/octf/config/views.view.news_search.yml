@@ -317,11 +317,11 @@ display:
         type: normal
         title: News
         menu_name: main
+        weight: -45
+        enabled: false
       exposed_block: true
       cache:
-        type: custom_tag
-        options:
-          custom_tag: 'node_list:news'
+        type: none
       defaults:
         cache: false
     cache_metadata:
