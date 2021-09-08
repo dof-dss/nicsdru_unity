@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the octf_theme theme.
+ */
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function octf_theme_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+  switch ($view->storage->id()) {
+    case 'publications_search':
+      if ($view->current_display == 'home_publications') {
+        $variables['more']['#options']['attributes']['class'] = 'btn';
+      }
+  }
+}

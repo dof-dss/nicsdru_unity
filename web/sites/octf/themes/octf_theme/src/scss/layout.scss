@@ -1,0 +1,32 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.front {
+  .content-sidebar-wrap {
+    .main-content {
+      max-width: 700px;
+      float: left;
+    }
+  }
+
+  #bottom-area {
+    @include breakpoint($tab) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+    }
+
+    .column {
+      width: auto;
+      float: none;
+
+      @include breakpoint($tab) {
+        flex-basis: 46%;
+      }
+    }
+  }
+}
