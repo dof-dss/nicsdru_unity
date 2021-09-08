@@ -1,8 +1,9 @@
-uuid: 82981d5f-8b0b-4dbd-bdfd-55a9d4b90d93
+uuid: 7849203f-9357-4227-9251-1fb3b1422898
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_result
     - field.field.node.news.body
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_published_date
@@ -11,22 +12,19 @@ dependencies:
     - node.type.news
   module:
     - datetime
-    - text
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: etO7MOX5rGlnrZZHrQ8BDzp6OmFGZXuI_Tm7_GUlU_U
-id: node.news.default
+id: node.news.search_result
 targetEntityType: node
 bundle: news
-mode: default
+mode: search_result
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_published_date:
     weight: 0
     label: hidden
@@ -36,11 +34,19 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_teaser:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
   field_meta_tags: true
   field_summary: true
-  field_teaser: true
   langcode: true
   links: true
   search_api_excerpt: true
