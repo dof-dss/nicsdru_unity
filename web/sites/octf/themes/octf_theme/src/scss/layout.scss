@@ -32,3 +32,11 @@
     }
   }
 }
+
+body:not(.front) {
+  #container {
+    @media screen and (max-width: $lap) {
+      padding: 0 1rem;
+    }
+  }
+}
