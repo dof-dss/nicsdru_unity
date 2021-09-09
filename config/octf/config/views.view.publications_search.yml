@@ -364,6 +364,8 @@ display:
         link_display: false
         link_url: false
         empty: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
@@ -393,6 +395,24 @@ display:
       link_display: publication_search_page
       link_url: ''
       empty: {  }
+      style:
+        type: default
+        options: {  }
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              basic_page: default
+              consultation: default
+              contact: default
+              feature: default
+              featured_content_list: default
+              layout_page: default
+              link: default
+              news: default
+              profile: default
+              publication: teaser
     cache_metadata:
       max-age: -1
       contexts:
