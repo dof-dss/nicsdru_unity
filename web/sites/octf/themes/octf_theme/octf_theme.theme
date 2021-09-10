@@ -26,7 +26,7 @@ function octf_theme_preprocess_views_view(array &$variables) {
  */
 function octf_theme_preprocess_html(&$variables) {
   if (isset($variables['node_type'])) {
-    if (($variables['node_type'] == 'basic_page') || ($variables['node_type'] == 'news') || ($variables['node_type'] == 'publication')) {
+    if (($variables['node_type'] == 'news') || ($variables['node_type'] == 'publication')) {
       $variables['attributes']['class'][] = 'one-sidebar';
       $variables['attributes']['class'][] = 'sidebar-second';
     }
