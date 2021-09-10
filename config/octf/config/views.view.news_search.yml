@@ -212,13 +212,13 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'News search'
+            label: 'Search news'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: news_search
+            identifier: query_news
             required: false
             remember: false
             multiple: false
@@ -317,11 +317,12 @@ display:
         type: normal
         title: News
         menu_name: main
+        weight: -45
+        enabled: false
       exposed_block: true
       cache:
-        type: custom_tag
-        options:
-          custom_tag: 'node_list:news'
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
