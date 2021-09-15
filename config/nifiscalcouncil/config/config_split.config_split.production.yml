@@ -1,18 +1,16 @@
-uuid: 88ae2bb6-39d1-4c98-b80a-2d65a8707b95
+uuid: baede6f4-e941-485f-8cd4-dbf0c69cdc3d
 langcode: en
 status: true
 dependencies: {  }
 id: production
 label: production
 description: 'Used for the production site only.'
-folder: ../config/odscni/production
-module:
-  fastly: 0
+folder: ../config/nifiscalcouncil/production
+module: {  }
 theme: {  }
-blacklist:
-  - fastly.settings
+blacklist: {  }
 graylist:
-  - odscni_theme.settings
+  - nifiscalcouncil_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
