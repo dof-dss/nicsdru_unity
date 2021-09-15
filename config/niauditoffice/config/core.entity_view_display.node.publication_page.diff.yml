@@ -29,7 +29,7 @@ third_party_settings:
         - field_publication_type
         - field_meta_tags
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: html_element
       region: content
       format_settings:
@@ -55,6 +55,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_attachment:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
   field_meta_tags:
     weight: 6
     label: inline
@@ -89,7 +98,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
-  field_attachment: true
   langcode: true
   links: true
   search_api_excerpt: true
