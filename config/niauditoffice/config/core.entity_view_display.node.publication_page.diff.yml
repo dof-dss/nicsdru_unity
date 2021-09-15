@@ -29,7 +29,7 @@ third_party_settings:
         - field_publication_type
         - field_meta_tags
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: html_element
       region: content
       format_settings:
@@ -43,6 +43,24 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
+    group_documents:
+      children:
+        - field_attachment
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: documents
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Documents
 id: node.publication_page.diff
 targetEntityType: node
 bundle: publication_page
@@ -57,7 +75,7 @@ content:
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings:
