@@ -9,15 +9,16 @@ label: 'Basic page pattern'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  c9b93157-8545-4430-94be-1dfbffdb3838:
+  30435f58-ed0e-41b2-af81-58395b71ea47:
     id: node_type
     bundles:
+      faq: faq
       page: page
       webform: webform
     negate: false
     context_mapping:
       node: node
-    uuid: c9b93157-8545-4430-94be-1dfbffdb3838
+    uuid: 30435f58-ed0e-41b2-af81-58395b71ea47
 selection_logic: and
 weight: -5
 relationships: {  }

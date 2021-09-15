@@ -1,0 +1,247 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.front {
+  .content-sidebar-wrap {
+    background: resolve('OCTF_banner.png') no-repeat right;
+    background-size: cover;
+    padding: 3rem;
+    float: left;
+
+    @include breakpoint($tab) {
+      padding: 3rem 5rem;
+    }
+
+    .content {
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: 0;
+
+        @include breakpoint($tab) {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+
+  #bottom-area {
+    padding: 1rem;
+    margin-bottom: 0;
+
+    @include breakpoint($mob) {
+      padding: 2rem;
+    }
+
+    @include breakpoint($tab) {
+      padding: 4rem;
+    }
+
+    .column {
+      text-align: left;
+      padding: 1rem 2.5rem;
+      background: $grey-light;
+      margin: 1rem;
+
+      @include breakpoint($tab) {
+        margin: 0;
+      }
+
+      h2 {
+        @include responsive-typo-map($h2-text);
+        margin: 0;
+        padding: 1rem 0 2rem;
+        line-height: 1.5;
+      }
+
+      article.node--type-publication {
+        padding-bottom: 1.5rem;
+
+        h3 {
+          margin: 0;
+        }
+
+        .content {
+          padding: .5rem 0;
+
+          time {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main-menu {
+  .menu {
+    .menu-item {
+      border-right: 1px solid #fff;
+      font-size: $p-font-size;
+
+      @media screen and (max-width: $tab) {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.open {
+        .menu-toggle-btn {
+          background-color: $white;
+          font-weight: normal;
+          color: $text;
+        }
+      }
+
+      .active {
+        background: $brand-primary;
+        border-bottom-color: $menu-item-hover;
+        color: #fff;
+      }
+    }
+  }
+
+  .menu-link,
+  .menu .active {
+    color: $white;
+    border-bottom: 5px solid transparent;
+
+    @media screen and (max-width: $tab) {
+      text-align: center;
+    }
+
+    &:hover {
+      color: #fff;
+      border-bottom-color: $brand-primary;
+    }
+
+    &:focus {
+      background-color: #fae029;
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+
+  .menu-main_sub {
+    background: $menu-sub-item-background;
+
+    .menu-item {
+      border-right: none;
+
+      @media screen and (max-width: $tab) {
+        background: $menu-sub-item-background;
+      }
+    }
+
+    .menu-link,
+    .menu-item span.active {
+      @media screen and (max-width: $tab) {
+        text-align: center;
+      }
+
+      &.active {
+        background: lighten($charcoal, 10%);
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+#footer {
+  //max-width: 1160px;
+  padding: 2rem;
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    padding-left: 0;
+    font-size: 1.6rem;
+    list-style-type: none;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.path-publications,
+.path-news {
+  .search-page {
+    .sidebar-first-layout {
+      padding-left: 0;
+    }
+
+    //@include breakpoint($lap) {
+    //  .sidebar-first-layout {
+    //    width: 30%;
+    //  }
+    //
+    //  .main-content {
+    //    width: 65%;
+    //  }
+    //}
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
+
+#block-sidemenu {
+  background: $offwhite;
+  border-top: 5px solid $charcoal;
+  padding: 1rem;
+
+  @include breakpoint($lap) {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    @include responsive-typo-map($h2-text);
+    margin: .5rem 0 1rem;
+    padding: 0;
+  }
+}
