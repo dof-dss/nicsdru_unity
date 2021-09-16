@@ -8,6 +8,7 @@ dependencies:
   module:
     - node
     - user
+    - views_custom_cache_tag
 _core:
   default_config_hash: Xk6puCoRlHSJG8mU9Zg2iN4fbnzaw2dFolwMfpWxDSE
 id: frontpage
@@ -25,8 +26,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: none
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: ''
       empty: {  }
       exposed_form:
         type: basic
