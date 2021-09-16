@@ -14,10 +14,39 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
+title: 'Contact us'
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: |-
+  your_details:
+    '#type': fieldset
+    '#title': 'Your details'
+    '#description_display': invisible
+    name:
+      '#type': textfield
+      '#title': Name
+      '#placeholder': 'Please enter your name'
+      '#required': true
+      '#default_value': '[current-user:display-name]'
+    email:
+      '#type': email
+      '#title': Email
+      '#placeholder': 'Please enter your email '
+      '#required': true
+      '#default_value': '[current-user:mail]'
+  enquiry:
+    '#type': textarea
+    '#title': Enquiry
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
+    '#submit__attributes':
+      class:
+        - btn
 css: ''
 javascript: ''
 settings:
@@ -26,7 +55,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
+  page: false
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
@@ -117,9 +146,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_message: 'Thank you for your submission.'
   confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true
@@ -202,7 +231,7 @@ handlers:
     label: 'Email confirmation'
     notes: ''
     handler_id: email_confirmation
-    status: true
+    status: false
     conditions: {  }
     weight: 1
     settings:
@@ -245,7 +274,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: _default
+      to_mail: OCB.enquiries@justice-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -254,8 +283,8 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'Feedback form submission from: Contact us'
+      body: "Submitted on [webform_submission:created]<br />\r\nSubmitted values are:<br />\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
