@@ -11,7 +11,8 @@ module:
 theme: {  }
 blacklist:
   - fastly.settings
-graylist: {  }
+graylist:
+  - odscni_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
