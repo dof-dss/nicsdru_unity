@@ -107,7 +107,7 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
       } else {
         // Capitalise the first letter and pluralise.
         $title = ucfirst($title);
-        if (substr($title, -1) != 's') {
+        if ((substr($title, -1) != 's') && ($title !== 'Evidence') ) {
           $title .= 's';
         }
       }
