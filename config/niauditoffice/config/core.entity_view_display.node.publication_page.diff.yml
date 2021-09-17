@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.diff
     - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_attachment
     - field.field.node.publication_page.field_meta_tags
     - field.field.node.publication_page.field_niao_publication_image
     - field.field.node.publication_page.field_publication_date
@@ -28,7 +29,7 @@ third_party_settings:
         - field_publication_type
         - field_meta_tags
       parent_name: ''
-      weight: 3
+      weight: 5
       format_type: html_element
       region: content
       format_settings:
@@ -42,6 +43,24 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
+    group_documents:
+      children:
+        - field_attachment
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: documents
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Documents
 id: node.publication_page.diff
 targetEntityType: node
 bundle: publication_page
@@ -54,6 +73,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_attachment:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
   field_meta_tags:
     weight: 6
     label: inline
@@ -90,3 +118,4 @@ hidden:
   content_moderation_control: true
   langcode: true
   links: true
+  search_api_excerpt: true

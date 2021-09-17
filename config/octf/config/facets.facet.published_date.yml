@@ -1,10 +1,10 @@
-uuid: 50461cf5-5134-49bb-863d-2dfe988fc1be
+uuid: 7c06d425-83b4-4da3-a28f-a51d7cc715ff
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.publications
-    - views.view.publications_search
+    - search_api.index.default_content
+    - views.view.news_search
   module:
     - facets_pretty_paths
     - search_api
@@ -18,7 +18,7 @@ weight: 0
 min_count: 1
 show_only_one_result: false
 field_identifier: field_published_date
-facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
+facet_source_id: 'search_api:views_page__news_search__news_search_page'
 widget:
   type: links
   config:
