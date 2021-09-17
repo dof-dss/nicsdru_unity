@@ -28,7 +28,7 @@ class PublicationLinkProcessor {
     // Obtain the D7 body value.
     $value = $content[1][0]['value'];
     // Regex to match a string <a href="https://www.niauditoffice.gov.uk/sites/niao/files/media-files/conflicts_of_interest_good_practice_guide.pdf">Conflicts Of Interest - A Good Practice Guide <span class="meta"> (PDF&nbsp;437 KB)</span></a>.
-    $link_regex = '/<a href="(\S+?files\/\S+)".*?>\s*[^<]*\([^<]*\)(<\/span>)?<\/a>/';
+    $link_regex = '/<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>/';
     $matches = [];
     preg_match_all($link_regex, $value, $matches, PREG_SET_ORDER);
 
