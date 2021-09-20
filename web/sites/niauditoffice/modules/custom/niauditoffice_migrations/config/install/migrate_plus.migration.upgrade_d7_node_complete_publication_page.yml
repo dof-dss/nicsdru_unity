@@ -105,7 +105,7 @@ process:
     -
       plugin: str_replace
       regex: true
-      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*\([^<]*\)(<\/span>)?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
+      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
       replace: ''
   body/0/format:
     -
