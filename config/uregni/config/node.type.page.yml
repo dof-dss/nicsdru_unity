@@ -13,12 +13,13 @@ third_party_settings:
   origins_toc:
     toc_enable: 1
     toc_title: Contents
-    toc_source_container: '#block-mainpagecontent'
+    toc_source_container: '#block-mainpagecontent .content'
     toc_element: h2
     toc_exclusions: ''
-    toc_location: '#block-mainpagecontent .content'
-    toc_insert: before
-    toc_screen_depth: 2
+    toc_location: .page-title
+    toc_insert: after
+    toc_screen_depth: '2'
+    toc_debug: 0
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
