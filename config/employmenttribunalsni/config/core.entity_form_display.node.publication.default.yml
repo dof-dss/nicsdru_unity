@@ -1,4 +1,4 @@
-uuid: 0bf19ffd-987c-499f-8732-039688fd333e
+uuid: fcf7b68c-0af4-48f1-a939-15ed4388aeec
 langcode: en
 status: true
 dependencies:
@@ -11,13 +11,12 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - file
+    - media_library
+    - media_library_edit
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - text
 _core:
-  default_config_hash: GRSchbTAtzaEVhd0BSY2kljgoOYA3x4xzs896Px3_tE
+  default_config_hash: szIikHcOvlyyCEUqr0sRVDxpGdk6W6CHlDeruB48Kc4
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -41,9 +40,11 @@ content:
   field_attachment:
     weight: 122
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_publication_type:
     weight: 125
@@ -65,6 +66,11 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  flag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -84,18 +90,6 @@ content:
       display_label: true
     weight: 15
     region: content
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -126,20 +120,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
-    third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  unpublish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 50

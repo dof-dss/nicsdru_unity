@@ -1,0 +1,15 @@
+uuid: f99f93e0-4dcf-4415-bb2b-42abc8e51308
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+folder: ../config/mahinquiry/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,15 @@
+uuid: 8c27d503-7609-4f28-909a-a6b74694c29c
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+folder: ../config/employmenttribunalsni/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

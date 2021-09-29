@@ -20,6 +20,7 @@ db:
       - niauditofficedb
       - octfdb
       - urologyservicesinquirydb
+      - mahinquirydb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -61,6 +62,10 @@ db:
         default_schema: urologyservicesinquirydb
         privileges:
           urologyservicesinquirydb: admin
+      mahinquiry:
+        default_schema: mahinquirydb
+        privileges:
+          mahinquirydb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:

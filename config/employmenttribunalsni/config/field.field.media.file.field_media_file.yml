@@ -1,4 +1,4 @@
-uuid: 0457ceeb-6715-4aa3-81ba-f0b2171ae62b
+uuid: 2be8d07a-5f7f-4d98-99f7-6f3fe8b6fb36
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
   module:
     - file
 _core:
-  default_config_hash: _C8rbTRQABc6PuyRw2LD9zdf_muwzZVumKG6HSfzqfI
+  default_config_hash: 03ch-n4Ii5lPVrUOm5kIDX1rKbcePCifjsTxJnN-CAA
 id: media.file.field_media_file
 field_name: field_media_file
 entity_type: media
@@ -25,7 +25,7 @@ default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages'
-  max_filesize: ''
+  max_filesize: 30MB
   handler: 'default:file'
   handler_settings: {  }
   description_field: false

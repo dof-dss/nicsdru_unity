@@ -159,6 +159,22 @@
 
 #---------------------------------
 
+"https://www.mahinquiry.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://mahinquiry.org.uk.{default}/":
+  type: redirect
+  to: "https://www.mahinquiry.org.uk.{default}/"
+
+"https://mahinquiry.org.uk/":
+  type: redirect
+  to: "https://www.mahinquiry.org.uk/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream

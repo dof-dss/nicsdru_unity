@@ -1,4 +1,4 @@
-uuid: cc65b663-1cb8-4921-b5c1-125f493b18ce
+uuid: db187515-5788-4e01-9f49-37cf49597e03
 langcode: en
 status: true
 dependencies:
@@ -17,12 +17,11 @@ dependencies:
     - address
     - datetime
     - datetime_range
-    - file
     - link
     - text
     - user
 _core:
-  default_config_hash: EfI2OGgKsxvJvWmH7vJgSwP56FQUkMmrabH7HcS4gqQ
+  default_config_hash: w5IHv7a7LIXd9sBgsDo0jQW4jBEzcalEx6mPyoRD04A
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -37,11 +36,12 @@ content:
     region: content
   field_attachment:
     weight: 105
-    label: above
+    label: hidden
     settings:
-      use_description_as_link_text: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: file_default
+    type: entity_reference_entity_view
     region: content
   field_consultation_dates:
     weight: 107
