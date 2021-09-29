@@ -78,11 +78,38 @@
   }
 }
 
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  a {
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: .3rem dashed #949494;
+      outline-offset: 1.2rem;
+      display: block;
+    }
+  }
+
+  img {
+    height: 90px;
+
+    @media screen and (max-width: $mob) {
+      height: 55px;
+    }
+  }
+}
+
 #main-menu {
   .menu {
     .menu-item {
       border-right: 1px solid #fff;
-      font-size: $p-font-size;
+      font-size: 1.6rem;
 
       @media screen and (max-width: $tab) {
         border-right: none;
