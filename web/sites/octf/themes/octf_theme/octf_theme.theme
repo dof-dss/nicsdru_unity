@@ -25,7 +25,7 @@ function octf_theme_preprocess_views_view(array &$variables) {
  * Implements hook_preprocess_html().
  */
 function octf_theme_preprocess_html(&$variables) {
-  if (isset($variables['node_type'])) {
+  if (!empty($variables['node_type'])) {
     if ($variables['node_type'] == 'publication') {
       $variables['attributes']['class'][] = 'one-sidebar';
       $variables['attributes']['class'][] = 'sidebar-second';
@@ -101,7 +101,7 @@ function octf_theme_preprocess_form(array &$variables) {
  * octf_theme_theme_suggestions_menu_alter.
  */
 function octf_theme_preprocess_block(&$variables) {
-  if (isset($variables['elements']['#id'])) {
+  if (!empty($variables['elements']['#id'])) {
     $region = Block::load($variables['elements']['#id'])->getRegion();
     $variables['content']['#attributes']['region'] = $region;
   }
@@ -131,7 +131,7 @@ function octf_theme_preprocess_block(&$variables) {
  * Provide region based menu suggestions.
  */
 function octf_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
-  if (isset($variables['attributes']['region'])) {
+  if (!empty($variables['attributes']['region'])) {
     $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
   }
 }

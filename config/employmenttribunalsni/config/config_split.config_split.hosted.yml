@@ -1,9 +1,7 @@
-uuid: 2f1c65d0-4eec-4bf7-9089-416389b69a1e
+uuid: 97f923f3-b061-48be-8835-d74bd42b39d2
 langcode: en
 status: false
 dependencies: {  }
-_core:
-  default_config_hash: 1X24INUtQNTMuB9BaIvzqkFncJ9MAUlpYtar7E_IB-0
 id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'

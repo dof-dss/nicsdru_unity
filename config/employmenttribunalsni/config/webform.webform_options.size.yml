@@ -1,4 +1,4 @@
-uuid: 811b57c1-b4ab-4523-9998-18ccf211cc91
+uuid: 1db7b3c0-c2b4-487f-a393-c5288414f079
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,9 @@ id: size
 label: Size
 category: General
 likert: false
-options: "Extra Small: Extra Small\nSmall: Small\nMedium: Medium\nLarge: Large\nExtra Large: Extra Large\n"
+options: |
+  Extra Small: Extra Small
+  Small: Small
+  Medium: Medium
+  Large: Large
+  Extra Large: Extra Large

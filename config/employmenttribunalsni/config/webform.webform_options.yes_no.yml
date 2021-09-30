@@ -1,4 +1,4 @@
-uuid: 62c5d2fc-4630-4363-8a9b-704a049ad63b
+uuid: 23da5fc2-f81a-45c8-a624-2d7c14a1ffac
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,6 @@ id: yes_no
 label: Yes/No
 category: General
 likert: false
-options: "Yes: Yes\nNo: No\n"
+options: |
+  Yes: Yes
+  No: No

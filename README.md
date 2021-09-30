@@ -164,7 +164,7 @@ All changes **must** be submitted with an appropriate pull request (PR) in GitHu
 domain name (short sitename) up until the first dot, so if your domain name is 'uregni.gov.uk' then the directory
 name should be just 'uregni'
 - Copy a settings.php file into your new web/sites/<short sitename> directory from web/sites/uregni
-- Create a new directory /config/<short sitename> and within this create 3 new directories, config, hosted and local. Place a .gitkeep file in each of these directories so that git recognises them
+- Create a new directory /config/<short sitename> and within this create 4 new directories, config, hosted, local and production. Place a .gitkeep file in the config/<sitename> directory, and place a .htaccess file into each of the sub directories
 - Edit the top level .lando.yml file and add a new local site url (with '.lndo.site' suffix) under proxy/appserver
 e.g. uregni.gov.uk.lndo.site
 - If necessary, add a new Solr core in .lando.yml (just copy uregni_solr and give it a different name, this will be the 'Solr host' when

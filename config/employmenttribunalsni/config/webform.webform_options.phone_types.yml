@@ -1,4 +1,4 @@
-uuid: 1e872b48-8012-44e7-a2b1-1feb9c72d21b
+uuid: 40f0625e-2915-4182-bae8-abef01f0c730
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,7 @@ id: phone_types
 label: 'Phone type'
 category: Demographic
 likert: false
-options: "Home: Home\nOffice: Office\nCell: Cell\n"
+options: |
+  Home: Home
+  Office: Office
+  Cell: Cell
