@@ -1,4 +1,4 @@
-uuid: d4f269cc-1f10-4de5-8ad9-90025783b2e2
+uuid: 4cab56f1-9220-41f3-95bc-6dd6f58fcc1b
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.contact
   module:
     - path
-    - scheduler
-    - scheduler_content_moderation_integration
     - text
 _core:
   default_config_hash: irhdO4Ch4jZmXMEAdze_XnR_EGOag1ZGGuBlH7aZYmY
@@ -32,6 +30,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  flag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -51,18 +54,6 @@ content:
       display_label: true
     weight: 15
     region: content
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -93,20 +84,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      match_limit: 10
     region: content
-    third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  unpublish_state:
-    type: scheduler_moderation
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 50

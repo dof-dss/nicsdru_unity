@@ -39,6 +39,7 @@ relationships:
   niauditoffice_solr: 'solr:niauditoffice'
   octf: 'db:octf'
   urologyservicesinquiry: 'db:urologyservicesinquiry'
+  mahinquiry: 'db:mahinquiry'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -168,3 +169,9 @@ crons:
   urologyservicesinquiry:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'
+  mahinquiry:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/mahinquiry ; drush core-cron'
+  employmenttribunalsni:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'

@@ -1,4 +1,4 @@
-uuid: b6482751-1ae6-4ce2-87d0-e7045a3e9854
+uuid: 91d5310c-f49f-41a7-b249-069101f25030
 langcode: en
 status: true
 dependencies: {  }
@@ -12,4 +12,5 @@ queue_thumbnail_downloads: false
 new_revision: true
 source_configuration:
   source_field: field_media_audio_file
-field_map: {  }
+field_map:
+  name: name
