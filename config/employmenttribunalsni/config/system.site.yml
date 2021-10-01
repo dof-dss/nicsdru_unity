@@ -1,5 +1,5 @@
-name: 'Employment Tribunals NI'
-mail: admin@employmenttribunalsni.co.uk
+name: 'Industrial Tribunals and the Fair Employment Tribunal Northern Ireland'
+mail: itfet@test.com
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,5 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 0f498ad3-5442-4479-8dad-a905f368c944
+uuid: bf828570-725b-4a41-975a-0049dca0d714
 frontpage_title: 'Welcome to Drupal site'

@@ -1,10 +1,12 @@
-uuid: b540c065-7959-4568-a4c5-322c9960a280
+uuid: 28fb6816-979c-4867-9c03-03d5763989b9
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_meta_tags
+    - field.field.node.basic_page.field_next_audit_due
     - node.type.basic_page
   module:
     - text
@@ -24,10 +26,17 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  field_meta_tags: true
+  field_next_audit_due: true
   langcode: true
