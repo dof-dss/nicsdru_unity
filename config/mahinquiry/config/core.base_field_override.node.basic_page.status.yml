@@ -1,0 +1,22 @@
+uuid: 6921ed74-c522-4c5a-baaa-c8326e4310c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+id: node.basic_page.status
+field_name: status
+entity_type: node
+bundle: basic_page
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
