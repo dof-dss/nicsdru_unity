@@ -1,6 +1,6 @@
 uuid: 53d2e304-a8f8-4801-b7c4-f36037e7a46e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.news_search
