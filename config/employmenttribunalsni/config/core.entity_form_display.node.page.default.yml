@@ -1,24 +1,21 @@
-uuid: 95fdb474-1605-4fb8-8160-49b87b63ddf6
+uuid: cb144d3e-8f75-4e22-92d4-9f3d7c4b99ed
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.basic_page.body
-    - field.field.node.basic_page.field_meta_tags
-    - field.field.node.basic_page.field_next_audit_due
-    - node.type.basic_page
-    - workflows.workflow.nics_editorial_workflow
+    - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_next_audit_due
+    - node.type.page
   module:
     - content_moderation
     - datetime
     - metatag
     - path
     - text
-_core:
-  default_config_hash: HV-wiMbZetwvisJTWx_fO8tUcRAaMSvIFv8isFt9vmA
-id: node.basic_page.default
+id: node.page.default
 targetEntityType: node
-bundle: basic_page
+bundle: page
 mode: default
 content:
   body:
@@ -28,6 +25,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -37,22 +35,17 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_meta_tags:
-    weight: 123
+    weight: 122
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_next_audit_due:
-    weight: 122
+    weight: 123
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  flag:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
     region: content
   langcode:
     type: language_select
@@ -109,6 +102,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:

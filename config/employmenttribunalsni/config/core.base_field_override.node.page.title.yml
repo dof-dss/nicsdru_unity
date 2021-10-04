@@ -1,16 +1,16 @@
-uuid: 3eb40c45-7551-4d5b-93a0-6a342c2269b4
+uuid: 36b1f837-7ea5-4889-81b6-6561572cc48b
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
-id: node.basic_page.title
+    - node.type.page
+id: node.page.title
 field_name: title
 entity_type: node
-bundle: basic_page
+bundle: page
 label: 'Title (Main heading)'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
+    - node.type.page
     - node.type.webform
   module:
     - content_moderation
@@ -94,6 +94,6 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - basic_page
+      - page
       - webform
   default_moderation_state: draft

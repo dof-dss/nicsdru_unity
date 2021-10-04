@@ -1,16 +1,15 @@
-uuid: d45f3bb0-8719-4af1-8428-7d14092c2109
-langcode: en
+uuid: ff33290a-42a7-495d-89c9-2ba1dfb4b985
+langcode: und
 status: true
 dependencies:
   module:
-    - metatag
     - node
-id: node.field_meta_tags
-field_name: field_meta_tags
+id: node.field_enable_toc
+field_name: field_enable_toc
 entity_type: node
-type: metatag
+type: boolean
 settings: {  }
-module: metatag
+module: core
 locked: false
 cardinality: 1
 translatable: true

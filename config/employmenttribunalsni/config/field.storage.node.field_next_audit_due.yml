@@ -1,12 +1,10 @@
-uuid: 687aafc7-46cb-4138-8aa7-f2055d06ea30
+uuid: 530b7712-9332-46a0-afa5-30ca231e8152
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-_core:
-  default_config_hash: 41Cktum5-qsEi_dl25nTRJ-SwbSSEvzqdq0C55THMhk
 id: node.field_next_audit_due
 field_name: field_next_audit_due
 entity_type: node
