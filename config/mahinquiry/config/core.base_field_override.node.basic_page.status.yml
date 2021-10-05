@@ -1,16 +1,14 @@
-uuid: 147e2a54-aca6-464b-8eb3-993507891144
+uuid: 6921ed74-c522-4c5a-baaa-c8326e4310c6
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.contact
-_core:
-  default_config_hash: Qh5EGujawePQFIwBvFA0cgl6qEgbK7WNye0l9UGSDnA
-id: node.contact.promote
-field_name: promote
+    - node.type.basic_page
+id: node.basic_page.status
+field_name: status
 entity_type: node
-bundle: contact
-label: 'Promoted to front page'
+bundle: basic_page
+label: Published
 description: ''
 required: false
 translatable: true
