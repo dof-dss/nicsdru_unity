@@ -1,4 +1,4 @@
-name: 'Muckamore Abbey Inquest'
+name: 'Muckamore Abbey Inquiry'
 mail: admin@mahinquiry
 slogan: ''
 page:
@@ -13,3 +13,4 @@ _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: b01165c3-5aa7-44aa-ae6a-016f6e7a164c
 frontpage_title: 'Welcome to Drupal site'
+frontpage_show_title: 0
