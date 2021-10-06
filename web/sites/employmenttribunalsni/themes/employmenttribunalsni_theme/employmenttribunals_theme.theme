@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the employmenttribunalsni_theme theme.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function employmenttribunalsni_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#view_mode'])) {
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+  }
+}
