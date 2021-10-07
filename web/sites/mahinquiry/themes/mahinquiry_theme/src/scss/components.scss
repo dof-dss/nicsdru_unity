@@ -180,6 +180,11 @@
   //  }
   //}
 
+  #bottom_wrapper {
+    max-width: $max-grid-width;
+    margin: 0 auto;
+  }
+
   #bottom-area {
     padding: 1rem;
     margin-bottom: 0;
