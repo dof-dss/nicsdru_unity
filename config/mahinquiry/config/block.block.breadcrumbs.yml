@@ -1,0 +1,24 @@
+uuid: d7ba7289-1cf1-4ebc-b303-2a9811052a81
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mahinquiry_theme
+id: breadcrumbs
+theme: mahinquiry_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

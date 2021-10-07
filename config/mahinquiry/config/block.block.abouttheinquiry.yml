@@ -1,0 +1,30 @@
+uuid: 8a5b8a4a-ce3f-41d4-bc17-78c6615ec902
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:ddef5382-935d-408f-9ab1-e3c8af07442b'
+  module:
+    - block_content
+    - system
+  theme:
+    - mahinquiry_theme
+id: abouttheinquiry
+theme: mahinquiry_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:ddef5382-935d-408f-9ab1-e3c8af07442b'
+settings:
+  id: 'block_content:ddef5382-935d-408f-9ab1-e3c8af07442b'
+  label: 'About the inquiry'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
