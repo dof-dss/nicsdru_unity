@@ -1,0 +1,28 @@
+uuid: 436ac044-cba9-48a6-8b80-68623565b286
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date
+  module:
+    - facets
+    - system
+  theme:
+    - mahinquiry_theme
+id: publisheddate
+theme: mahinquiry_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:published_date'
+settings:
+  id: 'facet_block:published_date'
+  label: 'Published date'
+  provider: facets
+  label_display: visible
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false
