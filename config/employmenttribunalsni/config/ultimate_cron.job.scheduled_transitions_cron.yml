@@ -1,4 +1,4 @@
-uuid: 044f0c0f-6270-4612-a4b2-f88e65b76b38
+uuid: b2c5b945-6ee1-4850-99e5-afcccac5cf83
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,19 @@ module: scheduled_transitions
 callback: scheduled_transitions_cron
 scheduler:
   id: simple
+  configuration:
+    rules:
+      - '* * * * *'
 launcher:
   id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
 logger:
   id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

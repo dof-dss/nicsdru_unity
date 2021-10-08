@@ -1,0 +1,25 @@
+uuid: e893b8c1-ebb5-445b-bb2c-dfcc56b14ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-menu
+  module:
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: footermenu
+theme: employmenttribunalsni_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-menu'
+settings:
+  id: 'system_menu_block:menu-footer-menu'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

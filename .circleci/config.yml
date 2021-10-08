@@ -197,30 +197,36 @@ jobs:
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
-              result=$(platform drush "pml -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
-                platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              fi
+                result2=$(platform drush "pml -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
+                if [[ -n $result2 ]]; then
+                  echo "***** Uninstall Fastly - ${site} *****"
+                  platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+                fi
+            fi
             done
       - run:
           name: Clear cache before config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Clear Cache - ${site} *****"
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Config Import - ${site} *****"
                 platform drush "cim -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
