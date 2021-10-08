@@ -1,12 +1,10 @@
-uuid: 1e990b0d-2f38-4031-a90a-79afcc27ba45
+uuid: d45f3bb0-8719-4af1-8428-7d14092c2109
 langcode: en
 status: true
 dependencies:
   module:
     - metatag
     - node
-_core:
-  default_config_hash: toqvFhfgG3CpkhzHPz_gW5KwBaCstfihpup6v3aX1AI
 id: node.field_meta_tags
 field_name: field_meta_tags
 entity_type: node

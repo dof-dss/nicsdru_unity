@@ -1,18 +1,9 @@
-uuid: fc501548-26da-42b0-b808-167b4e62141c
+uuid: 0ae63b92-678f-4eaf-9478-7df9cd6bb709
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
-    - node.type.consultation
-    - node.type.contact
-    - node.type.feature
-    - node.type.featured_content_list
-    - node.type.layout_page
-    - node.type.link
-    - node.type.news
-    - node.type.profile
-    - node.type.publication
+    - node.type.page
     - node.type.webform
   module:
     - content_moderation
@@ -103,15 +94,6 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - basic_page
-      - consultation
-      - contact
-      - feature
-      - featured_content_list
-      - layout_page
-      - link
-      - news
-      - profile
-      - publication
+      - page
       - webform
   default_moderation_state: draft

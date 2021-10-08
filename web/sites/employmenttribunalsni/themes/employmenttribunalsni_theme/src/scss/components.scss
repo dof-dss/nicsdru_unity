@@ -1,0 +1,139 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.sidebar-second-layout {
+  position: relative;
+  overflow: hidden;
+  background: #f2f2f2;
+  padding: 1rem;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .front .sidebar-second-layout {
+    background: none;
+  }
+}
+
+#block-sidemenu {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0 1.6rem;
+    padding: 0 1rem;
+
+    li {
+      .meta {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: .6rem 0 0;
+      }
+    }
+
+    .menu {
+      margin: .5rem 1rem 0 .5rem;
+
+      li {
+        list-style: circle;
+      }
+    }
+  }
+
+  a {
+    border-bottom: 1px solid $link;
+
+    &:hover {
+      border-bottom: 2px solid $link-underline;
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      border-bottom: none;
+      outline: 2px solid $link;
+      outline-offset: 0;
+    }
+  }
+}
+
+#main-menu .menu .menu-item .active {
+  background: $brand-secondary;
+  border-color: $brand-secondary;
+}
+
+
+#footer {
+  #footer-menu {
+    margin: 4% auto;
+
+    .menu {
+      list-style: none;
+
+      @media screen and (max-width: $mob) {
+        text-align: center;
+      }
+
+      li.menu-item {
+        display: inline-block;
+        padding: 0 .8rem 0 0;
+        margin-right: .5rem;
+        @include adjust-font-size-to(16px);
+
+        a {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+a.btn {
+  background: $brand-primary;
+}
+
+#bottom-area {
+  @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    float: none;
+
+    @media screen and (max-width: 766px) {
+      width: 100%;
+    }
+  }
+
+  .block .fas {
+    background: #f3f3f3;
+    color: #656565;
+    font-size: 5.5rem;
+    border-radius: 100%;
+    height: 11rem;
+    margin: 2rem auto;
+    width: 11rem;
+    display: block;
+    padding-top: 2.4rem;
+  }
+
+  .block > h2 {
+    @include adjust-font-size-to(20px);
+    text-align: center;
+    letter-spacing: -1px;
+
+    a {
+      color: #444;
+    }
+  }
+}
