@@ -1,0 +1,40 @@
+blocks:
+  -
+    info: Complaints
+    langcode: en
+    uuid: cafa37f5-b7b3-4dad-ab94-3b73b6df6e27
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Feedback_Complaint.aspx\">Read more</a></p>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Respond to a claim'
+    langcode: en
+    uuid: 962fbbde-e0ef-4703-855d-2edb9a59d7e4
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Login.aspx\">Respond to a claim</a></p>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Submit a claim'
+    langcode: en
+    uuid: ff802e47-b2c3-4663-b223-7de8f45bf22e
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Login.aspx\">Make a claim</a></p>\r\n"
+          summary: null
+          format: basic_html
