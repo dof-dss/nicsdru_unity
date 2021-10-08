@@ -121,9 +121,9 @@ module:
   pathauto: 1
   origins_workflow: 2
   views: 10
-  eu_cookie_compliance: 11
   paragraphs: 11
   nicsdru_unity_profile: 1000
+  eu_cookie_compliance: 1001
 theme:
   stark: 0
   seven: 0
