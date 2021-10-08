@@ -203,6 +203,7 @@ jobs:
               if [[ -n $result ]]; then
                 result2=$(platform drush "pml -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
                 if [[ -n $result2 ]]; then
+                  echo "***** Uninstall Fastly - ${site} *****"
                   platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
                 fi
             fi
@@ -214,6 +215,7 @@ jobs:
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Clear Cache - ${site} *****"
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
@@ -224,6 +226,7 @@ jobs:
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Config Import - ${site} *****"
                 platform drush "cim -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
