@@ -123,7 +123,7 @@
 }
 
 #footer {
-  max-width: 1160px;
+  max-width: 1060px;
   padding: 2rem;
 
   @include breakpoint($tab) {
@@ -150,35 +150,41 @@
 }
 
 .front {
-  //.content-sidebar-wrap {
-  //  background: resolve('mahi_banner.png') no-repeat right;
-  //  background-size: cover;
-  //  padding: 3rem;
-  //  float: left;
-  //
-  //  @include breakpoint($tab) {
-  //    padding: 3rem 5rem;
-  //  }
-  //
-  //  .main-content {
-  //    @include breakpoint($lap) {
-  //      padding-left: 2.5rem;
-  //    }
-  //  }
-  //
-  //  .content {
-  //    p {
-  //      font-size: 2rem;
-  //      font-weight: bold;
-  //      color: $white;
-  //      margin-bottom: 0;
-  //
-  //      @include breakpoint($tab) {
-  //        font-size: 2.4rem;
-  //      }
-  //    }
-  //  }
-  //}
+  .content-sidebar-wrap {
+    background: resolve('mahi_banner.png') no-repeat center;
+    background-size: cover;
+    padding: 3rem;
+    float: left;
+
+    @include breakpoint($tab) {
+      padding: 3rem 5rem;
+    }
+
+    .main-content {
+      @include breakpoint($lap) {
+        padding-left: 2.5rem;
+      }
+    }
+
+    .content {
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: 0;
+
+        @include breakpoint($tab) {
+          font-size: 2.4rem;
+        }
+
+        @include breakpoint($lap) {
+          font-size: 3rem;
+        }
+      }
+
+
+    }
+  }
 
   #bottom_wrapper {
     max-width: $max-grid-width;

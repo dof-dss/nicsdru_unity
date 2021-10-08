@@ -134,7 +134,7 @@
             {{ page.search_facets }}
           </header>
         {% endif %}
-        {% if page.content and not is_front %}
+        {% if page.content %}
           <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
             {{ page.content }}
           </main>
