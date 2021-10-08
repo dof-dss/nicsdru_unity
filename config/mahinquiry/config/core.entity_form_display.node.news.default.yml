@@ -7,13 +7,14 @@ dependencies:
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_summary
     - field.field.node.news.field_teaser
-    - image.style.thumbnail
     - node.type.news
+    - workflows.workflow.nics_editorial_workflow
   module:
+    - content_moderation
     - datetime
-    - image
+    - media_library
+    - metatag
     - path
     - text
 _core:
@@ -25,43 +26,42 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 13
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_photo:
-    weight: 123
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 14
+    region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      sidebar: true
     third_party_settings: {  }
-    type: image_image
+  field_photo:
+    type: media_library_widget
+    weight: 12
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_published_date:
-    weight: 122
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 125
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_teaser:
-    weight: 124
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -75,14 +75,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -90,26 +96,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -117,17 +123,17 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden:
-  field_meta_tags: true
+hidden: {  }
