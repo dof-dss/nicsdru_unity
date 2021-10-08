@@ -1,0 +1,28 @@
+uuid: b4b424c0-014c-4607-b960-05949fb5906f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_search
+  module:
+    - system
+    - views
+  theme:
+    - mahinquiry_theme
+id: exposedformnews_searchnews_search_page
+theme: mahinquiry_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:news_search-news_search_page'
+settings:
+  id: 'views_exposed_filter_block:news_search-news_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/date/*"
+    negate: false
