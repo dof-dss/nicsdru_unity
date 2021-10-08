@@ -1,0 +1,20 @@
+uuid: a1f79b8a-e11c-4f70-9419-a2430ea253b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: employmenttribunalsni_theme_mainpagecontent
+theme: employmenttribunalsni_theme
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

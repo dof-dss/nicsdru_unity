@@ -1,0 +1,25 @@
+uuid: a8037d56-45b6-42c2-af52-7630447affb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: mainmenu
+theme: employmenttribunalsni_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
