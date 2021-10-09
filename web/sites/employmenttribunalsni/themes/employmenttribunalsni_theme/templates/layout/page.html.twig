@@ -49,9 +49,6 @@
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
  *
- * The following is controlled through the uregni_theme.theme variables.
- * - search_page: Returns if the page is a search page based on its title.
- *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
@@ -116,11 +113,8 @@
 
 <div id="container">
   <div class="container-wrap">
-    <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+    <div class="content-sidebar-wrap">
       {{ page.breadcrumb }}
-      {% if search_page %}
-        {{ drupal_block('page_title_block', wrapper=false) }}
-      {% endif %}
       <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
         {% if page.search_facets %}
           <header id="search-facets" class="sidebar-first-layout">
@@ -137,8 +131,9 @@
             {{ page.content }}
           </main>
         {% endif %}
-        {% if is_front %}
-        {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 or page.bottom_widget_4 or page.bottom_widget_5 %}
+      </div>
+      {% if is_front %}
+        {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
           <div id="bottom_wrapper" class="footer_block bottom_widget">
             <div id="bottom-area" class="footer-area clearfix">
               {% if page.bottom_widget_1 %}
@@ -159,7 +154,7 @@
             </div>
           </div>
         {% endif %}
-      </div>
+      {% endif %}
       {% if page.sidebar_first %}
         <aside id="sidebar-first" class="sidebar-first-layout">
           {{ page.sidebar_first }}
@@ -171,14 +166,13 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-    {% endif %}
   </div>
 </div>
 
 <footer id="footer">
   <div id="footer_wrapper">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
-      <div id="footer-content" class="clearfix">
+      <div id="footer-area" class="footer-area clearfix">
         {% if page.footer_first %}
           <div class="column">
             {{ page.footer_first }}
@@ -195,7 +189,7 @@
           </div>
         {% endif %}
         {% if page.footer_fourth %}
-          <div class="column logo">
+          <div class="column">
             {{ page.footer_fourth }}
           </div>
         {% endif %}
