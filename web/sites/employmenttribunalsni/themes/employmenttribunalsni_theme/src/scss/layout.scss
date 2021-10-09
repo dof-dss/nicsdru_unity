@@ -6,9 +6,11 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
 .container-wrap {
+  margin: 0 1rem;
+  
   @include breakpoint($lap) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
+    margin: 0 auto;
   }
 }
