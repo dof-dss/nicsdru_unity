@@ -138,3 +138,12 @@ a.btn {
 .block > h2 {
   @include adjust-font-size-to(20px);
 }
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
