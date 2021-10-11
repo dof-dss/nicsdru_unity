@@ -23,16 +23,4 @@ function employmenttribunalsni_theme_theme_suggestions_views_view_alter(array &$
   }
 }
 
-/**
- * Implements hook_preprocess_page().
- */
-function employmenttribunalsni_theme_preprocess_page(&$variables) {
-  // A list of search page titles on the Uregni site.
-  $search_pages = [
-    'Search',
-  ];
 
-  $variables['search_page'] = in_array($variables['page']['#title'], $search_pages);
-  kint($variables);
-
-}
