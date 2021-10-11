@@ -57,6 +57,19 @@ function unity_search_pages_preprocess_views_view(array &$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function unity_search_pages_preprocess_page(&$variables) {
+  // A list of search page titles on the Unity codebase.
+  $search_pages = [
+    'Search',
+  ];
+
+  $variables['search_page'] = in_array($variables['page']['#title'], $search_pages);
+
+}
+
+/**
  * Implements hook_preprocess_page_title().
  *
  * Replaces search results title with a title and subtitle to enable styling.
