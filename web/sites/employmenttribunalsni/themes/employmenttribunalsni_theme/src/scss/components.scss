@@ -13,7 +13,7 @@
   margin-top: 0;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: $lap) {
   .front .sidebar-second-layout {
     background: none;
   }
@@ -30,14 +30,6 @@
     margin: 0 1.6rem;
     padding: 0 1rem;
 
-    li {
-      .meta {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        margin: .6rem 0 0;
-      }
-    }
-
     .menu {
       margin: .5rem 1rem 0 .5rem;
 
@@ -45,6 +37,11 @@
         list-style: circle;
       }
     }
+  }
+
+  li span.active,
+  a {
+    @include adjust-font-size-to(16px);
   }
 
   a {
@@ -110,8 +107,18 @@ a.btn {
     text-align: center;
     float: none;
 
-    @media screen and (max-width: 766px) {
+    @media screen and (max-width: $tab) {
       width: 100%;
+    }
+  }
+
+  .block > h2 {
+    text-align: center;
+    letter-spacing: -1px;
+    color: #444;
+
+    a {
+      color: #444;
     }
   }
 
@@ -126,16 +133,10 @@ a.btn {
     display: block;
     padding-top: 2.4rem;
   }
+}
 
-  .block > h2 {
-    @include adjust-font-size-to(20px);
-    text-align: center;
-    letter-spacing: -1px;
-
-    a {
-      color: #444;
-    }
-  }
+.block > h2 {
+  @include adjust-font-size-to(20px);
 }
 
 .search-result {

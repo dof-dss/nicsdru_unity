@@ -211,6 +211,7 @@
 
       @include breakpoint($tab) {
         margin: 0;
+        flex-basis: 32%;
       }
 
       h2 {
