@@ -22,5 +22,3 @@ function employmenttribunalsni_theme_theme_suggestions_views_view_alter(array &$
     $suggestions[] = 'views_view__' . $variables['view']->element['#display_id'];
   }
 }
-
-
