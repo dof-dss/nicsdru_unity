@@ -310,6 +310,7 @@ display:
         type: normal
         title: 'Key Documents'
         menu_name: main
+        weight: -47
       exposed_block: true
     cache_metadata:
       max-age: -1
