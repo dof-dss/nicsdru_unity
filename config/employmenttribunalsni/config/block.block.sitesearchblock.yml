@@ -1,21 +1,22 @@
-uuid: 1c53465a-0558-4cfb-9286-ee887d5d139b
+uuid: 014d6311-25c2-4db5-8eb1-85adc09ae7a5
 langcode: en
 status: true
 dependencies:
   module:
     - system
+    - unity_search_pages
   theme:
     - employmenttribunalsni_theme
-id: employmenttribunalsni_theme_pagetitle
+id: sitesearchblock
 theme: employmenttribunalsni_theme
-region: content
+region: search
 weight: 0
 provider: null
-plugin: page_title_block
+plugin: site_search_block
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: site_search_block
+  label: 'Site search block'
+  provider: unity_search_pages
   label_display: '0'
 visibility:
   request_path:
