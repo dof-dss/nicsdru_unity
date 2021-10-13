@@ -30,27 +30,6 @@ function nifiscalcouncil_theme_theme_suggestions_field_alter(array &$suggestions
 }
 
 /**
- * Implements hook_preprocess_page().
- */
-function nifiscalcouncil_theme_preprocess_page(&$variables) {
-  // Initially set the new variable for search pages to False.
-  $variables['search_page'] = FALSE;
-  // A list of search page titles on the nifiscalcouncil site.
-  $search_pages = [
-    'News',
-    'Publications',
-    'Search',
-  ];
-
-  // If a search page set the variable to true.
-  foreach ($search_pages as $search_page) {
-    if ($variables['page']['#title'] == $search_page) {
-      $variables['search_page'] = TRUE;
-    }
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_views_view_unformatted_alter().
  */
 function nifiscalcouncil_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
