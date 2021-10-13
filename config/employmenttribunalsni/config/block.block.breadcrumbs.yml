@@ -1,0 +1,20 @@
+uuid: e17f07a1-d36f-4445-9704-599912144e56
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: breadcrumbs
+theme: employmenttribunalsni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
