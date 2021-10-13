@@ -1,0 +1,25 @@
+uuid: 5f7d123b-8cfa-40b3-a3a5-c85eb41c4454
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:164479e4-3ee2-40c7-a54c-11377d130e81'
+  module:
+    - block_content
+  theme:
+    - mahinquiry_theme
+id: helpingtheinquiry
+theme: mahinquiry_theme
+region: bottom_widget_3
+weight: 0
+provider: null
+plugin: 'block_content:164479e4-3ee2-40c7-a54c-11377d130e81'
+settings:
+  id: 'block_content:164479e4-3ee2-40c7-a54c-11377d130e81'
+  label: 'Helping the Inquiry'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
