@@ -12,7 +12,46 @@ id: contact_us
 title: 'Contact us'
 description: ''
 category: ''
-elements: "your_details:\n  '#type': fieldset\n  '#title': 'Your details'\n  '#description_display': invisible\n  name:\n    '#type': textfield\n    '#title': Name\n    '#placeholder': 'Please enter your name'\n    '#required': true\n  organisation:\n    '#type': textfield\n    '#title': Organisation\n    '#placeholder': 'Please enter your organisation'\n  email_address:\n    '#type': email\n    '#title': 'Email address'\n    '#placeholder': 'Please enter your email '\n    '#required': true\nyour_query:\n  '#type': fieldset\n  '#title': 'Your query'\n  '#description_display': invisible\n  nature_of_query:\n    '#type': select\n    '#title': 'Nature of query'\n    '#title_display': inline\n    '#options':\n      Complaints: Complaints\n      'Publication feedback': 'Publication feedback'\n      'Freedom of Information': 'Freedom of Information'\n      Whistleblowing: Whistleblowing\n      'General enquiries': 'General enquiries'\n    '#required': true\n  queries_or_comments:\n    '#type': textarea\n    '#title': 'Queries or comments'\n    '#maxlength': 750\n    '#placeholder': 'Plain text only, 750 characters maximum.'\n    '#required': true"
+elements: |-
+  your_details:
+    '#type': fieldset
+    '#title': 'Your details'
+    '#description_display': invisible
+    name:
+      '#type': textfield
+      '#title': Name
+      '#placeholder': 'Please enter your name'
+      '#required': true
+    organisation:
+      '#type': textfield
+      '#title': Organisation
+      '#placeholder': 'Please enter your organisation'
+    email_address:
+      '#type': email
+      '#title': 'Email address'
+      '#placeholder': 'Please enter your email '
+      '#required': true
+  your_query:
+    '#type': fieldset
+    '#title': 'Your query'
+    '#description_display': invisible
+    nature_of_query:
+      '#type': select
+      '#title': 'Nature of query'
+      '#title_display': inline
+      '#options':
+        Complaints: Complaints
+        'Publication feedback': 'Publication feedback'
+        'Freedom of Information': 'Freedom of Information'
+        Whistleblowing: Whistleblowing
+        'General enquiries': 'General enquiries'
+      '#required': true
+    queries_or_comments:
+      '#type': textarea
+      '#title': 'Queries or comments'
+      '#maxlength': 750
+      '#placeholder': 'Plain text only, 750 characters maximum.'
+      '#required': true
 css: ''
 javascript: ''
 settings:
