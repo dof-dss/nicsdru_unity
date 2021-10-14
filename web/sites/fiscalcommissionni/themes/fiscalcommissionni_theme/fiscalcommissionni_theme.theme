@@ -30,31 +30,6 @@ function fiscalcommissionni_theme_theme_suggestions_field_alter(array &$suggesti
 }
 
 /**
- * Implements hook_preprocess_page().
- */
-function fiscalcommissionni_theme_preprocess_page(&$variables) {
-  // Initially set the new variable for search pages to False.
-  $variables['search_page'] = FALSE;
-  // A list of search page titles on the fiscalcommissionni site.
-  $search_pages = [
-    'News',
-    'Publications',
-    'Evidence',
-    'Search',
-  ];
-
-  // If a search page set the variable to true.
-  foreach ($search_pages as $search_page) {
-    if ($variables['page']['#title'] == $search_page) {
-      $variables['search_page'] = TRUE;
-    }
-  }
-
-  // If evidence search page, set variable to TRUE.
-  $variables['evidence_search'] = $variables['page']['#title'] === 'Evidence' ? TRUE : FALSE;
-}
-
-/**
  * Implements hook_theme_suggestions_views_view_unformatted_alter().
  */
 function fiscalcommissionni_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
