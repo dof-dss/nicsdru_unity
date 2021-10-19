@@ -3,14 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.article_float
+    - core.entity_view_mode.media.article_float_expandable
+    - core.entity_view_mode.media.article_full
+    - core.entity_view_mode.media.article_full_expandable
     - core.entity_view_mode.media.embed
-    - core.entity_view_mode.media.landscape_float
-    - core.entity_view_mode.media.landscape_float_xp
-    - core.entity_view_mode.media.landscape_full
-    - core.entity_view_mode.media.landscape_full_xp
-    - core.entity_view_mode.media.portrait_float
-    - core.entity_view_mode.media.portrait_float_xp
-    - core.entity_view_mode.media.portrait_full
   module:
     - blazy
     - cookie_content_blocker
@@ -128,14 +125,10 @@ filters:
         image: image
         remote_video: remote_video
       allowed_view_modes:
-        embed: embed
-        landscape_float: landscape_float
-        landscape_float_xp: landscape_float_xp
-        landscape_full: landscape_full
-        landscape_full_xp: landscape_full_xp
-        portrait_float: portrait_float
-        portrait_float_xp: portrait_float_xp
-        portrait_full: portrait_full
+        article_float: article_float
+        article_float_expandable: article_float_expandable
+        article_full: article_full
+        article_full_expandable: article_full_expandable
   noreferrer:
     id: noreferrer
     provider: noreferrer
