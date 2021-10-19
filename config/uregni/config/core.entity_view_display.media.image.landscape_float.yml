@@ -26,7 +26,7 @@ content:
     type: responsive_image
     weight: 0
     region: content
-    label: hidden
+    label: visually_hidden
     settings:
       responsive_image_style: inline
       image_link: ''
