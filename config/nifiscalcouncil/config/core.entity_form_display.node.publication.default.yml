@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
     - field.field.node.publication.field_published_date
+    - field.field.node.publication.field_type
     - node.type.publication
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -26,7 +27,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 10
     settings:
       rows: 9
       summary_rows: 3
@@ -41,7 +42,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_attachment:
-    weight: 11
+    weight: 12
     settings:
       media_types: {  }
     third_party_settings:
@@ -50,17 +51,23 @@ content:
     type: media_library_widget
     region: content
   field_meta_tags:
-    weight: 12
+    weight: 13
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_published_date:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
@@ -71,13 +78,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 14
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -92,14 +99,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -121,7 +128,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
