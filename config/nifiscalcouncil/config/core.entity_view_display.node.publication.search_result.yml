@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
     - field.field.node.publication.field_published_date
+    - field.field.node.publication.field_type
     - node.type.publication
   module:
     - datetime
@@ -33,6 +34,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_type:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
 hidden:
   body: true
   content_moderation_control: true
@@ -40,3 +49,4 @@ hidden:
   field_meta_tags: true
   langcode: true
   links: true
+  search_api_excerpt: true

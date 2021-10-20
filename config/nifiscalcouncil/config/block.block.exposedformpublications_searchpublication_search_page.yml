@@ -1,0 +1,28 @@
+uuid: 3640a702-06d7-4d73-b834-d2b5da5298d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications_search
+  module:
+    - system
+    - views
+  theme:
+    - nifiscalcouncil_theme
+id: exposedformpublications_searchpublication_search_page
+theme: nifiscalcouncil_theme
+region: search_facets
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:publications_search-publication_search_page'
+settings:
+  id: 'views_exposed_filter_block:publications_search-publication_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/type/*\r\n/publications/date/*"
+    negate: false

@@ -1,0 +1,12 @@
+uuid: 855ae9d3-e2a2-4bc0-afa3-0787d5a2f6c5
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__publications_search__publication_search_page
+name: 'search_api:views_page__publications_search__publication_search_page'
+filter_key: ''
+url_processor: facets_pretty_paths
+breadcrumb:
+  active: true
+  before: false
+  group: false

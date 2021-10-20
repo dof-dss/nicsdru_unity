@@ -1,0 +1,28 @@
+uuid: 7d195038-937b-4b30-ab3b-a7ce67881466
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type
+  module:
+    - facets
+    - system
+  theme:
+    - nifiscalcouncil_theme
+id: type
+theme: nifiscalcouncil_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'facet_block:type'
+settings:
+  id: 'facet_block:type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: type
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/type/*\r\n/publications/date/*"
+    negate: false
