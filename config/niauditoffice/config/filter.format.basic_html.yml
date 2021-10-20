@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.media.article_float_expandable
     - core.entity_view_mode.media.article_full
     - core.entity_view_mode.media.article_full_expandable
-    - core.entity_view_mode.media.embed
   module:
     - blazy
     - cookie_content_blocker
@@ -119,7 +118,7 @@ filters:
     status: true
     weight: -45
     settings:
-      default_view_mode: embed
+      default_view_mode: article_full
       allowed_media_types:
         audio: audio
         image: image
