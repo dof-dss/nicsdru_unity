@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
     - field.field.node.publication.field_published_date
+    - field.field.node.publication.field_type
     - node.type.publication
   module:
     - datetime
@@ -24,6 +25,7 @@ third_party_settings:
     group_additional_content_details:
       children:
         - field_meta_tags
+        - field_type
       parent_name: ''
       weight: 3
       format_type: html_element
@@ -63,7 +65,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_meta_tags:
-    weight: 4
+    weight: 1
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -78,7 +80,16 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_type:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   langcode: true
   links: true
+  search_api_excerpt: true
