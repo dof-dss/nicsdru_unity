@@ -311,6 +311,14 @@
       height: 4rem;
       border-radius: 100%;
       line-height: 3rem;
+
+      &.fa-linkedin {
+        padding: .5rem .8rem;
+      }
+
+      &.fa-youtube {
+        padding: .4rem .5rem;
+      }
     }
   }
 }
