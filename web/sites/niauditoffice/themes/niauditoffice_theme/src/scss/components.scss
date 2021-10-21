@@ -319,3 +319,10 @@
   border-bottom: none;
   margin: 0;
 }
+
+.media-image[data-picture-mapping="publication_image"] > img {
+  clear: right;
+  float: right;
+  max-width: 155px;
+  margin-left: 1.8rem;
+}
