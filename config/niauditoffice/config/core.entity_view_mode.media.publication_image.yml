@@ -1,0 +1,10 @@
+uuid: d2cdef8b-edba-45f7-85ef-a3dcdb3ad34e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.publication_image
+label: 'Publication image'
+targetEntityType: media
+cache: true
