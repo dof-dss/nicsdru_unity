@@ -93,8 +93,8 @@ content:
     weight: 2
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: publication_image
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content

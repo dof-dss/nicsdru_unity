@@ -311,6 +311,14 @@
       height: 4rem;
       border-radius: 100%;
       line-height: 3rem;
+
+      &.fa-linkedin {
+        padding: .5rem .8rem;
+      }
+
+      &.fa-youtube {
+        padding: .4rem .5rem;
+      }
     }
   }
 }
@@ -318,4 +326,11 @@
 #slick-views-slideshow-slideshow-1 .slide__caption a {
   border-bottom: none;
   margin: 0;
+}
+
+.media-image[data-picture-mapping="publication_image"] > img {
+  clear: right;
+  float: right;
+  max-width: 155px;
+  margin-left: 1.8rem;
 }
