@@ -20,5 +20,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: "<front>\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/news"
     negate: true

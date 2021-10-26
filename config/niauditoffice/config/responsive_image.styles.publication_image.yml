@@ -1,0 +1,19 @@
+uuid: 0f27a7a7-482a-4d0b-93ca-e7f8d477d835
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.publication_image_155x215_x1
+id: publication_image
+label: 'Publication image'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - publication_image_155x215_x1
+breakpoint_group: responsive_image
+fallback_image_style: publication_image_155x215_x1

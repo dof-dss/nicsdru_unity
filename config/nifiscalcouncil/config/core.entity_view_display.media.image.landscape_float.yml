@@ -1,4 +1,4 @@
-uuid: 8dd55985-aac4-4477-96c1-62fabc7b2856
+uuid: 6a3c110d-4c5a-4bff-a8e9-4a3967d32a76
 langcode: en
 status: true
 dependencies:
@@ -23,14 +23,14 @@ bundle: image
 mode: landscape_float
 content:
   field_media_image:
-    label: visually_hidden
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
     settings:
       responsive_image_style: inline
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
-    weight: 0
-    region: content
 hidden:
   created: true
   field_caption: true

@@ -15,7 +15,7 @@ bundles:
     bundle: basic_page
   -
     entity_type: node
-    bundle: consultation
+    bundle: board_member
   -
     entity_type: node
     bundle: news

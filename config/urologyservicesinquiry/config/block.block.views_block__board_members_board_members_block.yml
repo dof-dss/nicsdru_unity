@@ -1,0 +1,29 @@
+uuid: 18ccaa79-b9ba-42d3-a50e-9d351a335ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.board_members
+  module:
+    - system
+    - views
+  theme:
+    - urologyservicesinquiry_theme
+id: views_block__board_members_board_members_block
+theme: urologyservicesinquiry_theme
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:board_members-board_members_block'
+settings:
+  id: 'views_block:board_members-board_members_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /inquiry-team
+    negate: false

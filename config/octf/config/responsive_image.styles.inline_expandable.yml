@@ -1,16 +1,16 @@
-uuid: e91b3d7c-d8cd-4537-a99e-91e0abcde65a
+uuid: 5ad3db30-10fa-46d8-8f83-e96fdffd24b7
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.nigov_landscape_med_450x300_x1
-    - image.style.nigov_landscape_med_900x600_x2
-    - image.style.nigov_landscape_xl_1240x826_x2
-    - image.style.nigov_landscape_xl_620x413_x1
+    - image.style.nigov_full_1240_x2
+    - image.style.nigov_full_450_x1
+    - image.style.nigov_full_620_x1
+    - image.style.nigov_full_900_x2
 _core:
   default_config_hash: agI4gG7p6HrQOJL3yIX15WTi90gdy8Y4vRNOyQzo2mo
 id: inline_expandable
-label: 'Landscape float expandable'
+label: 'Inline float expandable'
 image_style_mappings:
   -
     breakpoint_id: responsive_image.viewport_sizing
@@ -19,9 +19,9 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - nigov_landscape_med_450x300_x1
-        - nigov_landscape_med_900x600_x2
-        - nigov_landscape_xl_1240x826_x2
-        - nigov_landscape_xl_620x413_x1
+        - nigov_full_1240_x2
+        - nigov_full_450_x1
+        - nigov_full_620_x1
+        - nigov_full_900_x2
 breakpoint_group: responsive_image
-fallback_image_style: nigov_landscape_xl_620x413_x1
+fallback_image_style: nigov_full_620_x1

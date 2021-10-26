@@ -6,9 +6,11 @@ id: production
 label: production
 description: 'Used for the production site only.'
 folder: ../config/nifiscalcouncil/production
-module: {  }
+module:
+  fastly: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - fastly.settings
 graylist:
   - nifiscalcouncil_theme.settings
 graylist_dependents: true

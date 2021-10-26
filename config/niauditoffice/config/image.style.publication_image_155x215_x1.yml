@@ -1,0 +1,15 @@
+uuid: 90b6bf49-ce76-4578-b097-96823fe3f02b
+langcode: en
+status: true
+dependencies: {  }
+name: publication_image_155x215_x1
+label: 'Publication image (155x215) (x1)'
+effects:
+  9f6c2860-175d-427b-9398-37f9b596ee4d:
+    uuid: 9f6c2860-175d-427b-9398-37f9b596ee4d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 155
+      height: 215
+      anchor: center-center
