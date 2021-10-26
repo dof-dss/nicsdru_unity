@@ -131,3 +131,48 @@ blocks:
           uri: 'entity:node/18'
           title: 'Sources of funding for NIE Budget, 2021/22'
           options: {  }
+taxonomies:
+  publication_types:
+    -
+      vid: publication_types
+      tid: '1'
+      langcode: en
+      name: 'Council Reports'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c860cf63-2698-4362-803e-5a7e36bb95ea
+    -
+      vid: publication_types
+      tid: '2'
+      langcode: en
+      name: 'Corporate publications'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 787ad8e7-6aae-4656-ae55-4be9d5197f0c
+    -
+      vid: publication_types
+      tid: '3'
+      langcode: en
+      name: Correspondence
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4a8a8c83-33ef-42e1-acd9-ce507219d4af
+    -
+      vid: publication_types
+      tid: '4'
+      langcode: en
+      name: MOU
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c7565488-bcde-4afd-a5f9-c7d7257aed1e
+  publications_topics: {  }
+  site_topics: {  }
+  tags: {  }
