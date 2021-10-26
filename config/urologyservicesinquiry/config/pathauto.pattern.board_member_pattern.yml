@@ -1,0 +1,22 @@
+uuid: 15ed87e4-d261-42c1-8068-4d25f32b6e18
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: board_member_pattern
+label: 'Board member pattern'
+type: 'canonical_entities:node'
+pattern: 'inquiry-team/[node:title]'
+selection_criteria:
+  65ee99e7-6369-47a7-9025-120bb40017a4:
+    id: node_type
+    bundles:
+      board_member: board_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 65ee99e7-6369-47a7-9025-120bb40017a4
+selection_logic: and
+weight: -5
+relationships: {  }
