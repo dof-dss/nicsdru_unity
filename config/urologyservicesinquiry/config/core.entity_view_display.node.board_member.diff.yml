@@ -1,0 +1,85 @@
+uuid: ff7eaca9-0e32-4fd0-8b4e-6148e0efaace
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.board_member.body
+    - field.field.node.board_member.field_member_image
+    - field.field.node.board_member.field_member_role
+    - field.field.node.board_member.field_meta_tags
+    - node.type.board_member
+  module:
+    - field_group
+    - layout_builder
+    - metatag
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_meta_tags
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.board_member.diff
+targetEntityType: node
+bundle: board_member
+mode: diff
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_member_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: portrait_float
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_member_role:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true
