@@ -8,10 +8,8 @@ dependencies:
     - image.style.nigov_full_620_x1
     - image.style.nigov_full_900_x2
     - image.style.nigov_full_940_x1
-_core:
-  default_config_hash: D46spGvqdIQl09ftiVu3fA6Vaaas4uM03PYwGCZeLII
-id: inline_xl_expandable
-label: 'Inline full width expandable'
+id: article_full
+label: 'Article full'
 image_style_mappings:
   -
     breakpoint_id: responsive_image.viewport_sizing
@@ -27,4 +25,4 @@ image_style_mappings:
         - nigov_full_900_x2
         - nigov_full_940_x1
 breakpoint_group: responsive_image
-fallback_image_style: nigov_full_940_x1
+fallback_image_style: nigov_full_620_x1
