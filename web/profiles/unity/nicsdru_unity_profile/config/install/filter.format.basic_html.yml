@@ -16,6 +16,7 @@ dependencies:
     - noreferrer
     - origins_common
     - token_filter
+    - unity_image_styles
 _core:
   default_config_hash: wLnUSBZ871Sj2PTV5Bb0VGb6M99uUg7MYT5SuXjXIvA
 name: 'Basic HTML'
