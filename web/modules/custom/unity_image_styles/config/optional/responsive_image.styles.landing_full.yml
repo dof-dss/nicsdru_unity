@@ -8,10 +8,8 @@ dependencies:
     - image.style.nigov_full_620_x1
     - image.style.nigov_full_900_x2
     - image.style.nigov_full_940_x1
-_core:
-  default_config_hash: D46spGvqdIQl09ftiVu3fA6Vaaas4uM03PYwGCZeLII
-id: inline_xl_expandable
-label: 'Inline full width expandable'
+id: landing_full
+label: 'Landing full'
 image_style_mappings:
   -
     breakpoint_id: responsive_image.viewport_sizing
