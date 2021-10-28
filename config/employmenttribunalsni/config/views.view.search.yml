@@ -24,7 +24,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: search_api_tag
+        type: none
         options: {  }
       query:
         type: views_query
