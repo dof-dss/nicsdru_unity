@@ -68,6 +68,7 @@ module:
   origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_toc: 0
+  origins_translations: 0
   origins_workflow: 0
   page_cache: 0
   path: 0
