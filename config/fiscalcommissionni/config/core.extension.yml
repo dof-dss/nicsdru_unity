@@ -84,6 +84,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_toc: 0
+  origins_translations: 0
   origins_unique_title: 0
   origins_workflow: 0
   page_cache: 0
@@ -97,7 +98,7 @@ module:
   search_api: 0
   search_api_db: 0
   search_api_location: 0
-  search_api_location_views: 0
+  search_api_location_views: 0f
   simplei: 0
   structure_sync: 0
   system: 0
