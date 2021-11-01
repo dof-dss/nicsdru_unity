@@ -7,9 +7,7 @@ at
 be
 but
 by
-do
 for
-get
 if
 in
 into
@@ -18,6 +16,7 @@ it
 no
 not
 of
+on
 or
 s
 such
@@ -32,10 +31,5 @@ they
 this
 to
 was
-what
-when
-where
-which
-why
 will
 with
