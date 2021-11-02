@@ -9,6 +9,7 @@ dependencies:
   module:
     - datetime
     - search_api
+    - search_api_spellcheck
 id: search
 label: Search
 module: views
@@ -508,6 +509,18 @@ display:
         empty: false
         pager: false
       empty:
+        search_api_spellcheck_did_you_mean:
+          id: search_api_spellcheck_did_you_mean
+          table: views
+          field: search_api_spellcheck_did_you_mean
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          search_api_spellcheck_count: 1
+          search_api_spellcheck_hide_on_result: 1
+          search_api_spellcheck_collate: true
+          plugin_id: search_api_spellcheck_did_you_mean
         area:
           id: area
           table: views
