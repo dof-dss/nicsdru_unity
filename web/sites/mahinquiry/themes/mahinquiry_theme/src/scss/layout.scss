@@ -61,3 +61,17 @@
     width: 65%;
   }
 }
+
+#footer-area.footer-area {
+  display: flex;
+  column-gap: 1%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .column {
+    flex-grow: 1;
+    flex-basis: 31%;
+    float: none;
+    margin: 0;
+  }
+}
