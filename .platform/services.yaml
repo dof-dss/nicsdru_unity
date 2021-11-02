@@ -21,6 +21,7 @@ db:
       - octfdb
       - urologyservicesinquirydb
       - mahinquirydb
+      - independentreviewofeducationdb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -66,6 +67,10 @@ db:
         default_schema: mahinquirydb
         privileges:
           mahinquirydb: admin
+      independentreviewofeducation:
+        default_schema: independentreviewofeducationdb
+        privileges:
+          independentreviewofeducationdb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
