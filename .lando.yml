@@ -12,6 +12,7 @@ proxy:
     - octf.gov.uk.lndo.site
     - urologyservicesinquiry.org.uk.lndo.site
     - mahinquiry.org.uk.lndo.site
+    - independentreviewofeducation.org.uk.lndo.site
 services:
   uregni_solr:
     type: solr:7
