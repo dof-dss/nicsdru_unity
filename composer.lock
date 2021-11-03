@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62c3e139634822aa4143f68bdbcdc210",
+    "content-hash": "6b92ffdeb0a6bd394ceb992c74d7d0c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1837,21 +1837,22 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.31",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "f726cb58c73ec26a5630d1705beb65be3de2a0a1"
+                "reference": "add0e8266aa15f923883298f60a58ddbf37dfa12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/f726cb58c73ec26a5630d1705beb65be3de2a0a1",
-                "reference": "f726cb58c73ec26a5630d1705beb65be3de2a0a1",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/add0e8266aa15f923883298f60a58ddbf37dfa12",
+                "reference": "add0e8266aa15f923883298f60a58ddbf37dfa12",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.6"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1860,9 +1861,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/0.9.31"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/development"
             },
-            "time": "2021-09-24T13:38:26+00:00"
+            "time": "2021-11-01T10:28:13+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
@@ -1906,21 +1907,22 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.35",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "79c9dc6212df665d52e7400594bbdd37ad191ef2"
+                "reference": "47f10672485bf7f28391d107032b4944a3b4b72b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/79c9dc6212df665d52e7400594bbdd37ad191ef2",
-                "reference": "79c9dc6212df665d52e7400594bbdd37ad191ef2",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/47f10672485bf7f28391d107032b4944a3b4b72b",
+                "reference": "47f10672485bf7f28391d107032b4944a3b4b72b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
+            "default-branch": true,
             "type": "drupal-custom-theme",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1939,9 +1941,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.35"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/development"
             },
-            "time": "2021-10-08T11:32:37+00:00"
+            "time": "2021-11-02T16:39:06+00:00"
         },
         {
             "name": "drupal/address",
@@ -19394,6 +19396,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_origins_modules": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
         "drupal/eu_cookie_compliance": 20,
