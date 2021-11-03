@@ -181,7 +181,7 @@
   cache:
     enabled: false
 
-"https://independentreviewofeducation.org.uk/.{default}/":
+"https://independentreviewofeducation.org.uk.{default}/":
   type: redirect
   to: "https://www.independentreviewofeducation.org.uk.{default}/"
 
