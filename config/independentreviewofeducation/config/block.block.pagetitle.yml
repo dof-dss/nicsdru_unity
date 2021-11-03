@@ -1,0 +1,18 @@
+uuid: c9965a09-1ec9-4f9f-b579-9fdc152706cd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - independentreviewofeducation_theme
+id: pagetitle
+theme: independentreviewofeducation_theme
+region: content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
