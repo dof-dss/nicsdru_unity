@@ -19,19 +19,19 @@ $chroma: add-colors((
   charcoal:               #333,
   ash-grey:               #666,
   'grey':                 #999,
-  grey-dark:              #4d4d4d,
-  grey-light:             #e8e7e7,
+  grey-dark:              #555,
+  grey-light:             #f6f6f6,
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
-  offwhite:               #f3f8fc,
+  offwhite:               #ff4dff,
   dark-red:               #b63a1b, // 4.53:1 with light-pink
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #002e62,
+  brand-primary:          #07601f, //#0f3d0f,
 
-  brand-secondary:        #002e62,
+  brand-secondary:        #606,
 
   brand-tertiary:         #002e62,
 ));
@@ -40,13 +40,8 @@ $chroma: add-colors((
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   #373737,
-  headings:               #373737,
-
-  link:                   #16a085,
-  link-hover:             #16a085,
-  link-visited:           #5e60b5,
-  link-active:            'link',
+  text:                   #111,
+  headings:               'text',
 
   border:                 'grey-light',
 
@@ -60,27 +55,24 @@ $chroma: add-colors('functional', (
   error:                  'dark-red',
   error-bg:               'light-pink',
 
-  menu-background:        #002e62,
-  menu-item-hover:        #3e1151,
+  menu-background:        'brand-primary',
+  menu-item-hover:        'brand-secondary',
   menu-separator:         #fff,
-  menu-sub-item-background: lighten(#002e62, 10),
-  menu-sub-item-hover:    #1abc9c,
-  menu-borders:           'charcoal',
+  menu-sub-item-background: lighten(#606, 10),
+  menu-sub-item-hover:    'brand-primary',
 
   table-background:       #fff,
   table-border:           #bbb,
   table-header-cell-background: #2e3d4a,
   table-header-cell-border: #c8c7c7,
   table-header-cell-text: #fff,
-  table-cell-border: #dbdbdb,
-  table-cell-text: #747474,
+  table-cell-border:      #dbdbdb,
+  table-cell-text:        'text',
 
-  footer-background: 'brand-primary',
-  footer-border: #00a583,
-  footer-text: #fff,
-  footer-headings: #fff,
-
-  search-submit: #0e6bb3,
+  footer-background:      #e7e7e7,
+  footer-border:          'brand-primary',
+  footer-text:            'text',
+  footer-headings:        'text',
 ));
 
 $chroma-active-scheme: 'functional';
@@ -88,7 +80,7 @@ $chroma-active-scheme: 'functional';
 $black: color('black');
 $charcoal: color(charcoal);
 $ash-grey: color(ash-grey);
-$grey: color('grey');
+$grey: color(charcoal);
 $grey-dark: color(grey-dark);
 $grey-light: color(grey-light);
 $grey-lightest: color(grey-lightest);
@@ -107,10 +99,13 @@ $brand-tertiary: color(brand-tertiary);
 $text: color('text');
 $headings: color(headings);
 
-$link: color(link);
-$link-hover: color(link-hover);
-$link-visited: color(link-visited);
-$link-active: color(link-active);
+$link: #0e6bb3 !default;
+$link-underline: color('charcoal') !default;
+$link-active: #0e6bb3 !default;
+$link-hover: #0e6bb3 !default;
+$link-hover-background: rgba(75%, 75%, 75%, .25) !default;
+$link-visited: #0e6bb3 !default;
+$link-visited-underline: #707070 !default;
 
 $border: color('border');
 
@@ -127,7 +122,6 @@ $menu-item-hover: color(menu-item-hover);
 $menu-separator: color(menu-separator);
 $menu-sub-item-background: color(menu-sub-item-background);
 $menu-sub-item-hover: color(menu-sub-item-hover);
-$menu-borders: color(menu-borders);
 
 $table-background: color(table-background);
 $table-border: color(table-border);
@@ -142,4 +136,4 @@ $footer-border: color(footer-border);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 
-$search-submit: color(search-submit);
+$search-submit: #0e6bb3;
