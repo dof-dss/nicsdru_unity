@@ -1,0 +1,20 @@
+uuid: dab1fcd7-d8f7-4908-9aad-707e92ab7f5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - independentreviewofeducation_theme
+id: mainpagecontent
+theme: independentreviewofeducation_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
