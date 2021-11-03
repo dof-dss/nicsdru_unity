@@ -29,7 +29,7 @@ content:
     region: content
   field_attachment:
     weight: 2
-    label: hidden
+    label: above
     settings:
       view_mode: embed
       link: false
@@ -51,3 +51,4 @@ hidden:
   field_publication_type: true
   langcode: true
   links: true
+  search_api_excerpt: true

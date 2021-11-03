@@ -43,24 +43,6 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
-    group_documents:
-      children:
-        - field_attachment
-      parent_name: ''
-      weight: 3
-      format_type: html_element
-      region: content
-      format_settings:
-        id: ''
-        classes: documents
-        element: div
-        show_label: true
-        label_element: h2
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-      label: Documents
 id: node.publication_page.diff
 targetEntityType: node
 bundle: publication_page
@@ -77,7 +59,7 @@ content:
     type: entity_reference_entity_view
     weight: 4
     region: content
-    label: hidden
+    label: above
     settings:
       view_mode: embed
       link: false
