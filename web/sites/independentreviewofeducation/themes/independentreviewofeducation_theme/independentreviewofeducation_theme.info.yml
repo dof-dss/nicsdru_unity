@@ -6,6 +6,7 @@ core_version_requirement: ^8.8 || ^9
 
 libraries:
   - independentreviewofeducation_theme/site-styling
+  - nicsdru_unity_theme/field_label
 
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:
