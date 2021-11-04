@@ -71,6 +71,7 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   // Environment specific settings and services.
   switch (getenv('PLATFORM_BRANCH')) {
     case 'main':
+    case 'D8UN-staging':
       // De-facto production settings.
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../services.yml';
       // Use 'production' config split for the Platform.sh production site.
