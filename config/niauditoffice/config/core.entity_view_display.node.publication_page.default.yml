@@ -12,29 +12,8 @@ dependencies:
     - node.type.publication_page
   module:
     - datetime
-    - field_group
     - text
     - user
-third_party_settings:
-  field_group:
-    group_documents:
-      children:
-        - field_attachment
-      parent_name: ''
-      weight: 3
-      format_type: html_element
-      region: content
-      format_settings:
-        id: ''
-        classes: documents
-        element: div
-        show_label: true
-        label_element: h2
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-      label: Documents
 id: node.publication_page.default
 targetEntityType: node
 bundle: publication_page
@@ -50,7 +29,7 @@ content:
   field_attachment:
     type: entity_reference_entity_view
     weight: 4
-    label: hidden
+    label: above
     settings:
       view_mode: embed
       link: false

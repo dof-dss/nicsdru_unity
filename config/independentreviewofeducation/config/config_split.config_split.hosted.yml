@@ -1,0 +1,15 @@
+uuid: c827a78d-9914-4696-977e-21e94205992c
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any that are 'hosted' and not running locally, apart from production (which has its own split).\t"
+folder: ../config/independentreviewofeducation/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
