@@ -241,8 +241,8 @@ jobs:
                 if [[ -n $result2 ]]; then
                   echo "***** Purge Solr index for - ${site} *****"
                   platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH \
-                    "curl http://${site}_solr:8080/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
-                      && curl http://${site}_solr:8080/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+                    "curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
+                      && curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
                   echo "***** Rebuild the Solr index for - ${site} *****"
                   platform drush 'sapi-c -l ${site}' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
                   platform drush 'sapi-r -l ${site}' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
