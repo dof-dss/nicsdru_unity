@@ -1,0 +1,15 @@
+uuid: a10b0ee8-0f76-478a-8a12-8c044ce14961
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+folder: ../config/independentreviewofeducation/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
