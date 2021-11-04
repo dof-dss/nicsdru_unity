@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62c3e139634822aa4143f68bdbcdc210",
+    "content-hash": "30e4d087ba0fccd1b144d139cce17009",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.35",
+            "version": "v0.1.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "79c9dc6212df665d52e7400594bbdd37ad191ef2"
+                "reference": "7ee95385893f47a76d9892932fe10fb50f51621f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/79c9dc6212df665d52e7400594bbdd37ad191ef2",
-                "reference": "79c9dc6212df665d52e7400594bbdd37ad191ef2",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/7ee95385893f47a76d9892932fe10fb50f51621f",
+                "reference": "7ee95385893f47a76d9892932fe10fb50f51621f",
                 "shasum": ""
             },
             "require": {
@@ -1939,9 +1939,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.35"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.37"
             },
-            "time": "2021-10-08T11:32:37+00:00"
+            "time": "2021-11-04T15:33:47+00:00"
         },
         {
             "name": "drupal/address",
@@ -4491,26 +4491,29 @@
         },
         {
             "name": "drupal/eu_cookie_compliance",
-            "version": "dev-1.x",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
-                "reference": "0cee56b7809dcf65ecd99fbe497817e2ce87fc45"
+                "reference": "8.x-1.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "5a13cd53f87a58501cebd6e560c280ad7274035c"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.19+1-dev",
-                    "datestamp": "1633784303",
+                    "version": "8.x-1.19",
+                    "datestamp": "1633775773",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -19396,7 +19399,6 @@
     "stability-flags": {
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
-        "drupal/eu_cookie_compliance": 20,
         "drupal/facets_pretty_paths": 10,
         "drupal/flag": 10,
         "drupal/inline_entity_form": 5,
