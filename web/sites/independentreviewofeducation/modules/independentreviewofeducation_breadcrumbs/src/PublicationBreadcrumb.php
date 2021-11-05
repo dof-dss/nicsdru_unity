@@ -65,7 +65,6 @@ class PublicationBreadcrumb implements BreadcrumbBuilderInterface {
     $this->entityTypeManager = $entity_type_manager;
     $this->titleResolver = $title_resolver;
     $this->request = $request;
-
   }
 
   /**
