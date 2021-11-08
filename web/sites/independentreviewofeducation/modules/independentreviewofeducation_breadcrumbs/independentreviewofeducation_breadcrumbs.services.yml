@@ -1,0 +1,16 @@
+services:
+  independentreviewofeducation_breadcrumbs.breadcrumb.publication:
+    class: Drupal\independentreviewofeducation_breadcrumbs\PublicationBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  independentreviewofeducation_breadcrumbs.breadcrumb.page:
+    class: Drupal\independentreviewofeducation_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  independentreviewofeducation_breadcrumbs.breadcrumb.board:
+    class: Drupal\independentreviewofeducation_breadcrumbs\BoardBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
