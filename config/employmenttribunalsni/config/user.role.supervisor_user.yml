@@ -99,7 +99,6 @@ permissions:
   - 'reschedule scheduled transitions node page'
   - 'revert all revisions'
   - 'revert page revisions'
-  - 'revert webform revisions'
   - 'schedule revisions'
   - 'show book reorder tab'
   - 'show core Outline form element'
@@ -134,4 +133,3 @@ permissions:
   - 'view page revisions'
   - 'view scheduled transitions node page'
   - 'view the administration theme'
-  - 'view webform revisions'
