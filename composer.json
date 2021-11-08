@@ -206,6 +206,9 @@
             },
             "drupal/ultimate_cron": {
                 "Fix test function issue": "https://www.drupal.org/files/issues/2021-04-13/kernel_test-3208608-1.patch"
+            },
+            "drupal/eu_cookie_compliance": {
+                "Banner at top is not hiding correctly": "https://git.drupalcode.org/project/eu-cookie-compliance/-/merge_requests/43.diff"
             }
         },
         "drupal-scaffold": {
