@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the independentreviewofeducation_theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function independentreviewofeducation_theme_preprocess_page(&$variables) {
+  $variables['twitter_profile_url'] = theme_get_setting('twitter_profile_url');
+  $variables['facebook_profile_url'] = theme_get_setting('facebook_profile_url');
+  $variables['linkedin_profile_url'] = theme_get_setting('linkedin_profile_url');
+  $variables['pinterest_profile_url'] = theme_get_setting('pinterest_profile_url');
+  $variables['youtube_profile_url'] = theme_get_setting('youtube_profile_url');
+}
