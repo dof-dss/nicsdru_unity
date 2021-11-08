@@ -5,6 +5,10 @@
  * Custom code for search pages.
  */
 
+use Solarium\Core\Query\QueryInterface;
+use Drupal\search_api\Query\QueryInterface as SearchApiQueryInterface;
+use Drupal\Core\Language\Language;
+
 /**
  * Implements hook_preprocess_views_view() for views_view.
  *
@@ -119,4 +123,16 @@ function unity_search_pages_preprocess_page_title(&$variables) {
       $variables['title_subtitle'] = t('search results');
     }
   }
+}
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ *
+ * Added here because the dictionary reference is not added correctly
+ * by contrib Solr modules. We set to 'und' (LANGCODE_NOT_SPECIFIED)
+ * because it's the same as 'en' in search_api config.
+ */
+function unity_search_pages_search_api_solr_query_alter(QueryInterface $solarium_query, SearchApiQueryInterface $query) {
+  // Maps to <str name="name">spelling_und</str> in solrconfig_extra.xml.
+  $solarium_query->getSpellcheck()->setDictionary(Language::LANGCODE_NOT_SPECIFIED);
 }
