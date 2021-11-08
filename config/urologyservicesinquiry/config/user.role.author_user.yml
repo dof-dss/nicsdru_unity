@@ -46,7 +46,6 @@ permissions:
   - 'create url aliases'
   - 'create vacancy content'
   - 'create video media'
-  - 'delete any webform content'
   - 'delete own audio media'
   - 'delete own basic_page content'
   - 'delete own board_member content'
@@ -190,4 +189,3 @@ permissions:
   - 'view the administration theme'
   - 'view umbrella_body revisions'
   - 'view vacancy revisions'
-  - 'view webform revisions'
