@@ -1,0 +1,14 @@
+blocks:
+  -
+    info: 'About us'
+    langcode: en
+    uuid: 32632464-58d8-465c-b514-9ab4ddfd0285
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>\r\n\r\n<p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"5bff0763-22c8-4f4b-bdd7-8f07c50c680b\" href=\"/node/8\">Read more</a></p>\r\n"
+          summary: ''
+          format: basic_html
