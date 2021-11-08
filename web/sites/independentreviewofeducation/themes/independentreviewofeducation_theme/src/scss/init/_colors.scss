@@ -31,7 +31,7 @@ $chroma: add-colors((
 
   brand-primary:          #07601f, //#0f3d0f,
 
-  brand-secondary:        #606,
+  brand-secondary:        #a6c556,
 
   brand-tertiary:         #002e62,
 ));
@@ -55,11 +55,12 @@ $chroma: add-colors('functional', (
   error:                  'dark-red',
   error-bg:               'light-pink',
 
-  menu-background:        'brand-primary',
-  menu-item-hover:        'brand-secondary',
-  menu-separator:         #fff,
-  menu-sub-item-background: lighten(#606, 10),
-  menu-sub-item-hover:    'brand-primary',
+  menu-background:        'white',
+  menu-item-hover:        'charcoal',
+  menu-separator:         'white',
+  menu-sub-item-background: 'charcoal',
+  menu-sub-item-hover:    #1abc9c,
+  menu-borders:           #6faed6,
 
   table-background:       #fff,
   table-border:           #bbb,
@@ -70,7 +71,7 @@ $chroma: add-colors('functional', (
   table-cell-text:        'text',
 
   footer-background:      #e7e7e7,
-  footer-border:          'brand-primary',
+  footer-border:          'brand-secondary',
   footer-text:            'text',
   footer-headings:        'text',
 ));
@@ -122,6 +123,7 @@ $menu-item-hover: color(menu-item-hover);
 $menu-separator: color(menu-separator);
 $menu-sub-item-background: color(menu-sub-item-background);
 $menu-sub-item-hover: color(menu-sub-item-hover);
+$menu-borders: color(menu-borders);
 
 $table-background: color(table-background);
 $table-border: color(table-border);
