@@ -54,6 +54,7 @@ module:
   help: 0
   history: 0
   image: 0
+  independentreviewofeducation_breadcrumbs: 0
   inline_entity_form: 0
   inline_form_errors: 0
   language: 0
