@@ -1,5 +1,18 @@
 blocks:
   -
+    info: 'Social links'
+    langcode: en
+    uuid: 9479e0b1-a575-4800-ac05-7811700d211e
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>test</p>\r\n"
+          summary: ''
+          format: basic_html
+  -
     info: 'About us'
     langcode: en
     uuid: 32632464-58d8-465c-b514-9ab4ddfd0285
