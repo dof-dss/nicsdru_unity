@@ -206,9 +206,23 @@
       }
     }
   }
+
+  .column {
+    .social-icons {
+      margin-top: 0;
+    }
+  }
 }
 
 a.btn {
   background: $charcoal;
   border-radius: 2.3rem;
+}
+
+.footer-area .column {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    float: left;
+  }
 }
