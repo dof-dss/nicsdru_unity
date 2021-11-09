@@ -1,0 +1,25 @@
+uuid: e2f7094a-64a0-4bc7-bb83-6bcde35de663
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:be333268-ef6d-4c1d-acc6-3079738c38a5'
+  module:
+    - block_content
+  theme:
+    - mahinquiry_theme
+id: contactdetails
+theme: mahinquiry_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:be333268-ef6d-4c1d-acc6-3079738c38a5'
+settings:
+  id: 'block_content:be333268-ef6d-4c1d-acc6-3079738c38a5'
+  label: 'Contact details'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

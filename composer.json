@@ -90,7 +90,7 @@
         "drupal/diff": "^1.0",
         "drupal/entity_embed": "^1.0",
         "drupal/entityqueue": "^1.2",
-        "drupal/eu_cookie_compliance": "1.x-dev@dev",
+        "drupal/eu_cookie_compliance": "^1.8",
         "drupal/facets": "^1.5",
         "drupal/facets_pretty_paths": "^1.0@beta",
         "drupal/faqfield": "^7.0",
@@ -201,8 +201,14 @@
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
             },
+            "drupal/scheduled_transitions": {
+                "No scheduled revisions appear for migrated nodes": "https://www.drupal.org/files/issues/2021-11-01/scheduled_transitions_base_language_3091006_2x.patch"
+            },
             "drupal/ultimate_cron": {
                 "Fix test function issue": "https://www.drupal.org/files/issues/2021-04-13/kernel_test-3208608-1.patch"
+            },
+            "drupal/eu_cookie_compliance": {
+                "Banner at top is not hiding correctly": "https://git.drupalcode.org/project/eu-cookie-compliance/-/merge_requests/43.diff"
             }
         },
         "drupal-scaffold": {

@@ -1,0 +1,41 @@
+uuid: 308860db-b828-49c0-b857-2a2c08f432e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.board_member.body
+    - field.field.node.board_member.field_member_image
+    - field.field.node.board_member.field_member_role
+    - field.field.node.board_member.field_meta_tags
+    - node.type.board_member
+  module:
+    - user
+id: node.board_member.teaser
+targetEntityType: node
+bundle: board_member
+mode: teaser
+content:
+  field_member_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: member_small_image
+      link: false
+    third_party_settings: {  }
+  field_member_role:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_meta_tags: true
+  langcode: true
+  links: true

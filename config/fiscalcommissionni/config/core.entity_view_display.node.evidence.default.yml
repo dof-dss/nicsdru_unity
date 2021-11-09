@@ -27,7 +27,7 @@ content:
     region: content
   field_attachment:
     weight: 2
-    label: hidden
+    label: above
     settings:
       view_mode: embed
       link: false

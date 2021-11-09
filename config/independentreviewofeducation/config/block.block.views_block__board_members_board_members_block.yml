@@ -1,0 +1,29 @@
+uuid: df387152-e560-409a-badc-0ba5316dcbd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.board_members
+  module:
+    - system
+    - views
+  theme:
+    - independentreviewofeducation_theme
+id: views_block__board_members_board_members_block
+theme: independentreviewofeducation_theme
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:board_members-board_members_block'
+settings:
+  id: 'views_block:board_members-board_members_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-panel
+    negate: false
