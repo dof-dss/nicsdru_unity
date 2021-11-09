@@ -1,0 +1,24 @@
+uuid: c0ddb683-09f3-4b49-88eb-8e0aa47580e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.key_documents
+  module:
+    - views
+  theme:
+    - independentreviewofeducation_theme
+id: views_block__key_documents_key_documents_block
+theme: independentreviewofeducation_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'views_block:key_documents-key_documents_block'
+settings:
+  id: 'views_block:key_documents-key_documents_block'
+  label: 'Key documents'
+  provider: views
+  label_display: visible
+  views_label: 'Key documents'
+  items_per_page: none
+visibility: {  }
