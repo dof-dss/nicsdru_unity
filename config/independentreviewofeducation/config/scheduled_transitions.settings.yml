@@ -15,6 +15,9 @@ bundles:
     bundle: basic_page
   -
     entity_type: node
+    bundle: board_member
+  -
+    entity_type: node
     bundle: consultation
   -
     entity_type: node
@@ -33,25 +36,13 @@ bundles:
     bundle: link
   -
     entity_type: node
-    bundle: profile
-  -
-    entity_type: node
     bundle: news
   -
     entity_type: node
-    bundle: page
+    bundle: profile
   -
     entity_type: node
     bundle: publication
-  -
-    entity_type: node
-    bundle: publication_page
-  -
-    entity_type: node
-    bundle: staff_member
-  -
-    entity_type: node
-    bundle: vacancy
   -
     entity_type: node
     bundle: webform

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
+    - node.type.board_member
     - node.type.consultation
     - node.type.contact
     - node.type.feature
@@ -104,6 +105,7 @@ type_settings:
   entity_types:
     node:
       - basic_page
+      - board_member
       - consultation
       - contact
       - feature
