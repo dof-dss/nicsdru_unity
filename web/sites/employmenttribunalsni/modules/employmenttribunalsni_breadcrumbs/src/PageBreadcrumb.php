@@ -95,7 +95,7 @@ class PageBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node');
       }
 
-      if ($this->node->bundle() == 'basic_page') {
+      if ($this->node->bundle() == 'page') {
         $match = TRUE;
       }
     }
