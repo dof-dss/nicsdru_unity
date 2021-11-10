@@ -1,0 +1,8 @@
+uuid: db57c42f-4acb-4da1-8d63-93a407990606
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication types'
+vid: publication_types
+description: 'list of terms for publication content types'
+weight: 0
