@@ -22,3 +22,8 @@ matchers:
       metadata: ''
       substitution_type: canonical
       limit: 100
+  06b2c499-8b9b-4441-a202-21c50a91fdb7:
+    uuid: 06b2c499-8b9b-4441-a202-21c50a91fdb7
+    id: email
+    weight: 0
+    settings: {  }
