@@ -1,29 +1,28 @@
-uuid: 716e74e3-5132-4c1a-9261-c201ff4cf45f
+uuid: cc855f6d-a661-490f-8b93-756ec2b80eaa
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - facets.facet.type
   module:
+    - facets
     - system
   theme:
     - employmenttribunalsni_theme
-id: sidemenu
+id: type
 theme: employmenttribunalsni_theme
-region: sidebar_second
-weight: 0
+region: search_facets
+weight: -4
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'facet_block:type'
 settings:
-  id: 'system_menu_block:main'
-  label: 'In this section'
-  provider: system
+  id: 'facet_block:type'
+  label: Type
+  provider: facets
   label_display: visible
-  level: 1
-  depth: 0
-  expand_all_items: false
+  block_id: type
 visibility:
   request_path:
     id: request_path
     pages: "/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*"
-    negate: true
+    negate: false
