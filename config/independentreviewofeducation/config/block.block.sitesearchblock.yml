@@ -1,21 +1,22 @@
-uuid: c9965a09-1ec9-4f9f-b579-9fdc152706cd
+uuid: 4dea984c-bb1a-43e9-953b-e7f0ae3e4210
 langcode: en
 status: true
 dependencies:
   module:
     - system
+    - unity_search_pages
   theme:
     - independentreviewofeducation_theme
-id: pagetitle
+id: sitesearchblock
 theme: independentreviewofeducation_theme
-region: content
-weight: -3
+region: search
+weight: 0
 provider: null
-plugin: page_title_block
+plugin: site_search_block
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: site_search_block
+  label: 'Site search block'
+  provider: unity_search_pages
   label_display: '0'
 visibility:
   request_path:
