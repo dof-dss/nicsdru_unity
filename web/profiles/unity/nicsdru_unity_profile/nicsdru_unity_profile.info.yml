@@ -52,6 +52,7 @@ install:
   - handy_cache_tags
   - help
   - history
+  - honeypot
   - image
   - inline_entity_form
   - inline_form_errors
