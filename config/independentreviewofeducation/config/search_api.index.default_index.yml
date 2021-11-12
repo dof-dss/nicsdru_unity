@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_published_date
-    - field.storage.node.field_teaser
     - search_api.server.local
   module:
     - node
@@ -41,15 +40,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_published_date
-  field_teaser:
-    label: Teaser
-    datasource_id: 'entity:node'
-    property_path: field_teaser
-    type: text
-    boost: !!float 3
-    dependencies:
-      config:
-        - field.storage.node.field_teaser
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -126,7 +116,6 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_teaser
       - langcode
       - langcode_1
       - name
@@ -149,7 +138,6 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_teaser
       - langcode
       - langcode_1
       - name
@@ -164,7 +152,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_teaser
       - title
     exceptions:
       mexican: mexic
@@ -176,7 +163,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_teaser
       - title
     stopwords:
       - a
@@ -221,7 +207,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_teaser
       - title
     ignored: ._-
     spaces: ''
