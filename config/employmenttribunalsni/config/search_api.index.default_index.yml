@@ -2,12 +2,15 @@ uuid: 3d5b5c09-5ea5-4758-b833-c8a163b77584
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.body
-    - search_api.server.local
   module:
     - node
+    - taxonomy
     - search_api
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_published_date
+    - field.storage.node.field_type
+    - search_api.server.local
 id: default_index
 name: 'Default index'
 description: ''
@@ -30,11 +33,45 @@ field_settings:
     dependencies:
       module:
         - node
+  field_published_date:
+    label: 'Published date'
+    datasource_id: 'entity:node'
+    property_path: field_published_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_published_date
+  field_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_type
   langcode:
     label: Language
     datasource_id: 'entity:node'
     property_path: langcode
     type: string
+    dependencies:
+      module:
+        - node
+  name:
+    label: 'Type » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_type
+      module:
+        - taxonomy
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
     dependencies:
       module:
         - node
@@ -61,6 +98,7 @@ datasource_settings:
       default: false
       selected:
         - page
+        - publication
     languages:
       default: true
       selected: {  }
