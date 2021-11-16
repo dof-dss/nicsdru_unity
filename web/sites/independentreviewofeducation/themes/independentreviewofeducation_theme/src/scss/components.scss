@@ -5,6 +5,12 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+  }
+}
+
 #main-menu {
   .menu {
     .menu-item {
@@ -163,8 +169,6 @@
       }
 
       article.node--type-publication {
-        padding-bottom: 1.5rem;
-
         h3 {
           margin: 0;
         }
