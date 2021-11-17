@@ -72,27 +72,3 @@ function octf_theme_preprocess_form(array &$variables) {
       break;
   }
 }
-
-/**
- * Implements hook_preprocess_block().
- *
- * Pass block region value to content so this can be used in
- * octf_theme_theme_suggestions_menu_alter.
- */
-function octf_theme_preprocess_block(&$variables) {
-  if (!empty($variables['elements']['#id'])) {
-    $region = Block::load($variables['elements']['#id'])->getRegion();
-    $variables['content']['#attributes']['region'] = $region;
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_menu_alter().
- *
- * Provide region based menu suggestions.
- */
-function octf_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
-  if (!empty($variables['attributes']['region'])) {
-    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
-  }
-}
