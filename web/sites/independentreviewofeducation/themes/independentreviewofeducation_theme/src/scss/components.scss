@@ -87,22 +87,6 @@
   }
 }
 
-#block-sidemenu {
-  background: $offwhite;
-  border-top: 5px solid $charcoal;
-  padding: 1rem;
-
-  @include breakpoint($lap) {
-    margin-top: 2rem;
-  }
-
-  h2 {
-    @include responsive-typo-map($h2-text);
-    margin: .5rem 0 1rem;
-    padding: 0;
-  }
-}
-
 .node-type-publication .published-date {
   font-weight: bold;
 }
