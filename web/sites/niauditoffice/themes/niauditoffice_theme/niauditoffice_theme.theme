@@ -17,7 +17,6 @@ function niauditoffice_theme_preprocess_node(array &$variables) {
     $variables['work_in_progress'] = FALSE;
 
     // Retrieve 'Work in progress' taxonomy term tid.
-
     $wip_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['name' => "Work in Progress"]);
     if (!empty($wip_term)) {
       $wip_tid = reset($wip_term)->id();
@@ -27,10 +26,8 @@ function niauditoffice_theme_preprocess_node(array &$variables) {
       $topic = $variables['node']->get('field_publication_topic');
       if (!empty($topic)) {
         $topic_tid = $topic->getValue('tid')[0]['target_id'];
-        if (isset($topic_tid)) {
-          if ($topic_tid == $wip_tid) {
+        if (isset($topic_tid) && ($topic_tid == $wip_tid)) {
             $variables['work_in_progress'] = TRUE;
-          }
         }
       }
     }
