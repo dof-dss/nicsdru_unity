@@ -247,22 +247,6 @@
   }
 }
 
-#block-sidemenu {
-  background: $offwhite;
-  border-top: 5px solid $charcoal;
-  padding: 1rem;
-
-  @include breakpoint($lap) {
-    margin-top: 2rem;
-  }
-
-  h2 {
-    @include responsive-typo-map($h2-text);
-    margin: .5rem 0 1rem;
-    padding: 0;
-  }
-}
-
 .webform-submission-form input[type="submit"] {
   @include responsive-typo-map($normal-text);
   display: inline-block;

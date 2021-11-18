@@ -6,7 +6,6 @@ core_version_requirement: 8.x || ^9
 
 libraries:
   - mahinquiry_theme/site-styling
-  - nicsdru_unity_theme/field_label
 
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:
