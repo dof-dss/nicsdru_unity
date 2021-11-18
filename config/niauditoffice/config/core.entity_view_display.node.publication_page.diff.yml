@@ -25,7 +25,6 @@ third_party_settings:
   field_group:
     group_a:
       children:
-        - field_publication_type
         - field_meta_tags
       parent_name: ''
       weight: 5
