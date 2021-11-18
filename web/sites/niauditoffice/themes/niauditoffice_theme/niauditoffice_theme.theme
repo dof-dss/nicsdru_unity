@@ -16,10 +16,20 @@ function niauditoffice_theme_preprocess_node(array &$variables) {
   if ($variables['node']->bundle() === 'publication_page') {
     $variables['work_in_progress'] = FALSE;
 
-    $publication_type = $variables['node']->get('field_publication_type')->value;
-    // Set variable to true if publication is of type work in progress.
-    if ($publication_type == 'workInProgress') {
-      $variables['work_in_progress'] = TRUE;
+    // Retrieve 'Work in progress' taxonomy term tid.
+    $wip_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['name' => "Work in Progress"]);
+    if (!empty($wip_term)) {
+      $wip_tid = reset($wip_term)->id();
+
+      // Check the type of the current publication to see if it
+      // is 'Work in progress'.
+      $topic = $variables['node']->get('field_publication_topic');
+      if (!empty($topic)) {
+        $topic_tid = $topic->getValue('tid')[0]['target_id'];
+        if (isset($topic_tid) && ($topic_tid == $wip_tid)) {
+          $variables['work_in_progress'] = TRUE;
+        }
+      }
     }
   }
 }
