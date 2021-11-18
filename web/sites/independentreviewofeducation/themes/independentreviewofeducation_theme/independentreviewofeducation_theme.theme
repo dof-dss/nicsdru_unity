@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the independentreviewofeducation_theme theme.
+ */
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function independentreviewofeducation_theme_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+  switch ($view->storage->id()) {
+    case 'key_documents':
+      if ($view->current_display == 'key_documents_block') {
+        $variables['more']['#options']['attributes']['class'] = 'btn';
+      }
+  }
+}
