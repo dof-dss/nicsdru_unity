@@ -9,7 +9,11 @@ message_transition_historical: 'Scheduled transition: copied revision #[schedule
 message_transition_copy_latest_draft: 'Scheduled transition: reverted [scheduled-transitions:latest-state] revision #[scheduled-transitions:latest-revision-id] back to top'
 _core:
   default_config_hash: KApD8y1HSPpUdBIgyeu1YitM-ekmxSLsWm1nb6NTdD0
+message_override: false
 bundles:
   -
     entity_type: node
     bundle: page
+  -
+    entity_type: node
+    bundle: publication

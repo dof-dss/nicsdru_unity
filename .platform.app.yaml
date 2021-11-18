@@ -79,7 +79,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -87,6 +87,7 @@ hooks:
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
+      drush -l $site -y cache-rebuild
     done
 
 # The configuration of app when it is exposed to the web.
@@ -176,3 +177,6 @@ crons:
   employmenttribunalsni:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
+  independentreviewofeducation:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
