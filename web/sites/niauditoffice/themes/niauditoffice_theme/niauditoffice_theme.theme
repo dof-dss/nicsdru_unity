@@ -27,7 +27,7 @@ function niauditoffice_theme_preprocess_node(array &$variables) {
       if (!empty($topic)) {
         $topic_tid = $topic->getValue('tid')[0]['target_id'];
         if (isset($topic_tid) && ($topic_tid == $wip_tid)) {
-            $variables['work_in_progress'] = TRUE;
+          $variables['work_in_progress'] = TRUE;
         }
       }
     }
