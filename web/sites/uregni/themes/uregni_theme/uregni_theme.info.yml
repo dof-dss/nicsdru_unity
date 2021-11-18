@@ -8,7 +8,6 @@ libraries:
   - uregni_theme/site-styling
   - nicsdru_unity_theme/unity-slider
   - nicsdru_unity_theme/autocomplete
-  - nicsdru_unity_theme/field_label
 
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:

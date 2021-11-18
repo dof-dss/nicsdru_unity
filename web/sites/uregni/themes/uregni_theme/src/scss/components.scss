@@ -121,6 +121,11 @@ input[type="submit"].btn {
 }
 
 #block-sidemenu {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+
   ul {
     border: 1px solid #ccc;
     margin: .5rem 0;
