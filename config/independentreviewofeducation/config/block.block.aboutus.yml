@@ -1,0 +1,25 @@
+uuid: 3a4f9130-fcc6-408e-a4c4-a137abe5c515
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:32632464-58d8-465c-b514-9ab4ddfd0285'
+  module:
+    - block_content
+  theme:
+    - independentreviewofeducation_theme
+id: aboutus
+theme: independentreviewofeducation_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'block_content:32632464-58d8-465c-b514-9ab4ddfd0285'
+settings:
+  id: 'block_content:32632464-58d8-465c-b514-9ab4ddfd0285'
+  label: 'About us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

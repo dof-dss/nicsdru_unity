@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65191c8597a1799c17b539ca1abfab09",
+    "content-hash": "33c84661a0fe1b7534d50d14bb180dac",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1837,16 +1837,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "0.9.31",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "f726cb58c73ec26a5630d1705beb65be3de2a0a1"
+                "reference": "9a82610d18733dacd377abeecae52ecd892e789f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/f726cb58c73ec26a5630d1705beb65be3de2a0a1",
-                "reference": "f726cb58c73ec26a5630d1705beb65be3de2a0a1",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/9a82610d18733dacd377abeecae52ecd892e789f",
+                "reference": "9a82610d18733dacd377abeecae52ecd892e789f",
                 "shasum": ""
             },
             "require": {
@@ -1860,9 +1860,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/0.9.31"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.0.0"
             },
-            "time": "2021-09-24T13:38:26+00:00"
+            "time": "2021-11-04T19:26:03+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.37",
+            "version": "v0.1.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "7ee95385893f47a76d9892932fe10fb50f51621f"
+                "reference": "62e1b4707a5b55322cea0ecb56b7dc38ad5f9bdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/7ee95385893f47a76d9892932fe10fb50f51621f",
-                "reference": "7ee95385893f47a76d9892932fe10fb50f51621f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/62e1b4707a5b55322cea0ecb56b7dc38ad5f9bdd",
+                "reference": "62e1b4707a5b55322cea0ecb56b7dc38ad5f9bdd",
                 "shasum": ""
             },
             "require": {
@@ -1939,9 +1939,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.37"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.38"
             },
-            "time": "2021-11-04T15:33:47+00:00"
+            "time": "2021-11-18T16:02:27+00:00"
         },
         {
             "name": "drupal/address",
@@ -6580,6 +6580,77 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/profile_switcher",
+            "version": "1.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/profile_switcher.git",
+                "reference": "8.x-1.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/profile_switcher-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "50af21dd1ebcf59e298f647f7c864c8f523a099a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "php": ">=5.6.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1606246132",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Author name",
+                    "homepage": "https://www.drupal.org/user/3299791",
+                    "email": "author@example.com"
+                },
+                {
+                    "name": "alexmoreno",
+                    "homepage": "https://www.drupal.org/user/145609"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "kreynen",
+                    "homepage": "https://www.drupal.org/user/48877"
+                },
+                {
+                    "name": "owenpm3",
+                    "homepage": "https://www.drupal.org/user/1644952"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                }
+            ],
+            "description": "Allows switching of installation profiles for a Drupal site.",
+            "homepage": "https://www.drupal.org/project/profile_switcher",
+            "support": {
+                "source": "https://git.drupalcode.org/project/profile_switcher"
             }
         },
         {
@@ -19411,6 +19482,7 @@
         "drupal/facets_pretty_paths": 10,
         "drupal/flag": 10,
         "drupal/inline_entity_form": 5,
+        "drupal/profile_switcher": 15,
         "drupal/search_api_location": 15,
         "drupal/search_api_spellcheck": 10,
         "drupal/telephone_plus": 20,

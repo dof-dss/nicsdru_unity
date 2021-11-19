@@ -1,0 +1,11 @@
+services:
+  employmenttribunalsni_breadcrumbs.breadcrumb.page:
+    class: Drupal\employmenttribunalsni_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  employmenttribunalsni_breadcrumbs.breadcrumb.publication:
+    class: Drupal\employmenttribunalsni_breadcrumbs\PublicationBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }

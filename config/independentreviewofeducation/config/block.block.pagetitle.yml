@@ -2,6 +2,8 @@ uuid: c9965a09-1ec9-4f9f-b579-9fdc152706cd
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - independentreviewofeducation_theme
 id: pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: true

@@ -5,6 +5,12 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+  }
+}
+
 #main-menu {
   .menu {
     .menu-item {
@@ -29,7 +35,7 @@
 
       .active {
         background: $menu-item-hover;
-        border-bottom-color: $brand-secondary;
+        border-bottom-color: $brand-primary;
         color: #fff;
       }
     }
@@ -78,22 +84,6 @@
         font-weight: normal;
       }
     }
-  }
-}
-
-#block-sidemenu {
-  background: $offwhite;
-  border-top: 5px solid $charcoal;
-  padding: 1rem;
-
-  @include breakpoint($lap) {
-    margin-top: 2rem;
-  }
-
-  h2 {
-    @include responsive-typo-map($h2-text);
-    margin: .5rem 0 1rem;
-    padding: 0;
   }
 }
 
@@ -163,8 +153,6 @@
       }
 
       article.node--type-publication {
-        padding-bottom: 1.5rem;
-
         h3 {
           margin: 0;
         }
@@ -206,9 +194,38 @@
       }
     }
   }
+
+  .column {
+    .social-icons {
+      margin-top: 0;
+    }
+  }
 }
 
 a.btn {
   background: $charcoal;
   border-radius: 2.3rem;
+}
+
+.footer-area .column {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    float: left;
+  }
+}
+
+.search-result {
+  border-bottom: 1px solid #d3d7d9;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
