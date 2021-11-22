@@ -1,26 +1,26 @@
-uuid: 055b3af0-46fb-41c7-a7a4-ab44ddb2e50b
+uuid: 61a2c5ea-8a50-4ebe-9033-27e0398774b1
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.publication_date
+    - facets.facet.type
   module:
     - facets
     - system
   theme:
     - niauditoffice_theme
-id: publicationdate
+id: type
 theme: niauditoffice_theme
 region: search_facets
-weight: -6
+weight: -8
 provider: null
-plugin: 'facet_block:publication_date'
+plugin: 'facet_block:type'
 settings:
-  id: 'facet_block:publication_date'
-  label: Date
+  id: 'facet_block:type'
+  label: Type
   provider: facets
   label_display: visible
-  block_id: publicationdate
+  block_id: type
 visibility:
   request_path:
     id: request_path
