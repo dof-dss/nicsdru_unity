@@ -122,10 +122,11 @@ process:
     -
       plugin: static_map
       source: field_publication_type
+      default_value: null
       map:
         financialAudit: 2
-        financialAuditHealthSocialCareReports: 8
-        financialAuditOtherPublications: 9
+        FinancialAuditHealthSocialCareReports: 8
+        FinancialAuditOtherPublications: 9
         goodPractice: 3
         localGover: 12
         LocalGovernmentOtherReports: 10
