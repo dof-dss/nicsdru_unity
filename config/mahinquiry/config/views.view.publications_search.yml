@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - search_api.index.default_content
-    - system.menu.main
   module:
     - search_api
     - text
@@ -307,10 +306,14 @@ display:
         metatag_display_extender: {  }
       path: publications
       menu:
-        type: normal
+        type: none
         title: 'Key Documents'
-        menu_name: main
+        description: ''
+        expanded: false
+        parent: ''
         weight: -47
+        context: '0'
+        menu_name: main
       exposed_block: true
     cache_metadata:
       max-age: -1
