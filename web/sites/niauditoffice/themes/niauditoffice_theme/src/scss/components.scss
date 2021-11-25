@@ -91,21 +91,6 @@
   }
 }
 
-.search-result {
-  border-bottom: 1px solid #d3d7d9;
-  padding-bottom: 1.5rem;
-
-  &:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
-    margin-bottom: 1em;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
 .webform-submission-form {
   input::placeholder,
   textarea::placeholder {
