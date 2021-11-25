@@ -6,16 +6,19 @@ dependencies:
     - node.type.contact
   module:
     - text
+_core:
+  default_config_hash: nP_x7N3ve8fQrCiBFuX7Tcod4HGDP73kHvhI35PicB0
 id: node.contact.body
 field_name: body
 entity_type: node
 bundle: contact
 label: Body
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
+  required_summary: false
 field_type: text_with_summary

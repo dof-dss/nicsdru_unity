@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: d_nPD2eMknkYAnSTV4FkaqijceyFJPwT5i_Ih0lEEtc
 id: remote_video
 label: 'Remote video'
 description: 'A remotely hosted video from YouTube or Vimeo.'
@@ -14,4 +16,4 @@ source_configuration:
     - Vimeo
   source_field: field_media_oembed_video
 field_map:
-  title: name
+  provider_url: field_media_oembed_video

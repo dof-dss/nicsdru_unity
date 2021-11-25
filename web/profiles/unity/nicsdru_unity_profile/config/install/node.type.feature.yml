@@ -17,6 +17,10 @@ third_party_settings:
     toc_source_container: ''
     toc_element: h2
     toc_exclusions: ''
+    toc_screen_depth: '1'
+    toc_debug: 0
+_core:
+  default_config_hash: yR_7QF0mcKaT1BSP9Xsnj98urfi94MquSgAABLb8hJg
 name: Feature
 type: feature
 description: 'Use this content type to generate items of featured content.'

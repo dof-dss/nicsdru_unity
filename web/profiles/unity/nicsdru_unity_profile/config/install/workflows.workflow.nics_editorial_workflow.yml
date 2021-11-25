@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
+    - node.type.board_member
     - node.type.consultation
     - node.type.contact
+    - node.type.faq
     - node.type.feature
     - node.type.featured_content_list
     - node.type.layout_page
@@ -12,11 +14,10 @@ dependencies:
     - node.type.news
     - node.type.profile
     - node.type.publication
-    - node.type.webform
   module:
     - content_moderation
 _core:
-  default_config_hash: i4jivQkSLEaiLB7qlNRDW9rBQCOSSZQZHIHhXRSKK84
+  default_config_hash: qBaBqyIdQPZcpmPNMyldLolFWqVTKBP_vLpimj2_co0
 id: nics_editorial_workflow
 label: 'NICS Editorial Workflow'
 type: content_moderation
@@ -103,8 +104,10 @@ type_settings:
   entity_types:
     node:
       - basic_page
+      - board_member
       - consultation
       - contact
+      - faq
       - feature
       - featured_content_list
       - layout_page
@@ -112,5 +115,4 @@ type_settings:
       - news
       - profile
       - publication
-      - webform
   default_moderation_state: draft

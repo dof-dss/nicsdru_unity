@@ -10,9 +10,9 @@ field_name: field_photo
 entity_type: node
 bundle: feature
 label: Photo
-description: 'Please choose an image  to be displayed with this feature item. '
-required: true
-translatable: true
+description: ''
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -22,6 +22,7 @@ settings:
       image: image
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
