@@ -5,9 +5,16 @@ dependencies:
     - field.storage.node.body
     - node.type.basic_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
-  default_config_hash: 4vZqG-s1QW7tIeZ4n3kF8HMroAm_9saDo9QBA4hjvso
+  default_config_hash: ab-GG-zm7q3eX3UU0mBwxgkZM1Y9qyg0kl7yy0J0Jpk
 id: node.basic_page.body
 field_name: body
 entity_type: node

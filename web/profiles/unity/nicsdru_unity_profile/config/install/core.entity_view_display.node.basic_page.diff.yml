@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.link.field_link_type
-    - field.field.node.link.field_link_url
-    - field.field.node.link.field_meta_tags
-    - node.type.link
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_meta_tags
+    - field.field.node.basic_page.field_next_audit_due
+    - node.type.basic_page
   module:
     - field_group
     - layout_builder
-    - link
     - metatag
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -22,7 +22,7 @@ third_party_settings:
       children:
         - field_meta_tags
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: html_element
       region: content
       format_settings:
@@ -37,40 +37,28 @@ third_party_settings:
         speed: fast
       label: 'Additional content details'
 _core:
-  default_config_hash: qqTZoIAJxc9ZRH_eys3JD9s1IB5qDl4Z14Db1fgNxtA
-id: node.link.revision_comparison
+  default_config_hash: ugqId2IKn4Cd1RcEjY2pZjAfwA1P4CFIrmmO6s3eVOc
+id: node.basic_page.diff
 targetEntityType: node
-bundle: link
-mode: revision_comparison
+bundle: basic_page
+mode: diff
 content:
-  field_link_type:
-    type: entity_reference_label
+  body:
+    label: hidden
+    type: text_default
     weight: 0
-    region: content
-    label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-  field_link_url:
-    weight: 1
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 4
+    weight: 3
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_next_audit_due: true
   langcode: true
   links: true

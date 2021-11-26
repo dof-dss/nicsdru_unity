@@ -16,10 +16,10 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: node.board_member.revision_comparison
+id: node.board_member.diff
 targetEntityType: node
 bundle: board_member
-mode: revision_comparison
+mode: diff
 content:
   body:
     label: hidden

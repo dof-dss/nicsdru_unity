@@ -43,10 +43,10 @@ third_party_settings:
       label: 'Additional content details'
 _core:
   default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
-id: node.publication.revision_comparison
+id: node.publication.diff
 targetEntityType: node
 bundle: publication
-mode: revision_comparison
+mode: diff
 content:
   body:
     label: hidden

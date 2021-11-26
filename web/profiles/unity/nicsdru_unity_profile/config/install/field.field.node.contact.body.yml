@@ -5,9 +5,16 @@ dependencies:
     - field.storage.node.body
     - node.type.contact
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
-  default_config_hash: nP_x7N3ve8fQrCiBFuX7Tcod4HGDP73kHvhI35PicB0
+  default_config_hash: d5NEwwX5thuDa2a-kL37hTtFpp5vHC8g7gwnGp_XCcQ
 id: node.contact.body
 field_name: body
 entity_type: node

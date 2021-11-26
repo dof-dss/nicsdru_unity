@@ -48,10 +48,10 @@ third_party_settings:
       label: 'Additional content details'
 _core:
   default_config_hash: w5IHv7a7LIXd9sBgsDo0jQW4jBEzcalEx6mPyoRD04A
-id: node.consultation.revision_comparison
+id: node.consultation.diff
 targetEntityType: node
 bundle: consultation
-mode: revision_comparison
+mode: diff
 content:
   body:
     label: hidden

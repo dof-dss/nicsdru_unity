@@ -3,9 +3,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-_core:
-  default_config_hash: OPP8wTm5eAK142vOGHGG2hOtPMwKQo9FAFYzQd82bdY
-id: node.basic_page.promote
+id: node.consultation.promote
 field_name: promote
 entity_type: node
 bundle: basic_page

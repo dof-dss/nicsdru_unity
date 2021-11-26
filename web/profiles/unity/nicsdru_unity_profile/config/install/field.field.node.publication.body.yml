@@ -5,16 +5,23 @@ dependencies:
     - field.storage.node.body
     - node.type.publication
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
-  default_config_hash: wLt4pIfcurmZ3xPlqQBCMBvx48t5pGrSgWUqEODpOjM
+  default_config_hash: B8VsHgn2j1VVEvM8TPl5-Nb2XvxRxLovqZ6cJiepLs8
 id: node.publication.body
 field_name: body
 entity_type: node
 bundle: publication
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

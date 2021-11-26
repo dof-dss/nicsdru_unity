@@ -3,14 +3,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.faq.field_faq
-    - field.field.node.faq.field_meta_tags
-    - node.type.faq
+    - field.field.node.contact.body
+    - field.field.node.contact.field_meta_tags
+    - node.type.contact
   module:
-    - entity_reference_revisions
     - field_group
     - layout_builder
     - metatag
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -35,18 +35,18 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
-id: node.faq.revision_comparison
+_core:
+  default_config_hash: qgg-RsYAiNisMuDKtiHw5pGPRa9iSBN-lOxeeY3s20I
+id: node.contact.diff
 targetEntityType: node
-bundle: faq
-mode: revision_comparison
+bundle: contact
+mode: diff
 content:
-  field_faq:
-    type: entity_reference_revisions_entity_view
-    weight: 0
+  body:
     label: hidden
-    settings:
-      view_mode: default
-      link: ''
+    type: text_default
+    weight: 0
+    settings: {  }
     third_party_settings: {  }
     region: content
   field_meta_tags:
@@ -57,5 +57,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   langcode: true
   links: true

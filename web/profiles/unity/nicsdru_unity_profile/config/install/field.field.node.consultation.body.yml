@@ -5,9 +5,16 @@ dependencies:
     - field.storage.node.body
     - node.type.consultation
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
-  default_config_hash: ppBl7gYDcGzwweSWOe-yh9w7A9cKUFdfMe7zAiBAYNM
+  default_config_hash: 5B849-7XSDxRn4R0gZ2ZZupG1YuyahDFUHgg7PRLv_E
 id: node.consultation.body
 field_name: body
 entity_type: node

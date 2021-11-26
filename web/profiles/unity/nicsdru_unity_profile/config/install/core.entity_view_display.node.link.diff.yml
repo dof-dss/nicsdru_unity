@@ -3,14 +3,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.contact.body
-    - field.field.node.contact.field_meta_tags
-    - node.type.contact
+    - field.field.node.link.field_link_type
+    - field.field.node.link.field_link_url
+    - field.field.node.link.field_meta_tags
+    - node.type.link
   module:
     - field_group
     - layout_builder
+    - link
     - metatag
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -21,7 +22,7 @@ third_party_settings:
       children:
         - field_meta_tags
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: html_element
       region: content
       format_settings:
@@ -36,22 +37,35 @@ third_party_settings:
         speed: fast
       label: 'Additional content details'
 _core:
-  default_config_hash: qgg-RsYAiNisMuDKtiHw5pGPRa9iSBN-lOxeeY3s20I
-id: node.contact.revision_comparison
+  default_config_hash: qqTZoIAJxc9ZRH_eys3JD9s1IB5qDl4Z14Db1fgNxtA
+id: node.link.diff
 targetEntityType: node
-bundle: contact
-mode: revision_comparison
+bundle: link
+mode: diff
 content:
-  body:
-    label: hidden
-    type: text_default
+  field_link_type:
+    type: entity_reference_label
     weight: 0
-    settings: {  }
+    region: content
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
+  field_link_url:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 3
+    weight: 4
     region: content
     label: inline
     settings: {  }
