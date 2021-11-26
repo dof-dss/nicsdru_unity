@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-id: node.consultation.promote
+id: node.basic_page.promote
 field_name: promote
 entity_type: node
 bundle: basic_page
