@@ -5,7 +5,16 @@ dependencies:
     - field.storage.paragraph.field_answer
     - paragraphs.paragraphs_type.faq_accordian
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: 6xN2ranEPKchPOE8-bDahlijOaSZ-XyUXXYdkmdJ2Ps
 id: paragraph.faq_accordian.field_answer
 field_name: field_answer
 entity_type: paragraph
