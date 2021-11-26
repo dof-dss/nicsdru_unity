@@ -3,11 +3,13 @@ status: true
 dependencies:
   config:
     - node.type.news
+_core:
+  default_config_hash: tJWRLhVedgDXW9-cGrqOF6aDmU4wXgEHbCq7iVu1VFQ
 id: node.news.title
 field_name: title
 entity_type: node
 bundle: news
-label: 'Main heading'
+label: 'News title'
 description: ''
 required: true
 translatable: true
