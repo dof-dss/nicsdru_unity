@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: etO7MOX5rGlnrZZHrQ8BDzp6OmFGZXuI_Tm7_GUlU_U
+  default_config_hash: w2hC-WxjWvn8m9ZFf9CsOt2Xr4Wmxde2wbYjc5JRRRQ
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -29,7 +29,7 @@ content:
     region: content
   field_photo:
     weight: 1
-    label: above
+    label: hidden
     settings:
       view_mode: landscape_float
       link: false

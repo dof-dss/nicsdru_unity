@@ -4,15 +4,15 @@ dependencies:
   config:
     - field.storage.node.field_photo
     - media.type.image
-    - node.type.feature
-id: node.feature.field_photo
+    - node.type.publication
+id: node.publication.field_photo
 field_name: field_photo
 entity_type: node
-bundle: feature
+bundle: publication
 label: Photo
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

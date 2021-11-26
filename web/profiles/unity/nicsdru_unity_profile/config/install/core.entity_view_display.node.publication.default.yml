@@ -5,17 +5,17 @@ dependencies:
     - field.field.node.publication.body
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_type
     - field.field.node.publication.field_published_date
     - field.field.node.publication.field_summary
     - node.type.publication
   module:
     - datetime
-    - metatag
     - text
     - user
 _core:
-  default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
+  default_config_hash: s5SZB98DjTvRzLNMOGiYsmuFhTL85f2f85ESMRmttLU
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -24,12 +24,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_attachment:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       view_mode: embed
@@ -37,12 +37,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_meta_tags:
-    weight: 4
-    label: above
-    settings: {  }
+  field_photo:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: portrait_float
+      link: false
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    type: entity_reference_entity_view
     region: content
   field_published_date:
     weight: 0
@@ -53,15 +55,10 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
 hidden:
   content_moderation_control: true
+  field_meta_tags: true
   field_publication_type: true
+  field_summary: true
   langcode: true
   links: true

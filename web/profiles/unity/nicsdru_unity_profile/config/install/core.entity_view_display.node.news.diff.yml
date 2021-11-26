@@ -42,7 +42,7 @@ third_party_settings:
         speed: fast
       label: 'Additional content details'
 _core:
-  default_config_hash: etO7MOX5rGlnrZZHrQ8BDzp6OmFGZXuI_Tm7_GUlU_U
+  default_config_hash: YrUzDDsrR0TVwnyvxiHpMN2fIEJDmYr6-tG21tJRpEc
 id: node.news.diff
 targetEntityType: node
 bundle: news
@@ -63,17 +63,17 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_photo:
+    type: entity_reference_entity_view
     weight: 1
-    label: above
+    region: content
+    label: hidden
     settings:
       view_mode: landscape_float
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   field_published_date:
     weight: 0
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date

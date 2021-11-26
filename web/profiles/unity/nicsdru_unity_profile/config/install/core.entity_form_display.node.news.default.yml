@@ -19,7 +19,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: YVDFGyfWE67kt_-Ze75lELukLaCpeJWjJP9EBsjm6yA
+  default_config_hash: ZTxq5DBARWee6aUd80Aa2Cpv0k7xj307dcHRyfIWSgU
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -27,7 +27,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 12
+    weight: 13
     settings:
       rows: 9
       summary_rows: 3
@@ -49,7 +49,7 @@ content:
       sidebar: true
     third_party_settings: {  }
   field_photo:
-    weight: 14
+    weight: 12
     settings:
       media_types: {  }
     third_party_settings:
@@ -64,7 +64,7 @@ content:
     type: datetime_default
     region: content
   field_summary:
-    weight: 13
+    weight: 14
     settings:
       rows: 5
       placeholder: ''

@@ -10,7 +10,7 @@ dependencies:
     - link
     - user
 _core:
-  default_config_hash: k2zMyLI8vPBfalqc9fqff_EE_fa8yGsjVnVDdTULB24
+  default_config_hash: 8NcsCUwfdktn6UrqK4OP08AIoHqNg3zIrxw-mJOAzVE
 id: node.feature.default
 targetEntityType: node
 bundle: feature
