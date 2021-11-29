@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.map.field_location
-    - filter.format.plain_text
+    - filter.format.basic_html
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
@@ -26,7 +26,7 @@ content:
       title: ''
       info_text:
         value: ''
-        format: plain_text
+        format: basic_html
       centre:
         fit_bounds:
           enable: true
@@ -56,6 +56,12 @@ content:
           weight: 0
           enable: false
           map_center_id: location_plugins
+        freeogeoip:
+          weight: 0
+          enable: false
+          map_center_id: location_plugins
+          settings:
+            location_option_id: freeogeoip
         ipstack:
           settings:
             access_key: ''
@@ -63,12 +69,6 @@ content:
           weight: 0
           enable: false
           map_center_id: location_plugins
-        freeogeoip:
-          weight: 0
-          enable: false
-          map_center_id: location_plugins
-          settings:
-            location_option_id: freeogeoip
       map_provider_id: google_static_maps
       map_provider_settings:
         height: 400
@@ -85,6 +85,7 @@ content:
             enabled: false
       use_overridden_map_settings: false
       common_map: true
+      show_delta_label: false
       data_provider_settings: {  }
     third_party_settings: {  }
     type: geolocation_map
