@@ -9,7 +9,8 @@ folder: ../config/independentreviewofeducation/production
 module:
   fastly: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - fastly.settings
 graylist:
   - independentreviewofeducation_theme.settings
 graylist_dependents: true
