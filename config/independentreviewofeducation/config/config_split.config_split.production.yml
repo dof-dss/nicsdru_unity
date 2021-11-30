@@ -6,7 +6,8 @@ id: production
 label: production
 description: 'Used for the production site only.'
 folder: ../config/independentreviewofeducation/production
-module: {  }
+module:
+  fastly: 0
 theme: {  }
 blacklist: {  }
 graylist:
