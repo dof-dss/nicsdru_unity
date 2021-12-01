@@ -41,6 +41,7 @@ relationships:
   urologyservicesinquiry: 'db:urologyservicesinquiry'
   mahinquiry: 'db:mahinquiry'
   independentreviewofeducation: 'db:independentreviewofeducation'
+  nipolicingboard: 'db:nipolicingboard'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -180,3 +181,6 @@ crons:
   independentreviewofeducation:
     spec: '*/5 * * * *'
     cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
+  nipolicingboard:
+    spec: '*/5 * * * *'
+    cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
