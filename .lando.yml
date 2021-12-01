@@ -13,6 +13,7 @@ proxy:
     - urologyservicesinquiry.org.uk.lndo.site
     - mahinquiry.org.uk.lndo.site
     - independentreviewofeducation.org.uk.lndo.site
+    - nipolicingboard.org.uk.lndo.site
 services:
   uregni_solr:
     type: solr:7
@@ -21,6 +22,12 @@ services:
     config:
       dir: .lando/config/solr/7.x/default
   niauditoffice_solr:
+    type: solr:7
+    portforward: true
+    core: default
+    config:
+      dir: .lando/config/solr/7.x/default
+  nipolicingboard_solr:
     type: solr:7
     portforward: true
     core: default
