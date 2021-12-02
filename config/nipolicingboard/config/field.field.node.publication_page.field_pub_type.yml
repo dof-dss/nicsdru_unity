@@ -1,0 +1,23 @@
+uuid: d86ad978-caea-4822-9370-e51774d13132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pub_type
+    - node.type.publication_page
+id: node.publication_page.field_pub_type
+field_name: field_pub_type
+entity_type: node
+bundle: publication_page
+label: Type
+description: 'Choose a publication type from the drop down list.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

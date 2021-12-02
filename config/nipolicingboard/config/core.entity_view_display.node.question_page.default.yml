@@ -1,0 +1,80 @@
+uuid: 3d6b32b3-dcbe-4c44-baa1-549559b982b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.question_page.body
+    - field.field.node.question_page.field_committee
+    - field.field.node.question_page.field_key_term
+    - field.field.node.question_page.field_metatag
+    - field.field.node.question_page.field_nipb_board_member
+    - field.field.node.question_page.field_political_party
+    - field.field.node.question_page.field_published_date
+    - field.field.node.question_page.field_question_type
+    - node.type.question_page
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.question_page.default
+targetEntityType: node
+bundle: question_page
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 5
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_committee:
+    label: inline
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_key_term:
+    label: above
+    weight: 5
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_nipb_board_member:
+    label: inline
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_published_date:
+    label: inline
+    weight: 2
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_question_type:
+    label: inline
+    weight: 5
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true
+  field_political_party: true
+  langcode: true
