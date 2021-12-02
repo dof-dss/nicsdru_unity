@@ -1,0 +1,21 @@
+uuid: 6b51ddef-d4bc-4af0-aee8-f9e86ed821f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.wysiwyg
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_caption_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - file
+id: file.image.wysiwyg
+targetEntityType: file
+bundle: image
+mode: wysiwyg
+content: {  }
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_caption_text: true
+  field_file_image_title_text: true
+  langcode: true

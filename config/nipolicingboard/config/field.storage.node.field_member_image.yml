@@ -1,12 +1,10 @@
-uuid: daf5ee80-54e5-4c44-a875-d57b74257705
+uuid: 8d986e8b-839c-4878-888d-735041ced8d7
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-_core:
-  default_config_hash: 3iyNorTjXcwfK_ZMirIrWn2Up21Q_5cG6qdQfnr7VlA
 id: node.field_member_image
 field_name: field_member_image
 entity_type: node

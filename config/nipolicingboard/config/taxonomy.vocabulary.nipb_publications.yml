@@ -1,0 +1,8 @@
+uuid: 2d9199bf-b561-42fb-b670-673d4d546f76
+langcode: en
+status: true
+dependencies: {  }
+name: 'NIPB Publications'
+vid: nipb_publications
+description: 'A list of publication types.'
+weight: 0
