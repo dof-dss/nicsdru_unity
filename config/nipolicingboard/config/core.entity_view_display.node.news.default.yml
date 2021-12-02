@@ -11,7 +11,6 @@ dependencies:
     - node.type.news
   module:
     - datetime
-    - image
     - text
     - user
 _core:
@@ -23,39 +22,32 @@ mode: default
 content:
   body:
     label: hidden
-    weight: 3
+    weight: 2
     type: text_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_photo:
     label: hidden
-    weight: 2
-    type: image
+    weight: 1
+    type: entity_reference_entity_view
     settings:
-      image_link: ''
-      image_style: ''
+      view_mode: landscape_float
+      link: false
     third_party_settings: {  }
     region: content
   field_published_date:
-    label: hidden
-    weight: 1
+    label: inline
+    weight: 0
     type: datetime_default
     settings:
-      format_type: long
       timezone_override: ''
-    third_party_settings: {  }
-    region: content
-  field_teaser:
-    label: hidden
-    weight: 0
-    type: string
-    settings:
-      link_to_entity: false
+      format_type: unity_date
     third_party_settings: {  }
     region: content
 hidden:
   content_moderation_control: true
   field_meta_tags: true
+  field_teaser: true
   langcode: true
   links: true
