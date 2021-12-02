@@ -16,6 +16,10 @@ third_party_settings:
     toc_source_container: ''
     toc_element: h2
     toc_exclusions: ''
+    toc_screen_depth: '1'
+    toc_debug: 0
+_core:
+  default_config_hash: 0Y4hiYYLiS8a5oNzcC_C9lRh5nHK1xgryja_TdY97Ds
 name: 'Featured content list'
 type: featured_content_list
 description: ''

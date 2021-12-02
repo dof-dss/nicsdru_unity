@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: e9BC4ZZhNpjulqupeZTtTBjZoTXTCU_zvmSYYwX0jic
 id: authenticated
 label: 'Authenticated user'
 weight: 1
@@ -14,4 +16,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view all revisions'
   - 'view media'
+  - 'view own unpublished content'

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
     - field.field.node.news.field_summary
@@ -10,9 +11,10 @@ dependencies:
     - node.type.news
   module:
     - datetime
-    - image
     - text
     - user
+_core:
+  default_config_hash: w2hC-WxjWvn8m9ZFf9CsOt2Xr4Wmxde2wbYjc5JRRRQ
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -21,46 +23,32 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_photo:
-    weight: 103
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: landscape_float
+      link: false
     third_party_settings: {  }
-    type: image
+    type: entity_reference_entity_view
     region: content
   field_published_date:
-    weight: 102
+    weight: 0
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: unity_date
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_teaser:
-    weight: 104
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  field_summary: true
+  field_teaser: true
+  langcode: true
+  links: true

@@ -191,6 +191,22 @@
 
 #---------------------------------
 
+"https://www.nipolicingboard.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://nipolicingboard.org.uk.{default}/":
+  type: redirect
+  to: "https://www.nipolicingboard.org.uk.{default}/"
+
+"https://nipolicingboard.org.uk/":
+  type: redirect
+  to: "https://www.nipolicingboard.org.uk/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream

@@ -9,6 +9,7 @@ install:
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
+  - allowed_formats
   - automated_cron
   - blazy
   - block
@@ -49,6 +50,7 @@ install:
   - file
   - filter
   - flag
+  - google_analytics
   - handy_cache_tags
   - help
   - history
