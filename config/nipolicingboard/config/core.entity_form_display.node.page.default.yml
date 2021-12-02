@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_enable_toc
-    - field.field.node.page.field_metatag
+    - field.field.node.page.field_meta_tags
     - node.type.page
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - metatag
     - path
     - text
 id: node.page.default
@@ -28,6 +29,18 @@ content:
     region: content
   created:
     type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 122
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  flag:
     weight: 10
     region: content
     settings: {  }
@@ -92,9 +105,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden:
-  field_enable_toc: true
-  field_metatag: true
+hidden: {  }
