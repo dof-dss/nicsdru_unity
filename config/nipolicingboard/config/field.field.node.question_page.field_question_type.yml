@@ -1,0 +1,21 @@
+uuid: 831f8016-f810-4e01-992a-7070386689bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question_type
+    - node.type.question_page
+  module:
+    - options
+id: node.question_page.field_question_type
+field_name: field_question_type
+entity_type: node
+bundle: question_page
+label: 'Question type'
+description: 'Select whether the question was written or made orally'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

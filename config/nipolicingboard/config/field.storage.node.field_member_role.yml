@@ -1,11 +1,9 @@
-uuid: c423e1a4-778a-4b7d-bc0a-1f9245bc45d4
-langcode: en
+uuid: 2ddcd4f8-987c-4ff1-af79-ef4698f39037
+langcode: und
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: W2MMMGUmTG52TR_LreOBpoJOOZgCwKjukGoZZVYGbh8
 id: node.field_member_role
 field_name: field_member_role
 entity_type: node

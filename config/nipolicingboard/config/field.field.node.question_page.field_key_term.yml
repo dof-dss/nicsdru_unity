@@ -1,0 +1,23 @@
+uuid: ab6e81bf-63b5-4588-8b46-cd0722f48e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_term
+    - node.type.question_page
+id: node.question_page.field_key_term
+field_name: field_key_term
+entity_type: node
+bundle: question_page
+label: 'Key terms'
+description: 'Select the key term(s) associated with this question'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

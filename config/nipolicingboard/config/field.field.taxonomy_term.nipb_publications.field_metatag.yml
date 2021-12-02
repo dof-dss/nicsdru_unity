@@ -1,0 +1,21 @@
+uuid: de6301dc-eee6-49d9-9278-93cfd7737c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatag
+    - taxonomy.vocabulary.nipb_publications
+  module:
+    - metatag
+id: taxonomy_term.nipb_publications.field_metatag
+field_name: field_metatag
+entity_type: taxonomy_term
+bundle: nipb_publications
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

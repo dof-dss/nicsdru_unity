@@ -1,0 +1,29 @@
+uuid: ef2d01f2-83e7-4644-a854-e16e21a81e9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_image
+    - media.type.image
+    - node.type.publication_page
+id: node.publication_page.field_publication_image
+field_name: field_publication_image
+entity_type: node
+bundle: publication_page
+label: 'Publication image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
