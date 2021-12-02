@@ -1,0 +1,8 @@
+uuid: 2e494c84-ce75-40e1-8829-78196ae76407
+langcode: en
+status: true
+dependencies: {  }
+name: 'NIPB Board Members'
+vid: nipb_board_members
+description: 'List of board members'
+weight: 0

@@ -12,6 +12,7 @@ permissions:
   - 'access ckeditor link'
   - 'access content'
   - 'access content overview'
+  - 'access location_browser entity browser pages'
   - 'access media overview'
   - 'access toolbar'
   - 'add media from remote sources'

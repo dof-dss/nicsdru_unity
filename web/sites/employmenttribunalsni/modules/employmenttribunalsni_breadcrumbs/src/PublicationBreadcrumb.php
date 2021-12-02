@@ -9,7 +9,7 @@ namespace Drupal\employmenttribunalsni_breadcrumbs;
  *
  * In the format:
  * > Home
- * > Publications search
+ * > Publications
  * > current-page-title
  *
  * > <front>
@@ -107,7 +107,7 @@ class PublicationBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('Publications search'), Url::fromRoute('view.publications_search.publication_search_page'));
+      $links[] = Link::fromTextandUrl(t('Publications'), Url::fromRoute('view.publications_search.publication_search_page'));
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
     }

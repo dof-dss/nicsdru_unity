@@ -89,6 +89,7 @@ content:
       use_overridden_map_settings: false
       common_map: true
       data_provider_settings: {  }
+      show_delta_label: false
     third_party_settings: {  }
     type: geolocation_map
     region: content

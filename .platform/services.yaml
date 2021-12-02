@@ -22,6 +22,7 @@ db:
       - urologyservicesinquirydb
       - mahinquirydb
       - independentreviewofeducationdb
+      - nipolicingboarddb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -71,6 +72,10 @@ db:
         default_schema: independentreviewofeducationdb
         privileges:
           independentreviewofeducationdb: admin
+      nipolicingboard:
+        default_schema: nipolicingboarddb
+        privileges:
+          nipolicingboarddb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
@@ -82,6 +87,8 @@ solr:
         conf_dir: !archive "solr_config/"
       niauditoffice_index:
         conf_dir: !archive "solr_config/"
+      nipolicingboard_index:
+        conf_dir: !archive "solr_config/"
       #     fictcommission_index:
       #       conf_dir: !archive "solr_config/"
     endpoints:
@@ -89,6 +96,8 @@ solr:
         core: uregni_index
       niauditoffice:
         core: niauditoffice_index
+      nipolicingboard:
+        core: nipolicingboard_index
 #     fictcommission:
 #       core: fictcommission_index
 

@@ -147,6 +147,7 @@
         "drupal/webform": "^6.0",
         "drupal/whatlinkshere": "^2.0",
         "drush/drush": "^10.3",
+        "geocoder-php/google-maps-provider": "^4.6",
         "harvesthq/chosen": "^1.8",
         "kenwheeler/slick": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0",

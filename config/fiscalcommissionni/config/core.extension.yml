@@ -47,6 +47,9 @@ module:
   filter: 0
   fiscalcommissionni_breadcrumbs: 0
   flag: 0
+  geocoder: 0
+  geocoder_address: 0
+  geocoder_field: 0
   geolocation: 0
   geolocation_address: 0
   geolocation_google_maps: 0
@@ -99,7 +102,7 @@ module:
   search_api: 0
   search_api_db: 0
   search_api_location: 0
-  search_api_location_views: 0f
+  search_api_location_views: 0
   simplei: 0
   structure_sync: 0
   system: 0

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.map.field_location
-    - filter.format.plain_text
+    - filter.format.basic_html
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
@@ -21,7 +21,7 @@ content:
       title: ''
       info_text:
         value: ''
-        format: plain_text
+        format: basic_html
       centre:
         fit_bounds:
           enable: true
@@ -69,8 +69,8 @@ content:
         height: 400px
         width: 100%
         type: ROADMAP
-        zoom: 10
-        maxZoom: 20
+        zoom: 12
+        maxZoom: 18
         minZoom: 0
         gestureHandling: auto
         map_features:
