@@ -1,0 +1,23 @@
+uuid: 20a43567-3814-4358-bd3a-0f571f4e7adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_committee
+    - node.type.question_page
+id: node.question_page.field_committee
+field_name: field_committee
+entity_type: node
+bundle: question_page
+label: Committee
+description: 'Select the committee to which this question came from'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+  handler: 'default:taxonomy_term'
+field_type: entity_reference
