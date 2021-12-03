@@ -4,15 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.publication_page.body
-    - field.field.node.publication_page.field_metatag
+    - field.field.node.publication_page.field_meta_tags
     - field.field.node.publication_page.field_nipb_attachment
     - field.field.node.publication_page.field_pub_type
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_image
     - node.type.publication_page
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - datetime
     - media_library
+    - media_library_edit
+    - metatag
     - path
     - text
 id: node.publication_page.default
@@ -22,7 +26,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 12
     settings:
       rows: 9
       summary_rows: 3
@@ -32,33 +36,63 @@ content:
     region: content
   created:
     type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 15
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_nipb_attachment:
+    type: media_library_widget
+    weight: 14
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_pub_type:
+    type: options_select
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_date:
+    type: datetime_default
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_publication_image:
     type: media_library_widget
-    weight: 122
+    weight: 13
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 8
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -66,26 +100,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -93,7 +127,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -102,12 +136,8 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden:
-  field_metatag: true
-  field_nipb_attachment: true
-  field_pub_type: true
-  field_publication_date: true
+hidden: {  }
