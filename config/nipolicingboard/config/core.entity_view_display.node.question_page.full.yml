@@ -1,8 +1,9 @@
-uuid: 3d6b32b3-dcbe-4c44-baa1-549559b982b1
+uuid: 3747603b-121b-4dfc-9b36-32cef68f2dd6
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.question_page.body
     - field.field.node.question_page.field_committee
     - field.field.node.question_page.field_key_term
@@ -14,13 +15,18 @@ dependencies:
     - node.type.question_page
   module:
     - datetime
+    - layout_builder
     - options
     - text
     - user
-id: node.question_page.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.question_page.full
 targetEntityType: node
 bundle: question_page
-mode: default
+mode: full
 content:
   body:
     label: hidden
@@ -30,32 +36,32 @@ content:
     third_party_settings: {  }
     region: content
   field_committee:
-    label: above
-    weight: 1
+    label: inline
+    weight: 3
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   field_key_term:
-    label: above
-    weight: 4
+    label: inline
+    weight: 0
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
-  field_political_party:
+  field_nipb_board_member:
     type: entity_reference_label
     weight: 2
     region: content
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
   field_published_date:
-    label: above
-    weight: 0
+    label: inline
+    weight: 1
     type: datetime_default
     settings:
       timezone_override: ''
@@ -63,8 +69,8 @@ content:
     third_party_settings: {  }
     region: content
   field_question_type:
-    label: above
-    weight: 3
+    label: inline
+    weight: 4
     type: list_default
     settings: {  }
     third_party_settings: {  }
@@ -72,6 +78,6 @@ content:
 hidden:
   content_moderation_control: true
   field_meta_tags: true
-  field_nipb_board_member: true
+  field_political_party: true
   langcode: true
   links: true
