@@ -100,11 +100,6 @@ process:
       plugin: site_files_filter
       from_ref: sites/nipb-drupal.nigov.net/files
       to_ref: files/nipolicingboard
-    -
-      plugin: str_replace
-      regex: true
-      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
-      replace: ''
   body/0/format:
     -
       plugin: static_map
@@ -144,14 +139,6 @@ process:
         target_id: fid
         display: display
         description: description
-    -
-      plugin: callback
-      callable:
-        - '\Drupal\unity_file_migrations\PublicationLinkProcessor'
-        - publicationLinks
-      source:
-        - nid
-        - body
   field_pub_type:
     -
       plugin: sub_process
