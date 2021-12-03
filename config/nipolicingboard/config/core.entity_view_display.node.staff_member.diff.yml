@@ -1,8 +1,9 @@
-uuid: 47efb71d-364a-4750-91d5-c309fa4840c5
+uuid: eb110e48-010e-4ae3-bc13-88438ae66306
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.diff
     - field.field.node.staff_member.body
     - field.field.node.staff_member.field_current_member
     - field.field.node.staff_member.field_member_image
@@ -10,12 +11,36 @@ dependencies:
     - field.field.node.staff_member.field_meta_tags
     - node.type.staff_member
   module:
+    - field_group
+    - layout_builder
     - text
     - user
-id: node.staff_member.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children: {  }
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.staff_member.diff
 targetEntityType: node
 bundle: staff_member
-mode: default
+mode: diff
 content:
   body:
     label: hidden
