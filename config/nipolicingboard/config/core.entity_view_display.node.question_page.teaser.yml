@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.question_page.body
     - field.field.node.question_page.field_committee
     - field.field.node.question_page.field_key_term
-    - field.field.node.question_page.field_metatag
+    - field.field.node.question_page.field_meta_tags
     - field.field.node.question_page.field_nipb_board_member
     - field.field.node.question_page.field_political_party
     - field.field.node.question_page.field_published_date
@@ -29,17 +29,14 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  content_moderation_control: true
   field_committee: true
   field_key_term: true
-  field_metatag: true
+  field_meta_tags: true
   field_nipb_board_member: true
   field_political_party: true
   field_published_date: true
   field_question_type: true
   langcode: true
+  links: true
