@@ -1,0 +1,18 @@
+uuid: 884ddbc8-f616-4615-aee2-6d9d6b0d1749
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nipolicingboard_theme
+id: pagetitle
+theme: nipolicingboard_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
