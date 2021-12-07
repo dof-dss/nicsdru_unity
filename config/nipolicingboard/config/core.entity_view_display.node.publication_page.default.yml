@@ -36,7 +36,7 @@ content:
     third_party_settings: {  }
     region: content
   field_publication_date:
-    label: inline
+    label: hidden
     weight: 0
     type: datetime_default
     settings:
