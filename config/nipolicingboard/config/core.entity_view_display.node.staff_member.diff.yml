@@ -13,6 +13,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - metatag
     - text
     - user
 third_party_settings:
@@ -21,11 +22,14 @@ third_party_settings:
     enabled: false
   field_group:
     group_additional_content_details:
-      children: {  }
+      children:
+        - body
+        - field_current_member
+        - field_meta_tags
       parent_name: ''
-      weight: 20
+      weight: 2
       format_type: html_element
-      region: hidden
+      region: content
       format_settings:
         id: ''
         classes: field-collection
@@ -43,12 +47,22 @@ bundle: staff_member
 mode: diff
 content:
   body:
-    label: hidden
-    weight: 2
+    label: inline
+    weight: 3
     type: text_default
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_current_member:
+    type: boolean
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_member_image:
     type: entity_reference_entity_view
     weight: 0
@@ -66,9 +80,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 5
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_current_member: true
-  field_meta_tags: true
   langcode: true
   links: true
