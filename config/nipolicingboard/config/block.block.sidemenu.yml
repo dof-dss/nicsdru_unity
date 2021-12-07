@@ -25,5 +25,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/news-centre/*'
+    pages: '/news-centre/*\r\n/board/*'
     negate: true
