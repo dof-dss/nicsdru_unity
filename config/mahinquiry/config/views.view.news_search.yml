@@ -257,6 +257,10 @@ display:
         context: '0'
         menu_name: main
       exposed_block: true
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
