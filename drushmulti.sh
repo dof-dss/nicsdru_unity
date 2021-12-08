@@ -12,7 +12,7 @@ if [ $# -eq 0 ]
 fi
 
 # Detect whether we are running locally or on Platform.sh
-if [ -z "${PLATFORM_ENVIRONMENT}"]; then
+if [ -z "${PLATFORM_ENVIRONMENT}" ]; then
   PREFIX="lando"
 else
   PREFIX=""
