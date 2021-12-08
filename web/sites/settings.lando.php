@@ -44,9 +44,8 @@ if (!empty(getenv('STAGE_FILE_PROXY_ORIGIN'))) {
 }
 
 // Assume all Lando sites should use 'local' config for devlopment.
-$config['config_split.config_split.local']['status'] = FALSE;
+$config['config_split.config_split.local']['status'] = TRUE;
 $config['config_split.config_split.hosted']['status'] = FALSE;
-$config['config_split.config_split.production']['status'] = TRUE;
 
 // Environment indicator config.
 $settings['simple_environment_indicator'] = sprintf('%s %s', getenv('SIMPLEI_ENV_COLOUR'), getenv('SIMPLEI_ENV_NAME'));

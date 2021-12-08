@@ -27,7 +27,7 @@ $settings["file_temp_path"] = getenv('FILE_TEMP_PATH') ?? '/tmp';
 // is set near the end of this file.
 $config['config_split.config_split.local']['status'] = FALSE;
 $config['config_split.config_split.hosted']['status'] = FALSE;
-$config['config_split.config_split.production']['status'] = TRUE;
+$config['config_split.config_split.production']['status'] = FALSE;
 
 // Config readonly settings; default to active if not specified.
 $settings['config_readonly'] = !empty(getenv('CONFIG_READONLY')) ? getenv('CONFIG_READONLY') : 1;
