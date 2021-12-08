@@ -6,8 +6,18 @@ if [ $# -eq 0 ]
     exit 0
 fi
 
-for site in `ls -l web/sites | grep ^d | awk '!/default/{print $9}'`
-do
-  echo "** $site **"
-  lando drush -l $site $1
-done
+if [ -z "${PLATFORM_ENVIRONMENT}"]; then
+  for site in `ls -l web/sites | grep ^d | awk '!/default/{print $9}'`
+  do
+    echo "** $site **"
+    lando drush -l $site $1
+  done
+else
+  for site in `ls -l web/sites | grep ^d | awk '!/default/{print $9}'`
+  do
+    echo "** $site **"
+    drush -l $site $1
+  done
+fi
+
+
