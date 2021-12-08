@@ -1,9 +1,9 @@
-uuid: 91f6af3b-8fca-471d-aa1c-fa05449b8e6e
+uuid: 29100548-fc53-4c47-8412-7b1bb03c5501
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_content
+    - search_api.index.news
     - views.view.news_search
   module:
     - facets_pretty_paths
@@ -14,7 +14,7 @@ third_party_settings:
 id: published_date
 name: 'Published date'
 url_alias: date
-weight: 0
+weight: -1
 min_count: 1
 show_only_one_result: false
 field_identifier: field_published_date
