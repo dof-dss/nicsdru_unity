@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_published_date
+    - field.storage.node.field_teaser
     - search_api.server.default
   module:
     - node
@@ -30,6 +31,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_published_date
+  field_teaser:
+    label: Teaser
+    datasource_id: 'entity:node'
+    property_path: field_teaser
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_teaser
   title:
     label: Title
     datasource_id: 'entity:node'
