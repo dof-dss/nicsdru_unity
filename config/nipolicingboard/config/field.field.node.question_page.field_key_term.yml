@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_key_term
     - node.type.question_page
+    - taxonomy.vocabulary.site_structure
 id: node.question_page.field_key_term
 field_name: field_key_term
 entity_type: node
@@ -16,8 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      site_structure: site_structure
     sort:
       field: _none
-  handler: 'default:taxonomy_term'
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

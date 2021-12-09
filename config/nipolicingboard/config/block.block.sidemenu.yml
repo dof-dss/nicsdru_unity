@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - ctools
     - system
   theme:
     - nipolicingboard_theme
@@ -23,7 +24,13 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  request_path:
-    id: request_path
-    pages: '/news-centre/*\r\n/board/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+      publication_page: publication_page
+      question_page: question_page
+      staff_member: staff_member
     negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
