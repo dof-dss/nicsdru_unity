@@ -1,22 +1,19 @@
-uuid: 071360bc-8137-4018-bd33-ab7ac34c36f8
-langcode: und
+uuid: 51f7712a-9f26-4315-b8fa-569d3e3c32a3
+langcode: en
 status: true
 dependencies:
   module:
-    - file
+    - media
     - node
 id: node.field_nipb_attachment
 field_name: field_nipb_attachment
 entity_type: node
-type: file
+type: entity_reference
 settings:
-  display_default: false
-  display_field: false
-  uri_scheme: public
-  target_type: file
-module: file
+  target_type: media
+module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

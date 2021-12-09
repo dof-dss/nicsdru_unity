@@ -92,7 +92,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  profile_switcher: 0
   rdf: 0
   redirect: 0
   responsive_image: 0
@@ -135,8 +134,8 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  eu_cookie_compliance: 1001
   nicsdru_unity_profile: 1000
+  eu_cookie_compliance: 1001
 theme:
   stark: 0
   stable: 0
