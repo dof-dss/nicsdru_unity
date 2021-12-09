@@ -1,0 +1,25 @@
+uuid: 8f108785-e3d4-4ab6-bb44-ef147fcb2dc3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:56485b3e-4ac0-42ca-9a23-6b2555dc0dc4'
+  module:
+    - block_content
+  theme:
+    - nipolicingboard_theme
+id: sociallinks
+theme: nipolicingboard_theme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'block_content:56485b3e-4ac0-42ca-9a23-6b2555dc0dc4'
+settings:
+  id: 'block_content:56485b3e-4ac0-42ca-9a23-6b2555dc0dc4'
+  label: 'Social links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

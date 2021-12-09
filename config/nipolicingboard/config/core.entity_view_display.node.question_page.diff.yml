@@ -1,0 +1,118 @@
+uuid: 291fca9a-ad5e-44a4-b433-3a7cb2641ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.question_page.body
+    - field.field.node.question_page.field_committee
+    - field.field.node.question_page.field_key_term
+    - field.field.node.question_page.field_meta_tags
+    - field.field.node.question_page.field_nipb_board_member
+    - field.field.node.question_page.field_political_party
+    - field.field.node.question_page.field_published_date
+    - field.field.node.question_page.field_question_type
+    - node.type.question_page
+  module:
+    - datetime
+    - field_group
+    - layout_builder
+    - metatag
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_political_party
+        - field_meta_tags
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: field-collection
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional content details'
+id: node.question_page.diff
+targetEntityType: node
+bundle: question_page
+mode: diff
+content:
+  body:
+    label: hidden
+    weight: 5
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_committee:
+    label: inline
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_key_term:
+    label: inline
+    weight: 0
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 10
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_nipb_board_member:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_political_party:
+    type: entity_reference_label
+    weight: 9
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_published_date:
+    label: inline
+    weight: 1
+    type: datetime_default
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+    region: content
+  field_question_type:
+    label: inline
+    weight: 4
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
