@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_committee
     - node.type.question_page
+    - taxonomy.vocabulary.nipb_committees
 id: node.question_page.field_committee
 field_name: field_committee
 entity_type: node
@@ -16,8 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      nipb_committees: nipb_committees
     sort:
       field: _none
-  handler: 'default:taxonomy_term'
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference
