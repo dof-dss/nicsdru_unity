@@ -28,6 +28,7 @@ regions:
   top_second: 'Second top'
   top_third: 'Third top'
   breadcrumb: 'Breadcrumb'
+  search_facets: 'Search facets'
   sidebar_first: 'First sidebar'
   sidebar_second: 'Sidebar second'
   content: 'Content'
