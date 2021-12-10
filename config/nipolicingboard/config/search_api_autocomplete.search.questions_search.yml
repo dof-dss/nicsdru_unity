@@ -1,0 +1,25 @@
+uuid: 275e7686-c9a5-409a-9536-59c96a1c8b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.questions_to_the_chief_constable
+    - views.view.questions_search
+  module:
+    - views
+    - search_api_autocomplete
+id: questions_search
+label: 'Questions search'
+index_id: questions_to_the_chief_constable
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:questions_search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }
