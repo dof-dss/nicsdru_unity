@@ -1,28 +1,28 @@
-uuid: 320242bc-9ff1-4235-ba2d-005652d2b96e
+uuid: a3886f0a-fc00-4a69-8612-df7f2061f709
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.publication_date
+    - facets.facet.questions_date
   module:
     - facets
     - system
   theme:
     - nipolicingboard_theme
-id: publicationdate
+id: dateasked
 theme: nipolicingboard_theme
 region: search_facets
-weight: -3
+weight: -4
 provider: null
-plugin: 'facet_block:publication_date'
+plugin: 'facet_block:questions_date'
 settings:
-  id: 'facet_block:publication_date'
+  id: 'facet_block:questions_date'
   label: Date
   provider: facets
   label_display: visible
-  block_id: publicationdate
+  block_id: dateasked
 visibility:
   request_path:
     id: request_path
-    pages: "/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*"
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
     negate: false
