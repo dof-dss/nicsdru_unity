@@ -209,7 +209,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Questions search'
+      title: 'Questions to the Chief Constable'
       header: {  }
       footer: {  }
       empty:
@@ -250,7 +250,8 @@ display:
       path: questions
       exposed_block: true
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
