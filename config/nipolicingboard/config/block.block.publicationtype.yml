@@ -12,7 +12,7 @@ dependencies:
 id: publicationtype
 theme: nipolicingboard_theme
 region: search_facets
-weight: -2
+weight: -1
 provider: null
 plugin: 'facet_block:publication_type'
 settings:
