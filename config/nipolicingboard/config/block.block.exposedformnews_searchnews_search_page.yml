@@ -1,0 +1,28 @@
+uuid: 76f879d6-e2b5-40e3-9c7e-ede0dafbee17
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_search
+  module:
+    - system
+    - views
+  theme:
+    - nipolicingboard_theme
+id: exposedformnews_searchnews_search_page
+theme: nipolicingboard_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'views_exposed_filter_block:news_search-news_search_page'
+settings:
+  id: 'views_exposed_filter_block:news_search-news_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news-search\r\n/news-search/date/*"
+    negate: false
