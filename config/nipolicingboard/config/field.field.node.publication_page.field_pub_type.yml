@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_pub_type
     - node.type.publication_page
+    - taxonomy.vocabulary.nipb_publications
 id: node.publication_page.field_pub_type
 field_name: field_pub_type
 entity_type: node
@@ -16,8 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      nipb_publications: nipb_publications
     sort:
       field: _none
-  handler: 'default:taxonomy_term'
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

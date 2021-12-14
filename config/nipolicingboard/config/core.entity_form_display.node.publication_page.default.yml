@@ -49,7 +49,7 @@ content:
     region: content
   field_nipb_attachment:
     type: media_library_widget
-    weight: 14
+    weight: 13
     settings:
       media_types: {  }
     third_party_settings:
@@ -70,7 +70,7 @@ content:
     third_party_settings: {  }
   field_publication_image:
     type: media_library_widget
-    weight: 13
+    weight: 14
     settings:
       media_types: {  }
     third_party_settings:
