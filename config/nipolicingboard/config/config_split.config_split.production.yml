@@ -11,8 +11,7 @@ module:
 theme: {  }
 blacklist:
   - fastly.settings
-graylist:
-  - nipolicingboard_theme.settings
+graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
