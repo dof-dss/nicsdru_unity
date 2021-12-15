@@ -23,11 +23,10 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - body
         - field_current_member
         - field_meta_tags
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -47,8 +46,8 @@ bundle: staff_member
 mode: diff
 content:
   body:
-    label: inline
-    weight: 3
+    label: hidden
+    weight: 2
     type: text_default
     settings: {  }
     third_party_settings: {  }
@@ -91,3 +90,4 @@ hidden:
   content_moderation_control: true
   langcode: true
   links: true
+  search_api_excerpt: true
