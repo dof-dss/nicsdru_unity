@@ -1,0 +1,15 @@
+name: 'Northern Ireland Policing Board'
+mail: lluis@websitedevelopment.ltd.uk
+slogan: ''
+page:
+  403: /
+  404: /
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: ad5bb45b-cc83-4a11-b048-5cca60024c3b
+frontpage_title: 'Welcome to Drupal site'

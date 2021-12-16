@@ -1,0 +1,8 @@
+ignored_config_entities:
+  - 'nipolicingboard_theme.settings:twitter_profile_url'
+  - 'nipolicingboard_theme.settings:facebook_profile_url'
+  - 'nipolicingboard_theme.settings:linkedin_profile_url'
+  - 'nipolicingboard_theme.settings:pinterest_profile_url'
+  - 'nipolicingboard_theme.settings:youtube_profile_url'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

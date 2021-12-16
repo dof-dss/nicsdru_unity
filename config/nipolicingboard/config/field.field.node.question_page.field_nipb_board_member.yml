@@ -1,0 +1,29 @@
+uuid: 770f2ad7-b3d4-44c0-b6a3-4714d24746b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nipb_board_member
+    - node.type.question_page
+id: node.question_page.field_nipb_board_member
+field_name: field_nipb_board_member
+entity_type: node
+bundle: question_page
+label: 'Board Member'
+description: 'Select a member of the board to associate the question with.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: name
+      direction: ASC
+    target_bundles:
+      nipb_board_members: nipb_board_members
+field_type: entity_reference

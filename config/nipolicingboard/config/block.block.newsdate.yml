@@ -1,0 +1,28 @@
+uuid: 5574ec2b-c3e7-4259-a22c-6f27649ebf25
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.news_date
+  module:
+    - facets
+    - system
+  theme:
+    - nipolicingboard_theme
+id: newsdate
+theme: nipolicingboard_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:news_date'
+settings:
+  id: 'facet_block:news_date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: newsdate
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news-search\r\n/news-search/date/*"
+    negate: false
