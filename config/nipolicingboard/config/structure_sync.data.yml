@@ -1,0 +1,45 @@
+blocks:
+  -
+    info: 'Twitter block'
+    langcode: en
+    uuid: 0f10e79c-3bf5-412e-8a2e-b8652b085d14
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
+  -
+    info: 'Home page News block'
+    langcode: en
+    uuid: 6fb7f9c4-51ce-4530-beb0-ae60977e00ae
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a href=\"/node/10\">Go to the Newsroom</a></p>\r\n\r\n<p>Register here to be updated on the latest news and events through the Board's ezine, Policing Matters.</p>\r\n\r\n<p>By signing up, you agree to our <a href=\"/node/5\">terms of use</a>, <a href=\"/node/154\">privacy policy</a>, and <a href=\"/node/153\">cookie policy</a>.</p>\r\n\r\n<p><a class=\"btn\" href=\"mailto:information@nipolicingboard.org.uk\">Sign up</a></p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Our work covers block'
+    langcode: en
+    uuid: 6bf1e1ba-5ce6-4255-be31-f212cb9210a5
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<ul>\r\n\t<li><a href=\"/node/20\">Oversight of the PSNI</a></li>\r\n\t<li><a href=\"/node/40\">Community Engagement</a></li>\r\n\t<li><a href=\"/node/41\">Policing and Community Safety Partnerships</a></li>\r\n\t<li><a href=\"/node/43\">Police Pensions and Injury Benefits</a></li>\r\n</ul>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Social links'
+    langcode: en
+    uuid: 56485b3e-4ac0-42ca-9a23-6b2555dc0dc4
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
