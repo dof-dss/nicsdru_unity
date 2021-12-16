@@ -1,5 +1,18 @@
 blocks:
   -
+    info: 'Footer Contact information'
+    langcode: en
+    uuid: 11859648-5138-4c52-9f38-124abf0e4748
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<address>Northern Ireland Policing Board<br />\r\nWaterside Tower<br />\r\n31 Clarendon Road<br />\r\nClarendon Dock<br />\r\nBELFAST<br />\r\nBT1 3BG</address>\r\n\r\n<address>028 9040 8500<br />\r\n<a href=\"mailto:information@nipolicingboard.org.uk\">information@nipolicingboard.org.uk</a></address>\r\n"
+          summary: ''
+          format: basic_html
+  -
     info: 'Twitter block'
     langcode: en
     uuid: 0f10e79c-3bf5-412e-8a2e-b8652b085d14
