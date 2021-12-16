@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_political_party
     - node.type.question_page
+    - taxonomy.vocabulary.nipb_political_parties
 id: node.question_page.field_political_party
 field_name: field_political_party
 entity_type: node
@@ -16,8 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      nipb_political_parties: nipb_political_parties
     sort:
       field: _none
-  handler: 'default:taxonomy_term'
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

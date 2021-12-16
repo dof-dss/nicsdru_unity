@@ -1,0 +1,37 @@
+uuid: 24168d83-46c9-4d23-947e-af79b03fb0db
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.questions_to_the_chief_constable
+    - views.view.questions_search
+  module:
+    - search_api
+id: questions_summary
+name: 'Questions summary'
+facets:
+  committee:
+    checked: true
+    label: Committee
+    separator: ', '
+    weight: 0
+    show_count: false
+  question_type:
+    checked: true
+    label: 'Question type'
+    separator: ', '
+    weight: 0
+    show_count: false
+  questions_date:
+    checked: true
+    label: 'Date asked'
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__questions_search__questions_search_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }

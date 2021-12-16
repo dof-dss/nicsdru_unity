@@ -1,14 +1,14 @@
-uuid: 96937f7a-1353-4fa4-ae83-58acad8713ca
+uuid: 860640e9-110f-4a2a-996a-51a1d8207559
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_content
+    - search_api.index.news
     - views.view.news_search
   module:
     - search_api
 id: news_summary
-name: 'News summary'
+name: 'Facets Summary'
 facets:
   published_date:
     checked: true

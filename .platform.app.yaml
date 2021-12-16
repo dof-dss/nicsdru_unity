@@ -80,7 +80,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -152,35 +152,35 @@ web:
 # The configuration of scheduled execution.
 crons:
   uregni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/uregni ; drush core-cron'
   odscni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/odscni ; drush core-cron'
   fiscalcommissionni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
   niauditoffice:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/niauditoffice ; drush core-cron'
   nifiscalcouncil:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
   octf:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/octf ; drush core-cron'
   urologyservicesinquiry:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'
   mahinquiry:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/mahinquiry ; drush core-cron'
   employmenttribunalsni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
   independentreviewofeducation:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
   nipolicingboard:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
