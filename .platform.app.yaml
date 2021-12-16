@@ -42,6 +42,7 @@ relationships:
   mahinquiry: 'db:mahinquiry'
   independentreviewofeducation: 'db:independentreviewofeducation'
   nipolicingboard: 'db:nipolicingboard'
+  nipolicingboard_solr: 'solr:nipolicingboard'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
