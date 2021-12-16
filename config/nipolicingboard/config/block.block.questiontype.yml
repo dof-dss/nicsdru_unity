@@ -1,0 +1,28 @@
+uuid: 3b8ef625-845c-4736-a3cb-b5d4250930c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.question_type
+  module:
+    - facets
+    - system
+  theme:
+    - nipolicingboard_theme
+id: questiontype
+theme: nipolicingboard_theme
+region: search_facets
+weight: -5
+provider: null
+plugin: 'facet_block:question_type'
+settings:
+  id: 'facet_block:question_type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: questiontype
+visibility:
+  request_path:
+    id: request_path
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
+    negate: false

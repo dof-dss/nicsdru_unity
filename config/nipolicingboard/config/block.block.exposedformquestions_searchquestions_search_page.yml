@@ -1,0 +1,28 @@
+uuid: ae4fa6fd-b1e0-404e-a690-fdb47d6c6157
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.questions_search
+  module:
+    - system
+    - views
+  theme:
+    - nipolicingboard_theme
+id: exposedformquestions_searchquestions_search_page
+theme: nipolicingboard_theme
+region: search_facets
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:questions_search-questions_search_page'
+settings:
+  id: 'views_exposed_filter_block:questions_search-questions_search_page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
+    negate: false
