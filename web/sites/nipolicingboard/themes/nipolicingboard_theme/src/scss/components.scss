@@ -71,12 +71,24 @@
       p {
         @include adjust-font-size-to(21px);
         font-weight: bold;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &:last-child {
+      @media screen and (max-width: $tab) {
+        margin-right: 1rem;
       }
     }
 
     h2 {
-      font-size: 4rem;
+      @include adjust-font-size-to(40px, 8);
       color: $headings;
+    }
+
+    a.btn {
+      background: $link resolve('nipb-sign-up-arrow.png') no-repeat right 2rem top 1.6rem;
+      padding: .6rem 4rem .6rem 1.6rem;
     }
 
     i {
@@ -209,6 +221,66 @@
         width: 100%;
         color: $white;
       }
+    }
+  }
+}
+
+#footer {
+  padding: 0;
+
+  .column .social-icons {
+    margin-top: 1.3rem;
+  }
+
+  .footer_credit #footer-menu .menu li {
+    a,
+    span.active {
+      margin: 0 .5em 0 0;
+      padding: 0 .5em 0 0;
+      @include adjust-font-size-to(14px);
+    }
+  }
+}
+
+#footer_wrapper,
+.footer_credit {
+  padding: 1% 2% 2%;
+}
+
+#footer-area {
+  .column {
+    @include breakpoint($tab) {
+      width: 39%;
+
+      &:last-child {
+        width: 20%;
+      }
+    }
+
+    @media screen and (max-width: $tab) {
+      &:last-child {
+        float: none;
+      }
+    }
+
+    h2 {
+      color: $headings;
+      margin-bottom: 4rem;
+    }
+
+    li {
+      border: none;
+    }
+  }
+}
+
+.footer_credit {
+  border-top: 1px solid $black;
+
+  ul {
+    list-style: none;
+    @include breakpoint($tab) {
+      display: flex;
     }
   }
 }
