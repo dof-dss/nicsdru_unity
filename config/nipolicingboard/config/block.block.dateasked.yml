@@ -1,0 +1,28 @@
+uuid: a3886f0a-fc00-4a69-8612-df7f2061f709
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.questions_date
+  module:
+    - facets
+    - system
+  theme:
+    - nipolicingboard_theme
+id: dateasked
+theme: nipolicingboard_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'facet_block:questions_date'
+settings:
+  id: 'facet_block:questions_date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: dateasked
+visibility:
+  request_path:
+    id: request_path
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
+    negate: false

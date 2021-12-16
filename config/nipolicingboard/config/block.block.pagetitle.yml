@@ -2,6 +2,8 @@ uuid: 884ddbc8-f616-4615-aee2-6d9d6b0d1749
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - nipolicingboard_theme
 id: pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search\r\n/publications-search\r\n/publications-search/type/*\r\n/publications-search/date/*\r\n/questions\r\n/questions/date/*\r\n/questions/type/*\r\n/questions/committee/*\r\n/news-search\r\n/news-search/date/*\r\n"
+    negate: true
