@@ -1,28 +1,28 @@
-uuid: 3b8ef625-845c-4736-a3cb-b5d4250930c4
+uuid: 5574ec2b-c3e7-4259-a22c-6f27649ebf25
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.question_type
+    - facets.facet.news_date
   module:
     - facets
     - system
   theme:
     - nipolicingboard_theme
-id: questiontype
+id: newsdate
 theme: nipolicingboard_theme
 region: search_facets
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:question_type'
+plugin: 'facet_block:news_date'
 settings:
-  id: 'facet_block:question_type'
-  label: Type
+  id: 'facet_block:news_date'
+  label: Date
   provider: facets
   label_display: visible
-  block_id: questiontype
+  block_id: newsdate
 visibility:
   request_path:
     id: request_path
-    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
+    pages: "/news-search\r\n/news-search/date/*"
     negate: false

@@ -42,6 +42,7 @@ relationships:
   mahinquiry: 'db:mahinquiry'
   independentreviewofeducation: 'db:independentreviewofeducation'
   nipolicingboard: 'db:nipolicingboard'
+  nipolicingboard_solr: 'solr:nipolicingboard'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -80,7 +81,7 @@ hooks:
     set -e
 
     # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site

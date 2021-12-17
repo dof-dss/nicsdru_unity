@@ -1,20 +1,19 @@
-uuid: 3250ec10-eac1-46b1-aa2d-025acba3c116
+uuid: 2e4db28a-ce15-4be5-a486-3b24294ca7fb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - search_api.index.publications
-    - system.menu.main
+    - search_api.index.news
   module:
     - search_api
     - text
-id: publications_search
-label: 'Publications search'
+id: news_search
+label: 'News search'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_publications
+base_table: search_api_index_news
 base_field: search_api_id
 display:
   default:
@@ -68,15 +67,19 @@ display:
           quantity: 5
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
       row:
         type: search_api
         options:
           view_modes:
             'entity:node':
-              publication_page: search_index
+              news: search_index
       fields:
         body:
-          table: search_api_index_publications
+          table: search_api_index_news
           field: body
           id: body
           entity_type: null
@@ -149,7 +152,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_publications
+          table: search_api_index_news
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -160,13 +163,13 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Search publications'
+            label: 'Search news'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: query_publications
+            identifier: query_news
             required: false
             remember: false
             multiple: false
@@ -196,10 +199,10 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts:
-        field_publication_date:
-          id: field_publication_date
-          table: search_api_index_publications
-          field: field_publication_date
+        field_published_date:
+          id: field_published_date
+          table: search_api_index_news
+          field: field_published_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -208,7 +211,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Publications
+      title: News
       header: {  }
       footer: {  }
       empty:
@@ -222,7 +225,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'There were no results found.'
+            value: 'There are no results found.'
             format: basic_html
           plugin_id: text
       relationships: {  }
@@ -238,25 +241,16 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.body'
-        - 'config:search_api.index.publications'
-  publication_search_page:
+        - 'config:search_api.index.news'
+  news_search_page:
     display_plugin: page
-    id: publication_search_page
+    id: news_search_page
     display_title: Page
     position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: publications-search
-      menu:
-        type: normal
-        title: Publications
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
+      path: news-search
       exposed_block: true
       cache:
         type: search_api_tag
@@ -273,4 +267,4 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.body'
-        - 'config:search_api.index.publications'
+        - 'config:search_api.index.news'

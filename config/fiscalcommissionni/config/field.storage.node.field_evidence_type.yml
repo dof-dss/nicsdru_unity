@@ -17,6 +17,9 @@ settings:
     -
       value: evidence
       label: Evidence
+    -
+      value: reports
+      label: Reports
   allowed_values_function: ''
 module: options
 locked: false
