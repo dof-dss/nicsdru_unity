@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: uregni
-name: uregni
-label: Uregni
+name: nipb
+label: NIPB
 weight: 0
 group: ''
 skin: default
