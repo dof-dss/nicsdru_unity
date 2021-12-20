@@ -1,9 +1,9 @@
-uuid: e2f7094a-64a0-4bc7-bb83-6bcde35de663
+uuid: e6e774b7-280e-4043-b7d7-2c75ceffb1f1
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:be333268-ef6d-4c1d-acc6-3079738c38a5'
+    - 'block_content:basic_block:9e18417f-eefd-480d-a8e4-da79b019b29e'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: mahinquiry_theme
 region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:be333268-ef6d-4c1d-acc6-3079738c38a5'
+plugin: 'block_content:9e18417f-eefd-480d-a8e4-da79b019b29e'
 settings:
-  id: 'block_content:be333268-ef6d-4c1d-acc6-3079738c38a5'
+  id: 'block_content:9e18417f-eefd-480d-a8e4-da79b019b29e'
   label: 'Contact details'
   provider: block_content
   label_display: '0'

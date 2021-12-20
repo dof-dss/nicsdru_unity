@@ -1,0 +1,10 @@
+uuid: f20b6761-a91c-499f-abf8-1bb8c4bcbf85
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.member_small_image
+label: 'Member small image'
+targetEntityType: media
+cache: true

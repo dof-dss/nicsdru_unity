@@ -1,9 +1,9 @@
-uuid: c1715ce0-bb24-4859-8052-82260e87743d
+uuid: 6fc71682-0645-4972-80df-1e4401921287
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_content
+    - search_api.index.news
     - views.view.news_search
   module:
     - facets_pretty_paths
@@ -13,7 +13,7 @@ third_party_settings:
     coder: default_coder
 id: published_date
 name: 'Published date'
-url_alias: date
+url_alias: published_date
 weight: 0
 min_count: 1
 show_only_one_result: false
@@ -22,7 +22,7 @@ facet_source_id: 'search_api:views_page__news_search__news_search_page'
 widget:
   type: links
   config:
-    show_numbers: true
+    show_numbers: false
     soft_limit: 20
     soft_limit_settings:
       show_less_label: 'Show fewer'
@@ -32,6 +32,7 @@ widget:
     hide_reset_when_no_selection: false
 query_operator: and
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0

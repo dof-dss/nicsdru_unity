@@ -1,9 +1,9 @@
-uuid: 9b968bfd-1b1c-47ed-91f0-4848f5776ac2
+uuid: 414dd485-55e3-4ba1-bb80-8f4d584dab87
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_content
+    - search_api.index.news
     - views.view.news_search
   module:
     - search_api

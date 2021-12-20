@@ -1,0 +1,28 @@
+uuid: e92b7c7c-eb11-4755-859e-b0d4c03c0655
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_type
+  module:
+    - facets
+    - system
+  theme:
+    - nipolicingboard_theme
+id: publicationtype
+theme: nipolicingboard_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:publication_type'
+settings:
+  id: 'facet_block:publication_type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: publicationtype
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*"
+    negate: false

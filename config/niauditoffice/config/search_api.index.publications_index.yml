@@ -9,7 +9,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_publication_date
-    - field.storage.node.field_publication_type
+    - field.storage.node.field_publication_topic
     - search_api.server.solr_default
 third_party_settings:
   search_api_solr:
@@ -73,14 +73,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_publication_date
-  field_publication_type:
+  field_publication_topic:
     label: Type
     datasource_id: 'entity:node'
-    property_path: field_publication_type
-    type: string
+    property_path: field_publication_topic
+    type: integer
     dependencies:
       config:
-        - field.storage.node.field_publication_type
+        - field.storage.node.field_publication_topic
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -143,7 +143,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_publication_type
       - title
     title: false
     alt: true

@@ -3,24 +3,14 @@ status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_link_type
 field_name: field_link_type
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: quicklink
-      label: 'Quick link'
-    -
-      value: agencylink
-      label: 'Agency link'
-    -
-      value: corporatelink
-      label: 'Corporate link'
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

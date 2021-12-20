@@ -1,0 +1,40 @@
+blocks:
+  -
+    info: 'About the inquiry'
+    langcode: en
+    uuid: ddef5382-935d-408f-9ab1-e3c8af07442b
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>The Muckamore Abbey Hospital Public Inquiry is a statutory inquiry established under the Inquiries Act 2005, to examine the issue of abuse of patients at Muckamore Abbey Hospital (MAH) and to determine why the abuse happened and the range of circumstances that allowed it to happen. The purpose of the Inquiry is to ensure that such abuse does not occur again at MAH or any other institution in Northern Ireland which provides similar services.</p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"d330247b-d334-4ca9-aef1-3d4fe2476b62\" href=\"/node/13\">Read our Terms of Reference</a></p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Helping the Inquiry'
+    langcode: en
+    uuid: 164479e4-3ee2-40c7-a54c-11377d130e81
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>The Inquiry would like you to provide your contact details and answer some basic questions. The Chair would be very grateful if you could submit your contact form by Friday 31st December 2021.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://consultations.nidirect.gov.uk/doh-1/muckamore-abbey-hospital-inquiry-contact-form/\">Online Contact Form</a></p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"ddae8124-bb55-4e20-832b-0891e10cdd52\" href=\"/node/17\">Postal Contact Form</a></p>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Contact details'
+    langcode: en
+    uuid: 9e18417f-eefd-480d-a8e4-da79b019b29e
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>Email - <a href=\"mailto:info@mahinquiry.org.uk\">info@mahinquiry.org.uk</a></p>\r\n\r\n<p>Telephone number - 028 9051 5462</p>\r\n"
+          summary: ''
+          format: basic_html

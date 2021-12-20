@@ -209,21 +209,6 @@
   }
 }
 
-.search-result {
-  border-bottom: 1px solid #d3d7d9;
-  padding-bottom: 1.5rem;
-
-  &:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
-    margin-bottom: 1em;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
 .path-publications,
 .path-news {
   .search-page {
@@ -244,22 +229,6 @@
     .metaListItem {
       margin-left: 2rem;
     }
-  }
-}
-
-#block-sidemenu {
-  background: $offwhite;
-  border-top: 5px solid $charcoal;
-  padding: 1rem;
-
-  @include breakpoint($lap) {
-    margin-top: 2rem;
-  }
-
-  h2 {
-    @include responsive-typo-map($h2-text);
-    margin: .5rem 0 1rem;
-    padding: 0;
   }
 }
 

@@ -49,9 +49,11 @@ if (!empty($subsite_id)) {
   $site_id = strtoupper($subsite_id);
   $settings['subsite_id'] = $site_id;
 
-  // Geolocation/geocoder API keys.
+  // Geolocation module API keys.
   $config['geolocation_google_maps.settings']['google_map_api_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_KEY');
   $config['geolocation_google_maps.settings']['google_map_api_server_key'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_SERVER_KEY');
+  // Geocoder module API key.
+  $config['geocoder.settings']['plugins_options']['googlemaps']['apikey'] = getenv($site_id . '_' . 'GOOGLE_MAP_API_KEY');
 }
 
 // Environment indicator defaults.

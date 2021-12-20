@@ -1,0 +1,56 @@
+uuid: f04ddf3d-e340-4332-8af3-45d279cba1f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.question_page.body
+    - field.field.node.question_page.field_committee
+    - field.field.node.question_page.field_key_term
+    - field.field.node.question_page.field_meta_tags
+    - field.field.node.question_page.field_nipb_board_member
+    - field.field.node.question_page.field_political_party
+    - field.field.node.question_page.field_published_date
+    - field.field.node.question_page.field_question_type
+    - node.type.question_page
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.question_page.search_index
+targetEntityType: node
+bundle: question_page
+mode: search_index
+content:
+  field_nipb_board_member:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_published_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_committee: true
+  field_key_term: true
+  field_meta_tags: true
+  field_political_party: true
+  field_question_type: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

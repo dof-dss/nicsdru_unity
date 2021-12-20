@@ -12,7 +12,7 @@ dependencies:
 id: publicationdate
 theme: niauditoffice_theme
 region: search_facets
-weight: 0
+weight: -6
 provider: null
 plugin: 'facet_block:publication_date'
 settings:

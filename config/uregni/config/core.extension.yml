@@ -59,6 +59,7 @@ module:
   help: 0
   history: 0
   honeypot: 0
+  http_cache_control: 0
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
@@ -133,7 +134,7 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  origins: 1000
+  nicsdru_unity_profile: 1000
   eu_cookie_compliance: 1001
 theme:
   stark: 0
@@ -143,6 +144,6 @@ theme:
   adminimal_theme: 0
   nicsdru_unity_theme: 0
   uregni_theme: 0
-profile: origins
+profile: nicsdru_unity_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

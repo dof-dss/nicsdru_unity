@@ -1,0 +1,12 @@
+uuid: d5379428-52bc-44e7-987a-f2a80fb98354
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: y7_NBFP_3eud7oOGM1XQuGIrokEQ_1CyU3iuD6Qln5A
+id: media.landing_full
+label: 'Landing full'
+targetEntityType: media
+cache: true

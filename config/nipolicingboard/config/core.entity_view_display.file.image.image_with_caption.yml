@@ -1,0 +1,28 @@
+uuid: df64fb3c-c311-4a66-91de-d70656a0dbe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.image_with_caption
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_caption_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - file
+id: file.image.image_with_caption
+targetEntityType: file
+bundle: image
+mode: image_with_caption
+content:
+  field_file_image_caption_text:
+    label: hidden
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  langcode: true

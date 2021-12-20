@@ -4,26 +4,29 @@ dependencies:
   config:
     - field.field.node.link.field_link_type
     - field.field.node.link.field_link_url
+    - field.field.node.link.field_meta_tags
     - node.type.link
   module:
     - link
-    - options
     - user
+_core:
+  default_config_hash: qqTZoIAJxc9ZRH_eys3JD9s1IB5qDl4Z14Db1fgNxtA
 id: node.link.default
 targetEntityType: node
 bundle: link
 mode: default
 content:
   field_link_type:
-    weight: 102
-    label: above
-    settings: {  }
+    weight: 0
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_label
     region: content
   field_link_url:
-    weight: 101
-    label: above
+    weight: 1
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -33,9 +36,8 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  langcode: true
+  links: true
