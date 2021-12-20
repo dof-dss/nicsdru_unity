@@ -1,4 +1,4 @@
-# Unity sites codebase   
+# Unity sites codebase
 
 [![CircleCI](https://circleci.com/gh/dof-dss/nicsdru_unity.svg?style=svg)](https://circleci.com/gh/dof-dss/nicsdru_unity)
 
@@ -24,7 +24,7 @@ We recommend Lando for local development. To get started, ensure you have the fo
 - `composer install`
 - `lando start`
 
-Or, if available, you may also fetch the database and import this:
+Or, if available, you may also fetch the database and import this :
 
 `platform db:dump` (you'll need to select project, environment and required site e.g. 'uregni')
 
