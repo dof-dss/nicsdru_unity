@@ -5,6 +5,12 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header_wrapper {
+  @include breakpoint($tab) {
+    background: resolve('search-bar-image.png') no-repeat 75%;
+  }
+}
+
 #main-menu {
   .menu-link,
   .menu .active,
@@ -43,6 +49,65 @@
   }
 }
 
+#top-area {
+  margin: 2rem auto;
+
+  @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    float: none;
+    background: $grey-light;
+    padding: 2rem;
+    text-align: left;
+
+    @include breakpoint($tab) {
+      flex-basis: 31%;
+    }
+
+    &:first-child {
+      p {
+        @include adjust-font-size-to(21px);
+        font-weight: bold;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &:last-child {
+      @media screen and (max-width: $tab) {
+        margin-right: 1rem;
+      }
+    }
+
+    h2 {
+      @include adjust-font-size-to(40px, 8);
+      color: $headings;
+    }
+
+    a.btn {
+      background: $link resolve('nipb-sign-up-arrow.png') no-repeat right 2rem top 1.6rem;
+      padding: .6rem 4rem .6rem 1.6rem;
+    }
+
+    i {
+      font-size: 5rem;
+      background: #423f6c;
+      color: $white;
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 100%;
+      line-height: 6.5rem;
+      padding: .5rem 1.3rem;
+
+      &.fa-file-alt {
+        padding: .5rem 1.9rem;
+      }
+    }
+  }
+}
+
 .question-meta {
   border-bottom: 1px solid $black;
   margin: 1.8rem 0;
@@ -59,5 +124,180 @@
 .path-news-search {
   p.meta {
     font-weight: bold;
+  }
+}
+
+// Welcome text
+
+.region-front-welcome {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: resolve('our-work-cover.png') no-repeat bottom 4% left 54%;
+
+  #block-ourworkcoversblock {
+    max-width: 980px;
+    margin: 0 auto;
+
+    .content {
+      li a {
+        color: $white;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+
+        &:hover,
+        &:focus {
+          outline: 3px solid white;
+          outline-offset: -4px;
+        }
+      }
+
+      li:first-child a,
+      li:nth-child(2) a {
+        padding: 3rem;
+      }
+
+      li:nth-child(3) a {
+        padding: 1rem 0;
+      }
+
+      li:nth-child(4) a {
+        padding: 2.2rem 0.6rem;;
+      }
+    }
+  }
+
+  .block h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 4.8rem;
+    padding: 6rem 0;
+    margin: 0;
+  }
+
+  ul:not(.contextual-links) {
+    list-style-type: none;
+    display: flex;
+    flex-flow: wrap;
+
+    margin: 0;
+    text-align: left;
+  }
+
+  .content {
+    li {
+      vertical-align: top;
+      width: 19rem;
+      height: 19rem;
+      margin-right: 7%;
+      margin-bottom: 4rem;
+
+      &:first-child {
+        padding: 3.8rem 2rem;
+        background: resolve('images/purple-bubble.png') no-repeat 76%;
+      }
+
+      &:nth-child(2) {
+        padding: 3.8rem 2rem;
+        background: resolve('images/blue-bubble.png') no-repeat right;
+      }
+
+      &:nth-child(3) {
+        padding: 3.6rem 2rem;
+        background: resolve('images/red-bubble.png') no-repeat 75%;
+      }
+
+      &:last-child {
+        padding: 3.5rem 2rem;
+        margin-right: 0;
+        background: resolve('orange-bubble.png') no-repeat 23%;
+      }
+
+      a {
+        text-align: center;
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: $white;
+      }
+    }
+  }
+}
+
+#footer {
+  padding: 0;
+
+  .column .social-icons {
+    margin-top: 1.3rem;
+  }
+
+  .footer_credit #footer-menu .menu li {
+    a,
+    span.active {
+      margin: 0 .5em 0 0;
+      padding: 0 .5em 0 0;
+      @include adjust-font-size-to(14px);
+    }
+  }
+}
+
+#footer_wrapper,
+.footer_credit {
+  padding: 1% 2% 2%;
+}
+
+#footer-area {
+  .column {
+    @include breakpoint($tab) {
+      width: 39%;
+
+      &:last-child {
+        width: 20%;
+      }
+    }
+
+    @media screen and (max-width: $tab) {
+      &:last-child {
+        float: none;
+      }
+    }
+
+    h2 {
+      color: $headings;
+      margin-bottom: 4rem;
+    }
+
+    li {
+      border: none;
+    }
+  }
+}
+
+.footer_credit {
+  border-top: 1px solid $black;
+
+  ul {
+    list-style: none;
+    @include breakpoint($tab) {
+      display: flex;
+    }
+  }
+}
+
+#block-sidemenu {
+  a {
+    border-bottom: 1px solid $link;
+
+    &:hover {
+      border-bottom: 2px solid $link-underline;
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      border-bottom: none;
+      outline: 2px solid $link;
+      outline-offset: 0;
+    }
   }
 }
