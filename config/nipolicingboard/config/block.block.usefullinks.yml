@@ -1,0 +1,25 @@
+uuid: d67fa952-56a4-4c5c-bbf1-7c20e21afada
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-useful-links
+  module:
+    - system
+  theme:
+    - nipolicingboard_theme
+id: usefullinks
+theme: nipolicingboard_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-useful-links'
+settings:
+  id: 'system_menu_block:menu-useful-links'
+  label: 'Useful Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

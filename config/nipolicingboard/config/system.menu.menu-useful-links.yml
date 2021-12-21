@@ -1,10 +1,8 @@
-uuid: 97883baa-487c-4c30-be5b-a31e68e41de2
+uuid: bdccdee1-af61-4c63-9d01-186230fe31ab
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: v01C7A2drlwW57KuHoPd8N2KzeQs2q5xFU_ow7RylyY
 id: menu-useful-links
-label: 'Useful links'
-description: ''
+label: 'Useful Links'
+description: 'Useful Links in the footer'
 locked: false
