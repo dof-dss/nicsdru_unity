@@ -5,6 +5,10 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header {
+  margin-top: 0;
+}
+
 #header_wrapper {
   @include breakpoint($tab) {
     background: resolve('search-bar-image.png') no-repeat 75%;
@@ -89,6 +93,17 @@
     a.btn {
       background: $link resolve('nipb-sign-up-arrow.png') no-repeat right 2rem top 1.6rem;
       padding: .6rem 4rem .6rem 1.6rem;
+
+      &:hover,
+      &:focus {
+        background-color: $ash-grey;
+        outline: none;
+        opacity: 1;
+      }
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     i {
@@ -131,7 +146,7 @@
 
 .region-front-welcome {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 1% auto 0;
   background: resolve('our-work-cover.png') no-repeat bottom 4% left 54%;
 
   #block-ourworkcoversblock {
