@@ -103,7 +103,7 @@ process:
     -
       plugin: str_replace
       regex: true
-      search: /<p><a href="\/help-viewing-documents"><strong>Help viewing documents<\/strong><\/a><\/p>/
+      search: /(<div>)?(<p>)?(<strong>)?<a href=".*\/help-viewing-documents">(<strong>)?Help viewing documents(<\/strong>)?<\/a>(<\/strong>)?(<\/p>)?(<\/div)?/
       replace: ''
   body/0/format:
     -
