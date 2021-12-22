@@ -1,0 +1,25 @@
+uuid: da05d077-8856-4259-94c7-aff76b3ab2cb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:11859648-5138-4c52-9f38-124abf0e4748'
+  module:
+    - block_content
+  theme:
+    - nipolicingboard_theme
+id: footercontactinformation
+theme: nipolicingboard_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:11859648-5138-4c52-9f38-124abf0e4748'
+settings:
+  id: 'block_content:11859648-5138-4c52-9f38-124abf0e4748'
+  label: 'Contact information'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

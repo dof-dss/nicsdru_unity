@@ -100,6 +100,11 @@ process:
       plugin: site_files_filter
       from_ref: sites/nipb-drupal.nigov.net/files
       to_ref: files/nipolicingboard
+    -
+      plugin: str_replace
+      regex: true
+      search: /(<\w+>)*<a href=".*\/help-viewing-documents">(<\w+>)*Help viewing documents(<\/\w+>)*<\/a>(<\/\w+>)*/
+      replace: ''
   body/0/format:
     -
       plugin: static_map
