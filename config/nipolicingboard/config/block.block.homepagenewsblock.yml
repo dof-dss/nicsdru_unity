@@ -1,0 +1,25 @@
+uuid: 8e16df9f-e984-4c4a-9dde-5d7d13cd4589
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:6fb7f9c4-51ce-4530-beb0-ae60977e00ae'
+  module:
+    - block_content
+  theme:
+    - nipolicingboard_theme
+id: homepagenewsblock
+theme: nipolicingboard_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'block_content:6fb7f9c4-51ce-4530-beb0-ae60977e00ae'
+settings:
+  id: 'block_content:6fb7f9c4-51ce-4530-beb0-ae60977e00ae'
+  label: News
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

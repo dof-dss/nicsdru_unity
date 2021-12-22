@@ -1,9 +1,7 @@
-uuid: a4f8a595-0f47-4609-bba2-215aec6e592d
+uuid: 889b0151-7c8c-4b03-b4db-64da6a3d68f7
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: RuPCj3V4OO2h-wqZmLjPonNAgo7s8dn9VqLEBIgDihw
 id: admin
 label: Management
 description: 'The <em>Management</em> menu contains links for administrative tasks.'

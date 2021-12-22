@@ -1,0 +1,24 @@
+uuid: d9b33990-5eaa-447f-ae64-0edf2a58e3a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.next_public_meeting
+  module:
+    - views
+  theme:
+    - nipolicingboard_theme
+id: views_block__next_public_meeting_next_public_meeting
+theme: nipolicingboard_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'views_block:next_public_meeting-next_public_meeting'
+settings:
+  id: 'views_block:next_public_meeting-next_public_meeting'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
