@@ -63,7 +63,7 @@ display:
         type: slick
         options:
           vanilla: true
-          optionset: uregni
+          optionset: nipb
           skin: default
           layout: right
           caption:
