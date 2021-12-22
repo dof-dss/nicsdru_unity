@@ -95,7 +95,7 @@ hooks:
     # For each multi site - rebuild caches.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
-      echo "****** $site cache clear ******"
+      echo "****** $site cache-clear ******"
       cd /app/web/sites/$site
       drush -l $site -y cache-rebuild
     done
