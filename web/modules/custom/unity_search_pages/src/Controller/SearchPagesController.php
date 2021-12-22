@@ -110,6 +110,9 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
         if ((substr($title, -1) != 's') && ($title !== 'Evidence') ) {
           $title .= 's';
         }
+        if ($title == 'Questions') {
+          $title = 'Questions to the Chief Constable';
+        }
       }
     }
     return $title;
