@@ -85,11 +85,8 @@ hooks:
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
-      #drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
-      drush -l $site import-all-if-installed safe
-      #drush -l $site -y cache-rebuild
     done
 
     # For each multi site - rebuild caches.
@@ -97,6 +94,8 @@ hooks:
     do
       echo "****** $site cache-clear ******"
       cd /app/web/sites/$site
+      drush -l $site -y cache-rebuild
+      drush -l $site import-all-if-installed safe
       drush -l $site -y cache-rebuild
     done
 
