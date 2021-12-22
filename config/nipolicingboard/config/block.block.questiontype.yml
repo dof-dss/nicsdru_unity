@@ -12,7 +12,7 @@ dependencies:
 id: questiontype
 theme: nipolicingboard_theme
 region: search_facets
-weight: -6
+weight: -5
 provider: null
 plugin: 'facet_block:question_type'
 settings:

@@ -13,3 +13,12 @@ function nipolicingboard_theme_theme_suggestions_field_alter(array &$suggestions
     $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function nipolicingboard_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
+  if (!empty($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+}

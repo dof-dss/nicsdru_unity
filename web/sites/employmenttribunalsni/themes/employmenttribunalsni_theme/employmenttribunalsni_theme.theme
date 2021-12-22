@@ -5,6 +5,8 @@
  * Functions to support theming in the employmenttribunalsni_theme theme.
  */
 
+use Drupal\Component\Utility\Html;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
