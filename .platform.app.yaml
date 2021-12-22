@@ -80,16 +80,24 @@ hooks:
   deploy: |
     set -e
 
-    # For each multi site - rebuild caches, run db-updates and import config.
+    # For each multi site - run db-updates and import config.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
       #drush -l $site -y cache-rebuild
-      #drush -l $site -y config-import
-      #drush -l $site -y updatedb
-      #drush -l $site import-all-if-installed safe
+      drush -l $site -y config-import
+      drush -l $site -y updatedb
+      drush -l $site import-all-if-installed safe
       #drush -l $site -y cache-rebuild
+    done
+
+    # For each multi site - rebuild caches.
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
+    do
+      echo "****** $site cache clear ******"
+      cd /app/web/sites/$site
+      drush -l $site -y cache-rebuild
     done
 
 # The configuration of app when it is exposed to the web.
