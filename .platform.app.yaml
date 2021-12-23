@@ -80,6 +80,7 @@ hooks:
   deploy: |
     set -e
 
+    # save the fastly service value
     temp=$FASTLY_API_SERVICE
     export FASTLY_API_SERVICE=xxx
 
