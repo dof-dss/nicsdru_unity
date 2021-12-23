@@ -80,21 +80,17 @@ hooks:
   deploy: |
     set -e
 
+    export FASTLY_API_SERVICE=xxx
+    echo "$FASTLY_API_SERVICE"
+
     # For each multi site - run db-updates and import config.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
+      drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
-    done
-
-    # For each multi site - rebuild caches.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
-    do
-      echo "****** $site cache-clear  ******"
-      cd /app/web/sites/$site
-      drush -l $site -y cache-rebuild
       drush -l $site import-all-if-installed safe
       drush -l $site -y cache-rebuild
     done
