@@ -77,7 +77,7 @@ hooks:
   build: |
     set -e
   # The deploy hook runs after your application has been deployed and started.
-  deploy: |
+  post_deploy: |
     set -e
 
     # save the fastly service value
