@@ -80,7 +80,7 @@ hooks:
   post_deploy: |
     set -e
 
-    # save the fastly service value
+    # Save the Fastly service value and break the connection to Fastly
     temp=$FASTLY_API_SERVICE
     export FASTLY_API_SERVICE=xxx
 
@@ -89,14 +89,25 @@ hooks:
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
+      drush -l $site vset site_offline 1
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
       drush -l $site -y cache-rebuild
+      drush -l $site vset site_offline 1
     done
 
+    # Reconnect to Fastly
     export FASTLY_API_SERVICE=$temp
+
+    # For each multi site - clear cache (including Fastly cache)
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
+    do
+      echo "****** $site cache clear ******"
+      cd /app/web/sites/$site
+      drush -l $site -y cache-rebuild
+    done
 
 # The configuration of app when it is exposed to the web.
 web:
