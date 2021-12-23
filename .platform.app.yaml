@@ -89,13 +89,13 @@ hooks:
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
-      drush -l $site vset site_offline 1
+      drush -l $site state:set system.maintenance_mode 1
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
       drush -l $site -y cache-rebuild
-      drush -l $site vset site_offline 1
+      drush -l $site state:set system.maintenance_mode 0
     done
 
     # Reconnect to Fastly
