@@ -81,8 +81,9 @@ hooks:
     set -e
 
     # Save the Fastly service value and break the connection to Fastly
+    echo "***** Breaking connection to Fastly ******"
     temp=$FASTLY_API_SERVICE
-    export FASTLY_API_SERVICE=xxx
+    export FASTLY_API_SERVICE=dummyservice
 
     # For each multi site - run db-updates and import config.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
@@ -99,6 +100,7 @@ hooks:
     done
 
     # Reconnect to Fastly
+    echo "***** Reinstate connection to Fastly ******"
     export FASTLY_API_SERVICE=$temp
 
     # For each multi site - clear cache (including Fastly cache)
