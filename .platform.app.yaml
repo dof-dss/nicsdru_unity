@@ -80,8 +80,12 @@ hooks:
   deploy: |
     set -e
 
+    temp=$FASTLY_API_SERVICE
     export FASTLY_API_SERVICE=xxx
-    echo "$FASTLY_API_SERVICE"
+    echo "FASTLY_API_SERVICE is $FASTLY_API_SERVICE"
+
+    export FASTLY_API_SERVICE=$temp
+    echo "FASTLY_API_SERVICE is $FASTLY_API_SERVICE"
 
     # For each multi site - run db-updates and import config.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
@@ -94,6 +98,10 @@ hooks:
       drush -l $site import-all-if-installed safe
       drush -l $site -y cache-rebuild
     done
+
+    export FASTLY_API_SERVICE=$temp
+    echo "FASTLY_API_SERVICE is $FASTLY_API_SERVICE"
+
 
 # The configuration of app when it is exposed to the web.
 web:
