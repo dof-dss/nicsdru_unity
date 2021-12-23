@@ -80,7 +80,10 @@ hooks:
   post_deploy: |
     set -e
 
-    # Save the Fastly service value and break the connection to Fastly
+    # Save the Fastly service value and overwrite with a dummy one in order to break
+    # the connection to Fastly, otherwise any cache clear of any site will purge the
+    # entire Fastly cache - we don't want this to happen as we'd like Fastly to continue
+    # serving the sites to anonymous users during a release.
     echo "***** Breaking connection to Fastly ******"
     temp=$FASTLY_API_SERVICE
     export FASTLY_API_SERVICE=dummyservice
