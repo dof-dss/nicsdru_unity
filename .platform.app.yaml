@@ -76,19 +76,44 @@ build:
 hooks:
   build: |
     set -e
-  # The deploy hook runs after your application has been deployed and started.
-  deploy: |
+  # During post_deploy the sites are available.
+  post_deploy: |
     set -e
 
-    # For each multi site - rebuild caches, run db-updates and import config.
+    # Save the Fastly service value and overwrite with a dummy one in order to break
+    # the connection to Fastly, otherwise any cache clear of any site will purge the
+    # entire Fastly cache - we don't want this to happen as we'd like Fastly to continue
+    # serving the sites to anonymous users during a release.
+    echo "***** Breaking connection to Fastly ******"
+    temp=$FASTLY_API_SERVICE
+    export FASTLY_API_SERVICE=dummyservice
+
+    # For each multi site - run db-updates and import config.
     for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
+      # Set site to readonly just in case editors are logged on.
+      drush en readonlymode -l $site -y
+      drush -l $site cset readonlymode.settings enabled 1
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
+      drush -l $site -y cache-rebuild
+      # Turn off readonly mode.
+      drush -l $site cset readonlymode.settings enabled 0
+    done
+
+    # Reconnect to Fastly
+    echo "***** Reinstate connection to Fastly ******"
+    export FASTLY_API_SERVICE=$temp
+
+    # For each multi site - clear cache (including Fastly cache)
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
+    do
+      echo "****** $site cache clear ******"
+      cd /app/web/sites/$site
       drush -l $site -y cache-rebuild
     done
 
