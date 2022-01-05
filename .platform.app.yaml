@@ -95,7 +95,7 @@ hooks:
       cd /app/web/sites/$site
       # Set site to readonly just in case editors are logged on.
       drush en readonlymode -l $site -y
-      drush -l $site cset readonlymode.settings enabled 1
+      drush -l $site cset readonlymode.settings enabled 1 -y
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
