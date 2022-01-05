@@ -93,7 +93,7 @@ hooks:
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
-      drush -l $site -y en readonlymode
+      drush en readonlymode -l $site -y
       drush -l $site cset readonlymode.settings enabled 1
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
