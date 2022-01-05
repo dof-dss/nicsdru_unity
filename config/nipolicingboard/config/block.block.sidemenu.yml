@@ -27,7 +27,6 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      news: news
       publication_page: publication_page
       question_page: question_page
       staff_member: staff_member
