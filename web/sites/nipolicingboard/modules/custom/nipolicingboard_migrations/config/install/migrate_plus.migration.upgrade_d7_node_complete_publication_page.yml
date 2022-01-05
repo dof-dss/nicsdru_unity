@@ -98,7 +98,7 @@ process:
       to_ref: files/nipolicingboard
     -
       plugin: site_files_filter
-      from_ref: sites/nipb-drupal.nigov.net/files
+      from_ref: sites/drupal-nipb.nigov.net/files
       to_ref: files/nipolicingboard
     -
       plugin: str_replace
