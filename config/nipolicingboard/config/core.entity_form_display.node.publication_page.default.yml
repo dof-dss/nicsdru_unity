@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_attachment
     - field.field.node.publication_page.field_meta_tags
-    - field.field.node.publication_page.field_nipb_attachment
     - field.field.node.publication_page.field_pub_type
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_image
@@ -40,14 +40,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_meta_tags:
-    weight: 15
-    settings:
-      sidebar: true
-    third_party_settings: {  }
-    type: metatag_firehose
-    region: content
-  field_nipb_attachment:
+  field_attachment:
     type: media_library_widget
     weight: 13
     settings:
@@ -55,6 +48,13 @@ content:
     third_party_settings:
       media_library_edit:
         show_edit: '1'
+    region: content
+  field_meta_tags:
+    weight: 15
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_pub_type:
     type: options_select

@@ -5,8 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.diff
     - field.field.node.publication_page.body
+    - field.field.node.publication_page.field_attachment
     - field.field.node.publication_page.field_meta_tags
-    - field.field.node.publication_page.field_nipb_attachment
     - field.field.node.publication_page.field_pub_type
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_image
@@ -55,6 +55,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_attachment:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
   field_meta_tags:
     type: metatag_empty_formatter
     weight: 6
@@ -62,15 +71,6 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_nipb_attachment:
-    type: entity_reference_entity_view
-    weight: 2
-    label: inline
-    settings:
-      view_mode: embed
-      link: false
-    third_party_settings: {  }
-    region: content
   field_pub_type:
     type: entity_reference_label
     weight: 5

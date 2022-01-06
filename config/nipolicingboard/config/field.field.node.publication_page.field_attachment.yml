@@ -1,13 +1,13 @@
-uuid: 81f5205c-3d1a-408b-a78f-441f3c363af1
+uuid: 1cb36c56-493b-41ac-9fab-348fa165ca4e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_nipb_attachment
+    - field.storage.node.field_attachment
     - media.type.document
     - node.type.publication_page
-id: node.publication_page.field_nipb_attachment
-field_name: field_nipb_attachment
+id: node.publication_page.field_attachment
+field_name: field_attachment
 entity_type: node
 bundle: publication_page
 label: Attachment
