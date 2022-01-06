@@ -76,7 +76,7 @@ build:
 hooks:
   build: |
     set -e
-  # During post_deploy the sites are available.
+  # During post_deploy the sites are available (see https://docs.platform.sh/configuration/app/hooks.html)
   post_deploy: |
     set -e
 
@@ -100,7 +100,6 @@ hooks:
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
-      drush -l $site -y cache-rebuild
       # Turn off readonly mode.
       drush -l $site cset readonlymode.settings enabled 0
     done
