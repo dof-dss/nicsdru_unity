@@ -1,12 +1,12 @@
-uuid: 51f7712a-9f26-4315-b8fa-569d3e3c32a3
+uuid: 3f38b7b7-6742-466c-8fd4-7c20d0d13557
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.field_nipb_attachment
-field_name: field_nipb_attachment
+id: node.field_attachment
+field_name: field_attachment
 entity_type: node
 type: entity_reference
 settings:
