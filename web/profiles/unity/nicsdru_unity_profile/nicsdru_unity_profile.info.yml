@@ -93,6 +93,7 @@ install:
   - page_cache
   - path
   - path_alias
+  - readonlymode
   - rdf
   - redirect
   - responsive_image
