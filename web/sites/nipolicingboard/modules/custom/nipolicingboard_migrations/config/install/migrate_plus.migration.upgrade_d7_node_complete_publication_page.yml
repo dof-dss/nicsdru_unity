@@ -136,7 +136,7 @@ process:
         title: title
         width: width
         height: height
-  field_nipb_attachment:
+  field_attachment:
     -
       plugin: sub_process
       source: field_nipb_attachment
