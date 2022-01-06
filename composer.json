@@ -211,6 +211,9 @@
             },
             "drupal/eu_cookie_compliance": {
                 "Banner at top is not hiding correctly": "https://git.drupalcode.org/project/eu-cookie-compliance/-/merge_requests/43.diff"
+            },
+            "drupal/readonlymode": {
+                "Fatal typerror fix": "https://www.drupal.org/files/issues/2020-02-21/readonlymode-string_not_array-3115119-2.patch"
             }
         },
         "drupal-scaffold": {
