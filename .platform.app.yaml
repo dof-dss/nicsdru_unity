@@ -93,8 +93,10 @@ hooks:
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
-      # Set site to readonly just in case editors are logged on.
+      # Readonlymode module should be installed on all sites,
+      # but we'll just make sure.
       drush en readonlymode -l $site -y
+      # Set site to readonly just in case editors are logged on.
       drush -l $site cset readonlymode.settings enabled 1 -y
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
