@@ -45,3 +45,4 @@ hidden:
   field_pub_type: true
   langcode: true
   links: true
+  search_api_excerpt: true
