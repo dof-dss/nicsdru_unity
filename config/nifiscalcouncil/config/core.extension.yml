@@ -126,6 +126,7 @@ module:
   paragraphs: 11
   nicsdru_unity_profile: 1000
   eu_cookie_compliance: 1001
+  readonlymode: 9999
 theme:
   stark: 0
   seven: 0
