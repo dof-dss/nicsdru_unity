@@ -103,7 +103,7 @@ hooks:
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
       # Turn off readonly mode.
-      drush -l $site cset readonlymode.settings enabled 0
+      drush -l $site cset readonlymode.settings enabled 0 -y
     done
 
     # Reconnect to Fastly
