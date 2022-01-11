@@ -207,6 +207,22 @@
 
 #---------------------------------
 
+"https://www.pbni.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://pbni.org.uk.{default}/":
+  type: redirect
+  to: "https://www.pbni.org.uk.{default}/"
+
+"https://pbni.org.uk/":
+  type: redirect
+  to: "https://www.pbni.org.uk/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream
