@@ -43,6 +43,8 @@ relationships:
   independentreviewofeducation: 'db:independentreviewofeducation'
   nipolicingboard: 'db:nipolicingboard'
   nipolicingboard_solr: 'solr:nipolicingboard'
+  pbni: 'db:pbni'
+  pbni_solr: 'solr:pbni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
