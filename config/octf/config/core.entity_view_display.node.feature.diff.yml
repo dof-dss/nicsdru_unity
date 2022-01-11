@@ -1,0 +1,57 @@
+uuid: e6178acf-3612-4e1c-94e4-9cb9cc89744a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.diff
+    - field.field.node.feature.field_link_url
+    - field.field.node.feature.field_photo
+    - field.field.node.feature.field_teaser
+    - node.type.feature
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.feature.diff
+targetEntityType: node
+bundle: feature
+mode: diff
+content:
+  field_link_url:
+    weight: 2
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: article_full
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_teaser:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
