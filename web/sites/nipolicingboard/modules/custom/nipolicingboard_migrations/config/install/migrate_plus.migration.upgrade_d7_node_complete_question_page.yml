@@ -105,6 +105,10 @@ process:
       regex: true
       search: /(<\w+>)*(&nbsp;)*?<img.+?data:image\/png\S*">(&nbsp;)*(<\/\w+>)*/
       replace: ''
+    - plugin: str_replace
+      regex: true
+      search: /(<span\D+?>)?\(external link opens in a new window \/ tab\)(<\/span>)?/
+      replace: ''
   body/0/format:
     -
       plugin: static_map
