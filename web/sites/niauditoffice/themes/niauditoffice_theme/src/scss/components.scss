@@ -34,7 +34,7 @@
 }
 
 .content-sidebar-wrap {
-  ul:not(.list--no-bullet) {
+  ul:not(.list--no-bullet):not(.dropbutton) {
     li:not(.pager__item) {
       list-style: none;
       position: relative;
