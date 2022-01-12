@@ -22,3 +22,12 @@ function nipolicingboard_theme_theme_suggestions_container_alter(array &$suggest
     $suggestions[] = 'container__' . $variables['element']['#type'];
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function nipolicingboard_theme_theme_suggestions_alter(array &$suggestions,
+                                                       array $variables,
+                                                       $hook) {
+  \Drupal::logger('theme_suggestions')->notice($hook);
+}
