@@ -98,7 +98,6 @@ module:
   redirect: 0
   responsive_image: 0
   scheduled_transitions: 0
-  search: 0
   search_api: 0
   search_api_db: 0
   search_api_location: 0
@@ -132,6 +131,7 @@ module:
   paragraphs: 11
   nicsdru_unity_profile: 1000
   eu_cookie_compliance: 1001
+  readonlymode: 9999
 theme:
   stark: 0
   stable: 0

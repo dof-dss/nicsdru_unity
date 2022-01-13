@@ -104,6 +104,7 @@ module:
   pathauto: 1
   views: 10
   nicsdru_unity_profile: 1000
+  readonlymode: 9999
 theme:
   stark: 0
   stable: 0

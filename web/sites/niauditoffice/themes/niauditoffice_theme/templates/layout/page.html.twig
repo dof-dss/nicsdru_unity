@@ -49,9 +49,6 @@
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
  *
- * The following is controlled through the uregni_theme.theme variables.
- * - search_page: Returns if the page is a search page based on its title.
- *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
@@ -85,16 +82,20 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {% if drupal_config('system.site', 'frontpage_title') %}
-    <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
-      {{ drupal_config('system.site', 'frontpage_title') }}
-    </h1>
+  {{ page.front_welcome }}
+  {% if is_front %}
+    {% if drupal_config('system.site', 'frontpage_title') %}
+      <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+        <h1>
+          {{ drupal_config('system.site', 'frontpage_title') }}
+        </h1>
+      </div>
+
+    {% endif %}
   {% endif %}
 
-  {{ page.front_welcome }}
-
   {% if page.top_first or page.top_second or page.top_third %}
-    <div id="top-area" class="clearfix">
+    <div id="top-area">
       {% if page.top_first %}
         <div class="column">
           {{ page.top_first }}
@@ -114,68 +115,70 @@
   {% endif %}
 {% endif %}
 
-<div id="container">
-  <div class="container-wrap">
-    <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
-      {{ page.breadcrumb }}
-      {% if search_page %}
-        {{ drupal_block('page_title_block', wrapper=false) }}
-      {% endif %}
-      <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
-        {% if page.search_facets %}
-          <header id="search-facets" class="sidebar-first-layout">
-            <nav aria-label="Skip links">
-              <a href="#post-content" class="skip-link visually-hidden focusable">
-                {{- 'Skip to results'|t -}}
-              </a>
-            </nav>
-            {{ page.search_facets }}
-          </header>
+{% if not is_front %}
+  <div id="container">
+    <div class="container-wrap">
+      <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+
+        {{ page.breadcrumb }}
+        {% if search_page %}
+          {{ drupal_block('page_title_block', wrapper=false) }}
         {% endif %}
-        {% if page.content %}
-          <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
-            {{ page.content }}
-          </main>
+
+        <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
+          {% if page.search_facets %}
+            <header id="search-facets" class="sidebar-first-layout">
+              <nav aria-label="Skip links">
+                <a href="#post-content" class="skip-link visually-hidden focusable">
+                  {{- 'Skip to results'|t -}}
+                </a>
+              </nav>
+              {{ page.search_facets }}
+            </header>
+          {% endif %}
+          {% if page.content %}
+            <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
+              {{ page.content }}
+            </main>
+          {% endif %}
+        </div>
+        {% if page.sidebar_first %}
+          <aside id="sidebar-first" class="sidebar-first-layout">
+            {{ page.sidebar_first }}
+          </aside>
         {% endif %}
       </div>
-      {% if page.sidebar_first %}
-        <aside id="sidebar-first" class="sidebar-first-layout">
-          {{ page.sidebar_first }}
+      {% if page.sidebar_second %}
+        <aside id="sidebar-second" class="sidebar-second-layout">
+          {{ page.sidebar_second }}
         </aside>
       {% endif %}
-    </div>
-    {% if page.sidebar_second %}
-      <aside id="sidebar-second" class="sidebar-second-layout">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-    {% if is_front %}
-      {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 or page.bottom_widget_4 or page.bottom_widget_5 %}
-        <div id="bottom_wrapper" class="footer_block bottom_widget">
-          <div id="bottom-area" class="footer-area clearfix">
-            <div class="energy clearfix">
-            {% if page.bottom_widget_1 %}
-              <div class="column">
-                {{ page.bottom_widget_1 }}
-              </div>
-            {% endif %}
-            {% if page.bottom_widget_2 %}
-              <div class="column">
-                {{ page.bottom_widget_2 }}
-              </div>
-            {% endif %}
-            {% if page.bottom_widget_3 %}
-              <div class="column">
-                {{ page.bottom_widget_3 }}
-              </div>
-            {% endif %}
+      {% if is_front %}
+        {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
+          <div id="bottom_wrapper" class="footer_block bottom_widget">
+            <div id="bottom-area" class="footer-area clearfix">
+              {% if page.bottom_widget_1 %}
+                <div class="column">
+                  {{ page.bottom_widget_1 }}
+                </div>
+              {% endif %}
+              {% if page.bottom_widget_2 %}
+                <div class="column">
+                  {{ page.bottom_widget_2 }}
+                </div>
+              {% endif %}
+              {% if page.bottom_widget_3 %}
+                <div class="column">
+                  {{ page.bottom_widget_3 }}
+                </div>
+              {% endif %}
             </div>
           </div>
-        </div>
+        {% endif %}
       {% endif %}
-    {% endif %}
+    </div>
   </div>
-</div>
+{% endif %}
 
 <footer id="footer">
   <div id="footer_wrapper">
@@ -211,5 +214,3 @@
     {% endif %}
   </div>
 </footer>
-
-

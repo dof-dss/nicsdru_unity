@@ -1,0 +1,20 @@
+uuid: 5ec5a52b-7355-47d4-9266-5f435024dc9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pbni_theme
+id: mainpagecontent
+theme: pbni_theme
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

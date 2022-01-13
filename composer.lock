@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2967d0bdde77d7da9d9a9d3f6f11e6b",
+    "content-hash": "e4997fa0d776d360dc98c5d8c06fb0eb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.41",
+            "version": "v0.1.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "e8c2db60ca81278ab994c5e1909e466b6cc59e1c"
+                "reference": "ea7e434e2aa71ac08bb76c76418e7eb90a9fd063"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/e8c2db60ca81278ab994c5e1909e466b6cc59e1c",
-                "reference": "e8c2db60ca81278ab994c5e1909e466b6cc59e1c",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/ea7e434e2aa71ac08bb76c76418e7eb90a9fd063",
+                "reference": "ea7e434e2aa71ac08bb76c76418e7eb90a9fd063",
                 "shasum": ""
             },
             "require": {
@@ -1939,9 +1939,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.41"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.42"
             },
-            "time": "2021-12-22T11:48:35+00:00"
+            "time": "2022-01-13T14:59:47+00:00"
         },
         {
             "name": "drupal/address",
@@ -6587,6 +6587,62 @@
             }
         },
         {
+            "name": "drupal/readonlymode",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/readonlymode.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/readonlymode-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "c81bd71c143b14d759611d7d105146f786e442e0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1603541730",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BarisW",
+                    "homepage": "https://www.drupal.org/user/107229"
+                },
+                {
+                    "name": "Sharique",
+                    "homepage": "https://www.drupal.org/user/73545"
+                },
+                {
+                    "name": "bircher",
+                    "homepage": "https://www.drupal.org/user/1344166"
+                },
+                {
+                    "name": "petew",
+                    "homepage": "https://www.drupal.org/user/1009366"
+                }
+            ],
+            "description": "This module will lock your site for any form postings.",
+            "homepage": "https://www.drupal.org/project/readonlymode",
+            "support": {
+                "source": "https://git.drupalcode.org/project/readonlymode"
+            }
+        },
+        {
             "name": "drupal/redirect",
             "version": "1.6.0",
             "source": {
@@ -7247,7 +7303,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.0-beta1",
-                    "datestamp": "1605436873",
+                    "datestamp": "1640512021",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7590,7 +7646,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.1",
-                    "datestamp": "1605458651",
+                    "datestamp": "1635943079",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8277,7 +8333,7 @@
             "extra": {
                 "drupal": {
                     "version": "6.0.5",
-                    "datestamp": "1629909787",
+                    "datestamp": "1638988008",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16658,8 +16714,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0+19-dev",
-                    "datestamp": "1637161832",
+                    "version": "8.x-5.0+27-dev",
+                    "datestamp": "1640377675",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

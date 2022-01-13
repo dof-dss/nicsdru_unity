@@ -5,6 +5,16 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
+#logo {
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  img {
+    height: 80px;
+  }
+}
+
 .sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;

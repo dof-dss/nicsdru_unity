@@ -6,10 +6,11 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #header {
-  margin-top: 0;
+  margin: 0 auto;
+  padding: 1% 0;
 }
 
-#header_wrapper {
+#inner_header_wrapper {
   @include breakpoint($tab) {
     background: resolve('search-bar-image.png') no-repeat 75%;
   }
@@ -20,7 +21,7 @@
   .menu .active,
   .menu-item.open .menu-toggle-btn {
     color: $brand-primary;
-    @include adjust-font-size-to(18px);
+    @include adjust-font-size-to(16px);
   }
 
   .menu-link {
@@ -132,12 +133,6 @@
   span.inline {
     width: 30%;
     display: inline-block;
-    font-weight: bold;
-  }
-}
-
-.path-news-search {
-  p.meta {
     font-weight: bold;
   }
 }
@@ -314,5 +309,12 @@
       outline: 2px solid $link;
       outline-offset: 0;
     }
+  }
+}
+
+#block-mainpagecontent {
+  a strong,
+  strong a {
+    font-weight: normal;
   }
 }
