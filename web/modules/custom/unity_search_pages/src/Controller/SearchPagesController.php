@@ -111,6 +111,9 @@ class SearchPagesController extends ControllerBase implements ContainerInjection
           $title .= 's';
         }
       }
+      if ($title == 'Questions') {
+        $title = 'Questions to the Chief Constable';
+      }
     }
     return $title;
   }
