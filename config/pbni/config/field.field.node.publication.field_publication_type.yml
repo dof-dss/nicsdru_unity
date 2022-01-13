@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_publication_type
     - node.type.publication
     - taxonomy.vocabulary.publications_topics
+  content:
+    - 'taxonomy_term:publications_topics:dc54394e-302f-4416-a8a6-35baa39401ae'
 _core:
   default_config_hash: 14NqevawhWXgH65cBjkur-vAx00JJGor75I4qW8N8pY
 id: node.publication.field_publication_type
@@ -16,7 +18,9 @@ label: 'Publication type'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: dc54394e-302f-4416-a8a6-35baa39401ae
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
