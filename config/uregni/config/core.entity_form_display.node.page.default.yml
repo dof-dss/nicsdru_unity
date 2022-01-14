@@ -60,6 +60,11 @@ content:
       media_library_edit:
         show_edit: '1'
     region: content
+  flag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 1
