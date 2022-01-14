@@ -10,8 +10,8 @@ dependencies:
     - pbni_theme
 id: sidemenu
 theme: pbni_theme
-region: sidebar_first
-weight: 0
+region: sidebar_second
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:
