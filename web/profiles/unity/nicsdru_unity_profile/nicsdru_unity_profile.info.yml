@@ -97,6 +97,7 @@ install:
   - readonlymode
   - rdf
   - redirect
+  - redis
   - responsive_image
   - scheduled_transitions
   - search
