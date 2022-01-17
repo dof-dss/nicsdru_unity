@@ -102,3 +102,13 @@ taxonomies:
       uuid: 6d89b697-3112-420c-ba2a-ccc803eb2806
   site_topics: {  }
   tags: {  }
+blocks:
+  -
+    info: 'Twitter block'
+    langcode: en
+    uuid: 141fe351-5b7c-49cf-8c51-889b817c7d7c
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
