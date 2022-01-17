@@ -9,7 +9,7 @@ dependencies:
 id: employmenttribunalsni_theme_pagetitle
 theme: employmenttribunalsni_theme
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -20,5 +20,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/search\r\n/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*"
+    pages: "/search\r\n/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*\r\n/node/*/revisions/view/*"
     negate: true

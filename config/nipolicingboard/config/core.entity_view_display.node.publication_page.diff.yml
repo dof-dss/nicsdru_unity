@@ -61,7 +61,7 @@ content:
     region: content
     label: inline
     settings:
-      view_mode: embed
+      view_mode: default
       link: false
     third_party_settings: {  }
   field_meta_tags:
@@ -80,7 +80,7 @@ content:
       link: true
     third_party_settings: {  }
   field_publication_date:
-    label: hidden
+    label: inline
     weight: 0
     type: datetime_default
     settings:

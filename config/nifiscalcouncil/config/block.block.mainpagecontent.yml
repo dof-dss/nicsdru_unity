@@ -1,15 +1,15 @@
-uuid: a1f79b8a-e11c-4f70-9419-a2430ea253b2
+uuid: 035046b4-a8e1-4aed-98fd-7d0ba20ee70a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - employmenttribunalsni_theme
-id: employmenttribunalsni_theme_mainpagecontent
-theme: employmenttribunalsni_theme
+    - nifiscalcouncil_theme
+id: mainpagecontent
+theme: nifiscalcouncil_theme
 region: content
-weight: 1
+weight: -8
 provider: null
 plugin: system_main_block
 settings:
