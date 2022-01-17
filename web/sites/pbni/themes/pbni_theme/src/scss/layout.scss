@@ -4,3 +4,81 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+#top-area {
+  margin: 2rem auto;
+  text-align: left;
+
+  h2 {
+    color: $headings;
+    @include adjust-font-size-to(30px);
+  }
+
+  @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+
+    .column {
+      flex-basis: 48%;
+    }
+  }
+
+  .home-latest-news {
+    @include breakpoint($tab) {
+      display: flex;
+      flex-flow: column;
+
+      .field-photo {
+        float: left;
+        max-width: 37%;
+        margin: 0 2rem 0 0;
+      }
+    }
+
+    h3 {
+      margin: 1rem 0;
+      color: $link;
+
+      @include breakpoint($tab) {
+        @include adjust-font-size-to(18px, 4);
+      }
+    }
+
+    article {
+      margin-bottom: 2.4rem;
+
+      a.news-link {
+        &:hover,
+        &:focus {
+          border-bottom: none;
+          outline: none;
+          background: none;
+
+          .news-article {
+            outline: 3px solid $link-hover-background;
+            background: $link-hover-background;
+            border-bottom: 3px solid $link-underline;
+            margin-bottom: -2.4rem;
+
+            h3 {
+              color: $link-hover;
+            }
+          }
+        }
+      }
+    }
+
+    .published-date {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+#content {
+  .home-latest-news {
+    a[href] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
