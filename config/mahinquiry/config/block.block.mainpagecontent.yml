@@ -1,33 +1,14 @@
-<<<<<<< HEAD
-uuid: 38a08526-07a6-426b-8da5-a795ed8f34a9
-=======
-<<<<<<< HEAD:config/pbni/config/block.block.mainpagecontent.yml
 uuid: 5ec5a52b-7355-47d4-9266-5f435024dc9c
-=======
-uuid: 38a08526-07a6-426b-8da5-a795ed8f34a9
->>>>>>> 287e9ad056939f5ea0c25b5ca6b0fea3ee99bdb1:config/mahinquiry/config/block.block.mainpagecontent.yml
->>>>>>> 287e9ad056939f5ea0c25b5ca6b0fea3ee99bdb1
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-<<<<<<< HEAD
     - mahinquiry_theme
 id: mainpagecontent
 theme: mahinquiry_theme
-=======
-<<<<<<< HEAD:config/pbni/config/block.block.mainpagecontent.yml
-    - pbni_theme
-id: mainpagecontent
-theme: pbni_theme
-=======
     - mahinquiry_theme
-id: mainpagecontent
-theme: mahinquiry_theme
->>>>>>> 287e9ad056939f5ea0c25b5ca6b0fea3ee99bdb1:config/mahinquiry/config/block.block.mainpagecontent.yml
->>>>>>> 287e9ad056939f5ea0c25b5ca6b0fea3ee99bdb1
 region: content
 weight: -6
 provider: null
