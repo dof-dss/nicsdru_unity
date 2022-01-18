@@ -2,6 +2,8 @@ uuid: 7e3051ba-83df-4eb1-8859-8f7e907c988b
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - pbni_theme
 id: pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
+    negate: true
