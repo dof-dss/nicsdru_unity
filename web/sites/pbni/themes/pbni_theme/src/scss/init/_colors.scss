@@ -31,7 +31,7 @@ $chroma: add-colors((
 
   brand-primary:          #141f6f,
 
-  brand-secondary:        #151d68,
+  brand-secondary:        #a31d3f,
 
   brand-tertiary:         #002e62,
 ));
@@ -60,11 +60,11 @@ $chroma: add-colors('functional', (
   error:                  'dark-red',
   error-bg:               'light-pink',
 
-  menu-background:        'brand-primary',
-  menu-item-hover:        'brand-secondary',
+  menu-background:        #fff,
+  menu-item-hover:        #333,
   menu-separator:         #fff,
-  menu-sub-item-background: 'brand-primary',
-  menu-sub-item-hover:    'brand-primary',
+  menu-sub-item-background: lighten(#333, 10),
+  menu-sub-item-hover:    #1abc9c,
   menu-borders:           'charcoal',
 
   table-background:       #fff,
@@ -141,7 +141,7 @@ $table-cell-border: color(table-cell-border);
 $table-cell-text: color(table-cell-text);
 
 $footer-background: color(footer-background);
-$footer-border: color(brand-primary);
+$footer-border: color(brand-secondary);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 
