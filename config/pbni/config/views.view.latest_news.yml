@@ -287,11 +287,36 @@ display:
       defaults:
         style: false
         row: false
+        footer: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<a href="/news" class="bttn"</a>More News</a>'
+            format: basic_html
+          plugin_id: text
+      use_more: false
+      use_more_always: true
+      use_more_text: 'Read more'
+      link_display: '0'
+      link_url: /news
     cache_metadata:
       max-age: -1
       contexts:
