@@ -1,0 +1,29 @@
+uuid: f51d321a-1a48-4cd1-a3e3-23f0430b25e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_content
+  module:
+    - system
+    - views
+  theme:
+    - nifiscalcouncil_theme
+id: views_block__featured_content_featured
+theme: nifiscalcouncil_theme
+region: bottom_widget_4
+weight: 0
+provider: null
+plugin: 'views_block:featured_content-featured'
+settings:
+  id: 'views_block:featured_content-featured'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

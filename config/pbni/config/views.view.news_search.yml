@@ -1,20 +1,20 @@
-uuid: ec912e70-d6a4-439d-83dc-349cf74e4bf9
+uuid: 2e4db28a-ce15-4be5-a486-3b24294ca7fb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - search_api.index.publications_index
+    - search_api.index.news
     - system.menu.main
   module:
     - search_api
     - text
-id: publications_search
-label: 'Publications search'
+id: news_search
+label: 'News search'
 module: views
-description: 'Publications search using Solr'
+description: ''
 tag: ''
-base_table: search_api_index_publications_index
+base_table: search_api_index_news
 base_field: search_api_id
 display:
   default:
@@ -77,10 +77,10 @@ display:
         options:
           view_modes:
             'entity:node':
-              publication: search_index
+              news: search_index
       fields:
         body:
-          table: search_api_index_publications_index
+          table: search_api_index_news
           field: body
           id: body
           entity_type: null
@@ -153,7 +153,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_publications_index
+          table: search_api_index_news
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -164,13 +164,13 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Search publications'
+            label: 'Search news'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: query_publications
+            identifier: query_news
             required: false
             remember: false
             multiple: false
@@ -202,7 +202,7 @@ display:
       sorts:
         field_published_date:
           id: field_published_date
-          table: search_api_index_publications_index
+          table: search_api_index_news
           field: field_published_date
           relationship: none
           group_type: group
@@ -212,7 +212,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Publications
+      title: News
       header: {  }
       footer: {  }
       empty:
@@ -226,7 +226,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'There were no results found.'
+            value: 'There are no results found.'
             format: basic_html
           plugin_id: text
       relationships: {  }
@@ -242,30 +242,30 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.body'
-        - 'config:search_api.index.publications_index'
-  publication_search_page:
+        - 'config:search_api.index.news'
+  news_search_page:
     display_plugin: page
-    id: publication_search_page
+    id: news_search_page
     display_title: Page
     position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: publications
-      menu:
-        type: normal
-        title: Publications
-        description: ''
-        expanded: false
-        parent: ''
-        weight: -46
-        context: '0'
-        menu_name: main
+      path: news
       exposed_block: true
       cache:
         type: none
       defaults:
         cache: false
+      menu:
+        type: normal
+        title: News
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -47
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -276,4 +276,4 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.body'
-        - 'config:search_api.index.publications_index'
+        - 'config:search_api.index.news'
