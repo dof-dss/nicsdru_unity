@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: mahinquiry_theme
 region: content
-weight: 0
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
@@ -20,5 +20,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/search"
+    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/search\r\n/node/*/revisions/view/*"
     negate: true

@@ -1,0 +1,20 @@
+uuid: 527db654-3dc5-46ff-a13d-fef846da1697
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - octf_theme
+id: mainpagecontent
+theme: octf_theme
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,6 +1,6 @@
 {
   "masterPicture": "images/favicon.svg",
-  "iconsPath": "sites/independentreviewofeducation/themes/independentreviewofeducation_theme/images/favicons/",
+  "iconsPath": "/sites/independentreviewofeducation/themes/independentreviewofeducation_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",
