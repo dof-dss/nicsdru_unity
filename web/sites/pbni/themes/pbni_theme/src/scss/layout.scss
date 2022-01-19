@@ -5,7 +5,17 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
-.path-publications {
+#logo {
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  img {
+    height: 80px;
+  }
+}
+.path-publications,
+.path-news {
   .search-page {
     .sidebar-first-layout {
       padding-left: 0;
