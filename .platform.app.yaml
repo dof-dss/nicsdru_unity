@@ -156,6 +156,9 @@ web:
           allow: true
         '^/sitemap\.xml$':
           allow: true
+        '^\/sites\/.+\/themes\/.+\/images\/favicons\/.+\.webmanifest$':
+          allow: true
+          expires: 2w
 
         # Deny direct access to configuration files.
         '^/sites/sites\.php$':
