@@ -19,9 +19,6 @@ bundles:
     bundle: feature
   -
     entity_type: node
-    bundle: featured_content_list
-  -
-    entity_type: node
     bundle: news
   -
     entity_type: node
