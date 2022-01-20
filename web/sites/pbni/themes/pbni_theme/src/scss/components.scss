@@ -5,6 +5,12 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#headerHero {
+  @media screen and (max-width: 765px){
+    background-color: $brand-secondary;
+  }
+}
+
 .sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;
@@ -241,9 +247,11 @@
 #bottom-area {
   .content ul {
     margin-left: 0;
+    display: flex;
+    flex-flow: column;
 
-    @include breakpoint($tab) {
-      display: flex;
+    @include breakpoint($phab) {
+      flex-flow: row;
       justify-content: space-between;
     }
 
@@ -376,8 +384,22 @@
 #footer {
   max-width: 100%;
 
+  #footer-area {
+    .column:last-child {
+      float: none;
+    }
+  }
+
   .column {
-    width: 49%;
+    width: 100%;
+
+    @include breakpoint($tab) {
+      width: 49%;
+
+      &:last-child {
+        float: none;
+      }
+    }
 
     &:first-child {
       padding-right: 0;
@@ -397,7 +419,6 @@
 
       a,
       span.active {
-        display: block;
         margin: 0;
         padding: 0;
         @include adjust-font-size-to(14px);
@@ -413,6 +434,17 @@
   }
 
   #block-footerlogos .content ul {
+
+    li a {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid #333;
+        background: transparent;
+      }
+    }
+
     @include breakpoint($tab) {
       justify-content: end;
       margin-top: 8.2rem;
@@ -422,16 +454,6 @@
 
         &:last-child {
           margin-right: 0;
-        }
-
-        a {
-          border-bottom: none;
-
-          &:hover,
-          &:focus {
-            border-bottom: 2px solid #333;
-            background: transparent;
-          }
         }
       }
     }
