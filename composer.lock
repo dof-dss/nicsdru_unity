@@ -3344,16 +3344,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.10",
+            "version": "9.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "61248f85f78c02e7e0afde2b8a5113d3914bb50f"
+                "reference": "5e2414d2d825999807b6ca3334fc9bdaa11bf8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/61248f85f78c02e7e0afde2b8a5113d3914bb50f",
-                "reference": "61248f85f78c02e7e0afde2b8a5113d3914bb50f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/5e2414d2d825999807b6ca3334fc9bdaa11bf8d4",
+                "reference": "5e2414d2d825999807b6ca3334fc9bdaa11bf8d4",
                 "shasum": ""
             },
             "require": {
@@ -3592,9 +3592,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.2.10"
+                "source": "https://github.com/drupal/core/tree/9.2.11"
             },
-            "time": "2021-11-24T14:27:27+00:00"
+            "time": "2022-01-19T00:14:13+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -3648,16 +3648,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.2.10",
+            "version": "9.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "9beef737bbfd1db4f84ab3c19e5e7ae0b534383b"
+                "reference": "2364afabec59431f0f3e03458af27b7e60b73cec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9beef737bbfd1db4f84ab3c19e5e7ae0b534383b",
-                "reference": "9beef737bbfd1db4f84ab3c19e5e7ae0b534383b",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/2364afabec59431f0f3e03458af27b7e60b73cec",
+                "reference": "2364afabec59431f0f3e03458af27b7e60b73cec",
                 "shasum": ""
             },
             "require": {
@@ -3666,7 +3666,7 @@
                 "doctrine/annotations": "1.13.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.2.10",
+                "drupal/core": "9.2.11",
                 "egulias/email-validator": "2.1.25",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.1",
@@ -3729,9 +3729,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.2.10"
+                "source": "https://github.com/drupal/core-recommended/tree/9.2.11"
             },
-            "time": "2021-11-24T14:27:27+00:00"
+            "time": "2022-01-19T00:14:13+00:00"
         },
         {
             "name": "drupal/csp",
