@@ -240,6 +240,8 @@
 .middle-area,
 #bottom-area {
   .content ul {
+    margin-left: 0;
+
     @include breakpoint($tab) {
       display: flex;
       justify-content: space-between;
