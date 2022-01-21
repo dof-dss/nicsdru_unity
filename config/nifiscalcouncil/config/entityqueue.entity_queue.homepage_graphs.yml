@@ -1,0 +1,29 @@
+uuid: a83685ca-ab69-47d0-95b6-4d5324331942
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: homepage_graphs
+label: 'Homepage graphs'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      feature: feature
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+    auto_entityqueue:
+      auto_add: 1
+      insert_front: 1
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false
