@@ -4,3 +4,465 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#headerHero {
+  @media screen and (max-width: 765px){
+    background-color: $brand-secondary;
+  }
+}
+
+.sidebar-second-layout {
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          @include adjust-font-size-to(16px);
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+    a {
+      border-bottom: 1px solid $link;
+
+      &:hover {
+        border-bottom: 2px solid $link-underline;
+        margin-bottom: 0;
+      }
+
+      &:focus {
+        border-bottom: none;
+        outline: 2px solid $link;
+        outline-offset: 0;
+      }
+    }
+  }
+}
+
+#main-menu {
+  .menu {
+    .menu-item {
+      border-right: 1px solid #fff;
+      font-size: $p-font-size;
+
+      @media screen and (max-width: $tab) {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.open {
+        .menu-toggle-btn {
+          background-color: $brand-secondary;
+          font-weight: normal;
+        }
+      }
+
+      .active {
+        background: $menu-item-hover;
+        border-bottom-color: $brand-secondary;
+        color: #fff;
+      }
+    }
+  }
+
+  .menu-link,
+  .menu .active {
+    color: $charcoal;
+    border-bottom: 5px solid transparent;
+
+    @media screen and (max-width: $tab) {
+      text-align: center;
+    }
+
+    &:hover {
+      color: #fff;
+      border-bottom-color: $brand-secondary;
+    }
+
+    &:focus {
+      background-color: #fae029;
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+
+  .menu-main_sub {
+    background: $charcoal;
+
+    .menu-item {
+      @media screen and (max-width: $tab) {
+        background: $charcoal;
+      }
+    }
+
+    .menu-link,
+    .menu-item span.active {
+      @media screen and (max-width: $tab) {
+        text-align: center;
+      }
+
+      &.active {
+        background: lighten($charcoal, 10%);
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+#top-area {
+  margin: 2rem auto;
+  text-align: left;
+
+  h2 {
+    color: $headings;
+    @include adjust-font-size-to(30px);
+  }
+
+  @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+
+    .column {
+      flex-basis: 48%;
+    }
+  }
+
+  .home-latest-news {
+    @include breakpoint($tab) {
+      display: flex;
+      flex-flow: column;
+
+      .field-photo {
+        float: left;
+        max-width: 37%;
+        margin: 0 2rem 0 0;
+      }
+    }
+
+    h3 {
+      margin: 1rem 0;
+      color: $link;
+
+      @include breakpoint($tab) {
+        @include adjust-font-size-to(18px, 4);
+      }
+    }
+
+    article {
+      margin-bottom: 2.4rem;
+
+      .news-article {
+        min-height: 12.6rem;
+      }
+
+      a.news-link {
+        &:hover,
+        &:focus {
+          border-bottom: none;
+          outline: none;
+          background: none;
+
+          .news-article {
+            outline: 3px solid $link-hover-background;
+            background: $link-hover-background;
+            border-bottom: 3px solid $link-underline;
+            //margin-bottom: -2.4rem;
+
+            h3 {
+              color: $link-hover;
+            }
+          }
+        }
+      }
+    }
+
+    .published-date {
+      margin-bottom: 2.4rem;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 1rem 0 0;
+      color: $white;
+      text-align: center;
+      padding: .6rem 1.6rem;
+      cursor: pointer;
+      background: $charcoal;
+      border-radius: 2.3rem;
+      border: 3px solid transparent;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background: $ash-grey;
+      }
+
+      &:focus {
+        border-color: $black;
+      }
+    }
+  }
+}
+
+#content {
+  .home-latest-news {
+    a[href] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.middle-area {
+  background: #d5e8e9;
+  padding: 6rem;
+
+  .column {
+    max-width: 1044px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+
+.middle-area,
+#bottom-area {
+  .content ul {
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    li {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#bottom-area {
+  .content ul {
+    @media screen and (max-width: 992px){
+      flex-flow: column;
+    }
+  }
+}
+
+#bottom_wrapper {
+  max-width: 1044px;
+  margin: 0 auto;
+  padding: 4.8rem 0 4.2rem;
+
+  .footer-area .column {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+  }
+}
+
+#block-homepage5links,
+#block-homepage3links {
+  .content ul li a {
+    margin: 0;
+    display: block;
+  }
+}
+
+#block-homepage5links {
+  .content {
+    ul {
+      li {
+        height: 20rem;
+        width: 19rem;
+
+        a {
+          padding: 1rem 0 3.7rem 1rem;
+          border-bottom: none;
+          color: $white;
+
+          &:hover,
+          &:focus {
+            border-bottom: none;
+            text-decoration: underline;
+          }
+        }
+
+        &:first-child,
+        &:last-child {
+          a {
+            padding-bottom: 1rem;
+          }
+        }
+
+        &:first-child,
+        &:nth-child(4) {
+          a {
+            background: #00717b;
+          }
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+          a {
+            background: #926d07;
+          }
+        }
+
+
+        &:nth-child(3) {
+          a {
+            background: $brand-secondary;
+          }
+        }
+
+        &:first-child {
+          background: #00717b resolve('for-victims.png');
+        }
+
+        &:nth-child(2) {
+          background: #926d07 resolve('for-the-community.png');
+        }
+
+        &:nth-child(3) {
+          background: $brand-secondary;
+        }
+
+        &:nth-child(4) {
+          background: #00717b resolve('for-the-community.png');
+        }
+
+        &:nth-child(5) {
+          background: #926d07;
+        }
+      }
+    }
+  }
+}
+
+#block-homepage3links {
+  .content {
+    ul {
+      li {
+        padding: 1.8rem 9rem;
+
+        &:first-child {
+          background: resolve('key-facts.png') no-repeat;
+          border: 2px solid #00717b;
+        }
+
+        &:nth-child(2) {
+          background: resolve('real-stories.png') no-repeat;
+          border: 2px solid #926d07;
+        }
+
+        &:last-child {
+          background: resolve('programmes.png') no-repeat;
+          border: 2px solid #926d07;
+        }
+
+        a:hover {
+          margin-bottom: -1px;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  max-width: 100%;
+
+  #footer-area {
+    .column:last-child {
+      float: none;
+    }
+  }
+
+  .column {
+    width: 100%;
+
+    @include breakpoint($tab) {
+      width: 49%;
+
+      &:last-child {
+        float: none;
+      }
+    }
+
+    &:first-child {
+      padding-right: 0;
+    }
+  }
+
+  #footer-menu .menu,
+  #block-footerlogos .content ul {
+    list-style: none;
+
+    @include breakpoint($tab) {
+      display: flex;
+    }
+
+    li {
+      border: none;
+
+      a,
+      span.active {
+        margin: 0;
+        padding: 0;
+        @include adjust-font-size-to(14px);
+      }
+    }
+  }
+
+  #footer-menu .menu {
+    @include breakpoint($tab) {
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  }
+
+  #block-footerlogos .content ul {
+
+    li a {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid #333;
+        background: transparent;
+      }
+    }
+
+    @include breakpoint($tab) {
+      justify-content: end;
+      margin-top: 8.2rem;
+
+      li {
+        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+

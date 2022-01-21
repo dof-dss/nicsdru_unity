@@ -98,12 +98,6 @@
 
 .front {
   #block-chair {
-    .media-image {
-      img {
-        margin-top: 4.5rem;
-      }
-    }
-
     .image-caption {
       padding: 9px 0;
       margin: 0 0 1.8rem 0;
@@ -129,62 +123,42 @@
         justify-content: space-between;
       }
 
-      &#bottom-area-2 {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+      &.featured_2 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
 
         .column {
-          flex-basis: 50%;
+          flex-basis: 48%;
           padding: 0;
           margin: 0;
           width: 100%;
+
+          &:first-of-type {
+            margin-right: 2%;
+          }
 
           .content {
             position: relative;
           }
 
-          .front-bottom-text {
-            position: absolute;
-            z-index: 99;
 
-            h2 {
-              text-align: center;
-              font-size: 4.8vw;
-              line-height: 1.5;
-              margin-top: 6%;
-
-              @include breakpoint($tab) {
-                font-size: 2.4vw;
-              }
-
-              @include breakpoint($max-grid-width) {
-                font-size: 2.5rem;
-              }
-            }
-          }
-
-          &:first-of-type {
-            h2 {
-              padding-right: 4rem;
-              padding-left: 2rem;
-            }
-          }
-
-          &:nth-child(2) {
-            h2 {
-              padding-right: 2rem;
-              padding-left: 4rem;
-            }
+          h2 {
+            margin-left: .5rem;
+            margin-right: .5rem;
           }
         }
-        .front-bottom-image-link {
-          display: inline-block;
-          border-bottom: none;
+      }
+    }
 
-          &:hover {
-            border-bottom: none;
-            filter: brightness(0.95);
-          }
+    #bottom-area-2 .footer-area.featured_2 .column {
+      .feature-image-link {
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          border-bottom: none;
+          filter: brightness(0.95);
         }
       }
     }

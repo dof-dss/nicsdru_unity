@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_summary
     - field.field.node.news.field_teaser
     - node.type.news
   module:
@@ -49,7 +48,7 @@ content:
 hidden:
   content_moderation_control: true
   field_meta_tags: true
-  field_summary: true
   field_teaser: true
   langcode: true
   links: true
+  search_api_excerpt: true
