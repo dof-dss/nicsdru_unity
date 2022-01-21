@@ -5,6 +5,12 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#headerHero {
+  @media screen and (max-width: 765px){
+    background-color: $brand-secondary;
+  }
+}
+
 .sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;
@@ -229,36 +235,46 @@
 
 .middle-area {
   background: #d5e8e9;
-  padding: 6rem 0;
+  padding: 6rem;
 
   .column {
-    max-width: 1024px;
+    max-width: 1044px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 }
 
 .middle-area,
 #bottom-area {
   .content ul {
-    @include breakpoint($tab) {
-      display: flex;
-      justify-content: space-between;
-    }
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
     li {
       display: inline-block;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#bottom-area {
+  .content ul {
+    @media screen and (max-width: 992px){
+      flex-flow: column;
     }
   }
 }
 
 #bottom_wrapper {
-  max-width: 1024px;
+  max-width: 1044px;
   margin: 0 auto;
   padding: 4.8rem 0 4.2rem;
 
   .footer-area .column {
     width: 100%;
-    padding: 0;
+    padding: 0 1rem;
     margin: 0;
   }
 }
@@ -374,8 +390,22 @@
 #footer {
   max-width: 100%;
 
+  #footer-area {
+    .column:last-child {
+      float: none;
+    }
+  }
+
   .column {
-    width: 49%;
+    width: 100%;
+
+    @include breakpoint($tab) {
+      width: 49%;
+
+      &:last-child {
+        float: none;
+      }
+    }
 
     &:first-child {
       padding-right: 0;
@@ -395,7 +425,6 @@
 
       a,
       span.active {
-        display: block;
         margin: 0;
         padding: 0;
         @include adjust-font-size-to(14px);
@@ -411,6 +440,17 @@
   }
 
   #block-footerlogos .content ul {
+
+    li a {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid #333;
+        background: transparent;
+      }
+    }
+
     @include breakpoint($tab) {
       justify-content: end;
       margin-top: 8.2rem;
@@ -420,16 +460,6 @@
 
         &:last-child {
           margin-right: 0;
-        }
-
-        a {
-          border-bottom: none;
-
-          &:hover,
-          &:focus {
-            border-bottom: 2px solid #333;
-            background: transparent;
-          }
         }
       }
     }
