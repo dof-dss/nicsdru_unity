@@ -113,7 +113,7 @@ hooks:
     export FASTLY_API_SERVICE=$temp
 
     # For each multi site - clear cache (including Fastly cache)
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard pbni
     do
       echo "****** $site cache clear ******"
       cd /app/web/sites/$site
@@ -156,6 +156,9 @@ web:
           allow: true
         '^/sitemap\.xml$':
           allow: true
+        '^\/sites\/.+\/themes\/.+\/images\/favicons\/.+\.webmanifest$':
+          allow: true
+          expires: 2w
 
         # Deny direct access to configuration files.
         '^/sites/sites\.php$':

@@ -58,7 +58,7 @@ content:
     type: metatag_empty_formatter
     weight: 7
     region: content
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
   field_publication_date:
@@ -83,7 +83,7 @@ content:
     type: entity_reference_label
     weight: 6
     region: content
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }

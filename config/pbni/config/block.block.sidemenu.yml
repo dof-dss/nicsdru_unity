@@ -5,13 +5,14 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - ctools
     - system
   theme:
     - pbni_theme
 id: sidemenu
 theme: pbni_theme
-region: sidebar_first
-weight: 0
+region: sidebar_second
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,4 +23,12 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

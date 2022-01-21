@@ -55,6 +55,7 @@ install:
   - help
   - history
   - honeypot
+  - http_cache_control
   - image
   - inline_entity_form
   - inline_form_errors
@@ -96,6 +97,7 @@ install:
   - readonlymode
   - rdf
   - redirect
+  - redis
   - responsive_image
   - scheduled_transitions
   - search

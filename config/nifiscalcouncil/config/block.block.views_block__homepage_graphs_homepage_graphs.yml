@@ -1,0 +1,29 @@
+uuid: 49ed69d5-24d8-4ab3-9778-22c5d272c1d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage_graphs
+  module:
+    - system
+    - views
+  theme:
+    - nifiscalcouncil_theme
+id: views_block__homepage_graphs_homepage_graphs
+theme: nifiscalcouncil_theme
+region: bottom_widget_4
+weight: 0
+provider: null
+plugin: 'views_block:homepage_graphs-homepage_graphs'
+settings:
+  id: 'views_block:homepage_graphs-homepage_graphs'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

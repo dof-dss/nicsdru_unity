@@ -1,0 +1,27 @@
+uuid: edf47acb-7aeb-41b7-815f-b9406f75e01b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.feature.field_image
+    - field.field.node.feature.field_link
+    - node.type.feature
+  module:
+    - user
+id: node.feature.teaser
+targetEntityType: node
+bundle: feature
+mode: teaser
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_image: true
+  field_link: true
+  langcode: true
+  search_api_excerpt: true
