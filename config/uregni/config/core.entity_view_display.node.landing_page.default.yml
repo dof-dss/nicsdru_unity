@@ -7,6 +7,7 @@ dependencies:
     - node.type.landing_page
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - user
 third_party_settings:
@@ -30,6 +31,16 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      restricted_categories: {  }
+      allowed_layouts:
+        - layout_onecol
+        - layout_twocol_section
+        - layout_threecol_section
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
