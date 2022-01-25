@@ -30,10 +30,12 @@
  */
 #}
 
-{% if label %}
-<h2>{{ label }}</h2>
-{% endif %}
-
-{% block content %}
-  {{ content }}
-{% endblock %}
+<div{{ attributes }}>
+  {% if label %}
+    <h2>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
