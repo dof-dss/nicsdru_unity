@@ -1,4 +1,4 @@
-uuid: 6af06533-6fbf-4884-8bc6-90df10b564aa
+uuid: 016e4afc-a592-4fbf-9fe1-52544eb86d31
 langcode: en
 status: open
 dependencies: {  }
@@ -8,140 +8,111 @@ weight: 0
 uid: 2
 template: false
 archive: false
-id: victim_information
-title: 'Victim Information Scheme – Online Registration Form'
+id: community_service_project_nomina
+title: 'Community Service Project Nomination Form'
 description: ''
 category: ''
 elements: |-
-  urn_case:
-    '#type': textfield
-    '#title': 'URN / CASE REFERENCE (if known):'
-  victim_details:
+  address_and_contact_details:
     '#type': fieldset
-    '#title': 'VICTIM DETAILS'
+    '#title': 'Address and Contact Details'
     name:
       '#type': textfield
-      '#title': 'Name:'
+      '#title': Name
       '#required': true
-    address_:
+    organisation_if_applicable_:
+      '#type': textfield
+      '#title': 'Organisation (if applicable)'
+    address:
       '#type': fieldset
-      '#title': 'Address:'
+      '#title': Address
       '#required': true
       street_address:
         '#type': textfield
-        '#title': 'Street Address:'
-        '#required': true
+        '#title': 'Street Address'
       address_line_2:
         '#type': textfield
-        '#title': 'Address line 2:'
-      town_city:
+        '#title': 'Address line 2'
+      city:
         '#type': textfield
-        '#title': 'Town/City:'
-        '#required': true
+        '#title': City
       county:
         '#type': textfield
-        '#title': 'County:'
-        '#required': true
+        '#title': County
       postcode:
         '#type': textfield
-        '#title': 'Postcode:'
+        '#title': Postcode
         '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
         '#pattern_error': 'Enter a valid UK postcode.'
-        '#required': true
     telephone:
       '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
+      '#title': 'Telephone number'
+      '#minlength': 11
       '#required': true
     email:
       '#type': email
-      '#title': 'Contact email address:'
-    consent:
-      '#type': checkboxes
-      '#title': 'Consent:'
-      '#options':
-        'I give consent to be contacted': 'I give consent to be contacted'
+      '#title': Email
       '#required': true
-  representative_details:
-    '#type': fieldset
-    '#title': 'REPRESENTATIVE DETAILS'
-    '#description': 'If you are representing the victim, please complete the additional details below:'
-    name_of_representative:
-      '#type': textfield
-      '#title': 'Name of Representative:'
-    relationship_to_victim:
-      '#type': textfield
-      '#title': 'Relationship to victim:'
-    organisation:
-      '#type': textfield
-      '#title': 'Organisation (if applicable):'
-    address_rep:
-      '#type': fieldset
-      '#title': 'Address:'
-      street_address_rep:
-        '#type': textfield
-        '#title': 'Street Address:'
-      address_line_2_rep:
-        '#type': textfield
-        '#title': 'Address line 2:'
-      city_rep:
-        '#type': textfield
-        '#title': 'City:'
-      county_rep:
-        '#type': textfield
-        '#title': 'County:'
-      postcode_rep:
-        '#type': textfield
-        '#title': 'Postcode:'
-        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-        '#pattern_error': 'Enter a valid UK postcode.'
-    telephone_rep:
-      '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
-  victim_information_scheme:
-    '#type': fieldset
-    '#title': 'PBNI Victim Information Scheme'
-    pbni_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the PBNI Victim Information Scheme please tick all that apply:'
-      '#options':
-        'I would like to meet you': 'I would like to meet you'
-        'I would like you to telephone me to discuss issues': 'I would like you to telephone me to discuss issues'
-        'I would like to receive written information': 'I would like to receive written information'
-        'I require special assistance (For example; disability, language, hearing impairment, etc.)': 'I require special assistance (For example; disability, language, hearing impairment, etc.)'
-    special_assistance_requirements:
+    how_did_you_hear_about_community_service:
       '#type': textarea
-      '#title': 'Please provide details of any special assistance requirements:'
+      '#title': 'How did you hear about Community Service?'
       '#maxlength': 750
       '#placeholder': 'Plain text only, 750 characters maximum.'
-      '#states':
-        visible:
-          ':input[name="pbni_victim_information_scheme[I require special assistance (For example; disability, language, hearing impairment, etc.)]"]':
-            checked: true
-  prisoner_release_victim:
+  the_project:
     '#type': fieldset
-    '#title': 'Prisoner Release Victim Information Scheme (PRVIS)'
-    in_relation_to_the_prisoner_release_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the Prisoner Release Victim Information Scheme please tick all that apply. I wish to receive information on:'
-      '#options':
-        'Final Discharge': 'Final Discharge'
-        'Temporary Release Details': 'Temporary Release Details'
-    mentally_disordered_victim_information_scheme:
-      '#type': fieldset
-      '#title': 'Mentally Disordered Victim Information Scheme'
-      in_relation_to_the_mentally_disordered_victim_information_scheme:
-        '#type': checkboxes
-        '#title': 'In relation to the Mentally Disordered Victim Information Scheme please tick all that apply. I wish to receive information on:'
-        '#options':
-          'Discharge Details': 'Discharge Details'
-          'Leave of Absence Details': 'Leave of Absence Details'
-    submit_markup:
-      '#type': webform_markup
-      '#markup': '<strong>Your personal information will be treated in confidence at all times and in accordance with the Data Protection Act.</strong>'
+    '#title': 'The project'
+    name_of_project:
+      '#type': textfield
+      '#title': 'Name of project'
+      '#required': true
+    location_of_project:
+      '#type': textfield
+      '#title': 'Location of project'
+      '#required': true
+    brief_description_of_the_work_you_want_done:
+      '#type': textarea
+      '#title': 'Brief description of the work you want done'
+      '#required': true
+  tick_the_box_if_your_project_meets_the_criteria_shown:
+    '#type': checkboxes
+    '#title': 'Tick the box if your project meets the criteria shown'
+    '#description': '<div class="gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_below gfield_visibility_visible" style="box-sizing: border-box !important; overflow: visible; margin-left: 0px !important; list-style: none !important; max-width: 100%; clear: both; margin-top: 10px; padding-top: 0px; padding-right: 16px; line-height: inherit;">The Community Service team will assess the project for suitability and for health and safety implications. It must be within our capabilities and comply with health and safety standards.</div>'
+    '#description_display': after
+    '#options':
+      'It will benefit the local community': 'It will benefit the local community'
+      'It will not take paid work away from others': 'It will not take paid work away from others'
+      'No one will make a profit from the work': 'No one will make a profit from the work'
+      'It will be worthwhile and constructive': 'It will be worthwhile and constructive'
+      'Offenders will be seen to be positively contributing to the local community': 'Offenders will be seen to be positively contributing to the local community'
+      'Public liability Insurance is in place': 'Public liability Insurance is in place'
+  when_would_you_like_the_work_to_start:
+    '#type': radios
+    '#title': 'When would you like the work to start?'
+    '#options':
+      '1 - 3 months': '1 - 3 months'
+      'Don''t mind': 'Don''t mind'
+    '#default_value': 'Don''t mind'
+  your_preferred_method_of_contact:
+    '#type': radios
+    '#title': 'Your preferred method of contact'
+    '#options':
+      Email: Email
+      Post: Post
+    '#default_value': Post
+  community_service_feedback_text:
+    '#type': processed_text
+    '#text': |
+      <p><strong>Here is some of the feedback PBNI has received from community groups who have benefited from Community Service</strong>:</p>
+
+      <p><strong>Marie Curie Cancer Care</strong><br />
+      “We would like to thank the Probation Board Community Service team for supporting our Walk Ten Belfast event through helping with the clean up the next day. We greatly appreciate and value the work of PBNI. The event was a great success. ”</p>
+
+      <p><strong>Shankill Methodist Church</strong><br />
+      “I want to express the thanks of the church for the excellent work done. It has been of great benefit to us, the work has been done to an excellent standard. ”</p>
+
+      <p><strong>Holy Trinity Primary School</strong><br />
+      “The good work of Community Service should be recognised as they have been extremely important in the work within our school. Work is completed on Saturdays, and always to a high standard. We would like to thank Probation for this work, which would otherwise not be completed due to budget constraints. ”</p>
+    '#format': basic_html
 css: ''
 javascript: ''
 settings:
@@ -151,10 +122,10 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /victim-information-scheme-online-registration-form
+  page_submit_path: /community-service-project-nomination-form
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -223,7 +194,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: true
+  wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -332,7 +303,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: VictimInfo@probation-ni.gov.uk
+      to_mail: communityservice@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
