@@ -1,4 +1,4 @@
-uuid: 6af06533-6fbf-4884-8bc6-90df10b564aa
+uuid: 7b1c9baf-7fbb-481c-a0f8-b19392ac3b8a
 langcode: en
 status: open
 dependencies: {  }
@@ -8,138 +8,76 @@ weight: 0
 uid: 2
 template: false
 archive: false
-id: victim_information
-title: 'Victim Information Scheme – Online Registration Form'
+id: join_email_list
+title: 'Join Email List'
 description: ''
 category: ''
 elements: |-
-  urn_case:
+  name:
+    '#type': fieldset
+    '#title': Name
+    '#required': true
+    first_name:
+      '#type': textfield
+      '#title': First
+    last_name:
+      '#type': textfield
+      '#title': Last
+  organisation:
     '#type': textfield
-    '#title': 'URN / CASE REFERENCE (if known):'
-  victim_details:
-    '#type': fieldset
-    '#title': 'VICTIM DETAILS'
-    name:
-      '#type': textfield
-      '#title': 'Name:'
-      '#required': true
-    address_:
-      '#type': fieldset
-      '#title': 'Address:'
-      '#required': true
-      street_address:
-        '#type': textfield
-        '#title': 'Street Address:'
-        '#required': true
-      address_line_2:
-        '#type': textfield
-        '#title': 'Address line 2:'
-      town_city:
-        '#type': textfield
-        '#title': 'Town/City:'
-        '#required': true
-      county:
-        '#type': textfield
-        '#title': 'County:'
-        '#required': true
-      postcode:
-        '#type': textfield
-        '#title': 'Postcode:'
-        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-        '#pattern_error': 'Enter a valid UK postcode.'
-        '#required': true
-    telephone:
-      '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
-      '#required': true
-    email:
-      '#type': email
-      '#title': 'Contact email address:'
-    consent:
-      '#type': checkboxes
-      '#title': 'Consent:'
-      '#options':
-        'I give consent to be contacted': 'I give consent to be contacted'
-      '#required': true
-  representative_details:
-    '#type': fieldset
-    '#title': 'REPRESENTATIVE DETAILS'
-    '#description': 'If you are representing the victim, please complete the additional details below:'
-    name_of_representative:
-      '#type': textfield
-      '#title': 'Name of Representative:'
-    relationship_to_victim:
-      '#type': textfield
-      '#title': 'Relationship to victim:'
-    organisation:
-      '#type': textfield
-      '#title': 'Organisation (if applicable):'
-    address_rep:
-      '#type': fieldset
-      '#title': 'Address:'
-      street_address_rep:
-        '#type': textfield
-        '#title': 'Street Address:'
-      address_line_2_rep:
-        '#type': textfield
-        '#title': 'Address line 2:'
-      city_rep:
-        '#type': textfield
-        '#title': 'City:'
-      county_rep:
-        '#type': textfield
-        '#title': 'County:'
-      postcode_rep:
-        '#type': textfield
-        '#title': 'Postcode:'
-        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-        '#pattern_error': 'Enter a valid UK postcode.'
-    telephone_rep:
-      '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
-  victim_information_scheme:
-    '#type': fieldset
-    '#title': 'PBNI Victim Information Scheme'
-    pbni_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the PBNI Victim Information Scheme please tick all that apply:'
-      '#options':
-        'I would like to meet you': 'I would like to meet you'
-        'I would like you to telephone me to discuss issues': 'I would like you to telephone me to discuss issues'
-        'I would like to receive written information': 'I would like to receive written information'
-        'I require special assistance (For example; disability, language, hearing impairment, etc.)': 'I require special assistance (For example; disability, language, hearing impairment, etc.)'
-    special_assistance_requirements:
-      '#type': textarea
-      '#title': 'Please provide details of any special assistance requirements:'
-      '#states':
-        visible:
-          ':input[name="pbni_victim_information_scheme[I require special assistance (For example; disability, language, hearing impairment, etc.)]"]':
-            checked: true
-  prisoner_release_victim:
-    '#type': fieldset
-    '#title': 'Prisoner Release Victim Information Scheme (PRVIS)'
-    in_relation_to_the_prisoner_release_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the Prisoner Release Victim Information Scheme please tick all that apply. I wish to receive information on:'
-      '#options':
-        'Final Discharge': 'Final Discharge'
-        'Temporary Release Details': 'Temporary Release Details'
-    mentally_disordered_victim_information_scheme:
-      '#type': fieldset
-      '#title': 'Mentally Disordered Victim Information Scheme'
-      in_relation_to_the_mentally_disordered_victim_information_scheme:
-        '#type': checkboxes
-        '#title': 'In relation to the Mentally Disordered Victim Information Scheme please tick all that apply. I wish to receive information on:'
-        '#options':
-          'Discharge Details': 'Discharge Details'
-          'Leave of Absence Details': 'Leave of Absence Details'
-    submit_markup:
-      '#type': webform_markup
-      '#markup': '<strong>Your personal information will be treated in confidence at all times and in accordance with the Data Protection Act.</strong>'
+    '#title': Organisation
+  consent_to_be_contacted:
+    '#type': checkboxes
+    '#title': 'I have read the PBNI privacy Notice and consent to be contacted:'
+    '#description': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:10.569px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">Please tick one or both boxes.</span>'
+    '#description_display': after
+    '#options':
+      'By Email': 'By Email'
+      'By Post': 'By Post'
+    '#required': true
+  email:
+    '#type': webform_email_confirm
+    '#title': 'Email Address'
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="consent_to_be_contacted[By Email]"]':
+          checked: true
+  postal_address:
+    '#type': webform_address
+    '#title': 'Postal Address'
+    '#title_display': ''
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="consent_to_be_contacted[By Post]"]':
+          checked: true
+    '#address__title': 'Address line 1'
+    '#address_2__title': 'Address line 2'
+    '#city__title': Town/City
+    '#state_province__access': false
+    '#postal_code__title': Postcode
+    '#country__type': textfield
+  information_i_would_like_to_receive:
+    '#type': checkboxes
+    '#title': 'Information I would like to receive:'
+    '#options':
+      'Probation publications (Probation News, reports, consultations, etc.)': 'Probation publications (Probation News, reports, consultations, etc.)'
+      'Event invitations': 'Event invitations'
+      Consultations: Consultations
+    '#required': true
+  withdraw_consent_text:
+    '#type': processed_text
+    '#text': |
+      <p>Your details will be kept secure and confidential on our system. You can amend or withdraw your consent at any time by emailing<span>&nbsp;</span><a href="mailto:ivor.whitten@probation-ni.gov.uk">ivor.whitten@probation-ni.gov.uk</a><span>&nbsp;</span>or by writing to the following address:</p>
+
+      <address>Ivor Whitten<br />
+      Communication Officer<br />
+      Probation Board for Northern Ireland<br />
+      80-90 North Street<br />
+      Belfast<br />
+      BT1 1LD</address>
+    '#format': basic_html
 css: ''
 javascript: ''
 settings:
@@ -149,10 +87,10 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /victim-information-scheme-online-registration-form
+  page_submit_path: /join-email-list
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -221,7 +159,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: true
+  wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -330,7 +268,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: VictimInfo@probation-ni.gov.uk
+      to_mail: info@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -338,7 +276,7 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: '[webform_submission:values:last_name:raw]'
       subject: _default
       body: _default
       excluded_elements: {  }
@@ -375,7 +313,7 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: '[webform_submission:values:last_name:raw]'
       subject: _default
       body: _default
       excluded_elements: {  }
