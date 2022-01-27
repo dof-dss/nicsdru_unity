@@ -1,4 +1,4 @@
-uuid: 6af06533-6fbf-4884-8bc6-90df10b564aa
+uuid: 16270ca4-4879-4dfb-b181-0f76aedcecb5
 langcode: en
 status: open
 dependencies: {  }
@@ -8,140 +8,79 @@ weight: 0
 uid: 2
 template: false
 archive: false
-id: victim_information
-title: 'Victim Information Scheme – Online Registration Form'
+id: online_complaints_form
+title: 'Online Complaints form'
 description: ''
 category: ''
 elements: |-
-  urn_case:
+  name:
     '#type': textfield
-    '#title': 'URN / CASE REFERENCE (if known):'
-  victim_details:
+    '#title': Name
+    '#required': true
+  address:
     '#type': fieldset
-    '#title': 'VICTIM DETAILS'
-    name:
+    '#title': Address
+    street_address:
       '#type': textfield
-      '#title': 'Name:'
-      '#required': true
-    address_:
-      '#type': fieldset
-      '#title': 'Address:'
-      '#required': true
-      street_address:
-        '#type': textfield
-        '#title': 'Street Address:'
-        '#required': true
-      address_line_2:
-        '#type': textfield
-        '#title': 'Address line 2:'
-      town_city:
-        '#type': textfield
-        '#title': 'Town/City:'
-        '#required': true
-      county:
-        '#type': textfield
-        '#title': 'County:'
-        '#required': true
-      postcode:
-        '#type': textfield
-        '#title': 'Postcode:'
-        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-        '#pattern_error': 'Enter a valid UK postcode.'
-        '#required': true
-    telephone:
-      '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
-      '#required': true
-    email:
-      '#type': email
-      '#title': 'Contact email address:'
-    consent:
-      '#type': checkboxes
-      '#title': 'Consent:'
-      '#options':
-        'I give consent to be contacted': 'I give consent to be contacted'
-      '#required': true
-  representative_details:
-    '#type': fieldset
-    '#title': 'REPRESENTATIVE DETAILS'
-    '#description': 'If you are representing the victim, please complete the additional details below:'
-    name_of_representative:
+      '#title': 'Street Address'
+    address_line_2:
       '#type': textfield
-      '#title': 'Name of Representative:'
-    relationship_to_victim:
+      '#title': 'Address line 2'
+    city:
       '#type': textfield
-      '#title': 'Relationship to victim:'
-    organisation:
+      '#title': City
+    postcode:
       '#type': textfield
-      '#title': 'Organisation (if applicable):'
-    address_rep:
-      '#type': fieldset
-      '#title': 'Address:'
-      street_address_rep:
-        '#type': textfield
-        '#title': 'Street Address:'
-      address_line_2_rep:
-        '#type': textfield
-        '#title': 'Address line 2:'
-      city_rep:
-        '#type': textfield
-        '#title': 'City:'
-      county_rep:
-        '#type': textfield
-        '#title': 'County:'
-      postcode_rep:
-        '#type': textfield
-        '#title': 'Postcode:'
-        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-        '#pattern_error': 'Enter a valid UK postcode.'
-    telephone_rep:
-      '#type': tel
-      '#title': 'Telephone:'
-      '#pattern': '^[0-9\(\) \+\-]{6,20}$'
-      '#pattern_error': 'Enter a valid phone number.'
-  victim_information_scheme:
-    '#type': fieldset
-    '#title': 'PBNI Victim Information Scheme'
-    pbni_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the PBNI Victim Information Scheme please tick all that apply:'
-      '#options':
-        'I would like to meet you': 'I would like to meet you'
-        'I would like you to telephone me to discuss issues': 'I would like you to telephone me to discuss issues'
-        'I would like to receive written information': 'I would like to receive written information'
-        'I require special assistance (For example; disability, language, hearing impairment, etc.)': 'I require special assistance (For example; disability, language, hearing impairment, etc.)'
-    special_assistance_requirements:
-      '#type': textarea
-      '#title': 'Please provide details of any special assistance requirements:'
-      '#maxlength': 750
-      '#placeholder': 'Plain text only, 750 characters maximum.'
-      '#states':
-        visible:
-          ':input[name="pbni_victim_information_scheme[I require special assistance (For example; disability, language, hearing impairment, etc.)]"]':
-            checked: true
-  prisoner_release_victim:
-    '#type': fieldset
-    '#title': 'Prisoner Release Victim Information Scheme (PRVIS)'
-    in_relation_to_the_prisoner_release_victim_information_scheme:
-      '#type': checkboxes
-      '#title': 'In relation to the Prisoner Release Victim Information Scheme please tick all that apply. I wish to receive information on:'
-      '#options':
-        'Final Discharge': 'Final Discharge'
-        'Temporary Release Details': 'Temporary Release Details'
-    mentally_disordered_victim_information_scheme:
-      '#type': fieldset
-      '#title': 'Mentally Disordered Victim Information Scheme'
-      in_relation_to_the_mentally_disordered_victim_information_scheme:
-        '#type': checkboxes
-        '#title': 'In relation to the Mentally Disordered Victim Information Scheme please tick all that apply. I wish to receive information on:'
-        '#options':
-          'Discharge Details': 'Discharge Details'
-          'Leave of Absence Details': 'Leave of Absence Details'
-    submit_markup:
-      '#type': webform_markup
-      '#markup': '<strong>Your personal information will be treated in confidence at all times and in accordance with the Data Protection Act.</strong>'
+      '#title': Postcode
+      '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
+      '#pattern_error': 'Enter a valid UK postcode.'
+  home_telephone_number:
+    '#type': tel
+    '#title': 'Home Telephone number'
+    '#minlength': 11
+  mobile_telephone_number:
+    '#type': tel
+    '#title': 'Mobile Telephone number'
+    '#minlength': 11
+  email:
+    '#type': email
+    '#title': Email
+  what_is_your_complaint_about:
+    '#type': textarea
+    '#title': 'What is your complaint about? (please give as much detail as possible)'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  when_did_it_happen:
+    '#type': textarea
+    '#title': 'When did it happen?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  what_do_you_think_should_be_done_to_put_things_right:
+    '#type': textarea
+    '#title': 'What do you think should be done to put things right?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  any_special_needs:
+    '#type': textarea
+    '#title': 'Please give details of any special needs we need to bear in mind when we are dealing with your complaint or communicating with you.'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  if_you_have_already_complained_about_this_issue_please:
+    '#type': textarea
+    '#title': 'If you have already complained about this issue, please tell us who you raised it with and what action they took?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+    '#required': true
+  pbni_value_your_feedback:
+    '#type': checkbox
+    '#title': 'PBNI value your feedback on how we handled your complaint and may wish to contact you after we deal with your complaint. If you do not want us to make contact, please tick the box.'
+  markup:
+    '#type': webform_markup
+    '#markup': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:13px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">The details of your complaint will be logged and this information will not be used for any other purpose other than the administration of your complaint.</span>'
 css: ''
 javascript: ''
 settings:
@@ -151,10 +90,10 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /victim-information-scheme-online-registration-form
+  page_submit_path: /online-complaints-form
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -223,7 +162,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: true
+  wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -332,7 +271,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: VictimInfo@probation-ni.gov.uk
+      to_mail: complaints@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
