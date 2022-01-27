@@ -63,7 +63,6 @@ elements: |-
       '#options':
         'I give consent to be contacted': 'I give consent to be contacted'
       '#required': true
-      '#wrapper_type': form_element
   representative_details:
     '#type': fieldset
     '#title': 'REPRESENTATIVE DETAILS'
@@ -113,7 +112,6 @@ elements: |-
         'I would like you to telephone me to discuss issues': 'I would like you to telephone me to discuss issues'
         'I would like to receive written information': 'I would like to receive written information'
         'I require special assistance (For example; disability, language, hearing impairment, etc.)': 'I require special assistance (For example; disability, language, hearing impairment, etc.)'
-      '#wrapper_type': form_element
     special_assistance_requirements:
       '#type': textarea
       '#title': 'Please provide details of any special assistance requirements:'
@@ -130,7 +128,6 @@ elements: |-
       '#options':
         'Final Discharge': 'Final Discharge'
         'Temporary Release Details': 'Temporary Release Details'
-      '#wrapper_type': form_element
     mentally_disordered_victim_information_scheme:
       '#type': fieldset
       '#title': 'Mentally Disordered Victim Information Scheme'
@@ -140,7 +137,6 @@ elements: |-
         '#options':
           'Discharge Details': 'Discharge Details'
           'Leave of Absence Details': 'Leave of Absence Details'
-        '#wrapper_type': form_element
     submit_markup:
       '#type': webform_markup
       '#markup': '<strong>Your personal information will be treated in confidence at all times and in accordance with the Data Protection Act.</strong>'
