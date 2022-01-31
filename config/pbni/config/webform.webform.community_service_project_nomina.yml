@@ -30,20 +30,25 @@ elements: |-
       street_address:
         '#type': textfield
         '#title': 'Street Address'
+        '#required': true
       address_line_2:
         '#type': textfield
         '#title': 'Address line 2'
+        '#required': true
       city:
         '#type': textfield
         '#title': City
+        '#required': true
       county:
         '#type': textfield
         '#title': County
+        '#required': true
       postcode:
         '#type': textfield
         '#title': Postcode
         '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
         '#pattern_error': 'Enter a valid UK postcode.'
+        '#required': true
     telephone:
       '#type': tel
       '#title': 'Telephone number'
@@ -72,6 +77,8 @@ elements: |-
     brief_description_of_the_work_you_want_done:
       '#type': textarea
       '#title': 'Brief description of the work you want done'
+      '#maxlength': 750
+      '#placeholder': 'Plain text only, 750 characters maximum.'
       '#required': true
   tick_the_box_if_your_project_meets_the_criteria_shown:
     '#type': checkboxes
@@ -95,6 +102,8 @@ elements: |-
   your_preferred_method_of_contact:
     '#type': radios
     '#title': 'Your preferred method of contact'
+    '#description': '* The details of your nomination will be logged and this information will not be used for any other purpose other than the administration of our Community Service nominations.'
+    '#description_display': after
     '#options':
       Email: Email
       Post: Post
