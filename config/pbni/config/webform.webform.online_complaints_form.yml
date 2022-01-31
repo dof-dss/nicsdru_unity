@@ -68,13 +68,11 @@ elements: |-
     '#title': 'Please give details of any special needs we need to bear in mind when we are dealing with your complaint or communicating with you.'
     '#maxlength': 750
     '#placeholder': 'Plain text only, 750 characters maximum.'
-    '#required': true
   if_you_have_already_complained_about_this_issue_please:
     '#type': textarea
     '#title': 'If you have already complained about this issue, please tell us who you raised it with and what action they took?'
     '#maxlength': 750
     '#placeholder': 'Plain text only, 750 characters maximum.'
-    '#required': true
   pbni_value_your_feedback:
     '#type': checkbox
     '#title': 'PBNI value your feedback on how we handled your complaint and may wish to contact you after we deal with your complaint. If you do not want us to make contact, please tick the box.'

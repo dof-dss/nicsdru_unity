@@ -20,9 +20,11 @@ elements: |-
     first_name:
       '#type': textfield
       '#title': First
+      '#required': true
     last_name:
       '#type': textfield
       '#title': Last
+      '#required': true
   organisation:
     '#type': textfield
     '#title': Organisation
@@ -57,7 +59,6 @@ elements: |-
     '#city__title': Town/City
     '#state_province__access': false
     '#postal_code__title': Postcode
-    '#country__type': textfield
   information_i_would_like_to_receive:
     '#type': checkboxes
     '#title': 'Information I would like to receive:'
