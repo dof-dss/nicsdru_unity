@@ -102,6 +102,8 @@ elements: |-
   your_preferred_method_of_contact:
     '#type': radios
     '#title': 'Your preferred method of contact'
+    '#description': '* The details of your nomination will be logged and this information will not be used for any other purpose other than the administration of our Community Service nominations.'
+    '#description_display': after
     '#options':
       Email: Email
       Post: Post
