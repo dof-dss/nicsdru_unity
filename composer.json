@@ -167,7 +167,8 @@
         "drupal/stage_file_proxy": "^1.1",
         "kint-php/kint": "^3.3",
         "mglaman/drupal-check": "^1.1",
-        "previousnext/phpunit-finder": "^1.0@alpha"
+        "previousnext/phpunit-finder": "^1.0@alpha",
+        "slevomat/coding-standard": "^7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
