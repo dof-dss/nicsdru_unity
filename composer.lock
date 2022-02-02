@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.44",
+            "version": "v0.1.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "9e3871d2129a2f661eb46fd3f98408187cfb7ef0"
+                "reference": "9dd276e4448cdea7991425b3a75ee1c7a95ace3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/9e3871d2129a2f661eb46fd3f98408187cfb7ef0",
-                "reference": "9e3871d2129a2f661eb46fd3f98408187cfb7ef0",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/9dd276e4448cdea7991425b3a75ee1c7a95ace3f",
+                "reference": "9dd276e4448cdea7991425b3a75ee1c7a95ace3f",
                 "shasum": ""
             },
             "require": {
@@ -1939,9 +1939,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.44"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.45"
             },
-            "time": "2022-01-21T10:54:04+00:00"
+            "time": "2022-02-02T12:05:48+00:00"
         },
         {
             "name": "drupal/address",
