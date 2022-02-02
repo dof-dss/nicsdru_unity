@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.basic_page.field_next_audit_due
     - node.type.basic_page
   module:
+    - datetime
     - field_group
     - layout_builder
     - metatag
@@ -21,6 +22,7 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
+        - field_next_audit_due
         - field_meta_tags
       parent_name: ''
       weight: 1
@@ -53,13 +55,22 @@ content:
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 3
+    weight: 1
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+  field_next_audit_due:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_next_audit_due: true
   langcode: true
   links: true
+  search_api_excerpt: true

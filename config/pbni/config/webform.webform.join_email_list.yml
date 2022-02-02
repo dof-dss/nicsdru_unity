@@ -1,47 +1,84 @@
-uuid: c479beb3-cbbb-413b-af6d-1bb65ba72867
+uuid: 7b1c9baf-7fbb-481c-a0f8-b19392ac3b8a
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform
-_core:
-  default_config_hash: Q4QShRpLvlheaOjtXj4lKYXCOGMiuBopVI6GYCCWRK8
+dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: null
+uid: 2
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: join_email_list
+title: 'Join Email List'
+description: ''
 category: ''
-elements: |
+elements: |-
   name:
-    '#title': 'Your Name'
-    '#type': textfield
+    '#type': fieldset
+    '#title': Name
     '#required': true
-    '#default_value': '[current-user:display-name]'
+    first_name:
+      '#type': textfield
+      '#title': First
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': Last
+      '#required': true
+  organisation:
+    '#type': textfield
+    '#title': Organisation
+  consent_to_be_contacted:
+    '#type': checkboxes
+    '#title': 'I have read the PBNI privacy Notice and consent to be contacted:'
+    '#description': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:10.569px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">Please tick one or both boxes.</span>'
+    '#description_display': after
+    '#options':
+      'By Email': 'By Email'
+      'By Post': 'By Post'
+    '#required': true
   email:
-    '#title': 'Your Email'
-    '#type': email
+    '#type': webform_email_confirm
+    '#title': 'Email Address'
     '#required': true
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
-    '#type': textfield
+    '#states':
+      visible:
+        ':input[name="consent_to_be_contacted[By Email]"]':
+          checked: true
+  postal_address:
+    '#type': webform_address
+    '#title': 'Postal Address'
+    '#title_display': ''
     '#required': true
-    '#test': 'Testing contact webform from [site:name]'
-  message:
-    '#title': Message
-    '#type': textarea
+    '#states':
+      visible:
+        ':input[name="consent_to_be_contacted[By Post]"]':
+          checked: true
+    '#address__title': 'Address line 1'
+    '#address_2__title': 'Address line 2'
+    '#city__title': Town/City
+    '#state_province__access': false
+    '#postal_code__title': Postcode
+  information_i_would_like_to_receive:
+    '#type': checkboxes
+    '#title': 'Information I would like to receive:'
+    '#options':
+      'Probation publications (Probation News, reports, consultations, etc.)': 'Probation publications (Probation News, reports, consultations, etc.)'
+      'Event invitations': 'Event invitations'
+      Consultations: Consultations
     '#required': true
-    '#test': 'Please ignore this email.'
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+  withdraw_consent_text:
+    '#type': processed_text
+    '#text': |
+      <p>Your details will be kept secure and confidential on our system. You can amend or withdraw your consent at any time by emailing<span>&nbsp;</span><a href="mailto:ivor.whitten@probation-ni.gov.uk">ivor.whitten@probation-ni.gov.uk</a><span>&nbsp;</span>or by writing to the following address:</p>
+
+      <address>Ivor Whitten<br />
+      Communication Officer<br />
+      Probation Board for Northern Ireland<br />
+      80-90 North Street<br />
+      Belfast<br />
+      BT1 1LD</address>
+    '#format': basic_html
 css: ''
 javascript: ''
 settings:
@@ -51,10 +88,10 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /join-email-list
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -141,10 +178,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: 'Thank you for your submission.'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -156,16 +193,16 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
-  limit_user_message: ''
+  limit_user: 5
+  limit_user_interval: 86400
+  limit_user_message: 'Maximum submissions per user per day is 5. You have reached your maximum.'
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
   entity_limit_user: null
   entity_limit_user_interval: null
-  purge: none
-  purge_days: null
+  purge: completed
+  purge_days: 1
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
@@ -221,55 +258,18 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    label: 'Email confirmation'
+    label: Email
     notes: ''
-    handler_id: email_confirmation
-    status: true
+    handler_id: email
+    status: false
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[current-user:mail]'
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    notes: ''
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
+      to_mail: info@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -277,9 +277,9 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      from_name: '[webform_submission:values:last_name:raw]'
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -288,11 +288,48 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
-      parameters: {  }
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  email_1:
+    id: email
+    label: Email
+    notes: ''
+    handler_id: email_1
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: test@test.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:last_name:raw]'
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
