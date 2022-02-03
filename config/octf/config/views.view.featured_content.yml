@@ -262,11 +262,11 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: '{{ field_link_url__title }}'
+            text: ''
             make_link: false
-            path: '{{ field_link_url }}'
-            absolute: true
-            external: true
+            path: ''
+            absolute: false
+            external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
