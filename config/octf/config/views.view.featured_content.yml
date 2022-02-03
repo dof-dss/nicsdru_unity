@@ -174,7 +174,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -262,11 +262,11 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: '{{ field_link_url__title }}'
             make_link: false
-            path: ''
-            absolute: false
-            external: false
+            path: '{{ field_link_url }}'
+            absolute: true
+            external: true
             replace_spaces: false
             path_case: none
             trim_whitespace: false
