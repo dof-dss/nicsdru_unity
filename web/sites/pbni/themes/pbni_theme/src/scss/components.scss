@@ -73,6 +73,7 @@
       &.open {
         .menu-toggle-btn {
           background-color: $brand-secondary;
+          color: $white;
           font-weight: normal;
         }
       }
@@ -376,7 +377,7 @@
 
         &:last-child {
           background: resolve('programmes.png') no-repeat;
-          border: 2px solid #926d07;
+          border: 2px solid $brand-secondary;
         }
 
         a:hover {
