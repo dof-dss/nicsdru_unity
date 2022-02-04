@@ -34,7 +34,6 @@ elements: |-
       address_line_2:
         '#type': textfield
         '#title': 'Address line 2:'
-        '#required': true
       town_city:
         '#type': textfield
         '#title': 'Town/City:'
