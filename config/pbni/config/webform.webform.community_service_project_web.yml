@@ -1,4 +1,4 @@
-uuid: 16270ca4-4879-4dfb-b181-0f76aedcecb5
+uuid: b8ed47e4-f789-4157-a067-72de3ed75217
 langcode: en
 status: open
 dependencies: {  }
@@ -8,77 +8,120 @@ weight: 0
 uid: 2
 template: false
 archive: false
-id: online_complaints_form
-title: 'Online Complaints form'
+id: community_service_project_web
+title: 'Community Service Project webform'
 description: ''
 category: ''
 elements: |-
-  name:
-    '#type': textfield
-    '#title': Name
-    '#required': true
-  address:
+  address_and_contact_details:
     '#type': fieldset
-    '#title': Address
-    street_address:
+    '#title': 'Address and Contact Details'
+    name:
       '#type': textfield
-      '#title': 'Street Address'
-    address_line_2:
+      '#title': Name
+      '#required': true
+    organisation_if_applicable_:
       '#type': textfield
-      '#title': 'Address line 2'
-    city:
+      '#title': 'Organisation (if applicable)'
+    address:
+      '#type': fieldset
+      '#title': Address
+      '#required': true
+      street_address:
+        '#type': textfield
+        '#title': 'Street Address'
+        '#required': true
+      address_line_2:
+        '#type': textfield
+        '#title': 'Address line 2'
+        '#required': true
+      city:
+        '#type': textfield
+        '#title': City
+        '#required': true
+      county:
+        '#type': textfield
+        '#title': County
+        '#required': true
+      postcode:
+        '#type': textfield
+        '#title': Postcode
+        '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
+        '#pattern_error': 'Enter a valid UK postcode.'
+        '#required': true
+    telephone:
+      '#type': tel
+      '#title': 'Telephone number'
+      '#minlength': 11
+      '#required': true
+    email:
+      '#type': email
+      '#title': Email
+      '#required': true
+    how_did_you_hear_about_community_service:
+      '#type': textarea
+      '#title': 'How did you hear about Community Service?'
+      '#maxlength': 750
+      '#placeholder': 'Plain text only, 750 characters maximum.'
+  the_project:
+    '#type': fieldset
+    '#title': 'The project'
+    name_of_project:
       '#type': textfield
-      '#title': City
-    postcode:
+      '#title': 'Name of project'
+      '#required': true
+    location_of_project:
       '#type': textfield
-      '#title': Postcode
-      '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-      '#pattern_error': 'Enter a valid UK postcode.'
-  home_telephone_number:
-    '#type': tel
-    '#title': 'Home Telephone number'
-    '#minlength': 11
-  mobile_telephone_number:
-    '#type': tel
-    '#title': 'Mobile Telephone number'
-    '#minlength': 11
-  email:
-    '#type': email
-    '#title': Email
-  what_is_your_complaint_about:
-    '#type': textarea
-    '#title': 'What is your complaint about? (please give as much detail as possible)'
-    '#maxlength': 750
-    '#placeholder': 'Plain text only, 750 characters maximum.'
-    '#required': true
-  when_did_it_happen:
-    '#type': textarea
-    '#title': 'When did it happen?'
-    '#maxlength': 750
-    '#placeholder': 'Plain text only, 750 characters maximum.'
-    '#required': true
-  what_do_you_think_should_be_done_to_put_things_right:
-    '#type': textarea
-    '#title': 'What do you think should be done to put things right?'
-    '#maxlength': 750
-    '#placeholder': 'Plain text only, 750 characters maximum.'
-    '#required': true
-  any_special_needs:
-    '#type': textarea
-    '#title': 'Please give details of any special needs we need to bear in mind when we are dealing with your complaint or communicating with you.'
-    '#maxlength': 750
-    '#placeholder': 'Plain text only, 750 characters maximum.'
-  if_you_have_already_complained_about_this_issue_please:
-    '#type': textarea
-    '#title': 'If you have already complained about this issue, please tell us who you raised it with and what action they took?'
-    '#maxlength': 750
-    '#placeholder': 'Plain text only, 750 characters maximum.'
-  pbni_value_your_feedback:
-    '#type': checkbox
-    '#title': 'PBNI value your feedback on how we handled your complaint and may wish to contact you after we deal with your complaint. If you do not want us to make contact, please tick the box.'
-  markup:
-    '#type': webform_markup
-    '#markup': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:13px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">The details of your complaint will be logged and this information will not be used for any other purpose other than the administration of your complaint.</span>'
+      '#title': 'Location of project'
+      '#required': true
+    brief_description_of_the_work_you_want_done:
+      '#type': textarea
+      '#title': 'Brief description of the work you want done'
+      '#maxlength': 750
+      '#placeholder': 'Plain text only, 750 characters maximum.'
+      '#required': true
+  tick_the_box_if_your_project_meets_the_criteria_shown:
+    '#type': checkboxes
+    '#title': 'Tick the box if your project meets the criteria shown'
+    '#description': '<div class="gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_below gfield_visibility_visible" style="box-sizing: border-box !important; overflow: visible; margin-left: 0px !important; list-style: none !important; max-width: 100%; clear: both; margin-top: 10px; padding-top: 0px; padding-right: 16px; line-height: inherit;">The Community Service team will assess the project for suitability and for health and safety implications. It must be within our capabilities and comply with health and safety standards.</div>'
+    '#description_display': after
+    '#options':
+      'It will benefit the local community': 'It will benefit the local community'
+      'It will not take paid work away from others': 'It will not take paid work away from others'
+      'No one will make a profit from the work': 'No one will make a profit from the work'
+      'It will be worthwhile and constructive': 'It will be worthwhile and constructive'
+      'Offenders will be seen to be positively contributing to the local community': 'Offenders will be seen to be positively contributing to the local community'
+      'Public liability Insurance is in place': 'Public liability Insurance is in place'
+  when_would_you_like_the_work_to_start:
+    '#type': radios
+    '#title': 'When would you like the work to start?'
+    '#options':
+      '1 - 3 months': '1 - 3 months'
+      'Don''t mind': 'Don''t mind'
+    '#default_value': 'Don''t mind'
+  your_preferred_method_of_contact:
+    '#type': radios
+    '#title': 'Your preferred method of contact'
+    '#description': '* The details of your nomination will be logged and this information will not be used for any other purpose other than the administration of our Community Service nominations.'
+    '#description_display': after
+    '#options':
+      Email: Email
+      Post: Post
+    '#default_value': Post
+  community_service_feedback_text:
+    '#type': processed_text
+    '#text': |
+      <p><strong>Here is some of the feedback PBNI has received from community groups who have benefited from Community Service</strong>:</p>
+
+      <p><strong>Marie Curie Cancer Care</strong><br />
+      “We would like to thank the Probation Board Community Service team for supporting our Walk Ten Belfast event through helping with the clean up the next day. We greatly appreciate and value the work of PBNI. The event was a great success. ”</p>
+
+      <p><strong>Shankill Methodist Church</strong><br />
+      “I want to express the thanks of the church for the excellent work done. It has been of great benefit to us, the work has been done to an excellent standard. ”</p>
+
+      <p><strong>Holy Trinity Primary School</strong><br />
+      “The good work of Community Service should be recognised as they have been extremely important in the work within our school. Work is completed on Saturdays, and always to a high standard. We would like to thank Probation for this work, which would otherwise not be completed due to budget constraints. ”</p>
+    '#format': basic_html
 css: ''
 javascript: ''
 settings:
@@ -88,7 +131,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /online-complaints-form
+  page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -269,7 +312,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: complaints@probation-ni.gov.uk
+      to_mail: communityservice@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
