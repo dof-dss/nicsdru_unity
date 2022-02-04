@@ -395,21 +395,21 @@
     .column:last-child {
       float: none;
     }
-  }
 
-  .column {
-    width: 100%;
+    .column {
+      width: 100%;
 
-    @include breakpoint($tab) {
-      width: 49%;
+      @include breakpoint($tab) {
+        width: 49%;
 
-      &:last-child {
-        float: none;
+        &:last-child {
+          float: right;
+        }
       }
-    }
 
-    &:first-child {
-      padding-right: 0;
+      &:first-child {
+        padding-right: 0;
+      }
     }
   }
 
