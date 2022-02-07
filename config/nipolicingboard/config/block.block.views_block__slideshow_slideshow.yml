@@ -1,0 +1,24 @@
+uuid: 9eca8d2b-bd90-4c47-8108-b319e97a27a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - views
+  theme:
+    - nipolicingboard_theme
+id: views_block__slideshow_slideshow
+theme: nipolicingboard_theme
+region: slideshow
+weight: 0
+provider: null
+plugin: 'views_block:slideshow-slideshow'
+settings:
+  id: 'views_block:slideshow-slideshow'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

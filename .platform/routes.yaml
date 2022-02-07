@@ -159,6 +159,70 @@
 
 #---------------------------------
 
+"https://www.mahinquiry.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://mahinquiry.org.uk.{default}/":
+  type: redirect
+  to: "https://www.mahinquiry.org.uk.{default}/"
+
+"https://mahinquiry.org.uk/":
+  type: redirect
+  to: "https://www.mahinquiry.org.uk/"
+
+#---------------------------------
+
+"https://www.independentreviewofeducation.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://independentreviewofeducation.org.uk.{default}/":
+  type: redirect
+  to: "https://www.independentreviewofeducation.org.uk.{default}/"
+
+"https://independentreviewofeducation.org.uk/":
+  type: redirect
+  to: "https://www.independentreviewofeducation.org.uk/"
+
+#---------------------------------
+
+"https://www.nipolicingboard.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://nipolicingboard.org.uk.{default}/":
+  type: redirect
+  to: "https://www.nipolicingboard.org.uk.{default}/"
+
+"https://nipolicingboard.org.uk/":
+  type: redirect
+  to: "https://www.nipolicingboard.org.uk/"
+
+#---------------------------------
+
+"https://www.pbni.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://pbni.org.uk.{default}/":
+  type: redirect
+  to: "https://www.pbni.org.uk.{default}/"
+
+"https://pbni.org.uk/":
+  type: redirect
+  to: "https://www.pbni.org.uk/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream

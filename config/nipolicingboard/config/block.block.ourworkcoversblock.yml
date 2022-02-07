@@ -1,0 +1,25 @@
+uuid: 1820dbc3-73c4-4f89-9a86-1300aeedf2ce
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:6bf1e1ba-5ce6-4255-be31-f212cb9210a5'
+  module:
+    - block_content
+  theme:
+    - nipolicingboard_theme
+id: ourworkcoversblock
+theme: nipolicingboard_theme
+region: front_welcome
+weight: 0
+provider: null
+plugin: 'block_content:6bf1e1ba-5ce6-4255-be31-f212cb9210a5'
+settings:
+  id: 'block_content:6bf1e1ba-5ce6-4255-be31-f212cb9210a5'
+  label: 'Our work covers'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

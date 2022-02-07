@@ -197,44 +197,58 @@ jobs:
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
-                platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              fi
+                result2=$(platform drush "pml -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
+                if [[ -n $result2 ]]; then
+                  echo "***** Uninstall Fastly - ${site} *****"
+                  platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+                fi
+            fi
             done
       - run:
           name: Clear cache before config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Clear Cache - ${site} *****"
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
+                echo "***** Config Import - ${site} *****"
                 platform drush "cim -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
       - run:
-          name: Force purge of Solr index
-          command: /home/circleci/.platformsh/bin/platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH "curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' && curl http://${PLATFORM_SOLR_HOST_UREGNI}/solr/uregni_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
-      - run:
-          name: Rebuild the Solr index
+          name: Purge and rebuild Solr indexes
           command: |
-            for site in uregni
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
             do
-              platform drush 'sapi-c -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              platform drush 'sapi-r -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              platform drush 'sapi-i -l uregni' -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ -n $result ]]; then
+                result2=$(platform drush "pml --status=enabled -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "solr" || true) )
+                if [[ -n $result2 ]]; then
+                  echo "***** Purge Solr index for - ${site} *****"
+                  platform ssh -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH \
+                    "curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
+                      && curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
+                  echo "***** Rebuild the Solr index for - ${site} *****"
+                  platform drush "sapi-c -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+                  platform drush "sapi-r -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+                  platform drush "sapi-i -l ${site}" -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+                fi
+              fi
             done
 
 workflows:

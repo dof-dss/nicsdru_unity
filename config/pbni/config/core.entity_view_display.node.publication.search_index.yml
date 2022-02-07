@@ -1,0 +1,52 @@
+uuid: 8cdc51ec-9f95-4389-ae3e-4e7342af5a8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.publication.body
+    - field.field.node.publication.field_attachment
+    - field.field.node.publication.field_meta_tags
+    - field.field.node.publication.field_publication_type
+    - field.field.node.publication.field_published_date
+    - node.type.publication
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
+id: node.publication.search_index
+targetEntityType: node
+bundle: publication
+mode: search_index
+content:
+  field_publication_type:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_published_date:
+    weight: 0
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_attachment: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

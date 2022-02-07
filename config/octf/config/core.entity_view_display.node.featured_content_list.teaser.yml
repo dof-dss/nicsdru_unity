@@ -1,6 +1,6 @@
-uuid: 9218036c-754d-4597-84de-f42305ac4ec8
+uuid: cf53c8d6-8ed5-44b8-bdd8-a42fa37cc5f9
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -9,8 +9,6 @@ dependencies:
     - node.type.featured_content_list
   module:
     - user
-_core:
-  default_config_hash: eAFeJJ-1uXy5Lghk1AWZhy44kTZkigUYSgS9q7VYJL8
 id: node.featured_content_list.teaser
 targetEntityType: node
 bundle: featured_content_list

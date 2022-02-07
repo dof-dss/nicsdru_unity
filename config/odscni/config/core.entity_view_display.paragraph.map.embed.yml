@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.embed
     - field.field.paragraph.map.field_location
-    - filter.format.plain_text
+    - filter.format.basic_html
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
@@ -27,7 +27,7 @@ content:
       title: ''
       info_text:
         value: ''
-        format: plain_text
+        format: basic_html
       centre:
         fit_bounds:
           enable: true

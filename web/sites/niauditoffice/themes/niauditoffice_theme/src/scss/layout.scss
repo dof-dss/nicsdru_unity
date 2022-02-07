@@ -71,7 +71,11 @@
 
 #top-area {
   text-align: left;
-  margin-top: 2rem;
+  margin: 2rem auto;
+
+  @include breakpoint($tab) {
+    display: flex;
+  }
 
   .column {
     background: $grey-light;
@@ -84,6 +88,7 @@
     h2 {
       @include adjust-font-size-to(30px);
       text-align: center;
+      color: $text;
     }
 
     .item {

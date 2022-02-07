@@ -39,6 +39,12 @@ relationships:
   niauditoffice_solr: 'solr:niauditoffice'
   octf: 'db:octf'
   urologyservicesinquiry: 'db:urologyservicesinquiry'
+  mahinquiry: 'db:mahinquiry'
+  independentreviewofeducation: 'db:independentreviewofeducation'
+  nipolicingboard: 'db:nipolicingboard'
+  nipolicingboard_solr: 'solr:nipolicingboard'
+  pbni: 'db:pbni'
+  pbni_solr: 'solr:pbni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -72,19 +78,46 @@ build:
 hooks:
   build: |
     set -e
-  # The deploy hook runs after your application has been deployed and started.
-  deploy: |
+  # During post_deploy the sites are available (see https://docs.platform.sh/configuration/app/hooks.html)
+  post_deploy: |
     set -e
 
-    # For each multi site - rebuild caches, run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni niauditoffice nifiscalcouncil octf urologyservicesinquiry
+    # Save the Fastly service value and overwrite with a dummy one in order to break
+    # the connection to Fastly, otherwise any cache clear of any site will purge the
+    # entire Fastly cache - we don't want this to happen as we'd like Fastly to continue
+    # serving the sites to anonymous users during a release.
+    echo "***** Breaking connection to Fastly ******"
+    temp=$FASTLY_API_SERVICE
+    export FASTLY_API_SERVICE=dummyservice
+
+    # For each multi site - run db-updates and import config.
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
+      # Readonlymode module should be installed on all sites,
+      # but we'll just make sure.
+      drush en readonlymode -l $site -y
+      # Set site to readonly just in case editors are logged on.
+      drush -l $site cset readonlymode.settings enabled 1 -y
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
       drush -l $site import-all-if-installed safe
+      # Turn off readonly mode.
+      drush -l $site cset readonlymode.settings enabled 0 -y
+    done
+
+    # Reconnect to Fastly
+    echo "***** Reinstate connection to Fastly ******"
+    export FASTLY_API_SERVICE=$temp
+
+    # For each multi site - clear cache (including Fastly cache)
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard pbni
+    do
+      echo "****** $site cache clear ******"
+      cd /app/web/sites/$site
+      drush -l $site -y cache-rebuild
     done
 
 # The configuration of app when it is exposed to the web.
@@ -123,6 +156,9 @@ web:
           allow: true
         '^/sitemap\.xml$':
           allow: true
+        '^\/sites\/.+\/themes\/.+\/images\/favicons\/.+\.webmanifest$':
+          allow: true
+          expires: 2w
 
         # Deny direct access to configuration files.
         '^/sites/sites\.php$':
@@ -148,23 +184,35 @@ web:
 # The configuration of scheduled execution.
 crons:
   uregni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/uregni ; drush core-cron'
   odscni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/odscni ; drush core-cron'
   fiscalcommissionni:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
   niauditoffice:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/niauditoffice ; drush core-cron'
   nifiscalcouncil:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
   octf:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/octf ; drush core-cron'
   urologyservicesinquiry:
-    spec: '*/5 * * * *'
+    spec: '10 * * * *'
     cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'
+  mahinquiry:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/mahinquiry ; drush core-cron'
+  employmenttribunalsni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
+  independentreviewofeducation:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
+  nipolicingboard:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/nipolicingboard ; drush core-cron'

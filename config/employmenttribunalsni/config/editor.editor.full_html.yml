@@ -1,4 +1,4 @@
-uuid: 3ba3f75f-f94b-49a9-b683-cc28ac930acd
+uuid: 3bf95f31-3ae4-4796-8d77-48b51e29087e
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+  default_config_hash: kmvRxbwKE0FRWCwWZeyskrdtewzUb1HbZ9eERJDwBwE
 format: full_html
 editor: ckeditor
 settings:
@@ -19,15 +19,20 @@ settings:
           items:
             - Bold
             - Italic
-            - Strike
+            - Blockquote
             - Superscript
-            - Subscript
             - '-'
             - RemoveFormat
         -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+            - Table
+        -
           name: Linking
           items:
-            - DrupalLink
+            - Linkit
             - DrupalUnlink
         -
           name: Lists
@@ -37,27 +42,37 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
-            - DrupalImage
-            - Table
-            - HorizontalRule
+            - DrupalMediaLibrary
+            - map
         -
-          name: 'Block Formatting'
+          name: Tasks
           items:
-            - Format
+            - Undo
+            - Redo
         -
           name: Tools
           items:
-            - ShowBlocks
+            - Cut
+            - Copy
+            - PasteText
+            - PasteFromWord
+            - SpecialChar
+            - Maximize
             - Source
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
+    linkit:
+      linkit_profile: default
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

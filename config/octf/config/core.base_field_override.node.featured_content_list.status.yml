@@ -1,11 +1,9 @@
-uuid: 342ff4f2-916f-465b-b2fa-6a9dc3e5ecbe
+uuid: 521c9455-b550-4255-bb3b-e73f3775e9d7
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.featured_content_list
-_core:
-  default_config_hash: 21m7eqb6tnVzZ1p2pEwH3FjK4x1kLlPZWr5Zowik1mA
 id: node.featured_content_list.status
 field_name: status
 entity_type: node

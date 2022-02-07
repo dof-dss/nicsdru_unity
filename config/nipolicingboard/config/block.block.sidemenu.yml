@@ -1,0 +1,35 @@
+uuid: e93409d9-62d2-419d-bec5-09b030ee444b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - ctools
+    - system
+  theme:
+    - nipolicingboard_theme
+id: sidemenu
+theme: nipolicingboard_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'In this section'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      publication_page: publication_page
+      question_page: question_page
+      staff_member: staff_member
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

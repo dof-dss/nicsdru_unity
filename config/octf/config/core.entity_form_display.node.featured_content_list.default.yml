@@ -1,4 +1,4 @@
-uuid: 9e75dcd4-92e8-47f7-9435-1d5f33a9764a
+uuid: 4f94a931-2b74-4c23-958f-f65268b0a75c
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.featured_content_list.field_featured_content
     - field.field.node.featured_content_list.field_tags
     - node.type.featured_content_list
-_core:
-  default_config_hash: cyfIe3qXBjIpmpfbaUnEBCRBcw0wuOayJXPXoll-vpY
+  module:
+    - content_moderation
 id: node.featured_content_list.default
 targetEntityType: node
 bundle: featured_content_list
@@ -15,7 +15,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -30,44 +30,22 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_tags:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
-  flag:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 5
     settings: {  }
     region: content
-    third_party_settings: {  }
-  publish_on:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_timestamp
-    region: content
-  publish_state:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  scheduler_settings:
-    weight: 6
-    region: content
-    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -80,7 +58,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -88,20 +66,8 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-  unpublish_on:
-    weight: 29
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_timestamp
-    region: content
-  unpublish_state:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   url_redirects:
-    weight: 11
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

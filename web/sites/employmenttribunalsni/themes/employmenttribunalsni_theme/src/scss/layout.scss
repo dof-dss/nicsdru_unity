@@ -1,0 +1,56 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.container-wrap {
+  margin: 0 1rem;
+
+  @include breakpoint($lap) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+.path-publications-search {
+  .search-page {
+    .sidebar-first-layout {
+      padding-left: 0;
+    }
+
+    @include breakpoint($lap) {
+      .sidebar-first-layout {
+        width: 30%;
+      }
+
+      .main-content {
+        width: 65%;
+      }
+    }
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
+
+#logo {
+  padding-top: .8rem;
+
+  img {
+    height: 80px;
+  }
+}

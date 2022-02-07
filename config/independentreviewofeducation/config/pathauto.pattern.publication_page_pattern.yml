@@ -1,0 +1,22 @@
+uuid: 6cab9f75-656d-43b9-8282-2c46a75565cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: publication_page_pattern
+label: 'Publication page pattern'
+type: 'canonical_entities:node'
+pattern: 'key-documents/[node:title]'
+selection_criteria:
+  806ff74e-72aa-46e8-be06-a57886bf926c:
+    id: node_type
+    bundles:
+      publication: publication
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 806ff74e-72aa-46e8-be06-a57886bf926c
+selection_logic: and
+weight: -5
+relationships: {  }

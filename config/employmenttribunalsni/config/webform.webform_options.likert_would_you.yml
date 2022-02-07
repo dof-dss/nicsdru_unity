@@ -1,4 +1,4 @@
-uuid: 86a93730-d71d-486e-b0fc-3e7ad544055f
+uuid: 0dbd3110-478d-4214-8b6e-98266ef5a3ba
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,9 @@ id: likert_would_you
 label: 'Likert: Would You'
 category: Likert
 likert: true
-options: "1: Definitely Not\n2: Probably Not\n3: Not Sure\n4: Probably\n5: Definitely\n"
+options: |
+  1: Definitely Not
+  2: Probably Not
+  3: Not Sure
+  4: Probably
+  5: Definitely

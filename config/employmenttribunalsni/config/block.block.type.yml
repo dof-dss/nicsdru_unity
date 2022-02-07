@@ -1,0 +1,28 @@
+uuid: cc855f6d-a661-490f-8b93-756ec2b80eaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type
+  module:
+    - facets
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: type
+theme: employmenttribunalsni_theme
+region: search_facets
+weight: -4
+provider: null
+plugin: 'facet_block:type'
+settings:
+  id: 'facet_block:type'
+  label: Type
+  provider: facets
+  label_display: visible
+  block_id: type
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*"
+    negate: false

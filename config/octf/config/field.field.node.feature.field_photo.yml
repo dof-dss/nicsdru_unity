@@ -1,44 +1,29 @@
-uuid: c16439de-7990-40b6-9e35-573dd27bedcf
+uuid: 1106a153-a9d0-4a87-8eb8-116793bfdbb7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_photo
+    - media.type.image
     - node.type.feature
-_core:
-  default_config_hash: 8m9KTSBLGJaB30xfK-OozXrm8Iin177WBvTyyMIOSO8
 id: node.feature.field_photo
 field_name: field_photo
 entity_type: node
 bundle: feature
 label: Photo
 description: 'Please choose an image  to be displayed with this feature item. '
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
       image: image
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
-  file_extensions: 'png gif jpg jpeg'
-  alt_field: 1
-  alt_field_required: 1
-  title_field: 0
-  title_field_required: 0
-  max_resolution: ''
-  min_resolution: ''
-  default_image:
-    uuid: null
-    alt: ''
-    title: ''
-    width: null
-    height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
 field_type: entity_reference

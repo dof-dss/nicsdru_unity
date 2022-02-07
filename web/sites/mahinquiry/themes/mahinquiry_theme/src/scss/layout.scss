@@ -1,0 +1,77 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding-left: 2.5rem;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  img {
+    height: 80px;
+  }
+}
+
+.front {
+  .container-wrap {
+    max-width: 1060px;
+  }
+
+  .content-sidebar-wrap {
+    width: 100%;
+  }
+
+  #bottom-area {
+    @include breakpoint($tab) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+    }
+
+    .column {
+      width: auto;
+      float: none;
+
+      @include breakpoint($tab) {
+        flex-basis: 46%;
+      }
+    }
+  }
+}
+
+.content-sidebar-wrap {
+  padding: 0 1rem;
+}
+
+.path-node {
+  .main-content {
+    float: none;
+  }
+}
+
+.path-publications {
+  .search-page {
+    width: 65%;
+  }
+}
+
+#footer-area.footer-area {
+  display: flex;
+  column-gap: 1%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .column {
+    flex-grow: 1;
+    flex-basis: 31%;
+    float: none;
+    margin: 0;
+  }
+}

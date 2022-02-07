@@ -47,6 +47,9 @@ module:
   filter: 0
   fiscalcommissionni_breadcrumbs: 0
   flag: 0
+  geocoder: 0
+  geocoder_address: 0
+  geocoder_field: 0
   geolocation: 0
   geolocation_address: 0
   geolocation_google_maps: 0
@@ -56,6 +59,7 @@ module:
   handy_cache_tags: 0
   help: 0
   history: 0
+  http_cache_control: 0
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
@@ -84,6 +88,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_toc: 0
+  origins_translations: 0
   origins_unique_title: 0
   origins_workflow: 0
   page_cache: 0
@@ -91,9 +96,9 @@ module:
   path_alias: 0
   rdf: 0
   redirect: 0
+  redis: 0
   responsive_image: 0
   scheduled_transitions: 0
-  search: 0
   search_api: 0
   search_api_db: 0
   search_api_location: 0
@@ -127,6 +132,7 @@ module:
   paragraphs: 11
   nicsdru_unity_profile: 1000
   eu_cookie_compliance: 1001
+  readonlymode: 9999
 theme:
   stark: 0
   stable: 0

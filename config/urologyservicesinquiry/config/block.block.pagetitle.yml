@@ -1,0 +1,24 @@
+uuid: a903aa9c-85f0-4a21-92c4-0e9f7c9a01aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: pagetitle
+theme: urologyservicesinquiry_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/search\r\n/node/*/revisions/view/*"
+    negate: true

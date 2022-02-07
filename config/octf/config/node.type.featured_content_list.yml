@@ -1,4 +1,4 @@
-uuid: fd7a6763-3683-4bf1-8ba2-70192fae3dc1
+uuid: 2fbf9fda-db19-4318-91be-ad3a63888bb3
 langcode: en
 status: true
 dependencies:
@@ -17,8 +17,8 @@ third_party_settings:
     toc_source_container: ''
     toc_element: h2
     toc_exclusions: ''
-_core:
-  default_config_hash: 0Y4hiYYLiS8a5oNzcC_C9lRh5nHK1xgryja_TdY97Ds
+    toc_screen_depth: '1'
+    toc_debug: 0
 name: 'Featured content list'
 type: featured_content_list
 description: ''

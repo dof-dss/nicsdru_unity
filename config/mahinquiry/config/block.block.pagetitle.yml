@@ -1,0 +1,24 @@
+uuid: 53cc8d51-e919-4114-9717-71f8e95832ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mahinquiry_theme
+id: pagetitle
+theme: mahinquiry_theme
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/search\r\n/node/*/revisions/view/*"
+    negate: true

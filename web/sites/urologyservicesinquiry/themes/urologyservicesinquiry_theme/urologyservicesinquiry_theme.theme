@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the urologyservicesinquiry_theme theme.
+ */
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function urologyservicesinquiry_theme_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+  switch ($view->storage->id()) {
+    case 'latest_news':
+      if ($view->current_display == 'home_latest_news') {
+        $variables['more']['#options']['attributes']['class'] = 'btn';
+      }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function urologyservicesinquiry_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#view_mode'])) {
+    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function urologyservicesinquiry_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
+  if (isset($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function urologyservicesinquiry_theme_preprocess_html(&$variables) {
+  if (isset($variables['node_type'])) {
+    if ($variables['node_type'] == 'publication') {
+      $variables['attributes']['class'][] = 'one-sidebar';
+      $variables['attributes']['class'][] = 'sidebar-second';
+    }
+  }
+}

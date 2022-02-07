@@ -1,4 +1,4 @@
-uuid: f53f9cd9-e8c9-401a-85fb-cb3ba02c3461
+uuid: 288e1053-31e0-4c5e-802f-60f81ec3f13f
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,16 @@ id: months
 label: Months
 category: 'Date and time'
 likert: false
-options: "January: January\nFebruary: February\nMarch: March\nApril: April\nMay: May\nJune: June\nJuly: July\nAugust: August\nSeptember: September\nOctober: October\nNovember: November\nDecember: December\n"
+options: |
+  January: January
+  February: February
+  March: March
+  April: April
+  May: May
+  June: June
+  July: July
+  August: August
+  September: September
+  October: October
+  November: November
+  December: December

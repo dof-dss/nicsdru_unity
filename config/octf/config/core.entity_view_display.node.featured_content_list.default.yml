@@ -1,4 +1,4 @@
-uuid: 555475a1-420a-431a-bb54-42fa9b96f7c4
+uuid: 050623d7-a560-44fe-960d-50648cda582c
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,6 @@ dependencies:
     - node.type.featured_content_list
   module:
     - user
-_core:
-  default_config_hash: WCJScuwlxgOWlwql1WGKp9xXr9xB5LFAFlG_cels06g
 id: node.featured_content_list.default
 targetEntityType: node
 bundle: featured_content_list
@@ -32,6 +30,7 @@ content:
     type: entity_reference_label
     region: content
 hidden:
+  content_moderation_control: true
   langcode: true
   links: true
   search_api_excerpt: true

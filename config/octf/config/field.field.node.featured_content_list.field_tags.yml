@@ -1,4 +1,4 @@
-uuid: f74a5e2b-542c-42f2-a5dd-17d104409f8b
+uuid: 07ac9723-3ec5-49d8-adf9-6416fd570351
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_tags
     - node.type.featured_content_list
     - taxonomy.vocabulary.tags
-_core:
-  default_config_hash: PcQm61BFLwLKXrvCXh3kRRC69vW1qW8GbLdSFK5Endo
 id: node.featured_content_list.field_tags
 field_name: field_tags
 entity_type: node
@@ -15,7 +13,7 @@ bundle: featured_content_list
 label: Tags
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,25 @@
+uuid: ed4d5831-54f1-4932-a7b8-7f04aa2581af
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:962fbbde-e0ef-4703-855d-2edb9a59d7e4'
+  module:
+    - block_content
+  theme:
+    - employmenttribunalsni_theme
+id: respondtoaclaim
+theme: employmenttribunalsni_theme
+region: bottom_widget_2
+weight: 0
+provider: null
+plugin: 'block_content:962fbbde-e0ef-4703-855d-2edb9a59d7e4'
+settings:
+  id: 'block_content:962fbbde-e0ef-4703-855d-2edb9a59d7e4'
+  label: 'Respond to a claim'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

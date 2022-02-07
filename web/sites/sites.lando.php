@@ -17,3 +17,7 @@ $sites['nifiscalcouncil.org.lndo.site'] = 'nifiscalcouncil';
 $sites['niauditoffice.gov.uk.lndo.site'] = 'niauditoffice';
 $sites['octf.gov.uk.lndo.site'] = 'octf';
 $sites['urologyservicesinquiry.org.uk.lndo.site'] = 'urologyservicesinquiry';
+$sites['mahinquiry.org.uk.lndo.site'] = 'mahinquiry';
+$sites['independentreviewofeducation.org.uk.lndo.site'] = 'independentreviewofeducation';
+$sites['nipolicingboard.org.uk.lndo.site'] = 'nipolicingboard';
+$sites['pbni.org.uk.lndo.site'] = 'pbni';

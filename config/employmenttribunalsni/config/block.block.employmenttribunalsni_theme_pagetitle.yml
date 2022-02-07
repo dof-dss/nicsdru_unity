@@ -1,0 +1,24 @@
+uuid: 1c53465a-0558-4cfb-9286-ee887d5d139b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - employmenttribunalsni_theme
+id: employmenttribunalsni_theme_pagetitle
+theme: employmenttribunalsni_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search\r\n/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*\r\n/node/*/revisions/view/*"
+    negate: true

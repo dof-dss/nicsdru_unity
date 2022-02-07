@@ -88,6 +88,8 @@ process:
         http://www.niauditoffice.gov.uk
         https://www.niauditoffice.gov.uk
         http://test-niao.nigov.net
+        http://niao-drupal.nigov.net
+        http://drupal-niao.thestables.net
     -
       plugin: site_files_filter
       from_ref: sites/niao/files
@@ -96,6 +98,15 @@ process:
       plugin: site_files_filter
       from_ref: sites/niauditoffice.gov.uk/files
       to_ref: files/niauditoffice
+    -
+      plugin: site_files_filter
+      from_ref: sites/niao-drupal.nigov.net/files
+      to_ref: files/niauditoffice
+    -
+      plugin: str_replace
+      regex: true
+      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
+      replace: ''
   body/0/format:
     -
       plugin: static_map
@@ -107,10 +118,22 @@ process:
         filtered_html_with_tokens: basic_html
         restricted_html: basic_html
         plain_text: plain_text
-  field_publication_type:
+  field_publication_topic:
     -
-      plugin: get
+      plugin: static_map
       source: field_publication_type
+      default_value: null
+      map:
+        financialAudit: 2
+        FinancialAuditHealthSocialCareReports: 8
+        FinancialAuditOtherPublications: 9
+        goodPractice: 3
+        localGover: 12
+        LocalGovernmentOtherReports: 10
+        LocalGovernmentPublicInterestReports: 11
+        other: 13
+        valueForMoney: 5
+        workInProgress: 6
   field_publication_date:
     -
       plugin: sub_process
@@ -131,6 +154,15 @@ process:
         title: title
         width: width
         height: height
+  field_attachment:
+    -
+      plugin: callback
+      callable:
+        - '\Drupal\unity_file_migrations\PublicationLinkProcessor'
+        - publicationLinks
+      source:
+        - nid
+        - body
   field_metatag:
     -
       plugin: d7_metatag_entities

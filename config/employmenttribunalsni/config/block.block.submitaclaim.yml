@@ -1,0 +1,25 @@
+uuid: 0e5f61e9-0ff6-4903-80d8-85c44aedbd8c
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:ff802e47-b2c3-4663-b223-7de8f45bf22e'
+  module:
+    - block_content
+  theme:
+    - employmenttribunalsni_theme
+id: submitaclaim
+theme: employmenttribunalsni_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:ff802e47-b2c3-4663-b223-7de8f45bf22e'
+settings:
+  id: 'block_content:ff802e47-b2c3-4663-b223-7de8f45bf22e'
+  label: 'Submit a claim'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

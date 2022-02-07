@@ -1,4 +1,4 @@
-uuid: f2b682c2-9d39-4906-8678-c537f2c53f9a
+uuid: 1bd530e0-22f7-48e9-af0e-efe03829f2e9
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-_core:
-  default_config_hash: aYp0NIYNJQYxHn52gNKUsxWnWbFy-VI_TfRsbjEsfWk
 id: node.publication.field_published_date
 field_name: field_published_date
 entity_type: node
@@ -16,7 +14,7 @@ bundle: publication
 label: 'Published date'
 description: 'Please select the published date for this publication, or accept the default value of today.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     default_date_type: now

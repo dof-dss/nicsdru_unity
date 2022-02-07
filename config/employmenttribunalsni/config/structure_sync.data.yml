@@ -1,0 +1,75 @@
+blocks:
+  -
+    info: Complaints
+    langcode: en
+    uuid: cafa37f5-b7b3-4dad-ab94-3b73b6df6e27
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Feedback_Complaint.aspx\">Read more</a></p>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Respond to a claim'
+    langcode: en
+    uuid: 962fbbde-e0ef-4703-855d-2edb9a59d7e4
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Login.aspx\">Respond to a claim</a></p>\r\n"
+          summary: null
+          format: basic_html
+  -
+    info: 'Submit a claim'
+    langcode: en
+    uuid: ff802e47-b2c3-4663-b223-7de8f45bf22e
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p><a class=\"btn\" href=\"https://employmenttribunalsni.co.uk/OITFET_IWS/Login.aspx\">Make a claim</a></p>\r\n"
+          summary: null
+          format: basic_html
+taxonomies:
+  publication_types:
+    -
+      vid: publication_types
+      tid: '1'
+      langcode: en
+      name: 'Annual reports'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: cf85bf8e-a829-4e57-a06d-e69d0fdc7013
+    -
+      vid: publication_types
+      tid: '3'
+      langcode: en
+      name: Meetings
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: bc8dac3f-cff7-4b85-bbe9-3fa12e461638
+    -
+      vid: publication_types
+      tid: '2'
+      langcode: en
+      name: Procedures
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 5b3d894f-ea82-44d4-9900-02da41d5fe1c
+  publications_topics: {  }
+  site_topics: {  }
+  tags: {  }

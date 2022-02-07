@@ -1,0 +1,18 @@
+uuid: 7fc9fe4c-b093-4afc-b8ea-b1cc264d9368
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+folder: ../config/mahinquiry/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - mahinquiry_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,32 @@
+uuid: a4048316-d3cb-4a69-9f41-9545bd4e956b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - ctools
+    - views
+  theme:
+    - nipolicingboard_theme
+id: views_block__latest_news_latest_news_list
+theme: nipolicingboard_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-latest_news_list'
+settings:
+  id: 'views_block:latest_news-latest_news_list'
+  label: 'Latest News'
+  provider: views
+  label_display: visible
+  views_label: 'Latest News'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

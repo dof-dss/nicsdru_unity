@@ -1,4 +1,4 @@
-uuid: 464a35de-3761-48fe-9ae2-5023fa5f45f2
+uuid: cabf4abe-c70a-496c-a37d-b326bc9111c6
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,9 @@ id: titles
 label: Titles
 category: Demographic
 likert: false
-options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"
+options: |
+  Miss: Miss
+  Ms: Ms
+  Mr: Mr
+  Mrs: Mrs
+  Dr: Dr

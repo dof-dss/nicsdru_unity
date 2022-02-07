@@ -9,7 +9,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_publication_date
-    - field.storage.node.field_publication_type
+    - field.storage.node.field_publication_topic
     - search_api.server.solr_default
 third_party_settings:
   search_api_solr:
@@ -73,14 +73,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_publication_date
-  field_publication_type:
+  field_publication_topic:
     label: Type
     datasource_id: 'entity:node'
-    property_path: field_publication_type
-    type: string
+    property_path: field_publication_topic
+    type: integer
     dependencies:
       config:
-        - field.storage.node.field_publication_type
+        - field.storage.node.field_publication_topic
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -89,15 +89,33 @@ field_settings:
     dependencies:
       module:
         - node
+  spelling:
+    label: Spelling
+    property_path: aggregated_field
+    type: solr_text_spellcheck
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/title'
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: 'solr_text_custom:edge'
+    type: text
     boost: !!float 3
     dependencies:
       module:
         - node
+  title_fulltext:
+    label: 'Title fulltext'
+    property_path: aggregated_field
+    type: text
+    boost: !!float 13
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/body'
+        - 'entity:node/title'
 datasource_settings:
   'entity:node':
     bundles:
@@ -125,7 +143,6 @@ processor_settings:
     all_fields: false
     fields:
       - body
-      - field_publication_type
       - title
     title: false
     alt: true

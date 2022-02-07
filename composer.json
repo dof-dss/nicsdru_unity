@@ -63,14 +63,16 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
-        "dof-dss/nicsdru_origins_modules": "^0.9.28",
+        "dof-dss/nicsdru_origins_modules": "^1.0",
         "dof-dss/nicsdru_origins_profile": "0.1.11",
-        "dof-dss/nicsdru_unity_theme": "^0.1.30",
+        "dof-dss/nicsdru_unity_theme": "^0.1.42",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
         "drupal/allowed_formats": "^1.3",
+        "drupal/auto_entityqueue": "^2.0",
         "drupal/block_blacklist": "^1.0",
+        "drupal/block_list_override": "^1.0",
         "drupal/block_visibility_groups": "^1.3",
         "drupal/chosen": "^3.0",
         "drupal/clientside_validation": "^3.0",
@@ -88,7 +90,8 @@
         "drupal/date_facet_drilldown": "2.x-dev",
         "drupal/diff": "^1.0",
         "drupal/entity_embed": "^1.0",
-        "drupal/eu_cookie_compliance": "1.x-dev@dev",
+        "drupal/entityqueue": "^1.2",
+        "drupal/eu_cookie_compliance": "^1.8",
         "drupal/facets": "^1.5",
         "drupal/facets_pretty_paths": "^1.0@beta",
         "drupal/faqfield": "^7.0",
@@ -102,6 +105,7 @@
         "drupal/honeypot": "^2.0",
         "drupal/http_cache_control": "^2.0",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/layout_builder_restrictions": "^2.12",
         "drupal/linkit": "^6.0.0",
         "drupal/media_entity_browser": "^2.0",
         "drupal/media_library_edit": "^2.0",
@@ -115,6 +119,7 @@
         "drupal/noreferrer": "^1.7",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.4",
+        "drupal/readonlymode": "^1.1",
         "drupal/redirect": "^1.3",
         "drupal/redis": "^1.5",
         "drupal/scheduled_transitions": "^2.0",
@@ -144,6 +149,7 @@
         "drupal/webform": "^6.0",
         "drupal/whatlinkshere": "^2.0",
         "drush/drush": "^10.3",
+        "geocoder-php/google-maps-provider": "^4.6",
         "harvesthq/chosen": "^1.8",
         "kenwheeler/slick": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0",
@@ -161,7 +167,8 @@
         "drupal/stage_file_proxy": "^1.1",
         "kint-php/kint": "^3.3",
         "mglaman/drupal-check": "^1.1",
-        "previousnext/phpunit-finder": "^1.0@alpha"
+        "previousnext/phpunit-finder": "^1.0@alpha",
+        "slevomat/coding-standard": "^7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -199,8 +206,17 @@
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
             },
+            "drupal/scheduled_transitions": {
+                "No scheduled revisions appear for migrated nodes": "https://www.drupal.org/files/issues/2021-11-01/scheduled_transitions_base_language_3091006_2x.patch"
+            },
             "drupal/ultimate_cron": {
                 "Fix test function issue": "https://www.drupal.org/files/issues/2021-04-13/kernel_test-3208608-1.patch"
+            },
+            "drupal/eu_cookie_compliance": {
+                "Banner at top is not hiding correctly": "https://git.drupalcode.org/project/eu-cookie-compliance/-/merge_requests/43.diff"
+            },
+            "drupal/readonlymode": {
+                "Fatal typerror fix": "https://www.drupal.org/files/issues/2020-12-23/readonlymode-string_not_array-3115119-9.patch"
             }
         },
         "drupal-scaffold": {

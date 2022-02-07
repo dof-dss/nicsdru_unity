@@ -1,0 +1,16 @@
+name: 'Muckamore Abbey Hospital Inquiry'
+mail: admin@mahinquiry
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: b01165c3-5aa7-44aa-ae6a-016f6e7a164c
+frontpage_title: 'Welcome to Muckamore Abbey Hospital Inquiry'
+frontpage_show_title: 0

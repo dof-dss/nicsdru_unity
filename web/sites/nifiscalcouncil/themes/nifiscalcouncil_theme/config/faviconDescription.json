@@ -1,6 +1,6 @@
 {
   "masterPicture": "images/favicon.svg",
-  "iconsPath": "sites/nifiscalcouncil/themes/nifiscalcouncil_theme/images/favicons/",
+  "iconsPath": "/sites/nifiscalcouncil/themes/nifiscalcouncil_theme/images/favicons/",
   "design": {
     "ios": {
       "pictureAspect": "backgroundAndMargin",

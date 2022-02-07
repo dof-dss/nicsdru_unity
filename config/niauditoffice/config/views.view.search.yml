@@ -9,6 +9,7 @@ dependencies:
   module:
     - datetime
     - search_api
+    - search_api_spellcheck
 id: search
 label: Search
 module: views
@@ -403,7 +404,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
@@ -450,10 +451,37 @@ display:
         metatag_display_extender: {  }
       path: search
       cache:
-        type: search_api_tag
+        type: none
         options: {  }
       defaults:
         cache: false
+        empty: false
+      empty:
+        search_api_spellcheck_did_you_mean:
+          id: search_api_spellcheck_did_you_mean
+          table: views
+          field: search_api_spellcheck_did_you_mean
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          search_api_spellcheck_count: 1
+          search_api_spellcheck_hide_on_result: 1
+          search_api_spellcheck_collate: true
+          plugin_id: search_api_spellcheck_did_you_mean
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'There are no results found.'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,23 +1,15 @@
-uuid: 13e4939a-8821-4d6d-a39d-4b59dfd189e9
+uuid: 0ae63b92-678f-4eaf-9478-7df9cd6bb709
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
-    - node.type.consultation
-    - node.type.contact
-    - node.type.feature
-    - node.type.featured_content_list
-    - node.type.layout_page
-    - node.type.link
-    - node.type.news
-    - node.type.profile
+    - node.type.page
     - node.type.publication
     - node.type.webform
   module:
     - content_moderation
 _core:
-  default_config_hash: i4jivQkSLEaiLB7qlNRDW9rBQCOSSZQZHIHhXRSKK84
+  default_config_hash: qBaBqyIdQPZcpmPNMyldLolFWqVTKBP_vLpimj2_co0
 id: nics_editorial_workflow
 label: 'NICS Editorial Workflow'
 type: content_moderation
@@ -103,15 +95,7 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - basic_page
-      - consultation
-      - contact
-      - feature
-      - featured_content_list
-      - layout_page
-      - link
-      - news
-      - profile
+      - page
       - publication
       - webform
   default_moderation_state: draft

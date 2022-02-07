@@ -1,4 +1,4 @@
-uuid: 93f41706-4316-4f2c-b962-95685b233e84
+uuid: 514d4d31-76ed-42f6-abd7-5fd6ee197219
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,14 @@ dependencies:
     - node.type.feature
   module:
     - link
-_core:
-  default_config_hash: ZM_q7jM_t9gUKkS99BB3Llyas8OkZiRC6U9cv_bGdlA
 id: node.feature.field_link_url
 field_name: field_link_url
 entity_type: node
 bundle: feature
 label: Link
 description: 'The URL to where a user should go for more on this feature item.'
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

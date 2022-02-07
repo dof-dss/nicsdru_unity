@@ -1,12 +1,10 @@
-uuid: 50a9bab8-71ae-428b-82ad-8c72d1553b13
+uuid: 693dfd13-4020-4abd-bc7e-505607477d01
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-_core:
-  default_config_hash: 8tYJGuvfVECprOA3W6sxXczoDS7SWRSGf9JwPp0eDtk
 id: node.field_link_url
 field_name: field_link_url
 entity_type: node

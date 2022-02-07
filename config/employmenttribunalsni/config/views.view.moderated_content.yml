@@ -1,4 +1,4 @@
-uuid: ab2b2af0-359d-4838-aaba-bf68ce900d6d
+uuid: a03ce7ab-02a9-4551-826b-d6c2a05f8b1e
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: Kjqf5d4F134C3zua0tXV7LA3m5OEeS_Fowa2dP9kk2I
+  default_config_hash: RKnL13CZ61m1tYbO5jkEJ9f8jhlmvQdBTMp6DucLS4A
 id: moderated_content
 label: 'Moderated content'
 module: views
@@ -21,7 +21,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Default
     position: 0
     display_options:
       access:

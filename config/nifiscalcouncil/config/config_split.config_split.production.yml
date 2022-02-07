@@ -1,0 +1,18 @@
+uuid: baede6f4-e941-485f-8cd4-dbf0c69cdc3d
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+folder: ../config/nifiscalcouncil/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - nifiscalcouncil_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

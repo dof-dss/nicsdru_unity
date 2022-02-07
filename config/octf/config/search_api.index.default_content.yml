@@ -2,16 +2,16 @@ uuid: 04415a93-5ae4-4c1a-ab1a-6b913e9d79d8
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_publication_type
+    - field.storage.node.field_published_date
+    - field.storage.node.field_teaser
+    - search_api.server.default
   module:
     - node
     - user
     - search_api
-  config:
-    - field.storage.node.body
-    - field.storage.node.field_published_date
-    - field.storage.node.field_teaser
-    - field.storage.node.field_publication_type
-    - search_api.server.default
 id: default_content
 name: 'Default content'
 description: ''
@@ -124,7 +124,7 @@ processor_settings:
   entity_status: {  }
   highlight:
     highlight: always
-    highlight_partial: false
+    highlight_partial: true
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
@@ -170,6 +170,79 @@ processor_settings:
       preprocess_query: -20
   language_with_fallback: {  }
   rendered_item: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - body
+      - field_teaser
+      - summary
+      - title
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  stopwords:
+    all_fields: false
+    fields:
+      - body
+      - field_teaser
+      - summary
+      - title
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - field_teaser
+      - summary
+      - title
+    ignored: ._-
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
 tracker_settings:
   default:
     indexing_order: fifo

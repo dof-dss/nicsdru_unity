@@ -22,8 +22,7 @@
 //
 // Style guide: theme.entities
 
-.path-news,
-.path-publications {
+.path-news {
   .search-page {
     @include breakpoint($lap) {
       width: 65%;
@@ -41,18 +40,34 @@
   }
 }
 
-.search-result {
-  border-bottom: 1px solid #d3d7d9;
-  padding-bottom: 1.5rem;
+.path-publications {
+  .search-page {
+    .sidebar-first-layout {
+      padding-left: 0;
+    }
 
-  &:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
-    margin-bottom: 1em;
-  }
+    @include breakpoint($lap) {
+      .sidebar-first-layout {
+        width: 30%;
+      }
 
-  p {
-    margin-bottom: 0;
+      .main-content {
+        width: 65%;
+      }
+    }
+
+    .views-exposed-form {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .metaListItem {
+      margin-left: 2rem;
+    }
   }
 }
-

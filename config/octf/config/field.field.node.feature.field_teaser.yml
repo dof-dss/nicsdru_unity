@@ -1,12 +1,10 @@
-uuid: 33a10406-4413-42cf-8ec6-766e45354f84
+uuid: 3ea81e45-fc69-4217-b66c-494b9f5738ae
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_teaser
     - node.type.feature
-_core:
-  default_config_hash: U6M2YL9v3-Ig6qqyE9KpIL_O9XbokeBG0UlspX7Z5Dc
 id: node.feature.field_teaser
 field_name: field_teaser
 entity_type: node

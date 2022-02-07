@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-    - node.type.link
+    - node.type.feature
     - node.type.news
     - node.type.publication
     - node.type.webform
@@ -98,7 +98,7 @@ type_settings:
   entity_types:
     node:
       - basic_page
-      - link
+      - feature
       - news
       - publication
       - webform
