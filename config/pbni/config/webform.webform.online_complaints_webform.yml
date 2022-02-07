@@ -1,4 +1,4 @@
-uuid: 7b1c9baf-7fbb-481c-a0f8-b19392ac3b8a
+uuid: 1cb1ad38-a15d-435d-89c8-faadc4bbb8cb
 langcode: en
 status: open
 dependencies: {  }
@@ -8,77 +8,77 @@ weight: 0
 uid: 2
 template: false
 archive: false
-id: join_email_list
-title: 'Join Email List'
+id: online_complaints_webform
+title: 'Online Complaints webform'
 description: ''
 category: ''
 elements: |-
   name:
-    '#type': fieldset
+    '#type': textfield
     '#title': Name
     '#required': true
-    first_name:
+  address:
+    '#type': fieldset
+    '#title': Address
+    street_address:
       '#type': textfield
-      '#title': First
-      '#required': true
-    last_name:
+      '#title': 'Street Address'
+    address_line_2:
       '#type': textfield
-      '#title': Last
-      '#required': true
-  organisation:
-    '#type': textfield
-    '#title': Organisation
-  consent_to_be_contacted:
-    '#type': checkboxes
-    '#title': 'I have read the PBNI privacy Notice and consent to be contacted:'
-    '#description': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:10.569px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">Please tick one or both boxes.</span>'
-    '#description_display': after
-    '#options':
-      'By Email': 'By Email'
-      'By Post': 'By Post'
-    '#required': true
+      '#title': 'Address line 2'
+    city:
+      '#type': textfield
+      '#title': City
+    postcode:
+      '#type': textfield
+      '#title': Postcode
+      '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
+      '#pattern_error': 'Enter a valid UK postcode.'
+  home_telephone_number:
+    '#type': tel
+    '#title': 'Home Telephone number'
+    '#minlength': 11
+  mobile_telephone_number:
+    '#type': tel
+    '#title': 'Mobile Telephone number'
+    '#minlength': 11
   email:
-    '#type': webform_email_confirm
-    '#title': 'Email Address'
+    '#type': email
+    '#title': Email
+  what_is_your_complaint_about:
+    '#type': textarea
+    '#title': 'What is your complaint about? (please give as much detail as possible)'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
     '#required': true
-    '#states':
-      visible:
-        ':input[name="consent_to_be_contacted[By Email]"]':
-          checked: true
-  postal_address:
-    '#type': webform_address
-    '#title': 'Postal Address'
-    '#title_display': ''
+  when_did_it_happen:
+    '#type': textarea
+    '#title': 'When did it happen?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
     '#required': true
-    '#states':
-      visible:
-        ':input[name="consent_to_be_contacted[By Post]"]':
-          checked: true
-    '#address__title': 'Address line 1'
-    '#address_2__title': 'Address line 2'
-    '#city__title': Town/City
-    '#state_province__access': false
-    '#postal_code__title': Postcode
-  information_i_would_like_to_receive:
-    '#type': checkboxes
-    '#title': 'Information I would like to receive:'
-    '#options':
-      'Probation publications (Probation News, reports, consultations, etc.)': 'Probation publications (Probation News, reports, consultations, etc.)'
-      'Event invitations': 'Event invitations'
-      Consultations: Consultations
+  what_do_you_think_should_be_done_to_put_things_right:
+    '#type': textarea
+    '#title': 'What do you think should be done to put things right?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
     '#required': true
-  withdraw_consent_text:
-    '#type': processed_text
-    '#text': |
-      <p>Your details will be kept secure and confidential on our system. You can amend or withdraw your consent at any time by emailing<span>&nbsp;</span><a href="mailto:ivor.whitten@probation-ni.gov.uk">ivor.whitten@probation-ni.gov.uk</a><span>&nbsp;</span>or by writing to the following address:</p>
-
-      <address>Ivor Whitten<br />
-      Communication Officer<br />
-      Probation Board for Northern Ireland<br />
-      80-90 North Street<br />
-      Belfast<br />
-      BT1 1LD</address>
-    '#format': basic_html
+  any_special_needs:
+    '#type': textarea
+    '#title': 'Please give details of any special needs we need to bear in mind when we are dealing with your complaint or communicating with you.'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+  if_you_have_already_complained_about_this_issue_please:
+    '#type': textarea
+    '#title': 'If you have already complained about this issue, please tell us who you raised it with and what action they took?'
+    '#maxlength': 750
+    '#placeholder': 'Plain text only, 750 characters maximum.'
+  pbni_value_your_feedback:
+    '#type': checkbox
+    '#title': 'PBNI value your feedback on how we handled your complaint and may wish to contact you after we deal with your complaint. If you do not want us to make contact, please tick the box.'
+  markup:
+    '#type': webform_markup
+    '#markup': '<span style="-webkit-text-stroke-width:0px; background-color:#ffffff; color:#141412; display:inline !important; float:none; font-family:&quot;Open Sans&quot;,sans-serif; font-size:13px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; text-align:left; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-indent:0px; text-transform:none; white-space:normal; widows:2; word-spacing:0px">The details of your complaint will be logged and this information will not be used for any other purpose other than the administration of your complaint.</span>'
 css: ''
 javascript: ''
 settings:
@@ -88,7 +88,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /join-email-list
+  page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -269,7 +269,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: info@probation-ni.gov.uk
+      to_mail: complaints@probation-ni.gov.uk
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -277,7 +277,7 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:last_name:raw]'
+      from_name: '[webform_submission:values:name:raw]'
       subject: _default
       body: _default
       excluded_elements: {  }
@@ -314,7 +314,7 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:last_name:raw]'
+      from_name: '[webform_submission:values:name:raw]'
       subject: _default
       body: _default
       excluded_elements: {  }
