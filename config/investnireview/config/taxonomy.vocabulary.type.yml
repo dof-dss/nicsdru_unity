@@ -1,0 +1,8 @@
+uuid: 91793f35-939c-4bd9-b95c-1890d5af8c80
+langcode: en
+status: true
+dependencies: {  }
+name: Type
+vid: type
+description: 'Types of Evidence'
+weight: 0
