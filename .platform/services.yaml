@@ -24,6 +24,7 @@ db:
       - independentreviewofeducationdb
       - nipolicingboarddb
       - pbnidb
+      - investnireviewdb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -81,6 +82,10 @@ db:
         default_schema: pbnidb
         privileges:
           pbnidb: admin
+      investnireview:
+        default_schema: investnireviewdb
+        privileges:
+          investnireviewdb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:

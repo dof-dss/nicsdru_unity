@@ -1,0 +1,15 @@
+uuid: 5d139df4-d5c1-4ad8-ad83-1efe492d2c39
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8h4CWkx_FzryjbSOTnrb1h1C4M3T9TwY5hc-2NmWtAs
+id: '404'
+label: '404 page not found'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  title: 'Page not found | [site:name]'
+  og_title: '[site:name]'
+  og_type: Website
+  og_url: '[site:url]'
