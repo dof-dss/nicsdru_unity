@@ -339,7 +339,7 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: _default
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
       subject: _default
@@ -376,7 +376,7 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: _default
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
       subject: _default
