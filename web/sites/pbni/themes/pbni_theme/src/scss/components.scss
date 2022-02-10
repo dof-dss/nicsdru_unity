@@ -73,6 +73,7 @@
       &.open {
         .menu-toggle-btn {
           background-color: $brand-secondary;
+          color: $white;
           font-weight: normal;
         }
       }
@@ -376,7 +377,7 @@
 
         &:last-child {
           background: resolve('programmes.png') no-repeat;
-          border: 2px solid #926d07;
+          border: 2px solid $brand-secondary;
         }
 
         a:hover {
@@ -394,21 +395,21 @@
     .column:last-child {
       float: none;
     }
-  }
 
-  .column {
-    width: 100%;
+    .column {
+      width: 100%;
 
-    @include breakpoint($tab) {
-      width: 49%;
+      @include breakpoint($tab) {
+        width: 49%;
 
-      &:last-child {
-        float: none;
+        &:last-child {
+          float: right;
+        }
       }
-    }
 
-    &:first-child {
-      padding-right: 0;
+      &:first-child {
+        padding-right: 0;
+      }
     }
   }
 
