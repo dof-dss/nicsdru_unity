@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "925d85f470dd41171a9ef552235aae1a",
+    "content-hash": "d42422ecf2b30fe564a14911e0f72f49",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1837,16 +1837,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "1.0.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "9a82610d18733dacd377abeecae52ecd892e789f"
+                "reference": "3f4bda71f883b81419bfcf28286daac8462d92b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/9a82610d18733dacd377abeecae52ecd892e789f",
-                "reference": "9a82610d18733dacd377abeecae52ecd892e789f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/3f4bda71f883b81419bfcf28286daac8462d92b9",
+                "reference": "3f4bda71f883b81419bfcf28286daac8462d92b9",
                 "shasum": ""
             },
             "require": {
@@ -1860,9 +1860,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.0.0"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.1.2"
             },
-            "time": "2021-11-04T19:26:03+00:00"
+            "time": "2022-02-02T14:33:25+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
