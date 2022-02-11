@@ -1,0 +1,29 @@
+uuid: 97c5f2ca-9140-4ce4-b28c-9bb098b2ed70
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - investnireview_theme
+id: pagetitle
+theme: investnireview_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/news\r\n/news/date/*\r\n/publications\r\n/publications/type/*\r\n/publications/date/*\r\n/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n/search\r\n/node/*/revisions/view/*"
+    negate: true

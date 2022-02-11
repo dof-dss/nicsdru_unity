@@ -1,13 +1,15 @@
-uuid: b61ee66f-c83d-4b51-9dfb-54da86042145
+uuid: c3a8001b-fa8a-4fee-8550-1b49b84819a2
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.basic_page.body
-    - field.field.node.basic_page.field_meta_tags
-    - field.field.node.basic_page.field_next_audit_due
-    - node.type.basic_page
+    - field.field.node.evidence.body
+    - field.field.node.evidence.field_attachment
+    - field.field.node.evidence.field_meta_tags
+    - field.field.node.evidence.field_published_date
+    - field.field.node.evidence.field_type
+    - node.type.evidence
   module:
     - datetime
     - field_group
@@ -22,10 +24,10 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - field_next_audit_due
+        - field_type
         - field_meta_tags
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -39,11 +41,9 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Additional content details'
-_core:
-  default_config_hash: n9P2zod3oHe_I7EbTNUo0aJ9t6Ew9N9BOdYiJGK2-kI
-id: node.basic_page.diff
+id: node.evidence.diff
 targetEntityType: node
-bundle: basic_page
+bundle: evidence
 mode: diff
 content:
   body:
@@ -53,28 +53,40 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_attachment:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 1
+    weight: 7
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_next_audit_due:
-    type: datetime_default
+  field_published_date:
     weight: 0
-    region: content
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-  links:
-    weight: 0
+    type: datetime_default
     region: content
-    settings: {  }
+  field_type:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      link: false
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   langcode: true
+  links: true
   search_api_excerpt: true

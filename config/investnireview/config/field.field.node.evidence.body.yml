@@ -1,10 +1,10 @@
-uuid: 1b0f07a5-5b86-4ff4-ba04-156d5ddebd11
+uuid: 0f2d1402-ce1e-4572-84ad-fc5811452958
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.basic_page
+    - node.type.evidence
   module:
     - allowed_formats
     - text
@@ -14,12 +14,10 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
-_core:
-  default_config_hash: cBCwT51Mu2HwrJxGKBSMyRYRXaRLS5Qs2rfG9FhIUhQ
-id: node.basic_page.body
+id: node.evidence.body
 field_name: body
 entity_type: node
-bundle: basic_page
+bundle: evidence
 label: Body
 description: ''
 required: false

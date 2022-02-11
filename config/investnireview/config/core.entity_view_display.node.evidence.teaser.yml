@@ -1,0 +1,44 @@
+uuid: 2eba10e6-1ca8-4177-8397-e02e99b828b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.evidence.body
+    - field.field.node.evidence.field_attachment
+    - field.field.node.evidence.field_meta_tags
+    - field.field.node.evidence.field_published_date
+    - field.field.node.evidence.field_type
+    - node.type.evidence
+  module:
+    - datetime
+    - user
+id: node.evidence.teaser
+targetEntityType: node
+bundle: evidence
+mode: teaser
+content:
+  field_published_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_type:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_attachment: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
