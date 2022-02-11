@@ -5,17 +5,13 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_meta_tags
-    - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_summary
     - field.field.node.news.field_teaser
     - node.type.news
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - datetime
-    - media_library
-    - media_library_edit
     - metatag
     - path
     - text
@@ -28,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 10
     settings:
       rows: 9
       summary_rows: 3
@@ -44,36 +40,19 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 15
+    weight: 12
     region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-  field_photo:
-    weight: 12
-    settings:
-      media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
-    type: media_library_widget
-    region: content
   field_published_date:
-    weight: 10
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 14
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_teaser:
-    weight: 11
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -94,13 +73,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 13
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -144,7 +123,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
