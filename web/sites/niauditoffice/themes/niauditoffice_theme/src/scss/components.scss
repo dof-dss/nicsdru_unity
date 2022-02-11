@@ -35,7 +35,7 @@
 
 .content-sidebar-wrap {
   ul:not(.list--no-bullet):not(.dropbutton) {
-    li:not(.pager__item) {
+    li:not(.pager__item):not(.nav-item) {
       list-style: none;
       position: relative;
 
@@ -84,7 +84,7 @@
       a {
         &:hover,
         &:focus {
-          background: #0089d1;
+          background: $charcoal;
         }
       }
     }
@@ -117,7 +117,7 @@
     padding: 0 1rem;
 
     .menu {
-      margin: .5rem 1rem 0 .5rem;
+      margin: .5rem 0 0 .5rem;
 
       li {
         list-style: circle;
@@ -327,4 +327,22 @@
   float: right;
   max-width: 155px;
   margin-left: 1.8rem;
+}
+
+#block-mainpagecontent {
+  a strong,
+  strong a {
+    font-weight: normal;
+  }
+
+  &.block > h2 {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.node-type-publication-page {
+  .content-sidebar-wrap {
+    width: 65%;
+  }
 }
