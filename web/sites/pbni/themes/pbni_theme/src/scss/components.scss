@@ -60,7 +60,7 @@
   .menu {
     .menu-item {
       border-right: 1px solid #fff;
-      font-size: $p-font-size;
+      @include adjust-font-size-to(16px);
 
       @media screen and (max-width: $tab) {
         border-right: none;
@@ -79,7 +79,7 @@
       }
 
       .active {
-        background: $menu-item-hover;
+        background: $brand-tertiary;
         border-bottom-color: $brand-secondary;
         color: #fff;
       }
@@ -123,7 +123,7 @@
       }
 
       &.active {
-        background: lighten($charcoal, 10%);
+        background: $brand-tertiary;
         font-weight: normal;
       }
     }
@@ -317,7 +317,7 @@
         &:first-child,
         &:nth-child(4) {
           a {
-            background: #00717b;
+            background: $brand-tertiary;
           }
         }
 
@@ -336,7 +336,7 @@
         }
 
         &:first-child {
-          background: #00717b resolve('for-victims.png');
+          background: $brand-tertiary resolve('for-victims.png');
         }
 
         &:nth-child(2) {
@@ -348,7 +348,7 @@
         }
 
         &:nth-child(4) {
-          background: #00717b resolve('for-the-community.png');
+          background: $brand-tertiary resolve('for-the-community.png');
         }
 
         &:nth-child(5) {
@@ -367,7 +367,7 @@
 
         &:first-child {
           background: resolve('key-facts.png') no-repeat;
-          border: 2px solid #00717b;
+          border: 2px solid $brand-tertiary;
         }
 
         &:nth-child(2) {
@@ -447,7 +447,7 @@
 
       &:hover,
       &:focus {
-        border-bottom: 2px solid #333;
+        border-bottom: 2px solid $charcoal;
         background: transparent;
       }
     }
