@@ -1,0 +1,18 @@
+uuid: 612e0690-3b05-4ecb-8b1c-f5fc685a113d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.evidence
+id: node.evidence.title
+field_name: title
+entity_type: node
+bundle: evidence
+label: 'Evidence title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -223,6 +223,22 @@
 
 #---------------------------------
 
+"https://www.investnireview.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://investnireview.org.uk.{default}/":
+  type: redirect
+  to: "https://www.investnireview.org.uk.{default}/"
+
+"https://investnireview.org.uk/":
+  type: redirect
+  to: "https://www.investnireview.org.uk/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream

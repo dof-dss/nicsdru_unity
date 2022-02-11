@@ -1,0 +1,12 @@
+uuid: a7f6df4e-8326-4e04-8af7-953e57b5f460
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iOmfoGYwg-1Esm3q71bzMiYfTKyXhnMeBli_Wz1uFyU
+id: faq_accordian
+label: 'FAQ accordian'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
