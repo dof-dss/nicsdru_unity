@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.basic_page
     - node.type.board_member
+    - node.type.evidence
     - node.type.news
     - node.type.webform
   module:
@@ -98,6 +99,7 @@ type_settings:
     node:
       - basic_page
       - board_member
+      - evidence
       - news
       - webform
   default_moderation_state: draft
