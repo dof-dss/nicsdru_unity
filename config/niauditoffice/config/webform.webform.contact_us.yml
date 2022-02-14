@@ -35,10 +35,11 @@ elements: |-
     '#type': fieldset
     '#title': 'Your query'
     '#description_display': invisible
+    '#required': true
     nature_of_query:
       '#type': select
       '#title': 'Nature of query'
-      '#title_display': inline
+      '#title_display': before
       '#options':
         Complaints: Complaints
         'Publication feedback': 'Publication feedback'
