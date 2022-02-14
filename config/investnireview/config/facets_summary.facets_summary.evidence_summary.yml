@@ -1,0 +1,31 @@
+uuid: db53aa7d-3db3-45b6-a583-c5f8a074de05
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.evidence
+    - views.view.evidence_search
+  module:
+    - search_api
+id: evidence_summary
+name: 'Evidence summary'
+facets:
+  date:
+    checked: true
+    label: Date
+    separator: ', '
+    weight: 0
+    show_count: false
+  type:
+    checked: true
+    label: Type
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__evidence_search__evidence_search_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
