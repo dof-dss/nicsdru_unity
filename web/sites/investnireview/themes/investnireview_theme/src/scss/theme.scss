@@ -79,53 +79,19 @@
 
 .path-news {
   .search-page {
-    @include breakpoint($lap) {
-      width: 65%;
-    }
-
-    .main-content {
-      @include breakpoint($lap) {
-        float: none;
-      }
-    }
-  }
-}
-
-.path-publications,
-.path-evidence {
-  .search-page {
     .sidebar-first-layout {
-      padding-left: 0;
-    }
+      padding: 0;
 
-    @include breakpoint($lap) {
-      .sidebar-first-layout {
-        width: 30%;
-      }
-
-      .main-content {
-        width: 65%;
-      }
-    }
-
-    .views-exposed-form {
-      p {
+      .views-exposed-form p {
         margin-bottom: 0;
       }
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    .metaListItem {
-      margin-left: 2rem;
     }
   }
 }
 
 .board-members {
   display: flex;
+
   flex-flow: column;
 
   @include breakpoint($mob) {

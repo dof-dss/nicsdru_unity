@@ -11,7 +11,7 @@
 function investnireview_theme_preprocess_html(&$variables) {
   if (!empty($variables['node_type'])) {
     if (($variables['node_type'] == 'basic_page') || ($variables['node_type'] == 'news') || ($variables['node_type']
-        == 'evidence') || ($variables['node_type'] == 'publication')) {
+        == 'evidence')) {
       $variables['attributes']['class'][] = 'one-sidebar';
       $variables['attributes']['class'][] = 'sidebar-second';
     }
