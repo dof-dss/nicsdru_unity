@@ -130,16 +130,13 @@
   .footer-menu li {
     padding-left: 0;
     font-size: 1.4rem;
+    display: block;
 
-    @include breakpoint($mob) {
+    @include breakpoint($tab) {
       display: inline-block;
       padding: 0 .8rem 0 0;
       line-height: 1.8rem;
       margin-right: .5rem;
-    }
-
-    a {
-      display: block;
     }
   }
 
@@ -194,7 +191,7 @@
   }
 }
 
-.block.block-views-blocklatest-news-latest-news-block {
+.block.block-views-blocklatest-news-latest-news-home-block {
   background: #f4f4f4;
 
   h2 {
@@ -215,6 +212,14 @@
     .published-date {
       margin-bottom: 0;
       line-height: 2;
+    }
+  }
+}
+
+.front {
+  #block-chair {
+    .media-image {
+      margin: 0;
     }
   }
 }
