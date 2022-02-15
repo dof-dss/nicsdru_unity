@@ -4,7 +4,7 @@ slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/5
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
@@ -13,4 +13,4 @@ _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: 8bbadbec-3db2-40a6-9c13-401dcba0d007
 frontpage_title: 'Welcome to Independent Review of Invest NI'
-frontpage_show_title: 0
+frontpage_show_title: 1

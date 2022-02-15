@@ -130,16 +130,13 @@
   .footer-menu li {
     padding-left: 0;
     font-size: 1.4rem;
+    display: block;
 
-    @include breakpoint($mob) {
+    @include breakpoint($tab) {
       display: inline-block;
       padding: 0 .8rem 0 0;
       line-height: 1.8rem;
       margin-right: .5rem;
-    }
-
-    a {
-      display: block;
     }
   }
 
@@ -271,3 +268,10 @@
   }
 }
 
+.front {
+  #block-chair {
+    .media-image {
+      margin: 0;
+    }
+  }
+}

@@ -8,12 +8,19 @@
 .container-wrap {
   @media screen and (max-width: $lap) {
     margin: 0 1rem;
+    padding-bottom: 1rem;
   }
 }
 
 .front {
   .sidebar-second-layout {
     width: 35%;
+  }
+}
+
+.sidebar-second-layout {
+  @media screen and (max-width: $lap) {
+    clear: both;
   }
 }
 
