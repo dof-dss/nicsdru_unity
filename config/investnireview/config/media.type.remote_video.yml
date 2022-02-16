@@ -17,4 +17,5 @@ source_configuration:
     - Vimeo
   source_field: field_media_oembed_video
 field_map:
+  title: name
   provider_url: field_media_oembed_video
