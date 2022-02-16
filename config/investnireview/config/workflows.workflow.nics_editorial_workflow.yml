@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-    - node.type.board_member
     - node.type.evidence
     - node.type.news
     - node.type.webform
@@ -98,7 +97,6 @@ type_settings:
   entity_types:
     node:
       - basic_page
-      - board_member
       - evidence
       - news
       - webform
