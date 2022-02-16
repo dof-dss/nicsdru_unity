@@ -13,7 +13,7 @@ dependencies:
 id: publisheddate
 theme: investnireview_theme
 region: search_facets
-weight: 0
+weight: -4
 provider: null
 plugin: 'facet_block:published_date'
 settings:
