@@ -1,0 +1,277 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  a {
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: .3rem dashed #949494;
+      outline-offset: 1.2rem;
+      display: block;
+    }
+  }
+
+  img {
+    height: 80px;
+
+    @media screen and (max-width: $mob) {
+      height: 55px;
+    }
+  }
+}
+
+.toc-menu .menu-title {
+  font-size: $h2-font-size;
+  line-height: 3.6rem;
+}
+
+.search-form {
+  #edit-submit-search {
+    &:focus {
+      outline: 3px solid #fae029;
+      outline-offset: -2px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+#main-menu {
+  font-family: $heading-font;
+
+  .menu {
+    .menu-item {
+      border-right: 1px solid #fff;
+      font-size: $p-font-size;
+
+      @media screen and (max-width: $tab) {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.open {
+        .menu-toggle-btn {
+          background-color: $brand-primary;
+          font-weight: normal;
+        }
+      }
+
+      .active {
+        background: $menu-item-hover;
+        border-bottom-color: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+
+  .menu-link,
+  .menu .active {
+    color: $charcoal;
+    border-bottom: 5px solid transparent;
+
+    @media screen and (max-width: $tab) {
+      text-align: center;
+    }
+
+    &:hover {
+      color: #fff;
+      border-bottom-color: $brand-primary;
+    }
+
+    &:focus {
+      background-color: #fae029;
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+
+  .menu-main_sub {
+    background: $charcoal;
+
+    .menu-item {
+      @media screen and (max-width: $tab) {
+        background: $charcoal;
+      }
+    }
+
+    .menu-link,
+    .menu-item span.active {
+      @media screen and (max-width: $tab) {
+        text-align: center;
+      }
+
+      &.active {
+        background: lighten($charcoal, 10%);
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+#footer {
+  .footer-menu li {
+    padding-left: 0;
+    font-size: 1.4rem;
+    display: block;
+
+    @include breakpoint($tab) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+  }
+
+  #block-contactus {
+    .social-icons {
+      @media screen and (max-width: $tab) {
+        margin-top: 1rem;
+      }
+
+      a {
+        border-bottom: 0;
+        color: $text;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          background: none;
+
+          i {
+            background: $text;
+            color: $footer-background;
+          }
+        }
+      }
+
+      i {
+        font-size: 2.4rem;
+        border: 1px solid;
+        padding: .5rem .7rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+.node-type-publication,
+.node-type-evidence {
+  #content #post-content a.file-link[href] {
+    padding-left: 6.5rem;
+    margin-bottom: 1.6rem;
+
+    &:hover {
+      margin-bottom: 1.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.front {
+  .block.block-views-blocklatest-news-latest-news-home-block {
+    background: #f4f4f4;
+
+    h2 {
+      @include responsive-typo-map($h2-text);
+      background: $headings;
+      color: $white;
+      padding-left: 2rem;
+      margin: 0;
+    }
+
+    .content {
+      padding: 1rem 2rem;
+    }
+
+    ul {
+      margin: 1.2rem 0 1.8rem 2.4rem;
+
+      .published-date {
+        margin-bottom: 0;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.sidebar-second-layout {
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    h2 {
+      @include responsive-typo-map($h2-text);
+      padding: 0;
+    }
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+    a {
+      border-bottom: 1px solid $link;
+
+      &:hover {
+        border-bottom: 2px solid $link-underline;
+        margin-bottom: 0;
+      }
+
+      &:focus {
+        border-bottom: none;
+        outline: 2px solid $link;
+        outline-offset: 0;
+      }
+    }
+  }
+}
+
+.front {
+  #block-chair {
+    .media-image {
+      margin: 0;
+    }
+  }
+}

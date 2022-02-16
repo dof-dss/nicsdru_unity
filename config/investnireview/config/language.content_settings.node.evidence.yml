@@ -1,0 +1,11 @@
+uuid: bc55aedc-42c6-42c7-9ee1-a45ec9cc1cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.evidence
+id: node.evidence
+target_entity_type_id: node
+target_bundle: evidence
+default_langcode: site_default
+language_alterable: false
