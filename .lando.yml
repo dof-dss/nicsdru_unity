@@ -15,6 +15,7 @@ proxy:
     - independentreviewofeducation.org.uk.lndo.site
     - nipolicingboard.org.uk.lndo.site
     - pbni.org.uk.lndo.site
+    - investnireview.org.uk.lndo.site
 services:
   uregni_solr:
     type: solr:7

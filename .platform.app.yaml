@@ -45,6 +45,7 @@ relationships:
   nipolicingboard_solr: 'solr:nipolicingboard'
   pbni: 'db:pbni'
   pbni_solr: 'solr:pbni'
+  investnireview: 'db:investnireview'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -216,3 +217,6 @@ crons:
   nipolicingboard:
     spec: '10 * * * *'
     cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
+  investnireview:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/investnireview ; drush core-cron'
