@@ -46,21 +46,6 @@
   a {
     @include adjust-font-size-to(16px);
   }
-
-  a {
-    border-bottom: 1px solid $link;
-
-    &:hover {
-      border-bottom: 2px solid $link-underline;
-      margin-bottom: 0;
-    }
-
-    &:focus {
-      border-bottom: none;
-      outline: 2px solid $link;
-      outline-offset: 0;
-    }
-  }
 }
 
 #main-menu .menu .menu-item .active {
