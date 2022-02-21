@@ -35,7 +35,7 @@ We call a macro which calls itself to render the full tree.
     ]
     %}
     {% if menu_level != 0 %}
-      <ul{{ attributes.addClass('menu dash-list').removeAttribute('region') }}>
+      <ul{{ attributes.addClass('menu').removeAttribute('region') }}>
       {% if menu_level == 1 %}
         <li{{ parent.attributes.addClass(parent_classes) }}>
           <a href="{{ parent.url }}">{{ parent.title }}</a>
