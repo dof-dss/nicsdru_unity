@@ -29,13 +29,12 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
+{% set classes = [
   'sub-menu',
   'rel-menu',
-  'rel-menu--latest-news'
-]
-%}
+  'rel-menu--latest-news',
+  'content',
+] %}
 {% set attributes = attributes.removeClass('views-element-container').addClass(classes) %}
 {% set attributes = attributes.removeAttribute('id') %}
 {% set attributes = attributes.setAttribute('aria-labelledby', 'latest-news-block') %}
