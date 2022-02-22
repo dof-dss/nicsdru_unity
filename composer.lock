@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "481f18fb66ca7933b7a7a52d7db32f87",
+    "content-hash": "82c7a49ee1099c4828413e13bbeeefac",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -265,12 +265,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Clue\\StreamFilter\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "Clue\\StreamFilter\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7108,8 +7108,16 @@
             ],
             "authors": [
                 {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
                     "name": "KarenS",
                     "homepage": "https://www.drupal.org/user/45874"
+                },
+                {
+                    "name": "wells",
+                    "homepage": "https://www.drupal.org/user/2452278"
                 }
             ],
             "description": "Metatag implementation of Schema.org structured data (JSON-LD)",
@@ -11299,12 +11307,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Http\\Message\\": "src/"
-                },
                 "files": [
                     "src/filters.php"
-                ]
+                ],
+                "psr-4": {
+                    "Http\\Message\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -16928,8 +16936,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.1+1-dev",
-                    "datestamp": "1642521847",
+                    "version": "8.x-5.1+2-dev",
+                    "datestamp": "1644356540",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
