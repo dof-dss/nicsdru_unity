@@ -30,7 +30,7 @@
     "kss": "^3.0.1",
     "modernizr": "^3.11.2",
     "nicsdru_origins_theme": "^0.3.11",
-    "nicsdru_unity_theme": "^0.1.47",
+    "nicsdru_unity_theme": "^0.1.48",
     "nightwatch": "^1.3.5",
     "nightwatch-accessibility": "^1.8.0",
     "node-sass": "^4.14.1",
@@ -48,6 +48,8 @@
     "uglify-js": "^3.9.3"
   },
   "scripts": {
+    "––––––– POST INSTALL SCRIPTS": "–––––––––––––",
+    "install": "(cd node_modules/nicsdru_unity_theme && npm install)",
     "––––––– JS SCRIPTS": "–––––––––––––",
     "js": "npm-run-all --sequential js-lint js-compile",
     "js-lint": "./node_modules/.bin/eslint src/js/**",

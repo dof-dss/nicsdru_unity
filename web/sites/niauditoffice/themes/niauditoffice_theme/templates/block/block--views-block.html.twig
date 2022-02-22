@@ -29,23 +29,11 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-  'sub-menu',
-  'rel-menu',
-  'rel-menu--latest-news'
-]
-%}
-{% set attributes = attributes.removeClass('views-element-container').addClass(classes) %}
-{% set attributes = attributes.removeAttribute('id') %}
-{% set attributes = attributes.setAttribute('aria-labelledby', 'latest-news-block') %}
-<nav{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('menu-title').setAttribute('id', 'latest-news-block') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</nav>
+
+{% if label %}
+<h2>{{ label }}</h2>
+{% endif %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}
