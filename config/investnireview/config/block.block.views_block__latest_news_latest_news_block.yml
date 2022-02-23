@@ -29,10 +29,6 @@ visibility:
     id: condition_group
     negate: false
     block_visibility_group: ''
-  request_path:
-    id: request_path
-    pages: "\r\n"
-    negate: false
   node_type:
     id: node_type
     bundles:
