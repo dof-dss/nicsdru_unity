@@ -1,0 +1,25 @@
+uuid: aba8bcfa-e472-4d44-80d4-cc6c2abe62d0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:f8fbe0e8-ff29-4896-9ecc-c4fdebf3e928'
+  module:
+    - block_content
+  theme:
+    - nifiscalcouncil_theme
+id: sociallinks
+theme: nifiscalcouncil_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:f8fbe0e8-ff29-4896-9ecc-c4fdebf3e928'
+settings:
+  id: 'block_content:f8fbe0e8-ff29-4896-9ecc-c4fdebf3e928'
+  label: 'Social links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
