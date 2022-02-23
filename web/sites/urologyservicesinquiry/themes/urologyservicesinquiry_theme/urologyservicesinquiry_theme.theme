@@ -19,15 +19,6 @@ function urologyservicesinquiry_theme_preprocess_views_view(array &$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function urologyservicesinquiry_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  if (isset($variables['element']['#view_mode'])) {
-    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_container_alter().
  */
 function urologyservicesinquiry_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
