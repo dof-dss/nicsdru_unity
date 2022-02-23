@@ -6,6 +6,7 @@ dependencies:
     - views.view.latest_news
   module:
     - block_visibility_groups
+    - node
     - system
     - views
   theme:
@@ -30,5 +31,12 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/news/*\r\n"
+    pages: "\r\n"
     negate: false
+  node_type:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
