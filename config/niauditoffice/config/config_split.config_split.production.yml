@@ -11,6 +11,7 @@ module:
 theme: {  }
 blacklist:
   - fastly.settings
+  - fastly.settings
 graylist:
   - niauditoffice_theme.settings
 graylist_dependents: true
