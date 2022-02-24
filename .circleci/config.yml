@@ -161,7 +161,7 @@ jobs:
             do
               if [[ -d ~/project/web/sites/${site}/themes/${site}_theme ]]; then
                 cd ~/project/web/sites/${site}/themes/${site}_theme
-                sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
+                sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme:dev-development\",/" package.json
                 npm install
                 npm rebuild node-sass
                 npm run build
