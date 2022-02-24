@@ -22,7 +22,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p>The Inquiry would like you to provide your contact details and answer some basic questions. The Chair would be very grateful if you could submit your contact form by Friday 31st December 2021.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://consultations.nidirect.gov.uk/doh-1/muckamore-abbey-hospital-inquiry-contact-form/\">Online Contact Form</a></p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"ddae8124-bb55-4e20-832b-0891e10cdd52\" href=\"/node/17\">Postal Contact Form</a></p>\r\n"
+          value: "<p>The Inquiry would like you to provide your contact details and answer some basic questions. The Chair would be very grateful if you could submit your contact form by <span><span>Monday 28 February 2022</span></span>.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://consultations.nidirect.gov.uk/doh-1/muckamore-abbey-hospital-inquiry-contact-form/\">Online Contact Form</a></p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"ddae8124-bb55-4e20-832b-0891e10cdd52\" href=\"/node/17\">Postal Contact Form</a></p>\r\n"
           summary: null
           format: basic_html
   -
@@ -38,3 +38,12 @@ blocks:
           value: "<p>Email - <a href=\"mailto:info@mahinquiry.org.uk\">info@mahinquiry.org.uk</a></p>\r\n\r\n<p>Telephone number - 028 9051 5462</p>\r\n"
           summary: ''
           format: basic_html
+  -
+    info: 'Social links'
+    langcode: en
+    uuid: 8a7db81e-84ae-421c-98c6-7d3668865020
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
