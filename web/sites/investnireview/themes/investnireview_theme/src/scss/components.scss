@@ -140,6 +140,15 @@
     }
   }
 
+  .footer_credit #footer-menu .menu li {
+    a,
+    span.active {
+      margin: 0 .5em 0 0;
+      padding: 0 .5em 0 0;
+      //@include adjust-font-size-to(14px);
+    }
+  }
+
   #block-contactus {
     .social-icons {
       @media screen and (max-width: $tab) {
