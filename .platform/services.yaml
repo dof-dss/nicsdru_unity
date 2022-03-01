@@ -25,6 +25,7 @@ db:
       - nipolicingboarddb
       - pbnidb
       - investnireviewdb
+      - pcspsdb
     endpoints:
       uregni:
         default_schema: uregnidb
