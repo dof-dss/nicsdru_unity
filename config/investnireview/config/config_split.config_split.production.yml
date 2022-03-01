@@ -6,11 +6,13 @@ id: production
 label: production
 description: 'Used for production site.'
 folder: ../config/investnireview/production
-module: {  }
+module:
+  fastly: 0
 theme: {  }
 blacklist:
   - fastly.settings
-graylist: {  }
+graylist:
+  - investnireview_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
