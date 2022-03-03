@@ -1,0 +1,29 @@
+uuid: 23d67508-508a-4c70-a218-7d5c0dd9ac6f
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Node configuration'
+source:
+  plugin: variable
+  variables:
+    - node_admin_theme
+  source_module: node
+process:
+  use_admin_theme:
+    -
+      plugin: get
+      source: node_admin_theme
+destination:
+  plugin: config
+  config_name: node.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }
