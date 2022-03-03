@@ -1,0 +1,10 @@
+uuid: 4fd1ddeb-0a22-4e36-8d75-a7ce306f18bf
+langcode: en
+status: true
+dependencies: {  }
+id: domain_admin_user
+label: 'domain admin user'
+weight: 4
+is_admin: null
+permissions:
+  - 'administer main-menu menu items'

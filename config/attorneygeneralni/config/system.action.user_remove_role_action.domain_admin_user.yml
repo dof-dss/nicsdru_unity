@@ -1,0 +1,14 @@
+uuid: 871f7871-a4e1-4934-93eb-0be514260531
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.domain_admin_user
+  module:
+    - user
+id: user_remove_role_action.domain_admin_user
+label: 'Remove the domain admin user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: domain_admin_user

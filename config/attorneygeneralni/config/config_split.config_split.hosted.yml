@@ -1,0 +1,15 @@
+uuid: a0fd2464-2328-46be-8d8d-364a20afdb60
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production.\t"
+folder: ../config/attorneygeneralni/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
