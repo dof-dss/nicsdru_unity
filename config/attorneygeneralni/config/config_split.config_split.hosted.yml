@@ -1,12 +1,10 @@
-uuid: 4f1232d2-5fb9-48de-a9a2-66eb6cd4a4f7
+uuid: a0fd2464-2328-46be-8d8d-364a20afdb60
 langcode: en
-status: false
+status: true
 dependencies: {  }
-_core:
-  default_config_hash: 1X24INUtQNTMuB9BaIvzqkFncJ9MAUlpYtar7E_IB-0
 id: hosted
 label: hosted
-description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
+description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production.\t"
 folder: ../config/attorneygeneralni/hosted
 module: {  }
 theme: {  }

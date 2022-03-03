@@ -1,16 +1,27 @@
-uuid: b1e71de4-1b34-4693-be5f-626546292e6e
+uuid: da695599-95aa-4287-a919-dc625ce1f224
 langcode: en
 status: true
 dependencies:
   module:
     - menu_ui
+    - origins_toc
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
+  origins_toc:
+    toc_enable: 0
+    toc_title: 'Table of contents'
+    toc_location: ''
+    toc_insert: after
+    toc_source_container: ''
+    toc_element: h2
+    toc_exclusions: ''
+    toc_screen_depth: '1'
+    toc_debug: 0
 _core:
-  default_config_hash: g0hiOyM6vMgdn7vw7gh11mt7K2AyvJkje6zy28fqm00
+  default_config_hash: hqQiX23nCQnpnKJsW2wm8ssOABwSDOll0RcAoWYWs-E
 name: Publication
 type: publication
 description: 'Use this content type for generic non-HTML content such as PDF documents.'

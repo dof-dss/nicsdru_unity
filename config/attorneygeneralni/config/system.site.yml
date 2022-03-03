@@ -1,5 +1,5 @@
-name: 'Attorney General for Northern Ireland'
-mail: admin@attorneygeneralni.gov.uk
+name: 'Attorney General Northern Ireland'
+mail: test@test.com
 slogan: ''
 page:
   403: ''
@@ -11,5 +11,5 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 368e9ece-3fd1-4a1f-810f-30871f29c4d5
+uuid: 9ee61300-5049-4c8e-acfd-76c3da9a4999
 frontpage_title: 'Welcome to Drupal site'

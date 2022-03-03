@@ -1,22 +1,22 @@
-uuid: 78059bbb-5b7a-4bf9-8c20-96f09731d2e5
+uuid: fa2b0a00-1c30-464b-95d2-9aaaf1168be2
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.publication.body
     - field.field.node.publication.field_attachment
+    - field.field.node.publication.field_meta_tags
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_type
     - field.field.node.publication.field_published_date
     - field.field.node.publication.field_summary
     - node.type.publication
   module:
     - datetime
-    - file
-    - options
     - text
     - user
 _core:
-  default_config_hash: JEXKz_Us6K6M-PZZTov7oUncjiUBseqZxIupAmhU3Xo
+  default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -25,45 +25,41 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_attachment:
-    weight: 102
-    label: above
+    weight: 2
+    label: inline
     settings:
-      use_description_as_link_text: true
+      view_mode: embed
+      link: false
     third_party_settings: {  }
-    type: file_default
+    type: entity_reference_entity_view
     region: content
-  field_publication_type:
-    weight: 105
-    label: above
-    settings: {  }
+  field_photo:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: portrait_float
+      link: false
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_entity_view
     region: content
   field_published_date:
-    weight: 103
-    label: above
+    weight: 0
+    label: inline
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: unity_date
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  field_publication_type: true
+  field_summary: true
   langcode: true
+  links: true

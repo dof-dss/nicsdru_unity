@@ -1,9 +1,9 @@
-uuid: dc467c77-71bd-4241-a176-07ff0103abb6
+uuid: 1a3729dd-9b82-4ab6-9a22-fc85e99c44d9
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 8cMldkvp28cJIAVxp77f1LtFZt2bWXtIQ_0Ze1XaYIQ
+  default_config_hash: EL-ouPEHVH3As8Zm7e-zLkRXVK0TXWIJanGOA5B6g-o
 name: slideshow_1024x340_
 label: 'Slideshow (1024x340)'
 effects:
