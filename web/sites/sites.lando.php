@@ -22,3 +22,4 @@ $sites['independentreviewofeducation.org.uk.lndo.site'] = 'independentreviewofed
 $sites['nipolicingboard.org.uk.lndo.site'] = 'nipolicingboard';
 $sites['pbni.org.uk.lndo.site'] = 'pbni';
 $sites['investnireview.org.uk.lndo.site'] = 'investnireview';
+$sites['pcsps.org.lndo.site'] = 'pcsps';
