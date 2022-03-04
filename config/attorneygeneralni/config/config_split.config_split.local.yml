@@ -9,6 +9,7 @@ folder: ../config/attorneygeneralni/local
 module:
   dblog: 0
   easy_install: 0
+  field_group_migrate: 0
   migrate: 0
   migrate_drupal: 0
   migrate_plus: 0

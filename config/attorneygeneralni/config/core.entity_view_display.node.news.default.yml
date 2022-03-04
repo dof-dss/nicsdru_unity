@@ -38,7 +38,7 @@ content:
     region: content
   field_published_date:
     weight: 0
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
