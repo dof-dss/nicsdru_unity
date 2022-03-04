@@ -20,12 +20,13 @@ bundle: webform
 mode: default
 content:
   body:
+    weight: 1
     type: text_textarea_with_summary
-    weight: 0
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:

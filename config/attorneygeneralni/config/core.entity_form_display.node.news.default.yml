@@ -14,8 +14,7 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - media_library
-    - media_library_edit
+    - file
     - metatag
     - path
     - text
@@ -27,8 +26,8 @@ bundle: news
 mode: default
 content:
   body:
+    weight: 6
     type: text_textarea_with_summary
-    weight: 13
     settings:
       rows: 9
       summary_rows: 3
@@ -50,19 +49,17 @@ content:
       sidebar: true
     third_party_settings: {  }
   field_photo:
-    weight: 12
+    weight: 5
+    type: file_generic
     settings:
-      media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
-    type: media_library_widget
+      progress_indicator: throbber
+    third_party_settings: {  }
     region: content
   field_published_date:
-    weight: 10
+    weight: 3
+    type: datetime_default
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
     region: content
   field_summary:
     weight: 14
@@ -73,12 +70,12 @@ content:
     type: text_textarea
     region: content
   field_teaser:
-    weight: 11
+    weight: 4
+    type: string_textfield
     settings:
-      size: 60
+      size: 120
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
     region: content
   flag:
     weight: 10
