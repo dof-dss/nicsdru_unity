@@ -239,6 +239,22 @@
 
 #---------------------------------
 
+"https://www.pcsps.org/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://pcsps.org.{default}/":
+  type: redirect
+  to: "https://www.pcsps.org.{default}/"
+
+"https://pcsps.org/":
+  type: redirect
+  to: "https://www.pcsps.org/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream

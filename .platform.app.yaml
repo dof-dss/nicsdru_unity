@@ -46,6 +46,7 @@ relationships:
   pbni: 'db:pbni'
   pbni_solr: 'solr:pbni'
   investnireview: 'db:investnireview'
+  pcsps: 'db:pcsps'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720

@@ -16,6 +16,7 @@ proxy:
     - nipolicingboard.org.uk.lndo.site
     - pbni.org.uk.lndo.site
     - investnireview.org.uk.lndo.site
+    - pcsps.org.lndo.site
 services:
   uregni_solr:
     type: solr:7
@@ -36,6 +37,18 @@ services:
     config:
       dir: .lando/config/solr/7.x/default
   pbni_solr:
+    type: solr:7
+    portforward: true
+    core: default
+    config:
+      dir: .lando/config/solr/7.x/default
+  pcsps_solr:
+    type: solr:7
+    portforward: true
+    core: default
+    config:
+      dir: .lando/config/solr/7.x/default
+  attorneygeneralni_solr:
     type: solr:7
     portforward: true
     core: default

@@ -1,13 +1,15 @@
-uuid: d8a58d53-5a80-48bb-95b5-0f1aa0d60963
-langcode: und
+uuid: 44f40cda-92b2-4df5-8bcd-8281c9d3089f
+langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_enable_toc
-field_name: field_enable_toc
+_core:
+  default_config_hash: nZEZ9alZURK8vkREqFp30p9WP_wHDU76QaWUw5MllQI
+id: node.field_email_address
+field_name: field_email_address
 entity_type: node
-type: boolean
+type: email
 settings: {  }
 module: core
 locked: false

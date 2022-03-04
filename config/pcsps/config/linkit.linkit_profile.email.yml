@@ -1,0 +1,15 @@
+uuid: 920c1253-18e0-42a7-8cf2-831630a44cdc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8g6JglmKqvkoT8fkK-xRjD7A50cuwN7B4lI1vCREt40
+id: email
+label: Email
+description: ''
+matchers:
+  0a97cdee-0dee-4651-943f-ffff63c8148b:
+    uuid: 0a97cdee-0dee-4651-943f-ffff63c8148b
+    id: email
+    weight: 0
+    settings: {  }

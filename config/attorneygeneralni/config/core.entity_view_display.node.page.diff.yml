@@ -65,8 +65,8 @@ content:
     region: content
     label: inline
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: unity_date
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
