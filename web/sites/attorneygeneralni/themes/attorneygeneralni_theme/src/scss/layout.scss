@@ -1,0 +1,20 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+.front {
+  .sidebar-second-layout {
+    @include breakpoint($lap) {
+      margin-top: 6.4rem;
+    }
+  }
+}
