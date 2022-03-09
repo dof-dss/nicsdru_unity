@@ -17,6 +17,7 @@ proxy:
     - pbni.org.uk.lndo.site
     - investnireview.org.uk.lndo.site
     - pcsps.org.lndo.site
+    - cscsreviewni.net.lndo.site
 services:
   uregni_solr:
     type: solr:7

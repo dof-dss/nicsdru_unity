@@ -49,6 +49,7 @@ relationships:
   investnireview: 'db:investnireview'
   pcsps: 'db:pcsps'
   pcsps_solr: 'solr:pcsps'
+  cscsreviewni: 'db:cscsreviewni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -223,3 +224,6 @@ crons:
   investnireview:
     spec: '10 * * * *'
     cmd: 'cd web/sites/investnireview ; drush core-cron'
+  cscsreviewni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
