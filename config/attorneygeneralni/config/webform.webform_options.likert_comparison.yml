@@ -1,4 +1,4 @@
-uuid: 38433ede-8d3f-45a5-ae0c-cb7550d9ea7d
+uuid: a936be45-0182-426f-9e7c-c0bce0877ebf
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,9 @@ id: likert_comparison
 label: 'Likert: Comparison'
 category: Likert
 likert: true
-options: "1: Strongly Disagree\n2: Disagree\n3: Neutral\n4: Agree\n5: Strongly Agree\n"
+options: |
+  1: Strongly Disagree
+  2: Disagree
+  3: Neutral
+  4: Agree
+  5: Strongly Agree

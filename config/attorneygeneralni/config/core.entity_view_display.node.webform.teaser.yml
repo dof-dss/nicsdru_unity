@@ -1,4 +1,4 @@
-uuid: faab23a4-6cfb-4b8f-8577-96b36cea1afa
+uuid: 3484a5ed-9df0-4118-a408-37f6e1aed4df
 langcode: en
 status: true
 dependencies:
@@ -23,6 +23,11 @@ content:
     weight: 101
     settings:
       trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
     third_party_settings: {  }
     region: content
   links:

@@ -1,4 +1,4 @@
-uuid: 43bfd3a1-c760-4253-b515-9bbb750d6868
+uuid: f4257a27-ae43-4cdd-a0a0-9d99097c51bb
 langcode: en
 status: true
 dependencies:
@@ -11,4 +11,9 @@ id: likert_importance
 label: 'Likert: Importance'
 category: Likert
 likert: true
-options: "1: Not at all Important\n2: Somewhat Important\n3: Neutral\n4: Important\n5: Very Important\n"
+options: |
+  1: Not at all Important
+  2: Somewhat Important
+  3: Neutral
+  4: Important
+  5: Very Important

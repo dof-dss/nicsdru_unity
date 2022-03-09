@@ -32,6 +32,7 @@ relationships:
   liofa: 'db:liofa'
   odscni: 'db:odscni'
   attorneygeneralni: 'db:attorneygeneralni'
+  attorneygeneralni_solr: 'solr:attorneygeneralni'
   employmenttribunalsni: 'db:employmenttribunalsni'
   fiscalcommissionni: 'db:fiscalcommissionni'
   nifiscalcouncil: 'db:nifiscalcouncil'
@@ -47,6 +48,7 @@ relationships:
   pbni_solr: 'solr:pbni'
   investnireview: 'db:investnireview'
   pcsps: 'db:pcsps'
+  pcsps_solr: 'solr:pcsps'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720

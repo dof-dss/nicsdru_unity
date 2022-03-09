@@ -1,0 +1,48 @@
+/*
+ * @file
+ * Defines the layout code for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+  }
+}
+
+.front {
+  .sidebar-second-layout {
+    @include breakpoint($lap) {
+      margin-top: 6.4rem;
+    }
+  }
+}
+
+#logo {
+  margin-top: 1.5rem;
+  width: 100%;
+
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+
+  a {
+    display: block;
+
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: 0.3rem dashed #949494;
+      outline-offset: 1.2rem;
+    }
+  }
+
+  img {
+    height: 80px;
+
+    @media screen and (max-width: $tab) {
+      height: 60px;
+    }
+  }
+}
