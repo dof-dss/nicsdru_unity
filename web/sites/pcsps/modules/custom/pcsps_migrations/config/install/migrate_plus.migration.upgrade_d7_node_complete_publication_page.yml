@@ -80,7 +80,43 @@ process:
     -
       plugin: get
       source: body
-  field_publication_date:
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: filter_absolute_links
+      replace_urls:
+        http://www.pcsps.org
+        https://www.pcsps.org
+        http://test-pcscps.nigov.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/pcsps/files
+      to_ref: files/pcsps
+    -
+      plugin: site_files_filter
+      from_ref: sites/pcsps.org/files
+      to_ref: files/pcsps
+    -
+      plugin: site_files_filter
+      from_ref: sites/drupal-pcsps.nigov.net/files
+      to_ref: files/pcsps
+    -
+      plugin: str_replace
+      regex: true
+      search: /<a href=".*\/help-viewing-documents"(\srel=".*")?>(<.*>)*Help viewing documents(<\/.*>)<\/a>/
+      replace: ''
+  body/0/format:
+    -
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
+  field_published_date:
     -
       plugin: sub_process
       source: field_publication_date
@@ -90,7 +126,7 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: Y-m-d
           source: value
-  field_publication_image:
+  field_photo:
     -
       plugin: sub_process
       source: field_publication_image
@@ -104,7 +140,7 @@ process:
     -
       plugin: get
       source: field_publication_type
-  field_pcsp_attachment:
+  field_attachment:
     -
       plugin: sub_process
       source: field_pcsp_attachment
@@ -119,11 +155,10 @@ process:
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: publication_page
+  default_bundle: publication
 migration_dependencies:
   required:
     - upgrade_d7_user
-    - upgrade_d7_node_type
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_metatag_field_node
