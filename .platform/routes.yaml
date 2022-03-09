@@ -255,6 +255,22 @@
 
 #---------------------------------
 
+"https://www.cscsreviewni.net/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://cscsreviewni.net.{default}/":
+  type: redirect
+  to: "https://www.cscsreviewni.net.{default}/"
+
+"https://cscsreviewni.net/":
+  type: redirect
+  to: "https://www.cscsreviewni.net/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream
