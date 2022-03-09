@@ -1,0 +1,16 @@
+name: 'CSCS NI Review'
+mail: admin@cscsreviewni.net
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+uuid: 720b0f57-1b72-4200-9dcf-4b0ec43ae9c5
+frontpage_title: 'Welcome to CSCS NI Independent Review'
+frontpage_show_title: 0
