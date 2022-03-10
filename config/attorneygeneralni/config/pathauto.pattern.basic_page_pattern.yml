@@ -1,0 +1,25 @@
+uuid: 677d9cf0-492d-4dae-8f4b-a026dc405783
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: AWGwZqlu1c4wXUy3i3L4MFsdjvsXuggKn8gUkHcjr1A
+id: basic_page_pattern
+label: 'Basic page pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  f6e4d83a-67d4-44a9-9069-be271ed98c15:
+    id: node_type
+    bundles:
+      page: page
+      webform: webform
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f6e4d83a-67d4-44a9-9069-be271ed98c15
+selection_logic: and
+weight: -5
+relationships: {  }

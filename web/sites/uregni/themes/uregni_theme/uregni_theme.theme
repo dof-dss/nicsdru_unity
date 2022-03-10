@@ -53,26 +53,6 @@ function uregni_theme_preprocess_node(array &$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function uregni_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  if (!empty($variables['element']['#view_mode'])) {
-    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_menu_alter().
- *
- * Provide region based menu suggestions.
- */
-function uregni_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
-  if (!empty($variables['attributes']['region'])) {
-    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_container_alter().
  */
 function uregni_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {

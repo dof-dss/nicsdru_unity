@@ -1,16 +1,16 @@
-uuid: 90d01985-d531-48e9-a36a-5b848022227b
+uuid: df7e31f6-1665-4405-8801-806e47214630
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.news
 _core:
-  default_config_hash: tJWRLhVedgDXW9-cGrqOF6aDmU4wXgEHbCq7iVu1VFQ
+  default_config_hash: MU9Gxb3GoC55bh-2Fwx5VG4fOn4X7N77V2kul4V__gU
 id: node.news.title
 field_name: title
 entity_type: node
 bundle: news
-label: 'Main heading'
+label: 'Title (Main heading)'
 description: ''
 required: true
 translatable: true

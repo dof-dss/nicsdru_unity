@@ -1,0 +1,15 @@
+uuid: a3fad248-b001-471c-89dc-1dab1186a509
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+folder: ../config/pcsps/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

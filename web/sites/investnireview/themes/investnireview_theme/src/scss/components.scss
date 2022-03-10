@@ -140,6 +140,14 @@
     }
   }
 
+  .footer_credit #footer-menu .menu li {
+    a,
+    span.active {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   #block-contactus {
     .social-icons {
       @media screen and (max-width: $tab) {

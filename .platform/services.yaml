@@ -25,6 +25,8 @@ db:
       - nipolicingboarddb
       - pbnidb
       - investnireviewdb
+      - pcspsdb
+      - cscsreviewnidb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -86,6 +88,14 @@ db:
         default_schema: investnireviewdb
         privileges:
           investnireviewdb: admin
+      pcsps:
+        default_schema: pcspsdb
+        privileges:
+          pcspsdb: admin
+      cscsreviewni:
+        default_schema: cscsreviewnidb
+        privileges:
+          cscsreviewnidb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
@@ -101,6 +111,10 @@ solr:
         conf_dir: !archive "solr_config/"
       pbni_index:
         conf_dir: !archive "solr_config/"
+      pcsps_index:
+        conf_dir: !archive "solr_config/"
+      attorneygeneralni_index:
+        conf_dir: !archive "solr_config/"
       #     fictcommission_index:
       #       conf_dir: !archive "solr_config/"
     endpoints:
@@ -112,6 +126,10 @@ solr:
         core: nipolicingboard_index
       pbni:
         core: pbni_index
+      pcsps:
+        core: pcsps_index
+      attorneygeneralni:
+        core: attorneygeneralni_index
 #     fictcommission:
 #       core: fictcommission_index
 
