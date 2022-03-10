@@ -165,6 +165,9 @@ jobs:
                 npm install
                 npm rebuild node-sass
                 npm run build
+
+                git add *.css
+                git commit -m "Theme rebuild"
               else
                 echo "No theme folder detected under ~/project/web/sites/${site}/themes/${site}_theme, skipping."
               fi

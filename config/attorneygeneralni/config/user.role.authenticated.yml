@@ -1,19 +1,37 @@
-uuid: fb485ce3-1e15-410b-bddd-807c95b457a8
+uuid: 5859288e-d57b-4fb2-b36c-b43e708efdae
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+  default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
 id: authenticated
-label: 'Authenticated user'
+label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
+  - 'access administration menu'
+  - 'access administration pages'
   - 'access content'
-  - 'access shortcuts'
-  - 'access site-wide contact form'
-  - 'post comments'
+  - 'access media browser'
+  - 'access workbench'
+  - 'create news content'
+  - 'create page content'
+  - 'create url aliases'
+  - 'delete own page content'
+  - 'diff view changes'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'notify of path changes'
+  - 'revert revisions'
   - 'search content'
-  - 'skip comment approval'
-  - 'use text format basic_html'
+  - 'use media wysiwyg'
+  - 'use text format filtered_html'
+  - 'use text format filtered_html_with_no_images'
+  - 'view files'
+  - 'view moderation history'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view revisions'
+  - 'view the administration theme'

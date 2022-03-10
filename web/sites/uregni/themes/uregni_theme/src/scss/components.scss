@@ -307,47 +307,47 @@ h2 i {
   }
 }
 
-#footer-content {
-  @include breakpoint($phab) {
-    display: flex;
-    flex-flow: wrap;
-  }
-
-  .column,
-  .column:first-child {
-    padding: 1%;
-
+#footer {
+  #footer-content {
     @include breakpoint($phab) {
-      flex-basis: 49%;
+      display: flex;
+      flex-flow: wrap;
     }
 
-    @include breakpoint(870px) {
-      flex-basis: 33%;
+    .column,
+    .column:first-child {
+      padding: 1%;
+
+      @include breakpoint($phab) {
+        flex-basis: 49%;
+      }
+
+      @include breakpoint(870px) {
+        flex-basis: 33%;
+      }
+
+      li {
+        border: none;
+      }
     }
 
-    li {
-      border: none;
+    .column.logo {
+      align-self: center;
     }
-  }
 
-  .column.logo {
-    align-self: center;
-  }
+    .column:first-child {
+      margin-left: 0;
 
-  .column:first-child {
-    margin-left: 0;
-
-    #block-footerlogo {
-      padding-right: 10px;
+      #block-footerlogo {
+        padding-right: 10px;
+      }
     }
-  }
 
-  address {
-    //color: $white;
-    line-height: 2.4rem;
-  }
+    address {
+      //color: $white;
+      line-height: 2.4rem;
+    }
 
-  #block-footercontactinformation {
     .social-icons {
       a {
         border-bottom: 0;

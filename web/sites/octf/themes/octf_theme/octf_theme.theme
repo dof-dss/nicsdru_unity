@@ -29,12 +29,3 @@ function octf_theme_preprocess_html(&$variables) {
     }
   }
 }
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function octf_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  if (!empty($variables['element']['#view_mode'])) {
-    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
-  }
-}

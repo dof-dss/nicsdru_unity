@@ -1,0 +1,30 @@
+uuid: 2961865c-e8d5-4d4e-9638-d33ab51b6c65
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:be7d98a4-718a-4831-b9fb-158b904898ee'
+  module:
+    - block_content
+    - system
+  theme:
+    - attorneygeneralni_theme
+id: homepageattorneygeneralprofile
+theme: attorneygeneralni_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:be7d98a4-718a-4831-b9fb-158b904898ee'
+settings:
+  id: 'block_content:be7d98a4-718a-4831-b9fb-158b904898ee'
+  label: 'Homepage Attorney General profile'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

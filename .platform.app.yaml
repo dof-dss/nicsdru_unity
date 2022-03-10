@@ -32,6 +32,7 @@ relationships:
   liofa: 'db:liofa'
   odscni: 'db:odscni'
   attorneygeneralni: 'db:attorneygeneralni'
+  attorneygeneralni_solr: 'solr:attorneygeneralni'
   employmenttribunalsni: 'db:employmenttribunalsni'
   fiscalcommissionni: 'db:fiscalcommissionni'
   nifiscalcouncil: 'db:nifiscalcouncil'
@@ -46,6 +47,9 @@ relationships:
   pbni: 'db:pbni'
   pbni_solr: 'solr:pbni'
   investnireview: 'db:investnireview'
+  pcsps: 'db:pcsps'
+  pcsps_solr: 'solr:pcsps'
+  cscsreviewni: 'db:cscsreviewni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -92,7 +96,7 @@ hooks:
     export FASTLY_API_SERVICE=dummyservice
 
     # For each multi site - run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -220,3 +224,6 @@ crons:
   investnireview:
     spec: '10 * * * *'
     cmd: 'cd web/sites/investnireview ; drush core-cron'
+  cscsreviewni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
