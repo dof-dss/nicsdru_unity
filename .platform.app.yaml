@@ -32,7 +32,6 @@ relationships:
   liofa: 'db:liofa'
   odscni: 'db:odscni'
   attorneygeneralni: 'db:attorneygeneralni'
-  attorneygeneralni_solr: 'solr:attorneygeneralni'
   employmenttribunalsni: 'db:employmenttribunalsni'
   fiscalcommissionni: 'db:fiscalcommissionni'
   nifiscalcouncil: 'db:nifiscalcouncil'
@@ -48,8 +47,6 @@ relationships:
   pbni_solr: 'solr:pbni'
   investnireview: 'db:investnireview'
   pcsps: 'db:pcsps'
-  pcsps_solr: 'solr:pcsps'
-  cscsreviewni: 'db:cscsreviewni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -118,7 +115,7 @@ hooks:
     export FASTLY_API_SERVICE=$temp
 
     # For each multi site - clear cache (including Fastly cache)
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard pbni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard pbni attorneygeneralni
     do
       echo "****** $site cache clear ******"
       cd /app/web/sites/$site
@@ -224,6 +221,3 @@ crons:
   investnireview:
     spec: '10 * * * *'
     cmd: 'cd web/sites/investnireview ; drush core-cron'
-  cscsreviewni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
