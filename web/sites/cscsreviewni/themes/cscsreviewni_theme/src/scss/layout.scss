@@ -4,3 +4,16 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+.container-wrap {
+  @media screen and (max-width: $lap) {
+    margin: 0 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.sidebar-second-layout {
+  @media screen and (max-width: $lap) {
+    clear: both;
+  }
+}
