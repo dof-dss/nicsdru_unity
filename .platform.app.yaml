@@ -32,6 +32,7 @@ relationships:
   liofa: 'db:liofa'
   odscni: 'db:odscni'
   attorneygeneralni: 'db:attorneygeneralni'
+  attorneygeneralni_solr: 'solr:attorneygeneralni'
   employmenttribunalsni: 'db:employmenttribunalsni'
   fiscalcommissionni: 'db:fiscalcommissionni'
   nifiscalcouncil: 'db:nifiscalcouncil'
@@ -47,6 +48,8 @@ relationships:
   pbni_solr: 'solr:pbni'
   investnireview: 'db:investnireview'
   pcsps: 'db:pcsps'
+  pcsps_solr: 'solr:pcsps'
+  cscsreviewni: 'db:cscsreviewni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -221,3 +224,15 @@ crons:
   investnireview:
     spec: '10 * * * *'
     cmd: 'cd web/sites/investnireview ; drush core-cron'
+  cscsreviewni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
+  attorneygeneralni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
+  pbni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/pbni ; drush core-cron'
+  pcsps:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/pcsps ; drush core-cron'
