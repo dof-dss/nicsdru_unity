@@ -1,6 +1,6 @@
 uuid: 7df1dd36-c9ef-4ed5-90af-dffd44654c21
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.news_search
@@ -11,7 +11,7 @@ dependencies:
     - attorneygeneralni_theme
 id: exposedformnews_searchnews_search_page
 theme: attorneygeneralni_theme
-region: search_facets
+region: header
 weight: -4
 provider: null
 plugin: 'views_exposed_filter_block:news_search-news_search_page'

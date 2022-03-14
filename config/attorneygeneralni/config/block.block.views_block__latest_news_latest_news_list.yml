@@ -1,0 +1,30 @@
+uuid: 35e8eda7-da2b-4807-b86e-aa2ac91404c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - system
+    - views
+  theme:
+    - attorneygeneralni_theme
+id: views_block__latest_news_latest_news_list
+theme: attorneygeneralni_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-latest_news_list'
+settings:
+  id: 'views_block:latest_news-latest_news_list'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/news/*'
+    negate: false
