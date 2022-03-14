@@ -1,0 +1,24 @@
+uuid: 0d3793f2-8eef-4faf-a4fc-cffec1673498
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cscsreviewni_theme
+id: breadcrumbs
+theme: cscsreviewni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
