@@ -1,4 +1,9 @@
 services:
+  attorneygeneralni_breadcrumbs.breadcrumb.view_page:
+    class: Drupal\attorneygeneralni_breadcrumbs\ViewPageBreadcrumb
+    arguments: [ '@request_stack', '@title_resolver' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }
   attorneygeneralni_breadcrumbs.breadcrumb.publication:
     class: Drupal\attorneygeneralni_breadcrumbs\PublicationBreadcrumb
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
