@@ -4,3 +4,8 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.toc-menu .menu-title {
+  font-size: $h2-font-size;
+  line-height: 3.6rem;
+}
