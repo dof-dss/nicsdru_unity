@@ -14,3 +14,8 @@ services:
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
     tags:
       - { name: breadcrumb_builder, priority: 100 }
+  attorneygeneralni_breadcrumbs.breadcrumb.news:
+    class: Drupal\attorneygeneralni_breadcrumbs\NewsBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
