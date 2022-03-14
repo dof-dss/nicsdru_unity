@@ -48,6 +48,10 @@
 }
 
 .path-news-search {
+  .content-sidebar-wrap {
+    width: 100%;
+  }
+
   .search-page {
     .sidebar-first-layout {
       padding-left: 0;
@@ -75,35 +79,6 @@
 
     .metaListItem {
       margin-left: 2rem;
-    }
-  }
-}
-
-.sidebar-second-layout {
-  .rel-menu--latest-news {
-    margin-bottom: 2rem;
-
-    ul {
-      margin-bottom: 1rem;
-
-      li {
-        padding: 0 0 .6rem 1rem;
-        list-style: none;
-        margin: 0 0 .2rem;
-        position: relative;
-
-        &::before {
-          content: "-";
-          left: 0;
-          position: absolute;
-          top: 0;
-        }
-
-        .date-published {
-          display: block;
-          @include adjust-font-size-to(16px);
-        }
-      }
     }
   }
 }
