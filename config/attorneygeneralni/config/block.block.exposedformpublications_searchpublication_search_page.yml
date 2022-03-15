@@ -1,0 +1,28 @@
+uuid: d6cc5a09-f0e2-40b1-bd3d-c1044372c86f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications_search
+  module:
+    - system
+    - views
+  theme:
+    - attorneygeneralni_theme
+id: exposedformpublications_searchpublication_search_page
+theme: attorneygeneralni_theme
+region: search_facets
+weight: -6
+provider: null
+plugin: 'views_exposed_filter_block:publications_search-publication_search_page'
+settings:
+  id: 'views_exposed_filter_block:publications_search-publication_search_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications-search\r\n/publications-search/date/*\r\n/publications-search/type/*\r\n"
+    negate: false

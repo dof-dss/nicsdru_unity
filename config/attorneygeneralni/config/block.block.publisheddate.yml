@@ -12,12 +12,12 @@ dependencies:
 id: publisheddate
 theme: attorneygeneralni_theme
 region: search_facets
-weight: -4
+weight: -3
 provider: null
 plugin: 'facet_block:published_date'
 settings:
   id: 'facet_block:published_date'
-  label: 'Published date'
+  label: Date
   provider: facets
   label_display: visible
   block_id: publisheddate
