@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - search_api.index.news
-    - system.menu.main
   module:
     - search_api
     - text
@@ -264,8 +263,13 @@ display:
         metatag_display_extender: {  }
       path: news
       menu:
-        type: normal
+        type: none
         title: News
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
         menu_name: main
       exposed_block: true
       cache:
