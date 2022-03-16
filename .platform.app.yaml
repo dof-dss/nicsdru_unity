@@ -231,3 +231,12 @@ crons:
   cscsreviewni:
     spec: '10 * * * *'
     cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
+  attorneygeneralni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
+  pbni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/pbni ; drush core-cron'
+  pcsps:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/pcsps ; drush core-cron'

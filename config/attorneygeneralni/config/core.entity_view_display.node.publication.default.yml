@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_type
     - field.field.node.publication.field_published_date
-    - field.field.node.publication.field_summary
     - node.type.publication
   module:
     - datetime
@@ -60,6 +59,6 @@ hidden:
   content_moderation_control: true
   field_meta_tags: true
   field_publication_type: true
-  field_summary: true
   langcode: true
   links: true
+  search_api_excerpt: true
