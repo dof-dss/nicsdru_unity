@@ -17,3 +17,17 @@ function cscsreviewni_theme_preprocess_html(&$variables) {
     }
   }
 }
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function cscsreviewni_theme_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+
+  switch ($view->storage->id()) {
+    case 'latest_news':
+      if ($view->current_display == 'latest_news_home_block') {
+        $variables['more']['#options']['attributes']['class'] = 'btn';
+      }
+  }
+}

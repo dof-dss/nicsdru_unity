@@ -20,7 +20,7 @@ $chroma: add-colors((
   ash-grey:               #666,
   'grey':                 #999,
   grey-dark:              #4d4d4d,
-  grey-light:             #e8e7e7,
+  grey-light:             #e7e7e7,
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
@@ -61,7 +61,7 @@ $chroma: add-colors('functional', (
   error-bg:               'light-pink',
 
   menu-background:        #fff,
-  menu-item-hover:        'brand-primary',
+  menu-item-hover:        #30325a,
   menu-separator:         #fff,
   menu-sub-item-background: lighten(#333, 10),
   menu-sub-item-hover:    #1abc9c,
@@ -75,7 +75,7 @@ $chroma: add-colors('functional', (
   table-cell-border: #dbdbdb,
   table-cell-text: #747474,
 
-  footer-background: #e7e7e7,
+  footer-background: 'grey-light',
   footer-border: 'brand-primary',
   footer-text: 'text',
   footer-headings: 'text',
