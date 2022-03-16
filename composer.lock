@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37e94080ebe7807e12a6e6ff46d72ff3",
+    "content-hash": "86efd6bd8850d1e5b438a9fae57cf39c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2511,16 +2511,16 @@
                     "homepage": "https://www.drupal.org/user/502018"
                 },
                 {
-                    "name": "arshadcn",
-                    "homepage": "https://www.drupal.org/user/571032"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 },
                 {
                     "name": "supercabbageuk",
@@ -2588,16 +2588,16 @@
                     "homepage": "https://www.drupal.org/user/502018"
                 },
                 {
-                    "name": "arshadcn",
-                    "homepage": "https://www.drupal.org/user/571032"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 },
                 {
                     "name": "supercabbageuk",
@@ -8879,12 +8879,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -9414,12 +9414,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -13602,12 +13602,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -16464,8 +16464,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
