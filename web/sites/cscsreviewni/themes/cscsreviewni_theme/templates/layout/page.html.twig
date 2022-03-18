@@ -84,7 +84,7 @@
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
-    <div id="top-area" class="clearfix">
+    <div id="top-area">
       {% if page.top_first %}
         <div class="column">
           {{ page.top_first }}
@@ -104,6 +104,7 @@
   {% endif %}
 {% endif %}
 
+{% if not is_front %}
 <div id="container">
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
@@ -120,10 +121,6 @@
       {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
-      {% endif %}
-
-      {% if evidence_search %}
-        {{ drupal_entity('block_content', 4) }}
       {% endif %}
 
       <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
@@ -179,6 +176,7 @@
     {% endif %}
   </div>
 </div>
+{% endif %}
 
 <footer id="footer">
   <div id="footer_wrapper" class="container-wrap">

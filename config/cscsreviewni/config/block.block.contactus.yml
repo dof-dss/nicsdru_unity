@@ -1,0 +1,25 @@
+uuid: 0494fa18-b4f0-42d9-abfb-0c0c5170a79c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:61a72299-a5bc-4454-8715-7fe450b2f7d3'
+  module:
+    - block_content
+  theme:
+    - cscsreviewni_theme
+id: contactus
+theme: cscsreviewni_theme
+region: footer_first
+weight: -6
+provider: null
+plugin: 'block_content:61a72299-a5bc-4454-8715-7fe450b2f7d3'
+settings:
+  id: 'block_content:61a72299-a5bc-4454-8715-7fe450b2f7d3'
+  label: 'Contact us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
