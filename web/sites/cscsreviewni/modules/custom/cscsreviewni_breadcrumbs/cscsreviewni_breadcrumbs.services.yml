@@ -1,0 +1,21 @@
+services:
+  cscsreviewni_breadcrumbs.breadcrumb.view_page:
+    class: Drupal\cscsreviewni_breadcrumbs\ViewPageBreadcrumb
+    arguments: ['@request_stack', '@title_resolver']
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }
+  cscsreviewni_breadcrumbs.breadcrumb.news:
+    class: Drupal\cscsreviewni_breadcrumbs\NewsBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  cscsreviewni_breadcrumbs.breadcrumb.publication:
+    class: Drupal\cscsreviewni_breadcrumbs\PublicationBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  cscsreviewni_breadcrumbs.breadcrumb.page:
+    class: Drupal\cscsreviewni_breadcrumbs\PageBreadcrumb
+    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
