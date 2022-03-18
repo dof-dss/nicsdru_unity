@@ -169,6 +169,7 @@
       &.active {
         background: lighten($charcoal, 10%);
         font-weight: normal;
+        border-bottom-color: $brand-primary;
       }
     }
   }
