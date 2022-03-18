@@ -283,10 +283,10 @@ display:
           relationship: none
           view_mode: teaser
       block_description: 'Latest News Home'
-      use_more: false
+      use_more: true
       use_more_always: true
-      use_more_text: 'More news...'
-      link_display: '0'
+      use_more_text: 'Read more'
+      link_display: custom_url
       link_url: /news
     cache_metadata:
       max-age: -1

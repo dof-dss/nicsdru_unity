@@ -33,3 +33,13 @@
     }
   }
 }
+
+#inner_header_wrapper {
+  background-color: $brand-primary;
+
+  #header {
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
