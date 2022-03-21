@@ -273,7 +273,8 @@ display:
         menu_name: main
       exposed_block: true
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:
