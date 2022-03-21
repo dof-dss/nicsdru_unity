@@ -1,0 +1,25 @@
+uuid: 416647c7-eeda-4920-add5-58ac08f815d5
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:7983a04e-d163-4202-9fda-49b93502ee31'
+  module:
+    - block_content
+  theme:
+    - cscsreviewni_theme
+id: sociallinks
+theme: cscsreviewni_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:7983a04e-d163-4202-9fda-49b93502ee31'
+settings:
+  id: 'block_content:7983a04e-d163-4202-9fda-49b93502ee31'
+  label: 'Social links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
