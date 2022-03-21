@@ -1,0 +1,23 @@
+uuid: bdeacf58-dd9e-4ba1-b9f9-eea5086ec5f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cscsreviewni_theme
+id: sitebranding
+theme: cscsreviewni_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }
