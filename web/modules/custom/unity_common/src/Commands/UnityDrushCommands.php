@@ -2,7 +2,6 @@
 
 namespace Drupal\unity_common\Commands;
 
-use Drupal\Core\Database\Database;
 use Drush\Commands\DrushCommands;
 use Drupal\structure_sync\StructureSyncHelper;
 
@@ -103,10 +102,10 @@ class UnityDrushCommands extends DrushCommands {
       foreach ($site_directory as $file) {
         $file_contents = file_get_contents($file);
         $strings = ['STARTERKIT',
-          'SITE_DIRECTORY_NAME'
+          'SITE_DIRECTORY_NAME',
         ];
         $string_replacements = [$starterkit,
-          $site_folder_name
+          $site_folder_name,
         ];
         $file_contents = str_replace($strings, $string_replacements, $file_contents);
         if (!is_dir($file)) {
@@ -148,6 +147,40 @@ class UnityDrushCommands extends DrushCommands {
     if ($this->io()->confirm("Are you sure you want to delete all $content_type content", TRUE)) {
       $storage->delete($entities);
       $this->io()->write("<comment>$bundle content deleted</comment>", TRUE);
+    }
+  }
+
+  /**
+   * Drush command to disable Fastly logging if Fastly module installed.
+   *
+   * @command disable-fastly-logging
+   */
+  public function disableFastlyLogging() {
+    // Only disable logging if the Fastly module is installed.
+    if (\Drupal::moduleHandler()->moduleExists('fastly')) {
+      \Drupal::configFactory()->getEditable('fastly.settings')
+        ->set('logging', FALSE)->save();
+      $this->io()->write("Fastly logging disabled", TRUE);
+    }
+    else {
+      $this->io()->write("Fastly module not installed", TRUE);
+    }
+  }
+
+  /**
+   * Drush command to enable Fastly logging if Fastly module installed.
+   *
+   * @command enable-fastly-logging
+   */
+  public function enableFastlyLogging() {
+    // Only enable logging if the Fastly module is installed.
+    if (\Drupal::moduleHandler()->moduleExists('fastly')) {
+      \Drupal::configFactory()->getEditable('fastly.settings')
+        ->set('logging', TRUE)->save();
+      $this->io()->write("Fastly logging enabled", TRUE);
+    }
+    else {
+      $this->io()->write("Fastly module not installed", TRUE);
     }
   }
 
