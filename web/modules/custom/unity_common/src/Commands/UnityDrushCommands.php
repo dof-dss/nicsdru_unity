@@ -151,4 +151,36 @@ class UnityDrushCommands extends DrushCommands {
     }
   }
 
+  /**
+   * Drush command to disable Fastly logging if Fastly module installed.
+   *
+   * @command disable-fastly-logging
+   */
+  public function disableFastlyLogging() {
+    // Only disable logging if the Fastly module is installed.
+    if (\Drupal::moduleHandler()->moduleExists('fastly')) {
+      $config = \Drupal::config('fastly.settings');
+      $config->set('logging', FALSE);
+      $this->io()->write("Fastly logging disabled");
+    } else {
+      $this->io()->write("Fastly module not installed");
+    }
+  }
+
+  /**
+   * Drush command to enable Fastly logging if Fastly module installed.
+   *
+   * @command enable-fastly-logging
+   */
+  public function enableFastlyLogging() {
+    // Only enable logging if the Fastly module is installed.
+    if (\Drupal::moduleHandler()->moduleExists('fastly')) {
+      $config = \Drupal::config('fastly.settings');
+      $config->set('logging', TRUE);
+      $this->io()->write("Fastly logging enabled");
+    } else {
+      $this->io()->write("Fastly module not installed");
+    }
+  }
+
 }
