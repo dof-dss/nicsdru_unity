@@ -160,7 +160,7 @@ class UnityDrushCommands extends DrushCommands {
     // Only disable logging if the Fastly module is installed.
     if (\Drupal::moduleHandler()->moduleExists('fastly')) {
       \Drupal::configFactory()->getEditable('fastly.settings')
-        ->set('logging', FALSE);
+        ->set('logging', FALSE)->save();
       $this->io()->write("Fastly logging disabled", TRUE);
     } else {
       $this->io()->write("Fastly module not installed", TRUE);
@@ -176,7 +176,7 @@ class UnityDrushCommands extends DrushCommands {
     // Only enable logging if the Fastly module is installed.
     if (\Drupal::moduleHandler()->moduleExists('fastly')) {
       \Drupal::configFactory()->getEditable('fastly.settings')
-        ->set('logging', TRUE);
+        ->set('logging', TRUE)->save();
       $this->io()->write("Fastly logging enabled", TRUE);
     } else {
       $this->io()->write("Fastly module not installed", TRUE);
