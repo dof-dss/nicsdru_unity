@@ -101,10 +101,10 @@ hooks:
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
       # Disable Fastly logging
-      result=$(drush pml --type=module --status=enabled | (grep "Fastly" || true) )
-      if [[ -n $result ]]; then
+      #result=$(drush pml --type=module --status=enabled | (grep "Fastly" || true) )
+      #if [[ -n $result ]]; then
         drush cset fastly.settings logging FALSE --input-format=yaml
-      fi
+      #fi
       # Readonlymode module should be installed on all sites,
       # but we'll just make sure.
       drush en readonlymode -l $site -y
