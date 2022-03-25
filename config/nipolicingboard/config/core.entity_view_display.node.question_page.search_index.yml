@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.field.node.question_page.body
     - field.field.node.question_page.field_committee
-    - field.field.node.question_page.field_key_term
     - field.field.node.question_page.field_meta_tags
     - field.field.node.question_page.field_nipb_board_member
     - field.field.node.question_page.field_political_party
@@ -47,7 +46,6 @@ hidden:
   body: true
   content_moderation_control: true
   field_committee: true
-  field_key_term: true
   field_meta_tags: true
   field_political_party: true
   field_question_type: true
