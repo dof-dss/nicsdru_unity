@@ -124,6 +124,30 @@
     @include adjust-font-size-to(30px);
   }
 
+  .twitter-block {
+    h2 {
+      background: $brand-tertiary;
+      color: $white;
+      padding-left: 4rem;
+
+      i {
+        border: 1px solid $white;
+        border-radius: 100%;
+        padding: .5rem;
+      }
+
+      a.twitter-link {
+        color: $white;
+        border-bottom-color: $white;
+
+        &:focus {
+          background-color: $white;
+          color: $link;
+        }
+      }
+    }
+  }
+
   @include breakpoint($tab) {
     display: flex;
     justify-content: space-between;
