@@ -260,7 +260,8 @@ display:
         metatag_display_extender: {  }
       path: publications
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
       exposed_block: true

@@ -1,4 +1,4 @@
-google_map_api_key: '<placeholder>'
+google_map_api_key: <placeholder>
 google_map_custom_url_parameters:
   libraries: {  }
   region: gb
