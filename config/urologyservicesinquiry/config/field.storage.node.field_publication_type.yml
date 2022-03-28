@@ -1,20 +1,17 @@
-uuid: 7ef07c16-00ed-41b0-b6a0-907efa74deaa
+uuid: a85efa6d-5102-435a-80b5-bbe483e9bcfe
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
-_core:
-  default_config_hash: KE7Z4urHN3XEgnoVtWjM_bU7i7TpMN1alfJNkbrJZ00
+    - taxonomy
 id: node.field_publication_type
 field_name: field_publication_type
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values: {  }
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

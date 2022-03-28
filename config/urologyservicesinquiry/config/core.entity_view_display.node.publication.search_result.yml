@@ -13,7 +13,6 @@ dependencies:
   module:
     - datetime
     - layout_builder
-    - options
     - user
 third_party_settings:
   layout_builder:
@@ -26,13 +25,6 @@ targetEntityType: node
 bundle: publication
 mode: search_result
 content:
-  field_publication_type:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_published_date:
     weight: 0
     label: inline
@@ -47,5 +39,7 @@ hidden:
   content_moderation_control: true
   field_attachment: true
   field_meta_tags: true
+  field_publication_type: true
   langcode: true
   links: true
+  search_api_excerpt: true
