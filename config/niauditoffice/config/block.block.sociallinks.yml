@@ -1,9 +1,9 @@
-uuid: 61f85983-0883-4515-836d-73582f198a26
+uuid: 077a1e07-a8df-4b44-bbe5-7af4036a5f97
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:3a76c0bf-f840-4e4d-b188-03191cfa617b'
+    - 'block_content:basic_block:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: niauditoffice_theme
 region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:3a76c0bf-f840-4e4d-b188-03191cfa617b'
+plugin: 'block_content:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
 settings:
-  id: 'block_content:3a76c0bf-f840-4e4d-b188-03191cfa617b'
+  id: 'block_content:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
   label: 'Social links'
   provider: block_content
   label_display: '0'
