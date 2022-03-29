@@ -80,6 +80,7 @@
 </div>
 
 {% if is_front %}
+  {{ page.slideshow }}
 <div id="content">
   {{ page.front_welcome }}
     {% if drupal_config('system.site', 'frontpage_title') %}
