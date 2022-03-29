@@ -20,9 +20,12 @@ We recommend Lando for local development. To get started, ensure you have the fo
 - at the command line, 'cd' into your new directory
 - Set up your local environment variables: `cp .lando/config/.env.sample .lando/config/.env`
 - Env vars are divided into safe values for local development (eg: Lando defaults) and sensitive values which
-  you will need to source from a project member or from one of the active project environments.
-- `composer install`
+  you will need to source from a project member or from one of the active project environments. In order to
+  just get you local Unity sites up and running the minimum that you will have to do is to set 'HASH_SALT' to
+  a random string e.g. 'ahsgsfdteyionuydythdop'_
 - `lando start`
+- `lando composer install`
+
 
 Or, if available, you may also fetch the database and import this:
 
