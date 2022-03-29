@@ -64,6 +64,7 @@
         "cweagans/composer-patches": "^1.7",
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^1.1",
+        "dof-dss/nicsdru_unity_modules": "^1.1",
         "dof-dss/nicsdru_origins_profile": "0.1.11",
         "dof-dss/nicsdru_unity_theme": "^0.1.49",
         "drupal/address": "^1.7",
@@ -234,6 +235,9 @@
             ],
             "web/modules/origins": [
                 "dof-dss/nicsdru_origins_modules"
+            ],
+            "web/modules/custom": [
+                "dof-dss/nicsdru_unity_modules"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
