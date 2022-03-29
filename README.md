@@ -22,7 +22,7 @@ We recommend Lando for local development. To get started, ensure you have the fo
 - Env vars are divided into safe values for local development (eg: Lando defaults) and sensitive values which
   you will need to source from a project member or from one of the active project environments. In order to
   just get you local Unity sites up and running the minimum that you will have to do is to set 'HASH_SALT' to
-  a random string e.g. 'ahsgsfdteyionuydythdop'_
+  a random string e.g. 'ahsgsfdteyionuydythdop'
 - `lando start`
 - `lando composer install`
 
