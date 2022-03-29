@@ -95,6 +95,7 @@
   {% endif %}
 
   {% if page.top_first or page.top_second or page.top_third %}
+    <div id="content">
     <div id="top-area">
       {% if page.top_first %}
         <div class="column">
@@ -111,6 +112,7 @@
           {{ page.top_third }}
         </div>
       {% endif %}
+    </div>
     </div>
   {% endif %}
 {% endif %}
