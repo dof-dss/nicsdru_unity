@@ -1,5 +1,0 @@
-services:
-  unity_frontpage.route_subscriber:
-    class: Drupal\unity_frontpage\Routing\RouteSubscriber
-    tags:
-      - { name: event_subscriber }

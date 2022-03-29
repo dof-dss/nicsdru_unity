@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.article_float
-label: 'Article float'
-targetEntityType: media
-cache: true
