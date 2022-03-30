@@ -37,12 +37,9 @@ function unity_internal_link_checker_entity_presave(EntityInterface $entity) {
               // This is an absolute URL does it match one of the domain names specified
               // at /admin/config/unity_internal_link_checker/link_checker_form ?
               $body = _convert_absolute_link($body, $original_link);
-              $entity->body->setValue(['value' => $body, 'format' => $format]);
-              // If we have called _convertAbsoluteLink once then all links in the body field
-              // have been processed, so break out here.
-              break;
             }
           }
+          $entity->body->setValue(['value' => $body, 'format' => $format]);
         }
       }
     }
