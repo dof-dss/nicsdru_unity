@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3909008dc6c8b822557dfd670478d119",
+    "content-hash": "719740ce8a94b6705adf5aa5e48a7325",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1903,6 +1903,35 @@
                 "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.11"
             },
             "time": "2021-04-21T10:20:46+00:00"
+        },
+        {
+            "name": "dof-dss/nicsdru_unity_modules",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
+                "reference": "7ba31d81c0de91d204c48c4e1845aed839dc3688"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/7ba31d81c0de91d204c48c4e1845aed839dc3688",
+                "reference": "7ba31d81c0de91d204c48c4e1845aed839dc3688",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.6"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Custom modules available to all Unity sites.",
+            "support": {
+                "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.0.0"
+            },
+            "time": "2022-03-30T08:15:51+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
