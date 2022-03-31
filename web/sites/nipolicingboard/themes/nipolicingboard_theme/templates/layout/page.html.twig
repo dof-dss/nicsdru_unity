@@ -81,9 +81,8 @@
 
 {% if is_front %}
   {{ page.slideshow }}
-
+<div id="content">
   {{ page.front_welcome }}
-  {% if is_front %}
     {% if drupal_config('system.site', 'frontpage_title') %}
       <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
         <h1>
@@ -92,7 +91,6 @@
       </div>
 
     {% endif %}
-  {% endif %}
 
   {% if page.top_first or page.top_second or page.top_third %}
     <div id="top-area">
@@ -113,6 +111,7 @@
       {% endif %}
     </div>
   {% endif %}
+    </div>
 {% endif %}
 
 {% if not is_front %}
