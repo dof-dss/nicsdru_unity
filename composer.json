@@ -66,6 +66,7 @@
         "dof-dss/nicsdru_origins_modules": "^1.1",
         "dof-dss/nicsdru_origins_profile": "0.1.11",
         "dof-dss/nicsdru_unity_modules": "^1.0",
+        "dof-dss/nicsdru_unity_profile": "^1.0",
         "dof-dss/nicsdru_unity_theme": "^0.1.49",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
@@ -244,6 +245,9 @@
             ],
             "web/modules/custom/{$name}": [
                 "type:drupal-custom-module"
+            ],
+            "web/profiles/unity/nicsdru_unity_profile": [
+                "dof-dss/nicsdru_unity_profile"
             ],
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
