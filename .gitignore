@@ -9,6 +9,7 @@
 /web/libraries/
 /web/modules/migrate/
 /web/modules/origins
+/web/modules/custom
 console/
 imports
 node_modules/
