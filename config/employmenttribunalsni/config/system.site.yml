@@ -4,7 +4,7 @@ slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1
+  front: /node/46
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
@@ -12,5 +12,5 @@ default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: bf828570-725b-4a41-975a-0049dca0d714
-frontpage_title: 'Industrial Tribunals and the Fair Employment Tribunal Northern Ireland'
-frontpage_show_title: 0
+frontpage_title: 'Welcome to the Industrial Tribunals and Fair Employment Tribunal'
+frontpage_show_title: 1
