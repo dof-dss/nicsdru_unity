@@ -138,8 +138,7 @@
 }
 
 // Welcome text
-
-.region-front-welcome {
+#content .region-front-welcome {
   max-width: 1024px;
   margin: 1% auto 0;
   background: resolve('our-work-cover.png') no-repeat bottom 4% left 54%;
@@ -147,35 +146,6 @@
   #block-ourworkcoversblock {
     max-width: 980px;
     margin: 0 auto;
-
-    .content {
-      ul li a {
-        color: $white;
-        margin: 0;
-        padding: 0;
-        border-bottom: none;
-
-        &:hover,
-        &:focus {
-          outline: 3px solid white;
-          outline-offset: -4px;
-          border-bottom: none;
-        }
-      }
-
-      li:first-child a,
-      li:nth-child(2) a {
-        padding: 3rem;
-      }
-
-      li:nth-child(3) a {
-        padding: 1rem 0;
-      }
-
-      li:nth-child(4) a {
-        padding: 2.2rem 0.6rem;;
-      }
-    }
   }
 
   .block h2 {
@@ -233,6 +203,35 @@
         color: $white;
       }
     }
+  }
+}
+
+#content .region-front-welcome #block-ourworkcoversblock .content {
+  ul li a {
+    color: $white;
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      outline: 3px solid white;
+      outline-offset: -4px;
+      border-bottom: none;
+    }
+  }
+
+  li:first-child a,
+  li:nth-child(2) a {
+    padding: 3rem;
+  }
+
+  li:nth-child(3) a {
+    padding: 1rem 0;
+  }
+
+  li:nth-child(4) a {
+    padding: 2.2rem 0.6rem;;
   }
 }
 
