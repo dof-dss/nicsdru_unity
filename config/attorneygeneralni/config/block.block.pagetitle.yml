@@ -20,5 +20,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/search\r\n/news-search\r\n/news-search/date/*\r\n/node/*/revisions/view/*"
+    pages: "/search\r\n/news-search\r\n/news-search/date/*\r\n/node/*/revisions/view/*\r\n<front>"
     negate: true

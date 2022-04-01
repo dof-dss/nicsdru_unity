@@ -49,9 +49,6 @@
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
  *
- * The following is controlled through the uregni_theme.theme variables.
- * - search_page: Returns if the page is a search page based on its title.
- *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
@@ -85,12 +82,6 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {% if drupal_config('system.site', 'frontpage_title') %}
-    <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
-      {{ drupal_config('system.site', 'frontpage_title') }}
-    </h1>
-  {% endif %}
-
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
@@ -118,9 +109,18 @@
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
       {{ page.breadcrumb }}
+      {% if is_front %}
+        {% if drupal_config('system.site', 'frontpage_title') %}
+          <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+            {{ drupal_config('system.site', 'frontpage_title') }}
+          </h1>
+        {% endif %}
+      {% endif %}
+
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
       {% endif %}
+
       <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
         {% if page.search_facets %}
           <header id="search-facets" class="sidebar-first-layout">
@@ -150,10 +150,9 @@
       </aside>
     {% endif %}
     {% if is_front %}
-      {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 or page.bottom_widget_4 or page.bottom_widget_5 %}
+      {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 or page.bottom_widget_4 or page.bottom_widget_5%}
         <div id="bottom_wrapper" class="footer_block bottom_widget">
-          <div id="bottom-area" class="footer-area clearfix">
-            <div class="energy clearfix">
+          <div id="bottom-area" class="footer-area">
             {% if page.bottom_widget_1 %}
               <div class="column">
                 {{ page.bottom_widget_1 }}
@@ -169,19 +168,9 @@
                 {{ page.bottom_widget_3 }}
               </div>
             {% endif %}
-            </div>
-            <div class="clearfix bottom-row">
-            {% if page.bottom_widget_4 %}
-              <div class="column">
-                {{ page.bottom_widget_4 }}
-              </div>
-            {% endif %}
-            {% if page.bottom_widget_5 %}
-              <div class="column">
-                {{ page.bottom_widget_5 }}
-              </div>
-            {% endif %}
-            </div>
+          </div>
+          <div id="bottom-area-2">
+            {{ page.bottom_widget_4 }}
           </div>
         </div>
       {% endif %}
@@ -190,9 +179,9 @@
 </div>
 
 <footer id="footer">
-  <div id="footer_wrapper">
+  <div id="footer_wrapper" class="container-wrap">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
-      <div id="footer-content" class="clearfix">
+      <div id="footer-area" class="footer-area clearfix">
         {% if page.footer_first %}
           <div class="column">
             {{ page.footer_first }}
@@ -209,18 +198,8 @@
           </div>
         {% endif %}
         {% if page.footer_fourth %}
-          <div class="column logo">
+          <div class="column">
             {{ page.footer_fourth }}
-          </div>
-        {% endif %}
-        {% if page.footer_fifth %}
-          <div class="column logo">
-            {{ page.footer_fifth }}
-          </div>
-        {% endif %}
-        {% if page.footer_sixth %}
-          <div class="column logo">
-            {{ page.footer_sixth }}
           </div>
         {% endif %}
       </div>
@@ -233,5 +212,3 @@
     {% endif %}
   </div>
 </footer>
-
-
