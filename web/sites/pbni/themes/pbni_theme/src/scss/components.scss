@@ -212,10 +212,8 @@
 
     footer a {
       display: inline-block;
-      margin: 1rem 0 0;
       color: $white;
       text-align: center;
-      padding: .6rem 1.6rem;
       cursor: pointer;
       background: $charcoal;
       border-radius: 2.3rem;
@@ -239,6 +237,11 @@
     a[href] {
       margin: 0;
       padding: 0;
+    }
+
+    footer a[href] {
+      margin: 1rem 0 0;
+      padding: .6rem 1.6rem;
     }
   }
 }

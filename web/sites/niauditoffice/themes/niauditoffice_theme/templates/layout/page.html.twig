@@ -54,13 +54,11 @@
  */
 #}
 {% set hero_attributes = create_attribute() %}
-{%
-  set hero_classes = [
+{% set hero_classes = [
   'top_right',
   page.primary_menu ? 'with-menu' : 'no-menu',
   page.search ? 'with-search' : 'no-search',
-]
-%}
+] %}
 
 <div id="header_wrapper">
   <div id="inner_header_wrapper">
@@ -82,37 +80,35 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {{ page.front_welcome }}
-  {% if is_front %}
-    {% if drupal_config('system.site', 'frontpage_title') %}
-      <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-        <h1>
-          {{ drupal_config('system.site', 'frontpage_title') }}
-        </h1>
-      </div>
-
-    {% endif %}
+  {% if drupal_config('system.site', 'frontpage_title') %}
+    <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+      <h1>
+        {{ drupal_config('system.site', 'frontpage_title') }}
+      </h1>
+    </div>
   {% endif %}
+
+  {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
     <div id="content">
-    <div id="top-area">
-      {% if page.top_first %}
-        <div class="column">
-          {{ page.top_first }}
-        </div>
-      {% endif %}
-      {% if page.top_second %}
-        <div class="column">
-          {{ page.top_second }}
-        </div>
-      {% endif %}
-      {% if page.top_third %}
-        <div class="column">
-          {{ page.top_third }}
-        </div>
-      {% endif %}
-    </div>
+      <div id="top-area">
+        {% if page.top_first %}
+          <div class="column">
+            {{ page.top_first }}
+          </div>
+        {% endif %}
+        {% if page.top_second %}
+          <div class="column">
+            {{ page.top_second }}
+          </div>
+        {% endif %}
+        {% if page.top_third %}
+          <div class="column">
+            {{ page.top_third }}
+          </div>
+        {% endif %}
+      </div>
     </div>
   {% endif %}
 {% endif %}
