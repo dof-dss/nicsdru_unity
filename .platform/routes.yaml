@@ -5,10 +5,6 @@
   cache:
     enabled: false
 
-"https://uregni.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.uregni.gov.uk.{default}/"
-
 "https://uregni.gov.uk/":
   type: redirect
   to: "https://www.uregni.gov.uk/"
@@ -20,10 +16,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://liofa.eu.{default}/":
-  type: redirect
-  to: "https://www.liofa.eu.{default}/"
 
 "https://liofa.eu/":
   type: redirect
@@ -37,10 +29,6 @@
   cache:
     enabled: false
 
-"https://odscni.org.uk.{default}/":
-  type: redirect
-  to: "https://www.odscni.org.uk.{default}/"
-
 "https://odscni.org.uk/":
   type: redirect
   to: "https://www.odscni.org.uk/"
@@ -52,10 +40,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://attorneygeneralni.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.attorneygeneralni.gov.uk.{default}/"
 
 "https://attorneygeneralni.gov.uk/":
   type: redirect
@@ -69,10 +53,6 @@
   cache:
     enabled: false
 
-"https://employmenttribunalsni.co.uk.{default}/":
-  type: redirect
-  to: "https://www.employmenttribunalsni.co.uk.{default}/"
-
 "https://employmenttribunalsni.co.uk/":
   type: redirect
   to: "https://www.employmenttribunalsni.co.uk/"
@@ -84,10 +64,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://niauditoffice.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.niauditoffice.gov.uk.{default}/"
 
 "https://niauditoffice.gov.uk/":
   type: redirect
@@ -101,10 +77,6 @@
   cache:
     enabled: false
 
-"https://fiscalcommissionni.org.{default}/":
-  type: redirect
-  to: "https://www.fiscalcommissionni.org.{default}/"
-
 "https://fiscalcommissionni.org/":
   type: redirect
   to: "https://www.fiscalcommissionni.org/"
@@ -116,10 +88,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://nifiscalcouncil.org.{default}/":
-  type: redirect
-  to: "https://www.nifiscalcouncil.org.{default}/"
 
 "https://nifiscalcouncil.org/":
   type: redirect
@@ -133,10 +101,6 @@
   cache:
     enabled: false
 
-"https://octf.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.octf.gov.uk.{default}/"
-
 "https://octf.gov.uk/":
   type: redirect
   to: "https://www.octf.gov.uk/"
@@ -148,10 +112,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://urologyservicesinquiry.org.uk.{default}/":
-  type: redirect
-  to: "https://www.urologyservicesinquiry.org.uk.{default}/"
 
 "https://urologyservicesinquiry.org.uk/":
   type: redirect
@@ -165,10 +125,6 @@
   cache:
     enabled: false
 
-"https://mahinquiry.org.uk.{default}/":
-  type: redirect
-  to: "https://www.mahinquiry.org.uk.{default}/"
-
 "https://mahinquiry.org.uk/":
   type: redirect
   to: "https://www.mahinquiry.org.uk/"
@@ -180,10 +136,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://independentreviewofeducation.org.uk.{default}/":
-  type: redirect
-  to: "https://www.independentreviewofeducation.org.uk.{default}/"
 
 "https://independentreviewofeducation.org.uk/":
   type: redirect
@@ -197,10 +149,6 @@
   cache:
     enabled: false
 
-"https://nipolicingboard.org.uk.{default}/":
-  type: redirect
-  to: "https://www.nipolicingboard.org.uk.{default}/"
-
 "https://nipolicingboard.org.uk/":
   type: redirect
   to: "https://www.nipolicingboard.org.uk/"
@@ -212,10 +160,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://pbni.org.uk.{default}/":
-  type: redirect
-  to: "https://www.pbni.org.uk.{default}/"
 
 "https://pbni.org.uk/":
   type: redirect
@@ -229,10 +173,6 @@
   cache:
     enabled: false
 
-"https://investnireview.org.uk.{default}/":
-  type: redirect
-  to: "https://www.investnireview.org.uk.{default}/"
-
 "https://investnireview.org.uk/":
   type: redirect
   to: "https://www.investnireview.org.uk/"
@@ -245,10 +185,6 @@
   cache:
     enabled: false
 
-"https://pcsps.org.{default}/":
-  type: redirect
-  to: "https://www.pcsps.org.{default}/"
-
 "https://pcsps.org/":
   type: redirect
   to: "https://www.pcsps.org/"
@@ -260,10 +196,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://cscsreviewni.net.{default}/":
-  type: redirect
-  to: "https://www.cscsreviewni.net.{default}/"
 
 "https://cscsreviewni.net/":
   type: redirect
