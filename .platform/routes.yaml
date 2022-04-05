@@ -7,7 +7,9 @@
 # domain name has not yet been added to the 'domains' section of the Platform.sh dashboard. For these sites
 # an 'upstream' entry should be added for the 'www' version of the site and a 'redirect' entry should also
 # be added.
-
+#
+# When a site becomes fully 'live' and its domain is added to the Platform.sh dashboard then any explicit
+# routes that appear below for that site should be removed.
 #---------------------------------
 
 "https://www.attorneygeneralni.gov.uk/":
