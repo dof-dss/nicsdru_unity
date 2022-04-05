@@ -1,3 +1,75 @@
+# The 'Catch all' routes at the bottom of this file will generate routes for all sites whose domain
+# name has been added to the 'domains' section on the Platform.sh dashboard i.e. all sites that are 'live'.
+# Note that, for these live sites, all URLs will also be correctly generated for their other Platform sites
+# such as UAT and Edge.
+#
+# The only sites that need to be explicitly listed here are those that are not yet fully 'live' i.e. their
+# domain name has not yet been added to the 'domains' section of the Platform.sh dashboard. For these sites
+# an 'upstream' entry should be added for the 'www' version of the site and a 'redirect' entry should also
+# be added.
+
+#---------------------------------
+
+"https://www.attorneygeneralni.gov.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://attorneygeneralni.gov.uk/":
+  type: redirect
+  to: "https://www.attorneygeneralni.gov.uk/"
+
+#---------------------------------
+
+"https://www.employmenttribunalsni.co.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://employmenttribunalsni.co.uk/":
+  type: redirect
+  to: "https://www.employmenttribunalsni.co.uk/"
+
+#---------------------------------
+
+"https://www.nipolicingboard.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://nipolicingboard.org.uk/":
+  type: redirect
+  to: "https://www.nipolicingboard.org.uk/"
+
+#---------------------------------
+
+"https://www.pbni.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://pbni.org.uk/":
+  type: redirect
+  to: "https://www.pbni.org.uk/"
+
+#---------------------------------
+
+"https://www.pcsps.org/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://pcsps.org/":
+  type: redirect
+  to: "https://www.pcsps.org/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream
