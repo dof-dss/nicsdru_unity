@@ -218,15 +218,15 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: publications-search
+      path: publications
       exposed_block: true
       menu:
         type: normal
-        title: 'Publications search'
+        title: Publications
         description: ''
         expanded: false
         parent: ''
-        weight: 0
+        weight: -46
         context: '0'
         menu_name: main
       cache:
