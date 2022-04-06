@@ -66,7 +66,8 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
     $match = FALSE;
     $route_name = $route_match->getRouteName();
     $view_names = [
-      'view.news_search.news_search_page'
+      'view.news_search.news_search_page',
+      'view.publications_search.publication_search_page'
     ];
 
     foreach ($view_names as $view_name) {
