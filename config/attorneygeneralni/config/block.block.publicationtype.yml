@@ -1,29 +1,28 @@
-uuid: 25454e1f-8b7d-48e9-a0c6-ad4f28eb7aed
+uuid: 7038ea65-a699-41e9-8177-b889b055d713
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.published_date
+    - facets.facet.publication_type
   module:
     - facets
     - system
   theme:
     - attorneygeneralni_theme
-id: publisheddate
+id: publicationtype
 theme: attorneygeneralni_theme
 region: search_facets
-weight: -3
+weight: 0
 provider: null
-plugin: 'facet_block:published_date'
+plugin: 'facet_block:publication_type'
 settings:
-  id: 'facet_block:published_date'
-  label: Date
+  id: 'facet_block:publication_type'
+  label: Type
   provider: facets
   label_display: visible
-  block_id: publisheddate
+  block_id: publicationtype
 visibility:
   request_path:
     id: request_path
-    pages: "/news-search\r\n/news-search/date/*"
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
     negate: false
-    context_mapping: {  }
