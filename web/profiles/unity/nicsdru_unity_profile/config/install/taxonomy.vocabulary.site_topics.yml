@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Site topics'
-vid: site_topics
-description: ''
-weight: 0

@@ -9,11 +9,10 @@ dependencies:
     - search_api
   config:
     - field.storage.node.field_nipb_board_member
+    - field.storage.node.body
     - field.storage.node.field_committee
     - field.storage.node.field_published_date
-    - field.storage.node.field_key_term
     - field.storage.node.field_question_type
-    - field.storage.node.body
     - search_api.server.solr_default
 third_party_settings:
   search_api_solr:
@@ -105,16 +104,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_question_type
-  keyterm_name:
-    label: 'Key terms » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_key_term:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_key_term
-      module:
-        - taxonomy
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -170,7 +159,6 @@ processor_settings:
       - body
       - committee_name
       - field_question_type
-      - keyterm_name
       - langcode
       - spelling
       - title

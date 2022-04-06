@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: unity_date
-label: 'Unity date'
-locked: false
-pattern: 'd F Y'

@@ -12,4 +12,5 @@ default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: ad5bb45b-cc83-4a11-b048-5cca60024c3b
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Welcome to the Northern Ireland Policing Board'
+frontpage_show_title: 0

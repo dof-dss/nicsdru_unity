@@ -309,8 +309,8 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<a href="/news" class="bttn"</a>More News</a>'
-            format: basic_html
+            value: '<a href="/news" class="btn">More News</a>'
+            format: full_html
           plugin_id: text
       use_more: false
       use_more_always: true

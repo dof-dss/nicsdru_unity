@@ -1,0 +1,28 @@
+uuid: 22eac5e3-94ec-4a67-bfa8-84323488fe2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_published_date
+  module:
+    - facets
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: publicationpublisheddate
+theme: urologyservicesinquiry_theme
+region: search_facets
+weight: -5
+provider: null
+plugin: 'facet_block:publication_published_date'
+settings:
+  id: 'facet_block:publication_published_date'
+  label: Date
+  provider: facets
+  label_display: visible
+  block_id: publicationpublisheddate
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
+    negate: false

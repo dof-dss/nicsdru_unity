@@ -96,10 +96,12 @@ hooks:
     export FASTLY_API_SERVICE=dummyservice
 
     # For each multi site - run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
+      # Disable Fastly logging
+      drush disable-fastly-logging
       # Readonlymode module should be installed on all sites,
       # but we'll just make sure.
       drush en readonlymode -l $site -y
@@ -118,11 +120,13 @@ hooks:
     export FASTLY_API_SERVICE=$temp
 
     # For each multi site - clear cache (including Fastly cache)
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard pbni attorneygeneralni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
     do
       echo "****** $site cache clear ******"
       cd /app/web/sites/$site
       drush -l $site -y cache-rebuild
+      # Enable Fastly logging
+      drush enable-fastly-logging
     done
 
 # The configuration of app when it is exposed to the web.

@@ -1,0 +1,14 @@
+uuid: 30ae4807-54f5-4764-8586-f4eae65683af
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: default
+name: Default
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
