@@ -82,6 +82,12 @@
 {% if is_front %}
   {{ page.slideshow }}
 
+  {% if drupal_config('system.site', 'frontpage_title') %}
+    <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
+      {{ drupal_config('system.site', 'frontpage_title') }}
+    </h1>
+  {% endif %}
+
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
@@ -109,11 +115,9 @@
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
       {{ page.breadcrumb }}
-
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
       {% endif %}
-
       <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
         {% if page.search_facets %}
           <header id="search-facets" class="sidebar-first-layout">
@@ -127,13 +131,6 @@
         {% endif %}
         {% if page.content %}
           <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
-            {% if is_front %}
-              {% if drupal_config('system.site', 'frontpage_title') %}
-                <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-                  {{ drupal_config('system.site', 'frontpage_title') }}
-                </h1>
-              {% endif %}
-            {% endif %}
             {{ page.content }}
           </main>
         {% endif %}
@@ -148,10 +145,6 @@
       <aside id="sidebar-second" class="sidebar-second-layout">
         {{ page.sidebar_second }}
       </aside>
-    {% else %}
-      <div class="sidebar-second-layout">
-        <div class="region-sidebar-second"></div>
-      </div>
     {% endif %}
     {% if is_front %}
       {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
