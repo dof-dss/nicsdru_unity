@@ -24,18 +24,6 @@
 
 #---------------------------------
 
-"https://www.employmenttribunalsni.co.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://employmenttribunalsni.co.uk/":
-  type: redirect
-  to: "https://www.employmenttribunalsni.co.uk/"
-
-#---------------------------------
-
 "https://www.nipolicingboard.org.uk/":
   type: upstream
   upstream: "unity:http"
