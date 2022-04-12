@@ -36,7 +36,7 @@ content:
     type: entity_reference_entity_view
     weight: 3
     region: content
-    label: hidden
+    label: inline
     settings:
       view_mode: embed
       link: false
