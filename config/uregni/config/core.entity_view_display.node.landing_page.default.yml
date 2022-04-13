@@ -41,16 +41,56 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
   layout_builder_restrictions:
-    allowed_block_categories: {  }
+    allowed_block_categories:
+      - 'Chaos Tools'
+      - 'Content fields'
+      - 'Custom block types'
+      - 'Custom blocks'
+      - Devel
+      - Facets
+      - 'Facets summary (Experimental)'
+      - Forms
+      - Geolocation
+      - Help
+      - 'Inline blocks'
+      - 'Lists (Views)'
+      - Menus
+      - Origins
+      - 'Read Only Mode'
+      - System
+      - 'Unity Search Pages'
+      - User
+      - Views
+      - Webform
+      - 'Webform access'
+      - core
     entity_view_mode_restriction:
-      whitelisted_blocks: {  }
+      whitelisted_blocks:
+        'Chaos Tools': {  }
+        'Content fields': {  }
+        'Custom blocks': {  }
+        Devel: {  }
+        Facets: {  }
+        'Facets summary (Experimental)': {  }
+        Forms: {  }
+        Geolocation: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        Origins: {  }
+        'Read Only Mode': {  }
+        System: {  }
+        'Unity Search Pages': {  }
+        User: {  }
+        Views: {  }
+        Webform: {  }
+        'Webform access': {  }
+        core: {  }
       blacklisted_blocks: {  }
       restricted_categories: {  }
       allowed_layouts:
         - layout_onecol
-        - layout_twocol_section
-        - layout_threecol_section
-        - layout_fourcol_section
         - teasers_x3
         - teasers_x2
 id: node.landing_page.default
