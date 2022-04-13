@@ -60,6 +60,18 @@
 
 #---------------------------------
 
+"https://www.fiscalcommissionni.org.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://fiscalcommissionni.org.{default}/":
+  type: redirect
+  to: "https://www.fiscalcommissionni.org.{default}/"
+
+#---------------------------------
+
 # Catch all.
 "https://www.{all}/":
   type: upstream
