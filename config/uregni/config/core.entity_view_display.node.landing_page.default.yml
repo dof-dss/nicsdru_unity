@@ -50,6 +50,9 @@ third_party_settings:
         - layout_onecol
         - layout_twocol_section
         - layout_threecol_section
+        - layout_fourcol_section
+        - teasers_x3
+        - teasers_x2
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
