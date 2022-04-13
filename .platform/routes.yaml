@@ -59,7 +59,8 @@
   to: "https://www.pcsps.org/"
 
 #---------------------------------
-
+# Do not remove this route, the {default} domain must be
+# explicitly defined as it is not included in {all}
 "https://www.fiscalcommissionni.org.{default}/":
   type: upstream
   upstream: "unity:http"
