@@ -12,5 +12,5 @@ default_langcode: en
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
 uuid: 9ee61300-5049-4c8e-acfd-76c3da9a4999
-frontpage_title: 'Welcome to Attorney General for Northern Ireland'
-frontpage_show_title: 0
+frontpage_title: Welcome
+frontpage_show_title: 1

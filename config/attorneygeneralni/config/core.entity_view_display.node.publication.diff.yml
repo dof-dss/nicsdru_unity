@@ -7,10 +7,8 @@ dependencies:
     - field.field.node.publication.body
     - field.field.node.publication.field_attachment
     - field.field.node.publication.field_meta_tags
-    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_type
     - field.field.node.publication.field_published_date
-    - field.field.node.publication.field_summary
     - node.type.publication
   module:
     - datetime
@@ -73,15 +71,6 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_photo:
-    type: entity_reference_entity_view
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      view_mode: portrait_float
-      link: false
-    third_party_settings: {  }
   field_publication_type:
     type: entity_reference_label
     weight: 6
@@ -99,14 +88,8 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_summary:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
 hidden:
   content_moderation_control: true
   langcode: true
   links: true
+  search_api_excerpt: true

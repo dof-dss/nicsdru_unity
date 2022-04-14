@@ -124,6 +124,30 @@
     @include adjust-font-size-to(30px);
   }
 
+  .twitter-block {
+    h2 {
+      background: $brand-tertiary;
+      color: $white;
+      padding-left: 4rem;
+
+      i {
+        border: 1px solid $white;
+        border-radius: 100%;
+        padding: .5rem;
+      }
+
+      a.twitter-link {
+        color: $white;
+        border-bottom-color: $white;
+
+        &:focus {
+          background-color: $white;
+          color: $link;
+        }
+      }
+    }
+  }
+
   @include breakpoint($tab) {
     display: flex;
     justify-content: space-between;
@@ -188,10 +212,8 @@
 
     footer a {
       display: inline-block;
-      margin: 1rem 0 0;
       color: $white;
       text-align: center;
-      padding: .6rem 1.6rem;
       cursor: pointer;
       background: $charcoal;
       border-radius: 2.3rem;
@@ -215,6 +237,11 @@
     a[href] {
       margin: 0;
       padding: 0;
+    }
+
+    footer a[href] {
+      margin: 1rem 0 0;
+      padding: .6rem 1.6rem;
     }
   }
 }

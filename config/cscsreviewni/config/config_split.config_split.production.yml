@@ -1,0 +1,15 @@
+uuid: 21912776-045d-45ad-9a96-eacd546a616d
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+folder: ../config/cscsreviewni/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

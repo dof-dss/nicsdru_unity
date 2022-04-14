@@ -26,6 +26,7 @@ db:
       - pbnidb
       - investnireviewdb
       - pcspsdb
+      - cscsreviewnidb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -91,6 +92,10 @@ db:
         default_schema: pcspsdb
         privileges:
           pcspsdb: admin
+      cscsreviewni:
+        default_schema: cscsreviewnidb
+        privileges:
+          cscsreviewnidb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
