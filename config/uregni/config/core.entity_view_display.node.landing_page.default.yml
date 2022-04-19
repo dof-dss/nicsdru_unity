@@ -71,7 +71,10 @@ third_party_settings:
         'Custom block types':
           - card_contact
           - card_nested_standard
+          - card_nested_wide
           - card_standard
+          - card_wide
+          - video
         'Custom blocks': {  }
         Devel: {  }
         Facets: {  }
@@ -82,7 +85,10 @@ third_party_settings:
         'Inline blocks':
           - 'inline_block:card_contact'
           - 'inline_block:card_standard'
+          - 'inline_block:card_wide'
           - 'inline_block:card_nested_standard'
+          - 'inline_block:card_nested_wide'
+          - 'inline_block:video'
         'Lists (Views)': {  }
         Menus: {  }
         Origins: {  }
@@ -137,6 +143,9 @@ third_party_settings:
             'Content fields': {  }
             'Custom block types':
               - card_contact
+              - card_nested_wide
+              - card_wide
+              - video
             'Custom blocks': {  }
             Devel: {  }
             Facets: {  }
@@ -146,6 +155,9 @@ third_party_settings:
             Help: {  }
             'Inline blocks':
               - 'inline_block:card_contact'
+              - 'inline_block:card_wide'
+              - 'inline_block:card_nested_wide'
+              - 'inline_block:video'
             'Lists (Views)': {  }
             Menus: {  }
             Origins: {  }
