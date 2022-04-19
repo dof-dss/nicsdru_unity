@@ -4,30 +4,21 @@ status: true
 dependencies:
   config:
     - block_content.type.card_standard
-    - field.field.block_content.card_standard.body
     - field.field.block_content.card_standard.field_image
     - field.field.block_content.card_standard.field_link
     - field.field.block_content.card_standard.field_teaser
     - field.field.block_content.card_standard.field_title_link
   module:
     - link
-    - text
 id: block_content.card_standard.default
 targetEntityType: block_content
 bundle: card_standard
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -35,7 +26,7 @@ content:
     region: content
   field_link:
     weight: 2
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -46,15 +37,15 @@ content:
     type: link
     region: content
   field_teaser:
-    weight: 3
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_title_link:
-    weight: 4
+    weight: 3
     label: above
     settings:
       trim_length: 80
