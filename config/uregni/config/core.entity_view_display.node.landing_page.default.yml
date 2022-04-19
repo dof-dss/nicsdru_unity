@@ -58,6 +58,7 @@ third_party_settings:
       - Origins
       - 'Read Only Mode'
       - System
+      - 'Unity Search Pages'
       - User
       - Views
       - Webform
@@ -69,6 +70,7 @@ third_party_settings:
         'Content fields': {  }
         'Custom block types':
           - card_contact
+          - card_nested_standard
           - card_standard
         'Custom blocks': {  }
         Devel: {  }
@@ -80,6 +82,7 @@ third_party_settings:
         'Inline blocks':
           - 'inline_block:card_contact'
           - 'inline_block:card_standard'
+          - 'inline_block:card_nested_standard'
         'Lists (Views)': {  }
         Menus: {  }
         Origins: {  }
@@ -91,7 +94,8 @@ third_party_settings:
         'Webform access': {  }
         core: {  }
       blacklisted_blocks: {  }
-      restricted_categories: {  }
+      restricted_categories:
+        - 'Unity Search Pages'
       allowed_layouts:
         - layout_onecol
         - teasers_x3

@@ -1,23 +1,23 @@
-uuid: 0cd5b7ce-ce7c-4722-b1b6-a28e93ce5a82
+uuid: 468045d4-f7e8-466e-b717-deca55fca07f
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.card_nested_standard
-    - field.storage.block_content.body
+    - field.storage.block_content.field_link
   module:
-    - text
-id: block_content.card_nested_standard.body
-field_name: body
+    - link
+id: block_content.card_nested_standard.field_link
+field_name: field_link
 entity_type: block_content
 bundle: card_nested_standard
-label: Body
+label: Link
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
-  required_summary: false
-field_type: text_with_summary
+  link_type: 17
+  title: 1
+field_type: link
