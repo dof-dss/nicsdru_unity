@@ -69,6 +69,8 @@ third_party_settings:
         'Chaos Tools': {  }
         'Content fields': {  }
         'Custom block types':
+          - accordion_menu
+          - banner_deep
           - card_contact
           - card_nested_standard
           - card_nested_wide
@@ -83,6 +85,8 @@ third_party_settings:
         Geolocation: {  }
         Help: {  }
         'Inline blocks':
+          - 'inline_block:accordion_menu'
+          - 'inline_block:banner_deep'
           - 'inline_block:card_contact'
           - 'inline_block:card_standard'
           - 'inline_block:card_wide'
@@ -117,6 +121,8 @@ third_party_settings:
             'Chaos Tools': {  }
             'Content fields': {  }
             'Custom block types':
+              - accordion_menu
+              - banner_deep
               - card_contact
             'Custom blocks': {  }
             Devel: {  }
@@ -126,6 +132,8 @@ third_party_settings:
             Geolocation: {  }
             Help: {  }
             'Inline blocks':
+              - 'inline_block:accordion_menu'
+              - 'inline_block:banner_deep'
               - 'inline_block:card_contact'
             'Lists (Views)': {  }
             Menus: {  }
