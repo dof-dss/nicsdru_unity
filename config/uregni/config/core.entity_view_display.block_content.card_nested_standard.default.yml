@@ -1,0 +1,24 @@
+uuid: 75bf04aa-301d-46a9-b80f-1aa6360e1b88
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_nested_standard
+    - field.field.block_content.card_nested_standard.body
+  module:
+    - text
+id: block_content.card_nested_standard.default
+targetEntityType: block_content
+bundle: card_nested_standard
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -58,7 +58,6 @@ third_party_settings:
       - Origins
       - 'Read Only Mode'
       - System
-      - 'Unity Search Pages'
       - User
       - Views
       - Webform
@@ -86,7 +85,6 @@ third_party_settings:
         Origins: {  }
         'Read Only Mode': {  }
         System: {  }
-        'Unity Search Pages': {  }
         User: {  }
         Views: {  }
         Webform: {  }
@@ -98,6 +96,91 @@ third_party_settings:
         - layout_onecol
         - teasers_x3
         - teasers_x2
+    entity_view_mode_restriction_by_region:
+      allowed_layouts:
+        - layout_onecol
+        - teasers_x3
+        - teasers_x2
+      whitelisted_blocks:
+        layout_onecol:
+          all_regions:
+            'Chaos Tools': {  }
+            'Content fields': {  }
+            'Custom block types':
+              - card_contact
+            'Custom blocks': {  }
+            Devel: {  }
+            Facets: {  }
+            'Facets summary (Experimental)': {  }
+            Forms: {  }
+            Geolocation: {  }
+            Help: {  }
+            'Inline blocks':
+              - 'inline_block:card_contact'
+            'Lists (Views)': {  }
+            Menus: {  }
+            Origins: {  }
+            'Read Only Mode': {  }
+            System: {  }
+            User: {  }
+            Views: {  }
+            Webform: {  }
+            'Webform access': {  }
+            core: {  }
+        teasers_x2:
+          all_regions:
+            'Chaos Tools': {  }
+            'Content fields': {  }
+            'Custom block types':
+              - card_contact
+            'Custom blocks': {  }
+            Devel: {  }
+            Facets: {  }
+            'Facets summary (Experimental)': {  }
+            Forms: {  }
+            Geolocation: {  }
+            Help: {  }
+            'Inline blocks':
+              - 'inline_block:card_contact'
+            'Lists (Views)': {  }
+            Menus: {  }
+            Origins: {  }
+            'Read Only Mode': {  }
+            System: {  }
+            User: {  }
+            Views: {  }
+            Webform: {  }
+            'Webform access': {  }
+            core: {  }
+        teasers_x3:
+          all_regions:
+            'Chaos Tools': {  }
+            'Content fields': {  }
+            'Custom block types':
+              - card_contact
+              - card_nested_standard
+              - card_standard
+            'Custom blocks': {  }
+            Devel: {  }
+            Facets: {  }
+            'Facets summary (Experimental)': {  }
+            Forms: {  }
+            Geolocation: {  }
+            Help: {  }
+            'Inline blocks':
+              - 'inline_block:card_contact'
+              - 'inline_block:card_standard'
+              - 'inline_block:card_nested_standard'
+            'Lists (Views)': {  }
+            Menus: {  }
+            Origins: {  }
+            'Read Only Mode': {  }
+            System: {  }
+            User: {  }
+            Views: {  }
+            Webform: {  }
+            'Webform access': {  }
+            core: {  }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
