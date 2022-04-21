@@ -9,7 +9,8 @@ folder: ../config/cscsreviewni/production
 module: {  }
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - cscsreviewni_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
