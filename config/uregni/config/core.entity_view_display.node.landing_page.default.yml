@@ -76,7 +76,11 @@ third_party_settings:
           - card_nested_wide
           - card_standard
           - card_wide
+          - information_notice
+          - plain_cards
+          - text
           - video
+          - video_and_caption
         'Custom blocks': {  }
         Devel: {  }
         Facets: {  }
@@ -92,7 +96,11 @@ third_party_settings:
           - 'inline_block:card_wide'
           - 'inline_block:card_nested_standard'
           - 'inline_block:card_nested_wide'
+          - 'inline_block:information_notice'
+          - 'inline_block:plain_cards'
+          - 'inline_block:text'
           - 'inline_block:video'
+          - 'inline_block:video_and_caption'
         'Lists (Views)': {  }
         Menus: {  }
         Origins: {  }
@@ -124,6 +132,10 @@ third_party_settings:
               - accordion_menu
               - banner_deep
               - card_contact
+              - information_notice
+              - plain_cards
+              - text
+              - video_and_caption
             'Custom blocks': {  }
             Devel: {  }
             Facets: {  }
@@ -135,6 +147,10 @@ third_party_settings:
               - 'inline_block:accordion_menu'
               - 'inline_block:banner_deep'
               - 'inline_block:card_contact'
+              - 'inline_block:information_notice'
+              - 'inline_block:plain_cards'
+              - 'inline_block:text'
+              - 'inline_block:video_and_caption'
             'Lists (Views)': {  }
             Menus: {  }
             Origins: {  }
