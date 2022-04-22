@@ -6,9 +6,11 @@ id: production
 label: production
 description: 'Used for production site.'
 folder: ../config/cscsreviewni/production
-module: {  }
+module:
+  fastly: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - fastly.settings
 graylist:
   - cscsreviewni_theme.settings
 graylist_dependents: true
