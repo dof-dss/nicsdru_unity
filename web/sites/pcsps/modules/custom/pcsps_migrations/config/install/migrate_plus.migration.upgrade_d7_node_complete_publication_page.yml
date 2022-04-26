@@ -138,8 +138,19 @@ process:
         height: height
   field_publication_type:
     -
-      plugin: get
+      plugin: static_map
       source: field_publication_type
+      default_value: null
+      map:
+        code_of_practice: 1
+        information_leaflets: 2
+        inpartnership: 3
+        joint_committee_minutes: 4
+        other_publications: 5
+        other_reports: 6
+        pcsp_annual_reports: 7
+        pcsp_appointments: 8
+        policies_and_guidance: 9
   field_attachment:
     -
       plugin: sub_process
