@@ -9,7 +9,7 @@ namespace Drupal\nipolicingboard_breadcrumbs;
  *
  * In the format:
  * > Home
- * > Question to Chief Constable
+ * > Question to the Chief Constable
  * > current-page-title
  *
  * > <front>
@@ -107,7 +107,7 @@ class QuestionsBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('Question to Chief Constable'), Url::fromRoute('view.questions_search.questions_search_page'));
+      $links[] = Link::fromTextandUrl(t('Question to the Chief Constable'), Url::fromRoute('view.questions_search.questions_search_page'));
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
     }
