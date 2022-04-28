@@ -68,6 +68,7 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
     $view_names = [
       'view.news_search.news_search_page',
       'view.publications_search.publication_search_page',
+      'view.questions_search.questions_search_page',
     ];
 
     foreach ($view_names as $view_name) {

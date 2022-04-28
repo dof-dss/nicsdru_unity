@@ -59,6 +59,19 @@
   to: "https://www.pcsps.org/"
 
 #---------------------------------
+# Do not remove this route, the {default} domain must be
+# explicitly defined as it is not included in {all}
+"https://www.fiscalcommissionni.org.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://fiscalcommissionni.org.{default}/":
+  type: redirect
+  to: "https://www.fiscalcommissionni.org.{default}/"
+
+#---------------------------------
 
 # Catch all.
 "https://www.{all}/":
