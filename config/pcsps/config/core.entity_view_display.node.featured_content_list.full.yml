@@ -1,0 +1,33 @@
+uuid: 11e9f946-681b-48d8-83ef-8b4eaf151f52
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.featured_content_list.field_featured_content
+    - node.type.featured_content_list
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.featured_content_list.full
+targetEntityType: node
+bundle: featured_content_list
+mode: full
+content:
+  field_featured_content:
+    weight: 0
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true
