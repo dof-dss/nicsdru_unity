@@ -9,6 +9,7 @@ module:
   blazy: 0
   block: 0
   block_content: 0
+  block_field: 0
   block_list_override: 0
   block_visibility_groups: 0
   breakpoint: 0
@@ -69,6 +70,7 @@ module:
   layout_builder: 0
   layout_builder_modal: 0
   layout_builder_restrictions: 0
+  layout_builder_restrictions_by_region: 0
   layout_discovery: 0
   link: 0
   link_fix_absolute_urls: 0
@@ -115,6 +117,8 @@ module:
   structure_sync: 0
   system: 0
   taxonomy: 0
+  telephone: 0
+  telephone_plus: 0
   text: 0
   token: 0
   token_filter: 0
