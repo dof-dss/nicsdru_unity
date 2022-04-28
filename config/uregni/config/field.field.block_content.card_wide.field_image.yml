@@ -1,18 +1,16 @@
-uuid: 28712b0c-71a5-4422-9f63-b4b3d5e489ec
+uuid: ee2f45d4-6eab-4d13-a773-8d4f9d9f24ca
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_photo
+    - block_content.type.card_wide
+    - field.storage.block_content.field_image
     - media.type.image
-    - node.type.publication
-_core:
-  default_config_hash: JSUeqG61vvfFndaAvjT2TM4ZMF4eN1KeupJuWH6OSZk
-id: node.publication.field_photo
-field_name: field_photo
-entity_type: node
-bundle: publication
-label: Photo
+id: block_content.card_wide.field_image
+field_name: field_image
+entity_type: block_content
+bundle: card_wide
+label: Image
 description: ''
 required: false
 translatable: true
@@ -24,8 +22,8 @@ settings:
     target_bundles:
       image: image
     sort:
-      field: _none
-      direction: ASC
+      field: revision_created
+      direction: DESC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
