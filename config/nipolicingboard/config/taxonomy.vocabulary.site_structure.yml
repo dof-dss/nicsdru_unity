@@ -1,8 +1,0 @@
-uuid: dc5bb7a9-0374-49ad-a559-f655795307fd
-langcode: en
-status: true
-dependencies: {  }
-name: 'Key terms'
-vid: site_structure
-description: 'Enables content to be structured into areas of work'
-weight: 0

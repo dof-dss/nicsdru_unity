@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_featured_content
     - node.type.feature
     - node.type.featured_content_list
-    - node.type.news
 _core:
   default_config_hash: 0VfC90DInkGsnV7A5SjfCgr9gOrNOuQT9__xqUVLVUI
 id: node.featured_content_list.field_featured_content
@@ -24,7 +23,6 @@ settings:
   handler_settings:
     target_bundles:
       feature: feature
-      news: news
     sort:
       field: type
       direction: ASC

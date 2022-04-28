@@ -14,8 +14,12 @@
 .front {
   .sidebar-second-layout {
     @include breakpoint($lap) {
-      margin-top: 6.4rem;
+      margin-top: 10rem;
     }
+  }
+
+  h1 {
+    margin-bottom: 0;
   }
 }
 
@@ -47,7 +51,8 @@
   }
 }
 
-.path-news-search {
+.path-news-search,
+.path-publications {
   .content-sidebar-wrap {
     width: 100%;
   }

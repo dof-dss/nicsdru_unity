@@ -5,5 +5,6 @@ ignored_config_entities:
   - 'investnireview_theme.settings:pinterest_profile_url'
   - 'investnireview_theme.settings:youtube_profile_url'
   - 'investnireview_theme.settings:instagram_profile_url'
+  - block.block.sociallinks
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

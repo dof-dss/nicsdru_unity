@@ -34,7 +34,7 @@
   .menu {
     .menu-item {
       border-right: 1px solid #fff;
-      font-size: $p-font-size;
+      @include adjust-font-size-to(16px);
 
       @media screen and (max-width: $tab) {
         border-right: none;

@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: menu-footer-links
-label: 'Footer links'
-description: ''
-locked: false
