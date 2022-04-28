@@ -80,6 +80,8 @@
 </div>
 
 {% if is_front %}
+  {{ page.slideshow }}
+
   {% if drupal_config('system.site', 'frontpage_title') %}
     <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
       <h1>
