@@ -1,50 +1,15 @@
-# Each route describes how an incoming URL is going to be processed by Platform.sh.
-"https://www.uregni.gov.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://uregni.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.uregni.gov.uk.{default}/"
-
-"https://uregni.gov.uk/":
-  type: redirect
-  to: "https://www.uregni.gov.uk/"
-
-#---------------------------------
-
-"https://www.liofa.eu/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://liofa.eu.{default}/":
-  type: redirect
-  to: "https://www.liofa.eu.{default}/"
-
-"https://liofa.eu/":
-  type: redirect
-  to: "https://www.liofa.eu/"
-
-#---------------------------------
-
-"https://www.odscni.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://odscni.org.uk.{default}/":
-  type: redirect
-  to: "https://www.odscni.org.uk.{default}/"
-
-"https://odscni.org.uk/":
-  type: redirect
-  to: "https://www.odscni.org.uk/"
-
+# The 'Catch all' routes at the bottom of this file will generate routes for all sites whose domain
+# name has been added to the 'domains' section on the Platform.sh dashboard i.e. all sites that are 'live'.
+# Note that, for these live sites, all URLs will also be correctly generated for their other Platform sites
+# such as UAT and Edge.
+#
+# The only sites that need to be explicitly listed here are those that are not yet fully 'live' i.e. their
+# domain name has not yet been added to the 'domains' section of the Platform.sh dashboard. For these sites
+# an 'upstream' entry should be added for the 'www' version of the site and a 'redirect' entry should also
+# be added.
+#
+# When a site becomes fully 'live' and its domain is added to the Platform.sh dashboard then any explicit
+# routes that appear below for that site should be removed.
 #---------------------------------
 
 "https://www.attorneygeneralni.gov.uk/":
@@ -53,141 +18,9 @@
   cache:
     enabled: false
 
-"https://attorneygeneralni.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.attorneygeneralni.gov.uk.{default}/"
-
 "https://attorneygeneralni.gov.uk/":
   type: redirect
   to: "https://www.attorneygeneralni.gov.uk/"
-
-#---------------------------------
-
-"https://www.employmenttribunalsni.co.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://employmenttribunalsni.co.uk.{default}/":
-  type: redirect
-  to: "https://www.employmenttribunalsni.co.uk.{default}/"
-
-"https://employmenttribunalsni.co.uk/":
-  type: redirect
-  to: "https://www.employmenttribunalsni.co.uk/"
-
-#---------------------------------
-
-"https://www.niauditoffice.gov.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://niauditoffice.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.niauditoffice.gov.uk.{default}/"
-
-"https://niauditoffice.gov.uk/":
-  type: redirect
-  to: "https://www.niauditoffice.gov.uk/"
-
-#---------------------------------
-
-"https://www.fiscalcommissionni.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://fiscalcommissionni.org.{default}/":
-  type: redirect
-  to: "https://www.fiscalcommissionni.org.{default}/"
-
-"https://fiscalcommissionni.org/":
-  type: redirect
-  to: "https://www.fiscalcommissionni.org/"
-
-#---------------------------------
-
-"https://www.nifiscalcouncil.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://nifiscalcouncil.org.{default}/":
-  type: redirect
-  to: "https://www.nifiscalcouncil.org.{default}/"
-
-"https://nifiscalcouncil.org/":
-  type: redirect
-  to: "https://www.nifiscalcouncil.org/"
-
-#---------------------------------
-
-"https://www.octf.gov.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://octf.gov.uk.{default}/":
-  type: redirect
-  to: "https://www.octf.gov.uk.{default}/"
-
-"https://octf.gov.uk/":
-  type: redirect
-  to: "https://www.octf.gov.uk/"
-
-#---------------------------------
-
-"https://www.urologyservicesinquiry.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://urologyservicesinquiry.org.uk.{default}/":
-  type: redirect
-  to: "https://www.urologyservicesinquiry.org.uk.{default}/"
-
-"https://urologyservicesinquiry.org.uk/":
-  type: redirect
-  to: "https://www.urologyservicesinquiry.org.uk/"
-
-#---------------------------------
-
-"https://www.mahinquiry.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://mahinquiry.org.uk.{default}/":
-  type: redirect
-  to: "https://www.mahinquiry.org.uk.{default}/"
-
-"https://mahinquiry.org.uk/":
-  type: redirect
-  to: "https://www.mahinquiry.org.uk/"
-
-#---------------------------------
-
-"https://www.independentreviewofeducation.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://independentreviewofeducation.org.uk.{default}/":
-  type: redirect
-  to: "https://www.independentreviewofeducation.org.uk.{default}/"
-
-"https://independentreviewofeducation.org.uk/":
-  type: redirect
-  to: "https://www.independentreviewofeducation.org.uk/"
 
 #---------------------------------
 
@@ -196,10 +29,6 @@
   upstream: "unity:http"
   cache:
     enabled: false
-
-"https://nipolicingboard.org.uk.{default}/":
-  type: redirect
-  to: "https://www.nipolicingboard.org.uk.{default}/"
 
 "https://nipolicingboard.org.uk/":
   type: redirect
@@ -213,29 +42,9 @@
   cache:
     enabled: false
 
-"https://pbni.org.uk.{default}/":
-  type: redirect
-  to: "https://www.pbni.org.uk.{default}/"
-
 "https://pbni.org.uk/":
   type: redirect
   to: "https://www.pbni.org.uk/"
-
-#---------------------------------
-
-"https://www.investnireview.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://investnireview.org.uk.{default}/":
-  type: redirect
-  to: "https://www.investnireview.org.uk.{default}/"
-
-"https://investnireview.org.uk/":
-  type: redirect
-  to: "https://www.investnireview.org.uk/"
 
 #---------------------------------
 
@@ -245,29 +54,22 @@
   cache:
     enabled: false
 
-"https://pcsps.org.{default}/":
-  type: redirect
-  to: "https://www.pcsps.org.{default}/"
-
 "https://pcsps.org/":
   type: redirect
   to: "https://www.pcsps.org/"
 
 #---------------------------------
-
-"https://www.cscsreviewni.net/":
+# Do not remove this route, the {default} domain must be
+# explicitly defined as it is not included in {all}
+"https://www.fiscalcommissionni.org.{default}/":
   type: upstream
   upstream: "unity:http"
   cache:
     enabled: false
 
-"https://cscsreviewni.net.{default}/":
+"https://fiscalcommissionni.org.{default}/":
   type: redirect
-  to: "https://www.cscsreviewni.net.{default}/"
-
-"https://cscsreviewni.net/":
-  type: redirect
-  to: "https://www.cscsreviewni.net/"
+  to: "https://www.fiscalcommissionni.org.{default}/"
 
 #---------------------------------
 

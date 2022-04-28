@@ -1,7 +1,17 @@
-taxonomies:
-  publications_topics: {  }
-  site_topics: {  }
-  tags: {  }
+blocks:
+  -
+    info: 'About the inquiry'
+    langcode: en
+    uuid: 1e99ba1c-48c4-4b30-a65a-9564ab4dfacb
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis orci magna, vitae hendrerit libero dapibus vitae. Cras accumsan et neque eu molestie.</p>\r\n\r\n<p>Sed luctus semper elit molestie vehicula. &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"f2a4cc8b-b718-473c-b7b0-5b71a5f6a877\" href=\"/node/8\">Read our Terms of Reference</a></p>\r\n"
+          summary: ''
+          format: basic_html
 menus:
   -
     menu_name: main
@@ -111,26 +121,66 @@ menus:
     weight: '0'
     langcode: en
     uuid: 9f79e8c7-f65c-4a37-bf1c-4a03ce50d936
-blocks:
-  -
-    info: 'About the Inquiry'
-    langcode: en
-    uuid: 1e99ba1c-48c4-4b30-a65a-9564ab4dfacb
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<p><span><span><span><span>The establishment of the independent public Urology Services Inquiry was announced in a statement by the Health Minister, on 24 November 2020.</span></span></span></span></p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"84095f92-14a0-417a-acf4-5433f8bec2da\" href=\"/node/12\">Read our Terms of Reference</a></p>\r\n"
-          summary: ''
-          format: basic_html
-  -
-    info: 'Social links'
-    langcode: en
-    uuid: 254cc1c0-6f62-4535-9078-e8958427bfd4
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body: {  }
+taxonomies:
+  publications_topics:
+    -
+      vid: publications_topics
+      tid: '1'
+      langcode: en
+      name: 'Terms of Reference'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 0fd21ff5-a6b7-445d-8193-e8bc825f15a7
+    -
+      vid: publications_topics
+      tid: '2'
+      langcode: en
+      name: Protocols
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 60d3a2b1-3fb9-4fa9-875e-bc36ee04c4f6
+    -
+      vid: publications_topics
+      tid: '3'
+      langcode: en
+      name: 'Restriction Orders'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3d488d73-fb07-4c62-9cdb-851b2eb733b7
+    -
+      vid: publications_topics
+      tid: '4'
+      langcode: en
+      name: Procedures
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 9abf6c62-c404-4f06-a5df-a837a0259049
+    -
+      vid: publications_topics
+      tid: '5'
+      langcode: en
+      name: 'Data Protection'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 45f32336-67ea-448a-9578-c9dd0f1412ba
+    -
+      vid: publications_topics
+      tid: '6'
+      langcode: en
+      name: 'Transcripts and Evidence called'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 0fbb4148-d8c6-4cf4-b689-d043d3709462
+  tags: {  }

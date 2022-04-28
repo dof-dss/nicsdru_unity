@@ -80,10 +80,18 @@
 </div>
 
 {% if is_front %}
+  {% if drupal_config('system.site', 'frontpage_title') %}
+    <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+      <h1>
+        {{ drupal_config('system.site', 'frontpage_title') }}
+      </h1>
+    </div>
+  {% endif %}
 
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
+    <div id="content">
     <div id="top-area">
       {% if page.top_first %}
         <div class="column">
@@ -101,6 +109,7 @@
         </div>
       {% endif %}
     </div>
+    </div>
   {% endif %}
 {% endif %}
 
@@ -108,16 +117,6 @@
 <div id="container">
   <div class="container-wrap">
     <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
-      {% if is_front %}
-        {% if drupal_config('system.site', 'frontpage_title') %}
-          <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-            <h1>
-              {{ drupal_config('system.site', 'frontpage_title') }}
-            </h1>
-          </div>
-
-        {% endif %}
-      {% endif %}
       {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}

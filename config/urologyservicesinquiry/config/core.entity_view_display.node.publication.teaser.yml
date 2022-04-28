@@ -12,7 +12,6 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - options
     - user
 _core:
   default_config_hash: Qg3m7rmc1j1dBqLJn6_N8rah72nWZ22-FQqWFnnnZV8
@@ -21,13 +20,6 @@ targetEntityType: node
 bundle: publication
 mode: teaser
 content:
-  field_publication_type:
-    type: list_default
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_published_date:
     type: datetime_default
     weight: 0
@@ -37,14 +29,12 @@ content:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   content_moderation_control: true
   field_attachment: true
   field_meta_tags: true
+  field_publication_type: true
   langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,107 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+  }
+}
+
+#main-menu {
+  .menu-link,
+  .menu-item .active {
+    color: $brand-secondary;
+
+    &:hover {
+      background-color: $brand-tertiary;
+      color: #fff;
+      border-bottom-color: $brand-secondary;
+    }
+
+    &:focus {
+      background-color: #fae029;
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+
+  .menu {
+    .menu-item {
+      border-right: 1px solid #fff;
+
+      @media screen and (max-width: $tab) {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      .active {
+        background: $brand-tertiary;
+        border-bottom-color: $brand-secondary;
+        color: #fff;
+      }
+
+      &.open {
+        .menu-toggle-btn {
+          color: $brand-secondary;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .menu-main_sub {
+    background: $charcoal;
+
+    .menu-item {
+      @media screen and (max-width: $tab) {
+        background: $charcoal;
+      }
+    }
+
+    .menu-link,
+    .menu-item span.active {
+      @media screen and (max-width: $tab) {
+        text-align: center;
+      }
+
+      &.active {
+        background: $brand-tertiary;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+#footer {
+  max-width: 1060px;
+  padding: 2rem;
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    padding-left: 0;
+    font-size: 1.6rem;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
+}
