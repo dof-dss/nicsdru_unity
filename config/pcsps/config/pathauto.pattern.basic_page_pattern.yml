@@ -11,19 +11,16 @@ label: 'Basic page pattern'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  1c138d06-12b7-4ff5-b6ad-2a28718ad244:
+  5ce2b2db-3c96-4d62-ae3e-8518196ef6e7:
     id: node_type
     bundles:
       basic_page: basic_page
-      contact: contact
-      faq: faq
-      link: link
-      profile: profile
+      feature: feature
       webform: webform
     negate: false
     context_mapping:
       node: node
-    uuid: 1c138d06-12b7-4ff5-b6ad-2a28718ad244
+    uuid: 5ce2b2db-3c96-4d62-ae3e-8518196ef6e7
 selection_logic: and
 weight: -5
 relationships: {  }
