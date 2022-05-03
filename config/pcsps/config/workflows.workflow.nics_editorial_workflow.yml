@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
+    - node.type.feature
     - node.type.publication
     - node.type.webform
   module:
@@ -96,6 +97,7 @@ type_settings:
   entity_types:
     node:
       - basic_page
+      - feature
       - publication
       - webform
   default_moderation_state: draft
