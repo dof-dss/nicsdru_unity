@@ -115,6 +115,16 @@
   }
 }
 
+#content #top-area .twitter-block h2 a.twitter-link {
+  color: $white;
+  border-bottom-color: $white;
+
+  &:focus {
+    background-color: $white;
+    color: $link;
+  }
+}
+
 #top-area {
   margin: 2rem auto;
   text-align: left;
@@ -134,16 +144,6 @@
         border: 1px solid $white;
         border-radius: 100%;
         padding: .5rem;
-      }
-
-      a.twitter-link {
-        color: $white;
-        border-bottom-color: $white;
-
-        &:focus {
-          background-color: $white;
-          color: $link;
-        }
       }
     }
   }
