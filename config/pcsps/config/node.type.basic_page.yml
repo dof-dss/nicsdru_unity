@@ -9,10 +9,11 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: 'main:'
+      - menu-side-menu
+    parent: 'menu-side-menu:'
   origins_toc:
     toc_enable: 1
-    toc_title: Contents
+    toc_title: 'On this page'
     toc_location: '#post-content .page-content'
     toc_insert: before
     toc_source_container: '#post-content .page-content'
