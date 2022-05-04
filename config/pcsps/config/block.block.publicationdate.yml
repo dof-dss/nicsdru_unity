@@ -1,0 +1,28 @@
+uuid: 1cb92aff-d785-4f2d-877f-793bd567f876
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_date
+  module:
+    - facets
+    - system
+  theme:
+    - pcsps_theme
+id: publicationdate
+theme: pcsps_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:publication_date'
+settings:
+  id: 'facet_block:publication_date'
+  label: 'Publication date'
+  provider: facets
+  label_display: visible
+  block_id: publicationdate
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
+    negate: false
