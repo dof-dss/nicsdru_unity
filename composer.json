@@ -221,6 +221,9 @@
             },
             "drupal/fastly": {
                 "Allow disabling of logging": "https://git.drupalcode.org/project/fastly/-/merge_requests/6.patch"
+            },
+            "drupal/clientside_validation": {
+                "Uncaught type error patches including errors as label patch": "https://www.drupal.org/files/issues/2021-06-08/clientside_validation_typerror_3217889_3.patch"
             }
         },
         "drupal-scaffold": {
