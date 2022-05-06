@@ -230,8 +230,8 @@ display:
             alter_text: false
             text: ''
             make_link: false
-            path: '/node/{{ nid }}/latest'
-            absolute: true
+            path: ''
+            absolute: false
             external: false
             replace_spaces: false
             path_case: none
