@@ -24,14 +24,14 @@ $chroma: add-colors((
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
-  offwhite:               #f3f8fc,
+  offwhite:               #f2f2f2,
   dark-red:               #b63a1b, // 4.53:1 with light-pink
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #88bd23,
+  brand-primary:          #5c8118,
 
-  brand-secondary:        #0c83a5,
+  brand-secondary:        #0a728f,
 
   brand-tertiary:         #002e62,
 ));
@@ -65,7 +65,7 @@ $chroma: add-colors('functional', (
   menu-separator:         #fff,
   menu-sub-item-background: lighten(#333, 10),
   menu-sub-item-hover:    #1abc9c,
-  menu-borders:           'charcoal',
+  menu-borders:           'brand-secondary',
 
   table-background:       #fff,
   table-border:           #bbb,

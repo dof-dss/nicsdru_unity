@@ -13,3 +13,7 @@ site-styling:
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
       css/components.css: { minified: true }
+
+    # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
+    theme:
+      css/theme.css: { minified: true }
