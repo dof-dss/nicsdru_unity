@@ -1,23 +1,24 @@
-uuid: 5956bc92-9ba0-44a9-9cde-d44a00ff08dc
+uuid: a06e523b-ab06-4575-a8e5-f7d42f363280
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.menu-side-menu
   module:
     - ctools
+    - node
     - system
   theme:
     - pcsps_theme
-id: sidemenu
+id: sidemenu_2
 theme: pcsps_theme
 region: sidebar_second
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:menu-side-menu'
 settings:
-  id: 'system_menu_block:main'
-  label: 'In this section'
+  id: 'system_menu_block:menu-side-menu'
+  label: Content
   provider: system
   label_display: visible
   level: 1
@@ -31,7 +32,10 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: true
+  node_type:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

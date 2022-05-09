@@ -1,0 +1,24 @@
+uuid: ce58d6b7-ee53-4e08-bde9-af7606645844
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pcsps_theme
+id: pagetitle
+theme: pcsps_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/search*\r\n/node/*/revisions/view/*"
+    negate: true
