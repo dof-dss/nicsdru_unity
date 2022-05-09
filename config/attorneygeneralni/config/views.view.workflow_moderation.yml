@@ -289,11 +289,11 @@ display:
           relationship: nid
           group_type: group
           admin_label: ''
-          label: 'Latest version'
+          label: 'Latest draft'
           exclude: false
           alter:
             alter_text: true
-            text: 'View latest version'
+            text: 'View latest draft'
             make_link: true
             path: '/node/{{ nid }}/latest'
             absolute: true
