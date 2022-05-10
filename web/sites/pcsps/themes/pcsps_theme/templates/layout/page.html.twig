@@ -91,26 +91,6 @@
   {% endif %}
 
   {{ page.front_welcome }}
-
-  {% if page.top_first or page.top_second or page.top_third %}
-    <div id="top-area">
-      {% if page.top_first %}
-        <div class="column">
-          {{ page.top_first }}
-        </div>
-      {% endif %}
-      {% if page.top_second %}
-        <div class="column">
-          {{ page.top_second }}
-        </div>
-      {% endif %}
-      {% if page.top_third %}
-        <div class="column">
-          {{ page.top_third }}
-        </div>
-      {% endif %}
-    </div>
-  {% endif %}
 {% endif %}
 
 <div id="container">
@@ -152,6 +132,27 @@
       </aside>
     {% endif %}
     {% if is_front %}
+
+      {% if page.top_first or page.top_second or page.top_third %}
+        <div id="top-area">
+          {% if page.top_first %}
+            <div class="column">
+              {{ page.top_first }}
+            </div>
+          {% endif %}
+          {% if page.top_second %}
+            <div class="column">
+              {{ page.top_second }}
+            </div>
+          {% endif %}
+          {% if page.top_third %}
+            <div class="column">
+              {{ page.top_third }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
       {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
         <div id="bottom_wrapper" class="footer_block bottom_widget">
           <div id="bottom-area" class="footer-area">

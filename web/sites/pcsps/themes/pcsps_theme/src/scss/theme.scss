@@ -37,3 +37,166 @@
     }
   }
 }
+
+#slick-views-slideshow-slideshow-1 {
+  .slide__caption {
+    a {
+      border: none;
+    }
+  }
+}
+
+.front {
+  .main-content {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    background-color: #d3f171;
+    margin: 1rem 0;
+    padding: 1rem;
+
+    @include breakpoint($tab) {
+      padding: 2rem 8.6rem;
+      margin: 0 -1rem;
+    }
+
+    .block-system-main-block {
+      @include breakpoint($lap) {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .home-people {
+        //float: right;
+        order: 2;
+      }
+    }
+
+    .page-content {
+      @include breakpoint($lap) {
+        width: 50%;
+      }
+
+      h2 {
+        font-family: "PT Sans Narrow", sans-serif;
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 4.8rem;
+        line-height: 3.6rem;
+        padding: 3rem 0;
+      }
+
+      p {
+        font-size: 2.1rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  #top-area {
+    text-align: unset;
+    max-width: 1024px;
+    //padding: 4rem 0 1rem;
+    //display: flex;
+    gap: 2%;
+    justify-content: space-between;
+
+    @include breakpoint($tab) {
+      display: flex;
+      padding: 4rem 0 1rem;
+    }
+
+    h2 {
+      font-family: "PT Sans Narrow", sans-serif;
+      margin-top: 0;
+      text-transform: uppercase;
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+      padding: 3rem 0 7rem;
+      letter-spacing: -0.8px;
+      color: $black;
+    }
+
+    .column {
+      border: 1px solid #d0d0d0;
+      padding: 2.5rem 2rem;
+      height: auto;
+      overflow: hidden;
+
+      @include breakpoint($tab) {
+        max-height: 700px;
+
+        &:first-child {
+          background: resolve('pcsp-what-we-do-bkgrnd.png') no-repeat right 0 bottom 0;
+        }
+      }
+
+      li {
+        font-size: 2.1rem;
+        font-weight: bold;
+        line-height: 2.8rem;
+        letter-spacing: -0.4px;
+
+        &::marker {
+          color: #5bb108;
+        }
+      }
+
+      #block-whatdopcspsdo {
+        p {
+          @include breakpoint($tab) {
+            text-align: center;
+          }
+        }
+
+        .btn {
+          background: #5bb108 resolve('pcsp-arrow.png') no-repeat right 15px top 22px;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 1.5rem 4rem 1.5rem 2rem;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+
+          @include breakpoint($tab) {
+            margin-top: 25rem;
+          }
+        }
+      }
+
+      #block-contents {
+        .content {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .footer-area {
+    .column {
+      width: 100%;
+      float: none;
+      margin: 0 -1rem;
+
+      #block-locateyourpcsp {
+        background: resolve('pcsp-locate-bkgrnd.png') no-repeat;
+      }
+
+      .bottom-column-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 5rem;
+      }
+
+      h2 {
+        font-family: "PT Sans Narrow", sans-serif;
+        text-transform: uppercase;
+        font-size: 6rem;
+        line-height: 6rem;
+        padding-top: 4rem;
+        color: $white;
+      }
+    }
+  }
+}

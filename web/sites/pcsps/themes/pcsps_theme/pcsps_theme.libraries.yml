@@ -17,3 +17,8 @@ site-styling:
     # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
     theme:
       css/theme.css: { minified: true }
+
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap': { type: external, minified: true }

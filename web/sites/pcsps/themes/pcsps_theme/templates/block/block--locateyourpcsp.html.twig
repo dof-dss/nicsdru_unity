@@ -31,25 +31,22 @@
 #}
 {%
   set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-' ~ plugin_id|clean_class,
-]
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {% if is_front %}
-      <div class="home-people">
-        <img class="about-us-icon" src="/sites/pcsps/themes/pcsps_theme/images/pscp-about-us-people.png">
-      </div>
+  <div class="bottom-column-content">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
     {% endif %}
-      {{ content }}
-  {% endblock %}
+    {{ title_suffix }}
+    {% block content %}
+      <div{{ content_attributes.addClass('content') }}>
+        {{ content }}
+      </div>
+    {% endblock %}
+  </div>
 </div>
