@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea35b3dcabfda525470bf8ccafd4a718",
+    "content-hash": "80c7598e53e264093489aff8a5f01577",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1906,21 +1906,22 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "1.0.1",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "8e3b562cbd66205d9f17d6633259c897c991fc7f"
+                "reference": "7b250f66729ad190672d19561229d799ac474c0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/8e3b562cbd66205d9f17d6633259c897c991fc7f",
-                "reference": "8e3b562cbd66205d9f17d6633259c897c991fc7f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/7b250f66729ad190672d19561229d799ac474c0a",
+                "reference": "7b250f66729ad190672d19561229d799ac474c0a",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.6"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1929,9 +1930,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.0.1"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/development"
             },
-            "time": "2022-04-28T12:09:41+00:00"
+            "time": "2022-05-04T08:06:34+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -20146,6 +20147,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_unity_modules": 20,
         "drupal/block_field": 5,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
