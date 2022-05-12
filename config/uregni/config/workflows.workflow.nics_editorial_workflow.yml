@@ -6,6 +6,7 @@ dependencies:
     - node.type.consultation
     - node.type.feature
     - node.type.featured_content_list
+    - node.type.landing_page
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -101,6 +102,7 @@ type_settings:
       - consultation
       - feature
       - featured_content_list
+      - landing_page
       - news
       - page
       - publication_page
