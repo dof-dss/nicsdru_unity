@@ -185,7 +185,7 @@
     }
   }
 
-  .footer-area {
+  #bottom-area.footer-area {
     .column {
       width: auto;
       float: none;
@@ -258,6 +258,9 @@
         }
 
         ul {
+          @include breakpoint($lap) {
+            columns: 2;
+          }
           @include breakpoint($tab) {
             padding-bottom: 2rem;
           }
@@ -272,14 +275,14 @@
           border-color: $white;
         }
 
-        li {
-          @include breakpoint($lap) {
-            &:nth-child(odd) {
-              float: right;
-              width: 30rem;
-            }
-          }
-        }
+        //li {
+        //  @include breakpoint($lap) {
+        //    &:nth-child(odd) {
+        //      float: right;
+        //      width: 30rem;
+        //    }
+        //  }
+        //}
       }
     }
   }
