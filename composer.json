@@ -67,7 +67,7 @@
         "dof-dss/nicsdru_origins_profile": "0.1.11",
         "dof-dss/nicsdru_unity_modules": "^1.0",
         "dof-dss/nicsdru_unity_profile": "^1.0",
-        "dof-dss/nicsdru_unity_theme": "^0.1.50",
+        "dof-dss/nicsdru_unity_theme": "^0.1.51",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -203,6 +203,7 @@
                 "Fix ajax error when creating redirects": "https://www.drupal.org/files/issues/2020-12-14/validation-issue-3057250-29.patch"
             },
             "drupal/cookie_content_blocker": {
+                "Allow module to be installed on PHP8": "https://www.drupal.org/files/issues/2022-02-08/php8-3263071-2.patch",
                 "Disable XSS for tag settings to allow HTML output": "https://gist.githubusercontent.com/omahm/eb99bc8278b57798a7d82bf06c27b8d1/raw/d9d75e06300a102b072dd8166f82ec381f211b9d/cookie_content_blocker_disable_xss"
             },
             "drupal/hms_field": {
