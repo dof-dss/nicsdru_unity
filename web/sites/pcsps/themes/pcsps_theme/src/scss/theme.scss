@@ -144,6 +144,10 @@
       height: auto;
       overflow: hidden;
 
+      &:last-child {
+        margin-right: 1rem;
+      }
+
       @include breakpoint($tab) {
         max-height: 700px;
 
@@ -189,8 +193,8 @@
     .column {
       width: auto;
       float: none;
-      margin: 0 -1rem;
-      padding: 0 1rem;
+      margin: 0;
+      padding: 0;
 
 
       h2 {

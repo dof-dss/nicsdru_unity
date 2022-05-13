@@ -40,13 +40,33 @@
   }
 }
 
-#footer-area {
-  display: flex;
-  gap: 50px;
-  color: $text;
+#bottom_wrapper {
+  max-width: $max-grid-width;
+  margin: 0 auto;
+}
 
-  .column {
-    width: 34.3%;
-    float: none;
+#footer_wrapper {
+  max-width: 1024px;
+
+  #footer-area {
+    gap: 50px;
+
+    @include breakpoint($tab) {
+      display: flex;
+    }
+
+    @include breakpoint($lap) {
+      padding: 0 2rem;
+    }
+
+    .column {
+      float: none;
+      width: auto;
+
+      //@include breakpoint($tab) {
+      //  width: 40%;
+      //}
+    }
   }
 }
+

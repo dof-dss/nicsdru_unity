@@ -138,3 +138,43 @@
     padding: 0;
   }
 }
+
+
+#footer-area {
+  .column {
+    .block {
+      h2,
+      p {
+        color: $text;
+      }
+    }
+
+    li {
+      border: none;
+    }
+
+    .social-icons {
+      margin: 3rem 0 2rem;
+    }
+  }
+}
+
+.footer_credit {
+  border-top: 1px solid $grey;
+
+  .region-footer {
+    margin: 2% auto;
+  }
+
+  ul {
+    padding: 2rem;
+
+    @include breakpoint($tab) {
+      padding: 0;
+    }
+
+    @include breakpoint($lap) {
+      text-align: right;
+    }
+  }
+}
