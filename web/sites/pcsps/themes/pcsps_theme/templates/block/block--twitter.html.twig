@@ -31,25 +31,20 @@
 #}
 {%
   set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-' ~ plugin_id|clean_class,
-]
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
 %}
 <div{{ attributes.addClass(classes) }}>
+  <img class="block-icon" src="sites/pcsps/themes/pcsps_theme/images/pcsp-twitter-icon.png">
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>
-      {{ label }}
-    </h2>
+    <h2{{ title_attributes }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
-  {% block content %}
-    {% if is_front %}
-      <div class="home-people">
-        <img class="about-us-icon" src="/sites/pcsps/themes/pcsps_theme/images/pscp-about-us-people.png">
-      </div>
-    {% endif %}
-      {{ content }}
-  {% endblock %}
+
+  <a class="twitter-timeline" data-height="562" data-width="520px" data-link-color="#008290" data-tweet-limit="1"
+     data-chrome="noheader nofooter noborders" href="https://twitter.com/PCSP_S">Tweets by PCSPs</a>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>

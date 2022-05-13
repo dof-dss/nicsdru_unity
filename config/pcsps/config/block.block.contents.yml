@@ -1,0 +1,30 @@
+uuid: f11178a2-8f8c-4463-af51-1fa973bb55d4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:e57da459-cc29-4aa9-a36e-99b0b13d604c'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: contents
+theme: pcsps_theme
+region: top_third
+weight: 0
+provider: null
+plugin: 'block_content:e57da459-cc29-4aa9-a36e-99b0b13d604c'
+settings:
+  id: 'block_content:e57da459-cc29-4aa9-a36e-99b0b13d604c'
+  label: Contents
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
