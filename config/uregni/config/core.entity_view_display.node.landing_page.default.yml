@@ -39,6 +39,16 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          fe63a3ea-91fb-4889-be90-2f2ba4859494:
+            uuid: fe63a3ea-91fb-4889-be90-2f2ba4859494
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landing_page:content_moderation_control'
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories:
@@ -226,6 +236,11 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
