@@ -37,3 +37,257 @@
     }
   }
 }
+
+#slick-views-slideshow-slideshow-1 {
+  .slide__caption {
+    a {
+      border: none;
+    }
+  }
+}
+
+.front {
+  h2 {
+    font-family: "PT Sans Narrow", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    background-image: resolve('pcsp-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 15px top 22px;
+    border: 1px solid $white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem 4rem 1.5rem 2rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+
+    &:focus,
+    &:hover {
+      background-image: resolve('pcsp-arrow.png');
+      background-repeat: no-repeat;
+      background-position: right 15px top 22px;
+    }
+  }
+
+  .main-content {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    background-color: #d3f171;
+    margin: 1rem 0;
+    padding: 1rem;
+
+    @include breakpoint($tab) {
+      padding: 2rem 8.6rem;
+      margin: 0 -1rem;
+    }
+
+    .block-system-main-block {
+      @include breakpoint($lap) {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .home-people {
+        //float: right;
+        order: 2;
+      }
+    }
+
+    .page-content {
+      @include breakpoint($lap) {
+        width: 50%;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 4.8rem;
+        line-height: 3.6rem;
+        padding: 3rem 0;
+      }
+
+      p {
+        font-size: 2.1rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  #top-area {
+    text-align: unset;
+    max-width: 1024px;
+    gap: 2%;
+    justify-content: space-between;
+
+    @include breakpoint($tab) {
+      display: flex;
+      padding: 4rem 0 1rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+      padding: 3rem 0 7rem;
+      letter-spacing: -0.8px;
+      color: $black;
+    }
+
+    .column {
+      border: 1px solid #d0d0d0;
+      padding: 2.5rem 2rem;
+      height: auto;
+      overflow: hidden;
+
+      &:last-child {
+        margin-right: 1rem;
+      }
+
+      @include breakpoint($tab) {
+        max-height: 700px;
+
+        &:first-child {
+          background: resolve('pcsp-what-we-do-bkgrnd.png') no-repeat right 0 bottom 0;
+        }
+      }
+
+      li {
+        font-size: 2.1rem;
+        font-weight: bold;
+        line-height: 2.8rem;
+        letter-spacing: -0.4px;
+
+        &::marker {
+          color: $brand-primary;
+        }
+      }
+
+      .btn {
+        @include breakpoint($tab) {
+          margin-top: 25rem;
+        }
+      }
+
+      #block-whatdopcspsdo {
+        p {
+          @include breakpoint($tab) {
+            text-align: center;
+          }
+        }
+      }
+
+      #block-contents {
+        .content {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  #bottom-area.footer-area {
+    .column {
+      width: auto;
+      float: none;
+      margin: 0;
+      padding: 0;
+
+
+      h2 {
+        font-size: 6rem;
+        line-height: 6rem;
+        padding-top: 4rem;
+        color: $white;
+        margin: .5rem 0 1.5rem;
+      }
+
+      .bottom-column-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 5rem;
+      }
+
+      #block-locateyourpcsp {
+        background: resolve('pcsp-locate-bkgrnd.png') no-repeat;
+
+        h2 {
+          @media screen and (max-width: $tab) {
+            padding-bottom: 5.5rem;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding-bottom: 2rem;
+
+          .btn {
+            @include breakpoint($tab) {
+              margin-top: 16.4rem;
+            }
+          }
+        }
+      }
+
+      #block-findyourpcsponfacebook {
+        background: linear-gradient(to right, #25396f, #3a559f);
+        //padding-bottom: 2rem;
+        //padding-top: 2rem;
+
+        .bottom-column-content {
+          padding: 2rem;
+        }
+
+        .facebook-icon {
+          margin-top: 2rem;
+
+          @include breakpoint($tab) {
+            float: right;
+            margin-top: 8rem;
+          }
+        }
+
+        .content {
+          @include breakpoint($lap) {
+            width: 75%;
+          }
+        }
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: 2.5rem;
+        }
+
+        ul {
+          @include breakpoint($lap) {
+            columns: 2;
+          }
+          @include breakpoint($tab) {
+            padding-bottom: 2rem;
+          }
+        }
+
+        p,
+        a,
+        li {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          color: $white;
+          border-color: $white;
+        }
+
+        //li {
+        //  @include breakpoint($lap) {
+        //    &:nth-child(odd) {
+        //      float: right;
+        //      width: 30rem;
+        //    }
+        //  }
+        //}
+      }
+    }
+  }
+}

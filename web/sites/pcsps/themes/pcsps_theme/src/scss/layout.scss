@@ -9,8 +9,64 @@
   padding: 0 1rem;
 }
 
+.front {
+  .container-wrap {
+    margin-bottom: 0;
+  }
+}
+
 .path-node {
   .main-content {
     float: none;
   }
 }
+
+#header {
+  margin: 5px auto;
+
+  @media screen and (max-width: $tab) {
+    margin-bottom: 0;
+  }
+
+  .top_left {
+    min-height: 135px;
+  }
+}
+
+.dialog-off-canvas-main-canvas {
+  #footer,
+  .region-slideshow {
+    max-width: $max-grid-width;
+  }
+}
+
+#bottom_wrapper {
+  max-width: $max-grid-width;
+  margin: 0 auto;
+}
+
+#footer_wrapper {
+  max-width: 1024px;
+
+  #footer-area {
+    gap: 50px;
+
+    @include breakpoint($tab) {
+      display: flex;
+    }
+
+    @include breakpoint($lap) {
+      padding: 0 2rem;
+    }
+
+    .column {
+      float: none;
+      width: auto;
+
+      //@include breakpoint($tab) {
+      //  width: 40%;
+      //}
+    }
+  }
+}
+

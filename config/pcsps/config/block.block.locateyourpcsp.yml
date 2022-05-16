@@ -1,0 +1,30 @@
+uuid: 1b38eba5-f90a-47d2-80b9-986403d10838
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:539554a0-6aac-490f-bc7d-d67893cff16b'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: locateyourpcsp
+theme: pcsps_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:539554a0-6aac-490f-bc7d-d67893cff16b'
+settings:
+  id: 'block_content:539554a0-6aac-490f-bc7d-d67893cff16b'
+  label: 'Locate your PCSP'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
