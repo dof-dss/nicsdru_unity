@@ -86,9 +86,8 @@
         "drupal/config_update": "^1.6",
         "drupal/console": "^1.9",
         "drupal/content_lock": "^2.2",
-        "drupal/cookie_content_blocker": "^1.7",
-        "drupal/core-composer-scaffold": "9.2.*",
-        "drupal/core-recommended": "9.2.*",
+        "drupal/core-composer-scaffold": "9.3.*",
+        "drupal/core-recommended": "9.3.*",
         "drupal/csp": "^1.15",
         "drupal/date_facet_drilldown": "2.x-dev",
         "drupal/diff": "^1.0",
@@ -187,7 +186,8 @@
             "drupal/core": {
                 "Prevent leftover fields from causing errors like 'Call to a member function getLabel() after enabling layout_builder'": "https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch",
                 "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch",
-                "Provide options to sanitize filenames (transliterate, lowercase, replace whitespace, etc)": "https://www.drupal.org/files/issues/2021-07-26/2492171-311.patch"
+                "Provide options to sanitize filenames (transliterate, lowercase, replace whitespace, etc)": "https://www.drupal.org/files/issues/2021-07-26/2492171-311.patch",
+                "Provide link to latest revision of moderated entity": "https://www.drupal.org/files/issues/2021-11-29/2906455-34.patch"
             },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
@@ -200,10 +200,6 @@
                 "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch",
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch",
                 "Fix ajax error when creating redirects": "https://www.drupal.org/files/issues/2020-12-14/validation-issue-3057250-29.patch"
-            },
-            "drupal/cookie_content_blocker": {
-                "Allow module to be installed on PHP8": "https://www.drupal.org/files/issues/2022-02-08/php8-3263071-2.patch",
-                "Disable XSS for tag settings to allow HTML output": "https://gist.githubusercontent.com/omahm/eb99bc8278b57798a7d82bf06c27b8d1/raw/d9d75e06300a102b072dd8166f82ec381f211b9d/cookie_content_blocker_disable_xss"
             },
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
