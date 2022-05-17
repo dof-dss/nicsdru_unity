@@ -220,7 +220,8 @@
                 "Allow disabling of logging": "https://git.drupalcode.org/project/fastly/-/merge_requests/6.patch"
             },
             "drupal/clientside_validation": {
-                "Cientside validation errors revert to being output as a label": "https://www.drupal.org/files/issues/2021-02-24/3110890-reroll-for-3.0.x.patch"
+                "core/jquery.once is required": "https://www.drupal.org/files/issues/2021-02-23/3200022-01.patch",
+                "Cientside validation errors revert to being output as a label in webform wizard pages with ajax enabled": "https://www.drupal.org/files/issues/2021-02-24/3110890-reroll-for-3.0.x.patch"
             }
         },
         "drupal-scaffold": {
