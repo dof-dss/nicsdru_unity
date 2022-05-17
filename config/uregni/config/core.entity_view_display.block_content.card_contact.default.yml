@@ -16,7 +16,7 @@ mode: default
 content:
   field_card_style:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
@@ -24,7 +24,7 @@ content:
     region: content
   field_telephone:
     weight: 0
-    label: above
+    label: hidden
     settings:
       vcard: true
     third_party_settings: {  }
