@@ -1,4 +1,4 @@
-uuid: 2a1e45a2-f248-40d8-abe8-4875d7bf545a
+uuid: 16640f49-fd2a-494d-bd82-985cc5cfa482
 langcode: en
 status: true
 dependencies:
@@ -282,21 +282,21 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        link_to_latest_revision:
-          id: link_to_latest_revision
-          table: node_revision
-          field: link_to_latest_revision
+        title_1:
+          id: title_1
+          table: node_field_data
+          field: title
           relationship: nid
           group_type: group
           admin_label: ''
-          label: 'Link to latest draft'
+          label: 'Latest draft'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
+            alter_text: true
+            text: 'View latest draft'
+            make_link: true
+            path: '/node/{{ nid }}/latest'
+            absolute: true
             external: false
             replace_spaces: false
             path_case: none
@@ -330,11 +330,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'View Latest Draft'
-          output_url_as_text: false
-          absolute: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           entity_type: node
-          plugin_id: link_to_latest_revision
+          entity_field: title
+          plugin_id: field
         type:
           id: type
           table: node_field_data

@@ -1,0 +1,30 @@
+uuid: 5b64deee-b41a-4f5b-82d0-c18c6d51a95e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:98c1e54a-7028-4066-bf5e-d9c0f0857a19'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: whatdopcspsdo
+theme: pcsps_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'block_content:98c1e54a-7028-4066-bf5e-d9c0f0857a19'
+settings:
+  id: 'block_content:98c1e54a-7028-4066-bf5e-d9c0f0857a19'
+  label: 'What do PCSPs do?'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

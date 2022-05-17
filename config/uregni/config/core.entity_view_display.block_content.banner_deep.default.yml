@@ -15,24 +15,24 @@ content:
   field_banner_image:
     type: entity_reference_entity_view
     weight: 1
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: banner_deep
       link: false
     third_party_settings: {  }
     region: content
   field_banner_image_overlay:
     type: entity_reference_entity_view
     weight: 2
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: banner_deep
       link: false
     third_party_settings: {  }
     region: content
   field_teaser:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
