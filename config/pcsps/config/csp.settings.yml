@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: g1xKHKD8msGv9RR5tnTxVhqTCkof96Cd4KF4mOLEntI
 report-only:
   enable: true
   directives:
@@ -18,6 +20,9 @@ report-only:
     frame-src:
       sources:
         - 'https://www.youtube.com'
+        - 'https://twitter.com'
+        - platform.twitter.com
+        - syndication.twitter.com
       base: self
     img-src:
       sources:
@@ -30,6 +35,11 @@ report-only:
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
+        - abs.twimg.com
+        - 'https://pbs.twimg.com'
+        - ton.twimg.com
+        - platform.twitter.com
+        - 'https://syndication.twitter.com'
       base: self
     manifest-src:
       base: self
@@ -37,6 +47,9 @@ report-only:
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
+        - 'https://cdn.syndication.twimg.com'
+        - api.twitter.com
+        - platform.twitter.com
       base: self
     script-src-attr:
       base: self
@@ -44,14 +57,25 @@ report-only:
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
+        - 'https://cdn.syndication.twimg.com'
+        - api.twitter.com
+        - platform.twitter.com
       base: self
     style-src:
+      sources:
+        - 'https://ton.twimg.com'
+        - platform.twitter.com
+      flags:
+        - unsafe-inline
       base: self
     style-src-attr:
       flags:
         - unsafe-inline
       base: self
     style-src-elem:
+      sources:
+        - 'https://ton.twimg.com'
+        - platform.twitter.com
       base: self
     block-all-mixed-content: true
   reporting:
@@ -105,5 +129,3 @@ enforce:
     block-all-mixed-content: true
   reporting:
     plugin: sitelog
-_core:
-  default_config_hash: g1xKHKD8msGv9RR5tnTxVhqTCkof96Cd4KF4mOLEntI
