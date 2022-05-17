@@ -129,7 +129,7 @@ jobs:
   # Nightly edge build
   edge_build:
     docker:
-      - image: circleci/php:7.4.15-apache-node-browsers
+      - image: circleci/php:8.0.13-apache-node-browsers
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
