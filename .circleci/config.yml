@@ -156,7 +156,7 @@ jobs:
           command: |
             # Need to re-build site theme with any Unity changes.
             # Download and configure node and npm.
-            sudo apt install libjpeg-dev automake
+            sudo apt install libjpeg-dev automake python
             git clone git@github.com:nvm-sh/nvm.git
             cd nvm
             chmod +x install.sh
@@ -166,7 +166,7 @@ jobs:
           command: |
             export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-            nvm install v14.17.5
+            nvm install v15.14.0
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
               if [[ -d ~/project/web/sites/${site}/themes/${site}_theme ]]; then
