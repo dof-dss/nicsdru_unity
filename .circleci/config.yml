@@ -161,7 +161,10 @@ jobs:
             cd nvm
             chmod +x install.sh
             ./install.sh
-            source ~/.bashrc
+      - run:
+          name: Get correct npm version and continue
+          command: |
+            #source ~/.bashrc
             nvm install v14.17.5
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
