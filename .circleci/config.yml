@@ -77,7 +77,7 @@ jobs:
   # Tests the integrity of the build, stores the results in a workspace for re-use in later jobs.
   build:
     docker:
-      - image: circleci/php:8.0.3-browsers
+      - image: cimq/php:8.0.13-browsers
     steps:
       - checkout_code
       - install_php_os_extensions
@@ -90,7 +90,7 @@ jobs:
   # Test for coding standards - will inherit the workspace/filesystem changes from build step, above.
   coding_standards:
     docker:
-      - image: circleci/php:8.0.3-browsers
+      - image: cimq/php:8.0.13-browsers
     environment:
       PROJECT_ROOT: "/home/circleci/project"
     steps:
@@ -111,7 +111,7 @@ jobs:
   # Test for deprecated code - will inherit the workspace/filesystem changes from build step, above.
   deprecated_code:
     docker:
-      - image: circleci/php:8.0.3-browsers
+      - image: cimq/php:8.0.13-browsers
     environment:
       PROJECT_ROOT: "/home/circleci/project"
     steps:
@@ -129,7 +129,7 @@ jobs:
   # Nightly edge build
   edge_build:
     docker:
-      - image: circleci/php:8.0.3-browsers
+      - image: cimq/php:8.0.13-browsers
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
@@ -180,7 +180,7 @@ jobs:
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
     docker:
-      - image: circleci/php:8.0.3-browsers
+      - image: cimq/php:8.0.13-browsers
     steps:
       - hosts_keyscan
       - checkout_code
