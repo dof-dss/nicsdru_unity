@@ -158,10 +158,9 @@ jobs:
             # Download and configure node and npm.
             sudo apt install libjpeg-dev automake
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh > install.sh
-            bash install.sh
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+            chmod +x install.sh
+            ./install.sh
+            source ~/.bashrc
             nvm install v14.17.5
             for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
             do
