@@ -253,7 +253,7 @@ jobs:
                 fi
               fi
             done
-
+# Temporarily run edge build.
 workflows:
   version: 2
   build-test-deploy:
