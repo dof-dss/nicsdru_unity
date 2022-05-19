@@ -259,6 +259,12 @@ workflows:
   build-test-deploy:
     jobs:
       - build
+      - coding_standards:
+          requires:
+            - build
+      - deprecated_code:
+          requires:
+            - build
       - edge_build:
           requires:
             - build
