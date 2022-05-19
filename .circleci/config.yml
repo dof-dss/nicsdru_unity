@@ -157,7 +157,8 @@ jobs:
             # Need to re-build site theme with any Unity changes.
             # Download and configure node and npm.
             sudo apt install libjpeg-dev automake
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh > install.sh
+            git clone git@github.com:nvm-sh/nvm.git
+            cd nvm
             chmod +x install.sh
             ./install.sh
             source ~/.bashrc
