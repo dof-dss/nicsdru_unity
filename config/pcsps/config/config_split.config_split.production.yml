@@ -5,11 +5,13 @@ dependencies: {  }
 id: production
 label: production
 description: 'Used for production site.'
+weight: 0
 folder: ../config/pcsps/production
 module: {  }
 theme: {  }
-blacklist: {  }
-graylist: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - pcsps_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0
