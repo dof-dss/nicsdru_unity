@@ -22,7 +22,6 @@ dependencies:
     - node.type.vacancy
     - workflows.workflow.nics_editorial_workflow
   module:
-    - block
     - block_content_permissions
     - content_moderation
     - contextual
@@ -68,7 +67,6 @@ permissions:
   - 'add scheduled transitions node vacancy'
   - 'add terms in site_topics'
   - 'add terms in themes'
-  - 'administer blocks'
   - 'administer book outlines'
   - 'administer main menu items'
   - 'administer redirects'
