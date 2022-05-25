@@ -8,7 +8,7 @@ It is hosted on platform.sh.
 
 Continuous Integration and Deployment services are provided by Circle CI.
 
-## Getting started
+## Getting started  
 
 We recommend Lando for local development. To get started, ensure you have the following installed:
 
