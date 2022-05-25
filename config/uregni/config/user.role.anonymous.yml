@@ -1,7 +1,13 @@
 uuid: 694f3727-1459-4267-9020-f0f52d61429b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - eu_cookie_compliance
+    - media
+    - search_api_autocomplete
+    - system
 _core:
   default_config_hash: ANs_BCu0eTATTz7Ioiu0g9kB3VoonHrWtzqrdvsKFGQ
 id: anonymous
