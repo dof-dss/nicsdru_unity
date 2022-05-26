@@ -1,7 +1,26 @@
 uuid: fe51fb43-b291-435a-b943-05a70cfd6d4e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.basic_page
+    - node.type.publication
+    - workflows.workflow.nics_editorial_workflow
+  module:
+    - content_moderation
+    - entity_browser
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
+    - node
+    - path
+    - system
+    - toolbar
 _core:
   default_config_hash: AyMCT1boGFkm3MNXLyv6ZV7yMdWLY-U3WQLhzDDkWGE
 id: author_user
