@@ -171,8 +171,9 @@
         border-bottom-color: $white;
 
         &:hover {
-          color: $brand-secondary;
+          color: $white;
           border-bottom-color: $white;
+          background-color: $link-hover;
         }
       }
     }
