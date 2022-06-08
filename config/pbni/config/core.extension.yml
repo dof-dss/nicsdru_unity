@@ -92,7 +92,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  pbni_breadcrumbs: 0
   rdf: 0
   redirect: 0
   redis: 0
@@ -114,6 +113,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
