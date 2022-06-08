@@ -66,7 +66,6 @@ module:
   layout_discovery: 0
   link: 0
   linkit: 0
-  mahinquiry_breadcrumbs: 0
   media: 0
   media_library: 0
   media_library_edit: 0
@@ -109,6 +108,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
