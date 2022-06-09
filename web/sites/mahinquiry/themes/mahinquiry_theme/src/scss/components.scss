@@ -150,7 +150,7 @@
       }
     }
 
-    .content {
+    #content #post-content .region-content .content {
       p {
         font-size: 2rem;
         font-weight: bold;
@@ -166,7 +166,16 @@
         }
       }
 
+      a {
+        color: $white;
+        border-bottom-color: $white;
 
+        &:hover {
+          color: $white;
+          border-bottom-color: $white;
+          background-color: $link-hover;
+        }
+      }
     }
   }
 
