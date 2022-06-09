@@ -1,4 +1,6 @@
-ldrenabled: 0
+_core:
+  default_config_hash: Stns4N_heHjcqmmOdCTdlFFr4Z3TaTg-5k81wqDzGAQ
+enabled: 0
 url: ''
 messages:
   default: '[site:name] is currently in maintenance. During this maintenance it is not possible to change site content (like comments, pages and users).'
@@ -19,5 +21,4 @@ forms:
   additional:
     edit: {  }
     view: {  }
-_core:
-  default_config_hash: Stns4N_heHjcqmmOdCTdlFFr4Z3TaTg-5k81wqDzGAQ
+ldrenabled: 0
