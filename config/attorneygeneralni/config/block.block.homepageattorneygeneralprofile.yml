@@ -18,13 +18,13 @@ plugin: 'block_content:be7d98a4-718a-4831-b9fb-158b904898ee'
 settings:
   id: 'block_content:be7d98a4-718a-4831-b9fb-158b904898ee'
   label: 'Homepage Attorney General profile'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'
