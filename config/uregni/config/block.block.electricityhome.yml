@@ -17,8 +17,8 @@ plugin: 'block_content:018e2ba1-0d09-4452-b2ee-b2eb97638d93'
 settings:
   id: 'block_content:018e2ba1-0d09-4452-b2ee-b2eb97638d93'
   label: Electricity
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

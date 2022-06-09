@@ -97,10 +97,6 @@ filters:
     weight: -46
     settings:
       default_view_mode: embed
-      allowed_media_types:
-        audio: audio
-        image: image
-        remote_video: remote_video
       allowed_view_modes:
         embed: embed
         landscape_float: landscape_float
@@ -110,6 +106,10 @@ filters:
         portrait_float: portrait_float
         portrait_float_xp: portrait_float_xp
         portrait_full: portrait_full
+      allowed_media_types:
+        audio: audio
+        image: image
+        remote_video: remote_video
   noreferrer:
     id: noreferrer
     provider: noreferrer
@@ -148,3 +148,11 @@ filters:
     weight: -47
     settings:
       replacement_text: 'Click here to view the video content'
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

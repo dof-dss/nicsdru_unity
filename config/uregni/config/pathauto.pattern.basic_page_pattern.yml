@@ -11,14 +11,14 @@ pattern: '[node:title]'
 selection_criteria:
   7bf6f2ea-8059-406a-8239-29c132d37229:
     id: node_type
+    negate: false
+    uuid: 7bf6f2ea-8059-406a-8239-29c132d37229
+    context_mapping:
+      node: node
     bundles:
       page: page
       vacancy: vacancy
       webform: webform
-    negate: false
-    context_mapping:
-      node: node
-    uuid: 7bf6f2ea-8059-406a-8239-29c132d37229
 selection_logic: and
 weight: -5
 relationships: {  }

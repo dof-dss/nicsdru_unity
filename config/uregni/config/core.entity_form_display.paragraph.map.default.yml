@@ -13,62 +13,63 @@ bundle: map
 mode: default
 content:
   field_location:
+    type: geolocation_googlegeocoder
     weight: 0
+    region: content
     settings:
+      auto_client_location: ''
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
+      hide_textfield_form: false
       centre:
         client_location:
           enable: true
           weight: 0
           map_center_id: client_location
         fixed_boundaries:
+          enable: false
+          weight: 0
           settings:
-            north: ''
-            east: ''
             south: ''
             west: ''
-          weight: 0
-          enable: false
+            north: ''
+            east: ''
           map_center_id: fixed_boundaries
         fit_bounds:
           enable: true
-          settings:
-            min_zoom: null
-            reset_zoom: false
           weight: 0
+          settings:
+            reset_zoom: false
+            min_zoom: null
           map_center_id: fit_bounds
         fixed_value:
+          enable: false
+          weight: 0
           settings:
+            location_option_id: fixed_value
             latitude: null
             longitude: null
-            location_option_id: fixed_value
-          weight: 0
-          enable: false
           map_center_id: location_plugins
         ipstack:
-          settings:
-            access_key: ''
-            location_option_id: ipstack
-          weight: 0
           enable: false
+          weight: 0
+          settings:
+            location_option_id: ipstack
+            access_key: ''
           map_center_id: location_plugins
         freeogeoip:
-          weight: 0
           enable: false
-          map_center_id: location_plugins
+          weight: 0
           settings:
             location_option_id: freeogeoip
+          map_center_id: location_plugins
       google_map_settings:
-        height: 400px
-        width: 100%
-        type: ROADMAP
-        zoom: 10
-        maxZoom: 18
-        minZoom: 0
-        gestureHandling: auto
         map_features:
           marker_infobubble:
+            weight: 0
             settings:
               close_other: 1
+              close_button: 0
               close_button_src: ''
               shadow_style: 0
               padding: 10
@@ -83,9 +84,7 @@ content:
               arrow_style: 2
               arrow_position: 30
               arrow_size: 10
-              close_button: 0
             enabled: false
-            weight: 0
           control_streetview:
             weight: -10
             settings:
@@ -93,12 +92,12 @@ content:
               behavior: default
             enabled: false
           control_zoom:
-            enabled: true
             weight: -9
             settings:
               position: RIGHT_CENTER
               behavior: default
               style: LARGE
+            enabled: true
           map_restriction:
             weight: -8
             settings:
@@ -118,11 +117,11 @@ content:
             settings:
               image_path: ''
               styles: ''
-              zoom_on_click: true
-              grid_size: 60
-              minimum_cluster_size: 2
               max_zoom: 15
+              minimum_cluster_size: 2
+              zoom_on_click: true
               average_center: false
+              grid_size: 60
             enabled: false
           marker_icon:
             weight: -5
@@ -145,13 +144,13 @@ content:
                 height: null
             enabled: false
           marker_infowindow:
-            enabled: true
             weight: -4
             settings:
               info_window_solitary: true
               disable_auto_pan: true
-              max_width: null
               info_auto_display: false
+              max_width: null
+            enabled: true
           control_recenter:
             weight: -3
             settings:
@@ -185,7 +184,9 @@ content:
             settings:
               spiderfiable_marker_path: /modules/contrib/geolocation/modules/geolocation_google_maps/images/marker-plus.svg
               markersWontMove: true
+              markersWontHide: false
               keepSpiderfied: true
+              ignoreMapClick: false
               nearbyDistance: 20
               circleSpiralSwitchover: 9
               circleFootSeparation: 23
@@ -193,8 +194,6 @@ content:
               spiralLengthStart: 11
               spiralLengthFactor: 4
               legWeight: 1.5
-              markersWontHide: false
-              ignoreMapClick: false
             enabled: false
           google_maps_layer_traffic:
             weight: 3
@@ -206,12 +205,12 @@ content:
               behavior: default
             enabled: false
           control_maptype:
-            enabled: true
             weight: 5
             settings:
               position: RIGHT_BOTTOM
               behavior: default
               style: DEFAULT
+            enabled: true
           context_popup:
             weight: 6
             settings:
@@ -229,10 +228,10 @@ content:
             weight: 9
             enabled: false
           control_locate:
-            enabled: true
             weight: 10
             settings:
               position: TOP_LEFT
+            enabled: true
           map_disable_poi:
             weight: 10
             enabled: false
@@ -242,14 +241,14 @@ content:
           drawing:
             weight: 10
             settings:
+              polyline: false
               strokeColor: '#FF0000'
               strokeOpacity: '0.8'
               strokeWeight: '2'
-              fillColor: '#FF0000'
-              fillOpacity: '0.35'
-              polyline: false
               geodesic: false
               polygon: false
+              fillColor: '#FF0000'
+              fillOpacity: '0.35'
             enabled: false
           control_fullscreen:
             weight: 10
@@ -258,7 +257,6 @@ content:
               behavior: default
             enabled: false
           control_geocoder:
-            enabled: true
             weight: 10
             settings:
               position: TOP_LEFT
@@ -269,15 +267,16 @@ content:
                 autocomplete_min_length: 3
                 component_restrictions:
                   route: ''
-                  locality: ''
-                  administrative_area: ''
-                  postal_code: ''
                   country: ''
+                  administrative_area: ''
+                  locality: ''
+                  postal_code: ''
                 boundary_restriction:
                   south: ''
                   west: ''
                   north: ''
                   east: ''
+            enabled: true
           control_loading_indicator:
             weight: 10
             settings:
@@ -287,13 +286,14 @@ content:
           google_maps_layer_transit:
             weight: 10
             enabled: false
-      auto_client_location_marker: '0'
-      allow_override_map_settings: 0
-      hide_textfield_form: false
-      auto_client_location: ''
+        type: ROADMAP
+        zoom: 10
+        minZoom: 0
+        maxZoom: 18
+        height: 400px
+        width: 100%
+        gestureHandling: auto
     third_party_settings: {  }
-    type: geolocation_googlegeocoder
-    region: content
 hidden:
   created: true
   status: true
