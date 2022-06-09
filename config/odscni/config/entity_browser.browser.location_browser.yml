@@ -18,12 +18,12 @@ widget_selector: single
 widget_selector_configuration: {  }
 widgets:
   fe37bf6c-5dc1-4c84-a511-da234c134517:
+    id: entity_form
+    uuid: fe37bf6c-5dc1-4c84-a511-da234c134517
+    label: 'New location'
+    weight: 1
     settings:
+      submit_text: Save
       entity_type: paragraph
       bundle: map
       form_mode: default
-      submit_text: Save
-    uuid: fe37bf6c-5dc1-4c84-a511-da234c134517
-    weight: 1
-    label: 'New location'
-    id: entity_form
