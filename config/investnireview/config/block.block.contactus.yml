@@ -18,8 +18,8 @@ plugin: 'block_content:01c32ba8-60ac-4599-9c9a-f4a9082778c1'
 settings:
   id: 'block_content:01c32ba8-60ac-4599-9c9a-f4a9082778c1'
   label: 'Contact us'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
