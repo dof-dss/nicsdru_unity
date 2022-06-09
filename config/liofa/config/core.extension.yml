@@ -13,7 +13,6 @@ module:
   clientside_validation_jquery: 0
   config: 0
   config_filter: 0
-  config_ignore: 0
   config_split: 0
   contact: 0
   content_moderation: 0
@@ -37,12 +36,10 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  flag: 0
   geolocation: 0
   handy_cache_tags: 0
   help: 0
   history: 0
-  http_cache_control: 0
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
@@ -69,14 +66,12 @@ module:
   origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_toc: 0
-  origins_translations: 0
   origins_workflow: 0
   page_cache: 0
   path: 0
   path_alias: 0
   rdf: 0
   redirect: 0
-  redis: 0
   responsive_image: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
@@ -105,7 +100,6 @@ module:
   pathauto: 1
   views: 10
   nicsdru_unity_profile: 1000
-  readonlymode: 9999
 theme:
   stark: 0
   stable: 0
