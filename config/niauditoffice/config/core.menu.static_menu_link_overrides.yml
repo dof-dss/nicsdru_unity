@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
 definitions:
   contact__site_page:
     menu_name: footer
@@ -5,5 +7,3 @@ definitions:
     weight: 0
     expanded: false
     enabled: false
-_core:
-  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
