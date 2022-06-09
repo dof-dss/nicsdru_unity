@@ -19,8 +19,8 @@ plugin: 'facet_block:evidence_date'
 settings:
   id: 'facet_block:evidence_date'
   label: Date
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: date_2
 visibility:
   condition_group:
@@ -29,5 +29,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n"
     negate: false
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*\r\n"

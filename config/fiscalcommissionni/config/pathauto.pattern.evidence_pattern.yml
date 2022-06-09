@@ -11,12 +11,12 @@ pattern: 'evidence/[node:title]'
 selection_criteria:
   c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc:
     id: node_type
-    bundles:
-      evidence: evidence
     negate: false
+    uuid: c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc
     context_mapping:
       node: node
-    uuid: c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc
+    bundles:
+      evidence: evidence
 selection_logic: and
 weight: -5
 relationships: {  }
