@@ -18,13 +18,13 @@ plugin: 'block_content:539554a0-6aac-490f-bc7d-d67893cff16b'
 settings:
   id: 'block_content:539554a0-6aac-490f-bc7d-d67893cff16b'
   label: 'Locate your PCSP'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

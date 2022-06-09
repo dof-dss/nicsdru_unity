@@ -18,13 +18,13 @@ plugin: 'block_content:e57da459-cc29-4aa9-a36e-99b0b13d604c'
 settings:
   id: 'block_content:e57da459-cc29-4aa9-a36e-99b0b13d604c'
   label: Contents
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'
