@@ -15,10 +15,10 @@ bundle: feature
 mode: teaser
 content:
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   field_image: true
