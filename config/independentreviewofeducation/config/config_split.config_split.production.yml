@@ -5,6 +5,7 @@ dependencies: {  }
 id: production
 label: production
 description: 'Used for the production site only.'
+weight: 0
 folder: ../config/independentreviewofeducation/production
 module:
   fastly: 0
@@ -15,4 +16,3 @@ graylist:
   - independentreviewofeducation_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

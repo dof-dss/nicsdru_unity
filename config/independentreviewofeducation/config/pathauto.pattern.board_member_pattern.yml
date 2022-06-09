@@ -11,12 +11,12 @@ pattern: 'board-member/[node:title]'
 selection_criteria:
   680bf300-0f7d-4f0e-8add-458658fc6fbe:
     id: node_type
-    bundles:
-      board_member: board_member
     negate: false
+    uuid: 680bf300-0f7d-4f0e-8add-458658fc6fbe
     context_mapping:
       node: node
-    uuid: 680bf300-0f7d-4f0e-8add-458658fc6fbe
+    bundles:
+      board_member: board_member
 selection_logic: and
 weight: -5
 relationships: {  }

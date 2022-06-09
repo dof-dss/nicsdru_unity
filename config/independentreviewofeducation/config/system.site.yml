@@ -1,3 +1,7 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: a401ac91-9830-4ab3-942c-8f958bb0b8ed
 name: 'Independent Review of Education'
 mail: independentreviewofeducation@test.com
 slogan: ''
@@ -7,10 +11,6 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: a401ac91-9830-4ab3-942c-8f958bb0b8ed
 frontpage_title: 'Welcome to the Independent Review of Education'
 frontpage_show_title: 0
