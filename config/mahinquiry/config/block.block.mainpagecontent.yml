@@ -1,21 +1,20 @@
 uuid: 5ec5a52b-7355-47d4-9266-5f435024dc9c
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
   theme:
     - mahinquiry_theme
 id: mainpagecontent
-theme: mahinquiry_theme
-    - mahinquiry_theme
-region: content
+theme: 'mahinquiry_theme - mahinquiry_theme'
+region: ''
 weight: -6
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Main page content'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }
