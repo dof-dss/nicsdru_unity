@@ -16,19 +16,20 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_a:
       children:
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 1
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -36,26 +37,25 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
 id: node.page.diff
 targetEntityType: node
 bundle: page
 mode: diff
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 3
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   content_moderation_control: true
   field_next_audit_due: true
