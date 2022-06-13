@@ -2,12 +2,12 @@ uuid: 2e08eec0-cd85-4c7b-8824-96bc7b38bb0b
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webform_node
   module:
     - menu_ui
     - origins_toc
+  enforced:
+    module:
+      - webform_node
 third_party_settings:
   menu_ui:
     available_menus:
