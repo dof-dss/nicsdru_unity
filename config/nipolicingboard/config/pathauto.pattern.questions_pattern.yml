@@ -11,12 +11,12 @@ pattern: 'questions/[node:title]'
 selection_criteria:
   21f6ba28-08c7-4da8-8250-18d447d0fd7b:
     id: node_type
-    bundles:
-      question_page: question_page
     negate: false
+    uuid: 21f6ba28-08c7-4da8-8250-18d447d0fd7b
     context_mapping:
       node: node
-    uuid: 21f6ba28-08c7-4da8-8250-18d447d0fd7b
+    bundles:
+      question_page: question_page
 selection_logic: and
 weight: -5
 relationships: {  }

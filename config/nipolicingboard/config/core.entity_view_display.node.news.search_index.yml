@@ -16,8 +16,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: N-zm1nCnhgYwXANGav75TCg-_kvNUUbT--KKS8PLKgM
 id: node.news.search_index
@@ -26,22 +26,22 @@ bundle: news
 mode: search_index
 content:
   field_published_date:
-    label: hidden
-    weight: 0
     type: datetime_default
+    label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 0
     region: content
   field_teaser:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   content_moderation_control: true

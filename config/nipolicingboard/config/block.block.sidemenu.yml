@@ -18,18 +18,18 @@ plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'In this section'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       publication_page: publication_page
       question_page: question_page
       staff_member: staff_member
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'

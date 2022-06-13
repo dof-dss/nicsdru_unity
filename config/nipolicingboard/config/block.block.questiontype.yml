@@ -18,11 +18,11 @@ plugin: 'facet_block:question_type'
 settings:
   id: 'facet_block:question_type'
   label: Type
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: questiontype
 visibility:
   request_path:
     id: request_path
-    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
     negate: false
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
