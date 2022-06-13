@@ -19,8 +19,8 @@ plugin: 'block_content:13cd68d5-6c3a-4c54-b6ba-cf94c4f5f1cf'
 settings:
   id: 'block_content:13cd68d5-6c3a-4c54-b6ba-cf94c4f5f1cf'
   label: Chair
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -31,5 +31,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'
