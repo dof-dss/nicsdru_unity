@@ -1,3 +1,7 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 111659a8-d725-4e3b-a74b-94b061335de4
 name: 'Fiscal Commission NI'
 mail: admin@fiscalcommissionni.org
 slogan: ''
@@ -7,10 +11,6 @@ page:
   front: /node/6
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 111659a8-d725-4e3b-a74b-94b061335de4
 frontpage_title: 'Welcome to the Independent Fiscal Commission for Northern Ireland'
 frontpage_show_title: 1
