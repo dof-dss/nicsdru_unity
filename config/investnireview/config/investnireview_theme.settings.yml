@@ -7,8 +7,8 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
-ga_tracking_disabled: 0
-ga_tracking_disabled_eu: 1
+ga_tracking_disabled: 1
+ga_tracking_disabled_eu: 0
 twitter_profile_url: 'https://twitter.com/INIReview22'
 facebook_profile_url: ''
 linkedin_profile_url: 'https://www.linkedin.com/in/independent-review-of-invest-ni-362901236/'
