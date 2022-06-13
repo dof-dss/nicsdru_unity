@@ -19,8 +19,8 @@ plugin: 'facet_block:published_date'
 settings:
   id: 'facet_block:published_date'
   label: 'Published date'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: publisheddate
 visibility:
   condition_group:
@@ -29,5 +29,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/news\r\n/news/date/*"
     negate: false
+    pages: "/news\r\n/news/date/*"

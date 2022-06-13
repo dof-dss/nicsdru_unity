@@ -17,8 +17,8 @@ plugin: 'block_content:32632464-58d8-465c-b514-9ab4ddfd0285'
 settings:
   id: 'block_content:32632464-58d8-465c-b514-9ab4ddfd0285'
   label: 'About us'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

@@ -17,8 +17,8 @@ plugin: 'block_content:cafa37f5-b7b3-4dad-ab94-3b73b6df6e27'
 settings:
   id: 'block_content:cafa37f5-b7b3-4dad-ab94-3b73b6df6e27'
   label: Complaints
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
