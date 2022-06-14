@@ -17,8 +17,8 @@ plugin: 'block_content:141fe351-5b7c-49cf-8c51-889b817c7d7c'
 settings:
   id: 'block_content:141fe351-5b7c-49cf-8c51-889b817c7d7c'
   label: 'Twitter block'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

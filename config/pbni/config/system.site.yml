@@ -1,3 +1,7 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 5ee22ef9-824e-47b5-987a-77359ab97775
 name: 'Probation Board for Northern Ireland'
 mail: test@test.com
 slogan: ''
@@ -7,10 +11,6 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: 5ee22ef9-824e-47b5-987a-77359ab97775
 frontpage_title: 'Welcome to Drupal the Probation Board for Northern Ireland'
 frontpage_show_title: 0
