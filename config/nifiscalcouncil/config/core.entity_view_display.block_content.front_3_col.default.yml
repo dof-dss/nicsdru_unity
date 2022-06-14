@@ -16,23 +16,23 @@ bundle: front_3_col
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: unity_3_col_images
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_link:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -41,7 +41,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
 hidden:
   langcode: true

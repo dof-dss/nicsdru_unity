@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: uregni
 name: nipb
-label: NIPB
 weight: 0
+label: NIPB
 group: ''
 skin: default
 breakpoints: 1
@@ -18,10 +18,10 @@ options:
     accessibility: true
     adaptiveHeight: false
     autoplay: true
-    autoplaySpeed: 3000
     pauseOnHover: true
     pauseOnDotsHover: true
     pauseOnFocus: true
+    autoplaySpeed: 3000
     arrows: true
     prevArrow: Previous
     nextArrow: Next
@@ -72,10 +72,10 @@ options:
         settings:
           adaptiveHeight: false
           autoplay: true
-          autoplaySpeed: 3000
           pauseOnHover: true
           pauseOnDotsHover: true
           pauseOnFocus: true
+          autoplaySpeed: 3000
           arrows: false
           centerMode: false
           centerPadding: 50px

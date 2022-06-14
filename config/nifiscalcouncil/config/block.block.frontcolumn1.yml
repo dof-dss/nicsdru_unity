@@ -18,13 +18,13 @@ plugin: 'block_content:b2997871-2795-409d-a89f-c77c4f2f3c78'
 settings:
   id: 'block_content:b2997871-2795-409d-a89f-c77c4f2f3c78'
   label: 'Front Column 1'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

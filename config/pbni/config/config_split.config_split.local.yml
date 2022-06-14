@@ -5,6 +5,7 @@ dependencies: {  }
 id: local
 label: local
 description: "Local development split. \r\nEnables debugging and development modules"
+weight: 0
 folder: ../config/pbni/local
 module:
   dblog: 0
@@ -21,4 +22,3 @@ blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

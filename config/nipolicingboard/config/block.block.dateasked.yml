@@ -18,11 +18,11 @@ plugin: 'facet_block:questions_date'
 settings:
   id: 'facet_block:questions_date'
   label: Date
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: dateasked
 visibility:
   request_path:
     id: request_path
-    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"
     negate: false
+    pages: "/questions\r\n/questions/type/*\r\n/questions/date/*\r\n/questions/committee/*"

@@ -22,29 +22,29 @@ mode: teaser
 content:
   field_photo:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: unity_3_col_images
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_published_date:
-    label: inline
-    weight: 2
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 2
     region: content
   field_teaser:
-    label: hidden
-    weight: 3
     type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   body: true
