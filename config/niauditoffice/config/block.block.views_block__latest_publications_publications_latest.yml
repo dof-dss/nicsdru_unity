@@ -17,8 +17,8 @@ plugin: 'views_block:latest_publications-publications_latest'
 settings:
   id: 'views_block:latest_publications-publications_latest'
   label: 'Recent reports'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Recent reports'
   items_per_page: none
 visibility: {  }

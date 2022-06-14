@@ -4,24 +4,24 @@ status: true
 dependencies:
   module:
     - node
-id: default
 label: Default
+id: default
 description: ''
 matchers:
   8250b0de-30d1-4f86-82cc-d18dba7b3241:
-    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     id: 'entity:node'
-    weight: 0
+    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     settings:
-      result_description: ''
+      metadata: ''
       bundles: {  }
       group_by_bundle: true
-      include_unpublished: false
-      metadata: ''
       substitution_type: canonical
       limit: 100
-  dd2be60e-a906-4f38-a26a-aea43a2a3df5:
-    uuid: dd2be60e-a906-4f38-a26a-aea43a2a3df5
-    id: email
+      include_unpublished: false
+      result_description: ''
     weight: 0
+  dd2be60e-a906-4f38-a26a-aea43a2a3df5:
+    id: email
+    uuid: dd2be60e-a906-4f38-a26a-aea43a2a3df5
     settings: {  }
+    weight: 0

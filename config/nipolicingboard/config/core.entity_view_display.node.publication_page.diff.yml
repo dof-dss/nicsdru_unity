@@ -20,21 +20,22 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_addi:
       children:
         - field_publication_image
         - field_pub_type
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 3
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -42,60 +43,59 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
 id: node.publication_page.diff
 targetEntityType: node
 bundle: publication_page
 mode: diff
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    weight: 2
-    region: content
     label: inline
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 6
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: content
   field_pub_type:
     type: entity_reference_label
-    weight: 5
-    region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_publication_date:
-    label: inline
-    weight: 0
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 0
     region: content
   field_publication_image:
     type: entity_reference_entity_view
-    weight: 4
     label: inline
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   content_moderation_control: true

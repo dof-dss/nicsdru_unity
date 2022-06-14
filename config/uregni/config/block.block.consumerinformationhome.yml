@@ -18,14 +18,14 @@ plugin: 'block_content:a07ad254-b480-4b6f-a6a5-8bbfe86f83e4'
 settings:
   id: 'block_content:a07ad254-b480-4b6f-a6a5-8bbfe86f83e4'
   label: 'Consumer Information : Home'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

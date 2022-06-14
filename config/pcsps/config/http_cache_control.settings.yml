@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: Gte2C0a61n4X074GDAMPexe0uVAopKhjfsUmED2nu5s
 cache:
   http:
     s_maxage: 0
@@ -11,5 +13,3 @@ cache:
   surrogate:
     maxage: 86400
     nostore: null
-_core:
-  default_config_hash: Gte2C0a61n4X074GDAMPexe0uVAopKhjfsUmED2nu5s

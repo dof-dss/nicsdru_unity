@@ -18,8 +18,8 @@ plugin: 'block_content:832e1e63-d013-4245-8de7-78ebf653b236'
 settings:
   id: 'block_content:832e1e63-d013-4245-8de7-78ebf653b236'
   label: 'Footer logo'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -27,5 +27,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
     context_mapping: {  }
+    block_visibility_group: ''

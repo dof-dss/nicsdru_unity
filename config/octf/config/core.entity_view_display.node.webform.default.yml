@@ -19,19 +19,19 @@ bundle: webform
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   webform:
-    weight: 1
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true

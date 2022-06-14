@@ -9,19 +9,6 @@ dependencies:
     - search_api
 id: publications_summary
 name: 'Publications summary'
-facets:
-  publication_type:
-    checked: true
-    label: 'Publication type'
-    separator: ', '
-    weight: 0
-    show_count: false
-  published_date_publications:
-    checked: true
-    label: 'Published date'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
 processor_configs:
   hide_when_not_rendered:
@@ -29,3 +16,16 @@ processor_configs:
     weights:
       build: '45'
     settings: {  }
+facets:
+  publication_type:
+    checked: true
+    label: 'Publication type'
+    separator: ', '
+    show_count: false
+    weight: 0
+  published_date_publications:
+    checked: true
+    label: 'Published date'
+    separator: ', '
+    show_count: false
+    weight: 0

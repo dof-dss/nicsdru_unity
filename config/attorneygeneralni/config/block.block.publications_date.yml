@@ -18,11 +18,11 @@ plugin: 'facet_block:published_date_publications'
 settings:
   id: 'facet_block:published_date_publications'
   label: Date
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: publications_date
 visibility:
   request_path:
     id: request_path
-    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"
     negate: false
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"

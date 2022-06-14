@@ -9,13 +9,6 @@ dependencies:
     - search_api
 id: news_summary
 name: 'News summary'
-facets:
-  news_date_facet:
-    checked: true
-    label: Date
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__news_search__news_page_search'
 processor_configs:
   hide_when_not_rendered:
@@ -23,3 +16,10 @@ processor_configs:
     weights:
       build: '45'
     settings: {  }
+facets:
+  news_date_facet:
+    checked: true
+    label: Date
+    separator: ', '
+    show_count: false
+    weight: 0

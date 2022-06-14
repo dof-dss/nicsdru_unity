@@ -18,20 +18,21 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_additional_content_details:
       children:
         - field_current_member
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 3
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -39,53 +40,52 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
 id: node.staff_member.diff
 targetEntityType: node
 bundle: staff_member
 mode: diff
 content:
   body:
-    label: hidden
-    weight: 2
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_current_member:
     type: boolean
-    weight: 4
-    region: content
     label: inline
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_member_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: portrait_float
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_member_role:
-    label: hidden
-    weight: 1
     type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 5
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
 hidden:
   content_moderation_control: true
   langcode: true

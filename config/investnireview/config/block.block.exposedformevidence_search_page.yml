@@ -19,8 +19,8 @@ plugin: 'views_exposed_filter_block:evidence_search-evidence_search_page'
 settings:
   id: 'views_exposed_filter_block:evidence_search-evidence_search_page'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
 visibility:
   condition_group:
@@ -29,5 +29,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*"
     negate: false
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*"

@@ -19,19 +19,19 @@ plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'Sidebar navigation'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
     context_mapping: {  }
+    pages: '<front>'
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: sidebar_menu
     context_mapping: {  }
+    block_visibility_group: sidebar_menu

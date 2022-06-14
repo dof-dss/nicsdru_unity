@@ -18,22 +18,22 @@ bundle: basic_page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
+  toc_display:
     settings: {  }
     third_party_settings: {  }
-  toc_display:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_meta_tags: true
