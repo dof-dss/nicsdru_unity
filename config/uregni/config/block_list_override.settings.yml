@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: G8QQmvYdIX4fGt1SxVZIFa0KjWFS4FbLlNlt6N19qIM
 system_match: null
 system_prefix: null
 system_regex: null
@@ -6,5 +8,3 @@ layout_match: null
 layout_prefix: null
 layout_regex: null
 layout_negate: false
-_core:
-  default_config_hash: G8QQmvYdIX4fGt1SxVZIFa0KjWFS4FbLlNlt6N19qIM

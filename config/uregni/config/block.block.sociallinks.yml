@@ -18,8 +18,8 @@ plugin: 'block_content:a8acec22-29a6-41f8-b6e1-c8c4eaf4f412'
 settings:
   id: 'block_content:a8acec22-29a6-41f8-b6e1-c8c4eaf4f412'
   label: 'Social links'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

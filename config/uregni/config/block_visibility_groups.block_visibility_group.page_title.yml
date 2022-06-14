@@ -11,12 +11,16 @@ logic: or
 conditions:
   15677c91-2f25-4ed1-a6a6-5c3d6f5d257b:
     id: request_path
-    pages: /job-opportunities
     negate: false
-    context_mapping: {  }
     uuid: 15677c91-2f25-4ed1-a6a6-5c3d6f5d257b
+    context_mapping: {  }
+    pages: /job-opportunities
   e3b67794-3a12-4568-8ce8-450aac319d55:
     id: 'entity_bundle:node'
+    negate: false
+    uuid: e3b67794-3a12-4568-8ce8-450aac319d55
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       consultation: consultation
       news: news
@@ -24,8 +28,4 @@ conditions:
       staff_member: staff_member
       vacancy: vacancy
       webform: webform
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    uuid: e3b67794-3a12-4568-8ce8-450aac319d55
 allow_other_conditions: true

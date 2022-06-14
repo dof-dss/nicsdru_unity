@@ -17,8 +17,8 @@ plugin: 'block_content:51aa0f08-d0bc-4780-a758-fad650f4d709'
 settings:
   id: 'block_content:51aa0f08-d0bc-4780-a758-fad650f4d709'
   label: Gas
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

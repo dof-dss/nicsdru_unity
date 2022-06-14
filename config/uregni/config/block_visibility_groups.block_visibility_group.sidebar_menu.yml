@@ -11,16 +11,16 @@ logic: or
 conditions:
   7ba2c93f-1dc7-46be-ab57-dfc30ae9642c:
     id: 'entity_bundle:node'
-    bundles:
-      page: page
     negate: false
+    uuid: 7ba2c93f-1dc7-46be-ab57-dfc30ae9642c
     context_mapping:
       node: '@node.node_route_context:node'
-    uuid: 7ba2c93f-1dc7-46be-ab57-dfc30ae9642c
+    bundles:
+      page: page
   7f572807-ef39-48cb-a0d4-b3d51127a724:
     id: request_path
-    pages: /job-opportunities
     negate: false
-    context_mapping: {  }
     uuid: 7f572807-ef39-48cb-a0d4-b3d51127a724
+    context_mapping: {  }
+    pages: /job-opportunities
 allow_other_conditions: true
