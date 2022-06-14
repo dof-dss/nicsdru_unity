@@ -11,12 +11,12 @@ pattern: 'news-centre/[node:title]'
 selection_criteria:
   30c2be7a-04c6-45bc-af9d-0ba983d844e3:
     id: node_type
-    bundles:
-      news: news
     negate: false
+    uuid: 30c2be7a-04c6-45bc-af9d-0ba983d844e3
     context_mapping:
       node: node
-    uuid: 30c2be7a-04c6-45bc-af9d-0ba983d844e3
+    bundles:
+      news: news
 selection_logic: and
 weight: -5
 relationships: {  }

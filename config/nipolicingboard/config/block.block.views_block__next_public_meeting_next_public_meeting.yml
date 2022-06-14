@@ -17,8 +17,8 @@ plugin: 'views_block:next_public_meeting-next_public_meeting'
 settings:
   id: 'views_block:next_public_meeting-next_public_meeting'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

@@ -13,15 +13,17 @@ bundle: map
 mode: default
 content:
   field_location:
+    type: geolocation_googlegeocoder
     weight: 0
+    region: content
     settings:
-      centre:
-        fit_bounds:
-          enable: true
       auto_client_location: ''
       auto_client_location_marker: ''
       allow_override_map_settings: 0
       hide_textfield_form: false
+      centre:
+        fit_bounds:
+          enable: true
       google_map_settings:
         map_features:
           marker_infowindow:
@@ -33,20 +35,18 @@ content:
           control_maptype:
             enabled: true
           control_geocoder:
-            enabled: true
             weight: -100
+            enabled: true
           control_recenter:
             enabled: true
         type: ROADMAP
         zoom: 10
-        height: 400px
-        width: 100%
         minZoom: 0
         maxZoom: 20
+        height: 400px
+        width: 100%
         gestureHandling: auto
     third_party_settings: {  }
-    type: geolocation_googlegeocoder
-    region: content
 hidden:
   created: true
   status: true
