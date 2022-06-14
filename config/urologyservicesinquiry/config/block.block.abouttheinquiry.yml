@@ -18,13 +18,13 @@ plugin: 'block_content:1e99ba1c-48c4-4b30-a65a-9564ab4dfacb'
 settings:
   id: 'block_content:1e99ba1c-48c4-4b30-a65a-9564ab4dfacb'
   label: 'About the inquiry'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

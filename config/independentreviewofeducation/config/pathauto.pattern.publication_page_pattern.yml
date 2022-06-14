@@ -11,12 +11,12 @@ pattern: 'key-documents/[node:title]'
 selection_criteria:
   806ff74e-72aa-46e8-be06-a57886bf926c:
     id: node_type
-    bundles:
-      publication: publication
     negate: false
+    uuid: 806ff74e-72aa-46e8-be06-a57886bf926c
     context_mapping:
       node: node
-    uuid: 806ff74e-72aa-46e8-be06-a57886bf926c
+    bundles:
+      publication: publication
 selection_logic: and
 weight: -5
 relationships: {  }

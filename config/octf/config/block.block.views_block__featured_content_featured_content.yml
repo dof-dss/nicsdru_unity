@@ -17,8 +17,8 @@ plugin: 'views_block:featured_content-featured_content'
 settings:
   id: 'views_block:featured_content-featured_content'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: '3'
 visibility: {  }

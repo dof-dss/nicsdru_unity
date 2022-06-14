@@ -1,3 +1,7 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: c3db4695-813b-48b7-a28d-881c1e1e35a6
 name: 'Office of the Discretionary Support Commissioner'
 mail: odsc@test.com
 slogan: ''
@@ -7,10 +11,6 @@ page:
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
-uuid: c3db4695-813b-48b7-a28d-881c1e1e35a6
 frontpage_title: 'The Office of the Discretionary Support Commissioner'
 frontpage_show_title: 1

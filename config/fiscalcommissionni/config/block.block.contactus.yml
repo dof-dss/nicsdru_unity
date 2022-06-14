@@ -18,8 +18,8 @@ plugin: 'block_content:743164f5-75d6-441e-b6c1-dcd3ccb8c322'
 settings:
   id: 'block_content:743164f5-75d6-441e-b6c1-dcd3ccb8c322'
   label: 'Contact us'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

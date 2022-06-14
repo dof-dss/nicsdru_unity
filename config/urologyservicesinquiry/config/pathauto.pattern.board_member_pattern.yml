@@ -11,12 +11,12 @@ pattern: 'inquiry-team/[node:title]'
 selection_criteria:
   65ee99e7-6369-47a7-9025-120bb40017a4:
     id: node_type
-    bundles:
-      board_member: board_member
     negate: false
+    uuid: 65ee99e7-6369-47a7-9025-120bb40017a4
     context_mapping:
       node: node
-    uuid: 65ee99e7-6369-47a7-9025-120bb40017a4
+    bundles:
+      board_member: board_member
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -17,8 +17,8 @@ plugin: 'block_content:164479e4-3ee2-40c7-a54c-11377d130e81'
 settings:
   id: 'block_content:164479e4-3ee2-40c7-a54c-11377d130e81'
   label: 'Helping the Inquiry'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

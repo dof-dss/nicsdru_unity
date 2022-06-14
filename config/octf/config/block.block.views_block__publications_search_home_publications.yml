@@ -18,12 +18,12 @@ plugin: 'views_block:publications_search-home_publications'
 settings:
   id: 'views_block:publications_search-home_publications'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

@@ -17,19 +17,20 @@ dependencies:
     - webform
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_a:
       children:
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 2
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -37,35 +38,35 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
 id: node.webform.diff
 targetEntityType: node
 bundle: webform
 mode: diff
 content:
   body:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 6
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: content
   field_webform:
-    weight: 1
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true
   langcode: true
   links: true
+  search_api_excerpt: true
