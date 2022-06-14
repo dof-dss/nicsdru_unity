@@ -20,8 +20,8 @@ plugin: 'views_block:latest_news-latest_news_block'
 settings:
   id: 'views_block:latest_news-latest_news_block'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
@@ -31,8 +31,8 @@ visibility:
     block_visibility_group: ''
   node_type:
     id: node_type
-    bundles:
-      news: news
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      news: news

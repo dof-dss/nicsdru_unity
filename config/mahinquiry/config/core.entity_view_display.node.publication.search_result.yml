@@ -17,8 +17,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
 id: node.publication.search_result
@@ -27,20 +27,20 @@ bundle: publication
 mode: search_result
 content:
   field_publication_type:
-    weight: 1
+    type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 1
     region: content
   field_published_date:
-    weight: 0
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
 hidden:
   body: true
@@ -49,3 +49,4 @@ hidden:
   field_meta_tags: true
   langcode: true
   links: true
+  search_api_excerpt: true

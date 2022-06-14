@@ -17,8 +17,8 @@ plugin: 'block_content:ff802e47-b2c3-4663-b223-7de8f45bf22e'
 settings:
   id: 'block_content:ff802e47-b2c3-4663-b223-7de8f45bf22e'
   label: 'Submit a claim'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
