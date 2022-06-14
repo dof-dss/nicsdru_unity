@@ -17,8 +17,8 @@ plugin: 'views_block:key_documents-key_documents_block'
 settings:
   id: 'views_block:key_documents-key_documents_block'
   label: 'Key documents'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Key documents'
   items_per_page: none
 visibility: {  }
