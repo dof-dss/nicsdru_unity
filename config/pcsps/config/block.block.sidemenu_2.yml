@@ -19,27 +19,27 @@ plugin: 'system_menu_block:menu-side-menu'
 settings:
   id: 'system_menu_block:menu-side-menu'
   label: Content
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      basic_page: basic_page
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-  node_type:
-    id: node_type
     bundles:
       basic_page: basic_page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
+    pages: '<front>'
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      basic_page: basic_page
