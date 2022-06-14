@@ -15,10 +15,10 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   request_path:
     id: request_path
-    pages: "/search\r\n/news-search\r\n/news-search/date/*\r\n/node/*/revisions/view/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n<front>"
     negate: true
+    pages: "/search\r\n/news-search\r\n/news-search/date/*\r\n/node/*/revisions/view/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n<front>"
