@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
 ignored_config_entities:
   - 'odscni_theme.settings:twitter_profile_url'
   - 'odscni_theme.settings:facebook_profile_url'
@@ -5,5 +7,3 @@ ignored_config_entities:
   - 'odscni_theme.settings:pinterest_profile_url'
   - 'odscni_theme.settings:youtube_profile_url'
   - 'odscni_theme.settings:instagram_profile_url'
-_core:
-  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
