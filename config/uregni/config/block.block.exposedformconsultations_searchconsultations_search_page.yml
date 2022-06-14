@@ -18,12 +18,12 @@ plugin: 'views_exposed_filter_block:consultations_search-consultations_search_pa
 settings:
   id: 'views_exposed_filter_block:consultations_search-consultations_search_page'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
 visibility:
   request_path:
     id: request_path
-    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*\r\n"

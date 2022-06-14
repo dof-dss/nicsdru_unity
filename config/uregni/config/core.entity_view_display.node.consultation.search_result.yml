@@ -21,8 +21,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: klTP-tmG7HZOGRnXSeRaYsK1G0ueA_wO6Fznk8aUL5s
 id: node.consultation.search_result
@@ -31,23 +31,23 @@ bundle: consultation
 mode: search_result
 content:
   field_consultation_dates:
-    weight: 1
+    type: daterange_default
     label: hidden
     settings:
       timezone_override: ''
-      separator: '-'
       format_type: medium
+      separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 1
     region: content
   field_published_date:
-    weight: 0
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: uregni_medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
 hidden:
   body: true

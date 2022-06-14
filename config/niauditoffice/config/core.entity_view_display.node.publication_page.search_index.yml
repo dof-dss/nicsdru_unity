@@ -17,21 +17,21 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.publication_page.search_index
 targetEntityType: node
 bundle: publication_page
 mode: search_index
 content:
   field_publication_date:
-    weight: 0
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: niao_medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
 hidden:
   body: true

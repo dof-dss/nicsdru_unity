@@ -22,20 +22,21 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_additional_content_details:
       children:
         - field_political_party
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 7
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -43,20 +44,20 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
     group_meta:
       children:
         - field_published_date
         - field_nipb_board_member
         - field_committee
         - field_question_type
+      label: Meta
       parent_name: ''
+      region: content
       weight: 1
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: question-meta
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -64,65 +65,64 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Meta
 id: node.question_page.diff
 targetEntityType: node
 bundle: question_page
 mode: diff
 content:
   body:
-    label: hidden
-    weight: 6
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
     region: content
   field_committee:
-    label: inline
-    weight: 4
     type: entity_reference_label
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 4
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 10
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
   field_nipb_board_member:
     type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
     weight: 3
     region: content
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
   field_political_party:
     type: entity_reference_label
-    weight: 9
-    region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 9
+    region: content
   field_published_date:
-    label: inline
-    weight: 2
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 2
     region: content
   field_question_type:
-    label: inline
-    weight: 5
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   content_moderation_control: true

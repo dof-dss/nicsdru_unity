@@ -18,67 +18,12 @@ base_table: search_api_index_default_content
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Default
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: none
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Search
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: false
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 20
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 5
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: search-result
-          default_row_class: false
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+      title: Search
       fields:
         title:
           id: title
@@ -87,6 +32,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -149,7 +95,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         search_api_excerpt:
           id: search_api_excerpt
           table: search_api_index_default_content
@@ -157,6 +102,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           label: ''
           exclude: false
           alter:
@@ -202,7 +148,59 @@ display:
           use_highlighting: true
           multi_type: separator
           multi_separator: ', '
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 20
+          total_pages: null
+          id: 0
+          tags:
+            next: 'next ›'
+            previous: '‹ previous'
+            first: '« first'
+            last: 'last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: none
+        options: {  }
+      empty: {  }
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_default_content
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
           plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: search_api_relevance
+          exposed: false
+      arguments: {  }
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -211,6 +209,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: or
           value: ''
           group: 1
@@ -233,8 +232,8 @@ display:
               administrator: '0'
               author_user: '0'
               supervisor_user: '0'
-            placeholder: 'Search site'
             expose_fields: false
+            placeholder: 'Search site'
             searched_fields_id: search_api_fulltext_searched_fields
           is_grouped: false
           group_info:
@@ -251,26 +250,28 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
-          plugin_id: search_api_fulltext
-      sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_default_content
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-      title: Search
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: search-result
+          default_row_class: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      relationships: {  }
       header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -283,14 +284,11 @@ display:
       tags:
         - 'config:search_api.index.default_content'
   search_page:
-    display_plugin: page
     id: search_page
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      path: search
       fields:
         title:
           id: title
@@ -299,6 +297,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -361,7 +360,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         search_api_excerpt:
           id: search_api_excerpt
           table: search_api_index_default_content
@@ -369,6 +367,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           label: ''
           exclude: false
           alter:
@@ -414,7 +413,6 @@ display:
           use_highlighting: true
           multi_type: separator
           multi_separator: ', '
-          plugin_id: search_api
         field_published_date:
           id: field_published_date
           table: search_api_index_default_content
@@ -422,6 +420,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -485,10 +484,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
-      defaults:
-        fields: false
-        empty: false
       empty:
         search_api_spellcheck_did_you_mean:
           id: search_api_spellcheck_did_you_mean
@@ -497,11 +492,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_spellcheck_did_you_mean
           empty: true
           search_api_spellcheck_count: 1
           search_api_spellcheck_hide_on_result: 1
           search_api_spellcheck_collate: true
-          plugin_id: search_api_spellcheck_did_you_mean
         area:
           id: area
           table: views
@@ -509,12 +504,18 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: true
-          tokenize: false
           content:
             value: 'There are no results found.'
             format: basic_html
-          plugin_id: text
+          tokenize: false
+      defaults:
+        empty: false
+        fields: false
+      display_extenders:
+        metatag_display_extender: {  }
+      path: search
     cache_metadata:
       max-age: -1
       contexts:
@@ -527,17 +528,11 @@ display:
         - 'config:field.storage.node.field_published_date'
         - 'config:search_api.index.default_content'
   site_search:
-    display_plugin: embed
     id: site_search
     display_title: 'Embed: Site search'
+    display_plugin: embed
     position: 2
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      display_description: ''
-      defaults:
-        fields: false
-        pager: false
       fields:
         title:
           id: title
@@ -546,6 +541,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -608,12 +604,17 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
       pager:
         type: some
         options:
-          items_per_page: 5
           offset: 0
+          items_per_page: 5
+      defaults:
+        pager: false
+        fields: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:

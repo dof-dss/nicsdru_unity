@@ -16,17 +16,17 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
-    weight: 0
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   toc_display:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   field_metatag: true

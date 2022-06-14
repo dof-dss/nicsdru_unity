@@ -11,12 +11,12 @@ pattern: 'publications-search/[node:title]'
 selection_criteria:
   69367215-1f25-4429-88e1-c837ba22550e:
     id: node_type
-    bundles:
-      publication: publication
     negate: false
+    uuid: 69367215-1f25-4429-88e1-c837ba22550e
     context_mapping:
       node: node
-    uuid: 69367215-1f25-4429-88e1-c837ba22550e
+    bundles:
+      publication: publication
 selection_logic: and
 weight: -5
 relationships: {  }

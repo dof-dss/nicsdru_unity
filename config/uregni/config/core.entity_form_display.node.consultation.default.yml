@@ -30,16 +30,16 @@ third_party_settings:
       children:
         - field_email_address
         - field_postal
+      label: 'Ways to respond'
+      region: content
       parent_name: ''
       weight: 14
       format_type: fieldset
-      region: content
       format_settings:
+        classes: 'group-respond field-group-fieldset'
+        id: ''
         description: ''
         required_fields: true
-        id: ''
-        classes: 'group-respond field-group-fieldset'
-      label: 'Ways to respond'
 _core:
   default_config_hash: f9XHQzGh4BHgBOCvH9NQ-_5RkHDwLN6qy36xGxBOZTc
 id: node.consultation.default
@@ -48,15 +48,15 @@ bundle: consultation
 mode: default
 content:
   body:
-    weight: 12
     type: text_textarea_with_summary
+    weight: 12
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 3
@@ -66,61 +66,61 @@ content:
   field_attachment:
     type: media_library_widget
     weight: 13
+    region: content
     settings:
       media_types: {  }
     third_party_settings:
       media_library_edit:
         show_edit: '1'
-    region: content
   field_consultation_dates:
-    weight: 9
     type: daterange_default
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_email_address:
-    weight: 10
     type: email_default
+    weight: 10
+    region: content
     settings:
       placeholder: ''
       size: 60
     third_party_settings: {  }
-    region: content
   field_meta_tags:
+    type: metatag_firehose
     weight: 16
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_postal:
+    type: string_textarea
     weight: 52
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_publication_topic:
-    weight: 5
     type: options_select
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_published_date:
-    weight: 7
     type: datetime_default
+    weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_summary:
+    type: string_textarea
     weight: 10
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -131,8 +131,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 17
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -142,23 +142,23 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
-    weight: 55
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_timestamp
+    weight: 55
     region: content
-  publish_state:
-    weight: 53
     settings: {  }
     third_party_settings: {  }
+  publish_state:
     type: options_select
+    weight: 53
     region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 20
     region: content
@@ -166,17 +166,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 11
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -189,25 +189,25 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
-    weight: 56
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_timestamp
+    weight: 56
     region: content
-  unpublish_state:
-    weight: 54
     settings: {  }
     third_party_settings: {  }
+  unpublish_state:
     type: options_select
+    weight: 54
     region: content
+    settings: {  }
+    third_party_settings: {  }
   url_redirects:
     weight: 15
     region: content

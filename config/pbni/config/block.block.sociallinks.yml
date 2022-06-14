@@ -17,8 +17,8 @@ plugin: 'block_content:f85057d4-a198-4ecc-9c48-5a9611f7e647'
 settings:
   id: 'block_content:f85057d4-a198-4ecc-9c48-5a9611f7e647'
   label: 'Social links'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
