@@ -112,7 +112,7 @@ class BoardBreadcrumb implements BreadcrumbBuilderInterface {
     $breadcrumb = new Breadcrumb();
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     $links[] = Link::createFromRoute(t('Home'), '<front>');
-    $links[] = Link::fromTextAndUrl(t('Inquiry team'), Url::fromUri('internal:/inquiry-team'));
+    $links[] = Link::fromTextAndUrl(t('Inquiry Team'), Url::fromUri('internal:/inquiry-team'));
     $links[] = Link::createFromRoute($title_resolver, '<none>');
     $breadcrumb->setLinks($links);
     $breadcrumb->addCacheContexts(['url.path']);

@@ -79,7 +79,6 @@ module:
   metatag_twitter_cards: 0
   metatag_views: 0
   moderation_sidebar: 0
-  nifiscalcouncil_breadcrumbs: 0
   node: 0
   node_edit_protection: 0
   noreferrer: 0
@@ -110,6 +109,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
