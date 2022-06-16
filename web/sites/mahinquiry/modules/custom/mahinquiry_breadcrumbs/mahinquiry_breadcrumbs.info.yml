@@ -1,0 +1,5 @@
+name: 'MAH Inquiry breadcrumbs'
+type: module
+description: 'Breadcrumb customisations'
+core_version_requirement: 8.x || ^9
+package: 'MAH Inquiry'
