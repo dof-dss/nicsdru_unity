@@ -1,7 +1,13 @@
 uuid: 3cb6d3cb-5145-42bc-9a69-cd971a1c135b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - google_analytics
+    - media
+    - node
+    - system
 _core:
   default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
 id: authenticated
