@@ -1,7 +1,15 @@
 uuid: c0492056-ed26-4e1c-8e48-62e6a99901a5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - contact
+    - filter
+    - media
+    - node
+    - system
 _core:
   default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
 id: authenticated

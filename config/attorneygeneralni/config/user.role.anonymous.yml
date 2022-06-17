@@ -1,7 +1,13 @@
 uuid: 12c25593-6d89-478e-add0-badf51d9e065
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - eu_cookie_compliance
+    - media
+    - search_api_autocomplete
+    - system
 _core:
   default_config_hash: 9LODQAOK6MOVWRCgrgZRvkIYBG5aX0Ksd4ygTzmuFVo
 id: anonymous

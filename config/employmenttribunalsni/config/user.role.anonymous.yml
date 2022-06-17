@@ -1,7 +1,12 @@
 uuid: b9a8431d-ae53-4ecc-a001-2fcaa18d939c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - eu_cookie_compliance
+    - media
+    - system
 _core:
   default_config_hash: 1kQ-zKel86B-xQhyPTUaXXtaSjwPcyIQ7Sc-XIV0lOY
 id: anonymous

@@ -1,7 +1,18 @@
 uuid: 5859288e-d57b-4fb2-b36c-b43e708efdae
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - contact
+    - filter
+    - google_analytics
+    - media
+    - node
+    - pathauto
+    - search_api_autocomplete
+    - system
 _core:
   default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
 id: authenticated
