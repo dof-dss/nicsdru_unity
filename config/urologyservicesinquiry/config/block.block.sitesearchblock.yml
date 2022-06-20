@@ -16,10 +16,10 @@ plugin: site_search_block
 settings:
   id: site_search_block
   label: 'Site search block'
-  provider: unity_search_pages
   label_display: '0'
+  provider: unity_search_pages
 visibility:
   request_path:
     id: request_path
-    pages: /search
     negate: true
+    pages: /search

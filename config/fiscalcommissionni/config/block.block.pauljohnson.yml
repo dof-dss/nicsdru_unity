@@ -19,8 +19,8 @@ plugin: 'block_content:f6ca355d-cebc-4069-8382-630cfba54c75'
 settings:
   id: 'block_content:f6ca355d-cebc-4069-8382-630cfba54c75'
   label: 'Paul Johnson'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -28,10 +28,10 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
     context_mapping: {  }
+    block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

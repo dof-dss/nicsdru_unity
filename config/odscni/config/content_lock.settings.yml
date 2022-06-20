@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: 5ZR2rETEQeI922jZ_ObHCnuueEJHgU7_vyBgdP0q7Ls
 verbose: 1
 types:
   block_content: {  }
@@ -72,5 +74,3 @@ form_op_lock:
   scheduled_transition:
     mode: 0
     values: {  }
-_core:
-  default_config_hash: 5ZR2rETEQeI922jZ_ObHCnuueEJHgU7_vyBgdP0q7Ls

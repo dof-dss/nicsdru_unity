@@ -14,15 +14,15 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.feature.diff
 targetEntityType: node
 bundle: feature
 mode: diff
 content:
   field_link_url:
-    weight: 2
+    type: link_separate
     label: inline
     settings:
       trim_length: 80
@@ -31,24 +31,24 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 2
     region: content
   field_photo:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: article_full
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_teaser:
-    weight: 1
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true

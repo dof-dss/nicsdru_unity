@@ -18,12 +18,12 @@ plugin: 'facet_block:publication_date_consultation'
 settings:
   id: 'facet_block:publication_date_consultation'
   label: 'Publication date'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: publicationdateconsultation
 visibility:
   request_path:
     id: request_path
-    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*"
     negate: false
     context_mapping: {  }
+    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*"

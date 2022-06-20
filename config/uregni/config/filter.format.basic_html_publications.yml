@@ -99,10 +99,10 @@ filters:
     weight: -47
     settings:
       default_view_mode: embed
-      allowed_media_types:
-        document: document
       allowed_view_modes:
         embed: embed
+      allowed_media_types:
+        document: document
   noreferrer:
     id: noreferrer
     provider: noreferrer
@@ -130,3 +130,11 @@ filters:
     weight: -48
     settings:
       replacement_text: 'Click here to view the video content'
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

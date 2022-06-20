@@ -19,8 +19,8 @@ required: false
 translatable: true
 default_value:
   -
-    format: basic_html
     value: ' '
+    format: basic_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long

@@ -25,21 +25,35 @@ function uregni_breadcrumbs_system_breadcrumb_alter(Breadcrumb &$breadcrumb, Rou
     array_splice($links, 1, 0, $about_us_link);
   }
 
-  // Loop through the links for links that have facet queries added to them and unset the link of the last breadcrumb.
-  // The facets module breadcrumb links them all by default.
-  foreach ($links as $link) {
-    // Strip the - search results text from the page title breadcrumb link.
-    if (preg_match('/([A-Z|a-z]+) - search results/', $link->getText(), $matches)) {
-      $link->setText($matches[1]);
-    }
+  if ($links) {
+    // Loop through the links for links that have facet queries added to them and unset the link of the last breadcrumb.
+    // The facets module breadcrumb links them all by default.
+    foreach ($links as $link) {
+      $link_text_raw = $link->getText();
 
-    $params = $link->getUrl()->getRouteParameters();
-    if (!empty($params['facets_query'])) {
-      // Remove link from the last breadcrumb link.
-      end($links)->setUrl(Url::fromRoute('<none>'));
-      $breadcrumb = new Breadcrumb();
-      $breadcrumb->setLinks($links);
-      $breadcrumb->addCacheContexts(['url.path']);
+      if ($link_text_raw instanceof TranslatableMarkup) {
+        $link_text = $link_text_raw->render();
+      }
+      elseif (is_array($link_text_raw) && isset($link_text_raw['#markup'])) {
+        $link_text = $link_text_raw['#markup'];
+      }
+      else {
+        $link_text = $link_text_raw;
+      }
+
+      // Strip the - search results text from the page title breadcrumb link.
+      if (preg_match('/([A-Z|a-z]+) - search results/', $link_text, $matches)) {
+        $link->setText($matches[1]);
+      }
+
+      $params = $link->getUrl()->getRouteParameters();
+      if (!empty($params['facets_query'])) {
+        // Remove link from the last breadcrumb link.
+        end($links)->setUrl(Url::fromRoute('<none>'));
+        $breadcrumb = new Breadcrumb();
+        $breadcrumb->setLinks($links);
+        $breadcrumb->addCacheContexts(['url.path']);
+      }
     }
   }
 }

@@ -6,24 +6,24 @@ dependencies:
     - node
 _core:
   default_config_hash: cRfS39Vb-mPG2ciV1K9IKBto5SPXajzKtMooL8-sDGc
-id: default
 label: Default
+id: default
 description: ''
 matchers:
   8250b0de-30d1-4f86-82cc-d18dba7b3241:
-    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     id: 'entity:node'
-    weight: 0
+    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     settings:
-      result_description: ''
+      metadata: ''
       bundles: {  }
       group_by_bundle: true
-      include_unpublished: false
-      metadata: ''
       substitution_type: canonical
       limit: 100
-  44834627-6b6d-4d70-95c6-6c4b70a81aa2:
-    uuid: 44834627-6b6d-4d70-95c6-6c4b70a81aa2
-    id: email
+      include_unpublished: false
+      result_description: ''
     weight: 0
+  44834627-6b6d-4d70-95c6-6c4b70a81aa2:
+    id: email
+    uuid: 44834627-6b6d-4d70-95c6-6c4b70a81aa2
     settings: {  }
+    weight: 0

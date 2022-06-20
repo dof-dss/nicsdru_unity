@@ -18,12 +18,12 @@ plugin: 'facet_block:topic_consultation'
 settings:
   id: 'facet_block:topic_consultation'
   label: Topic
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: topicconsultation
 visibility:
   request_path:
     id: request_path
-    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*"
     negate: false
     context_mapping: {  }
+    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*"

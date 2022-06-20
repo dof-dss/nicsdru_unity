@@ -2,12 +2,6 @@ uuid: 48254e19-8ad4-43c6-9910-21a6ee92b288
 langcode: en
 status: true
 dependencies:
-  module:
-    - search_api_solr
-    - node
-    - paragraphs
-    - user
-    - search_api
   config:
     - field.storage.node.body
     - field.storage.node.field_faq
@@ -17,24 +11,27 @@ dependencies:
     - field.storage.node.field_published_date
     - field.storage.node.field_teaser
     - search_api.server.solr_default
+  module:
+    - search_api_solr
+    - node
+    - paragraphs
+    - user
+    - search_api
 third_party_settings:
   search_api_solr:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
-    multilingual:
-      limit_to_content_language: false
-      include_language_independent: true
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
       regex:
         slop: 0.5
         pattern: blank
         maxAnalyzedChars: 10000
-      usePhraseHighlighter: true
-      highlightMultiTerm: true
-      preserveMulti: false
       highlight:
         mergeContiguous: false
         requireFieldMatch: false
@@ -58,6 +55,9 @@ third_party_settings:
       index_prefix: ''
       collection: ''
       timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
 id: default_content
 name: 'Default content'
 description: ''
@@ -193,16 +193,19 @@ processor_settings:
   aggregated_field: {  }
   entity_status: {  }
   highlight:
-    highlight: always
-    highlight_partial: false
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
+    highlight: always
+    highlight_partial: false
   html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
     all_fields: true
     fields:
       - body
@@ -225,9 +228,6 @@ processor_settings:
       h3: 2
       strong: 2
       u: 1
-    weights:
-      preprocess_index: -15
-      preprocess_query: -15
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:
@@ -237,6 +237,6 @@ tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
 server: solr_default

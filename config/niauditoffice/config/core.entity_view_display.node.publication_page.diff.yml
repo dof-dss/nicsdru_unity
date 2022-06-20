@@ -20,20 +20,21 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_a:
       children:
         - field_publication_topic
         - field_meta_tags
+      label: 'Additional content details'
       parent_name: ''
+      region: content
       weight: 5
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: field-collection
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -41,61 +42,60 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Additional content details'
 id: node.publication_page.diff
 targetEntityType: node
 bundle: publication_page
 mode: diff
 content:
   body:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    weight: 4
-    region: content
     label: above
     settings:
       view_mode: embed
       link: false
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_meta_tags:
-    weight: 1
+    type: metatag_empty_formatter
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 1
     region: content
   field_niao_publication_image:
-    weight: 2
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: publication_image
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
     region: content
   field_publication_date:
-    weight: 0
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: niao_medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
   field_publication_topic:
     type: entity_reference_label
-    weight: 0
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   langcode: true

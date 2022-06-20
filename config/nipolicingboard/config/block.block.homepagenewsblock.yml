@@ -17,8 +17,8 @@ plugin: 'block_content:6fb7f9c4-51ce-4530-beb0-ae60977e00ae'
 settings:
   id: 'block_content:6fb7f9c4-51ce-4530-beb0-ae60977e00ae'
   label: News
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

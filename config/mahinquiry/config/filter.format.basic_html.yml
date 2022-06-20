@@ -119,15 +119,15 @@ filters:
     weight: -46
     settings:
       default_view_mode: article_full
-      allowed_media_types:
-        audio: audio
-        image: image
-        remote_video: remote_video
       allowed_view_modes:
         article_float: article_float
         article_float_expandable: article_float_expandable
         article_full: article_full
         article_full_expandable: article_full_expandable
+      allowed_media_types:
+        audio: audio
+        image: image
+        remote_video: remote_video
   noreferrer:
     id: noreferrer
     provider: noreferrer

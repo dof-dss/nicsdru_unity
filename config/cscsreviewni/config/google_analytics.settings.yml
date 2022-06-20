@@ -1,4 +1,6 @@
-account: '<placeholder>'
+_core:
+  default_config_hash: HD-kJquDfx3JureBUmIIt_ADNReD_jLvKg4fwKISoJs
+account: <placeholder>
 premium: false
 domain_mode: 0
 cross_domains: ''
@@ -39,5 +41,3 @@ codesnippet:
 translation_set: false
 cache: false
 debug: false
-_core:
-  default_config_hash: HD-kJquDfx3JureBUmIIt_ADNReD_jLvKg4fwKISoJs

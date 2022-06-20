@@ -18,8 +18,6 @@ mode: teaser
 content:
   field_link:
     type: link
-    weight: 1
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -28,14 +26,16 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_teaser:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
   field_photo: true
