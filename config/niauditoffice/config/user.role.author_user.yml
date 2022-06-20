@@ -1,7 +1,32 @@
 uuid: e8cc2cf8-191c-4871-9e3c-7014142f3fe8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.faq
+    - node.type.news
+    - node.type.page
+    - node.type.publication_page
+    - node.type.staff_member
+    - workflows.workflow.nics_editorial_workflow
+  module:
+    - content_moderation
+    - entity_browser
+    - filter
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
+    - node
+    - path
+    - system
+    - toolbar
 _core:
   default_config_hash: xhdyanr3l8DstDhWzyeCLAEv6sS_rUGWu1pDp6apVB4
 id: author_user
@@ -15,7 +40,6 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access location_browser entity browser pages'
-  - 'access media overview'
   - 'access toolbar'
   - 'add media from remote sources'
   - 'administer main menu items'
