@@ -3,29 +3,14 @@ services:
     class: Drupal\nipolicingboard_breadcrumbs\ViewPageBreadcrumb
     arguments: ['@request_stack', '@title_resolver']
     tags:
-      - { name: breadcrumb_builder, priority: 1011 }
-  nipolicingboard_breadcrumbs.breadcrumb.news:
-    class: Drupal\nipolicingboard_breadcrumbs\NewsBreadcrumb
-    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
-    tags:
-      - { name: breadcrumb_builder, priority: 100 }
-  nipolicingboard_breadcrumbs.breadcrumb.publication:
-    class: Drupal\nipolicingboard_breadcrumbs\PublicationBreadcrumb
-    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
-    tags:
-      - { name: breadcrumb_builder, priority: 100 }
+      - { name: breadcrumb_builder, priority: 1015 }
   nipolicingboard_breadcrumbs.breadcrumb.questions:
     class: Drupal\nipolicingboard_breadcrumbs\QuestionsBreadcrumb
     arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
     tags:
-      - { name: breadcrumb_builder, priority: 100 }
+      - { name: breadcrumb_builder, priority: 105 }
   nipolicingboard_breadcrumbs.breadcrumb.board:
     class: Drupal\nipolicingboard_breadcrumbs\BoardBreadcrumb
     arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
     tags:
-      - { name: breadcrumb_builder, priority: 100 }
-  nipolicingboard_breadcrumbs.breadcrumb.page:
-    class: Drupal\nipolicingboard_breadcrumbs\PageBreadcrumb
-    arguments: [ '@entity_type.manager', '@title_resolver', '@request_stack' ]
-    tags:
-      - { name: breadcrumb_builder, priority: 100 }
+      - { name: breadcrumb_builder, priority: 105 }

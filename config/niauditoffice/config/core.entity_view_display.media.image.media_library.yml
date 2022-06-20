@@ -13,8 +13,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: vRi4EgeeT5rKv_laEn9t5khz37uENvQodKIr_xW4Xo8
 id: media.image.media_library
@@ -23,12 +23,12 @@ bundle: image
 mode: media_library
 content:
   field_media_image:
+    type: image
     label: hidden
     settings:
-      image_style: medium
       image_link: ''
+      image_style: medium
     third_party_settings: {  }
-    type: image
     weight: 1
     region: content
 hidden:
@@ -36,5 +36,6 @@ hidden:
   field_caption: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

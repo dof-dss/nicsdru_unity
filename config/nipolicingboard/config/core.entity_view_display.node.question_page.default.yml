@@ -25,13 +25,14 @@ third_party_settings:
         - field_nipb_board_member
         - field_committee
         - field_question_type
+      label: Meta
       parent_name: ''
+      region: content
       weight: 1
       format_type: html_element
-      region: content
       format_settings:
-        id: ''
         classes: question-meta
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -39,50 +40,49 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Meta
 id: node.question_page.default
 targetEntityType: node
 bundle: question_page
 mode: default
 content:
   body:
-    label: hidden
-    weight: 3
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_committee:
-    label: inline
-    weight: 4
     type: entity_reference_label
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 4
     region: content
   field_nipb_board_member:
     type: entity_reference_label
-    weight: 3
-    region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_published_date:
-    label: inline
-    weight: 2
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 2
     region: content
   field_question_type:
-    label: inline
-    weight: 5
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   content_moderation_control: true

@@ -17,8 +17,8 @@ plugin: 'block_content:85227472-67d0-4a39-927c-0a70be16f609'
 settings:
   id: 'block_content:85227472-67d0-4a39-927c-0a70be16f609'
   label: 'Home page 5 links'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

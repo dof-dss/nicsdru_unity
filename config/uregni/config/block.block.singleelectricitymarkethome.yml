@@ -17,8 +17,8 @@ plugin: 'block_content:3323e044-bd58-4ee6-9c0a-44befed73bfe'
 settings:
   id: 'block_content:3323e044-bd58-4ee6-9c0a-44befed73bfe'
   label: 'Single Electricity Market : home'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

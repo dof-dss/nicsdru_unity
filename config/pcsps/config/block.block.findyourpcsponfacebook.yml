@@ -18,13 +18,13 @@ plugin: 'block_content:f3e6af61-5a3d-4c42-9164-424b2bed5117'
 settings:
   id: 'block_content:f3e6af61-5a3d-4c42-9164-424b2bed5117'
   label: 'Find your PCSP on facebook'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'
