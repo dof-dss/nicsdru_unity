@@ -36,6 +36,7 @@ content:
     region: content
 hidden:
   body: true
+  content_moderation_control: true
   field_meta_tags: true
   field_type: true
   langcode: true
