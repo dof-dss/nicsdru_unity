@@ -115,7 +115,7 @@ class BoardBreadcrumb implements BreadcrumbBuilderInterface {
       if ($type_resolver == 'board_member') {
         $links[] = Link::fromTextandUrl(t('The Board'), Url::fromUri('internal:/board'));
       }
-      else if ($type_resolver == 'senior_management') {
+      elseif ($type_resolver == 'senior_management') {
         $links[] = Link::fromTextandUrl(t('Senior management'), Url::fromUri('internal:/senior-management'));
       }
       $links[] = Link::createFromRoute($title_resolver, '<none>');
