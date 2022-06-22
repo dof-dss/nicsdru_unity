@@ -1,0 +1,5 @@
+hotlink: false
+origin: 'https://www.nipolicingboard.org.uk'
+origin_dir: files/nipolicingboard
+use_imagecache_root: true
+verify: true
