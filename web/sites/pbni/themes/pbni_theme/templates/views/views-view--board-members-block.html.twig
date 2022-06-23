@@ -5,7 +5,7 @@
  *
  * Available variables:
  * - attributes: Remaining HTML attributes for the element.
- * - css_name: A css-safe version of the view name.
+ * - css_name: A CSS-safe version of the view name.
  * - css_class: The user-specified classes names, if any.
  * - header: The optional header.
  * - footer: The optional footer.
@@ -30,39 +30,14 @@
  * @see template_preprocess_views_view()
  */
 #}
-{%
-  set classes = [
-  dom_id ? 'js-view-dom-id-' ~ dom_id,
-]
-%}
-{% set attributes = attributes.addClass(classes) %}
-{% set attributes = attributes.setAttribute('role', 'region') %}
-{% set attributes = attributes.setAttribute('aria-label', 'search results'|t) %}
-<section{{ attributes }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
 
-  <header>
-    {{ header }}
-    {{ drupal_block('facets_summary_block:publications_summary') }}
-  </header>
+<div class="board-members">
+  {{ title }}
 
   {% if rows -%}
     {{ rows }}
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
-  {{ pager }}
 
-  {{ attachment_after }}
-  {{ more }}
-
-  {% if footer %}
-    <footer>
-      {{ footer }}
-    </footer>
-  {% endif %}
-
-  {{ feed_icons }}
-</section>
+</div>
