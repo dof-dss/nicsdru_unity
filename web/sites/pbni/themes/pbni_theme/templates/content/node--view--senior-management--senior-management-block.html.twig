@@ -66,42 +66,15 @@
  * @see template_preprocess_node()
  */
 #}
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'clearfix',
-  ]
-%}
+<div class="group-left">
+  {{ content.field_member_image }}
+</div>
 
-{% if not page %}
-<article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id) }}>
-  <header>
-{% endif %}
-    {{ title_prefix }}
-      {% if label and not page %}
-      <h2{{ title_attributes.addClass('title') }}>
-        {{ label }}
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        <span{{ author_attributes.addClass('submitted') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        </span>
-      </div>
-    {% endif %}
-  {% if not page %}
-  </header>
-  {% endif %}
-  <div{{ content_attributes.addClass('content page-content') }}>
-    {{ content }}
-  </div>
-{% if not page %}
-</article>
-{% endif %}
+<div class="group-right">
+  <h2>
+    {{ label }}
+  </h2>
+<h4>
+  {{ content.field_member_role }}
+</h4>
+</div>
