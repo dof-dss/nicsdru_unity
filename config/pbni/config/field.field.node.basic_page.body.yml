@@ -10,10 +10,7 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
-    full_html: '0'
-    plain_text: '0'
+    allowed_formats: {  }
 _core:
   default_config_hash: cBCwT51Mu2HwrJxGKBSMyRYRXaRLS5Qs2rfG9FhIUhQ
 id: node.basic_page.body
@@ -22,7 +19,7 @@ entity_type: node
 bundle: basic_page
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
