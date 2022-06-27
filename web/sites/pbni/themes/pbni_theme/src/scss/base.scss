@@ -19,17 +19,3 @@
 // Ensure any custom fonts get loaded first to minimize front-end performance impact.
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/1_base/index';
-
-.board-members {
-  @include breakpoint($tab) {
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 3px 3px;
-  }
-}
-.group-left {
-  margin: 15px 15px 15px;
-}
-.group-right {
-  vertical-align: top;
-}
