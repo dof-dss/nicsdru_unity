@@ -1956,19 +1956,19 @@ a.btn:focus {
 /* line 95, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .info-notice {
   border-color: #141f6f;
-  background: #fff url('../images/i.svg?17fda4c8294') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/i.svg?181aa555992') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 95, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .info-notice {
-    background: #fff url('../images/i.svg?17fda4c8294') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/i.svg?181aa555992') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 104, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .info-notice {
-  background-image: url('../images/i.png?17fda4c8294');
+  background-image: url('../images/i.png?181aa555991');
 }
 
 /* line 109, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
@@ -1998,55 +1998,55 @@ ul.info-notice {
 /* line 135, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--error {
   border-color: #e34f4f;
-  background: #fff url('../images/wrong.svg?17fda4c8297') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/wrong.svg?181aa555997') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 135, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--error {
-    background: #fff url('../images/wrong.svg?17fda4c8297') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/wrong.svg?181aa555997') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 143, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--error {
-  background-image: url('../images/wrong.png?17fda4c8297');
+  background-image: url('../images/wrong.png?181aa555996');
 }
 
 /* line 148, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--status {
   border-color: #3fa940;
-  background: #fff url('../images/status.svg?17fda4c8297') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/status.svg?181aa555995') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 148, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--status {
-    background: #fff url('../images/status.svg?17fda4c8297') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/status.svg?181aa555995') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 156, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--status {
-  background-image: url('../images/status.png?17fda4c8296');
+  background-image: url('../images/status.png?181aa555995');
 }
 
 /* line 161, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .messages--warning {
   border-color: #db6304;
-  background: #fff url('../images/warning.svg?17fda4c8297') no-repeat 0.9rem 0.9rem/24px 24px;
+  background: #fff url('../images/warning.svg?181aa555996') no-repeat 0.9rem 0.9rem/24px 24px;
 }
 
 @media (min-width: 641px) {
   /* line 161, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
   .messages--warning {
-    background: #fff url('../images/warning.svg?17fda4c8297') no-repeat 1.4rem 1.4rem/30px 30px;
+    background: #fff url('../images/warning.svg?181aa555996') no-repeat 1.4rem 1.4rem/30px 30px;
   }
 }
 
 /* line 169, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
 .no-svg .messages--warning {
-  background-image: url('../images/warning.png?17fda4c8297');
+  background-image: url('../images/warning.png?181aa555996');
 }
 
 /* line 174, node_modules/nicsdru_unity_theme/src/scss/3_components/content/_icons-messages.scss */
@@ -2462,27 +2462,27 @@ ul.info-notice {
 
 /* line 337, src/scss/components.scss */
 #block-homepage5links .content ul li:first-child {
-  background: #333 url('../images/for-people-under-supervision.png?181393d87af') no-repeat 0 100%;
+  background: #333 url('../images/for-people-under-supervision.png?181aa555991') no-repeat 0 100%;
 }
 
 /* line 341, src/scss/components.scss */
 #block-homepage5links .content ul li:nth-child(2) {
-  background: #333 url('../images/for-sentencers.png?181393d87af') no-repeat 0 100%;
+  background: #333 url('../images/for-sentencers.png?181aa555991') no-repeat 0 100%;
 }
 
 /* line 345, src/scss/components.scss */
 #block-homepage5links .content ul li:nth-child(3) {
-  background: #333 url('../images/for-victims.png?181393d87b0') no-repeat 0 100%;
+  background: #333 url('../images/for-victims.png?181aa555991') no-repeat 0 100%;
 }
 
 /* line 349, src/scss/components.scss */
 #block-homepage5links .content ul li:nth-child(4) {
-  background: #333 url('../images/for-the-community.png?181393d87af') no-repeat 0 100%;
+  background: #333 url('../images/for-the-community.png?181aa555991') no-repeat 0 100%;
 }
 
 /* line 353, src/scss/components.scss */
 #block-homepage5links .content ul li:nth-child(5) {
-  background: #333 url('../images/for-partner-organisations.png?181393d87ae') no-repeat 0 100%;
+  background: #333 url('../images/for-partner-organisations.png?181aa555990') no-repeat 0 100%;
 }
 
 /* line 364, src/scss/components.scss */
@@ -2492,19 +2492,19 @@ ul.info-notice {
 
 /* line 367, src/scss/components.scss */
 #block-homepage3links .content ul li:first-child {
-  background: url('../images/key-facts.png?17fda4c8295') no-repeat;
+  background: url('../images/key-facts.png?181aa555993') no-repeat;
   border: 2px solid #005866;
 }
 
 /* line 372, src/scss/components.scss */
 #block-homepage3links .content ul li:nth-child(2) {
-  background: url('../images/real-stories.png?17fda4c8296') no-repeat;
+  background: url('../images/real-stories.png?181aa555995') no-repeat;
   border: 2px solid #926d07;
 }
 
 /* line 377, src/scss/components.scss */
 #block-homepage3links .content ul li:last-child {
-  background: url('../images/programmes.png?17fda4c8296') no-repeat;
+  background: url('../images/programmes.png?181aa555994') no-repeat;
   border: 2px solid #a31d3f;
 }
 
@@ -2723,6 +2723,11 @@ ul.info-notice {
 .board-members h3 {
   margin-top: 0;
   padding-top: 3rem;
+}
+
+/* line 544, src/scss/components.scss */
+.media-image figure figcaption {
+  display: none;
 }
 
 /*# sourceMappingURL=components.css.map */
