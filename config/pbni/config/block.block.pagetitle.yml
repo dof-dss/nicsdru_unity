@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: pbni_theme
 region: content
-weight: -10
+weight: -9
 provider: null
 plugin: page_title_block
 settings:
