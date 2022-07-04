@@ -79,6 +79,7 @@ jobs:
     docker:
       - image: circleci/php:8.0-apache-browsers
     steps:
+      - hosts_keyscan
       - checkout_code
       - install_php_os_extensions
       - composer_tasks
