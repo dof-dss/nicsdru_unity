@@ -74,7 +74,7 @@ commands:
             ssh-keyscan -H github.com >> ~/.ssh/known_hosts
             ssh-keyscan -H ssh.$PLATFORM_REGION >> ~/.ssh/known_hosts
 jobs:
-  # Tests the integrity of the build, stores the results in a workspace for re-use in later jobs.
+  # Tests the integrity of the build, stores  the results in a workspace for re-use in later jobs.
   build:
     docker:
       - image: circleci/php:8.0-apache-browsers
