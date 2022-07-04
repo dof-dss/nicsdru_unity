@@ -184,7 +184,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p>General email: <a href=\"mailto:info@FiscalCommissionNI.org\_\">info@FiscalCommissionNI.org&nbsp;</a></p>\r\n\r\n<p>For press queries: <a href=\"mailto:press@FiscalCommissionNI.org\">press@FiscalCommissionNI.org</a></p>\r\n"
+          value: "<p>General email: <a href=\"mailto:info@FiscalCommissionNI.org\_\">info@FiscalCommissionNI.org&nbsp;</a></p>\r\n\r\n<p></p>\r\n"
           summary: ''
           format: basic_html
   -
