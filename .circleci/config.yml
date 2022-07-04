@@ -61,6 +61,7 @@ commands:
           name: Add OS and PHP extensions
           command: |
             sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
+            wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
             sudo apt-get update --allow-releaseinfo-change
             sudo apt-get install -y libpng-dev
             sudo docker-php-ext-install gd pcntl posix
@@ -79,7 +80,6 @@ jobs:
     docker:
       - image: circleci/php:8.0-apache-browsers
     steps:
-      - hosts_keyscan
       - checkout_code
       - install_php_os_extensions
       - composer_tasks
