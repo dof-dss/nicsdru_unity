@@ -28,7 +28,7 @@ enable_parent_when_child_gets_disabled: true
 widget:
   type: links
   config:
-    show_numbers: true
+    show_numbers: false
     soft_limit: 20
     show_reset_link: false
     reset_text: 'Show all'
@@ -61,10 +61,10 @@ processor_configs:
       date_display: actual_date
       granularity: 6
       date_format: ''
-  display_value_widget_order:
-    processor_id: display_value_widget_order
+  raw_value_widget_order:
+    processor_id: raw_value_widget_order
     weights:
-      sort: 40
+      sort: 50
     settings:
       sort: DESC
   url_processor_handler:
