@@ -336,6 +336,7 @@ permissions:
   - 'unflag hide_content'
   - 'unflag home_page_display'
   - 'update board_members_queue entityqueue'
+  - 'update senior_management_queue entityqueue'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition reject'
