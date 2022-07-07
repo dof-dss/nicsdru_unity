@@ -110,13 +110,19 @@ class BoardBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('About Probation'), Url::fromUri('internal:/about-probation'));
+      if (Url::fromUri('internal:/about-probation')->isRouted()) {
+        $links[] = Link::fromTextandUrl(t('About Probation'), Url::fromUri('internal:/about-probation'));
+      }
 
       if ($type_resolver == 'board_member') {
-        $links[] = Link::fromTextandUrl(t('The Board'), Url::fromUri('internal:/board'));
+        if (Url::fromUri('internal:/board')->isRouted()) {
+          $links[] = Link::fromTextandUrl(t('The Board'), Url::fromUri('internal:/board'));
+        }
       }
       elseif ($type_resolver == 'senior_management') {
-        $links[] = Link::fromTextandUrl(t('Senior management'), Url::fromUri('internal:/senior-management'));
+        if (Url::fromUri('internal:/senior-management')->isRouted()) {
+          $links[] = Link::fromTextandUrl(t('Senior management'), Url::fromUri('internal:/senior-management'));
+        }
       }
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
