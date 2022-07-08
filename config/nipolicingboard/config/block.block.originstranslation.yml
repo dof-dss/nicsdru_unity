@@ -1,0 +1,25 @@
+uuid: da969b6b-1b7a-4283-a150-f608df103bb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - origins_translations
+    - system
+  theme:
+    - nipolicingboard_theme
+id: originstranslation
+theme: nipolicingboard_theme
+region: translate
+weight: 0
+provider: null
+plugin: origins_translations_block
+settings:
+  id: origins_translations_block
+  label: 'How to translate this page'
+  label_display: visible
+  provider: origins_translations
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /translation-page
