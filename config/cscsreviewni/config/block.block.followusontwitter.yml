@@ -1,0 +1,25 @@
+uuid: 461bb5b8-4d2d-42a1-842e-73bb08a62628
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:e8627962-825f-4726-842c-8678a2b182ee'
+  module:
+    - block_content
+  theme:
+    - cscsreviewni_theme
+id: followusontwitter
+theme: cscsreviewni_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:e8627962-825f-4726-842c-8678a2b182ee'
+settings:
+  id: 'block_content:e8627962-825f-4726-842c-8678a2b182ee'
+  label: 'Follow us on Twitter'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
