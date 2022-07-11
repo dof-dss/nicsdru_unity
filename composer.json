@@ -65,9 +65,9 @@
         "dinbror/blazy": "^1.8",
         "dof-dss/nicsdru_origins_modules": "^1.2",
         "dof-dss/nicsdru_origins_profile": "0.1.11",
-        "dof-dss/nicsdru_unity_modules": "^1.0",
+        "dof-dss/nicsdru_unity_modules": "dev-D8UN-628",
         "dof-dss/nicsdru_unity_profile": "^1.0",
-        "dof-dss/nicsdru_unity_theme": "^0.1.57",
+        "dof-dss/nicsdru_unity_theme": "dev-D8UN-628",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -164,7 +164,7 @@
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^9.0.0",
         "drupal/devel": "^4.1",
-        "drupal/easy_install": "^10.1",
+        "drupal/easy_install": "^10.5",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
         "drupal/permissions_filter": "^1.1",
@@ -202,8 +202,7 @@
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
             },
             "drupal/easy_install": {
-                "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch",
-                "non-existent service entity.manager": "https://www.drupal.org/files/issues/2020-12-08/3162621-4.patch"
+                "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch"
             },
             "drupal/redirect": {
                 "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch",
