@@ -1,0 +1,30 @@
+uuid: 7aae8193-7ced-43b1-b7d3-de0e7f018be2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7f940ed3-d21b-40b6-9aed-ba19b2ee25e1'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: twitter
+theme: pcsps_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'block_content:7f940ed3-d21b-40b6-9aed-ba19b2ee25e1'
+settings:
+  id: 'block_content:7f940ed3-d21b-40b6-9aed-ba19b2ee25e1'
+  label: Twitter
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

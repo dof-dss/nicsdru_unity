@@ -1,0 +1,25 @@
+uuid: 61b5c5c1-f29c-439c-bf8b-6cf76431f0f9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:f570d85e-bfdc-4655-997d-c94fb62d0406'
+  module:
+    - block_content
+  theme:
+    - pcsps_theme
+id: sociallinks
+theme: pcsps_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:f570d85e-bfdc-4655-997d-c94fb62d0406'
+settings:
+  id: 'block_content:f570d85e-bfdc-4655-997d-c94fb62d0406'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

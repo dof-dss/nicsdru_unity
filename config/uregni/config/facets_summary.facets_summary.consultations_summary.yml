@@ -9,19 +9,6 @@ dependencies:
     - search_api
 id: consultations_summary
 name: 'Consultations summary'
-facets:
-  publication_date_consultation:
-    checked: true
-    label: 'Publication date consultation'
-    separator: ', '
-    weight: 0
-    show_count: false
-  topic_consultation:
-    checked: true
-    label: Topic
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__consultations_search__consultations_search_page'
 processor_configs:
   hide_when_not_rendered:
@@ -29,3 +16,16 @@ processor_configs:
     weights:
       build: '45'
     settings: {  }
+facets:
+  publication_date_consultation:
+    checked: true
+    label: 'Publication date consultation'
+    separator: ', '
+    show_count: false
+    weight: 0
+  topic_consultation:
+    checked: true
+    label: Topic
+    separator: ', '
+    show_count: false
+    weight: 0

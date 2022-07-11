@@ -1,0 +1,30 @@
+uuid: c2f82ae9-7768-421f-8477-7911227cd6ef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:b187a98a-8765-4f35-bd4a-e55c0efea566'
+  module:
+    - block_content
+    - system
+  theme:
+    - cscsreviewni_theme
+id: aboutthereview
+theme: cscsreviewni_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'block_content:b187a98a-8765-4f35-bd4a-e55c0efea566'
+settings:
+  id: 'block_content:b187a98a-8765-4f35-bd4a-e55c0efea566'
+  label: 'About the Review'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

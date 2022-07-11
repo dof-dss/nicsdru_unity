@@ -20,20 +20,21 @@ mode: teaser
 content:
   field_published_date:
     type: datetime_default
-    weight: 0
-    region: content
     label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-  links:
-    weight: 1
+    weight: 0
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
+  content_moderation_control: true
   field_attachment: true
   field_meta_tags: true
   field_type: true

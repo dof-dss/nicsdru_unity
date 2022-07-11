@@ -1,0 +1,25 @@
+uuid: 142f23eb-b5c9-4741-9423-58d87beeb387
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - unity_search_pages
+  theme:
+    - cscsreviewni_theme
+id: sitesearchblock
+theme: cscsreviewni_theme
+region: search
+weight: 0
+provider: null
+plugin: site_search_block
+settings:
+  id: site_search_block
+  label: 'Site search block'
+  label_display: '0'
+  provider: unity_search_pages
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /search

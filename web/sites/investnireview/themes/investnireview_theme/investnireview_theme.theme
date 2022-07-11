@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the investnireview_theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function investnireview_theme_preprocess_html(&$variables) {
+  if (!empty($variables['node_type'])) {
+    if (($variables['node_type'] == 'basic_page') || ($variables['node_type'] == 'news') || ($variables['node_type']
+        == 'evidence')) {
+      $variables['attributes']['class'][] = 'one-sidebar';
+      $variables['attributes']['class'][] = 'sidebar-second';
+    }
+  }
+}

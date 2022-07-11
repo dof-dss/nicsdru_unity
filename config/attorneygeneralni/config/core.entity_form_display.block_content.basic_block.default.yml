@@ -1,4 +1,4 @@
-uuid: 289e8d9f-01e4-4557-b004-6e35a75e4339
+uuid: 4b74dc17-7aa7-4b63-9179-fc868facc255
 langcode: en
 status: true
 dependencies:
@@ -17,13 +17,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 1
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   info:
     type: string_textfield
     weight: 0

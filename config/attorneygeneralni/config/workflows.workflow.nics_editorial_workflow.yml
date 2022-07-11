@@ -1,48 +1,41 @@
-uuid: 484c1bf5-8bc3-4697-ad81-ed9e7d9add5f
+uuid: 560993a2-589b-4f67-a693-2b87d7621e65
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.basic_page
-    - node.type.consultation
-    - node.type.contact
-    - node.type.feature
-    - node.type.featured_content_list
-    - node.type.layout_page
-    - node.type.link
     - node.type.news
-    - node.type.profile
+    - node.type.page
     - node.type.publication
     - node.type.webform
   module:
     - content_moderation
 _core:
-  default_config_hash: i4jivQkSLEaiLB7qlNRDW9rBQCOSSZQZHIHhXRSKK84
+  default_config_hash: jRgnrCA-KeZ7queLx6wKOOR6dQt8PuTHIy0sldMaiTE
 id: nics_editorial_workflow
 label: 'NICS Editorial Workflow'
 type: content_moderation
 type_settings:
   states:
     archived:
-      published: false
-      default_revision: true
       label: Archived
       weight: 3
+      published: false
+      default_revision: true
     draft:
       label: Draft
-      published: false
-      default_revision: false
       weight: 0
-    needs_review:
       published: false
       default_revision: false
+    needs_review:
       label: 'Needs Review'
       weight: 2
+      published: false
+      default_revision: false
     published:
       label: Published
+      weight: 1
       published: true
       default_revision: true
-      weight: 1
   transitions:
     archive:
       label: Archive
@@ -54,10 +47,10 @@ type_settings:
       weight: 3
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: -3
       from:
         - draft
+      to: draft
+      weight: -3
     draft_of_published:
       label: 'Draft of Published'
       from:
@@ -66,10 +59,10 @@ type_settings:
       weight: 6
     publish:
       label: Publish
-      to: published
-      weight: 1
       from:
         - needs_review
+      to: published
+      weight: 1
     quick_publish:
       label: 'Quick Publish'
       from:
@@ -103,15 +96,8 @@ type_settings:
       weight: -2
   entity_types:
     node:
-      - basic_page
-      - consultation
-      - contact
-      - feature
-      - featured_content_list
-      - layout_page
-      - link
       - news
-      - profile
+      - page
       - publication
       - webform
   default_moderation_state: draft

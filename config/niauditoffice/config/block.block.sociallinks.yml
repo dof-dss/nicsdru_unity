@@ -1,0 +1,25 @@
+uuid: 077a1e07-a8df-4b44-bbe5-7af4036a5f97
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
+  module:
+    - block_content
+  theme:
+    - niauditoffice_theme
+id: sociallinks
+theme: niauditoffice_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
+settings:
+  id: 'block_content:6fc864c3-256a-4811-9bba-1cd4e3ec22be'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -17,8 +17,8 @@ plugin: 'block_content:38810365-e710-46ec-bd28-0607a55766d7'
 settings:
   id: 'block_content:38810365-e710-46ec-bd28-0607a55766d7'
   label: 'Licences : home'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

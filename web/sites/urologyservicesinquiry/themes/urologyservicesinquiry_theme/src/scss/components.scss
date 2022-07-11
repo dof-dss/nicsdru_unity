@@ -34,7 +34,7 @@
   .menu {
     .menu-item {
       border-right: 1px solid #fff;
-      font-size: $p-font-size;
+      @include adjust-font-size-to(16px);
 
       @media screen and (max-width: $tab) {
         border-right: none;
@@ -200,21 +200,6 @@
           font-size: 1.4rem;
           line-height: 1.8rem;
         }
-      }
-    }
-
-    a {
-      border-bottom: 1px solid $link;
-
-      &:hover {
-        border-bottom: 2px solid $link-underline;
-        margin-bottom: 0;
-      }
-
-      &:focus {
-        border-bottom: none;
-        outline: 2px solid $link;
-        outline-offset: 0;
       }
     }
   }

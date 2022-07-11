@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.question_page.body
     - field.field.node.question_page.field_committee
-    - field.field.node.question_page.field_key_term
     - field.field.node.question_page.field_meta_tags
     - field.field.node.question_page.field_nipb_board_member
     - field.field.node.question_page.field_political_party
@@ -22,17 +21,16 @@ bundle: question_page
 mode: teaser
 content:
   body:
-    label: hidden
-    weight: 0
     type: text_summary_or_trimmed
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   content_moderation_control: true
   field_committee: true
-  field_key_term: true
   field_meta_tags: true
   field_nipb_board_member: true
   field_political_party: true

@@ -1,4 +1,4 @@
-uuid: be58791b-82ba-4e6e-ada1-82d1ee31bfee
+uuid: 171ce672-ab3e-49d3-9172-4944e3842cc5
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - file
     - path
 _core:
-  default_config_hash: bWasVUaOknHVyx88Lp9y37FQ04tc09E1WB-vI1WeY1g
+  default_config_hash: NHLFZuY0ePU1dzAsaSKAKDn8vHxVDuefg29vrHYojoE
 id: media.audio.default
 targetEntityType: media
 bundle: audio
@@ -17,17 +17,17 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_media_audio_file:
-    weight: 0
+    type: file_generic
+    weight: 1
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -35,28 +35,35 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
-    weight: 100
-    region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
-hidden:
-  name: true
+hidden: {  }

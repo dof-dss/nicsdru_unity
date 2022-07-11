@@ -5,9 +5,26 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background-color: $brand-primary;
+    margin-top: 2rem;
+  }
+}
+
 #logo {
   @media screen and (max-width: $tab) {
     padding: 0 1rem;
+  }
+
+  a {
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: .3rem dashed #949494;
+      outline-offset: 1.2rem;
+      display: block;
+    }
   }
 
   img {
@@ -39,21 +56,6 @@
           display: block;
           @include adjust-font-size-to(16px);
         }
-      }
-    }
-
-    a {
-      border-bottom: 1px solid $link;
-
-      &:hover {
-        border-bottom: 2px solid $link-underline;
-        margin-bottom: 0;
-      }
-
-      &:focus {
-        border-bottom: none;
-        outline: 2px solid $link;
-        outline-offset: 0;
       }
     }
   }

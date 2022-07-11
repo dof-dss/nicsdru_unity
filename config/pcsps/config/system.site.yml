@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 51166a4f-3e27-4b0c-a4c0-536aad5a45ce
+name: 'Policing and Community Safety Partnerships'
+mail: admin@pcsps.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/4
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+frontpage_title: 'Welcome to Policing and Community Safety Partnerships'
+frontpage_show_title: 0

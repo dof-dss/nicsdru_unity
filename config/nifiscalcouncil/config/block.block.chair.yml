@@ -18,13 +18,13 @@ plugin: 'block_content:4f248e42-57d6-4abc-8f6c-7a09be259ca3'
 settings:
   id: 'block_content:4f248e42-57d6-4abc-8f6c-7a09be259ca3'
   label: Chair
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

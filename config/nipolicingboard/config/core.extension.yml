@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   address: 0
   admin_toolbar: 0
@@ -66,6 +68,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  link_fix_absolute_urls: 0
   linkit: 0
   media: 0
   media_library: 0
@@ -88,6 +91,7 @@ module:
   origins_media: 0
   origins_metatag: 0
   origins_toc: 0
+  origins_translations: 0
   page_cache: 0
   path: 0
   path_alias: 0
@@ -115,6 +119,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
@@ -145,5 +150,3 @@ theme:
   nicsdru_unity_theme: 0
   nipolicingboard_theme: 0
 profile: nicsdru_unity_profile
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

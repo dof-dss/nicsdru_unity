@@ -1,0 +1,19 @@
+uuid: 717b2977-ab20-41c5-9efa-a2ad3e369afc
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+weight: 0
+folder: ../config/employmenttribunalsni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+  - fastly.settings
+graylist:
+  - employmenttribunalsni_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true

@@ -20,29 +20,29 @@ bundle: publication_page
 mode: default
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    weight: 2
     label: inline
     settings:
       view_mode: embed
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_publication_date:
-    label: hidden
-    weight: 0
     type: datetime_default
+    label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   content_moderation_control: true

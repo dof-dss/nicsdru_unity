@@ -1,0 +1,29 @@
+uuid: f1449ef5-ad0d-4c89-9e6d-b8c76d6542f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - investnireview_theme
+id: breadcrumbs
+theme: investnireview_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

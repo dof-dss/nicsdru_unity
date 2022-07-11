@@ -1,0 +1,18 @@
+uuid: 12525834-af43-49d8-b322-e99670941863
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+weight: 0
+folder: ../config/investnireview/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - investnireview_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true

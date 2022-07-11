@@ -25,12 +25,17 @@ content:
     weight: 5
     region: content
   field_metatag:
+    type: metatag_firehose
     weight: 33
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
+  google_analytics:
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
@@ -44,12 +49,12 @@ content:
     weight: 6
     region: content
   user_picture:
+    type: image_image
+    weight: 32
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    type: image_image
-    weight: 32
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

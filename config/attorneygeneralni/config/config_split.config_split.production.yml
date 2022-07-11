@@ -1,0 +1,18 @@
+uuid: cae2c957-6af8-4476-8d24-3286716b6b4d
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+weight: 0
+folder: ../config/attorneygeneralni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - attorneygeneralni_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true

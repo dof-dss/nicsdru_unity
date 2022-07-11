@@ -1,3 +1,9 @@
-ignored_config_entities: {  }
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+ignored_config_entities:
+  - 'employmenttribunalsni_theme.settings:twitter_profile_url'
+  - 'employmenttribunalsni_theme.settings:facebook_profile_url'
+  - 'employmenttribunalsni_theme.settings:linkedin_profile_url'
+  - 'employmenttribunalsni_theme.settings:pinterest_profile_url'
+  - 'employmenttribunalsni_theme.settings:youtube_profile_url'
+  - 'employmenttribunalsni_theme.settings:instagram_profile_url'

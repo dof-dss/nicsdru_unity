@@ -1,0 +1,11 @@
+uuid: d6f0d663-80e2-49b9-99a5-f7c47ff2c9be
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock
+id: node_break_lock_action
+label: 'Break lock node'
+type: node
+plugin: 'entity:break_lock:node'
+configuration: {  }

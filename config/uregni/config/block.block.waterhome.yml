@@ -17,8 +17,8 @@ plugin: 'block_content:19418964-9a33-4373-bf97-68707922fd9e'
 settings:
   id: 'block_content:19418964-9a33-4373-bf97-68707922fd9e'
   label: Water
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

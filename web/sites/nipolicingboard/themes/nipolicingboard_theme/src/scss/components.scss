@@ -47,7 +47,7 @@
       a {
         &:hover,
         &:focus {
-          background: #0089d1;
+          background: $charcoal;
         }
       }
     }
@@ -149,7 +149,7 @@
     margin: 0 auto;
 
     .content {
-      li a {
+      ul li a {
         color: $white;
         margin: 0;
         padding: 0;
@@ -159,6 +159,7 @@
         &:focus {
           outline: 3px solid white;
           outline-offset: -4px;
+          border-bottom: none;
         }
       }
 
@@ -291,23 +292,6 @@
     list-style: none;
     @include breakpoint($tab) {
       display: flex;
-    }
-  }
-}
-
-#block-sidemenu {
-  a {
-    border-bottom: 1px solid $link;
-
-    &:hover {
-      border-bottom: 2px solid $link-underline;
-      margin-bottom: 0;
-    }
-
-    &:focus {
-      border-bottom: none;
-      outline: 2px solid $link;
-      outline-offset: 0;
     }
   }
 }

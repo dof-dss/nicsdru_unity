@@ -1,0 +1,24 @@
+uuid: f5107a39-5450-4981-a973-425bab1aec71
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - attorneygeneralni_theme
+id: breadcrumbs
+theme: attorneygeneralni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

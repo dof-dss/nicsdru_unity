@@ -1,4 +1,4 @@
-uuid: 5d331cc7-294f-4652-9d20-2a4cb4f377ce
+uuid: 366537bb-f976-43f4-9bc4-7499f5d58e57
 langcode: en
 status: true
 dependencies:
@@ -8,36 +8,48 @@ dependencies:
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_summary
     - field.field.node.news.field_teaser
     - node.type.news
   module:
-    - text
+    - datetime
     - user
 _core:
-  default_config_hash: YtcykPMbq63rPU5znEQK5gVl_woAWR2bUIXmCLP2an4
+  default_config_hash: AF_DHgr-5ZIsJvnD5UmT0RDbIkmWZ0HeItZgySVGGIA
 id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
 content:
-  body:
+  field_photo:
+    type: entity_reference_entity_view
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      view_mode: unity_3_col_images
+      link: false
     third_party_settings: {  }
+    weight: 0
     region: content
-  links:
-    weight: 100
-    settings: {  }
+  field_published_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: unity_date
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_teaser:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
+  body: true
+  content_moderation_control: true
   field_meta_tags: true
-  field_photo: true
-  field_published_date: true
-  field_summary: true
-  field_teaser: true
   langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,4 +1,4 @@
-uuid: b3b5d5a2-e914-4fe4-9e3d-830f200814c6
+uuid: b6f278e3-225c-40d3-95d2-d07cf108d06c
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,16 @@ dependencies:
     - field.storage.node.body
     - node.type.webform
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
-  default_config_hash: '-Qu0UyzQ0jD4TDYq8fOasS-D-vGd3gSwzi15PzRJUD4'
+  default_config_hash: PD_vT1NXpuDGyKOL8TkRuya0M2NU2poqhpbD6t1eG8s
 id: node.webform.body
 field_name: body
 entity_type: node
@@ -16,10 +23,10 @@ bundle: webform
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
 field_type: text_with_summary

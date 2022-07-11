@@ -1,0 +1,25 @@
+uuid: 339b4f36-2ee4-471b-8538-411ad1152736
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:30851f68-f5b9-4ccf-b5ae-1f0880c196c2'
+  module:
+    - block_content
+  theme:
+    - pcsps_theme
+id: contactinformation
+theme: pcsps_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:30851f68-f5b9-4ccf-b5ae-1f0880c196c2'
+settings:
+  id: 'block_content:30851f68-f5b9-4ccf-b5ae-1f0880c196c2'
+  label: 'Contact information'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

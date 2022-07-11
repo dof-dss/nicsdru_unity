@@ -1,4 +1,4 @@
-uuid: bd8f7eed-9feb-4cfe-a083-d16641cb9f2f
+uuid: a0582be0-bca5-4e4c-98a1-058162aad10a
 langcode: en
 status: true
 dependencies:
@@ -15,11 +15,11 @@ bundle: basic_block
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   langcode: true

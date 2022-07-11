@@ -1,0 +1,33 @@
+uuid: 43c6697b-1412-4556-bcd8-bea2032ffe8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date
+  module:
+    - block_visibility_groups
+    - facets
+    - system
+  theme:
+    - investnireview_theme
+id: date
+theme: investnireview_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:date'
+settings:
+  id: 'facet_block:date'
+  label: Date
+  label_display: visible
+  provider: facets
+  block_id: date
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/evidence\r\n/evidence/type/*\r\n/evidence/date/*"

@@ -1,0 +1,36 @@
+blocks:
+  -
+    info: Chair
+    langcode: en
+    uuid: 13cd68d5-6c3a-4c54-b6ba-cf94c4f5f1cf
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<div class=\"image-caption\">\r\n<div class=\"home-name\">\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"6700f698-1e4b-43b8-9d8b-9602c92c696e\" data-view-mode=\"portrait_full\"></drupal-media>\r\n\r\n<p>Sir Michael Lyons</p>\r\n</div>\r\n\r\n<div class=\"home-role\">\r\n<p><span style=\"font-size:11pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><span style=\"font-size:12.0pt\"><span style=\"line-height:107%\"><span style=\"font-family:&quot;Arial&quot;,sans-serif\">Chair, Independent Review of Invest Northern Ireland</span></span></span></span></span></span></p>\r\n</div>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Contact us'
+    langcode: en
+    uuid: 01c32ba8-60ac-4599-9c9a-f4a9082778c1
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>General email: <a href=\"mailto:info@investnireview.org.uk\">info@investnireview.org.uk</a></p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Social links'
+    langcode: en
+    uuid: eb967b82-69ca-4bb1-8a8a-e1ea8254ac3f
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }

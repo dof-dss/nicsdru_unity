@@ -1,0 +1,44 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#footer {
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
+  }
+
+  .footer_credit {
+    .footer-menu {
+      margin: 4% auto;
+
+      ul {
+        list-style: none;
+
+        li {
+          padding-left: 0;
+
+          @include breakpoint($tab) {
+            display: inline-block;
+            padding: 0 .8rem 0 0;
+            line-height: 1.8rem;
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #footer-menu .menu li.menu-item a {
+    @include adjust-font-size-to(14px);
+    margin: 0;
+  }
+}
+
+.node-type-publication {
+  .published-date {
+    font-weight: bold;
+  }
+}

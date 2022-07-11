@@ -1,0 +1,20 @@
+uuid: 2bf6530b-a5b9-46d0-a461-5b9435e8335f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pcsps_theme
+id: mainpagecontent
+theme: pcsps_theme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

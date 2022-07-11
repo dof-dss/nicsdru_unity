@@ -1,0 +1,30 @@
+uuid: 01021c66-0181-4a2b-be10-8ad27af3c06a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:f3e6af61-5a3d-4c42-9164-424b2bed5117'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: findyourpcsponfacebook
+theme: pcsps_theme
+region: bottom_widget_2
+weight: 0
+provider: null
+plugin: 'block_content:f3e6af61-5a3d-4c42-9164-424b2bed5117'
+settings:
+  id: 'block_content:f3e6af61-5a3d-4c42-9164-424b2bed5117'
+  label: 'Find your PCSP on facebook'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

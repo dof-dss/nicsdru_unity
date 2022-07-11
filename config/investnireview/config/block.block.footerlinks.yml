@@ -1,0 +1,30 @@
+uuid: 0035d0e7-7c18-46d5-a3bc-dfffc2cfde36
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-links
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - investnireview_theme
+id: footerlinks
+theme: investnireview_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-links'
+settings:
+  id: 'system_menu_block:menu-footer-links'
+  label: 'Footer links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

@@ -1,4 +1,4 @@
-uuid: 4f520607-ca54-4ae5-85a9-25bb4bdce54c
+uuid: 2e2373e1-2e7b-45da-b303-d9306e9c4f7e
 langcode: en
 status: true
 dependencies:
@@ -6,22 +6,24 @@ dependencies:
     - node
 _core:
   default_config_hash: cRfS39Vb-mPG2ciV1K9IKBto5SPXajzKtMooL8-sDGc
-id: default
 label: Default
+id: default
 description: ''
-attributes:
-  target:
-    id: target
-    weight: 0
-    settings:
-      widget_type: simple_checkbox
 matchers:
   8250b0de-30d1-4f86-82cc-d18dba7b3241:
-    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     id: 'entity:node'
-    weight: 0
+    uuid: 8250b0de-30d1-4f86-82cc-d18dba7b3241
     settings:
-      result_description: ''
+      metadata: ''
       bundles: {  }
       group_by_bundle: true
+      substitution_type: canonical
+      limit: 100
       include_unpublished: false
+      result_description: ''
+    weight: 0
+  68de6ce8-0ba2-481a-a3cf-7ba4e73e8c27:
+    id: email
+    uuid: 68de6ce8-0ba2-481a-a3cf-7ba4e73e8c27
+    settings: {  }
+    weight: 0

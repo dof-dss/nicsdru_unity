@@ -13,12 +13,11 @@ dependencies:
   module:
     - datetime
     - layout_builder
-    - options
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: NPhFJzlpWDozmRBPAI9DQkE5CVU2f6uDSICifLNJrnc
 id: node.publication.search_result
@@ -26,26 +25,21 @@ targetEntityType: node
 bundle: publication
 mode: search_result
 content:
-  field_publication_type:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_published_date:
-    weight: 0
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
 hidden:
   body: true
   content_moderation_control: true
   field_attachment: true
   field_meta_tags: true
+  field_publication_type: true
   langcode: true
   links: true
+  search_api_excerpt: true

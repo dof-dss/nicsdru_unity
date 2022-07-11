@@ -5,6 +5,26 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background-color: $brand-primary;
+    margin-top: 2rem;
+  }
+}
+
+#logo {
+  a {
+    display: block;
+
+    &:focus {
+      background: none;
+      border-bottom: none;
+      outline: 0.3rem dashed #949494;
+      outline-offset: 1.2rem;
+    }
+  }
+}
+
 .container-wrap {
   @include breakpoint($lap) {
     display: flex;

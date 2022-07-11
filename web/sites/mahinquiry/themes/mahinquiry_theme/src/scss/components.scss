@@ -150,7 +150,7 @@
       }
     }
 
-    .content {
+    #content #post-content .region-content .content {
       p {
         font-size: 2rem;
         font-weight: bold;
@@ -166,7 +166,16 @@
         }
       }
 
+      a {
+        color: $white;
+        border-bottom-color: $white;
 
+        &:hover {
+          color: $white;
+          border-bottom-color: $white;
+          background-color: $link-hover;
+        }
+      }
     }
   }
 
@@ -249,21 +258,6 @@
           font-size: 1.4rem;
           line-height: 1.8rem;
         }
-      }
-    }
-
-    a {
-      border-bottom: 1px solid $link;
-
-      &:hover {
-        border-bottom: 2px solid $link-underline;
-        margin-bottom: 0;
-      }
-
-      &:focus {
-        border-bottom: none;
-        outline: 2px solid $link;
-        outline-offset: 0;
       }
     }
   }

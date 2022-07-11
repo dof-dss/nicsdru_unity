@@ -1,0 +1,25 @@
+uuid: aaec2fec-2aeb-40e0-bcaf-9b9a8f9aad61
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - attorneygeneralni_theme
+id: sidemenu
+theme: attorneygeneralni_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'In this section'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

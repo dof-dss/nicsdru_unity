@@ -23,20 +23,21 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_ways_to_respond:
       children:
         - field_email_address
         - field_postal
+      label: 'Ways to respond'
       parent_name: ''
+      region: content
       weight: 5
       format_type: html_element
-      region: content
       format_settings:
-        id: respond
         classes: ''
+        id: respond
         element: div
         show_label: true
         label_element: h2
@@ -44,7 +45,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Ways to respond'
 _core:
   default_config_hash: klTP-tmG7HZOGRnXSeRaYsK1G0ueA_wO6Fznk8aUL5s
 id: node.consultation.full
@@ -53,60 +53,60 @@ bundle: consultation
 mode: full
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    weight: 4
-    region: content
     label: above
     settings:
       view_mode: embed
       link: false
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_consultation_dates:
-    weight: 1
+    type: daterange_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: uregni_medium
       separator: ''
     third_party_settings: {  }
-    type: daterange_default
+    weight: 1
     region: content
   field_email_address:
-    weight: 6
+    type: email_mailto
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: email_mailto
+    weight: 6
     region: content
   field_postal:
-    weight: 7
+    type: basic_string
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 7
     region: content
   field_published_date:
-    weight: 0
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: uregni_medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
   field_summary:
-    weight: 2
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
 hidden:
   content_moderation_control: true

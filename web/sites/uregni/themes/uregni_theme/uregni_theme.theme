@@ -7,6 +7,7 @@
 
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Render\Markup;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_preprocess_node().
@@ -53,26 +54,6 @@ function uregni_theme_preprocess_node(array &$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function uregni_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  if (!empty($variables['element']['#view_mode'])) {
-    $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_menu_alter().
- *
- * Provide region based menu suggestions.
- */
-function uregni_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
-  if (!empty($variables['attributes']['region'])) {
-    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_container_alter().
  */
 function uregni_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables) {
@@ -105,7 +86,14 @@ function uregni_theme_preprocess_field(&$variables) {
   if ($variables['element']['#bundle'] == 'publication_page') {
     if ($variables['element']['#field_name'] == 'body') {
       $body_format = $variables['items'][0]['content']['#format'];
+
       if ($body_format == 'basic_html_publications') {
+        $path = \Drupal::service('path_alias.manager')
+          ->getPathByAlias('/help-viewing-documents');
+        if (preg_match('/node\/(\d+)/', $path, $matches)) {
+          $node = Node::load($matches[1]);
+          $variables['node_id'] = $node->id();
+        }
         $body_text = &$variables['items'][0]['content']['#text'];
         // Set a regex pattern to look for body links. We don't want to target body links nested in text.
         // A pattern we want to match is:

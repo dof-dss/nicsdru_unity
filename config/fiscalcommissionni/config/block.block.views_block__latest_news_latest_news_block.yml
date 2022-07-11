@@ -19,8 +19,8 @@ plugin: 'views_block:latest_news-latest_news_block'
 settings:
   id: 'views_block:latest_news-latest_news_block'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
@@ -30,5 +30,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

@@ -18,12 +18,12 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    behaviors:
-      views-select-list:
-        status: 0
+    target_bundles:
+      nipb_board_members: nipb_board_members
     sort:
       field: name
       direction: ASC
-    target_bundles:
-      nipb_board_members: nipb_board_members
+    behaviors:
+      views-select-list:
+        status: 0
 field_type: entity_reference

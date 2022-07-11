@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   address: 0
   admin_toolbar: 0
@@ -15,6 +17,7 @@ module:
   config: 0
   config_filter: 0
   config_ignore: 0
+  config_split: 0
   contact: 0
   content_lock: 0
   content_lock_timeout: 0
@@ -26,14 +29,11 @@ module:
   date_facet_drilldown: 0
   datetime: 0
   datetime_range: 0
-  dblog: 0
   diff: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
-  easy_install: 0
   editor: 0
   embed: 0
-  employmenttribunalsni_breadcrumbs: 0
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_embed: 0
@@ -77,11 +77,6 @@ module:
   metatag_open_graph: 0
   metatag_twitter_cards: 0
   metatag_views: 0
-  migrate: 0
-  migrate_drupal: 0
-  migrate_plus: 0
-  migrate_tools: 0
-  migrate_upgrade: 0
   moderation_sidebar: 0
   node: 0
   node_edit_protection: 0
@@ -114,16 +109,15 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
   unity_map_embed: 0
   unity_search_pages: 0
-  update: 0
   user: 0
   views_custom_cache_tag: 0
-  views_ui: 0
   webform: 0
   webform_access: 0
   webform_node: 0
@@ -146,5 +140,3 @@ theme:
   nicsdru_unity_theme: 0
   employmenttribunalsni_theme: 0
 profile: nicsdru_unity_profile
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

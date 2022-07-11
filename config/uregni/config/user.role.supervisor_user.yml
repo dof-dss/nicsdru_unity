@@ -1,7 +1,46 @@
 uuid: f124b75e-a205-424e-b9cd-e259979590ae
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - core.entity_view_display.node.landing_page.default
+    - filter.format.basic_html
+    - filter.format.basic_html_publications
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.consultation
+    - node.type.feature
+    - node.type.featured_content_list
+    - node.type.landing_page
+    - node.type.news
+    - node.type.page
+    - node.type.publication_page
+    - node.type.staff_member
+    - node.type.vacancy
+    - workflows.workflow.nics_editorial_workflow
+  module:
+    - block_content_permissions
+    - content_moderation
+    - contextual
+    - entity_browser
+    - file
+    - filter
+    - layout_builder
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
+    - node
+    - origins_metatag
+    - origins_workflow
+    - path
+    - redirect
+    - scheduled_transitions
+    - system
+    - toolbar
+    - whatlinkshere
 id: supervisor_user
 label: 'supervisor user'
 weight: 5
@@ -11,13 +50,15 @@ permissions:
   - 'access administration pages'
   - 'access ckeditor link'
   - 'access content overview'
+  - 'access contextual links'
   - 'access files overview'
   - 'access location_browser entity browser pages'
-  - 'access media overview'
   - 'access toolbar'
   - 'add content to books'
   - 'add media from remote sources'
   - 'add scheduled transitions node consultation'
+  - 'add scheduled transitions node feature'
+  - 'add scheduled transitions node featured_content_list'
   - 'add scheduled transitions node news'
   - 'add scheduled transitions node page'
   - 'add scheduled transitions node publication_page'
@@ -29,10 +70,20 @@ permissions:
   - 'administer main menu items'
   - 'administer redirects'
   - 'audit content'
+  - 'configure editable landing_page node layout overrides'
+  - 'create accordion_menu block content'
+  - 'create and edit custom blocks'
   - 'create application content'
   - 'create article content'
   - 'create audio media'
+  - 'create banner_deep block content'
+  - 'create basic_block block content'
   - 'create book content'
+  - 'create card_contact block content'
+  - 'create card_nested_standard block content'
+  - 'create card_nested_wide block content'
+  - 'create card_standard block content'
+  - 'create card_wide block content'
   - 'create consultation content'
   - 'create contact content'
   - 'create department_management content'
@@ -45,25 +96,39 @@ permissions:
   - 'create files'
   - 'create gallery content'
   - 'create image media'
+  - 'create information_notice block content'
   - 'create irish_news content'
+  - 'create landing_page content'
   - 'create link content'
   - 'create new books'
   - 'create news content'
   - 'create page content'
+  - 'create plain_cards block content'
   - 'create profile content'
   - 'create publication content'
   - 'create publication_page content'
   - 'create remote_video media'
   - 'create staff_member content'
+  - 'create text block content'
   - 'create url aliases'
   - 'create vacancy content'
+  - 'create video block content'
   - 'create video media'
+  - 'create video_and_caption block content'
   - 'delete all revisions'
+  - 'delete any accordion_menu block content'
   - 'delete any application content'
   - 'delete any article content'
   - 'delete any audio files'
   - 'delete any audio media'
+  - 'delete any banner_deep block content'
+  - 'delete any basic_block block content'
   - 'delete any book content'
+  - 'delete any card_contact block content'
+  - 'delete any card_nested_standard block content'
+  - 'delete any card_nested_wide block content'
+  - 'delete any card_standard block content'
+  - 'delete any card_wide block content'
   - 'delete any consultation content'
   - 'delete any contact content'
   - 'delete any department_management content'
@@ -77,18 +142,24 @@ permissions:
   - 'delete any gallery content'
   - 'delete any image files'
   - 'delete any image media'
+  - 'delete any information_notice block content'
   - 'delete any irish_news content'
+  - 'delete any landing_page content'
   - 'delete any link content'
   - 'delete any news content'
   - 'delete any page content'
+  - 'delete any plain_cards block content'
   - 'delete any profile content'
   - 'delete any publication content'
   - 'delete any publication_page content'
   - 'delete any remote_video media'
   - 'delete any staff_member content'
+  - 'delete any text block content'
   - 'delete any vacancy content'
+  - 'delete any video block content'
   - 'delete any video files'
   - 'delete any video media'
+  - 'delete any video_and_caption block content'
   - 'delete application revisions'
   - 'delete article revisions'
   - 'delete cold_weather_payment revisions'
@@ -123,6 +194,7 @@ permissions:
   - 'delete own image files'
   - 'delete own image media'
   - 'delete own irish_news content'
+  - 'delete own landing_page content'
   - 'delete own link content'
   - 'delete own news content'
   - 'delete own page content'
@@ -170,6 +242,7 @@ permissions:
   - 'edit any image files'
   - 'edit any image media'
   - 'edit any irish_news content'
+  - 'edit any landing_page content'
   - 'edit any link content'
   - 'edit any news content'
   - 'edit any page content'
@@ -201,6 +274,7 @@ permissions:
   - 'edit own image files'
   - 'edit own image media'
   - 'edit own irish_news content'
+  - 'edit own landing_page content'
   - 'edit own link content'
   - 'edit own news content'
   - 'edit own page content'
@@ -222,6 +296,8 @@ permissions:
   - 'moderate content from needs_review to published'
   - 'moderate content from published to needs_review'
   - 'reschedule scheduled transitions node consultation'
+  - 'reschedule scheduled transitions node feature'
+  - 'reschedule scheduled transitions node featured_content_list'
   - 'reschedule scheduled transitions node news'
   - 'reschedule scheduled transitions node page'
   - 'reschedule scheduled transitions node publication_page'
@@ -259,6 +335,19 @@ permissions:
   - 'unflag featured_news'
   - 'unflag hide_content'
   - 'unflag home_page_display'
+  - 'update any accordion_menu block content'
+  - 'update any banner_deep block content'
+  - 'update any basic_block block content'
+  - 'update any card_contact block content'
+  - 'update any card_nested_standard block content'
+  - 'update any card_nested_wide block content'
+  - 'update any card_standard block content'
+  - 'update any card_wide block content'
+  - 'update any information_notice block content'
+  - 'update any plain_cards block content'
+  - 'update any text block content'
+  - 'update any video block content'
+  - 'update any video_and_caption block content'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition reject'
@@ -311,6 +400,8 @@ permissions:
   - 'view recipe revisions'
   - 'view scheduled content'
   - 'view scheduled transitions node consultation'
+  - 'view scheduled transitions node feature'
+  - 'view scheduled transitions node featured_content_list'
   - 'view scheduled transitions node news'
   - 'view scheduled transitions node page'
   - 'view scheduled transitions node publication_page'

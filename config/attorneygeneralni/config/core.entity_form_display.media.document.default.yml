@@ -1,4 +1,4 @@
-uuid: 126f0257-6f0b-4f5d-a18e-c75bf2cc6bc5
+uuid: 43180e0e-2f7f-4eb9-bba8-3b90e8872ee3
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - file
     - path
 _core:
-  default_config_hash: M9GFNtAXnjpHKLWFHMC9EVKtxzJWG6edYClhpWwGY4c
+  default_config_hash: 334GzowYbhWsuFG0vdQTiN5cn8NomyeUpoTLrAfAZ7A
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -22,12 +22,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_file:
+    type: file_generic
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -51,19 +51,19 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 100
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }

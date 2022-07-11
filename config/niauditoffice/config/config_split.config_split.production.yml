@@ -5,14 +5,15 @@ dependencies: {  }
 id: production
 label: Production
 description: 'Used for the production site only.'
+weight: 0
 folder: ../config/niauditoffice/production
 module:
   fastly: 0
 theme: {  }
 blacklist:
   - fastly.settings
+  - fastly.settings
 graylist:
   - niauditoffice_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

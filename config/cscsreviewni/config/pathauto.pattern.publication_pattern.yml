@@ -1,0 +1,24 @@
+uuid: 31f92011-55de-4891-88e1-81dd9465275c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Nw0DBgpepA9Keybg03nN9RXaeOQ_yuCkhJQhMtARKto
+id: publication_pattern
+label: 'Publication pattern'
+type: 'canonical_entities:node'
+pattern: 'publications/[node:title]'
+selection_criteria:
+  c79f8a57-5e28-4ca6-9744-5981bf13982e:
+    id: node_type
+    negate: false
+    uuid: c79f8a57-5e28-4ca6-9744-5981bf13982e
+    context_mapping:
+      node: node
+    bundles:
+      publication: publication
+selection_logic: and
+weight: -5
+relationships: {  }

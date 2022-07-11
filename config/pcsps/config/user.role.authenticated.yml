@@ -1,0 +1,29 @@
+uuid: c5742717-bbe0-41e4-a8e5-6fa0e3fe94b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - google_analytics
+    - media
+    - node
+    - system
+_core:
+  default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view all revisions'
+  - 'view media'
+  - 'view own unpublished content'

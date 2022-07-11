@@ -1,4 +1,4 @@
-uuid: 65ae26fe-a426-4a02-a1aa-d1cf02fad984
+uuid: 9ff02195-76fc-41f9-a0e9-548da6865e57
 langcode: en
 status: true
 dependencies:
@@ -18,23 +18,29 @@ bundle: webform
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   webform:
-    weight: 102
+    type: webform_entity_reference_entity_view
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 102
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

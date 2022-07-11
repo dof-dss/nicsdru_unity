@@ -1,7 +1,14 @@
 uuid: a6020158-b508-4023-9188-bcd20569d396
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - google_analytics
+    - media
+    - node
+    - pathauto
+    - system
 _core:
   default_config_hash: ttiBMK8DYIdLARGEG2nyY1Pv--Zz53eCjlO7fmrnAT4
 id: authenticated

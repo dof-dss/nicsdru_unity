@@ -14,12 +14,12 @@ bundle: image
 mode: default
 content:
   field_file_image_caption_text:
-    label: hidden
-    weight: 2
     type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_file_image_alt_text: true

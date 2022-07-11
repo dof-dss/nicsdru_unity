@@ -184,7 +184,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p>General email: <a href=\"mailto:info@FiscalCommissionNI.org\_\">info@FiscalCommissionNI.org&nbsp;</a></p>\r\n\r\n<p>For press queries: <a href=\"mailto:press@FiscalCommissionNI.org\">press@FiscalCommissionNI.org</a></p>\r\n"
+          value: "<p>General email: <a href=\"mailto:info@FiscalCommissionNI.org\_\">info@FiscalCommissionNI.org&nbsp;</a></p>\r\n\r\n<p></p>\r\n"
           summary: ''
           format: basic_html
   -
@@ -197,6 +197,15 @@ blocks:
     fields:
       body:
         -
-          value: "<p>The Independent Fiscal Commission for Northern Ireland welcomes your input in terms of key priorities and areas of focus for the Commission, as well as any evidence you feel could helpfully inform our work. Please email us at <a href=\"mailto:info@fiscalcommissionni.org\">info@FiscalCommissionNI.org</a> with your views.</p>\r\n"
+          value: ""
           summary: ''
           format: basic_html
+  -
+    info: 'Social links'
+    langcode: en
+    uuid: 7db07ffc-7e4d-4f47-b07d-dafa7429e34b
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }

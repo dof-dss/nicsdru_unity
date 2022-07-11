@@ -1,25 +1,31 @@
+_core:
+  default_config_hash: g1xKHKD8msGv9RR5tnTxVhqTCkof96Cd4KF4mOLEntI
 report-only:
   enable: true
   directives:
     default-src:
       base: self
     connect-src:
+      base: self
       sources:
         - 'https://www.google-analytics.com'
-      base: self
     font-src:
+      base: self
       sources:
         - 'https://themes.googleusercontent.com'
         - 'https://fonts.gstatic.com'
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
-      base: self
     frame-src:
+      base: self
       sources:
         - 'https://www.youtube.com'
-      base: self
+        - 'https://twitter.com'
+        - platform.twitter.com
+        - syndication.twitter.com
     img-src:
+      base: self
       sources:
         - 'https://translate.google.com'
         - 'https://www.googletagmanager.com'
@@ -30,29 +36,47 @@ report-only:
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
-      base: self
+        - abs.twimg.com
+        - 'https://pbs.twimg.com'
+        - ton.twimg.com
+        - platform.twitter.com
+        - 'https://syndication.twitter.com'
     manifest-src:
       base: self
     script-src:
+      base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-      base: self
+        - 'https://cdn.syndication.twimg.com'
+        - api.twitter.com
+        - platform.twitter.com
     script-src-attr:
       base: self
     script-src-elem:
+      base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-      base: self
+        - 'https://cdn.syndication.twimg.com'
+        - api.twitter.com
+        - platform.twitter.com
     style-src:
       base: self
-    style-src-attr:
       flags:
         - unsafe-inline
+      sources:
+        - 'https://ton.twimg.com'
+        - platform.twitter.com
+    style-src-attr:
       base: self
+      flags:
+        - unsafe-inline
     style-src-elem:
       base: self
+      sources:
+        - 'https://ton.twimg.com'
+        - platform.twitter.com
     block-all-mixed-content: true
   reporting:
     plugin: sitelog
@@ -62,48 +86,46 @@ enforce:
     default-src:
       base: self
     font-src:
+      base: self
       sources:
         - 'https://themes.googleusercontent.com'
         - 'https://fonts.gstatic.com'
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
-      base: self
     frame-src:
+      base: self
       sources:
         - 'https://www.youtube.com'
-      base: self
     img-src:
+      base: self
       sources:
         - 'https://cdn.jsdelivr.net'
         - 'https://i.ytimg.com'
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
-      base: self
     script-src:
+      base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-      base: self
     script-src-elem:
+      base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-      base: self
     style-src:
       base: self
     style-src-attr:
+      base: self
       flags:
         - unsafe-inline
-      base: self
     style-src-elem:
+      base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-      base: self
     block-all-mixed-content: true
   reporting:
     plugin: sitelog
-_core:
-  default_config_hash: g1xKHKD8msGv9RR5tnTxVhqTCkof96Cd4KF4mOLEntI

@@ -1,0 +1,18 @@
+uuid: 21912776-045d-45ad-9a96-eacd546a616d
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+weight: 0
+folder: ../config/cscsreviewni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - cscsreviewni_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true

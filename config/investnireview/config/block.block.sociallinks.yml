@@ -1,0 +1,30 @@
+uuid: 0157da55-3ca0-41bc-9166-c3327c4d184d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:eb967b82-69ca-4bb1-8a8a-e1ea8254ac3f'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - investnireview_theme
+id: sociallinks
+theme: investnireview_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:eb967b82-69ca-4bb1-8a8a-e1ea8254ac3f'
+settings:
+  id: 'block_content:eb967b82-69ca-4bb1-8a8a-e1ea8254ac3f'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

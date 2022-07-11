@@ -27,13 +27,11 @@ We call a macro which calls itself to render the full tree.
 {% macro menu_links(items, attributes, menu_level, parent) %}
   {% import _self as menus %}
   {% if items %}
-    {%
-      set parent_classes = [
+    {% set parent_classes = [
       'menu-item',
       'leaf',
       'first'
-    ]
-    %}
+    ] %}
     {% if menu_level != 0 %}
       <ul{{ attributes.addClass('menu').removeAttribute('region') }}>
       {% if menu_level == 1 %}
@@ -43,15 +41,13 @@ We call a macro which calls itself to render the full tree.
       {% endif %}
     {% endif %}
     {% for item in items %}
-      {%
-        set classes = [
+      {% set classes = [
         'menu-item',
         item.is_expanded ? 'expanded' : 'leaf',
         item.is_collapsed ? 'collapsed',
         item.in_active_trail ? 'active-trail',
         loop.last ? 'last',
-      ]
-      %}
+      ] %}
       {% if menu_level == 0 %}
         {% if item.below %}
           {% set parent = item %}
@@ -66,6 +62,8 @@ We call a macro which calls itself to render the full tree.
         </li>
       {% endif %}
     {% endfor %}
-    </ul>
+    {% if menu_level != 0 %}
+      </ul>
+    {% endif %}
   {% endif %}
 {% endmacro %}

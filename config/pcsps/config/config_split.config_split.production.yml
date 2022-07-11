@@ -1,0 +1,17 @@
+uuid: a3fad248-b001-471c-89dc-1dab1186a509
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+weight: 0
+folder: ../config/pcsps/production
+module: {  }
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - pcsps_theme.settings
+graylist_dependents: true
+graylist_skip_equal: true

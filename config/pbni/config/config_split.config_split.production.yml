@@ -5,11 +5,14 @@ dependencies: {  }
 id: production
 label: production
 description: 'Used for the production site only.'
+weight: 0
 folder: ../config/pbni/production
-module: {  }
+module:
+  fastly: 0
 theme: {  }
-blacklist: {  }
-graylist: {  }
+blacklist:
+  - fastly.settings
+graylist:
+  - pbni_theme.settings
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

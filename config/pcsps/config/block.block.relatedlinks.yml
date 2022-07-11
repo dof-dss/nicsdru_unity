@@ -1,0 +1,25 @@
+uuid: 25e6b203-da03-43c6-948a-ae97f0f3a942
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:d8fbeabb-c564-4426-bdc3-0ff778759362'
+  module:
+    - block_content
+  theme:
+    - pcsps_theme
+id: relatedlinks
+theme: pcsps_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:d8fbeabb-c564-4426-bdc3-0ff778759362'
+settings:
+  id: 'block_content:d8fbeabb-c564-4426-bdc3-0ff778759362'
+  label: 'Related links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

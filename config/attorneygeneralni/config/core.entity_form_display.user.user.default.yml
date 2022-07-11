@@ -1,4 +1,4 @@
-uuid: 5757e9d7-8931-45cb-98bd-9b3b85e46fd3
+uuid: 13dd0113-1826-4d9b-b871-6f9ee0846470
 langcode: en
 status: true
 dependencies:
@@ -22,6 +22,11 @@ content:
   contact:
     weight: 5
     region: content
+  google_analytics:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
@@ -36,11 +41,11 @@ content:
     region: content
   user_picture:
     type: image_image
+    weight: -1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: -1
-    region: content
 hidden:
   langcode: true

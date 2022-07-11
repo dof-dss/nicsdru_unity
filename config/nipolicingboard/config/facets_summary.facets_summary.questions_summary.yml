@@ -9,25 +9,6 @@ dependencies:
     - search_api
 id: questions_summary
 name: 'Questions summary'
-facets:
-  committee:
-    checked: true
-    label: Committee
-    separator: ', '
-    weight: 0
-    show_count: false
-  question_type:
-    checked: true
-    label: 'Question type'
-    separator: ', '
-    weight: 0
-    show_count: false
-  questions_date:
-    checked: true
-    label: 'Date asked'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__questions_search__questions_search_page'
 processor_configs:
   hide_when_not_rendered:
@@ -35,3 +16,22 @@ processor_configs:
     weights:
       build: '45'
     settings: {  }
+facets:
+  committee:
+    checked: true
+    label: Committee
+    separator: ', '
+    show_count: false
+    weight: 0
+  question_type:
+    checked: true
+    label: 'Question type'
+    separator: ', '
+    show_count: false
+    weight: 0
+  questions_date:
+    checked: true
+    label: 'Date asked'
+    separator: ', '
+    show_count: false
+    weight: 0
