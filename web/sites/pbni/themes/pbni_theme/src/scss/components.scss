@@ -247,8 +247,8 @@
 }
 
 .middle-area {
-  background: #d5e8e9;
-  padding: 6rem;
+  background: resolve('front-bg.png') no-repeat 50% 50%;
+  padding: 10rem;
 
   .column {
     max-width: 1044px;
@@ -304,17 +304,19 @@
   .content {
     ul {
       li {
-        height: 19.5rem;
-        width: 19rem;
+        height: 21rem;
+        width: 21rem;
 
         @media screen and (max-width: $tab) {
           height: 19.2rem;
         }
 
         a {
-          padding: 1rem 0 4.4rem 1rem;
+          padding: 7rem 7rem 5rem 5rem;
           border-bottom: none;
           color: $white;
+          display: inline-flex;
+          vertical-align: middle;
 
           &:hover,
           &:focus {
@@ -326,7 +328,7 @@
         &:first-child,
         &:last-child {
           a {
-            padding-bottom: 1.7rem;
+            padding-bottom: 5rem;
 
             @media screen and (max-width: $tab) {
               padding-bottom: 2rem;
@@ -335,23 +337,19 @@
         }
 
         &:first-child {
-          background: $charcoal resolve('for-people-under-supervision.png') no-repeat 0 100%;
+          background: resolve('circle-bg.png') no-repeat 0 100%;
         }
 
         &:nth-child(2) {
-          background: $charcoal resolve('for-sentencers.png') no-repeat 0 100%;
+          background:  resolve('circle-bg1.png') no-repeat 0 100%;
         }
 
         &:nth-child(3) {
-          background: $charcoal resolve('for-victims.png') no-repeat 0 100%;
+          background:  resolve('circle-bg2.png') no-repeat 0 100%;
         }
 
         &:nth-child(4) {
-          background: $charcoal resolve('for-the-community.png') no-repeat 0 100%;
-        }
-
-        &:nth-child(5) {
-          background: $charcoal resolve('for-partner-organisations.png') no-repeat 0 100%;
+          background:  resolve('circle-bg3.png') no-repeat 0 100%;
         }
       }
     }
@@ -361,6 +359,7 @@
 #block-homepage3links {
   .content {
     ul {
+      display: grid;
       li {
         padding: 1.8rem 9rem;
 
@@ -370,13 +369,13 @@
         }
 
         &:nth-child(2) {
-          background: resolve('real-stories.png') no-repeat;
-          border: 2px solid #926d07;
+          background: resolve('programmes.png') no-repeat;
+          border: 2px solid $brand-secondary;
         }
 
         &:last-child {
-          background: resolve('programmes.png') no-repeat;
-          border: 2px solid $brand-secondary;
+          background: resolve('real-stories.png') no-repeat;
+          border: 2px solid #926d07;
         }
 
         a:hover {
