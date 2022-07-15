@@ -11,7 +11,7 @@ dependencies:
 id: homepage3links
 theme: pbni_theme
 region: bottom_widget_1
-weight: -11
+weight: -12
 provider: null
 plugin: 'block_content:b3c731f7-5eef-4673-b249-d5b3f0a236ce'
 settings:

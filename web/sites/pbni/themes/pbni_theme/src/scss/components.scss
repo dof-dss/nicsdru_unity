@@ -115,23 +115,24 @@
   }
 }
 
-#content #top-area .twitter-block h2 a.twitter-link {
+#content #bottom-area .twitter-block h2 a.twitter-link {
   color: $white;
   border-bottom-color: $white;
 
   &:focus {
     background-color: $white;
-    color: $link;
+    color: $white;
   }
 }
 
-#top-area {
+#bottom-area {
   margin: 2rem auto;
   text-align: left;
 
   h2 {
     color: $headings;
-    @include adjust-font-size-to(30px);
+    @include adjust-font-size-to(25px);
+    margin: 1.5rem 0 1.2rem;
   }
 
   .twitter-block {
@@ -144,6 +145,14 @@
         border: 1px solid $white;
         border-radius: 100%;
         padding: .5rem;
+      }
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $brand-secondary;
+        }
       }
     }
   }
@@ -247,8 +256,13 @@
 }
 
 .middle-area {
-  background: resolve('front-bg.png') no-repeat 50% 50%;
-  padding: 10rem;
+  background: resolve('middle-bg1.png') no-repeat 50% 50%;
+  padding: 3rem;
+
+  h2 {
+    color: $headings;
+    @include adjust-font-size-to(40px);
+  }
 
   .column {
     max-width: 1044px;
@@ -263,7 +277,6 @@
     margin-left: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
 
     li {
       display: inline-block;
@@ -283,11 +296,10 @@
 #bottom_wrapper {
   max-width: 1044px;
   margin: 0 auto;
-  padding: 4.8rem 0 4.2rem;
+
 
   .footer-area .column {
-    width: 100%;
-    padding: 0 1rem;
+    width: 50%;
     margin: 0;
   }
 }
@@ -304,19 +316,18 @@
   .content {
     ul {
       li {
-        height: 21rem;
-        width: 21rem;
+        height: 23rem;
+        width: 23rem;
 
         @media screen and (max-width: $tab) {
-          height: 19.2rem;
+          height: 21rem;
         }
 
         a {
-          padding: 7rem 7rem 5rem 5rem;
+          margin: 11rem 4rem 0rem 2rem;
           border-bottom: none;
           color: $white;
-          display: inline-flex;
-          vertical-align: middle;
+          text-align: center;
 
           &:hover,
           &:focus {
@@ -325,16 +336,10 @@
           }
         }
 
-        &:first-child,
-        &:last-child {
-          a {
-            padding-bottom: 5rem;
-
             @media screen and (max-width: $tab) {
               padding-bottom: 2rem;
             }
-          }
-        }
+
 
         &:first-child {
           background: resolve('circle-bg.png') no-repeat 0 100%;
@@ -360,6 +365,7 @@
   .content {
     ul {
       display: grid;
+      justify-content: start;
       li {
         padding: 1.8rem 9rem;
 
@@ -378,6 +384,9 @@
           border: 2px solid #926d07;
         }
 
+        a {
+          display: inline;
+        }
         a:hover {
           margin-bottom: -1px;
         }
@@ -492,9 +501,6 @@
   }
 }
 
-
-
-
 .board-members {
   display: flex;
   flex-flow: column;
@@ -542,4 +548,7 @@
 
 .media-image figure figcaption {
   display: none;
+}
+#inner_header_wrapper {
+  background: resolve('nav-bg.png') no-repeat 50% 50%;
 }
