@@ -50,6 +50,8 @@ relationships:
   pcsps: 'db:pcsps'
   pcsps_solr: 'solr:pcsps'
   cscsreviewni: 'db:cscsreviewni'
+  mentalhealthchampion: 'db:mentalhealthchampion'
+  mentalhealthchampion_solr: 'solr:mentalhealthchampion';
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -240,3 +242,6 @@ crons:
   pcsps:
     spec: '10 * * * *'
     cmd: 'cd web/sites/pcsps ; drush core-cron'
+  mentalhealthchampion:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/mentalhealthchampion ; drush core-cron'
