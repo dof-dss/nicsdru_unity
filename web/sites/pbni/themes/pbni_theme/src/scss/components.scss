@@ -256,20 +256,26 @@
 }
 
 .middle-area {
-  background: resolve('middle-bg1.png') no-repeat 50% 50%;
-  padding: 3rem;
+  @include breakpoint($tab) {
+    background: resolve('middle-bg1.png') no-repeat 50% 50%;
+    padding: 3rem;
+  }
+    background: resolve('middle-bg-resp.png') no-repeat 50% 50%;
 
-  h2 {
-    color: $headings;
-    @include adjust-font-size-to(40px);
+    h2 {
+      color: $headings;
+      text-align: left;
+      text-transform: uppercase;
+      @include adjust-font-size-to(40px);
+    }
+
+    .column {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
   }
 
-  .column {
-    max-width: 1044px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-}
 
 .middle-area,
 #bottom-area {
@@ -298,7 +304,7 @@
 
 
   .footer-area .column {
-    width: 50%;
+    width: 100%;
     margin: 0;
   }
 }
@@ -321,6 +327,7 @@
         @media screen and (max-width: $tab) {
           height: 21rem;
         }
+
 
         a {
           margin: 11rem 4rem 0rem 2rem;
@@ -393,7 +400,11 @@
     }
   }
 }
-
+#bottom-area {
+  .column:last-child {
+    float: left;
+  }
+}
 #footer {
   max-width: 100%;
 
@@ -549,5 +560,7 @@
   display: none;
 }
 #inner_header_wrapper {
-  background: resolve('nav-bg.png') no-repeat 50% 50%;
+  @include breakpoint($tab) {
+    background: resolve('nav-bg.png') no-repeat 50%;
+  }
 }
