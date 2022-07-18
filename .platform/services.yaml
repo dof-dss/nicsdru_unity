@@ -27,7 +27,7 @@ db:
       - investnireviewdb
       - pcspsdb
       - cscsreviewnidb
-      - mentalhealthchampion-nidb
+      - mentalhealthchampiondb
     endpoints:
       uregni:
         default_schema: uregnidb
