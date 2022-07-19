@@ -51,7 +51,7 @@ relationships:
   pcsps_solr: 'solr:pcsps'
   cscsreviewni: 'db:cscsreviewni'
   mentalhealthchampion: 'db:mentalhealthchampion'
-  mentalhealthchampion_solr: 'solr:mentalhealthchampion';
+  mentalhealthchampion_solr: 'solr:mentalhealthchampion'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
