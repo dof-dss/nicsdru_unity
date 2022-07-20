@@ -325,22 +325,21 @@
         width: 23rem;
 
         @media screen and (max-width: $tab) {
-          height: 21rem;
+          height: 22rem;
         }
 
-
         a {
-          margin: 11rem 4rem 0rem 2rem;
+          margin: 11rem 4.5rem 0rem 2rem;
           border-bottom: none;
           color: $white;
           text-align: center;
+        }
 
           &:hover,
           &:focus {
             border-bottom: none;
             text-decoration: underline;
           }
-        }
 
             @media screen and (max-width: $tab) {
               padding-bottom: 2rem;
@@ -563,4 +562,12 @@
   @include breakpoint($tab) {
     background: resolve('nav-bg.png') no-repeat 50%;
   }
-}
+
+.top_left #logo {
+  position: static;
+  }
+    img {
+      height: 99px;
+    }
+  }
+
