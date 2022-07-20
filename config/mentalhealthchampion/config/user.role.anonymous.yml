@@ -9,7 +9,6 @@ dependencies:
     - eu_cookie_compliance
     - filter
     - media
-    - search
     - system
 _core:
   default_config_hash: 9LODQAOK6MOVWRCgrgZRvkIYBG5aX0Ksd4ygTzmuFVo
@@ -22,6 +21,5 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'display eu cookie compliance popup'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view media'
