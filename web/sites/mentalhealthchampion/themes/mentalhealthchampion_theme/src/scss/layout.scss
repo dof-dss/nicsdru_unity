@@ -5,6 +5,13 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
+#headerHero {
+  @media screen and (max-width: $tab) {
+    background-color: $brand-primary;
+    margin-top: 2rem;
+  }
+}
+
 .path-news,
 .path-publications {
   .content-sidebar-wrap {
@@ -38,6 +45,33 @@
 
     .metaListItem {
       margin-left: 2rem;
+    }
+  }
+}
+
+#footer {
+  max-width: 1160px;
+  padding: 2rem;
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    padding-left: 0;
+    font-size: 1.6rem;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
     }
   }
 }
