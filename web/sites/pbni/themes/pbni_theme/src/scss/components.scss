@@ -323,16 +323,22 @@
       li {
         height: 23rem;
         width: 23rem;
-
-        @media screen and (max-width: $tab) {
-          height: 22rem;
-        }
-
+        background: no-repeat 0 100% /contain;
         a {
-          margin: 11rem 4.5rem 0rem 2rem;
+          margin: 11rem 3rem 0rem 2rem;
           border-bottom: none;
           color: $white;
           text-align: center;
+        }
+        @media screen and (max-width: 913px) {
+          height: 16rem;
+          width: 16rem;
+        a {
+          margin: 7rem 3rem 0rem 2rem;
+          border-bottom: none;
+          color: $white;
+          text-align: center;
+          }
         }
 
           &:hover,
@@ -347,19 +353,19 @@
 
 
         &:first-child {
-          background: resolve('circle-bg.png') no-repeat 0 100%;
+          background-image: resolve('circle-bg.png') ;
         }
 
         &:nth-child(2) {
-          background:  resolve('circle-bg1.png') no-repeat 0 100%;
+          background-image:  resolve('circle-bg1.png') ;
         }
 
         &:nth-child(3) {
-          background:  resolve('circle-bg2.png') no-repeat 0 100%;
+          background-image:  resolve('circle-bg2.png') ;
         }
 
         &:nth-child(4) {
-          background:  resolve('circle-bg3.png') no-repeat 0 100%;
+          background-image:  resolve('circle-bg3.png') ;
         }
       }
     }
