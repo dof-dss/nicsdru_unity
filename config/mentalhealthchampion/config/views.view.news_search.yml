@@ -419,7 +419,7 @@ display:
       menu:
         type: normal
         title: News
-        weight: -48
+        weight: -47
         menu_name: main
     cache_metadata:
       max-age: -1
