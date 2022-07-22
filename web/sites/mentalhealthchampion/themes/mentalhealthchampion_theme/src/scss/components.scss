@@ -135,27 +135,22 @@
 .front {
   .front-banner {
     max-width: 1160px;
-    margin: 0 auto 2rem;
-
-    @include breakpoint($tab) {
-      margin: 0 auto 4rem;
-    }
+    margin: 0 auto;
   }
 
   #top-area {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background: #fafafa;
     max-width: 100%;
 
-    @include breakpoint($phab) {
-      padding: 0 2rem;
+    @include breakpoint($tab) {
+      padding: 4rem 0;
     }
 
     @include breakpoint($tab) {
       .container-wrap {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 4rem;
 
         .column {
           flex-basis: 45%;
@@ -169,15 +164,38 @@
       padding: 1rem 2.5rem;
       background: $white;
       margin: 1rem;
-      border: 1px solid $black;
+      border: 1px solid $grey-medium;
 
       @include breakpoint($tab) {
         margin: 0;
       }
 
+      .content {
+        padding-top: 0;
+      }
+
+      a.btn {
+        background: $charcoal;
+        border-radius: 2.3rem;
+
+        &:hover,
+        &:focus {
+          background: $ash-grey;
+        }
+
+        &:focus {
+          border-color: $black;
+        }
+      }
+
+      a.twitter-link {
+        margin-top: 4rem;
+      }
+
       h2 {
         font-weight: bold;
         color: $headings;
+        @include adjust-font-size-to(24px);
       }
 
       article.node--type-news {
@@ -200,8 +218,8 @@
 }
 
 .seeking-support {
-  background: #333;
-  border-top: 8px solid #6855e3;
+  background: $black resolve('mhc-border-top.png') no-repeat;
+  background-size: contain;
 
   @media screen and (max-width: 1036px){
     padding: 0 1rem;
@@ -215,36 +233,37 @@
   .row {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0 6rem;
 
-    ul {
+    ul:not(.contextual-links) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       list-style: none;
-      margin: 0;
+      margin: 5rem 0 0;
 
       li {
         background: $white;
         text-align: center;
-        padding: 14rem 2rem 2rem;
-        width: 200px;
+        padding: 14rem 1.2rem 3rem;
+        width: 22rem;
         margin-bottom: 2rem;
+        word-wrap: break-word;
 
         &:first-child {
-          background: $white ;
+          background: $white resolve('mindingyourhead.png') no-repeat;
         }
 
         &:nth-child(2) {
-          background: $white;
+          background: $white resolve('communitywellbeing.png') no-repeat;
         }
 
         &:nth-child(3) {
-          background: $white;
+          background: $white resolve('samaritans.png') no-repeat;
         }
 
         &:last-child {
-          background: $white;
+          background: $white resolve('lifeline.png') no-repeat;
         }
       }
     }
