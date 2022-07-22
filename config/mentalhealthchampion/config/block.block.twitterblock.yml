@@ -16,8 +16,8 @@ provider: null
 plugin: 'block_content:747204d8-0bf8-4146-8cc3-035dd9b92f69'
 settings:
   id: 'block_content:747204d8-0bf8-4146-8cc3-035dd9b92f69'
-  label: 'Twitter block'
-  label_display: '0'
+  label: Twitter
+  label_display: visible
   provider: block_content
   status: true
   info: ''
