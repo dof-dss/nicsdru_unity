@@ -30,7 +30,7 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
     // served from sites/mentalhealthchampion rather than
     // sites/mentalhealthchampion-ni)
     if (strpos($subdomain, '-')) {
-      $subdomain = substr($subdomain, 0, strpos($newhost, '-'));
+      $subdomain = substr($subdomain, 0, strpos($subdomain, '-'));
     }
     $sites[$host] = $subdomain;
   }
