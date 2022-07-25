@@ -56,7 +56,7 @@ services:
     core: default
     config:
       dir: .lando/config/solr/7.x/default
-  mentalhealthchampion_solr:
+  mentalhealthchampionni_solr:
     type: solr:7
     portforward: true
     core: default
