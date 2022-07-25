@@ -27,11 +27,9 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
     $subdomain = substr($newhost, 0, strpos($newhost, '.'));
     // Check for doamin names that contain dashes and strip them out.
     // (This ensures that sites like mentalhealthchampion-ni.org.uk may be
-    // served from sites/mentalhealthchampion rather than
+    // served from sites/mentalhealthchampionni rather than
     // sites/mentalhealthchampion-ni)
-    if (strpos($subdomain, '-')) {
-      $subdomain = substr($subdomain, 0, strpos($subdomain, '-'));
-    }
+    $subdomain = str_replace('-','',$subdomain);
     $sites[$host] = $subdomain;
   }
 }
