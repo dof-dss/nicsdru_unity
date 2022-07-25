@@ -162,7 +162,7 @@
     justify-content: space-between;
 
     .column {
-      flex-basis: 48%;
+      flex-basis: 50%;
     }
   }
 
@@ -260,7 +260,7 @@
     background: resolve('middle-bg1.png') no-repeat 50% 50%;
     padding: 3rem;
   }
-    background: resolve('middle-bg-resp.png') no-repeat 50% 50%;
+    background: resolve('mobile-bg1.png') no-repeat 50% 50%;
 
     h2 {
       color: $headings;
@@ -330,6 +330,7 @@
           color: $white;
           text-align: center;
         }
+
         @media screen and (max-width: 913px) {
           height: 16rem;
           width: 16rem;
@@ -339,7 +340,13 @@
           color: $white;
           text-align: center;
           }
+
+          &:first-child {
+        a {
+          margin: 6rem 3rem 0rem 2rem;
         }
+      }
+    }
 
           &:hover,
           &:focus {
@@ -377,6 +384,7 @@
     ul {
       display: grid;
       justify-content: start;
+      width: 100%;
       li {
         padding: 1.8rem 9rem;
 
