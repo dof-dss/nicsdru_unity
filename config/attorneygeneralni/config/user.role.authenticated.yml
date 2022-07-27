@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.basic_html
   module:
-    - contact
     - filter
     - media
     - node
@@ -22,7 +21,6 @@ permissions:
   - 'access administration menu'
   - 'access content'
   - 'access media browser'
-  - 'access site-wide contact form'
   - 'access workbench'
   - 'diff view changes'
   - 'notify of path changes'
