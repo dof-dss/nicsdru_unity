@@ -25,6 +25,11 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
     //  - hatecrimereviewni.org.uk.master-7rqtwti-6tlkpwbr6tndk.uk-1.platformsh.site
     $newhost = str_replace('www.','',$host);
     $subdomain = substr($newhost, 0, strpos($newhost, '.'));
+    // Check for domain names that contain dashes and strip them out.
+    // (This ensures that sites like mentalhealthchampion-ni.org.uk may be
+    // served from sites/mentalhealthchampionni rather than
+    // sites/mentalhealthchampion-ni)
+    $subdomain = str_replace('-','',$subdomain);
     $sites[$host] = $subdomain;
   }
 }

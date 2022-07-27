@@ -12,11 +12,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: senior_management
-      label: 'Senior management'
-    -
       value: board_member
       label: 'Board member'
+    -
+      value: senior_management
+      label: 'Senior management'
   allowed_values_function: ''
 module: options
 locked: false
