@@ -257,7 +257,7 @@
 
 .middle-area {
   @include breakpoint($tab) {
-    background: resolve('middle-bg1.png') no-repeat 50% 50%;
+    background: resolve('Middle-bg1.png') no-repeat 50% 50%;
     padding: 3rem;
   }
     background-color: ($white) no-repeat 50% 50%;
@@ -359,19 +359,19 @@
 
 
         &:first-child {
-          background-image: resolve('circle-bg.png') ;
+          background-image: resolve('Circle-bg.png') ;
         }
 
         &:nth-child(2) {
-          background-image:  resolve('circle-bg1.png') ;
+          background-image:  resolve('Circle-bg1.png') ;
         }
 
         &:nth-child(3) {
-          background-image:  resolve('circle-bg2.png') ;
+          background-image:  resolve('Circle-bg2.png') ;
         }
 
         &:nth-child(4) {
-          background-image:  resolve('circle-bg3.png') ;
+          background-image:  resolve('Circle-bg3.png') ;
         }
       }
     }
@@ -573,7 +573,7 @@
 }
 #inner_header_wrapper {
   @include breakpoint($tab) {
-    background: resolve('nav-bg.png') no-repeat 50%;
+    background: resolve('Nav-bg.png') no-repeat 50%;
   }
 
 .top_left #logo {
