@@ -5,7 +5,7 @@ dependencies:
   config:
     - views.view.latest_news
   module:
-    - ctools
+    - node
     - views
   theme:
     - nipolicingboard_theme
