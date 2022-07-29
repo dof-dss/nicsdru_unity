@@ -10,7 +10,7 @@ dependencies:
 id: breadcrumbs
 theme: uregni_theme
 region: breadcrumb
-weight: -17
+weight: -14
 provider: null
 plugin: system_breadcrumb_block
 settings:

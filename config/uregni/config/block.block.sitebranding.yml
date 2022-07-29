@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: uregni_theme
 region: header
-weight: -17
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:

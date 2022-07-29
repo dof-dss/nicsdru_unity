@@ -9,7 +9,7 @@ dependencies:
 id: sociallinks
 theme: uregni_theme
 region: footer_second
-weight: -16
+weight: 0
 provider: null
 plugin: 'block_content:a8acec22-29a6-41f8-b6e1-c8c4eaf4f412'
 settings:
