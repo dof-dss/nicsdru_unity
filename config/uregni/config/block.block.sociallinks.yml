@@ -8,8 +8,8 @@ dependencies:
     - uregni_theme
 id: sociallinks
 theme: uregni_theme
-region: footer_second
-weight: 0
+region: header
+weight: -16
 provider: null
 plugin: 'block_content:a8acec22-29a6-41f8-b6e1-c8c4eaf4f412'
 settings:
