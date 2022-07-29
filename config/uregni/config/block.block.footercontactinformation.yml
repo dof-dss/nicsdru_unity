@@ -11,7 +11,7 @@ dependencies:
 id: footercontactinformation
 theme: uregni_theme
 region: footer_second
-weight: 0
+weight: -17
 provider: null
 plugin: 'block_content:7efbaa9e-22a2-4819-9822-9d157ce79a78'
 settings:
