@@ -1,14 +1,14 @@
-uuid: 8885bb3f-0719-41a5-95b2-b451f3a6e61a
+uuid: 55b7bf8c-cf6a-4f10-a588-6afcadc7f0a1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_featured_content
+    - entityqueue.entity_queue.slideshow
     - field.storage.node.field_link_url
     - field.storage.node.field_photo
     - field.storage.node.field_teaser
-    - node.type.featured_content_list
   module:
+    - entityqueue
     - link
     - node
     - slick_views
@@ -24,145 +24,17 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
       title: Slideshow
       fields:
-        field_featured_content:
-          id: field_featured_content
-          table: node__field_featured_content
-          field: field_featured_content
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: full
-          group_column: target_id
-          group_columns: {  }
-          group_rows: false
-          delta_limit: 6
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: field_featured_content
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_link_url:
           id: field_link_url
           table: node__field_link_url
           field: field_link_url
-          relationship: field_featured_content
+          relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -210,7 +82,7 @@ display:
           click_sort_column: uri
           type: link
           settings:
-            trim_length: null
+            trim_length: 80
             url_only: true
             url_plain: true
             rel: '0'
@@ -225,124 +97,22 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: field_featured_content
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: entity_link
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: view
-          output_url_as_text: true
-          absolute: false
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: 'Link '
-          plugin_id: custom
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: "{% if type == \"News page\" %}\r\n{{ view_node }}\r\n{% else %}\r\n{{ field_link_url }}\r\n{% endif %}"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
         field_photo:
           id: field_photo
           table: node__field_photo
           field: field_photo
-          relationship: field_featured_content
+          relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '<a href="{{ nothing }}">{{ field_photo }}</a>'
-            make_link: false
-            path: '{{ nothing }}'
-            absolute: true
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ field_link_url }}'
+            absolute: false
             external: false
             replace_spaces: false
             path_case: none
@@ -394,17 +164,17 @@ display:
           id: field_teaser
           table: node__field_teaser
           field: field_teaser
-          relationship: field_featured_content
+          relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '<a href="{{ nothing }}">{{ field_teaser }}</a>'
-            make_link: false
-            path: ''
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ field_link_url }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -475,9 +245,23 @@ display:
       cache:
         type: custom_tag
         options:
-          custom_tag: "handy_cache_tags:node:feature\r\nhandy_cache_tags:node:featured_content_list"
+          custom_tag: "node_list:feature\r\nnode_list:featured_content_list"
       empty: {  }
-      sorts: {  }
+      sorts:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_queue_position
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: entityqueue_relationship
+          exposed: false
       arguments: {  }
       filters:
         status:
@@ -493,70 +277,22 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            featured_content_list: featured_content_list
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
         type: slick
         options:
           caption:
-            field_teaser: field_teaser
-            field_featured_content: '0'
-            type: '0'
-            field_link_url: '0'
-            view_node: '0'
-            nothing: '0'
-            field_photo: '0'
+            title: '0'
           optionset: uregni
           class: ''
           id: ''
-          image: field_photo
-          link: nothing
+          image: ''
+          link: ''
           overlay: ''
           title: ''
           vanilla: true
-          layout: right
+          layout: ''
           cache: 0
-          current_view_mode: slideshow
+          current_view_mode: block_1
           skin: default
           grid: null
           grid_medium: null
@@ -615,7 +351,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_featured_content'
         - 'config:field.storage.node.field_link_url'
         - 'config:field.storage.node.field_photo'
         - 'config:field.storage.node.field_teaser'
@@ -623,8 +358,84 @@ display:
     id: slideshow
     display_title: Block
     display_plugin: block
-    position: 1
+    position: 2
     display_options:
+      title: Slideshow
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_queue_in_queue
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        relationships: false
+        filters: false
+        filter_groups: false
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content queue'
+          entity_type: node
+          plugin_id: entity_queue
+          required: true
+          limit_queue: slideshow
+      display_description: ''
       display_extenders:
         metatag_display_extender: {  }
     cache_metadata:
@@ -635,7 +446,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_featured_content'
+        - 'config:entityqueue.entity_queue.slideshow'
         - 'config:field.storage.node.field_link_url'
         - 'config:field.storage.node.field_photo'
         - 'config:field.storage.node.field_teaser'
+        - entity_field_info
+        - views_data

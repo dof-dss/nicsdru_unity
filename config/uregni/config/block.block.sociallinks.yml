@@ -2,10 +2,7 @@ uuid: 9fff8d2c-9985-4a64-acce-bb860d386dcc
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic_block:a8acec22-29a6-41f8-b6e1-c8c4eaf4f412'
   module:
-    - block_content
     - block_visibility_groups
   theme:
     - uregni_theme

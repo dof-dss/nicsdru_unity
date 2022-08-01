@@ -197,7 +197,7 @@ blocks:
     fields:
       body:
         -
-          value: ""
+          value: ''
           summary: ''
           format: basic_html
   -
