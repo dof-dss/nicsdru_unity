@@ -11,7 +11,7 @@ dependencies:
 id: homepage5links
 theme: pbni_theme
 region: middle_area
-weight: -5
+weight: -12
 provider: null
 plugin: 'block_content:85227472-67d0-4a39-927c-0a70be16f609'
 settings:
