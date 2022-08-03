@@ -54,6 +54,8 @@
     "js": "npm-run-all --sequential js-lint js-compile",
     "js-lint": "./node_modules/.bin/eslint src/js/**",
     "js-compile": "npm-run-all --parallel js-compile-*",
+    "js-compile-map": "mkdir -p js && uglifyjs src/js/jQuery-rwdImageMaps.js -o js/jQuery-rwdImageMaps.js",
+    "js-compile-map-custom": "mkdir -p js && uglifyjs src/js/pcsp.custom.js -o js/pcsp.custom.js",
     "––––––– CSS SCRIPTS": "–––––––––––––",
     "css": "npm-run-all --sequential scss-dev css-post",
     "css-lint": "sass-lint -c $npm_package_config_sasslintConfig $npm_package_config_scssfile -v -q",

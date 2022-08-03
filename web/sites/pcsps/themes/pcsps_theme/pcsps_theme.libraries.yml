@@ -20,7 +20,7 @@ site-styling:
 
 map:
   js:
-    js/jquery.rwdImageMaps.min.js: {}
+    js/jQuery-rwdImageMaps.js: {}
     js/pcsp.custom.js: {}
 
 fonts:
