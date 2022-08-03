@@ -3,6 +3,7 @@
 /**
  * Implements hook_preprocess_page_attachments_alter().
  */
+
 function pcsps_theme_page_attachments_alter(array &$page){
   $current_url = \Drupal::request()->getRequestUri();
   $mappage = "/locate-your-pcsp";
@@ -10,4 +11,3 @@ function pcsps_theme_page_attachments_alter(array &$page){
     $page['#attached']['library'][] = 'pcsps_theme/map';
   }
 }
-
