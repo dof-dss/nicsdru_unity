@@ -26,6 +26,7 @@ dependencies:
     - content_moderation
     - contextual
     - entity_browser
+    - entityqueue
     - file
     - filter
     - layout_builder
@@ -291,6 +292,7 @@ permissions:
   - 'flag featured_news'
   - 'flag hide_content'
   - 'flag home_page_display'
+  - 'manipulate entityqueues'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'
   - 'moderate content from needs_review to published'
@@ -348,6 +350,7 @@ permissions:
   - 'update any text block content'
   - 'update any video block content'
   - 'update any video_and_caption block content'
+  - 'update slideshow entityqueue'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition reject'

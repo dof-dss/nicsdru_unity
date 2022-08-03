@@ -1,4 +1,4 @@
-uuid: d80ec21b-d62a-4bb8-bfb3-43033f6a7e5a
+uuid: 3461a7b5-623b-441a-8fdc-4efe1db0250b
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,6 @@ dependencies:
     - views.view.slideshow
   module:
     - block_visibility_groups
-    - system
     - views
   theme:
     - uregni_theme
@@ -27,10 +26,4 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    context_mapping: {  }
     block_visibility_group: ''
-  request_path:
-    id: request_path
-    negate: false
-    context_mapping: {  }
-    pages: '<front>'
