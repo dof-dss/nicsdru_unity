@@ -1,10 +1,14 @@
 <?php
 
 /**
- * Implements hook_preprocess_page_attachments_alter().
+ * @file
+ * Functions to support theming in the pcsps_theme.
  */
 
-function pcsps_theme_page_attachments_alter(array &$page){
+/**
+ * Implements hook_preprocess_page_attachments_alter().
+ */
+function pcsps_theme_page_attachments_alter(array &$page) {
   $current_url = \Drupal::request()->getRequestUri();
   $mappage = "/locate-your-pcsp";
   if ($current_url == $mappage) {
