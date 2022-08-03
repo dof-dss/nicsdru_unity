@@ -50,6 +50,8 @@ relationships:
   pcsps: 'db:pcsps'
   pcsps_solr: 'solr:pcsps'
   cscsreviewni: 'db:cscsreviewni'
+  mentalhealthchampionni: 'db:mentalhealthchampionni'
+  mentalhealthchampionni_solr: 'solr:mentalhealthchampionni'
 
 # The size of the persistent disk of the application (in MB).
 disk: 30720
@@ -96,7 +98,7 @@ hooks:
     export FASTLY_API_SERVICE=dummyservice
 
     # For each multi site - run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni mentalhealthchampionni
     do
       echo "****** $site deployment ******"
       cd /app/web/sites/$site
@@ -120,7 +122,7 @@ hooks:
     export FASTLY_API_SERVICE=$temp
 
     # For each multi site - clear cache (including Fastly cache)
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
+    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni mentalhealthchampionni
     do
       echo "****** $site cache clear ******"
       cd /app/web/sites/$site
@@ -240,3 +242,6 @@ crons:
   pcsps:
     spec: '10 * * * *'
     cmd: 'cd web/sites/pcsps ; drush core-cron'
+  mentalhealthchampionni:
+    spec: '10 * * * *'
+    cmd: 'cd web/sites/mentalhealthchampionni ; drush core-cron'

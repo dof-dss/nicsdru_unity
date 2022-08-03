@@ -7,3 +7,4 @@ ignored_config_entities:
   - 'uregni_theme.settings:pinterest_profile_url'
   - 'uregni_theme.settings:youtube_profile_url'
   - 'uregni_theme.settings:instagram_profile_url'
+  - block.block.sociallinks

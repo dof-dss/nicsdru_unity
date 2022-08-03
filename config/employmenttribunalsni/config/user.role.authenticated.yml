@@ -6,7 +6,6 @@ dependencies:
     - filter.format.basic_html
     - node.type.page
   module:
-    - contact
     - filter
     - google_analytics
     - media
@@ -22,7 +21,6 @@ permissions:
   - 'access administration menu'
   - 'access content'
   - 'access media browser'
-  - 'access site-wide contact form'
   - 'access workbench'
   - 'create page content'
   - 'delete own page content'

@@ -1,6 +1,6 @@
 uuid: 8c7ca580-302a-4b8e-9a74-da8fe698c28a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.latest_news

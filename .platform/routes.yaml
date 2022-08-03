@@ -12,30 +12,6 @@
 # routes that appear below for that site should be removed.
 #---------------------------------
 
-"https://www.attorneygeneralni.gov.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://attorneygeneralni.gov.uk/":
-  type: redirect
-  to: "https://www.attorneygeneralni.gov.uk/"
-
-#---------------------------------
-
-"https://www.nipolicingboard.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://nipolicingboard.org.uk/":
-  type: redirect
-  to: "https://www.nipolicingboard.org.uk/"
-
-#---------------------------------
-
 "https://www.pbni.org.uk/":
   type: upstream
   upstream: "unity:http"
@@ -57,6 +33,18 @@
 "https://pcsps.org/":
   type: redirect
   to: "https://www.pcsps.org/"
+
+#---------------------------------
+
+"https://www.mentalhealthchampion-ni.org.uk/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://mentalhealthchampion-ni.org.uk/":
+  type: redirect
+  to: "https://www.mentalhealthchampion-ni.org.uk/"
 
 #---------------------------------
 # Do not remove this route, the {default} domain must be
