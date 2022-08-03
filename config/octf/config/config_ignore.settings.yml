@@ -6,3 +6,5 @@ ignored_config_entities:
   - 'octf_theme.settings:linkedin_profile_url'
   - 'octf_theme.settings:pinterest_profile_url'
   - 'octf_theme.settings:youtube_profile_url'
+  - 'octf_theme.settings:instagram_profile_url'
+  - block.block.sociallinks
