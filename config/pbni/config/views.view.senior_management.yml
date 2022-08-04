@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Senior Management'
+      title: 'Senior Leadership'
       fields:
         title:
           id: title
