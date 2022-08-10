@@ -568,9 +568,6 @@
   }
 }
 
-.media-image figure figcaption {
-  display: none;
-}
 #inner_header_wrapper {
   @include breakpoint($tab) {
     background: resolve('Nav-bg.png') no-repeat 50%;
