@@ -18,6 +18,11 @@ site-styling:
     theme:
       css/theme.css: { minified: true }
 
+map:
+  js:
+    js/jQuery-rwdImageMaps.js: {}
+    js/pcsp.custom.js: {}
+
 fonts:
   css:
     theme:
