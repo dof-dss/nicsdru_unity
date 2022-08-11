@@ -12,18 +12,6 @@
 # routes that appear below for that site should be removed.
 #---------------------------------
 
-"https://www.pbni.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://pbni.org.uk/":
-  type: redirect
-  to: "https://www.pbni.org.uk/"
-
-#---------------------------------
-
 "https://www.pcsps.org/":
   type: upstream
   upstream: "unity:http"
