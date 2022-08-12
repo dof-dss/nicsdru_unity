@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64733e34322dee0735c55a01c23e5660",
+    "content-hash": "408a76083ff4d168c1e9654ff567d5c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1906,21 +1906,22 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "dev-D8UN-1094",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "26b7c655cc46cbd54e6475ea09deaf0100d7ad77"
+                "reference": "01ce59e5059e9757b7a7e3bca56e7eca4d7baa37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/26b7c655cc46cbd54e6475ea09deaf0100d7ad77",
-                "reference": "26b7c655cc46cbd54e6475ea09deaf0100d7ad77",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/01ce59e5059e9757b7a7e3bca56e7eca4d7baa37",
+                "reference": "01ce59e5059e9757b7a7e3bca56e7eca4d7baa37",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.6"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1929,9 +1930,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/D8UN-1094"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/development"
             },
-            "time": "2022-08-12T11:17:46+00:00"
+            "time": "2022-08-12T11:20:56+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
