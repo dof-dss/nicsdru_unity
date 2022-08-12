@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5853adde062b672133f3507a499810c8",
+    "content-hash": "64733e34322dee0735c55a01c23e5660",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "1.1.1",
+            "version": "dev-D8UN-1094",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "e5201cbb228b5bf149227c9e62da48fae71794a4"
+                "reference": "26b7c655cc46cbd54e6475ea09deaf0100d7ad77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/e5201cbb228b5bf149227c9e62da48fae71794a4",
-                "reference": "e5201cbb228b5bf149227c9e62da48fae71794a4",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/26b7c655cc46cbd54e6475ea09deaf0100d7ad77",
+                "reference": "26b7c655cc46cbd54e6475ea09deaf0100d7ad77",
                 "shasum": ""
             },
             "require": {
@@ -1929,9 +1929,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.1.1"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/D8UN-1094"
             },
-            "time": "2022-08-10T09:54:28+00:00"
+            "time": "2022-08-12T11:17:46+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -20143,6 +20143,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_unity_modules": 20,
         "drupal/block_field": 5,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
