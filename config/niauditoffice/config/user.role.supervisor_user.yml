@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.basic_html_publications
     - media.type.audio
     - media.type.document
     - media.type.file
@@ -13,6 +14,7 @@ dependencies:
     - node.type.faq
     - node.type.feature
     - node.type.featured_content_list
+    - node.type.html_document
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -89,6 +91,7 @@ permissions:
   - 'create file media'
   - 'create files'
   - 'create gallery content'
+  - 'create html_document content'
   - 'create image media'
   - 'create irish_news content'
   - 'create link content'
@@ -121,6 +124,7 @@ permissions:
   - 'delete any featured_content_list content'
   - 'delete any file media'
   - 'delete any gallery content'
+  - 'delete any html_document content'
   - 'delete any image files'
   - 'delete any image media'
   - 'delete any irish_news content'
@@ -148,6 +152,7 @@ permissions:
   - 'delete featured_content_list revisions'
   - 'delete gp_practice revisions'
   - 'delete health_condition revisions'
+  - 'delete html_document revisions'
   - 'delete landing_page revisions'
   - 'delete link revisions'
   - 'delete news revisions'
@@ -168,6 +173,7 @@ permissions:
   - 'delete own featured_content_list content'
   - 'delete own file media'
   - 'delete own gallery content'
+  - 'delete own html_document content'
   - 'delete own image files'
   - 'delete own image media'
   - 'delete own irish_news content'
@@ -216,6 +222,7 @@ permissions:
   - 'edit any featured_content_list content'
   - 'edit any file media'
   - 'edit any gallery content'
+  - 'edit any html_document content'
   - 'edit any image files'
   - 'edit any image media'
   - 'edit any irish_news content'
@@ -248,6 +255,7 @@ permissions:
   - 'edit own featured_content_list content'
   - 'edit own file media'
   - 'edit own gallery content'
+  - 'edit own html_document content'
   - 'edit own image files'
   - 'edit own image media'
   - 'edit own irish_news content'
@@ -301,6 +309,7 @@ permissions:
   - 'revert featured_content_list revisions'
   - 'revert gp_practice revisions'
   - 'revert health_condition revisions'
+  - 'revert html_document revisions'
   - 'revert landing_page revisions'
   - 'revert link revisions'
   - 'revert news revisions'
@@ -335,6 +344,7 @@ permissions:
   - 'use nics_editorial_workflow transition submit_for_review'
   - 'use nics_editorial_workflow transition unpublish'
   - 'use text format basic_html'
+  - 'use text format basic_html_publications'
   - 'use workbench_moderation my drafts tab'
   - 'use workbench_moderation needs review tab'
   - 'view all revisions'
@@ -355,6 +365,7 @@ permissions:
   - 'view featured_content_list revisions'
   - 'view gp_practice revisions'
   - 'view health_condition revisions'
+  - 'view html_document revisions'
   - 'view landing_page revisions'
   - 'view latest version'
   - 'view link revisions'
