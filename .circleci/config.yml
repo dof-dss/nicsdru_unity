@@ -76,6 +76,7 @@ jobs:
     <<: *docker_image
     steps:
       - checkout_code
+      - composer_tasks
       - persist_to_workspace:
           root: ./
           paths:
