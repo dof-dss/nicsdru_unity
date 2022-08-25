@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5853adde062b672133f3507a499810c8",
+    "content-hash": "0e5288ffb92b90d7ba0c0bbcb77786df",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1837,16 +1837,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "0848de1bae3383a6fdae9e71723ef55555ce3d72"
+                "reference": "8bfc303fbf36beaa573ff1c6928b672118b686fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/0848de1bae3383a6fdae9e71723ef55555ce3d72",
-                "reference": "0848de1bae3383a6fdae9e71723ef55555ce3d72",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/8bfc303fbf36beaa573ff1c6928b672118b686fe",
+                "reference": "8bfc303fbf36beaa573ff1c6928b672118b686fe",
                 "shasum": ""
             },
             "require": {
@@ -1860,9 +1860,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.4.0"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.4.1"
             },
-            "time": "2022-08-08T10:13:49+00:00"
+            "time": "2022-08-25T10:42:47+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
@@ -1906,16 +1906,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "e5201cbb228b5bf149227c9e62da48fae71794a4"
+                "reference": "bb3ac38bdc819e78ec3caf4b953c89a3b2156be2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/e5201cbb228b5bf149227c9e62da48fae71794a4",
-                "reference": "e5201cbb228b5bf149227c9e62da48fae71794a4",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/bb3ac38bdc819e78ec3caf4b953c89a3b2156be2",
+                "reference": "bb3ac38bdc819e78ec3caf4b953c89a3b2156be2",
                 "shasum": ""
             },
             "require": {
@@ -1929,9 +1929,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.1.1"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.1.2"
             },
-            "time": "2022-08-10T09:54:28+00:00"
+            "time": "2022-08-25T10:42:39+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -3519,6 +3519,71 @@
             }
         },
         {
+            "name": "drupal/cookie_content_blocker",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookie_content_blocker.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookie_content_blocker-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "570bf56ac3c53d117ca721e0da5a97de2f9cc9df"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "ext-json": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1659703027",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Buteneers",
+                    "homepage": "https://www.drupal.org/u/steven-buteneers",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniël Smidt",
+                    "homepage": "https://www.drupal.org/u/dmsmidt",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marc Janson",
+                    "homepage": "https://www.drupal.org/u/scorpid",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Prevent loading of content with a privacy impact until consent is given. This module needs a separate cookie consent manager.",
+            "homepage": "https://www.drupal.org/project/cookie_content_blocker",
+            "keywords": [
+                "Content",
+                "Content Access Control",
+                "Content Display",
+                "Drupal",
+                "Spam Prevention"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/cookie_content_blocker",
+                "issues": "https://www.drupal.org/project/issues/cookie_content_blocker?version=8.x"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "9.3.19",
             "source": {
@@ -4255,17 +4320,17 @@
         },
         {
             "name": "drupal/embed",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/embed.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "09a2bda039bfbb3fff01c91964384bf3d924b8c5"
+                "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "88a447329d16988459e82392443e96d441d651b2"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -4273,8 +4338,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1590176831",
+                    "version": "8.x-1.5",
+                    "datestamp": "1653500382",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
