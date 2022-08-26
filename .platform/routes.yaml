@@ -12,18 +12,6 @@
 # routes that appear below for that site should be removed.
 #---------------------------------
 
-"https://www.pcsps.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://pcsps.org/":
-  type: redirect
-  to: "https://www.pcsps.org/"
-
-#---------------------------------
-
 "https://www.mentalhealthchampion-ni.org.uk/":
   type: upstream
   upstream: "unity:http"
