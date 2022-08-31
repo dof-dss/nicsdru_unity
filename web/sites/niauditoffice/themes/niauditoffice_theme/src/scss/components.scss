@@ -49,45 +49,65 @@
   }
 }
 
-.region-primary-menu .menu_wrapper {
-  border-color: $brand-primary;
-}
-
 #main-menu {
   .menu-link,
-  .menu .active,
-  .menu-item.open .menu-toggle-btn {
+  .menu .active {
     color: $brand-primary;
+    @include adjust-font-size-to(14px);
+  }
+
+  .menu-item.open .menu-toggle-btn {
+    background: $brand-primary;
+    color: $white;
     @include adjust-font-size-to(14px);
   }
 
   .menu-link {
     &:hover,
     &:focus {
+      background-color: $menu-borders;
       color: $white;
     }
   }
 
   .menu .menu-item .active {
-    border-color: $brand-primary;
+    border-color: $menu-borders;
   }
 
   .menu-main_sub {
-    background: $brand-primary;
+    background: #a2d1cc;
 
     .menu-item {
       .active {
-        color: $white;
+        color: $brand-primary;
         border-color: $white;
+
+        &.link__self {
+          background: $brand-primary;
+          color: $white;
+        }
       }
 
-      a {
+      .menu-link {
+        color: $brand-primary;
+
         &:hover,
         &:focus {
-          background: $charcoal;
+          background: $brand-primary;
+          color: $white;
         }
       }
     }
+  }
+}
+
+.search-form input[type="submit"] {
+  background: #ec7b1e resolve('mag-glass.png') center no-repeat;
+  background-size: 2.6rem auto;
+
+  &:hover {
+    opacity: 1;
+    background-color: $black;
   }
 }
 
@@ -101,10 +121,6 @@
   input[type="submit"] {
     @include submit-button;
   }
-}
-
-.block h2 {
-  @include adjust-font-size-to(22px);
 }
 
 #block-sidemenu {
@@ -126,10 +142,6 @@
 #block-sidemenu {
   margin-bottom: 2rem;
 
-  h2 {
-    margin-bottom: 0;
-  }
-
   ul {
     margin: 0 1.6rem;
 
@@ -143,10 +155,39 @@
   }
 }
 
+#sidebar-second {
+  h2 {
+    font-size: 2.1rem;
+    margin: .5rem 0 1rem;
+    padding: 0;
+    color: $white;
+  }
+
+  .rel-menu--latest-news ul li a,
+  .menu .menu-item,
+  .menu .menu-item a,
+  .more-link a {
+    color: $offwhite;
+    border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
+  }
+
+  .rel-menu--latest-news ul li,
+  .menu .menu-item {
+    .active {
+      color: $white;
+    }
+  }
+}
+
 .sidebar-second-layout {
   position: relative;
   overflow: hidden;
-  background: #f2f2f2;
+  background: $brand-primary;
   padding: 1rem;
   margin-top: 0;
 
@@ -164,6 +205,7 @@
 
         &::before {
           content: "-";
+          color: $offwhite;
           left: 0;
           position: absolute;
           top: 0;
@@ -173,6 +215,7 @@
           display: block;
           font-size: 1.4rem;
           line-height: 1.8rem;
+          color: $white;
         }
       }
     }
@@ -180,16 +223,29 @@
 }
 
 #footer {
+  max-width: 100%;
+
   @media screen and (max-width: $tab) {
     padding-left: 1rem;
   }
 
-  .block > h2 {
-    color: $text;
+  #footer-content a {
+    color: $offwhite;
+    border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
+  }
+
+  address,
+  h2 {
+    color: $white;
   }
 
   .footer_credit {
-    .footer-menu {
+    #footer-menu {
       margin: 4% auto;
 
       ul {
@@ -197,6 +253,21 @@
 
         li {
           padding-left: 0;
+
+          .active {
+            color: $white;
+            @include adjust-font-size-to(14px);
+          }
+
+          a {
+            color: $white;
+            border-bottom-color: $white;
+
+            &:focus {
+              background-color: $offwhite;
+              color: $black;
+            }
+          }
 
           @include breakpoint($tab) {
             display: inline-block;
@@ -212,6 +283,17 @@
   #footer-content {
     .social-icons a {
       border-bottom: none;
+      color: $offwhite;
+
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:hover i,
+      &:focus i {
+        background-color: $brand-primary;
+        color: $white;
+      }
     }
   }
 }
@@ -264,7 +346,18 @@
 
     &[type="submit"] {
       @include submit-button;
+      background-color: $offwhite;
+      color: $brand-primary;
       padding: .3rem .6rem;
+
+      &:hover,
+      &:focus {
+        background: #fff5df;
+      }
+
+      &:focus {
+        border-color: $white;
+      }
     }
   }
 }
@@ -300,7 +393,7 @@
         background: none;
 
         i {
-          background: $text;
+          background: $white;
           color: $footer-background;
         }
       }
