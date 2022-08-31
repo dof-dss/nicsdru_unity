@@ -24,12 +24,12 @@ $chroma: add-colors((
   grey-lightest:          #f0f0f0,
   grey-medium:            #cdcdcd,
   white:                  #fff,
-  offwhite:               #f3f8fc,
+  offwhite:               #fedc92,
   dark-red:               #b63a1b, // 4.53:1 with light-pink
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #1d2997,
+  brand-primary:          #233243,
 
   brand-secondary:        #151d68,
 
@@ -43,7 +43,7 @@ $chroma: add-colors('functional', (
   text:                   #111,
   headings:               'text',
 
-  link:                   #16a085,
+  link:                   #2a4b6b,
   link-hover:             #16a085,
   link-visited:           #5e60b5,
   link-active:            'link',
@@ -65,7 +65,7 @@ $chroma: add-colors('functional', (
   menu-separator:         #fff,
   menu-sub-item-background: 'brand-primary',
   menu-sub-item-hover:    'brand-primary',
-  menu-borders:           'charcoal',
+  menu-borders:           'brand-primary',
 
   table-background:       #fff,
   table-border:           #bbb,
@@ -75,10 +75,10 @@ $chroma: add-colors('functional', (
   table-cell-border:      #dbdbdb,
   table-cell-text:        'text',
 
-  footer-background:      #e7e7e7,
-  footer-border:          'brand-primary',
-  footer-text:            'text',
-  footer-headings:        'text',
+  footer-background:      'brand-primary',
+  footer-border:          #ffd270,
+  footer-text:            #fff,
+  footer-headings:        #fff,
 
   search-submit: #0e6bb3,
 ));
@@ -107,7 +107,7 @@ $brand-tertiary: color(brand-tertiary);
 $text: color('text');
 $headings: color(headings);
 
-$link: #0e6bb3 !default;
+$link: #2a4b6b !default;
 $link-underline: color('charcoal') !default;
 $link-active: #0e6bb3 !default;
 $link-hover: #0e6bb3 !default;
@@ -141,7 +141,7 @@ $table-cell-border: color(table-cell-border);
 $table-cell-text: color(table-cell-text);
 
 $footer-background: color(footer-background);
-$footer-border: color(brand-primary);
+$footer-border: color(footer-border);
 $footer-text: color(footer-text);
 $footer-headings: color(footer-headings);
 
