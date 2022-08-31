@@ -169,6 +169,11 @@
   .more-link a {
     color: $offwhite;
     border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
   }
 
   .rel-menu--latest-news ul li,
@@ -227,6 +232,11 @@
   #footer-content a {
     color: $offwhite;
     border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
   }
 
   address,
@@ -244,9 +254,19 @@
         li {
           padding-left: 0;
 
+          .active {
+            color: $white;
+            @include adjust-font-size-to(14px);
+          }
+
           a {
             color: $white;
             border-bottom-color: $white;
+
+            &:focus {
+              background-color: $offwhite;
+              color: $black;
+            }
           }
 
           @include breakpoint($tab) {
@@ -264,6 +284,10 @@
     .social-icons a {
       border-bottom: none;
       color: $offwhite;
+
+      &:focus {
+        background-color: transparent;
+      }
 
       &:hover i,
       &:focus i {
