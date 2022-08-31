@@ -170,10 +170,6 @@
     color: $offwhite;
     border-bottom-color: $offwhite;
 
-    &:hover {
-      font-weight: bold;
-    }
-
     &:focus {
       background-color: $offwhite;
       color: $black;
@@ -236,10 +232,6 @@
   #footer-content a {
     color: $offwhite;
     border-bottom-color: $offwhite;
-
-    &:hover {
-      font-weight: bold;
-    }
 
     &:focus {
       background-color: $offwhite;
