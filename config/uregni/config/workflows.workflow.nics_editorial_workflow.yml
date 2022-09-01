@@ -5,7 +5,6 @@ dependencies:
   config:
     - node.type.consultation
     - node.type.feature
-    - node.type.featured_content_list
     - node.type.landing_page
     - node.type.news
     - node.type.page
@@ -101,7 +100,6 @@ type_settings:
     node:
       - consultation
       - feature
-      - featured_content_list
       - landing_page
       - news
       - page
