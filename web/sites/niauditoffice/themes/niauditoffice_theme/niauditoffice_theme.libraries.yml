@@ -13,3 +13,8 @@ site-styling:
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
       css/components.css: { minified: true }
+
+niao-font:
+  css:
+    theme:
+      'https://use.typekit.net/tzl0cbz.css': { type: external, minified: true }
