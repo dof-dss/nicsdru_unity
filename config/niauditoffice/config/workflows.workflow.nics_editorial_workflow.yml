@@ -5,7 +5,6 @@ dependencies:
   config:
     - node.type.faq
     - node.type.feature
-    - node.type.featured_content_list
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -102,7 +101,6 @@ type_settings:
     node:
       - faq
       - feature
-      - featured_content_list
       - news
       - page
       - publication_page
