@@ -13,6 +13,12 @@
 }
 
 #logo {
+  margin-top: 1.6rem;
+
+  img {
+    height: 80px;
+  }
+
   a {
     display: block;
 
@@ -100,6 +106,12 @@
   .column {
     background: $grey-light;
     padding: 2rem;
+
+    &:last-child {
+      h2 {
+        margin-bottom: 2.4rem;
+      }
+    }
 
     @include breakpoint($lap) {
       width: 32.6%;

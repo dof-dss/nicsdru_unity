@@ -67,7 +67,7 @@
         "dof-dss/nicsdru_origins_profile": "0.1.11",
         "dof-dss/nicsdru_unity_modules": "^1.1",
         "dof-dss/nicsdru_unity_profile": "^1.0",
-        "dof-dss/nicsdru_unity_theme": "^0.1.60",
+        "dof-dss/nicsdru_unity_theme": "^0.1.61",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -107,7 +107,7 @@
         "drupal/google_analytics": "^3.1",
         "drupal/google_tag": "^1.5",
         "drupal/handy_cache_tags": "^1.0",
-        "drupal/honeypot": "^2.0",
+        "drupal/honeypot": "^2.1",
         "drupal/http_cache_control": "^2.0",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/layout_builder_restrictions": "^2.12",
@@ -223,9 +223,6 @@
             },
             "drupal/readonlymode": {
                 "Fatal typerror fix": "https://www.drupal.org/files/issues/2020-12-23/readonlymode-string_not_array-3115119-9.patch"
-            },
-            "drupal/eu_cookie_compliance": {
-                "Banner at top is not hiding correctly": "https://www.drupal.org/files/issues/2022-04-26/eu_cookie_compliance_banner_not_hiding_3277175-1.patch"
             },
             "drupal/fastly": {
                 "Allow disabling of logging": "https://git.drupalcode.org/project/fastly/-/merge_requests/6.patch"
