@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7003d6045f12ecbf2c4d35d6d64fe72b",
+    "content-hash": "ae2876233963397d9d81d939860b005d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1846,16 +1846,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "1.4.2",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "7071ecf98385bbed345ebe7c19c690fd44096ae8"
+                "reference": "eebc70de959f1579ebe87d170248f2d6027d631b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/7071ecf98385bbed345ebe7c19c690fd44096ae8",
-                "reference": "7071ecf98385bbed345ebe7c19c690fd44096ae8",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/eebc70de959f1579ebe87d170248f2d6027d631b",
+                "reference": "eebc70de959f1579ebe87d170248f2d6027d631b",
                 "shasum": ""
             },
             "require": {
@@ -1869,9 +1869,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.4.2"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/1.4.6"
             },
-            "time": "2022-09-01T12:06:41+00:00"
+            "time": "2022-09-11T15:18:02+00:00"
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
@@ -1915,20 +1915,20 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "bb3ac38bdc819e78ec3caf4b953c89a3b2156be2"
+                "reference": "07d8263f82866e13aa3e4d8651ef18be4f57a51b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/bb3ac38bdc819e78ec3caf4b953c89a3b2156be2",
-                "reference": "bb3ac38bdc819e78ec3caf4b953c89a3b2156be2",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/07d8263f82866e13aa3e4d8651ef18be4f57a51b",
+                "reference": "07d8263f82866e13aa3e4d8651ef18be4f57a51b",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.6"
+                "composer/installers": "^1.9"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1938,26 +1938,26 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.1.2"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/1.1.3"
             },
-            "time": "2022-08-25T10:42:39+00:00"
+            "time": "2022-09-07T10:24:14+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_profile.git",
-                "reference": "91328b959d4d6aee85ba8364ae1fd4b0a6a95702"
+                "reference": "8aa38b6431a562ecbf164f98a7ae29842b873dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/91328b959d4d6aee85ba8364ae1fd4b0a6a95702",
-                "reference": "91328b959d4d6aee85ba8364ae1fd4b0a6a95702",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/8aa38b6431a562ecbf164f98a7ae29842b873dd6",
+                "reference": "8aa38b6431a562ecbf164f98a7ae29842b873dd6",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.6"
+                "composer/installers": "^1.9"
             },
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
@@ -1967,22 +1967,22 @@
             "description": "Custom install profile used by all Unity sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_profile/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/1.0.3"
+                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/1.0.4"
             },
-            "time": "2022-08-01T07:26:10+00:00"
+            "time": "2022-09-07T10:31:18+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.60",
+            "version": "v0.1.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "52c133a12372713122b364049c37f04bf1301497"
+                "reference": "50d56e00bc88e00ea8a15cce7c684a15686e2cab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/52c133a12372713122b364049c37f04bf1301497",
-                "reference": "52c133a12372713122b364049c37f04bf1301497",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/50d56e00bc88e00ea8a15cce7c684a15686e2cab",
+                "reference": "50d56e00bc88e00ea8a15cce7c684a15686e2cab",
                 "shasum": ""
             },
             "require": {
@@ -2006,9 +2006,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.60"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.61"
             },
-            "time": "2022-08-10T09:49:47+00:00"
+            "time": "2022-09-07T10:14:47+00:00"
         },
         {
             "name": "drupal/address",
@@ -4589,6 +4589,10 @@
             ],
             "authors": [
                 {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
@@ -4601,14 +4605,6 @@
                     "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
-                    "name": "Wim Leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                },
-                {
-                    "name": "cs_shadow",
-                    "homepage": "https://www.drupal.org/user/2828287"
-                },
-                {
                     "name": "oknate",
                     "homepage": "https://www.drupal.org/user/471638"
                 },
@@ -4619,6 +4615,10 @@
                 {
                     "name": "slashrsm",
                     "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
                 }
             ],
             "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
@@ -5213,16 +5213,16 @@
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
-                    "name": "Stalski",
-                    "homepage": "https://www.drupal.org/user/322618"
-                },
-                {
                     "name": "jyve",
                     "homepage": "https://www.drupal.org/user/591438"
                 },
                 {
                     "name": "nils.destoop",
                     "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
                 },
                 {
                     "name": "swentel",
@@ -5314,22 +5314,22 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "3.29.0",
+            "version": "3.30.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-3.29"
+                "reference": "8.x-3.30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.29.zip",
-                "reference": "8.x-3.29",
-                "shasum": "472fdc6259c3c3c90b0e84f7c5301103fdba919f"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.30.zip",
+                "reference": "8.x-3.30",
+                "shasum": "4dd6309a09ab5f6cbb516dd3f2ff1e92aee6a1f7"
             },
             "require": {
                 "davedevelopment/stiphle": "^0.9.2",
                 "drupal/core": "^8.8 || ^9",
-                "php": ">=7.1.0",
+                "php": ">=7.3.0",
                 "php-http/guzzle6-adapter": "^1.1 || ^2.0",
                 "php-http/message": "^1.6",
                 "willdurand/geocoder": "^4.0"
@@ -5367,8 +5367,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.29",
-                    "datestamp": "1655853021",
+                    "version": "8.x-3.30",
+                    "datestamp": "1662503924",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8645,17 +8645,17 @@
         },
         {
             "name": "drupal/upgrade_status",
-            "version": "3.16.0",
+            "version": "3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/upgrade_status.git",
-                "reference": "8.x-3.16"
+                "reference": "8.x-3.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.16.zip",
-                "reference": "8.x-3.16",
-                "shasum": "b7afee4759fd6b8ffef40d99f6add0281330b559"
+                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.17.zip",
+                "reference": "8.x-3.17",
+                "shasum": "b7961c580b48f5ad4e6b711fdf4283cc0063a5b9"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -8669,8 +8669,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.16",
-                    "datestamp": "1660313123",
+                    "version": "8.x-3.17",
+                    "datestamp": "1662479791",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9424,16 +9424,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.12.54",
+            "version": "8.12.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "d0bad134ca7206d36784c2c5ec531ba4513efde7"
+                "reference": "a4f21baace2038d4d47206aec15209365b629e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/d0bad134ca7206d36784c2c5ec531ba4513efde7",
-                "reference": "d0bad134ca7206d36784c2c5ec531ba4513efde7",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/a4f21baace2038d4d47206aec15209365b629e86",
+                "reference": "a4f21baace2038d4d47206aec15209365b629e86",
                 "shasum": ""
             },
             "require": {
@@ -9493,7 +9493,7 @@
                 "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
                 "source": "https://github.com/giggsey/libphonenumber-for-php"
             },
-            "time": "2022-08-22T06:43:42+00:00"
+            "time": "2022-09-09T12:56:05+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -11685,16 +11685,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.8.4",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "eed4c9da531f6ebb4787235b6fb486e2c20f34e5"
+                "reference": "f6598a5ff12ca4499a836815e08b4d77a2ddeb20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/eed4c9da531f6ebb4787235b6fb486e2c20f34e5",
-                "reference": "eed4c9da531f6ebb4787235b6fb486e2c20f34e5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f6598a5ff12ca4499a836815e08b4d77a2ddeb20",
+                "reference": "f6598a5ff12ca4499a836815e08b4d77a2ddeb20",
                 "shasum": ""
             },
             "require": {
@@ -11724,7 +11724,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.8.4"
+                "source": "https://github.com/phpstan/phpstan/tree/1.8.5"
             },
             "funding": [
                 {
@@ -11740,7 +11740,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-03T13:08:04+00:00"
+            "time": "2022-09-07T16:05:32+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -12314,16 +12314,16 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "6.2.6",
+            "version": "6.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "cefde7709ba6290b78bb98d4ca11899cc0eb956e"
+                "reference": "6d6d13b4eda222e7bdb9616545aa67efbe8c6cec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/cefde7709ba6290b78bb98d4ca11899cc0eb956e",
-                "reference": "cefde7709ba6290b78bb98d4ca11899cc0eb956e",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/6d6d13b4eda222e7bdb9616545aa67efbe8c6cec",
+                "reference": "6d6d13b4eda222e7bdb9616545aa67efbe8c6cec",
                 "shasum": ""
             },
             "require": {
@@ -12372,9 +12372,9 @@
             ],
             "support": {
                 "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/6.2.6"
+                "source": "https://github.com/solariumphp/solarium/tree/6.2.7"
             },
-            "time": "2022-07-22T10:29:01+00:00"
+            "time": "2022-09-12T09:20:39+00:00"
         },
         {
             "name": "stack/builder",
@@ -19797,16 +19797,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.11.7",
+            "version": "v2.11.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "ad2b0b57803a48bb3495777bee2a9a13c8e9da53"
+                "reference": "aaf902277f2889fddbdb37046ae02b9965e2cf0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/ad2b0b57803a48bb3495777bee2a9a13c8e9da53",
-                "reference": "ad2b0b57803a48bb3495777bee2a9a13c8e9da53",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/aaf902277f2889fddbdb37046ae02b9965e2cf0f",
+                "reference": "aaf902277f2889fddbdb37046ae02b9965e2cf0f",
                 "shasum": ""
             },
             "require": {
@@ -19842,12 +19842,16 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
+            "keywords": [
+                "phpcs",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/sirbrillig/phpcs-variable-analysis/issues",
                 "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
-            "time": "2022-08-16T22:19:00+00:00"
+            "time": "2022-09-08T18:35:53+00:00"
         },
         {
             "name": "slevomat/coding-standard",
