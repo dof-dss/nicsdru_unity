@@ -204,7 +204,7 @@ jobs:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
-            sleep 90s
+            sleep 1200s
             platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
