@@ -37,6 +37,7 @@
  * - page.top_second: Items for the second top region.
  * - page.top_third: Items for the third top region.
  * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.search_facets: Search facet region for search pages.
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
@@ -48,6 +49,10 @@
  * - page.footer_third: Items for the third footer region.
  * - page.footer_fourth: Items for the fourth footer region.
  * - page.footer: Items for the bottom footer region.
+ *
+ * - basic_page_structure: There is a checkbox in the theme settings UI
+ *   to check if a basic page is used in the homepage structure. This template
+ *   is set up for a homepage that doesn't use a basic page in it's structure.
  *
  * @see template_preprocess_page()
  * @see html.html.twig
@@ -80,45 +85,33 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {% if drupal_config('system.site', 'frontpage_title') %}
-    <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-      <h1>
+  {% if basic_page_structure is empty %}
+    {% if drupal_config('system.site', 'frontpage_title') %}
+      <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? 'container-wrap' : 'visually-hidden' }}">
         {{ drupal_config('system.site', 'frontpage_title') }}
       </h1>
-    </div>
+    {% endif %}
   {% endif %}
 
-  {{ page.front_welcome }}
-
-  {% if page.top_first or page.top_second or page.top_third %}
-    <div id="content">
-      <div id="top-area">
-        {% if page.top_first %}
-          <div class="column">
-            {{ page.top_first }}
-          </div>
-        {% endif %}
-        {% if page.top_second %}
-          <div class="column">
-            {{ page.top_second }}
-          </div>
-        {% endif %}
-        {% if page.top_third %}
-          <div class="column">
-            {{ page.top_third }}
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  {% endif %}
 {% endif %}
 
-{% if not is_front %}
-  <div id="container">
-    <div class="container-wrap">
-      <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+<div id="container">
+  <div class="container-wrap">
 
+    {% if basic_page_structure is not empty or basic_page_structure is empty and not is_front %}
+      <div class="content-sidebar-wrap{% if search_page %} search-page{% endif %}">
         {{ page.breadcrumb }}
+
+        {% if basic_page_structure is not empty and is_front %}
+          {% if drupal_config('system.site', 'frontpage_title') %}
+            <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+              <h1>
+                {{ drupal_config('system.site', 'frontpage_title') }}
+              </h1>
+            </div>
+          {% endif %}
+        {% endif %}
+
         {% if search_page %}
           {{ drupal_block('page_title_block', wrapper=false) }}
         {% endif %}
@@ -151,44 +144,76 @@
           {{ page.sidebar_second }}
         </aside>
       {% endif %}
-    </div>
-  </div>
-{% endif %}
-{% if is_front %}
-  <div class="middle-area">
-    {% if page.middle_area %}
-      <div class="column">
-        {{ page.middle_area }}
-      </div>
     {% endif %}
   </div>
-  {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
-    <div id="bottom_wrapper" class="footer_block bottom_widget">
-      <div id="bottom-area" class="footer-area clearfix">
-        {% if page.bottom_widget_1 %}
+  {% if is_front %}
+    {% if page.top_first or page.top_second or page.top_third %}
+      {% if basic_page_structure is empty %}
+        <div id="content">
+      {% endif %}
+      {{ page.front_welcome }}
+      <div id="top-area" class="clearfix">
+        <div class="container-wrap">
+          {% if page.top_first %}
+            <div class="column">
+              {{ page.top_first }}
+            </div>
+          {% endif %}
+          {% if page.top_second %}
+            <div class="column">
+              {{ page.top_second }}
+            </div>
+          {% endif %}
+          {% if page.top_third %}
+            <div class="column">
+              {{ page.top_third }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if basic_page_structure is empty %}
+        </div>
+      {% endif %}
+    {% endif %}
+
+    <div class="seeking-support">
+      <div class="row">
+        {% if page.seeking_support %}
           <div class="column">
-            {{ page.bottom_widget_1 }}
-          </div>
-        {% endif %}
-        {% if page.bottom_widget_2 %}
-          <div class="column">
-            {{ page.bottom_widget_2 }}
-          </div>
-        {% endif %}
-        {% if page.bottom_widget_3 %}
-          <div class="column">
-            {{ page.bottom_widget_3 }}
+            {{ page.seeking_support }}
           </div>
         {% endif %}
       </div>
     </div>
+
+    {% if page.bottom_widget_1 or page.bottom_widget_2 or page.bottom_widget_3 %}
+      <div id="bottom_wrapper" class="footer_block bottom_widget">
+        <div id="bottom-area" class="footer-area clearfix">
+          {% if page.bottom_widget_1 %}
+            <div class="column">
+              {{ page.bottom_widget_1 }}
+            </div>
+          {% endif %}
+          {% if page.bottom_widget_2 %}
+            <div class="column">
+              {{ page.bottom_widget_2 }}
+            </div>
+          {% endif %}
+          {% if page.bottom_widget_3 %}
+            <div class="column">
+              {{ page.bottom_widget_3 }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
   {% endif %}
-{% endif %}
+</div>
 
 <footer id="footer">
-  <div id="footer_wrapper" class="container-wrap">
+  <div id="footer_wrapper">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
-      <div id="footer-area" class="footer-area clearfix">
+      <div id="footer-area" class="footer-area container-wrap clearfix">
         {% if page.footer_first %}
           <div class="column">
             {{ page.footer_first }}
