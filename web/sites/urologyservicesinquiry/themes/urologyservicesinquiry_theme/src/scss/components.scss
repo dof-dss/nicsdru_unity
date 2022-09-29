@@ -148,7 +148,7 @@
       margin: 1rem;
 
       @include breakpoint($tab) {
-        margin: 0;
+        margin: 1rem;
       }
 
       h2 {
