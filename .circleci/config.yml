@@ -271,6 +271,6 @@ workflows:
   nightly-edge-build:
     jobs:
       - edge_build
-      - sync_data
+      - sync_data:
           requires:
             - edge_build
