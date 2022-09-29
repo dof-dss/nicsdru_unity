@@ -56,3 +56,9 @@
     }
   }
 }
+
+.node-type-publication .content-sidebar-wrap {
+  @include breakpoint($tab) {
+    width: 65%;
+  }
+}

@@ -34,7 +34,6 @@ elements: |-
       address_line_2:
         '#type': textfield
         '#title': 'Address line 2'
-        '#required': true
       city:
         '#type': textfield
         '#title': City
@@ -163,6 +162,9 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -246,7 +248,7 @@ settings:
   entity_limit_user_interval: null
   purge: completed
   purge_days: 1
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -306,7 +308,7 @@ handlers:
     handler_id: email
     label: Email
     notes: ''
-    status: false
+    status: true
     conditions: {  }
     weight: 0
     settings:
@@ -343,7 +345,7 @@ handlers:
     handler_id: email_1
     label: Email
     notes: ''
-    status: true
+    status: false
     conditions: {  }
     weight: 1
     settings:

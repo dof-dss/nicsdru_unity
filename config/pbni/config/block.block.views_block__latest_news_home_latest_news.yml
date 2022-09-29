@@ -11,7 +11,7 @@ dependencies:
 id: views_block__latest_news_home_latest_news
 theme: pbni_theme
 region: top_first
-weight: 0
+weight: -11
 provider: null
 plugin: 'views_block:latest_news-home_latest_news'
 settings:
