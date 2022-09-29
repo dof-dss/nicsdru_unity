@@ -204,8 +204,20 @@ jobs:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
-            sleep 1200s
+            sleep 590s
             platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
+          when: on_fail
+      - run:
+          name: Activate test accounts if the sync failed
+          command: |
+            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
+            do
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ -n $result ]]; then
+                echo "***** Enable QA accounts - ${site} *****"
+                platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
+              fi
+            done
           when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
@@ -295,8 +307,8 @@ workflows:
   nightly-edge-build-post-build-tasks:
     triggers:
       - schedule:
-          # At 02:33 Monday to Friday
-          cron: "33 2 * * 1-5"
+          # At 03:41 Monday to Friday
+          cron: "41 3 * * 1-5"
           filters:
             branches:
               only:
