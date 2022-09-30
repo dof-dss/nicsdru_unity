@@ -314,8 +314,8 @@ workflows:
   nightly-edge-build-post-build-tasks:
     triggers:
       - schedule:
-          # At 07:41 Monday to Friday
-          cron: "41 7 * * 1-5"
+          # At 06:41 Monday to Friday
+          cron: "41 6 * * 1-5"
           filters:
             branches:
               only:
