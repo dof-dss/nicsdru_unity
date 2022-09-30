@@ -1,6 +1,6 @@
 blocks:
   -
-    info: 'About the inquiry'
+    info: 'About the Inquiry'
     langcode: en
     uuid: 1e99ba1c-48c4-4b30-a65a-9564ab4dfacb
     bundle: basic_block
@@ -9,7 +9,29 @@ blocks:
     fields:
       body:
         -
-          value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis orci magna, vitae hendrerit libero dapibus vitae. Cras accumsan et neque eu molestie.</p>\r\n\r\n<p>Sed luctus semper elit molestie vehicula. &nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"f2a4cc8b-b718-473c-b7b0-5b71a5f6a877\" href=\"/node/8\">Read our Terms of Reference</a></p>\r\n"
+          value: "<p><span><span><span><span>The establishment of the independent public Urology Services Inquiry was announced in a statement by the Health Minister, on 24 November 2020.</span></span></span></span></p>\r\n\r\n<p><a class=\"btn\" data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"84095f92-14a0-417a-acf4-5433f8bec2da\" href=\"/node/12\">Read our Terms of Reference</a></p>\r\n"
+          summary: ''
+          format: basic_html
+  -
+    info: 'Social links'
+    langcode: en
+    uuid: 254cc1c0-6f62-4535-9078-e8958427bfd4
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
+  -
+    info: 'Watch Hearings'
+    langcode: en
+    uuid: c0a2c18d-f026-4062-9ec0-807da2b3f017
+    bundle: basic_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>When a Hearing is in session you can watch it by following the link below. Planned sitting dates and times are outlined on the timetable and are subject to change.</p>\r\n"
           summary: ''
           format: basic_html
 menus:
@@ -20,9 +42,9 @@ menus:
     uri: 'internal:/'
     link_title: ''
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-50'
+    enabled: true
+    expanded: false
+    weight: -50
     langcode: en
     uuid: cfb1a15a-2061-4d1c-a552-1b0f82f7398b
   -
@@ -32,9 +54,9 @@ menus:
     uri: 'entity:node/3'
     link_title: null
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-49'
+    enabled: true
+    expanded: false
+    weight: -49
     langcode: en
     uuid: c7df6c78-e49e-4c76-9765-784d198dcca0
   -
@@ -44,9 +66,9 @@ menus:
     uri: 'entity:node/4'
     link_title: null
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-46'
+    enabled: true
+    expanded: false
+    weight: -46
     langcode: en
     uuid: fd2ecd77-b97d-497e-af45-2c25f987c2d1
   -
@@ -56,9 +78,9 @@ menus:
     uri: 'entity:node/5'
     link_title: null
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-45'
+    enabled: true
+    expanded: false
+    weight: -45
     langcode: en
     uuid: 54535f03-a680-4a90-848c-dcc87e0a332b
   -
@@ -68,9 +90,9 @@ menus:
     uri: 'internal:/publications'
     link_title: ''
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-48'
+    enabled: true
+    expanded: false
+    weight: -48
     langcode: en
     uuid: f845d049-3b5e-4742-9208-87f9dbccbe15
   -
@@ -80,9 +102,9 @@ menus:
     uri: 'route:<nolink>'
     link_title: ''
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-50'
+    enabled: true
+    expanded: false
+    weight: -50
     langcode: en
     uuid: a886aa5e-f5ee-4e49-864f-17ea37efd713
   -
@@ -92,9 +114,9 @@ menus:
     uri: 'entity:node/6'
     link_title: ''
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-49'
+    enabled: true
+    expanded: false
+    weight: -49
     langcode: en
     uuid: 84b0a769-df01-49e8-8f74-e6e342ec7833
   -
@@ -104,9 +126,9 @@ menus:
     uri: 'entity:node/7'
     link_title: ''
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '-48'
+    enabled: true
+    expanded: false
+    weight: -48
     langcode: en
     uuid: 400f292a-ee97-4844-bb51-1e0cdaad823f
   -
@@ -116,9 +138,9 @@ menus:
     uri: 'entity:node/11'
     link_title: null
     description: null
-    enabled: '1'
-    expanded: '0'
-    weight: '0'
+    enabled: true
+    expanded: false
+    weight: 0
     langcode: en
     uuid: 9f79e8c7-f65c-4a37-bf1c-4a03ce50d936
 taxonomies:
