@@ -1,0 +1,30 @@
+uuid: d95d0194-ecc9-4813-99c5-01c5d1cd93b4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:c0a2c18d-f026-4062-9ec0-807da2b3f017'
+  module:
+    - block_content
+    - system
+  theme:
+    - urologyservicesinquiry_theme
+id: watchhearings
+theme: urologyservicesinquiry_theme
+region: top_third
+weight: 0
+provider: null
+plugin: 'block_content:c0a2c18d-f026-4062-9ec0-807da2b3f017'
+settings:
+  id: 'block_content:c0a2c18d-f026-4062-9ec0-807da2b3f017'
+  label: 'Watch Hearings'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
