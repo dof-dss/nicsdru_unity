@@ -179,7 +179,7 @@
           padding: 0 1.8rem 2rem;
 
           h2 {
-            @include responsive-typo-map($h3-text);
+            @include adjust-font-size-to(21px);
             margin-top: 1.8rem;
             margin-bottom: 2rem;
           }
@@ -219,6 +219,12 @@
 
     a {
       display: block;
+    }
+  }
+
+  .footer-area {
+    h2 {
+      @include adjust-font-size-to(30px);
     }
   }
 

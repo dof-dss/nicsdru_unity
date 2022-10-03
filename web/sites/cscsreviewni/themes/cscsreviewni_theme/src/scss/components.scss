@@ -178,6 +178,10 @@
 #footer {
   font-size: 1.6rem;
 
+  .footer-area h2 {
+    @include adjust-font-size-to(21px);
+  }
+
   .footer-menu li {
     padding-left: 0;
     font-size: 1.4rem;
@@ -225,6 +229,7 @@
       }
 
       h2 {
+        @include adjust-font-size-to(21px);
         font-weight: bold;
         color: $headings;
       }
