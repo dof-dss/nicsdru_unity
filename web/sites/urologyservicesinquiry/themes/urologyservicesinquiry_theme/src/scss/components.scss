@@ -152,6 +152,7 @@
       }
 
       h2 {
+        @include adjust-font-size-to(21px);
         font-weight: bold;
         color: $headings;
       }
@@ -160,6 +161,7 @@
         padding-bottom: 1.5rem;
 
         h3 {
+          @include adjust-font-size-to(18px);
           margin: 0;
         }
 
