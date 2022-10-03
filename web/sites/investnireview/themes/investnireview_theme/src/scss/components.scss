@@ -140,6 +140,12 @@
     }
   }
 
+  .footer-area {
+    h2 {
+      @include adjust-font-size-to(30px);
+    }
+  }
+
   .footer_credit #footer-menu .menu li {
     a,
     span.active {
@@ -204,7 +210,7 @@
     background: #f4f4f4;
 
     h2 {
-      @include responsive-typo-map($h2-text);
+      @include adjust-font-size-to(30px);
       background: $headings;
       color: $white;
       padding-left: 2rem;
