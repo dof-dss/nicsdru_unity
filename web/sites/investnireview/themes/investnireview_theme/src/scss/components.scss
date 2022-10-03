@@ -33,8 +33,7 @@
 }
 
 .toc-menu .menu-title {
-  font-size: $h2-font-size;
-  line-height: 3.6rem;
+  @include responsive-typo-map($h2-text);
 }
 
 .search-form {

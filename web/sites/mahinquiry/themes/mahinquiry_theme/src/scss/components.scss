@@ -208,7 +208,7 @@
       }
 
       h2 {
-        @include responsive-typo-map($h2-text);
+        @include adjust-font-size-to(21px);
         margin: 0;
         padding: 1rem 0 2rem;
         line-height: 1.5;
@@ -218,6 +218,7 @@
         padding-bottom: 1.5rem;
 
         h3 {
+          @include adjust-font-size-to(18px);
           margin: 0;
         }
 
