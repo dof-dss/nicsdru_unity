@@ -27,7 +27,6 @@ db:
       - investnireviewdb
       - pcspsdb
       - cscsreviewnidb
-      - mentalhealthchampionnidb
     endpoints:
       uregni:
         default_schema: uregnidb
@@ -97,10 +96,6 @@ db:
         default_schema: cscsreviewnidb
         privileges:
           cscsreviewnidb: admin
-      mentalhealthchampionni:
-        default_schema: mentalhealthchampionnidb
-        privileges:
-          mentalhealthchampionnidb: admin
 
 # Fudging the service name forces a full rebuild with any new config.
 solr:
@@ -120,8 +115,6 @@ solr:
         conf_dir: !archive "solr_config/"
       attorneygeneralni_index:
         conf_dir: !archive "solr_config/"
-      mentalhealthchampionni_index:
-        conf_dir: !archive "solr_config/"
       #     fictcommission_index:
       #       conf_dir: !archive "solr_config/"
     endpoints:
@@ -137,8 +130,6 @@ solr:
         core: pcsps_index
       attorneygeneralni:
         core: attorneygeneralni_index
-      mentalhealthchampionni:
-        core: mentalhealthchampionni_index
 #     fictcommission:
 #       core: fictcommission_index
 
