@@ -85,12 +85,10 @@ input[type="submit"].btn {
 }
 
 .front {
-  .block {
-    h2 {
-      @include responsive-typo-map($h2-text);
-      margin: 0;
-      padding: 1rem 1rem 1rem 0;
-    }
+  h2 {
+    @include adjust-font-size-to(21px);
+    margin: 0;
+    padding: 1rem 1rem 1rem 0;
   }
 
   .block-system-main-block {
@@ -117,6 +115,13 @@ input[type="submit"].btn {
       font-weight: 200;
       letter-spacing: -.3px;
     }
+  }
+}
+
+#block-contactuscontactinfo {
+  h3 {
+    @include adjust-font-size-to(18px);
+    margin: 2.4rem 0 1.2rem;
   }
 }
 

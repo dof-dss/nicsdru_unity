@@ -110,12 +110,14 @@
       }
 
       h2 {
+        @include adjust-font-size-to(21px);
         font-weight: bold;
         color: $headings;
       }
 
       article.node--type-publication {
         h3 {
+          @include adjust-font-size-to(18px);
           margin: 0;
         }
 

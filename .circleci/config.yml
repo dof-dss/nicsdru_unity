@@ -208,16 +208,11 @@ jobs:
             platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
-          name: Activate test accounts if the sync failed
+          name: Backup backup data sync if the previous attempt failed.
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
-            do
-              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
-              if [[ -n $result ]]; then
-                echo "***** Enable QA accounts - ${site} *****"
-                platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
-              fi
-            done
+            # Pause for the blocking activity to finish.
+            sleep 590s
+            platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
@@ -233,6 +228,7 @@ jobs:
                 fi
             fi
             done
+          when: always
       - run:
           name: Clear cache before config import
           command: |
@@ -244,6 +240,7 @@ jobs:
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
+          when: always
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
@@ -257,6 +254,7 @@ jobs:
                 platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH
               fi
             done
+          when: always
       - run:
           name: Purge and rebuild Solr indexes
           command: |
@@ -277,6 +275,7 @@ jobs:
                 fi
               fi
             done
+          when: always
 
 workflows:
   version: 2
@@ -307,8 +306,8 @@ workflows:
   nightly-edge-build-post-build-tasks:
     triggers:
       - schedule:
-          # At 03:41 Monday to Friday
-          cron: "41 3 * * 1-5"
+          # At 06:41 Monday to Friday
+          cron: "41 6 * * 1-5"
           filters:
             branches:
               only:

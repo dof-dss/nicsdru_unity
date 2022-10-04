@@ -11,18 +11,6 @@
 # When a site becomes fully 'live' and its domain is added to the Platform.sh dashboard then any explicit
 # routes that appear below for that site should be removed.
 #---------------------------------
-
-"https://www.mentalhealthchampion-ni.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://mentalhealthchampion-ni.org.uk/":
-  type: redirect
-  to: "https://www.mentalhealthchampion-ni.org.uk/"
-
-#---------------------------------
 # Do not remove this route, the {default} domain must be
 # explicitly defined as it is not included in {all}
 "https://www.fiscalcommissionni.org.{default}/":

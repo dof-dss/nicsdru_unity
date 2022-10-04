@@ -12,11 +12,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: presentations
-      label: Presentations
-    -
       value: evidence
       label: Evidence
+    -
+      value: presentations
+      label: Presentations
     -
       value: reports
       label: Reports
