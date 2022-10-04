@@ -11,8 +11,6 @@
 # When a site becomes fully 'live' and its domain is added to the Platform.sh dashboard then any explicit
 # routes that appear below for that site should be removed.
 #---------------------------------
-
-#---------------------------------
 # Do not remove this route, the {default} domain must be
 # explicitly defined as it is not included in {all}
 "https://www.fiscalcommissionni.org.{default}/":
