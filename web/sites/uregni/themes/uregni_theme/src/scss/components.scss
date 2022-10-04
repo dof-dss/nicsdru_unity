@@ -118,6 +118,13 @@ input[type="submit"].btn {
   }
 }
 
+#block-contactuscontactinfo {
+  h3 {
+    @include adjust-font-size-to(18px);
+    margin: 2.4rem 0 1.2rem;
+  }
+}
+
 #block-sidemenu {
   background: none;
   border: none;
