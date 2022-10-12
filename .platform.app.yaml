@@ -250,3 +250,9 @@ crons:
   pcsps:
     spec: '10 * * * *'
     cmd: 'cd web/sites/pcsps ; drush core-cron'
+  # Log shipping cron.
+  logging:
+    spec: '*/5 * * * *'
+    commands:
+      start: '/bin/bash /app/cronjob.sh'
+    shutdown_timeout: 290
