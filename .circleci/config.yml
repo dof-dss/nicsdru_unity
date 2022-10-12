@@ -307,7 +307,7 @@ workflows:
     triggers:
       - schedule:
           # At 06:41 Monday to Friday
-          cron: "41 6 * * 1-5"
+          cron: "41 3 * * 1-5"
           filters:
             branches:
               only:
