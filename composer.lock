@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52d00d5015ccb0de7b8a2c91e493c3bf",
+    "content-hash": "d1c97d723f4734f4e08733d158faf1a1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4800,6 +4800,10 @@
                 {
                     "name": "See other contributors",
                     "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
                 }
             ],
             "description": "This module aims at making the website compliant with the new EU cookie regulation.",
@@ -7726,16 +7730,16 @@
                     "homepage": "https://www.drupal.org/u/mollux"
                 },
                 {
-                    "name": "borisson_",
-                    "homepage": "https://www.drupal.org/user/2393360"
-                },
-                {
                     "name": "drunken monkey",
                     "homepage": "https://www.drupal.org/user/205582"
                 },
                 {
                     "name": "mollux",
                     "homepage": "https://www.drupal.org/user/785804"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
                 },
                 {
                     "name": "ygerasimov",
