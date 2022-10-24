@@ -26,14 +26,14 @@
 #---------------------------------
 
 "https://www.{default}/":
-type: upstream
-upstream: "unity:http"
-cache:
-enabled: false
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
 
 "https://{default}/":
-type: redirect
-to: "https://www.{default}/"
+  type: redirect
+  to: "https://www.{default}/"
 
 #---------------------------------
 # Catch all.
