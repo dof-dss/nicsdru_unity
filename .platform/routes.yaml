@@ -25,6 +25,17 @@
 
 #---------------------------------
 
+"https://www.{default}/":
+type: upstream
+upstream: "unity:http"
+cache:
+enabled: false
+
+"https://{default}/":
+type: redirect
+to: "https://www.{default}/"
+
+#---------------------------------
 # Catch all.
 "https://www.{all}/":
   type: upstream
