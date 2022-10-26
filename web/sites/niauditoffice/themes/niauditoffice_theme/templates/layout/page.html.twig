@@ -181,7 +181,7 @@
 <footer id="footer">
   <div id="footer_wrapper">
     {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer %}
-      <div id="footer-content" class="clearfix">
+      <div id="footer-content" class="clearfix container-wrap">
         {% if page.footer_first %}
           <div class="column">
             {{ page.footer_first }}
@@ -205,7 +205,7 @@
       </div>
 
       {% if page.footer %}
-        <div class="footer_credit">
+        <div class="footer_credit container-wrap">
           {{ page.footer }}
         </div>
       {% endif %}

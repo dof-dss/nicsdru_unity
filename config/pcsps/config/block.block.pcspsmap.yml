@@ -1,0 +1,30 @@
+uuid: 4e5de0ab-394b-4d2f-98f4-32e4412766a4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:0f7211b2-8024-45fa-9729-134d87581e31'
+  module:
+    - block_content
+    - system
+  theme:
+    - pcsps_theme
+id: pcspsmap
+theme: pcsps_theme
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:0f7211b2-8024-45fa-9729-134d87581e31'
+settings:
+  id: 'block_content:0f7211b2-8024-45fa-9729-134d87581e31'
+  label: 'PCSPS Map'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /locate-your-pcsp

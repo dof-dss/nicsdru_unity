@@ -7,3 +7,5 @@ ignored_config_entities:
   - 'employmenttribunalsni_theme.settings:pinterest_profile_url'
   - 'employmenttribunalsni_theme.settings:youtube_profile_url'
   - 'employmenttribunalsni_theme.settings:instagram_profile_url'
+  - block.block.sociallinks
+  - 'unity_internal_link_checker.*'

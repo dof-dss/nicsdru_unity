@@ -6,6 +6,7 @@ core_version_requirement: 8.x || ^9
 
 libraries:
   - niauditoffice_theme/site-styling
+  - niauditoffice_theme/niao-font
   - nicsdru_unity_theme/unity-slider
   - nicsdru_unity_theme/autocomplete
   - nicsdru_unity_theme/accordions

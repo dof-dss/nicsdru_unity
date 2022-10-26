@@ -6,7 +6,7 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #headerHero {
-  @media screen and (max-width: 765px){
+  @media screen and (max-width: 765px) {
     background-color: $brand-secondary;
   }
 }
@@ -121,7 +121,7 @@
 
   &:focus {
     background-color: $white;
-    color: $link;
+    color: $white;
   }
 }
 
@@ -131,7 +131,8 @@
 
   h2 {
     color: $headings;
-    @include adjust-font-size-to(30px);
+    @include adjust-font-size-to(25px);
+    margin: 1.5rem 0 1.2rem;
   }
 
   .twitter-block {
@@ -145,15 +146,27 @@
         border-radius: 100%;
         padding: .5rem;
       }
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $brand-secondary;
+        }
+      }
     }
   }
 
-  @include breakpoint($tab) {
-    display: flex;
-    justify-content: space-between;
+  .container-wrap {
+    max-width: 1044px;
+    @include breakpoint($tab) {
 
-    .column {
-      flex-basis: 48%;
+      display: flex;
+      justify-content: space-between;
+
+      .column {
+        flex-basis: 50%;
+      }
     }
   }
 
@@ -246,24 +259,39 @@
   }
 }
 
-.middle-area {
-  background: #d5e8e9;
-  padding: 6rem;
+.region-front-welcome {
+  text-align: left;
+  max-width: 100%;
 
-  .column {
+  @media screen and (max-width: $tab) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include breakpoint($tab) {
+    background: resolve('Middle-bg1.png') no-repeat 50% 50%;
+    padding: 3rem;
+  }
+
+  .block h2 {
+    color: $headings;
+    text-align: left;
+    @include adjust-font-size-to(40px);
+  }
+
+  #block-homepage5links {
     max-width: 1044px;
     margin: 0 auto;
     padding: 0 1rem;
   }
 }
 
-.middle-area,
-#bottom-area {
+
+.region-front-welcome,
+#top-area {
   .content ul {
-    margin-left: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
 
     li {
       display: inline-block;
@@ -272,31 +300,58 @@
   }
 }
 
-#bottom-area {
+#top-area {
   .content ul {
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       flex-flow: column;
     }
   }
 }
 
-#bottom_wrapper {
+#top-area {
   max-width: 1044px;
   margin: 0 auto;
-  padding: 4.8rem 0 4.2rem;
 
-  .footer-area .column {
-    width: 100%;
-    padding: 0 1rem;
+  .column {
     margin: 0;
   }
 }
 
-#block-homepage5links,
-#block-homepage3links {
+#top-area #block-homepage3links {
+  @media screen and (max-width: $tab) {
+    ul {
+      margin-left: 0;
+    }
+  }
+
   .content ul li a {
     margin: 0;
+  }
+}
+
+#content #block-homepage5links {
+  .content ul li a {
+    margin: 11rem 3rem 0 2rem;
     display: block;
+    border-bottom: none;
+    color: $white;
+    text-align: center;
+
+    @media screen and (max-width: 913px) {
+      margin: 7rem 3rem 0 2rem;
+      border-bottom: none;
+      color: $white;
+      text-align: center;
+
+      &:first-child {
+
+        margin: 6rem 3rem 0 2rem;
+      }
+    }
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
   }
 }
 
@@ -304,54 +359,39 @@
   .content {
     ul {
       li {
-        height: 19.5rem;
-        width: 19rem;
+        height: 23rem;
+        width: 23rem;
+        background: no-repeat 0 100% /contain;
+
+        @media screen and (max-width: 913px) {
+          height: 16rem;
+          width: 16rem;
+        }
+
+        &:hover,
+        &:focus {
+          border-bottom: none;
+        }
 
         @media screen and (max-width: $tab) {
-          height: 19.2rem;
+          padding-bottom: 2rem;
         }
 
-        a {
-          padding: 1rem 0 4.4rem 1rem;
-          border-bottom: none;
-          color: $white;
-
-          &:hover,
-          &:focus {
-            border-bottom: none;
-            text-decoration: underline;
-          }
-        }
-
-        &:first-child,
-        &:last-child {
-          a {
-            padding-bottom: 1.7rem;
-
-            @media screen and (max-width: $tab) {
-              padding-bottom: 2rem;
-            }
-          }
-        }
 
         &:first-child {
-          background: $charcoal resolve('for-people-under-supervision.png') no-repeat 0 100%;
+          background-image: resolve('Circle-Bg.png');
         }
 
         &:nth-child(2) {
-          background: $charcoal resolve('for-sentencers.png') no-repeat 0 100%;
+          background-image: resolve('Circle-Bg1.png');
         }
 
         &:nth-child(3) {
-          background: $charcoal resolve('for-victims.png') no-repeat 0 100%;
+          background-image: resolve('Circle-Bg2.png');
         }
 
         &:nth-child(4) {
-          background: $charcoal resolve('for-the-community.png') no-repeat 0 100%;
-        }
-
-        &:nth-child(5) {
-          background: $charcoal resolve('for-partner-organisations.png') no-repeat 0 100%;
+          background-image: resolve('Circle-Bg3.png');
         }
       }
     }
@@ -361,6 +401,10 @@
 #block-homepage3links {
   .content {
     ul {
+      display: grid;
+      justify-content: start;
+      width: 100%;
+
       li {
         padding: 1.8rem 9rem;
 
@@ -370,13 +414,17 @@
         }
 
         &:nth-child(2) {
+          background: resolve('programmes.png') no-repeat;
+          border: 2px solid $brand-secondary;
+        }
+
+        &:last-child {
           background: resolve('real-stories.png') no-repeat;
           border: 2px solid #926d07;
         }
 
-        &:last-child {
-          background: resolve('programmes.png') no-repeat;
-          border: 2px solid $brand-secondary;
+        a {
+          display: inline;
         }
 
         a:hover {
@@ -384,6 +432,12 @@
         }
       }
     }
+  }
+}
+
+#top-area {
+  .column:last-child {
+    float: left;
   }
 }
 
@@ -493,9 +547,6 @@
   }
 }
 
-
-
-
 .board-members {
   display: flex;
   flex-flow: column;
@@ -541,6 +592,23 @@
   }
 }
 
-.media-image figure figcaption {
-  display: none;
+#header {
+  @include breakpoint($tab) {
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+}
+
+#inner_header_wrapper {
+  @include breakpoint($tab) {
+    background: resolve('Nav-bg.png') no-repeat 50%;
+  }
+
+  .top_left #logo {
+    position: static;
+  }
+
+  img {
+    height: 99px;
+  }
 }

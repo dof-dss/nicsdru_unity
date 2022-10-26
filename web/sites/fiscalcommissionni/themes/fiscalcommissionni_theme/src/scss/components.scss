@@ -143,6 +143,12 @@
     }
   }
 
+  .footer-area {
+    h2 {
+      @include adjust-font-size-to(30px);
+    }
+  }
+
   #block-contactus {
     .social-icons {
       @media screen and (max-width: $tab) {

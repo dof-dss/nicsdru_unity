@@ -1,9 +1,9 @@
-uuid: 461bb5b8-4d2d-42a1-842e-73bb08a62628
+uuid: f6b61531-e0c4-42aa-80b8-e142ae61f6f5
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:e8627962-825f-4726-842c-8678a2b182ee'
+    - 'block_content:basic_block:9e997874-8f3d-4bb5-902b-ca6f9c15c88d'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: cscsreviewni_theme
 region: footer_second
 weight: 0
 provider: null
-plugin: 'block_content:e8627962-825f-4726-842c-8678a2b182ee'
+plugin: 'block_content:9e997874-8f3d-4bb5-902b-ca6f9c15c88d'
 settings:
-  id: 'block_content:e8627962-825f-4726-842c-8678a2b182ee'
+  id: 'block_content:9e997874-8f3d-4bb5-902b-ca6f9c15c88d'
   label: 'Follow us on Twitter'
   label_display: visible
   provider: block_content

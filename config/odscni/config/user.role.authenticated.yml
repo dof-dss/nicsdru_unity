@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.basic_html
   module:
-    - contact
     - filter
     - google_analytics
     - media
@@ -25,7 +24,6 @@ permissions:
   - 'access administration pages'
   - 'access content'
   - 'access media browser'
-  - 'access site-wide contact form'
   - 'access statistics'
   - 'access toolbar'
   - 'access workbench'

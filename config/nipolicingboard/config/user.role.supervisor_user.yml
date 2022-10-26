@@ -9,7 +9,6 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.feature
-    - node.type.featured_content_list
     - node.type.news
     - node.type.page
     - node.type.publication_page
@@ -24,6 +23,7 @@ dependencies:
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - entityqueue
     - file
     - media
     - menu_admin_per_menu
@@ -74,7 +74,6 @@ permissions:
   - 'create audio media'
   - 'create document media'
   - 'create feature content'
-  - 'create featured_content_list content'
   - 'create file media'
   - 'create files'
   - 'create image media'
@@ -98,7 +97,6 @@ permissions:
   - 'delete any document files'
   - 'delete any document media'
   - 'delete any feature content'
-  - 'delete any featured_content_list content'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'
@@ -110,7 +108,6 @@ permissions:
   - 'delete any staff_member content'
   - 'delete any video files'
   - 'delete feature revisions'
-  - 'delete featured_content_list revisions'
   - 'delete news revisions'
   - 'delete own audio files'
   - 'delete own audio media'
@@ -118,7 +115,6 @@ permissions:
   - 'delete own document files'
   - 'delete own document media'
   - 'delete own feature content'
-  - 'delete own featured_content_list content'
   - 'delete own file media'
   - 'delete own image files'
   - 'delete own image media'
@@ -153,7 +149,6 @@ permissions:
   - 'edit any document files'
   - 'edit any document media'
   - 'edit any feature content'
-  - 'edit any featured_content_list content'
   - 'edit any file media'
   - 'edit any image files'
   - 'edit any image media'
@@ -171,7 +166,6 @@ permissions:
   - 'edit own document files'
   - 'edit own document media'
   - 'edit own feature content'
-  - 'edit own featured_content_list content'
   - 'edit own file media'
   - 'edit own image files'
   - 'edit own image media'
@@ -192,6 +186,7 @@ permissions:
   - 'edit terms in nipb_publications'
   - 'edit terms in publications_topics'
   - 'flag content_audit'
+  - 'manipulate entityqueues'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'
   - 'moderate content from needs_review to published'
@@ -205,7 +200,6 @@ permissions:
   - 'reschedule scheduled transitions node staff_member'
   - 'revert all revisions'
   - 'revert feature revisions'
-  - 'revert featured_content_list revisions'
   - 'revert news revisions'
   - 'revert page revisions'
   - 'revert publication_page revisions'
@@ -216,6 +210,8 @@ permissions:
   - 'show core Outline form element'
   - 'show core Outline tab'
   - 'unflag content_audit'
+  - 'update board_members_queue entityqueue'
+  - 'update slideshow entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
@@ -235,7 +231,6 @@ permissions:
   - 'view any unpublished content'
   - 'view content references'
   - 'view feature revisions'
-  - 'view featured_content_list revisions'
   - 'view latest version'
   - 'view moderation history'
   - 'view moderation messages'

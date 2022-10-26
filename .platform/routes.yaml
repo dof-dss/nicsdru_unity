@@ -11,54 +11,6 @@
 # When a site becomes fully 'live' and its domain is added to the Platform.sh dashboard then any explicit
 # routes that appear below for that site should be removed.
 #---------------------------------
-
-"https://www.attorneygeneralni.gov.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://attorneygeneralni.gov.uk/":
-  type: redirect
-  to: "https://www.attorneygeneralni.gov.uk/"
-
-#---------------------------------
-
-"https://www.nipolicingboard.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://nipolicingboard.org.uk/":
-  type: redirect
-  to: "https://www.nipolicingboard.org.uk/"
-
-#---------------------------------
-
-"https://www.pbni.org.uk/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://pbni.org.uk/":
-  type: redirect
-  to: "https://www.pbni.org.uk/"
-
-#---------------------------------
-
-"https://www.pcsps.org/":
-  type: upstream
-  upstream: "unity:http"
-  cache:
-    enabled: false
-
-"https://pcsps.org/":
-  type: redirect
-  to: "https://www.pcsps.org/"
-
-#---------------------------------
 # Do not remove this route, the {default} domain must be
 # explicitly defined as it is not included in {all}
 "https://www.fiscalcommissionni.org.{default}/":
@@ -73,6 +25,17 @@
 
 #---------------------------------
 
+"https://www.{default}/":
+  type: upstream
+  upstream: "unity:http"
+  cache:
+    enabled: false
+
+"https://{default}/":
+  type: redirect
+  to: "https://www.{default}/"
+
+#---------------------------------
 # Catch all.
 "https://www.{all}/":
   type: upstream

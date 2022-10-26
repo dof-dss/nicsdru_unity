@@ -13,7 +13,6 @@ dependencies:
     - media.type.video
     - node.type.faq
     - node.type.feature
-    - node.type.featured_content_list
     - node.type.html_document
     - node.type.news
     - node.type.page
@@ -23,6 +22,7 @@ dependencies:
   module:
     - content_moderation
     - entity_browser
+    - entityqueue
     - file
     - filter
     - media
@@ -87,7 +87,6 @@ permissions:
   - 'create external_link content'
   - 'create faq content'
   - 'create feature content'
-  - 'create featured_content_list content'
   - 'create file media'
   - 'create files'
   - 'create gallery content'
@@ -121,7 +120,6 @@ permissions:
   - 'delete any external_link content'
   - 'delete any faq content'
   - 'delete any feature content'
-  - 'delete any featured_content_list content'
   - 'delete any file media'
   - 'delete any gallery content'
   - 'delete any html_document content'
@@ -149,7 +147,6 @@ permissions:
   - 'delete external_link revisions'
   - 'delete faq revisions'
   - 'delete feature revisions'
-  - 'delete featured_content_list revisions'
   - 'delete gp_practice revisions'
   - 'delete health_condition revisions'
   - 'delete html_document revisions'
@@ -170,7 +167,6 @@ permissions:
   - 'delete own external_link content'
   - 'delete own faq content'
   - 'delete own feature content'
-  - 'delete own featured_content_list content'
   - 'delete own file media'
   - 'delete own gallery content'
   - 'delete own html_document content'
@@ -219,7 +215,6 @@ permissions:
   - 'edit any external_link content'
   - 'edit any faq content'
   - 'edit any feature content'
-  - 'edit any featured_content_list content'
   - 'edit any file media'
   - 'edit any gallery content'
   - 'edit any html_document content'
@@ -252,7 +247,6 @@ permissions:
   - 'edit own external_link content'
   - 'edit own faq content'
   - 'edit own feature content'
-  - 'edit own featured_content_list content'
   - 'edit own file media'
   - 'edit own gallery content'
   - 'edit own html_document content'
@@ -275,6 +269,7 @@ permissions:
   - 'flag featured_news'
   - 'flag hide_content'
   - 'flag home_page_display'
+  - 'manipulate entityqueues'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'
   - 'moderate content from needs_review to published'
@@ -306,7 +301,6 @@ permissions:
   - 'revert external_link revisions'
   - 'revert faq revisions'
   - 'revert feature revisions'
-  - 'revert featured_content_list revisions'
   - 'revert gp_practice revisions'
   - 'revert health_condition revisions'
   - 'revert html_document revisions'
@@ -327,6 +321,7 @@ permissions:
   - 'unflag featured_news'
   - 'unflag hide_content'
   - 'unflag home_page_display'
+  - 'update slideshow entityqueue'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition reject'
@@ -362,7 +357,6 @@ permissions:
   - 'view external_link revisions'
   - 'view faq revisions'
   - 'view feature revisions'
-  - 'view featured_content_list revisions'
   - 'view gp_practice revisions'
   - 'view health_condition revisions'
   - 'view html_document revisions'
