@@ -270,7 +270,7 @@ display:
           click_sort_column: uri
           type: link
           settings:
-            trim_length: 80
+            trim_length: null
             url_only: false
             url_plain: false
             rel: '0'

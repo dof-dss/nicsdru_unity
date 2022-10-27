@@ -208,13 +208,6 @@ jobs:
             platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
-          name: Backup backup data sync if the previous attempt failed.
-          command: |
-            # Pause for the blocking activity to finish.
-            sleep 590s
-            platform sync data -p $PLATFORM_PROJECT_ID -e $EDGE_BUILD_BRANCH -y
-          when: on_fail
-      - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
             for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
