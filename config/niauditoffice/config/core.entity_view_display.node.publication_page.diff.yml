@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.diff
     - field.field.node.publication_page.body
     - field.field.node.publication_page.field_attachment
+    - field.field.node.publication_page.field_html_document
     - field.field.node.publication_page.field_meta_tags
     - field.field.node.publication_page.field_niao_publication_image
     - field.field.node.publication_page.field_publication_date
@@ -60,6 +61,14 @@ content:
     settings:
       view_mode: embed
       link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_html_document:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 4
     region: content
