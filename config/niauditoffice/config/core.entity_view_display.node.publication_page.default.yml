@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.publication_page.field_niao_publication_image
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_topic
+    - field.field.node.publication_page.field_topics
     - node.type.publication_page
   module:
     - datetime
@@ -62,6 +63,14 @@ content:
       format_type: niao_medium
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
   content_moderation_control: true

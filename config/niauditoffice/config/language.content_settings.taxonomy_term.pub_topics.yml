@@ -1,0 +1,11 @@
+uuid: 9d1cdb99-85f5-4f52-aa45-50c371ac704e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pub_topics
+id: taxonomy_term.pub_topics
+target_entity_type_id: taxonomy_term
+target_bundle: pub_topics
+default_langcode: site_default
+language_alterable: false
