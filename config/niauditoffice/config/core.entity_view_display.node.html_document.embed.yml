@@ -8,27 +8,26 @@ dependencies:
     - node.type.html_document
   module:
     - layout_builder
+    - text
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.html_document.embed
 targetEntityType: node
 bundle: html_document
 mode: embed
 content:
-  content_moderation_control:
-    weight: -20
+  field_html:
+    type: text_default
+    label: above
     settings: {  }
     third_party_settings: {  }
-    region: content
-  links:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_html: true
+  content_moderation_control: true
   langcode: true
+  links: true
   search_api_excerpt: true
