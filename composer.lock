@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70716d6808e97ccd9e92431c420cc976",
+    "content-hash": "748ba87cecf09ce70598096602b3d86f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1976,16 +1976,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.63",
+            "version": "dev-D8UN-628",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "f75c612077510c2260cc1ec7ebe10aaabadb56f9"
+                "reference": "fdda8c2c48baec69eeb04651f8fd9644e3b62cea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/f75c612077510c2260cc1ec7ebe10aaabadb56f9",
-                "reference": "f75c612077510c2260cc1ec7ebe10aaabadb56f9",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/fdda8c2c48baec69eeb04651f8fd9644e3b62cea",
+                "reference": "fdda8c2c48baec69eeb04651f8fd9644e3b62cea",
                 "shasum": ""
             },
             "require": {
@@ -2009,9 +2009,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.63"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/D8UN-628"
             },
-            "time": "2022-10-21T10:28:09+00:00"
+            "time": "2022-02-07T16:23:24+00:00"
         },
         {
             "name": "drupal/address",
@@ -20642,6 +20642,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "dof-dss/nicsdru_unity_modules": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/block_field": 5,
         "drupal/config_readonly": 10,
         "drupal/date_facet_drilldown": 20,
@@ -20658,5 +20659,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
