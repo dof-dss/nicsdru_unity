@@ -1,4 +1,4 @@
-uuid: a0294504-1c93-4115-82e8-2da15cf187fc
+uuid: 8a09bb2f-c3e5-4323-ad1f-2f805307b967
 langcode: en
 status: true
 dependencies:
@@ -11,13 +11,13 @@ dependencies:
 third_party_settings:
   facets_pretty_paths:
     coder: taxonomy_term_coder
-id: type
-name: Type
+id: topics
+name: Topics
 weight: 0
 min_count: 1
-url_alias: type
+url_alias: topics
 facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
-field_identifier: field_publication_topic
+field_identifier: field_topics
 query_operator: and
 hard_limit: 0
 exclude: false

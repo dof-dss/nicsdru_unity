@@ -17,15 +17,21 @@ processor_configs:
       build: '45'
     settings: {  }
 facets:
-  publications_type_facet:
-    checked: true
-    label: Type
-    separator: ', '
-    show_count: false
-    weight: -10
   publication_date:
     checked: true
     label: 'Publication date'
     separator: ', '
     show_count: false
-    weight: -9
+    weight: 0
+  topics:
+    checked: true
+    label: Topics
+    separator: ', '
+    show_count: false
+    weight: 0
+  type:
+    checked: true
+    label: Type
+    separator: ', '
+    show_count: false
+    weight: 0
