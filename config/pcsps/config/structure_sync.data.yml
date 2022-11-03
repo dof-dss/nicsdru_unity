@@ -104,3 +104,97 @@ blocks:
     rev_id_current: null
     fields:
       body: {  }
+taxonomies:
+  publications_topics:
+    -
+      vid: publications_topics
+      tid: '1'
+      langcode: en
+      name: 'Code of Practice'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ea7b97e5-41b3-4a4b-88d2-b53cd6135945
+    -
+      vid: publications_topics
+      tid: '2'
+      langcode: en
+      name: 'Information leaflets'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4d186b0d-ef71-4b0c-b4ac-f59faeb92c5a
+    -
+      vid: publications_topics
+      tid: '3'
+      langcode: en
+      name: Inpartnership
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 229ad098-28ba-4665-b39e-9372665b3088
+    -
+      vid: publications_topics
+      tid: '4'
+      langcode: en
+      name: 'Joint Committee Minutes'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c61ae8a7-cc3d-4c49-b84c-559ca94bc3fc
+    -
+      vid: publications_topics
+      tid: '5'
+      langcode: en
+      name: 'Other Publications'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 8f1e7e9c-bc00-4027-9f13-259a9a7c798f
+    -
+      vid: publications_topics
+      tid: '6'
+      langcode: en
+      name: 'Other Reports'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 58163870-13b2-4ade-9823-508705363a43
+    -
+      vid: publications_topics
+      tid: '7'
+      langcode: en
+      name: 'PCSP Annual Reports'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a609df5a-3095-400d-8605-74249dd70275
+    -
+      vid: publications_topics
+      tid: '8'
+      langcode: en
+      name: 'PCSP Appointments'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: bd741ba2-992e-4e4d-a679-91e758aaab26
+    -
+      vid: publications_topics
+      tid: '9'
+      langcode: en
+      name: 'Policies and Guidance'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: cefd73e2-d70d-4cf7-89d6-308f2087c3f1
+  site_topics: {  }
+  tags: {  }
