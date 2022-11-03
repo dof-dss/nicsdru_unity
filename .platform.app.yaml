@@ -113,7 +113,7 @@ hooks:
       drush -l $site -y cache-rebuild
       drush -l $site -y config-import
       drush -l $site -y updatedb
-      drush -l $site import-all-if-installed safe
+      drush -l $site import-blocks-taxonomies
       if [ "$PLATFORM_ENVIRONMENT_TYPE" = production ]; then
         # Disable QA logons
         drush -l $site bulk_update_qa_accounts disable
