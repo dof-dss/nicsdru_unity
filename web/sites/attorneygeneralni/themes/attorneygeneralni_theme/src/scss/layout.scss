@@ -23,25 +23,8 @@
   margin-top: 1.5rem;
   width: 100%;
 
-  @media screen and (max-width: $tab) {
-    padding: 0 1rem;
-  }
-
-  a {
-    display: block;
-
-    &:focus {
-      background: none;
-      border-bottom: none;
-      outline: 0.3rem dashed #949494;
-      outline-offset: 1.2rem;
-    }
-  }
-
   img {
-    height: 80px;
-
-    @media screen and (max-width: $tab) {
+   @media screen and (max-width: $tab) {
       height: 60px;
     }
   }
