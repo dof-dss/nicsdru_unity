@@ -5,26 +5,6 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
 
-#logo {
-  img {
-    height: 80px;
-  }
-
-  @media screen and (max-width: $tab) {
-    padding: 0 1rem;
-  }
-
-  a {
-    &:focus {
-      background: none;
-      border-bottom: none;
-      outline: .3rem dashed #949494;
-      outline-offset: 1.2rem;
-      display: block;
-    }
-  }
-}
-
 .front {
   .front-banner {
     max-width: 1160px;
