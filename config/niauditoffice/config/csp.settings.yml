@@ -17,6 +17,7 @@ report-only:
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
+        - '*.typekit.com'
     frame-src:
       base: self
       sources:
@@ -49,6 +50,8 @@ report-only:
         - 'https://www.google-analytics.com'
     style-src:
       base: self
+      sources:
+        - '*.typekit.com'
     style-src-attr:
       base: self
       flags:
