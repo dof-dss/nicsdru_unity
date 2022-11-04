@@ -12,26 +12,6 @@
   }
 }
 
-#logo {
-  @media screen and (max-width: $tab) {
-    padding: 0 1rem;
-  }
-
-  a {
-    &:focus {
-      background: none;
-      border-bottom: none;
-      outline: .3rem dashed #949494;
-      outline-offset: 1.2rem;
-      display: block;
-    }
-  }
-
-  img {
-    height: 80px;
-  }
-}
-
 .sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;
