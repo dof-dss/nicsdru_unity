@@ -41,6 +41,21 @@
   }
 }
 
+.search-form input[type="submit"] {
+  background-color: $black;
+
+  &:hover {
+    opacity: 1;
+    outline: 3px solid $hc-red;
+    outline-offset: -2px;
+    overflow: hidden;
+  }
+
+  &:focus {
+    outline-color: $hc-red;
+  }
+}
+
 #main-menu {
   .menu {
     .menu-item {
