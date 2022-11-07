@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
   module:
     - filter
+    - google_analytics
     - media
     - node
     - pathauto
@@ -24,6 +25,7 @@ permissions:
   - 'access workbench'
   - 'diff view changes'
   - 'notify of path changes'
+  - 'opt-in or out of google analytics tracking'
   - 'revert revisions'
   - 'search content'
   - 'use media wysiwyg'
