@@ -1,14 +1,14 @@
-uuid: ca756c38-540e-4e1f-8c27-d468b4855d7e
+uuid: e2b656ce-9979-49f6-911e-83d702d09e86
 langcode: en
 status: true
 dependencies:
   module:
-    - google_analytics
+    - filelog
 title: 'Default cron handler'
-id: google_analytics_cron
+id: filelog_cron
 weight: 0
-module: google_analytics
-callback: google_analytics_cron
+module: filelog
+callback: filelog_cron
 scheduler:
   id: simple
 launcher:
