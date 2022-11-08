@@ -2,17 +2,26 @@ uuid: 199b0d01-1de0-4460-ba18-652f28d5a909
 langcode: en
 status: true
 dependencies:
+  config:
+    - entity_browser.browser.html_document_browser
+    - node.type.html_document
   module:
     - entity_embed
     - node
 _core:
   default_config_hash: xgvZUh-eaMilacE1XYCQ9nLH-2-meOjCyofXSO82gqg
-label: Node
+label: 'HTML document'
 id: node
 type_id: entity
 type_settings:
   entity_type: node
-  bundles: {  }
+  bundles:
+    - html_document
   display_plugins: {  }
-icon: {  }
+  entity_browser: html_document_browser
+  entity_browser_settings:
+    display_review: false
+icon:
+  uri: 'public://embed_buttons/embed-icon-document.svg'
+  data: PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkuOCAxLjdoLTYuNXYxMi4zaDkuNHYtOS4zaC0yLjZjLS4xIDAtLjQtLjEtLjQtLjR2LTIuNnptLjguNnYxLjdoMS43em0tOC0uOGMwLS4zLjEtLjUuNC0uNWg3LjJjLjEgMCAuMSAwIC4zLjFsMi45IDIuOWMuMS4xLjEuMS4xLjN2MTAuM2MwIC4xLS4xLjQtLjQuNGgtMTAuMWMtLjEgMC0uNC0uMS0uNC0uNHoiLz48L3N2Zz4=
 icon_uuid: null
