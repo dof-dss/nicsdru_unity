@@ -23,6 +23,10 @@ DRUPAL_PRACTICE_EXCLUDED_SNIFFS=(
 
 # Comma separated list of npm or non-PHP related FE toolchain directories we want to ignore.
 IGNORE="${DRUPAL_DEPLOY_PATH}/web/themes/custom/nicsdru_unity_theme/node_modules,${DRUPAL_DEPLOY_PATH}/web/modules/custom/node_modules,${DRUPAL_DEPLOY_PATH}/web/themes/origins/node_modules"
+for site in attorneygeneralni employmenttribunalsni fiscalcommissionni hatecrimereviewni liofa niauditoffice nifiscalcouncil octf odscni uregni;
+do
+  IGNORE="${IGNORE},${DRUPAL_DEPLOY_PATH}/web/sites/${site}/themes/${site}_theme/node_modules"
+done
 
 echo "Running coding standard checks in ${PHPCS_CHECK_DIR}"
 echo "Ignoring directories: ${IGNORE}"
