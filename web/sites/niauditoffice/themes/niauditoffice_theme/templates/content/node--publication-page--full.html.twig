@@ -69,6 +69,11 @@
  * @see template_preprocess_node()
  */
 #}
+{% set title_classes = [
+  label_display == 'visually_hidden' ? 'visually-hidden',
+  'content-field__label',
+] %}
+
 {{ content.field_publication_date }}
 {% if work_in_progress %}
 <h2>Work in progress</h2>
@@ -77,5 +82,19 @@
     Details of when we aim to publish the finalised report are indicated below.
   </p>
 {% endif %}
-{{ content | without('field_publication_date')}}
+{{ content.body }}
+{% if content.field_attachment|render is not empty or content.field_html_document|render is not empty %}
+  <div{{ attributes.addClass('content-field--label-inline').setAttribute('role', 'presentation') }}>
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ 'Documents'|t }}</h2>
+    <div class="content-field__value">
+      <ul class="list--no-bullet">
+        {{ content.field_attachment }}
+        {{ content.field_html_document }}
+      </ul>
+        <p class="help-viewing-documents">
+          <a href="{{ path('entity.node.canonical', {'node': '568'}) }}">{{ 'Help viewing documents'|t }}</a>
+        </p>
+    </div>
+  </div>
+{% endif %}
 

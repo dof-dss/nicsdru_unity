@@ -1,0 +1,19 @@
+uuid: ac821e17-7cac-418a-acbc-8129d1b6e53d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_html
+field_name: field_html
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
