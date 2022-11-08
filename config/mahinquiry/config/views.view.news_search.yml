@@ -131,7 +131,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: tag
         options: {  }
       empty: {  }
       sorts:
@@ -220,7 +220,7 @@ display:
             'entity:node':
               news: search_result
       query:
-        type: search_api_query
+        type: views_query
         options:
           bypass_access: false
           skip_access: false
