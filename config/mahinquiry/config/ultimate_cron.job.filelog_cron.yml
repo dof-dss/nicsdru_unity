@@ -1,0 +1,17 @@
+uuid: 0f8c3c69-c64f-431d-ad3c-a4f65faf6323
+langcode: en
+status: true
+dependencies:
+  module:
+    - filelog
+title: 'Default cron handler'
+id: filelog_cron
+weight: 0
+module: filelog
+callback: filelog_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
