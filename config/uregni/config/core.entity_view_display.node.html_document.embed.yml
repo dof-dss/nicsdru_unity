@@ -12,17 +12,17 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.html_document.embed
 targetEntityType: node
 bundle: html_document
 mode: embed
 content:
   content_moderation_control:
-    weight: -20
     settings: {  }
     third_party_settings: {  }
+    weight: -20
     region: content
 hidden:
   body: true
