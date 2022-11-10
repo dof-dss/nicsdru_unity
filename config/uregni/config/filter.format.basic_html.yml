@@ -47,8 +47,8 @@ filters:
       filter_tags:
         img: img
         iframe: iframe
-      use_data_uri: '0'
       media_switch: ''
+      use_data_uri: '0'
   cookie_content_blocker_filter:
     id: cookie_content_blocker_filter
     provider: cookie_content_blocker
