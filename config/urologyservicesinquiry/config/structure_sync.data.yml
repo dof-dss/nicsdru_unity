@@ -31,9 +31,9 @@ blocks:
     fields:
       body:
         -
-          value: "<p>When a Hearing is in session you can watch it by following the link below. Planned sitting dates and times are outlined on the timetable and are subject to change.</p>\r\n"
-          summary: ''
-          format: basic_html
+          value: "<p>When a Hearing is in session you can watch it by following the link below. Planned sitting dates and times are outlined on the <a href=\"hearing-information \">timetable</a> and are subject to change.</p>\r\n\r\n<p><a class=\"btn\" href=\"https://vimeo.com/event/2585309/a2d5329f95\">Watch Hearing</a></p>\r\n"
+          summary: null
+          format: full_html
 menus:
   -
     menu_name: main

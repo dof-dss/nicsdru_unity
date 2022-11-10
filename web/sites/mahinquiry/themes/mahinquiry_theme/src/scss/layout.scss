@@ -10,12 +10,10 @@
   width: 100%;
   padding-left: 2.5rem;
 
-  @media screen and (max-width: $tab) {
-    padding: 0 1rem;
-  }
-
   img {
-    height: 80px;
+    @media screen and (max-width: $tab) {
+      height: 60px;
+    }
   }
 }
 
