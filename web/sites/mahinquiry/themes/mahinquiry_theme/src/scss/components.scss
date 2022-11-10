@@ -5,25 +5,6 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
-#logo {
-  a {
-    display: block;
-
-    &:focus {
-      background: none;
-      border-bottom: none;
-      outline: 0.3rem dashed #949494;
-      outline-offset: 1.2rem;
-    }
-  }
-
-  img {
-    @media screen and (max-width: $tab) {
-      height: 60px;
-    }
-  }
-}
-
 #headerHero {
   @media screen and (max-width: $tab) {
     background: $brand-primary;
@@ -280,4 +261,8 @@
       }
     }
   }
+}
+
+.published-date span time{
+  font-weight: bold;
 }
