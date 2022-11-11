@@ -275,7 +275,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       empty:
         area:
@@ -382,7 +382,7 @@ display:
             'entity:node':
               consultation: search_result
       query:
-        type: views_query
+        type: search_api_query
         options:
           bypass_access: false
           skip_access: false
