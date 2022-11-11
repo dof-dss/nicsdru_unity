@@ -7,7 +7,6 @@ dependencies:
     - filter.format.basic_html_publications
   module:
     - filter
-    - google_analytics
     - media
     - node
     - search_api_autocomplete
@@ -22,7 +21,6 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
-  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
