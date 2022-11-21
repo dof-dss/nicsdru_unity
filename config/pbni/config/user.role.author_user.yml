@@ -8,6 +8,7 @@ dependencies:
     - media.type.document
     - media.type.file
     - media.type.image
+    - media.type.remote_podcast
     - media.type.remote_video
     - node.type.basic_page
     - node.type.board_member
@@ -65,6 +66,7 @@ permissions:
   - 'create profile content'
   - 'create publication content'
   - 'create publication_page content'
+  - 'create remote_podcast media'
   - 'create remote_video media'
   - 'create staff_member content'
   - 'create url aliases'
@@ -85,6 +87,7 @@ permissions:
   - 'delete own profile content'
   - 'delete own publication content'
   - 'delete own publication_page content'
+  - 'delete own remote_podcast media'
   - 'delete own remote_video media'
   - 'delete own staff_member content'
   - 'delete own vacancy content'
@@ -145,6 +148,7 @@ permissions:
   - 'edit own profile content'
   - 'edit own publication content'
   - 'edit own publication_page content'
+  - 'edit own remote_podcast media'
   - 'edit own remote_video media'
   - 'edit own staff_member content'
   - 'edit own vacancy content'
