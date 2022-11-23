@@ -197,17 +197,6 @@ jobs:
       - checkout_code
       - install_psh_cli
       - run:
-          name: Trigger a data sync from master environment to nightly edge build.
-          command: |
-            platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
-      - run:
-          name: Backup data sync if the previous attempt failed.
-          command: |
-            # Pause for the blocking activity to finish.
-            sleep 590s
-            platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
-          when: on_fail
-      - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
             for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
@@ -274,38 +263,9 @@ jobs:
 
 workflows:
   version: 2
-  build-test-deploy:
-    jobs:
-      - build
-      - coding_standards:
-          requires:
-            - build
-      - deprecated_code:
-          requires:
-            - build
-
-  # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
-    triggers:
-      - schedule:
-          # At 00:30 Monday to Friday
-          cron: "30 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
     jobs:
       - edge_build
-
-  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
-  nightly-edge-build-post-build-tasks:
-    triggers:
-      - schedule:
-          # At 06:41 Monday to Friday
-          cron: "41 3 * * 1-5"
-          filters:
-            branches:
-              only:
-                - D8UN-edge
-    jobs:
-      - sync_data
+      - sync_data:
+          requires:
+            - edge_build
