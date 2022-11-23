@@ -1,0 +1,28 @@
+uuid: 0f03e55f-32fe-49f5-87d6-1740afcc4ba5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.remote_podcast.field_media_oembed_spotify
+    - media.type.remote_podcast
+id: media.remote_podcast.media_library
+targetEntityType: media
+bundle: remote_podcast
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_oembed_spotify: true
+  langcode: true
+  path: true
+  status: true
+  uid: true

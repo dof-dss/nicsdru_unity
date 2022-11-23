@@ -1,0 +1,18 @@
+uuid: b2fd45dc-c31b-43e3-86ab-fa8139d92def
+langcode: en
+status: true
+dependencies:
+  module:
+    - unity_common
+id: remote_podcast
+label: 'Remote podcast'
+description: 'A remotely hosted podcast from Spotify.'
+source: 'oembed:spotify'
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_oembed_spotify
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - Spotify
+field_map: {  }

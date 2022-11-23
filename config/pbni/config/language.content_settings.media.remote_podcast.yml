@@ -1,0 +1,11 @@
+uuid: ab696701-e18f-4246-8033-5599c749c5e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_podcast
+id: media.remote_podcast
+target_entity_type_id: media
+target_bundle: remote_podcast
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: d4a0bb79-6e04-4f8b-adbb-be342c4d9f00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_spotify
+    - media.type.remote_podcast
+id: media.remote_podcast.field_media_oembed_spotify
+field_name: field_media_oembed_spotify
+entity_type: media
+bundle: remote_podcast
+label: 'Podcast URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
