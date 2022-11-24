@@ -1,0 +1,30 @@
+uuid: 3a0fdb02-a3af-42fd-8fa1-c7c826725d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_podcast.field_media_oembed_spotify
+    - media.type.remote_podcast
+  module:
+    - media
+id: media.remote_podcast.default
+targetEntityType: media
+bundle: remote_podcast
+mode: default
+content:
+  field_media_oembed_spotify:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

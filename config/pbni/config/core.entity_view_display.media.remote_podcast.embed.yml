@@ -1,0 +1,36 @@
+uuid: 23aadd74-e522-4d6d-9aa2-ec3c1f9d9a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embed
+    - field.field.media.remote_podcast.field_media_oembed_spotify
+    - media.type.remote_podcast
+  module:
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.remote_podcast.embed
+targetEntityType: media
+bundle: remote_podcast
+mode: embed
+content:
+  field_media_oembed_spotify:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
