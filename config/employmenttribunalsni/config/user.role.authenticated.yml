@@ -7,7 +7,6 @@ dependencies:
     - node.type.page
   module:
     - filter
-    - google_analytics
     - media
     - node
     - system
@@ -27,7 +26,6 @@ permissions:
   - 'diff view changes'
   - 'edit any page content'
   - 'edit own page content'
-  - 'opt-in or out of google analytics tracking'
   - 'revert revisions'
   - 'search content'
   - 'use media wysiwyg'
