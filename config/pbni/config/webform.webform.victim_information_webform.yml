@@ -66,8 +66,10 @@ elements: |-
   representative_details:
     '#type': fieldset
     '#title': 'REPRESENTATIVE DETAILS'
-    '#description': 'If you are representing the victim, please complete the additional details below:'
     '#description_display': before
+    rep_details_description:
+      '#type': webform_markup
+      '#markup': '<p>If you are representing the victim, please complete the additional details below:</p>'
     name_of_representative:
       '#type': textfield
       '#title': 'Name of Representative:'
