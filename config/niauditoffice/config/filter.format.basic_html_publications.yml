@@ -3,6 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.article_float
+    - core.entity_view_mode.media.article_float_expandable
+    - core.entity_view_mode.media.article_full
+    - core.entity_view_mode.media.article_full_expandable
     - core.entity_view_mode.media.embed
   module:
     - blazy
@@ -104,9 +108,14 @@ filters:
     settings:
       default_view_mode: embed
       allowed_view_modes:
-        embed: embed
+        article_float: article_float
+        article_float_expandable: article_float_expandable
+        article_full: article_full
+        article_full_expandable: article_full_expandable
       allowed_media_types:
-        document: document
+        audio: audio
+        image: image
+        remote_video: remote_video
   noreferrer:
     id: noreferrer
     provider: noreferrer
