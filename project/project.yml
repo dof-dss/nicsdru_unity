@@ -1,3 +1,13 @@
 project_type: unity
 project_name: 'Unity 1'
 project_id: 6tlkpwbr6tndk
+sites:
+    uregni:
+        name: 'Utility Regulator'
+        url: uregni.gov.uk
+        solr: uregni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/uregni ; drush core-cron'
+        database: uregni
+        status: production
+        default: false

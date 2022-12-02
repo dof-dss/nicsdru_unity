@@ -1,258 +1,81 @@
-# This file describes an application. You can have multiple applications
-# in the same project.
-#
-# See https://docs.platform.sh/user_guide/reference/platform-app-yaml.html
-
-# The name of this app. Must be unique within a project.
-name: 'unity'
-
-# The runtime the application uses.
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
+name: unity_1
 type: 'php:8.1'
-
 dependencies:
-  php:
-    composer/composer: '^2'
-
+    php:
+        composer/composer: ^2
 runtime:
-  # Enable the redis extension so Drupal can communicate with the Redis cache.
-  extensions:
-    - apcu
-    - redis
-
-# The relationships of the application with services or other applications.
-#
-# The left-hand side is the name of the relationship as it will be exposed
-# to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
-# side is in the form `:`.
-relationships:
-  #fictcommission_solr: 'solr:fictcommission'
-  uregni_solr: 'solr:uregni'
-  redis: 'redis:redis'
-  uregni: 'db:uregni'
-  liofa: 'db:liofa'
-  odscni: 'db:odscni'
-  attorneygeneralni: 'db:attorneygeneralni'
-  attorneygeneralni_solr: 'solr:attorneygeneralni'
-  employmenttribunalsni: 'db:employmenttribunalsni'
-  fiscalcommissionni: 'db:fiscalcommissionni'
-  nifiscalcouncil: 'db:nifiscalcouncil'
-  niauditoffice: 'db:niauditoffice'
-  niauditoffice_solr: 'solr:niauditoffice'
-  octf: 'db:octf'
-  urologyservicesinquiry: 'db:urologyservicesinquiry'
-  mahinquiry: 'db:mahinquiry'
-  independentreviewofeducation: 'db:independentreviewofeducation'
-  nipolicingboard: 'db:nipolicingboard'
-  nipolicingboard_solr: 'solr:nipolicingboard'
-  pbni: 'db:pbni'
-  pbni_solr: 'solr:pbni'
-  investnireview: 'db:investnireview'
-  pcsps: 'db:pcsps'
-  pcsps_solr: 'solr:pcsps'
-  cscsreviewni: 'db:cscsreviewni'
-
-# The size of the persistent disk of the application (in MB).
-disk: 30720
-
-# The 'mounts' describe writable, persistent filesystem mounts in the application.
+    extensions:
+        - apcu
+        - redis
+disk: 8000
 mounts:
-  '/web/files':
-    source: local
-    source_path: 'files'
-  '/tmp':
-    source: local
-    source_path: 'tmp'
-  '/private':
-    source: local
-    source_path: 'private'
-  '/.drush':
-    source: local
-    source_path: 'drush'
-  '/drush-backups':
-    source: local
-    source_path: 'drush-backups'
-  '/.console':
-    source: local
-    source_path: 'console'
-  '/log':
-    source: local
-    source_path: 'log'
-
-# Configuration of the build of this application.
+    /web/files:
+        source: local
+        source_path: files
+    /tmp:
+        source: local
+        source_path: tmp
+    /private:
+        source: local
+        source_path: private
+    /.drush:
+        source: local
+        source_path: drush
+    /drush-backups:
+        source: local
+        source_path: drush-backups
+    /.console:
+        source: local
+        source_path: console
+    /log:
+        source: local
+        source_path: log
 build:
-  flavor: composer
-
-# The hooks executed at various points in the lifecycle of the application.
+    flavor: composer
 hooks:
-  build: |
-    set -e
-  # During post_deploy the sites are available (see https://docs.platform.sh/configuration/app/hooks.html)
-  post_deploy: |
-    set -e
-
-    # Save the Fastly service value and overwrite with a dummy one in order to break
-    # the connection to Fastly, otherwise any cache clear of any site will purge the
-    # entire Fastly cache - we don't want this to happen as we'd like Fastly to continue
-    # serving the sites to anonymous users during a release.
-    echo "***** Breaking connection to Fastly ******"
-    temp=$FASTLY_API_SERVICE
-    export FASTLY_API_SERVICE=dummyservice
-
-    # For each multi site - run db-updates and import config.
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
-    do
-      echo "****** $site deployment ******"
-      cd /app/web/sites/$site
-      # Disable Fastly logging
-      drush disable-fastly-logging
-      # Readonlymode module should be installed on all sites,
-      # but we'll just make sure.
-      drush en readonlymode -l $site -y
-      # Set site to readonly just in case editors are logged on.
-      drush -l $site cset readonlymode.settings enabled 1 -y
-      drush -l $site -y cache-rebuild
-      drush -l $site -y config-import
-      drush -l $site -y updatedb
-      drush -l $site import-all-if-installed safe
-      if [ "$PLATFORM_ENVIRONMENT_TYPE" = production ]; then
-        # Disable QA logons
-        drush -l $site bulk_update_qa_accounts disable
-      else
-        # Enable QA logons
-        drush -l $site bulk_update_qa_accounts enable
-      fi
-      # Turn off readonly mode.
-      drush -l $site cset readonlymode.settings enabled 0 -y
-    done
-
-    # Reconnect to Fastly
-    echo "***** Reinstate connection to Fastly ******"
-    export FASTLY_API_SERVICE=$temp
-
-    # For each multi site - clear cache (including Fastly cache)
-    for site in uregni odscni fiscalcommissionni urologyservicesinquiry mahinquiry niauditoffice nifiscalcouncil octf employmenttribunalsni independentreviewofeducation nipolicingboard investnireview pbni cscsreviewni pcsps attorneygeneralni
-    do
-      echo "****** $site cache clear ******"
-      cd /app/web/sites/$site
-      drush -l $site -y cache-rebuild
-      # Enable Fastly logging
-      drush enable-fastly-logging
-    done
-
-# The configuration of app when it is exposed to the web.
+    build: "set -e\n"
+    post_deploy: "set -e\n\n# Save the Fastly service value and overwrite with a dummy one in order to break\n# the connection to Fastly, otherwise any cache clear of any site will purge the\n# entire Fastly cache - we don't want this to happen as we'd like Fastly to continue\n# serving the sites to anonymous users during a release.\necho \"***** Breaking connection to Fastly ******\"\ntemp=$FASTLY_API_SERVICE\nexport FASTLY_API_SERVICE=dummyservice\n\n# For each multi site - run db-updates and import config.\nfor site in uregni\ndo\n  echo \"****** $site deployment ******\"\n  cd /app/web/sites/$site\n  # Disable Fastly logging\n  drush -l $site disable-fastly-logging\n  # Readonlymode module should be installed on all sites,\n  # but we'll just make sure.\n  drush en readonlymode -l $site -y\n  # Set site to readonly just in case editors are logged on.\n  drush -l $site cset readonlymode.settings enabled 1 -y\n  drush -l $site -y cache-rebuild\n  drush -l $site -y config-import\n  drush -l $site -y updatedb\n  drush -l $site import-all-if-installed safe\n  if [ \"$PLATFORM_ENVIRONMENT_TYPE\" = production ]; then\n    # Disable QA logons\n    drush -l $site bulk_update_qa_accounts disable\n  else\n    # Enable QA logons\n    drush -l $site bulk_update_qa_accounts enable\n  fi\n  # Turn off readonly mode.\n  drush -l $site cset readonlymode.settings enabled 0 -y\ndone\n\n# Reconnect to Fastly\necho \"***** Reinstate connection to Fastly ******\"\nexport FASTLY_API_SERVICE=$temp\n\n# For each multi site - clear cache (including Fastly cache)\nfor site in uregni\ndo\n  echo \"****** $site cache clear ******\"\n  cd /app/web/sites/$site\n  drush -l $site -y cache-rebuild\n  # Enable Fastly logging\n  drush -l $site enable-fastly-logging\ndone\n"
 web:
-  # Specific parameters for different URL prefixes.
-  locations:
-    '/':
-      # The folder from which to serve static assets, for this location.
-      #
-      # This is a filesystem path, relative to the application root.
-      root: 'web'
-
-      # How long to allow static assets from this location to be cached.
-      #
-      # Can be a time in seconds, or -1 for no caching. Times can be
-      # suffixed with "s" (seconds), "m" (minutes), "h" (hours), "d"
-      # (days), "w" (weeks), "M" (months, as 30 days) or "y" (years, as
-      # 365 days).
-      expires: 5m
-
-      # Whether to forward disallowed and missing resources from this
-      # location to the application.
-      #
-      # Can be true, false or a URI path string.
-      passthru: '/index.php'
-
-      # Deny access to static files in this location.
-      allow: false
-
-      # Rules for specific URI patterns.
-      rules:
-        # Allow access to common static files.
-        '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
-          allow: true
-        '^/robots\.txt$':
-          allow: true
-        '^/sitemap\.xml$':
-          allow: true
-        '^\/sites\/.+\/themes\/.+\/images\/favicons\/.+\.webmanifest$':
-          allow: true
-          expires: 2w
-
-        # Deny direct access to configuration files.
-        '^/sites/sites\.php$':
-          scripts: false
-        '^/sites/[^/]+/settings.*?\.php$':
-          scripts: false
-
-    '/files':
-      # Allow access to all files in the public files directory.
-      allow: true
-      expires: 1d
-      passthru: '/index.php'
-      root: 'web/files'
-
-      # Do not execute PHP scripts.
-      scripts: false
-
-      rules:
-        # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
-        '^/sites/default/files/(css|js)':
-          expires: 2w
-
-# The configuration of scheduled execution.
+    locations:
+        /:
+            root: web
+            expires: 5m
+            passthru: /index.php
+            allow: false
+            rules:
+                '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+                    allow: true
+                ^/robots\.txt$:
+                    allow: true
+                ^/sitemap\.xml$:
+                    allow: true
+                ^\/sites\/.+\/themes\/.+\/images\/favicons\/.+\.webmanifest$:
+                    allow: true
+                    expires: 2w
+                ^/sites/sites\.php$:
+                    scripts: false
+                '^/sites/[^/]+/settings.*?\.php$':
+                    scripts: false
+        /files:
+            allow: true
+            expires: 1d
+            passthru: /index.php
+            root: web/files
+            scripts: false
+            rules:
+                ^/sites/default/files/(css|js):
+                    expires: 2w
+relationships:
+    uregni: 'db:uregni'
+    uregni_solr: 'solr:uregni'
 crons:
-  uregni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/uregni ; drush core-cron'
-  odscni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/odscni ; drush core-cron'
-  fiscalcommissionni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
-  niauditoffice:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/niauditoffice ; drush core-cron'
-  nifiscalcouncil:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
-  octf:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/octf ; drush core-cron'
-  urologyservicesinquiry:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'
-  mahinquiry:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/mahinquiry ; drush core-cron'
-  employmenttribunalsni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
-  independentreviewofeducation:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
-  nipolicingboard:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
-  investnireview:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/investnireview ; drush core-cron'
-  cscsreviewni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
-  attorneygeneralni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
-  pbni:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/pbni ; drush core-cron'
-  pcsps:
-    spec: '10 * * * *'
-    cmd: 'cd web/sites/pcsps ; drush core-cron'
-  # Log shipping cron.
-  logging:
-    spec: '*/5 * * * *'
-    commands:
-      start: '/bin/bash /app/cronjob.sh'
-    shutdown_timeout: 290
+    uregni:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/uregni ; drush core-cron'

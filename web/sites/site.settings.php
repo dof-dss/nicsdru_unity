@@ -11,6 +11,7 @@
 
 $databases = [];
 $settings['update_free_access'] = FALSE;
+$settings['container_yamls'][] = $app_root . '/sites/services.yml';
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
@@ -63,8 +64,8 @@ $env_name = !empty(getenv('SIMPLEI_ENV_NAME')) ? getenv('SIMPLEI_ENV_NAME') : ge
 // If we're running on platform.sh, check for and load relevant settings.
 if (!empty(getenv('PLATFORM_BRANCH'))) {
 
-  if (file_exists($app_root . '/' . $site_path . '/../settings.platformsh.php')) {
-    include $app_root . '/' . $site_path . '/../settings.platformsh.php';
+  if (file_exists($app_root . '/sites/settings.platformsh.php')) {
+    include $app_root . '/sites/settings.platformsh.php';
   }
 
   // Use 'hosted' config split for all Platform.sh sites apart from production.
@@ -97,8 +98,8 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
   $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 }
 
-if (getenv('LANDO') && file_exists($app_root . '/' . $site_path . '/../settings.lando.php')) {
-  include $app_root . '/' . $site_path . '/../settings.lando.php';
+if (getenv('LANDO') && file_exists($app_root . '/sites/settings.lando.php')) {
+  include $app_root . '/sites/settings.lando.php';
 }
 
 // Configure file paths.
@@ -107,9 +108,8 @@ if (!isset($settings['file_public_path'])) {
 }
 
 // Set up a config sync directory.
-//
 // This is defined inside the read-only "config" directory, deployed via Git.
-$settings['config_sync_directory'] = '../config/' . $subsite_id . '/config';
+$settings['config_sync_directory'] = '/app/project/config/' . $subsite_id . '/config';
 
 // Local settings. These come last so that they can override anything.
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
