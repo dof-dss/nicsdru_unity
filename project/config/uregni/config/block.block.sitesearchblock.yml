@@ -1,0 +1,26 @@
+uuid: 133c9bb3-210c-4d56-83c9-71e363588d7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - unity_search_pages
+  theme:
+    - uregni_theme
+id: sitesearchblock
+theme: uregni_theme
+region: search
+weight: 0
+provider: null
+plugin: site_search_block
+settings:
+  id: site_search_block
+  label: 'Site search block'
+  label_display: '0'
+  provider: unity_search_pages
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/search*'

@@ -1,0 +1,32 @@
+uuid: 41e67fc0-b513-46b3-bc57-3961719008a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.page_title
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - uregni_theme
+id: pagetitle
+theme: uregni_theme
+region: content
+weight: -14
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: page_title
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/node/*/revisions/view/*'

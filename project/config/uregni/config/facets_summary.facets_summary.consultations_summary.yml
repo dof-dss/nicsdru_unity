@@ -1,0 +1,31 @@
+uuid: ce0df74a-dc37-49c9-9a27-805277eb3dc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.consultations
+    - views.view.consultations_search
+  module:
+    - search_api
+id: consultations_summary
+name: 'Consultations summary'
+facet_source_id: 'search_api:views_page__consultations_search__consultations_search_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+facets:
+  publication_date_consultation:
+    checked: true
+    label: 'Publication date consultation'
+    separator: ', '
+    show_count: false
+    weight: 0
+  topic_consultation:
+    checked: true
+    label: Topic
+    separator: ', '
+    show_count: false
+    weight: 0
