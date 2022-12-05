@@ -11,3 +11,12 @@ sites:
         database: uregni
         status: production
         default: false
+    odscni:
+        name: 'Office of the Discretionary Support Commissioner'
+        url: odscni.org.uk
+        solr: odscni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/odscni ; drush core-cron'
+        database: odscni
+        status: production
+        default: false

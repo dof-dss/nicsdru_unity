@@ -1,0 +1,24 @@
+uuid: 505074ae-74ae-4340-a719-d83e62f5e8c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odscni_theme
+id: breadcrumbs
+theme: odscni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

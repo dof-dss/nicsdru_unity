@@ -11,11 +11,16 @@ db:
     configuration:
         schemas:
             - uregnidb
+            - odscnidb
         endpoints:
             uregni:
                 default_schema: uregnidb
                 privileges:
                     uregnidb: admin
+            odscni:
+                default_schema: odscnidb
+                privileges:
+                    odscnidb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -23,8 +28,12 @@ solr:
         cores:
             uregni_index:
                 conf_dir: !archive solr_config/
+            odscni_index:
+                conf_dir: !archive solr_config/
         endpoints:
             uregni:
                 core: uregni_index
+            odscni:
+                core: odscni_index
 redis:
     type: 'redis:6.0'
