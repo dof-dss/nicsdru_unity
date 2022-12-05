@@ -12,6 +12,7 @@ db:
         schemas:
             - uregnidb
             - odscnidb
+            - fiscalcommissionnidb
         endpoints:
             uregni:
                 default_schema: uregnidb
@@ -21,6 +22,10 @@ db:
                 default_schema: odscnidb
                 privileges:
                     odscnidb: admin
+            fiscalcommissionni:
+                default_schema: fiscalcommissionnidb
+                privileges:
+                    fiscalcommissionnidb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -30,10 +35,14 @@ solr:
                 conf_dir: !archive solr_config/
             odscni_index:
                 conf_dir: !archive solr_config/
+            fiscalcommissionni_index:
+                conf_dir: !archive solr_config/
         endpoints:
             uregni:
                 core: uregni_index
             odscni:
                 core: odscni_index
+            fiscalcommissionni:
+                core: fiscalcommissionni_index
 redis:
     type: 'redis:6.0'

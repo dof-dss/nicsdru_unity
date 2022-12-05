@@ -10,6 +10,7 @@ proxy:
     appserver:
         - uregni.gov.uk.lndo.site
         - odscni.org.uk.lndo.site
+        - fiscalcommissionni.org.lndo.site
 services:
     uregni_solr:
         type: 'solr:7'
@@ -18,6 +19,12 @@ services:
         config:
             dir: .lando/config/solr/7.x/default
     odscni_solr:
+        type: 'solr:7'
+        portforward: true
+        core: default
+        config:
+            dir: .lando/config/solr/7.x/default
+    fiscalcommissionni_solr:
         type: 'solr:7'
         portforward: true
         core: default

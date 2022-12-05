@@ -20,3 +20,12 @@ sites:
         database: odscni
         status: production
         default: false
+    fiscalcommissionni:
+        name: 'Fiscal Commission NI'
+        url: fiscalcommissionni.org
+        solr: fiscalcommissionni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
+        database: fiscalcommissionni
+        status: production
+        default: false
