@@ -13,6 +13,19 @@ db:
             - uregnidb
             - odscnidb
             - fiscalcommissionnidb
+            - mahinquirydb
+            - nifiscalcouncildb
+            - octfdb
+            - niauditofficedb
+            - employmenttribunalsnidb
+            - independentreviewofeducationdb
+            - nipolicingboarddb
+            - pbnidb
+            - investnireviewdb
+            - attorneygeneralnidb
+            - cscsreviewnidb
+            - pcspsdb
+            - urologyservicesinquirydb
         endpoints:
             uregni:
                 default_schema: uregnidb
@@ -26,6 +39,58 @@ db:
                 default_schema: fiscalcommissionnidb
                 privileges:
                     fiscalcommissionnidb: admin
+            mahinquiry:
+                default_schema: mahinquirydb
+                privileges:
+                    mahinquirydb: admin
+            nifiscalcouncil:
+                default_schema: nifiscalcouncildb
+                privileges:
+                    nifiscalcouncildb: admin
+            octf:
+                default_schema: octfdb
+                privileges:
+                    octfdb: admin
+            niauditoffice:
+                default_schema: niauditofficedb
+                privileges:
+                    niauditofficedb: admin
+            employmenttribunalsni:
+                default_schema: employmenttribunalsnidb
+                privileges:
+                    employmenttribunalsnidb: admin
+            independentreviewofeducation:
+                default_schema: independentreviewofeducationdb
+                privileges:
+                    independentreviewofeducationdb: admin
+            nipolicingboard:
+                default_schema: nipolicingboarddb
+                privileges:
+                    nipolicingboarddb: admin
+            pbni:
+                default_schema: pbnidb
+                privileges:
+                    pbnidb: admin
+            investnireview:
+                default_schema: investnireviewdb
+                privileges:
+                    investnireviewdb: admin
+            attorneygeneralni:
+                default_schema: attorneygeneralnidb
+                privileges:
+                    attorneygeneralnidb: admin
+            cscsreviewni:
+                default_schema: cscsreviewnidb
+                privileges:
+                    cscsreviewnidb: admin
+            pcsps:
+                default_schema: pcspsdb
+                privileges:
+                    pcspsdb: admin
+            urologyservicesinquiry:
+                default_schema: urologyservicesinquirydb
+                privileges:
+                    urologyservicesinquirydb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -37,6 +102,32 @@ solr:
                 conf_dir: !archive solr_config/
             fiscalcommissionni_index:
                 conf_dir: !archive solr_config/
+            mahinquiry_index:
+                conf_dir: !archive solr_config/
+            nifiscalcouncil_index:
+                conf_dir: !archive solr_config/
+            octf_index:
+                conf_dir: !archive solr_config/
+            niauditoffice_index:
+                conf_dir: !archive solr_config/
+            employmenttribunalsni_index:
+                conf_dir: !archive solr_config/
+            independentreviewofeducation_index:
+                conf_dir: !archive solr_config/
+            nipolicingboard_index:
+                conf_dir: !archive solr_config/
+            pbni_index:
+                conf_dir: !archive solr_config/
+            investnireview_index:
+                conf_dir: !archive solr_config/
+            attorneygeneralni_index:
+                conf_dir: !archive solr_config/
+            cscsreviewni_index:
+                conf_dir: !archive solr_config/
+            pcsps_index:
+                conf_dir: !archive solr_config/
+            urologyservicesinquiry_index:
+                conf_dir: !archive solr_config/
         endpoints:
             uregni:
                 core: uregni_index
@@ -44,5 +135,31 @@ solr:
                 core: odscni_index
             fiscalcommissionni:
                 core: fiscalcommissionni_index
+            mahinquiry:
+                core: mahinquiry_index
+            nifiscalcouncil:
+                core: nifiscalcouncil_index
+            octf:
+                core: octf_index
+            niauditoffice:
+                core: niauditoffice_index
+            employmenttribunalsni:
+                core: employmenttribunalsni_index
+            independentreviewofeducation:
+                core: independentreviewofeducation_index
+            nipolicingboard:
+                core: nipolicingboard_index
+            pbni:
+                core: pbni_index
+            investnireview:
+                core: investnireview_index
+            attorneygeneralni:
+                core: attorneygeneralni_index
+            cscsreviewni:
+                core: cscsreviewni_index
+            pcsps:
+                core: pcsps_index
+            urologyservicesinquiry:
+                core: urologyservicesinquiry_index
 redis:
     type: 'redis:6.0'

@@ -41,7 +41,7 @@ build:
     flavor: composer
 hooks:
     build: "set -e\n"
-    post_deploy: "set -e\n\n# Save the Fastly service value and overwrite with a dummy one in order to break\n# the connection to Fastly, otherwise any cache clear of any site will purge the\n# entire Fastly cache - we don't want this to happen as we'd like Fastly to continue\n# serving the sites to anonymous users during a release.\necho \"***** Breaking connection to Fastly ******\"\ntemp=$FASTLY_API_SERVICE\nexport FASTLY_API_SERVICE=dummyservice\n\n# For each multi site - run db-updates and import config.\nfor site in uregni odscni fiscalcommissionni\ndo\n  echo \"****** $site deployment ******\"\n  cd /app/web/sites/$site\n  # Disable Fastly logging\n  drush -l $site disable-fastly-logging\n  # Readonlymode module should be installed on all sites,\n  # but we'll just make sure.\n  drush en readonlymode -l $site -y\n  # Set site to readonly just in case editors are logged on.\n  drush -l $site cset readonlymode.settings enabled 1 -y\n  drush -l $site -y cache-rebuild\n  drush -l $site -y config-import\n  drush -l $site -y updatedb\n  drush -l $site import-all-if-installed safe\n  if [ \"$PLATFORM_ENVIRONMENT_TYPE\" = production ]; then\n    # Disable QA logons\n    drush -l $site bulk_update_qa_accounts disable\n  else\n    # Enable QA logons\n    drush -l $site bulk_update_qa_accounts enable\n  fi\n  # Turn off readonly mode.\n  drush -l $site cset readonlymode.settings enabled 0 -y\ndone\n\n# Reconnect to Fastly\necho \"***** Reinstate connection to Fastly ******\"\nexport FASTLY_API_SERVICE=$temp\n\n# For each multi site - clear cache (including Fastly cache)\nfor site in uregni odscni fiscalcommissionni\ndo\n  echo \"****** $site cache clear ******\"\n  cd /app/web/sites/$site\n  drush -l $site -y cache-rebuild\n  # Enable Fastly logging\n  drush -l $site enable-fastly-logging\ndone\n"
+    post_deploy: "set -e\n\n# Save the Fastly service value and overwrite with a dummy one in order to break\n# the connection to Fastly, otherwise any cache clear of any site will purge the\n# entire Fastly cache - we don't want this to happen as we'd like Fastly to continue\n# serving the sites to anonymous users during a release.\necho \"***** Breaking connection to Fastly ******\"\ntemp=$FASTLY_API_SERVICE\nexport FASTLY_API_SERVICE=dummyservice\n\n# For each multi site - run db-updates and import config.\nfor site in uregni odscni fiscalcommissionni mahinquiry nifiscalcouncil octf niauditoffice employmenttribunalsni independentreviewofeducation nipolicingboard pbni investnireview attorneygeneralni cscsreviewni pcsps urologyservicesinquiry\ndo\n  echo \"****** $site deployment ******\"\n  cd /app/web/sites/$site\n  # Disable Fastly logging\n  drush -l $site disable-fastly-logging\n  # Readonlymode module should be installed on all sites,\n  # but we'll just make sure.\n  drush en readonlymode -l $site -y\n  # Set site to readonly just in case editors are logged on.\n  drush -l $site cset readonlymode.settings enabled 1 -y\n  drush -l $site -y cache-rebuild\n  drush -l $site -y config-import\n  drush -l $site -y updatedb\n  drush -l $site import-all-if-installed safe\n  if [ \"$PLATFORM_ENVIRONMENT_TYPE\" = production ]; then\n    # Disable QA logons\n    drush -l $site bulk_update_qa_accounts disable\n  else\n    # Enable QA logons\n    drush -l $site bulk_update_qa_accounts enable\n  fi\n  # Turn off readonly mode.\n  drush -l $site cset readonlymode.settings enabled 0 -y\ndone\n\n# Reconnect to Fastly\necho \"***** Reinstate connection to Fastly ******\"\nexport FASTLY_API_SERVICE=$temp\n\n# For each multi site - clear cache (including Fastly cache)\nfor site in uregni odscni fiscalcommissionni mahinquiry nifiscalcouncil octf niauditoffice employmenttribunalsni independentreviewofeducation nipolicingboard pbni investnireview attorneygeneralni cscsreviewni pcsps urologyservicesinquiry\ndo\n  echo \"****** $site cache clear ******\"\n  cd /app/web/sites/$site\n  drush -l $site -y cache-rebuild\n  # Enable Fastly logging\n  drush -l $site enable-fastly-logging\ndone\n"
 web:
     locations:
         /:
@@ -79,6 +79,32 @@ relationships:
     odscni_solr: 'solr:odscni'
     fiscalcommissionni: 'db:fiscalcommissionni'
     fiscalcommissionni_solr: 'solr:fiscalcommissionni'
+    mahinquiry: 'db:mahinquiry'
+    mahinquiry_solr: 'solr:mahinquiry'
+    nifiscalcouncil: 'db:nifiscalcouncil'
+    nifiscalcouncil_solr: 'solr:nifiscalcouncil'
+    octf: 'db:octf'
+    octf_solr: 'solr:octf'
+    niauditoffice: 'db:niauditoffice'
+    niauditoffice_solr: 'solr:niauditoffice'
+    employmenttribunalsni: 'db:employmenttribunalsni'
+    employmenttribunalsni_solr: 'solr:employmenttribunalsni'
+    independentreviewofeducation: 'db:independentreviewofeducation'
+    independentreviewofeducation_solr: 'solr:independentreviewofeducation'
+    nipolicingboard: 'db:nipolicingboard'
+    nipolicingboard_solr: 'solr:nipolicingboard'
+    pbni: 'db:pbni'
+    pbni_solr: 'solr:pbni'
+    investnireview: 'db:investnireview'
+    investnireview_solr: 'solr:investnireview'
+    attorneygeneralni: 'db:attorneygeneralni'
+    attorneygeneralni_solr: 'solr:attorneygeneralni'
+    cscsreviewni: 'db:cscsreviewni'
+    cscsreviewni_solr: 'solr:cscsreviewni'
+    pcsps: 'db:pcsps'
+    pcsps_solr: 'solr:pcsps'
+    urologyservicesinquiry: 'db:urologyservicesinquiry'
+    urologyservicesinquiry_solr: 'solr:urologyservicesinquiry'
 crons:
     uregni:
         spec: '10 * * * *'
@@ -89,3 +115,42 @@ crons:
     fiscalcommissionni:
         spec: '10 * * * *'
         cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
+    mahinquiry:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/mahinquiry ; drush core-cron'
+    nifiscalcouncil:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
+    octf:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/octf ; drush core-cron'
+    niauditoffice:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/niauditoffice ; drush core-cron'
+    employmenttribunalsni:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
+    independentreviewofeducation:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
+    nipolicingboard:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
+    pbni:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/pbni ; drush core-cron'
+    investnireview:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/investnireview ; drush core-cron'
+    attorneygeneralni:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
+    cscsreviewni:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
+    pcsps:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/pcsps ; drush core-cron'
+    urologyservicesinquiry:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'

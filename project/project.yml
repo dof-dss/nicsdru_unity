@@ -29,3 +29,120 @@ sites:
         database: fiscalcommissionni
         status: production
         default: false
+    mahinquiry:
+        name: 'Muckamore Abbey Hospital Inquiry'
+        url: mahinquiry.org.uk
+        solr: mahinquiry
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/mahinquiry ; drush core-cron'
+        database: mahinquiry
+        status: production
+        default: false
+    nifiscalcouncil:
+        name: 'NI Fiscal Council'
+        url: nifiscalcouncil.org
+        solr: nifiscalcouncil
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nifiscalcouncil ; drush core-cron'
+        database: nifiscalcouncil
+        status: production
+        default: false
+    octf:
+        name: 'Organised Crime Task Force'
+        url: octf.gov.uk
+        solr: octf
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/octf ; drush core-cron'
+        database: octf
+        status: production
+        default: false
+    niauditoffice:
+        name: 'Northern Ireland Audit Office'
+        url: niauditoffice.gov.uk
+        solr: niauditoffice
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/niauditoffice ; drush core-cron'
+        database: niauditoffice
+        status: production
+        default: false
+    employmenttribunalsni:
+        name: 'Industrial Tribunals and the Fair Employment Tribunal Northern Ireland'
+        url: employmenttribunalsni.co.uk
+        solr: employmenttribunalsni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/employmenttribunalsni ; drush core-cron'
+        database: employmenttribunalsni
+        status: production
+        default: false
+    independentreviewofeducation:
+        name: 'Independent Review of Education'
+        url: independentreviewofeducation.org.uk
+        solr: independentreviewofeducation
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/independentreviewofeducation ; drush core-cron'
+        database: independentreviewofeducation
+        status: production
+        default: false
+    nipolicingboard:
+        name: 'Northern Ireland Policing Board'
+        url: nipolicingboard.org.uk
+        solr: nipolicingboard
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nipolicingboard ; drush core-cron'
+        database: nipolicingboard
+        status: production
+        default: false
+    pbni:
+        name: 'Probation Board for Northern Ireland'
+        url: pbni.org.uk
+        solr: pbni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pbni ; drush core-cron'
+        database: pbni
+        status: production
+        default: false
+    investnireview:
+        name: 'Independent Review of Invest NI'
+        url: investnireview.org.uk
+        solr: investnireview
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/investnireview ; drush core-cron'
+        database: investnireview
+        status: production
+        default: false
+    attorneygeneralni:
+        name: 'Attorney General for Northern Ireland'
+        url: attorneygeneralni.gov.uk
+        solr: attorneygeneralni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/attorneygeneralni ; drush core-cron'
+        database: attorneygeneralni
+        status: production
+        default: false
+    cscsreviewni:
+        name: 'CSCS NI Review'
+        url: cscsreviewni.net
+        solr: cscsreviewni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/cscsreviewni ; drush core-cron'
+        database: cscsreviewni
+        status: production
+        default: false
+    pcsps:
+        name: 'Policing and Community Safety Partnerships'
+        url: pcsps.org
+        solr: pcsps
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pcsps ; drush core-cron'
+        database: pcsps
+        status: production
+        default: false
+    urologyservicesinquiry:
+        name: 'Urology Services Inquiry'
+        url: urologyservicesinquiry.org.uk
+        solr: urologyservicesinquiry
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/urologyservicesinquiry ; drush core-cron'
+        database: urologyservicesinquiry
+        status: production
+        default: false
