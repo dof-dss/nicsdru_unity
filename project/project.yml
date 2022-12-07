@@ -28,7 +28,7 @@ sites:
         cron_cmd: 'cd web/sites/fiscalcommissionni ; drush core-cron'
         database: fiscalcommissionni
         status: production
-        default: false
+        default: true
     mahinquiry:
         name: 'Muckamore Abbey Hospital Inquiry'
         url: mahinquiry.org.uk

@@ -5,6 +5,14 @@
 # original repository.Any changes here will be overwritten when the project #
 # is built.                                                                 #
 #############################################################################
+'https://www.fiscalcommissionni.org.{default}/':
+    type: upstream
+    upstream: 'unity_1:http'
+    cache:
+        enabled: 'false'
+'https://fiscalcommissionni.org.{default}/':
+    type: redirect
+    to: 'https://www.fiscalcommissionni.org.{default}/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_1:http'
