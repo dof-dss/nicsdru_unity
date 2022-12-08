@@ -1,15 +1,17 @@
 version: 2.1
 
-# Default docker image. (excludes functional_tests)
+# Default docker image.
 default_docker_image: &docker_image
   docker:
-    - image: thecodingmachine/php:8.1-v4-apache-node14
+    - image: thecodingmachine/php:8.0-v4-apache-node14
       environment:
-        PHP_EXTENSION_GD: 1
-        PHP_INI_MEMORY_LIMIT: 1g
         PLATFORM_REGION: "uk-1.platform.sh"
         PROJECT_ROOT: "/home/docker/project"
-
+        PHP_EXTENSION_GD: 1
+        PHP_EXTENSIONS: "gd"
+        PHP_INI_MEMORY_LIMIT: -1
+        PHP_INI_MAX_EXECUTION_TIME: 60
+        PHP_INI_MAX_INPUT_TIME: 60
 custom_npm_docker_image: &custom_npm_docker_image
   docker:
     - image: circleci/php:8.0-apache-browsers
@@ -30,7 +32,7 @@ commands:
       # Add SSH user key so we can access related repositories as part of our initial clone + composer install command.
       - add_ssh_keys:
           fingerprints:
-            - "63:d5:d9:74:c7:9c:80:83:9a:67:da:28:d2:a5:d3:e5"
+            - "e8:86:75:e8:35:15:07:a6:2d:a0:00:17:69:a1:42:84"
       - checkout
   composer_tasks:
     description: "Validate and install dependencies using composer"
@@ -63,11 +65,11 @@ commands:
     description: "Switch dof-dss packages to HEAD on development branch"
     steps:
       - run:
-          name: Switch dof-dss packages to HEAD on develelopment branch
+          name: Switch dof-dss packages to HEAD on development branch
           command: |
             composer require dof-dss/nicsdru_unity_theme:dev-development \
-            dof-dss/nicsdru_origins_modules:dev-development \
-            dof-dss/nicsdru_unity_modules:dev-development
+              dof-dss/nicsdru_origins_modules:dev-development \
+                dof-dss/nicsdru_unity_modules:dev-development
   install_psh_cli:
     description: "Install the Platform.sh CLI tool"
     steps:
@@ -97,6 +99,7 @@ jobs:
           root: ./
           paths:
             - ./
+
   # Test for coding standards - will inherit the workspace/filesystem changes from build step, above.
   coding_standards:
     <<: *docker_image
@@ -131,16 +134,23 @@ jobs:
   # Nightly edge build
   edge_build:
     <<: *custom_npm_docker_image
+    environment:
+      # git variables to avoid empty committer identity errors
+      EMAIL: "circleci@localhost"
+      GIT_COMMITTER_NAME: "Circle CI"
+      GIT_AUTHOR_NAME: "Circle CI"
+      EDGE_BUILD_BRANCH: "edge"
+      PLATFORM_REGION: "uk-1.platform.sh"
     steps:
       - hosts_keyscan
       - checkout_code
       - run:
           name: Add OS and PHP extensions
           command: |
-            sudo cp /home/circleci/project/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
+            sudo cp $PROJECT_ROOT/.circleci/docker-php-circleci.ini /usr/local/etc/php/conf.d/
             wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-            sudo apt-get update --allow-releaseinfo-change
-            sudo apt-get install -y libpng-dev
+            sudo apt update --allow-releaseinfo-change
+            sudo apt install -y libpng-dev
             sudo docker-php-ext-install gd pcntl posix
       - install_psh_cli
       - run:
@@ -157,7 +167,7 @@ jobs:
           command: |
             # Need to re-build site theme with any Unity changes.
             # Download and configure node and npm.
-            sudo apt install automake python libjpeg-dev -y
+            sudo apt install libjpeg-dev automake python -y
             git clone https://github.com/nvm-sh/nvm.git
             cd nvm
             chmod +x install.sh
@@ -168,11 +178,11 @@ jobs:
             export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
             nvm install v15.14.0
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '{print $9}'`
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '{print $9}'`
             do
-              if [[ -d $PROJECT_ROOT/web/sites/${site}/themes/${site}_theme ]]; then
+              if [[ -d ~/project/project/sites/${site}/themes/${site}_theme ]]; then
                 echo "*** Building theme for ${site} ***"
-                cd $PROJECT_ROOT/web/sites/${site}/themes/${site}_theme
+                cd ~/project/project/sites/${site}/themes/${site}_theme
                 sed -i -e "s/\"nicsdru_unity_theme.*/\"nicsdru_unity_theme\": \"github:dof-dss\/nicsdru_unity_theme#development\",/" package.json
                 npm install
                 npm rebuild node-sass
@@ -181,7 +191,7 @@ jobs:
                 git add *.css
                 git commit -m "Theme rebuild"
               else
-                echo "No theme folder detected under ${PROJECT_ROOT}/web/sites/${site}/themes/${site}_theme, skipping."
+                echo "No theme folder detected under ~/project/project/sites/${site}/themes/${site}_theme, skipping."
               fi
             done
 
@@ -204,13 +214,13 @@ jobs:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
-            sleep 590s
+            sleep 90s
             platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
@@ -221,11 +231,10 @@ jobs:
                 fi
             fi
             done
-          when: always
       - run:
           name: Clear cache before config import
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
@@ -233,11 +242,10 @@ jobs:
                 platform drush "cr -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
               fi
             done
-          when: always
       - run:
           name: Refresh configuration as our db will contain active prod config after sync operation
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
@@ -249,11 +257,10 @@ jobs:
                 platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
               fi
             done
-          when: always
       - run:
           name: Purge and rebuild Solr indexes
           command: |
-            for site in `ls -l ~/project/web/sites | grep ^d | awk '!/default/{print $9}'`
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
@@ -270,13 +277,30 @@ jobs:
                 fi
               fi
             done
-          when: always
+  # Checks to ensure that Unity Base has not been polluted with project files.
+  unity_base_checks:
+    <<: *docker_image
+    steps:
+      - attach_workspace:
+          at: ./
+      - when:
+          condition:
+            equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
+          steps:
+            - run:
+                name: Check Project directory and files do not exist
+                command: |
+                  cd $PROJECT_ROOT
+                  .circleci/unity_base_guardian.sh
 
 workflows:
   version: 2
   build-test-deploy:
     jobs:
       - build
+      - unity_base_checks:
+          requires:
+            - build
       - coding_standards:
           requires:
             - build
@@ -286,6 +310,10 @@ workflows:
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
+    when:
+      and:
+        - not:
+          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
     triggers:
       - schedule:
           # At 00:30 Monday to Friday
@@ -299,13 +327,17 @@ workflows:
 
   # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
   nightly-edge-build-post-build-tasks:
+    when:
+      and:
+        - not:
+          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
     triggers:
       - schedule:
-          # At 06:41 Monday to Friday
-          cron: "41 3 * * 1-5"
+          # At 01:23 Monday to Friday
+          cron: "23 1 * * 1-5"
           filters:
             branches:
               only:
-                - D8UN-edge
+                - edge
     jobs:
       - sync_data
