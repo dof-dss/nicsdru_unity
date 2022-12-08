@@ -207,9 +207,6 @@
                 "Provide options to sanitize filenames (transliterate, lowercase, replace whitespace, etc)": "https://www.drupal.org/files/issues/2021-07-26/2492171-311.patch",
                 "Provide link to latest revision of moderated entity": "https://www.drupal.org/files/issues/2021-11-29/2906455-34.patch"
             },
-            "drupal/media_browser_responsive_images": {
-                "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
-            },
             "drupal/easy_install": {
                 "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch",
                 "non-existent service entity.manager": "https://www.drupal.org/files/issues/2020-12-08/3162621-4.patch"
