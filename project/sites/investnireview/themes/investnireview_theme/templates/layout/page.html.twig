@@ -112,16 +112,7 @@
   {% endif %}
 
   <div class="container-wrap">
-    <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
-      {% if is_front %}
-        {% if drupal_config('system.site', 'frontpage_title') %}
-          <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-            <h1>
-              {{ drupal_config('system.site', 'frontpage_title') }}
-            </h1>
-          </div>
-        {% endif %}
-      {% endif %}
+    <div class="content-sidebar-wrap{% if search_page %} search-page{% endif %}">
       {{ page.breadcrumb }}
       {% if search_page %}
         {{ drupal_block('page_title_block', wrapper=false) }}
@@ -144,6 +135,15 @@
         {% endif %}
         {% if page.content %}
           <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
+            {% if is_front %}
+              {% if drupal_config('system.site', 'frontpage_title') %}
+                <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+                  <h1>
+                    {{ drupal_config('system.site', 'frontpage_title') }}
+                  </h1>
+                </div>
+              {% endif %}
+            {% endif %}
             {{ page.content }}
           </main>
         {% endif %}
