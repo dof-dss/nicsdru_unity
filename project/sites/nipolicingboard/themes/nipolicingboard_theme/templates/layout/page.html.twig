@@ -87,7 +87,14 @@
       </h1>
     </div>
   {% endif %}
-
+<main>
+  {% if drupal_config('system.site', 'frontpage_title') %}
+    <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+      <h1>
+        {{ drupal_config('system.site', 'frontpage_title') }}
+      </h1>
+    </div>
+  {% endif %}
   {{ page.front_welcome }}
 
   <div id="content">
@@ -111,6 +118,7 @@
       </div>
     {% endif %}
   </div>
+</main>
 {% endif %}
 
 {% if not is_front %}
