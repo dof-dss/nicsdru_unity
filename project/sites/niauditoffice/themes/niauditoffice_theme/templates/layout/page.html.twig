@@ -80,18 +80,17 @@
 {% if is_front %}
   {{ page.slideshow }}
 
-  {% if drupal_config('system.site', 'frontpage_title') %}
-    <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-      <h1>
-        {{ drupal_config('system.site', 'frontpage_title') }}
-      </h1>
-    </div>
-  {% endif %}
-
   {{ page.front_welcome }}
 
   {% if page.top_first or page.top_second or page.top_third %}
     <main id="content">
+      {% if drupal_config('system.site', 'frontpage_title') %}
+        <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+          <h1>
+            {{ drupal_config('system.site', 'frontpage_title') }}
+          </h1>
+        </div>
+      {% endif %}
       <div id="top-area">
         {% if page.top_first %}
           <div class="column">
