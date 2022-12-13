@@ -79,7 +79,7 @@
 
 {% if is_front %}
   {{ page.slideshow }}
-
+<main>
   {% if drupal_config('system.site', 'frontpage_title') %}
     <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
       <h1>
@@ -87,7 +87,6 @@
       </h1>
     </div>
   {% endif %}
-
   {{ page.front_welcome }}
 
   <div id="content">
@@ -111,12 +110,13 @@
       </div>
     {% endif %}
   </div>
+</main>
 {% endif %}
 
 {% if not is_front %}
   <div id="container">
     <div class="container-wrap">
-      <div class="content-sidebar-wrap {% if search_page %}search-page{% endif %}">
+      <div class="content-sidebar-wrap{% if search_page %} search-page{% endif %}">
 
         {{ page.breadcrumb }}
         {% if search_page %}
