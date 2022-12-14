@@ -1,0 +1,446 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+@mixin submit-button {
+  background: $brand-primary none;
+  min-width: 13rem;
+  @include responsive-typo-map($normal-text);
+  border: 3px solid transparent;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: none;
+  text-underline-offset: .25em;
+  box-shadow: none;
+  margin: 1rem 0 0;
+  text-align: center;
+  padding: .6rem 1.6rem;
+  cursor: pointer;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    background: $ash-grey;
+    outline: none;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.content-sidebar-wrap {
+  ul:not(.list--no-bullet):not(.dropbutton) {
+    li:not(.pager__item):not(.nav-item) {
+      list-style: none;
+      position: relative;
+
+      &::before {
+        content: '-';
+        position: absolute;
+        left: -20px;
+        top: 0;
+      }
+    }
+  }
+}
+
+#main-menu {
+  .menu-link,
+  .menu .active {
+    color: $brand-primary;
+    @include adjust-font-size-to(14px);
+  }
+
+  .menu-item.open .menu-toggle-btn {
+    background: $brand-primary;
+    color: $white;
+    @include adjust-font-size-to(14px);
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background-color: $menu-borders;
+      color: $white;
+    }
+  }
+
+  .menu .menu-item .active {
+    border-color: $menu-borders;
+  }
+
+  .menu-main_sub {
+    background: #a2d1cc;
+
+    .menu-item {
+      .active {
+        color: $brand-primary;
+        border-color: $white;
+
+        &.link__self {
+          background: $brand-primary;
+          color: $white;
+        }
+      }
+
+      .menu-link {
+        color: $brand-primary;
+
+        &:hover,
+        &:focus {
+          background: $brand-primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.search-form input[type="submit"] {
+  background: #ec7b1e resolve('mag-glass.png') center no-repeat;
+  background-size: 2.6rem auto;
+
+  &:hover {
+    opacity: 1;
+    background-color: $black;
+  }
+}
+
+.webform-submission-form {
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    color: #333;
+  }
+
+  input[type="submit"] {
+    @include submit-button;
+  }
+}
+
+#block-sidemenu {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    padding: 0 1rem;
+
+    &.menu {
+      margin: 1.2rem 0 1.8rem 1.4rem;
+    }
+  }
+}
+
+.block-views-blocklatest-news-news-latest-news,
+#block-sidemenu {
+  margin-bottom: 2rem;
+
+  ul {
+    margin: 0 1.6rem;
+
+    li {
+      .meta {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: .6rem 0 0;
+      }
+    }
+  }
+}
+
+#sidebar-second {
+  h2 {
+    font-size: 2.1rem;
+    margin: .5rem 0 1rem;
+    padding: 0;
+    color: $white;
+  }
+
+  .rel-menu--latest-news ul li a,
+  .menu .menu-item,
+  .menu .menu-item a,
+  .more-link a {
+    color: $offwhite;
+    border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
+  }
+
+  .rel-menu--latest-news ul li,
+  .menu .menu-item {
+    .active {
+      color: $white;
+    }
+  }
+}
+
+.sidebar-second-layout {
+  position: relative;
+  overflow: hidden;
+  background: $brand-primary;
+  padding: 1rem;
+  margin-top: 0;
+
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          color: $offwhite;
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  max-width: 100%;
+
+  @media screen and (max-width: $tab) {
+    padding-left: 1rem;
+  }
+
+  #footer-content a {
+    color: $offwhite;
+    border-bottom-color: $offwhite;
+
+    &:focus {
+      background-color: $offwhite;
+      color: $black;
+    }
+  }
+
+  address,
+  h2 {
+    color: $white;
+  }
+
+  .footer_credit {
+    #footer-menu {
+      margin: 4% auto;
+
+      ul {
+        list-style: none;
+
+        li {
+          padding-left: 0;
+
+          .active {
+            color: $white;
+            @include adjust-font-size-to(14px);
+          }
+
+          a {
+            color: $white;
+            border-bottom-color: $white;
+
+            &:focus {
+              background-color: $offwhite;
+              color: $black;
+            }
+          }
+
+          @include breakpoint($tab) {
+            display: inline-block;
+            padding: 0 .8rem 0 0;
+            line-height: 1.8rem;
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #footer-content {
+    .social-icons a {
+      border-bottom: none;
+      color: $offwhite;
+
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:hover i,
+      &:focus i {
+        background-color: $brand-primary;
+        color: $white;
+      }
+    }
+  }
+}
+
+#footer-content {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 2rem;
+
+  @include breakpoint($phab) {
+    flex-flow: wrap;
+  }
+
+  .column {
+    flex-basis: 33%;
+    padding-left: 2%;
+
+    li {
+      border: none;
+    }
+  }
+}
+
+#block-footersubscription {
+  h2 {
+    @include adjust-font-size-to(22px);
+    margin: .5rem 0 0;
+    padding: 1rem 0;
+  }
+
+  ul label {
+    display: inline;
+  }
+
+  input {
+    &::placeholder {
+      opacity: 1;
+    }
+
+    &[type="email"] {
+      max-width: 100%;
+
+      &:focus {
+        outline: 3px solid #fae029;
+        outline-offset: -2px;
+        position: relative;
+        z-index: 101;
+      }
+    }
+
+    &[type="submit"] {
+      @include submit-button;
+      background-color: $offwhite;
+      color: $brand-primary;
+      padding: .3rem .6rem;
+
+      &:hover,
+      &:focus {
+        background: #fff5df;
+      }
+
+      &:focus {
+        border-color: $white;
+      }
+    }
+  }
+}
+
+#footer #footer-menu .menu li.menu-item a {
+  @include adjust-font-size-to(14px);
+  margin: 0;
+}
+
+#block-footercontactinformation {
+  address {
+    padding-top: 0.3rem;
+  }
+
+  .social-icons {
+    margin-top: 2.4rem;
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      padding-right: .5rem;
+    }
+
+    a {
+      border-bottom: none;
+      color: $text;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        background: none;
+
+        i {
+          background: $white;
+          color: $footer-background;
+        }
+      }
+    }
+
+    i {
+      font-size: 2.4rem;
+      border: 1px solid;
+      padding: .5rem .7rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      line-height: 3rem;
+
+      &.fa-linkedin {
+        padding: .5rem .8rem;
+      }
+
+      &.fa-youtube {
+        padding: .4rem .5rem;
+      }
+    }
+  }
+}
+
+.media-image[data-picture-mapping="publication_image"] > img {
+  clear: right;
+  float: right;
+  max-width: 155px;
+  margin-left: 1.8rem;
+}
+
+#block-mainpagecontent {
+  a strong,
+  strong a {
+    font-weight: normal;
+  }
+
+  &.block > h2 {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.node-type-publication-page,
+.node-type-html-document {
+  .content-sidebar-wrap {
+    width: 65%;
+  }
+}

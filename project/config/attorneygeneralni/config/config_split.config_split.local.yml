@@ -1,0 +1,24 @@
+uuid: 034b7cb7-9d9d-4c03-b897-dbfa0eae2b05
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: local
+description: "Local development split. \r\nEnables debugging and development modules"
+weight: 0
+folder: ../config/attorneygeneralni/local
+module:
+  dblog: 0
+  easy_install: 0
+  field_group_migrate: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

@@ -1,0 +1,23 @@
+uuid: d856c349-49db-442b-ab5e-c333dcdad175
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: local
+description: "Local development split. \r\nEnables debugging and development modules"
+weight: 0
+folder: ../config/employmenttribunalsni/local
+module:
+  dblog: 0
+  easy_install: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
