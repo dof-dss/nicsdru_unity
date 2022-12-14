@@ -1,137 +1,165 @@
-# The name given to the MariaDB service (lowercase alphanumeric only).
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
 db:
-  # The type of your service (mariadb), which uses the format
-  # 'type:version'. Be sure to consult the MariaDB documentation
-  # (https://docs.platform.sh/configuration/services/mysql.html#supported-versions)
-  # when choosing a version. If you specify a version number which is not available,
-  # the CLI will return an error.
-  type: mariadb:10.4
-  # The disk attribute is the size of the persistent disk (in MB) allocated to the service.
-  disk: 40960
-  configuration:
-    schemas:
-      - liofadb
-      - uregnidb
-      - odscnidb
-      - attorneygeneralnidb
-      - employmenttribunalsnidb
-      - fiscalcommissionnidb
-      - nifiscalcouncildb
-      - niauditofficedb
-      - octfdb
-      - urologyservicesinquirydb
-      - mahinquirydb
-      - independentreviewofeducationdb
-      - nipolicingboarddb
-      - pbnidb
-      - investnireviewdb
-      - pcspsdb
-      - cscsreviewnidb
-    endpoints:
-      uregni:
-        default_schema: uregnidb
-        privileges:
-          uregnidb: admin
-      liofa:
-        default_schema: liofadb
-        privileges:
-          liofadb: admin
-      odscni:
-        default_schema: odscnidb
-        privileges:
-          odscnidb: admin
-      attorneygeneralni:
-        default_schema: attorneygeneralnidb
-        privileges:
-          attorneygeneralnidb: admin
-      employmenttribunalsni:
-        default_schema: employmenttribunalsnidb
-        privileges:
-          employmenttribunalsnidb: admin
-      fiscalcommissionni:
-        default_schema: fiscalcommissionnidb
-        privileges:
-          fiscalcommissionnidb: admin
-      nifiscalcouncil:
-        default_schema: nifiscalcouncildb
-        privileges:
-          nifiscalcouncildb: admin
-      niauditoffice:
-        default_schema: niauditofficedb
-        privileges:
-          niauditofficedb: admin
-      octf:
-        default_schema: octfdb
-        privileges:
-          octfdb: admin
-      urologyservicesinquiry:
-        default_schema: urologyservicesinquirydb
-        privileges:
-          urologyservicesinquirydb: admin
-      mahinquiry:
-        default_schema: mahinquirydb
-        privileges:
-          mahinquirydb: admin
-      independentreviewofeducation:
-        default_schema: independentreviewofeducationdb
-        privileges:
-          independentreviewofeducationdb: admin
-      nipolicingboard:
-        default_schema: nipolicingboarddb
-        privileges:
-          nipolicingboarddb: admin
-      pbni:
-        default_schema: pbnidb
-        privileges:
-          pbnidb: admin
-      investnireview:
-        default_schema: investnireviewdb
-        privileges:
-          investnireviewdb: admin
-      pcsps:
-        default_schema: pcspsdb
-        privileges:
-          pcspsdb: admin
-      cscsreviewni:
-        default_schema: cscsreviewnidb
-        privileges:
-          cscsreviewnidb: admin
-
-# Fudging the service name forces a full rebuild with any new config.
+    type: 'mariadb:10.4'
+    disk: 40960
+    configuration:
+        schemas:
+            - uregnidb
+            - odscnidb
+            - fiscalcommissionnidb
+            - mahinquirydb
+            - nifiscalcouncildb
+            - octfdb
+            - niauditofficedb
+            - employmenttribunalsnidb
+            - independentreviewofeducationdb
+            - nipolicingboarddb
+            - pbnidb
+            - investnireviewdb
+            - attorneygeneralnidb
+            - cscsreviewnidb
+            - pcspsdb
+            - urologyservicesinquirydb
+        endpoints:
+            uregni:
+                default_schema: uregnidb
+                privileges:
+                    uregnidb: admin
+            odscni:
+                default_schema: odscnidb
+                privileges:
+                    odscnidb: admin
+            fiscalcommissionni:
+                default_schema: fiscalcommissionnidb
+                privileges:
+                    fiscalcommissionnidb: admin
+            mahinquiry:
+                default_schema: mahinquirydb
+                privileges:
+                    mahinquirydb: admin
+            nifiscalcouncil:
+                default_schema: nifiscalcouncildb
+                privileges:
+                    nifiscalcouncildb: admin
+            octf:
+                default_schema: octfdb
+                privileges:
+                    octfdb: admin
+            niauditoffice:
+                default_schema: niauditofficedb
+                privileges:
+                    niauditofficedb: admin
+            employmenttribunalsni:
+                default_schema: employmenttribunalsnidb
+                privileges:
+                    employmenttribunalsnidb: admin
+            independentreviewofeducation:
+                default_schema: independentreviewofeducationdb
+                privileges:
+                    independentreviewofeducationdb: admin
+            nipolicingboard:
+                default_schema: nipolicingboarddb
+                privileges:
+                    nipolicingboarddb: admin
+            pbni:
+                default_schema: pbnidb
+                privileges:
+                    pbnidb: admin
+            investnireview:
+                default_schema: investnireviewdb
+                privileges:
+                    investnireviewdb: admin
+            attorneygeneralni:
+                default_schema: attorneygeneralnidb
+                privileges:
+                    attorneygeneralnidb: admin
+            cscsreviewni:
+                default_schema: cscsreviewnidb
+                privileges:
+                    cscsreviewnidb: admin
+            pcsps:
+                default_schema: pcspsdb
+                privileges:
+                    pcspsdb: admin
+            urologyservicesinquiry:
+                default_schema: urologyservicesinquirydb
+                privileges:
+                    urologyservicesinquirydb: admin
 solr:
-  type: solr:7.7
-  disk: 1024
-  configuration:
-    cores:
-      uregni_index:
-        conf_dir: !archive "solr_config/"
-      niauditoffice_index:
-        conf_dir: !archive "solr_config/"
-      nipolicingboard_index:
-        conf_dir: !archive "solr_config/"
-      pbni_index:
-        conf_dir: !archive "solr_config/"
-      pcsps_index:
-        conf_dir: !archive "solr_config/"
-      attorneygeneralni_index:
-        conf_dir: !archive "solr_config/"
-      #     fictcommission_index:
-      #       conf_dir: !archive "solr_config/"
-    endpoints:
-      uregni:
-        core: uregni_index
-      niauditoffice:
-        core: niauditoffice_index
-      nipolicingboard:
-        core: nipolicingboard_index
-      pbni:
-        core: pbni_index
-      pcsps:
-        core: pcsps_index
-      attorneygeneralni:
-        core: attorneygeneralni_index
-#     fictcommission:
-#       core: fictcommission_index
-
+    type: 'solr:7.7'
+    disk: 1024
+    configuration:
+        cores:
+            uregni_index:
+                conf_dir: !archive solr_config/
+            odscni_index:
+                conf_dir: !archive solr_config/
+            fiscalcommissionni_index:
+                conf_dir: !archive solr_config/
+            mahinquiry_index:
+                conf_dir: !archive solr_config/
+            nifiscalcouncil_index:
+                conf_dir: !archive solr_config/
+            octf_index:
+                conf_dir: !archive solr_config/
+            niauditoffice_index:
+                conf_dir: !archive solr_config/
+            employmenttribunalsni_index:
+                conf_dir: !archive solr_config/
+            independentreviewofeducation_index:
+                conf_dir: !archive solr_config/
+            nipolicingboard_index:
+                conf_dir: !archive solr_config/
+            pbni_index:
+                conf_dir: !archive solr_config/
+            investnireview_index:
+                conf_dir: !archive solr_config/
+            attorneygeneralni_index:
+                conf_dir: !archive solr_config/
+            cscsreviewni_index:
+                conf_dir: !archive solr_config/
+            pcsps_index:
+                conf_dir: !archive solr_config/
+            urologyservicesinquiry_index:
+                conf_dir: !archive solr_config/
+        endpoints:
+            uregni:
+                core: uregni_index
+            odscni:
+                core: odscni_index
+            fiscalcommissionni:
+                core: fiscalcommissionni_index
+            mahinquiry:
+                core: mahinquiry_index
+            nifiscalcouncil:
+                core: nifiscalcouncil_index
+            octf:
+                core: octf_index
+            niauditoffice:
+                core: niauditoffice_index
+            employmenttribunalsni:
+                core: employmenttribunalsni_index
+            independentreviewofeducation:
+                core: independentreviewofeducation_index
+            nipolicingboard:
+                core: nipolicingboard_index
+            pbni:
+                core: pbni_index
+            investnireview:
+                core: investnireview_index
+            attorneygeneralni:
+                core: attorneygeneralni_index
+            cscsreviewni:
+                core: cscsreviewni_index
+            pcsps:
+                core: pcsps_index
+            urologyservicesinquiry:
+                core: urologyservicesinquiry_index
 redis:
-  type: redis:6.0
+    type: 'redis:6.0'

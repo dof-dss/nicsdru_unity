@@ -1,0 +1,41 @@
+uuid: e2f328c7-a9bc-4061-bbfa-afbebeaa0778
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.page
+  module:
+    - filter
+    - media
+    - node
+    - system
+_core:
+  default_config_hash: e9BC4ZZhNpjulqupeZTtTBjZoTXTCU_zvmSYYwX0jic
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access administration menu'
+  - 'access content'
+  - 'access media browser'
+  - 'access workbench'
+  - 'create page content'
+  - 'delete own page content'
+  - 'diff view changes'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'revert revisions'
+  - 'search content'
+  - 'use media wysiwyg'
+  - 'use text format basic_html'
+  - 'use text format filtered_html'
+  - 'use text format filtered_html_with_no_images'
+  - 'view all revisions'
+  - 'view files'
+  - 'view media'
+  - 'view moderation history'
+  - 'view moderation messages'
+  - 'view own unpublished content'
+  - 'view revisions'
