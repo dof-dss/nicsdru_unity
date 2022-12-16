@@ -109,6 +109,11 @@ crons:
     uregni:
         spec: '10 * * * *'
         cmd: 'cd web/sites/uregni ; drush core-cron'
+    logging:
+        spec: '*/5 * * * *'
+        commands:
+            start: '/bin/bash /app/cronjob.sh'
+        shutdown_timeout: 290
     odscni:
         spec: '10 * * * *'
         cmd: 'cd web/sites/odscni ; drush core-cron'
