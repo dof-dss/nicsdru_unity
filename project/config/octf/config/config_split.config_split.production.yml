@@ -6,7 +6,7 @@ id: production
 label: production
 description: 'Used for the production site only.'
 weight: 0
-folder: ../config/octf/production
+folder: ../project/config/octf/production
 module:
   fastly: 0
 theme: {  }

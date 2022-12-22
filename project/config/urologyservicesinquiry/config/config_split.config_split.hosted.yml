@@ -6,7 +6,7 @@ id: hosted
 label: hosted
 description: "Use for any that are 'hosted' and not running locally, apart from production (which has its own split).\t"
 weight: 0
-folder: ../config/urologyservicesinquiry/hosted
+folder: ../project/config/urologyservicesinquiry/hosted
 module: {  }
 theme: {  }
 blacklist: {  }
