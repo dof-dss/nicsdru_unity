@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2865b43ba37f464c7d91f6ba28ccf072",
+    "content-hash": "84d1ef021f4e5d3f0162c9318176a13c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2714,6 +2714,10 @@
             ],
             "authors": [
                 {
+                    "name": "aidanlis",
+                    "homepage": "https://www.drupal.org/user/502018"
+                },
+                {
                     "name": "Cyclodex",
                     "homepage": "https://www.drupal.org/user/1305230"
                 },
@@ -2726,20 +2730,16 @@
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
-                    "name": "Pol",
-                    "homepage": "https://www.drupal.org/user/47194"
-                },
-                {
-                    "name": "aidanlis",
-                    "homepage": "https://www.drupal.org/user/502018"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
                 },
                 {
                     "name": "shadcn",
@@ -2791,6 +2791,10 @@
             ],
             "authors": [
                 {
+                    "name": "aidanlis",
+                    "homepage": "https://www.drupal.org/user/502018"
+                },
+                {
                     "name": "Cyclodex",
                     "homepage": "https://www.drupal.org/user/1305230"
                 },
@@ -2803,20 +2807,16 @@
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
-                    "name": "Pol",
-                    "homepage": "https://www.drupal.org/user/47194"
-                },
-                {
-                    "name": "aidanlis",
-                    "homepage": "https://www.drupal.org/user/502018"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
                 },
                 {
                     "name": "shadcn",
@@ -4993,12 +4993,12 @@
                     "homepage": "https://www.drupal.org/node/2625160/committers"
                 },
                 {
-                    "name": "Upchuk",
-                    "homepage": "https://www.drupal.org/user/1885838"
+                    "name": "StryKaizer",
+                    "homepage": "https://www.drupal.org/user/462700"
                 },
                 {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
+                    "name": "Upchuk",
+                    "homepage": "https://www.drupal.org/user/1885838"
                 }
             ],
             "description": "Pretty paths for Facets.",
@@ -5564,6 +5564,77 @@
             "support": {
                 "source": "https://git.drupal.org/project/geolocation.git",
                 "issues": "https://www.drupal.org/project/issues/geolocation"
+            }
+        },
+        {
+            "name": "drupal/google_analytics",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_analytics.git",
+                "reference": "8.x-3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "171dcac5a67cde66201754baaa52711f45e47a3b"
+            },
+            "require": {
+                "drupal/core": "^8.8.6|^9.0"
+            },
+            "require-dev": {
+                "drupal/token": "^1.7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1591298584",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-2.x": "2.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/49388/committers"
+                },
+                {
+                    "name": "budda",
+                    "homepage": "https://www.drupal.org/user/13164"
+                },
+                {
+                    "name": "ixismark",
+                    "homepage": "https://www.drupal.org/user/3632333"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "pfaocle",
+                    "homepage": "https://www.drupal.org/user/9740"
+                },
+                {
+                    "name": "roberto.rivera.ixis",
+                    "homepage": "https://www.drupal.org/user/3632325"
+                }
+            ],
+            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
+            "homepage": "https://www.drupal.org/project/google_analytics",
+            "support": {
+                "source": "https://git.drupal.org/project/google_analytics.git",
+                "issues": "https://www.drupal.org/project/issues/google_analytics"
             }
         },
         {
@@ -8252,20 +8323,12 @@
             ],
             "authors": [
                 {
-                    "name": "Andriy Khomych",
-                    "homepage": "https://www.drupal.org/user/3287133"
-                },
-                {
-                    "name": "JacobSanford",
-                    "homepage": "https://www.drupal.org/user/806538"
-                },
-                {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
-                },
-                {
                     "name": "alesbencina",
                     "homepage": "https://www.drupal.org/user/3558110"
+                },
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/user/3287133"
                 },
                 {
                     "name": "aurelianzaha",
@@ -8274,6 +8337,10 @@
                 {
                     "name": "dragan_bp",
                     "homepage": "https://www.drupal.org/user/3578037"
+                },
+                {
+                    "name": "JacobSanford",
+                    "homepage": "https://www.drupal.org/user/806538"
                 },
                 {
                     "name": "joaogarin",
@@ -8290,6 +8357,10 @@
                 {
                     "name": "mh86",
                     "homepage": "https://www.drupal.org/user/59747"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
             "description": "This module provides a powerful interface for managing taxonomies.",
@@ -8517,6 +8588,14 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "bizar1984",
+                    "homepage": "https://www.drupal.org/user/3719064"
+                },
+                {
+                    "name": "Gerben Spil",
+                    "homepage": "https://www.drupal.org/user/728030"
+                },
                 {
                     "name": "Sutharsan",
                     "homepage": "https://www.drupal.org/user/73854"
@@ -8853,12 +8932,12 @@
                 "drupal/telephone_validation": "~2.0",
                 "drupal/token": "~1.0",
                 "drupal/variationcache": "~1.0",
+                "drupal/webform-webform_group": "*",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
                 "drupal/webform_clientside_validation": "*",
                 "drupal/webform_devel": "*",
                 "drupal/webform_entity_print": "*",
-                "drupal/webform_group": "*",
                 "drupal/webform_node": "*",
                 "drupal/webform_options_limit": "*",
                 "drupal/webform_scheduled_email": "*",
@@ -17353,16 +17432,16 @@
         },
         {
             "name": "dof-dss/maestro-hosting",
-            "version": "1.0.3",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-hosting.git",
-                "reference": "fee94ab70274379946cbfff98ef086042b114541"
+                "reference": "b1f01547a34e148b3e42b89b289088caf87d05d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/fee94ab70274379946cbfff98ef086042b114541",
-                "reference": "fee94ab70274379946cbfff98ef086042b114541",
+                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/b1f01547a34e148b3e42b89b289088caf87d05d5",
+                "reference": "b1f01547a34e148b3e42b89b289088caf87d05d5",
                 "shasum": ""
             },
             "require": {
@@ -17387,22 +17466,22 @@
             "description": "Maestro hosting resources",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-hosting/issues",
-                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0.3"
+                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0"
             },
-            "time": "2022-12-15T15:07:56+00:00"
+            "time": "2022-11-23T14:49:29+00:00"
         },
         {
             "name": "dof-dss/maestro-shell",
-            "version": "1.0.1",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-shell.git",
-                "reference": "165deeb3e417397105d9b92b592ea49db4bd6624"
+                "reference": "504ae9e5c4cd7ee18e9a8a6b8ad13bfa24da2d31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/maestro-shell/zipball/165deeb3e417397105d9b92b592ea49db4bd6624",
-                "reference": "165deeb3e417397105d9b92b592ea49db4bd6624",
+                "url": "https://api.github.com/repos/dof-dss/maestro-shell/zipball/504ae9e5c4cd7ee18e9a8a6b8ad13bfa24da2d31",
+                "reference": "504ae9e5c4cd7ee18e9a8a6b8ad13bfa24da2d31",
                 "shasum": ""
             },
             "require": {
@@ -17445,9 +17524,9 @@
             "description": "Shell for working with Maestro projects.",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-shell/issues",
-                "source": "https://github.com/dof-dss/maestro-shell/tree/1.0.1"
+                "source": "https://github.com/dof-dss/maestro-shell/tree/1.0"
             },
-            "time": "2022-12-13T13:14:26+00:00"
+            "time": "2022-11-23T14:50:10+00:00"
         },
         {
             "name": "drupal/coder",
