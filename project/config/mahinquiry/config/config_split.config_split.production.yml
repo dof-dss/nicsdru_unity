@@ -6,7 +6,7 @@ id: production
 label: production
 description: 'Used for production site.'
 weight: 0
-folder: ../config/mahinquiry/production
+folder: ../project/config/mahinquiry/production
 module:
   fastly: 0
 theme: {  }

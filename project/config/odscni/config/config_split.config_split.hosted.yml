@@ -8,7 +8,7 @@ id: hosted
 label: hosted
 description: 'Use for any sites that are ''hosted'' and not running locally, whether development, QA or production.'
 weight: 0
-folder: ../config/odscni/hosted
+folder: ../project/config/odscni/hosted
 module: {  }
 theme: {  }
 blacklist: {  }
