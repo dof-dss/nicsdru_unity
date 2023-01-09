@@ -522,3 +522,11 @@ input[type="submit"].btn {
     border-color: $black;
   }
 }
+
+.path-job-opportunities {
+  .media-image[data-picture-mapping="inline"] > img {c
+    &:first-child {
+      float: left;
+    }
+  }
+}
