@@ -6,7 +6,7 @@ id: production
 label: Production
 description: 'Used for the production site only.'
 weight: 0
-folder: ../config/niauditoffice/production
+folder: ../project/config/niauditoffice/production
 module:
   fastly: 0
 theme: {  }

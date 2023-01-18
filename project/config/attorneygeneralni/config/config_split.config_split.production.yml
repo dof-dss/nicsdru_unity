@@ -6,7 +6,7 @@ id: production
 label: production
 description: 'Used for production site.'
 weight: 0
-folder: ../config/attorneygeneralni/production
+folder: ../project/config/attorneygeneralni/production
 module:
   fastly: 0
 theme: {  }

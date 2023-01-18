@@ -6,7 +6,7 @@ id: production
 label: Production
 description: 'Used for the production site only.'
 weight: 0
-folder: ../config/uregni/production
+folder: ../project/config/uregni/production
 module:
   fastly: 0
 theme: {  }

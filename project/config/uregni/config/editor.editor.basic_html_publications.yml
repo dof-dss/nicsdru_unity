@@ -41,7 +41,6 @@ settings:
           items:
             - DrupalMediaLibrary
             - node
-            - map
         -
           name: Tasks
           items:

@@ -6,7 +6,7 @@ id: hosted
 label: hosted
 description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production.\t"
 weight: 0
-folder: ../config/investnireview/hosted
+folder: ../project/config/investnireview/hosted
 module: {  }
 theme: {  }
 blacklist: {  }
