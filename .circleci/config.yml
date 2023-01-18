@@ -214,7 +214,7 @@ jobs:
           name: Backup data sync if the previous attempt failed.
           command: |
             # Pause for the blocking activity to finish.
-            sleep 90s
+            sleep 300s
             platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
           when: on_fail
       - run:
@@ -334,7 +334,7 @@ workflows:
     triggers:
       - schedule:
           # At 01:23 Monday to Friday
-          cron: "23 1 * * 1-5"
+          cron: "55 1 * * 1-5"
           filters:
             branches:
               only:

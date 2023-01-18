@@ -6,7 +6,7 @@ id: production
 label: Production
 description: 'Used for the production site only.'
 weight: 0
-folder: ../config/nipolicingboard/production
+folder: ../project/config/nipolicingboard/production
 module:
   fastly: 0
 theme: {  }

@@ -6,7 +6,7 @@ id: hosted
 label: hosted
 description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production.\t"
 weight: 0
-folder: ../config/attorneygeneralni/hosted
+folder: ../project/config/attorneygeneralni/hosted
 module: {  }
 theme: {  }
 blacklist: {  }
