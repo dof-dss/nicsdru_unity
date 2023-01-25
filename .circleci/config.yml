@@ -149,6 +149,7 @@ jobs:
           name: Add OS and PHP extensions
           command: |
             wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            sudo apt update --allow-releaseinfo-change
             sudo apt install libjpeg-dev make python g++ -y
       - install_psh_cli
       - run:
