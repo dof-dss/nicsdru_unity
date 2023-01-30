@@ -320,6 +320,7 @@ workflows:
       - check_illegal_updates:
           requires:
             - build
+            - hosts_keyscan
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
