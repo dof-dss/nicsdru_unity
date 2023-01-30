@@ -137,6 +137,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
+      - hosts_keyscan
       - run:
           name: Composer check
           command: |
@@ -317,11 +318,9 @@ workflows:
       - deprecated_code:
           requires:
             - build
-      - hosts_keyscan
       - check_illegal_updates:
           requires:
             - build
-            - hosts_keyscan
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
