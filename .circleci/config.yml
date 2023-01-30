@@ -317,6 +317,7 @@ workflows:
       - deprecated_code:
           requires:
             - build
+      - hosts_keyscan
       - check_illegal_updates:
           requires:
             - build
