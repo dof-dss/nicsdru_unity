@@ -132,7 +132,7 @@ jobs:
             CHECK_DIRS="$CHECK_DIRS ${PROJECT_ROOT}/web/modules/origins"
             vendor/bin/drupal-check $CHECK_DIRS
 
-  # Nightly edge build
+  # Nightly edge build  
   edge_build:
     <<: *custom_npm_docker_image
     environment:
