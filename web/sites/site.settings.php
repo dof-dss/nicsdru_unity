@@ -81,18 +81,20 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
       $config['config_split.config_split.hosted']['status'] = FALSE;
       break;
 
-    case 'D8UN-edge':
+    case 'edge':
       // Edge environment orange toolbar.
       $env_colour = '#e56716';
       break;
 
     case 'D8UN-uat':
+    case 'uat':
       // UAT environment purple toolbar.
       $env_colour = '#9370DB';
       break;
 
     default:
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
+      include $app_root . '/' . $site_path . '/../settings.development.php';
   }
   $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 }
