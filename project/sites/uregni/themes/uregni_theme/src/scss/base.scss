@@ -60,14 +60,6 @@ th {
   text-align: left;
 }
 
-#block-views-block-board-member-board-members-block {
-  h2 {
-    @include responsive-typo-map($h2-text);
-    margin: 0;
-    padding-left: 0;
-  }
-}
-
 strong a {
   font-weight: normal;
 }
