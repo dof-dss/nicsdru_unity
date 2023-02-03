@@ -67,7 +67,6 @@ permissions:
   - 'add terms in site_structure'
   - 'administer book outlines'
   - 'administer main menu items'
-  - 'administer menu'
   - 'administer nivo slider'
   - 'administer redirects'
   - 'audit content'
