@@ -627,3 +627,20 @@
     height: 99px;
   }
 }
+
+#content #block-views-block-senior-management-senior-management-block .board-members .views-row a {
+  padding: 1rem;
+  margin: 0;
+  border: none;
+
+  &:hover,
+  &:focus {
+    border: none;
+    background: #e4f0fa;
+  }
+
+  &:focus {
+    outline: 2px solid $black;
+    outline-offset: -2px;
+  }
+}
