@@ -2,7 +2,7 @@ project_type: unity
 project_name: 'Unity 1'
 project_id: 6tlkpwbr6tndk
 project_disk_size: 26000
-db_disk_size: 21504
+db_disk_size: 25000
 sites:
     uregni:
         name: 'Utility Regulator'
