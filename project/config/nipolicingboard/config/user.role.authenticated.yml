@@ -18,7 +18,6 @@ permissions:
   - 'access content'
   - 'access media browser'
   - 'access workbench'
-  - 'administer menu'
   - 'create decision content'
   - 'diff view changes'
   - 'edit own decision content'
