@@ -94,6 +94,7 @@ if (!empty(getenv('PLATFORM_BRANCH'))) {
 
     default:
       $settings['container_yamls'][] = $app_root . '/' . $site_path . '/../development.services.yml';
+      include $app_root . '/' . $site_path . '/../settings.development.php';
   }
   $settings['simple_environment_indicator'] = sprintf('%s %s', $env_colour, $env_name);
 }
