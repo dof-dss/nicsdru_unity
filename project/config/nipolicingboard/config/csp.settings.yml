@@ -80,7 +80,7 @@ report-only:
         - platform.twitter.com
     block-all-mixed-content: true
   reporting:
-    plugin: sitelog
+    plugin: none
 enforce:
   enable: false
   directives:
