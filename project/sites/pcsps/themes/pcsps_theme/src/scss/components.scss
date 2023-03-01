@@ -86,12 +86,8 @@
 }
 
 #footer {
-  max-width: 1060px;
-  padding: 2rem;
-
-  @include breakpoint($tab) {
-    padding: 2%;
-  }
+  max-width: 100%;
+  padding: 2rem 0 0;
 
   .footer-menu li {
     padding-left: 0;
@@ -130,6 +126,8 @@
 
 
 #footer-area {
+  padding-bottom: 2rem;
+
   .column {
     .block {
       h2,
@@ -156,14 +154,16 @@
   }
 
   ul {
-    padding: 2rem;
+    padding: 1rem;
 
     @include breakpoint($tab) {
       padding: 0;
     }
+  }
+}
 
-    @include breakpoint($lap) {
-      text-align: right;
-    }
+#footer {
+  .container-wrap {
+    max-width: 1024px;
   }
 }
