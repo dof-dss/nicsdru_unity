@@ -96,11 +96,10 @@
 }
 
 #footer {
-  max-width: 1160px;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   @include breakpoint($tab) {
-    padding: 2%;
+    padding: 0;
   }
 
   .footer-menu li {
