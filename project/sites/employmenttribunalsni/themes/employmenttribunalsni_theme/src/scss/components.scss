@@ -55,6 +55,12 @@
 
 
 #footer {
+  max-width: 100%;
+
+  .container-wrap {
+    display: block;
+  }
+
   #footer-menu {
     margin: 4% auto;
 
