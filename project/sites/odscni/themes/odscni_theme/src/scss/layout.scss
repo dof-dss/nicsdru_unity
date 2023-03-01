@@ -22,6 +22,12 @@
   }
 }
 
+#footer_wrapper {
+  &.container-wrap {
+    display: block;
+  }
+}
+
 .sidebar-second-layout {
   position: relative;
   overflow: hidden;
