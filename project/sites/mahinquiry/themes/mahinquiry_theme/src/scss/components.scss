@@ -88,9 +88,6 @@
 }
 
 #footer {
-  max-width: 1060px;
-  padding: 2rem;
-
   @include breakpoint($tab) {
     padding: 2%;
   }
