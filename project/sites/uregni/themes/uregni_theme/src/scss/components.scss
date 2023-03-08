@@ -308,7 +308,6 @@ h2 i {
 
     .column,
     .column:first-child {
-      padding: 1%;
 
       @include breakpoint($phab) {
         flex-basis: 49%;
@@ -529,4 +528,8 @@ input[type="submit"].btn {
       float: left;
     }
   }
+}
+
+#block-footersubscriptionform {
+  padding-bottom: 2rem;
 }

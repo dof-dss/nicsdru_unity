@@ -253,13 +253,12 @@
   }
 }
 
-#footer_wrapper,
-.footer_credit {
-  padding: 1% 2% 2%;
-}
-
 #footer-area {
+  padding: 2rem 0;
+
   .column {
+    padding: 0;
+
     @include breakpoint($tab) {
       width: 39%;
 
@@ -287,6 +286,10 @@
 
 .footer_credit {
   border-top: 1px solid $black;
+
+  .container-wrap {
+    margin: 1% auto 2%;
+  }
 
   ul {
     list-style: none;

@@ -466,6 +466,8 @@
 
     .column {
       width: 100%;
+      padding: 0;
+      margin: 0;
 
       @include breakpoint($tab) {
         width: 49%;
@@ -473,10 +475,6 @@
         &:last-child {
           float: right;
         }
-      }
-
-      &:first-child {
-        padding-right: 0;
       }
     }
   }
