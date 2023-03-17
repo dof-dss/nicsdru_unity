@@ -13,19 +13,6 @@ blocks:
           summary: ''
           format: full_html
   -
-    info: 'Contact us'
-    langcode: en
-    uuid: 01c32ba8-60ac-4599-9c9a-f4a9082778c1
-    bundle: basic_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<p>General email: <a href=\"mailto:info@investnireview.org.uk\">info@investnireview.org.uk</a></p>\r\n"
-          summary: ''
-          format: basic_html
-  -
     info: 'Social links'
     langcode: en
     uuid: eb967b82-69ca-4bb1-8a8a-e1ea8254ac3f
