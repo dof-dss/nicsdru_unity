@@ -9,17 +9,17 @@ dependencies:
     - nipolicingboard_theme
 id: originstranslation
 theme: nipolicingboard_theme
-region: translate
-weight: 0
+region: primary_menu
+weight: -12
 provider: null
 plugin: origins_translations_block
 settings:
   id: origins_translations_block
-  label: 'How to translate this page'
+  label: 'Translation help'
   label_display: visible
   provider: origins_translations
 visibility:
   request_path:
     id: request_path
     negate: true
-    pages: /translation-page
+    pages: "/translation-page\r\n/translations"
