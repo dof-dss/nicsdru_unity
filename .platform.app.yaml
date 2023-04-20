@@ -14,7 +14,7 @@ runtime:
     extensions:
         - apcu
         - redis
-disk: 26000
+disk: 30720
 mounts:
     /web/files:
         source: local
