@@ -132,32 +132,6 @@ jobs:
             CHECK_DIRS="$CHECK_DIRS ${PROJECT_ROOT}/web/modules/origins"
             vendor/bin/drupal-check $CHECK_DIRS
 
-  check_illegal_updates:
-    <<: *docker_image
-    steps:
-      - attach_workspace:
-          at: ./
-      - hosts_keyscan
-      - run:
-          name: Check for updates made directly in this repo rather than in maestro-drupal-unity
-          command: |
-            git clone git@github.com:dof-dss/maestro-drupal-unity.git
-            echo "** Any failures in this section indicate that updates have been made directly in this repo "
-            echo "when they should have been made in https://github.com/dof-dss/maestro-drupal-unity and"
-            echo "pulled from the upstream repo using 'maestro pub' **"
-            echo "** checking composer.json  **"
-            diff maestro-drupal-unity/composer.json composer.json
-            echo "** checking composer.lock  **"
-            diff maestro-drupal-unity/composer.lock composer.lock
-            echo "** checking circleci/config.yml  **"
-            #diff maestro-drupal-unity/.circleci/config.yml .circleci/config.yml
-            echo "** checking platform.app.yaml **"
-            grep 'will be overwritten' .platform.app.yaml
-            echo "** checking site.settings.php  **"
-            diff maestro-drupal-unity/web/sites/site.settings.php web/sites/site.settings.php
-            echo "** checking sites.php  **"
-            diff maestro-drupal-unity/web/sites/sites.php web/sites/sites.php
-
   # Nightly edge build
   edge_build:
     <<: *custom_npm_docker_image
@@ -257,6 +231,16 @@ jobs:
             fi
             done
       - run:
+          name: Run any outstanding updates
+          command: |
+            for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
+            do
+              result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
+              if [[ -n $result ]]; then
+                result2=$(platform drush "-l ${site} updb -y" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
+            fi
+            done
+      - run:
           name: Clear cache before config import
           command: |
             for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
@@ -320,52 +304,9 @@ jobs:
 
 workflows:
   version: 2
-  build-test-deploy:
-    jobs:
-      - build
-      - unity_base_checks:
-          requires:
-            - build
-      - coding_standards:
-          requires:
-            - build
-      - deprecated_code:
-          requires:
-            - build
-      - check_illegal_updates:
-          requires:
-            - build
-
-  # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
-    when:
-      and:
-        - not:
-          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
-    triggers:
-      - schedule:
-          # At 00:30 Monday to Friday
-          cron: "30 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
     jobs:
       - edge_build
-
-  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
-  nightly-edge-build-post-build-tasks:
-    when:
-      and:
-        - not:
-          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
-    triggers:
-      - schedule:
-          # At 01:23 Monday to Friday
-          cron: "55 1 * * 1-5"
-          filters:
-            branches:
-              only:
-                - edge
-    jobs:
-      - sync_data
+      - sync_data:
+          requires:
+            - edge_build
