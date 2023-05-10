@@ -103,3 +103,4 @@ Disallow: /consultations/*type
 Disallow: /consultations/*date
 Disallow: /consultations/*topic
 Disallow: /news/*date
+Disallow: /news/*category
