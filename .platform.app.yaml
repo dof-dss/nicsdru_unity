@@ -105,6 +105,7 @@ relationships:
     pcsps_solr: 'solr:pcsps'
     urologyservicesinquiry: 'db:urologyservicesinquiry'
     urologyservicesinquiry_solr: 'solr:urologyservicesinquiry'
+    redis: "redis:redis"
 crons:
     uregni:
         spec: '10 * * * *'
