@@ -73,6 +73,7 @@ web:
                 ^/sites/default/files/(css|js):
                     expires: 2w
 relationships:
+    redis: 'redis:redis'
     uregni: 'db:uregni'
     uregni_solr: 'solr:uregni'
     odscni: 'db:odscni'
