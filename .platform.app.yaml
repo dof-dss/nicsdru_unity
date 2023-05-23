@@ -73,6 +73,7 @@ web:
                 ^/sites/default/files/(css|js):
                     expires: 2w
 relationships:
+    redis: 'redis:redis'
     uregni: 'db:uregni'
     uregni_solr: 'solr:uregni'
     odscni: 'db:odscni'
@@ -105,7 +106,6 @@ relationships:
     pcsps_solr: 'solr:pcsps'
     urologyservicesinquiry: 'db:urologyservicesinquiry'
     urologyservicesinquiry_solr: 'solr:urologyservicesinquiry'
-    redis: "redis:redis"
 crons:
     uregni:
         spec: '10 * * * *'
