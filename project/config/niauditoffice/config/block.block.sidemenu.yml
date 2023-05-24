@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/news\r\n/news-centre/*\r\n/publications\r\n/publications/*\r\n/search*\r\n/senior-management/*"
+    pages: "<front>\r\n/news\r\n/news-centre/*\r\n/publications\r\n/publications/*\r\n/search*\r\n/senior-management/*\r\n/news/date/*"
