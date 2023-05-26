@@ -1,7 +1,7 @@
 # Maestro Unity base
 
 This repository contains Drupal core along with contrib and shared custom modules or themes for Unity sites. It is never
-deployed direct to a hosting environment and instead is used to create 'server specific'  forks.
+deployed direct to a hosting environment and instead is used to create 'server specific' forks.
 
 When a core or contrib update is required for Unity sites it is first performed against this repository, pushed to
 Github and then each 'server instance' fork will pull from this upstream source. It is imperative that any
