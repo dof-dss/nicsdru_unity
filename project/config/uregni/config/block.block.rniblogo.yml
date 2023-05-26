@@ -1,0 +1,30 @@
+uuid: aaa8db6e-adb5-4235-af0e-dfaa1544f70f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:66d0e080-87fd-4cf4-a44f-d0554d0788f5'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - uregni_theme
+id: rniblogo
+theme: uregni_theme
+region: footer_seventh
+weight: 0
+provider: null
+plugin: 'block_content:66d0e080-87fd-4cf4-a44f-d0554d0788f5'
+settings:
+  id: 'block_content:66d0e080-87fd-4cf4-a44f-d0554d0788f5'
+  label: 'RNIB logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
