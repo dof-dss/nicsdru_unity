@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function niauditoffice_common_preprocess_select(&$variables) {
+  if ($variables['element']['#field_name'] === 'field_publication_topic') {
+    $variables['attributes']['data-drupal-selector'] = 'edit-field-publication-type';
+    $variables['attributes']['aria-describedby'] = 'edit-field-publication-type--description';
+    $variables['attributes']['id'] = 'edit-field-publication-type';
+    $variables['attributes']['name'] = 'field_publication_type';
+  }
+}

@@ -1,0 +1,5 @@
+name: 'NIAO common'
+type: module
+description: 'NIAO common'
+core_version_requirement: 8.x || ^9
+package: 'Custom'
