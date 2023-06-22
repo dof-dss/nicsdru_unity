@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:b187a98a-8765-4f35-bd4a-e55c0efea566'
 settings:
   id: 'block_content:b187a98a-8765-4f35-bd4a-e55c0efea566'
-  label: 'About the Review'
+  label: 'Review Report published'
   label_display: visible
   provider: block_content
   status: true
