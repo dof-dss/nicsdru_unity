@@ -322,6 +322,23 @@ h2 i {
       }
     }
 
+    .logo-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @include breakpoint($tab) {
+        .column.logo,
+        .column:first-child {
+          flex-basis: 24%;
+        }
+      }
+
+      .column:last-child img {
+        width: 70%;
+      }
+    }
+
     .column.logo {
       align-self: center;
     }
