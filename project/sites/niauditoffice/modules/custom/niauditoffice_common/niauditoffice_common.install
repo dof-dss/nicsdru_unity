@@ -9,12 +9,8 @@ use Drupal\node\NodeInterface;
  * Migrate Publication field_publication_topic > field_publication_type.
  * Copied and modified from https://atendesigngroup.com/articles/programmatically-copy-field-data-drupal-8.
  */
-function niauditoffice_common_update_9001(&$sandbox): void
-{
-  try {
-    niauditoffice_common_copy_field_values($sandbox, 'publication_page', 'field_publication_topic', 'field_publication_type');
-  } catch (InvalidPluginDefinitionException|PluginNotFoundException|EntityStorageException $e) {
-  }
+function niauditoffice_common_update_9001(&$sandbox) {
+  niauditoffice_common_copy_field_values($sandbox, 'publication_page', 'field_publication_topic', 'field_publication_type');
 }
 
 /**
