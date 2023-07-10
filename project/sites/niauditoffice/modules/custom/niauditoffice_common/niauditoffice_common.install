@@ -3,6 +3,8 @@
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Core\Entity\EntityStorageException;
+use Drupal\node\NodeInterface;
+
 /**
  * Migrate Article field_old_one > field_new.
  */
@@ -57,7 +59,7 @@ function niauditoffice_common_copy_field_values(array &$sandbox, string $bundle,
   $nids = array_shift($sandbox['ids']);
   $nodes = $storage->loadMultiple($nids);
 
-  /* @var $node \Drupal\node\NodeInterface $node */
+  /* @var $node NodeInterface $node */
   foreach ($nodes as $node) {
     $node->$dest_field = $node->$source_field; // Programmatically copy field data
     $node->save();
