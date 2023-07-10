@@ -1,0 +1,29 @@
+uuid: 76c62194-afee-48a1-b8ea-e9d8414caf2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_type
+    - node.type.publication_page
+    - taxonomy.vocabulary.publications_topics
+id: node.publication_page.field_publication_type
+field_name: field_publication_type
+entity_type: node
+bundle: publication_page
+label: Type
+description: 'Please choose a publication type from the dropdown list.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publications_topics: publications_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: pub_topics
+field_type: entity_reference
