@@ -6,7 +6,8 @@ use Drupal\Core\Entity\EntityStorageException;
 use Drupal\node\NodeInterface;
 
 /**
- * Migrate Article field_old_one > field_new.
+ * Migrate Publication field_publication_topic > field_publication_type.
+ * Copied and modified from https://atendesigngroup.com/articles/programmatically-copy-field-data-drupal-8.
  */
 function niauditoffice_common_update_9001(&$sandbox): void
 {
