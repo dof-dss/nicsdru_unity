@@ -10,7 +10,7 @@ id: node.publication_page.field_publication_topic
 field_name: field_publication_topic
 entity_type: node
 bundle: publication_page
-label: 'Type to be deleted'
+label: Type
 description: 'Please choose a type for this publication.'
 required: true
 translatable: false
