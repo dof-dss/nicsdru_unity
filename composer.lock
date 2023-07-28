@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c7a97cd609db0647791efe74cb17604",
+    "content-hash": "408696da52fdfd00e47ed3e23cdc6cca",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1904,33 +1904,34 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_profile",
-            "version": "0.1.11",
+            "version": "dev-d10_upgrade",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_profile.git",
-                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee"
+                "reference": "222eba3382f3fc2bed29946838d99126ee15f17c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
-                "reference": "3e8c2a39342089e36d11bfd2fc4a3ef1dfab25ee",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_profile/zipball/222eba3382f3fc2bed29946838d99126ee15f17c",
+                "reference": "222eba3382f3fc2bed29946838d99126ee15f17c",
                 "shasum": ""
             },
             "require": {
                 "dof-dss/nicsdru_origins_modules": "*",
-                "drupal/address": "^1.7",
-                "drupal/admin_toolbar": "^2.2",
-                "drupal/adminimal_theme": "^1.5",
-                "drupal/ctools": "^3.2",
-                "drupal/eu_cookie_compliance": "^1.8",
+                "drupal/address": "^1.9",
+                "drupal/admin_toolbar": "^3.0",
+                "drupal/adminimal_theme": "^1.6",
+                "drupal/core": "^9.2",
+                "drupal/ctools": "^3.7",
+                "drupal/eu_cookie_compliance": "^1.14",
                 "drupal/handy_cache_tags": "^1.0",
                 "drupal/layout_builder_modal": "^1.0@alpha",
-                "drupal/metatag": "^1.10",
+                "drupal/metatag": "^1.16",
                 "drupal/pathauto": "^1.4",
                 "drupal/redirect": "^1.4",
-                "drupal/simple_sitemap": "^3.3",
+                "drupal/simple_sitemap": "^3.10",
                 "drupal/simplei": "^1.1",
-                "drupal/token": "^1.5",
+                "drupal/token": "^1.9",
                 "drupal/token_filter": "^1.1",
                 "drupal/views_custom_cache_tag": "^1.1"
             },
@@ -1938,9 +1939,9 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Drupal install profile to provide common functionality for NICS websites",
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/0.1.11"
+                "source": "https://github.com/dof-dss/nicsdru_origins_profile/tree/d10_upgrade"
             },
-            "time": "2021-04-21T10:20:46+00:00"
+            "time": "2023-07-28T15:23:16+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
@@ -2114,26 +2115,29 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "2.5.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "8.x-2.5"
+                "reference": "3.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "c71e58051b8d6818272df96d14cb11407d5e5ceb"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.4.1.zip",
+                "reference": "3.4.1",
+                "shasum": "bcb15ab40016becdb3ac8f21d7d1a721f48f3577"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0"
+                "drupal/core": "^9.2 || ^10"
+            },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1629907119",
+                    "version": "3.4.1",
+                    "datestamp": "1684944156",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -21128,6 +21132,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_origins_profile": 20,
         "drupal/block_field": 5,
         "drupal/clone_nodes": 20,
         "drupal/config_readonly": 10,
