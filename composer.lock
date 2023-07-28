@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d71a7f89e3c224ded55abcbd324092ba",
+    "content-hash": "4c7a97cd609db0647791efe74cb17604",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3607,32 +3607,32 @@
             }
         },
         {
-            "name": "drupal/cookie_content_blocker",
-            "version": "2.0.0",
+            "name": "drupal/cookie_content_blocker_d10",
+            "version": "dev-1.0.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/cookie_content_blocker.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/cookie_content_blocker-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "570bf56ac3c53d117ca721e0da5a97de2f9cc9df"
+                "url": "https://git.drupalcode.org/project/cookie_content_blocker_d10.git",
+                "reference": "8acd4194bbc1a3d163488c18d1717da530651fdb"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^8.8 || ^9 || ^10",
                 "ext-json": "*",
-                "php": "^7.1 || ^8.0"
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "drupal/cookie_content_blocker": "*"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1659703027",
+                    "version": "1.0.x-dev",
+                    "datestamp": "1690471370",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -17404,30 +17404,27 @@
             }
         },
         {
-            "name": "drupal/easy_install",
-            "version": "10.4.0",
+            "name": "drupal/easy_install_d10",
+            "version": "dev-10.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/easy_install.git",
-                "reference": "8.x-10.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_install-8.x-10.4.zip",
-                "reference": "8.x-10.4",
-                "shasum": "399bbb506ad23bb91b8f41922e6d9c1cd39cf6df"
+                "url": "https://git.drupalcode.org/project/easy_install_d10.git",
+                "reference": "164ded5c28913b709086dbb1c20927e5e2112690"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-10.x": "10.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-10.4",
-                    "datestamp": "1590560253",
+                    "version": "8.x-10.x-dev",
+                    "datestamp": "1688720249",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -17437,18 +17434,13 @@
             ],
             "authors": [
                 {
-                    "name": "btobac",
-                    "homepage": "https://www.drupal.org/user/3630142"
-                },
-                {
-                    "name": "karthikeyan-manivasagam",
-                    "homepage": "https://www.drupal.org/user/1494424"
+                    "name": "DuttonMa",
+                    "homepage": "https://www.drupal.org/user/2250396"
                 }
             ],
-            "description": "Provides UI to delete configuration while uninstalling or reinstalling the modules.",
-            "homepage": "https://www.drupal.org/project/easy_install",
+            "homepage": "https://www.drupal.org/project/easy_install_d10",
             "support": {
-                "source": "https://git.drupalcode.org/project/easy_install"
+                "source": "https://git.drupalcode.org/project/easy_install_d10"
             }
         },
         {
@@ -21139,6 +21131,7 @@
         "drupal/block_field": 5,
         "drupal/clone_nodes": 20,
         "drupal/config_readonly": 10,
+        "drupal/cookie_content_blocker_d10": 20,
         "drupal/date_facet_drilldown": 20,
         "drupal/file_delete_ui": 10,
         "drupal/flag": 10,
@@ -21147,6 +21140,7 @@
         "drupal/shs": 5,
         "drupal/telephone_plus": 20,
         "drupal/ultimate_cron": 15,
+        "drupal/easy_install_d10": 20,
         "previousnext/phpunit-finder": 15
     },
     "prefer-stable": true,
