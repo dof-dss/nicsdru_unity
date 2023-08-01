@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57c426faddf178709dc25d1764401f9d",
+    "content-hash": "6c1b8c356d63f99eab7cf328ad80a343",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1486,6 +1486,45 @@
                 "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/d10_upgrade"
             },
             "time": "2023-07-28T15:20:46+00:00"
+        },
+        {
+            "name": "dof-dss/nicsdru_unity_theme",
+            "version": "v0.1.76",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
+                "reference": "ef2791b8defeb6b07814921de59e4d9c22ed3c24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/ef2791b8defeb6b07814921de59e4d9c22ed3c24",
+                "reference": "ef2791b8defeb6b07814921de59e4d9c22ed3c24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "drupal-custom-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Corbett",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Drupal 8 theme",
+            "homepage": "https://github.com/dof-dss/nicsdru_unity_theme",
+            "keywords": [
+                "drupal",
+                "theme"
+            ],
+            "support": {
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.76"
+            },
+            "time": "2023-06-28T12:21:40+00:00"
         },
         {
             "name": "drupal/address",
