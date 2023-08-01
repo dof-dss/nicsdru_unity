@@ -16,8 +16,6 @@
         "composer-runtime-api": "*",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "dof-dss/nicsdru_corplite_modules": "dev-main",
-        "dof-dss/nicsdru_corplite_profile": "^1.0",
         "dof-dss/nicsdru_origins_modules": "dev-d10_upgrade",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",
@@ -167,9 +165,6 @@
             ],
             "web/modules/custom/{$name}": [
                 "type:drupal-custom-module"
-            ],
-            "web/profiles/corplite/nicsdru_corplite_profile": [
-                "dof-dss/nicsdru_corplite_profile"
             ],
             "web/profiles/contrib/{$name}": [
                 "type:drupal-profile"
