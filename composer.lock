@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d671d4742bebdada6bc2e44d083af9d",
+    "content-hash": "3eabe730a78dd5fac72922cce2c66eb7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1489,16 +1489,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.76",
+            "version": "dev-d10_upgrade",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "ef2791b8defeb6b07814921de59e4d9c22ed3c24"
+                "reference": "b317349fca572ddc9617c190ad8a9058cead043f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/ef2791b8defeb6b07814921de59e4d9c22ed3c24",
-                "reference": "ef2791b8defeb6b07814921de59e4d9c22ed3c24",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/b317349fca572ddc9617c190ad8a9058cead043f",
+                "reference": "b317349fca572ddc9617c190ad8a9058cead043f",
                 "shasum": ""
             },
             "require": {
@@ -1522,9 +1522,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.76"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/d10_upgrade"
             },
-            "time": "2023-06-28T12:21:40+00:00"
+            "time": "2023-08-01T14:25:43+00:00"
         },
         {
             "name": "drupal/address",
@@ -14807,6 +14807,7 @@
         "dof-dss/nicsdru_origins_modules": 20,
         "dof-dss/nicsdru_unity_modules": 20,
         "dof-dss/nicsdru_unity_profile": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/block_field": 5,
         "drupal/clone_nodes": 20,
         "drupal/config_readonly": 10,
