@@ -27,6 +27,7 @@
         "drupal/block_field": "^1.0@RC",
         "drupal/block_visibility_groups": "^2.0",
         "drupal/chosen": "^4.0",
+        "drupal/ckeditor": "^1.0",
         "drupal/clientside_validation": "^4.0",
         "drupal/clone_nodes": "^1.2@dev",
         "drupal/config_filter": "^1.10",
