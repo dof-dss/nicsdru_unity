@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "974bf2686be2e27e3cf22b84aeda820f",
+    "content-hash": "57c426faddf178709dc25d1764401f9d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1428,6 +1428,64 @@
                 "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/d10_upgrade"
             },
             "time": "2023-07-14T15:11:27+00:00"
+        },
+        {
+            "name": "dof-dss/nicsdru_unity_modules",
+            "version": "dev-d10_upgrade",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
+                "reference": "24497cfd00145192c3b3d75a1fc805b54397a574"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/24497cfd00145192c3b3d75a1fc805b54397a574",
+                "reference": "24497cfd00145192c3b3d75a1fc805b54397a574",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Custom modules available to all Unity sites.",
+            "support": {
+                "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/d10_upgrade"
+            },
+            "time": "2023-07-28T08:21:07+00:00"
+        },
+        {
+            "name": "dof-dss/nicsdru_unity_profile",
+            "version": "dev-d10_upgrade",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dof-dss/nicsdru_unity_profile.git",
+                "reference": "57ed870602a5c310191c01a343ad5c01701f292a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/57ed870602a5c310191c01a343ad5c01701f292a",
+                "reference": "57ed870602a5c310191c01a343ad5c01701f292a",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0"
+            },
+            "type": "drupal-profile",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Custom install profile used by all Unity sites",
+            "support": {
+                "issues": "https://github.com/dof-dss/nicsdru_unity_profile/issues",
+                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/d10_upgrade"
+            },
+            "time": "2023-07-28T15:20:46+00:00"
         },
         {
             "name": "drupal/address",
@@ -14334,6 +14392,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "dof-dss/nicsdru_origins_modules": 20,
+        "dof-dss/nicsdru_unity_modules": 20,
+        "dof-dss/nicsdru_unity_profile": 20,
         "drupal/block_field": 5,
         "drupal/clone_nodes": 20,
         "drupal/config_readonly": 10,
