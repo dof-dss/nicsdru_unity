@@ -77,6 +77,7 @@
         "drupal/noreferrer": "^1.16",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/rdf": "^2.1",
         "drupal/readonlymode": "^1.2",
         "drupal/redirect": "^1.8",
         "drupal/redis": "^1.7",
