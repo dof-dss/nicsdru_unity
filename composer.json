@@ -62,6 +62,7 @@
         "drupal/honeypot": "^2.1",
         "drupal/http_cache_control": "^2.1",
         "drupal/inline_entity_form": "^2.0@RC",
+        "drupal/layout_builder_modal": "^1.2",
         "drupal/media_entity_browser": "^2.0@alpha",
         "drupal/media_file_delete": "^1.3",
         "drupal/media_library_edit": "^3.0",
@@ -160,13 +161,14 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "web/modules/custom": [
-                "dof-dss/nicsdru_corplite_modules"
+                "type:drupal-library",
+                "harvesthq/chosen"
             ],
             "web/modules/origins": [
                 "dof-dss/nicsdru_origins_modules"
+            ],
+            "web/modules/custom": [
+                "dof-dss/nicsdru_unity_modules"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -174,20 +176,23 @@
             "web/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
+            "web/profiles/unity/nicsdru_unity_profile": [
+                "dof-dss/nicsdru_unity_profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
             ],
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
+            "web/profiles/origins/{$name}": [
+                "dof-dss/nicsdru_origins_profile"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
-            ],
-            "web/profiles/custom/{$name}": [
-                "type:drupal-custom-profile"
-            ],
-            "web/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
             ]
         },
         "drupal-core-project-message": {
