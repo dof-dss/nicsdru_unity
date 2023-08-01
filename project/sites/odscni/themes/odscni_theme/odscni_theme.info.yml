@@ -2,7 +2,7 @@ name: ODSCNI Theme
 type: theme
 description: 'Theme for ODSCNI Drupal 8 site'
 package: NICS
-core_version_requirement: 8.x || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 
 libraries:
   - odscni_theme/site-styling
