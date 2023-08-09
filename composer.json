@@ -22,6 +22,7 @@
         "dof-dss/nicsdru_unity_theme": "dev-d10_upgrade",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/adminimal_theme": "^1.7",
         "drupal/allowed_formats": "^2.0",
         "drupal/auto_entityqueue": "^2.1",
         "drupal/blazy": "^2.16",
