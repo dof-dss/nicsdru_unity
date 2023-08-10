@@ -134,9 +134,6 @@
     },
     "extra": {
         "patches": {
-            "drupal/clientside_validation": {
-                "core/jquery.once is required": "https://www.drupal.org/files/issues/2021-02-23/3200022-01.patch"
-            },
             "drupal/core": {
                 "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch",
                 "User enable email exception": "https://www.drupal.org/files/issues/2023-05-19/user_email_exception-3355151-3.patch",
