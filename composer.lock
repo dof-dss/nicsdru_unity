@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09c009c9efd21a1899ab24e0acc0aaff",
+    "content-hash": "abc2e6c751f76a0d3e69740630b18bfd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1614,16 +1614,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "dev-d10_upgrade",
+            "version": "v0.1.77",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "b317349fca572ddc9617c190ad8a9058cead043f"
+                "reference": "57dbf07542cdf49cfad26a46d6e69ab71491b383"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/b317349fca572ddc9617c190ad8a9058cead043f",
-                "reference": "b317349fca572ddc9617c190ad8a9058cead043f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/57dbf07542cdf49cfad26a46d6e69ab71491b383",
+                "reference": "57dbf07542cdf49cfad26a46d6e69ab71491b383",
                 "shasum": ""
             },
             "require": {
@@ -1647,9 +1647,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/d10_upgrade"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.77"
             },
-            "time": "2023-08-01T14:25:43+00:00"
+            "time": "2023-08-04T10:40:45+00:00"
         },
         {
             "name": "drupal/address",
@@ -16435,7 +16435,6 @@
         "dof-dss/nicsdru_origins_modules": 20,
         "dof-dss/nicsdru_unity_modules": 20,
         "dof-dss/nicsdru_unity_profile": 20,
-        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/block_field": 5,
         "drupal/block_list_override_d10": 20,
         "drupal/ckeditor5_allowed_html": 20,
