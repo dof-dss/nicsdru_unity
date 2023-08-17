@@ -51,7 +51,6 @@
         "drupal/date_facet_drilldown": "^5.0@dev",
         "drupal/diff": "^1.1",
         "drupal/draggableviews": "^2.1",
-        "drupal/easy_install_d10": "^10.0@dev",
         "drupal/entity_browser": "^2.9",
         "drupal/entity_embed": "^1.4",
         "drupal/entity_reference_revisions": "^1.10",
@@ -235,6 +234,7 @@
         "dof-dss/maestro-shell": "dev-drupal10_changes",
         "drupal/coder": "^8.3",
         "drupal/devel": "^5.1",
+        "drupal/easy_install_d10": "^10.0@dev",
         "drupal/stage_file_proxy": "^2.0",
         "drupal/upgrade_status": "^4.0",
         "mglaman/drupal-check": "^1.4"
