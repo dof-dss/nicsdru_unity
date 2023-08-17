@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0856ecfaedce4d9867526641451a794b",
+    "content-hash": "339a6758f542d3a805148a3e9d154df8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1598,21 +1598,22 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.77",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "57dbf07542cdf49cfad26a46d6e69ab71491b383"
+                "reference": "e621a3cf38ed34c270abadcb8672f978fceb8394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/57dbf07542cdf49cfad26a46d6e69ab71491b383",
-                "reference": "57dbf07542cdf49cfad26a46d6e69ab71491b383",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/e621a3cf38ed34c270abadcb8672f978fceb8394",
+                "reference": "e621a3cf38ed34c270abadcb8672f978fceb8394",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
+            "default-branch": true,
             "type": "drupal-custom-theme",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1631,9 +1632,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.77"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/development"
             },
-            "time": "2023-08-04T10:40:45+00:00"
+            "time": "2023-08-16T11:58:29+00:00"
         },
         {
             "name": "drupal/address",
@@ -21450,6 +21451,7 @@
         "dof-dss/nicsdru_origins_modules": 20,
         "dof-dss/nicsdru_unity_modules": 20,
         "dof-dss/nicsdru_unity_profile": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/block_field": 5,
         "drupal/ckeditor5_allowed_html": 20,
         "drupal/clone_nodes": 20,
