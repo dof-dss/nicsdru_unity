@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4825fd3a062cb57020b0c9dbf81d4f11",
+    "content-hash": "59dedee4181f1d901455cce2c4863650",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2142,27 +2142,30 @@
             }
         },
         {
-            "name": "drupal/block_list_override_d10",
-            "version": "dev-1.0.x",
+            "name": "drupal/block_list_override",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/block_list_override_d10.git",
-                "reference": "d3de856114f9302b08735e14951e77af68a3e0fd"
+                "url": "https://git.drupalcode.org/project/block_list_override.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_list_override-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "0e5494748186eb30af0c765b2b3d14ab528de2eb"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
+                "drupal/core": "^9.4 || ^10"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
                 "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1690904598",
+                    "version": "1.0.2",
+                    "datestamp": "1691677830",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2172,13 +2175,18 @@
             ],
             "authors": [
                 {
-                    "name": "DuttonMa",
-                    "homepage": "https://www.drupal.org/user/2250396"
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                },
+                {
+                    "name": "KarenS",
+                    "homepage": "https://www.drupal.org/user/45874"
                 }
             ],
-            "homepage": "https://www.drupal.org/project/block_list_override_d10",
+            "description": "Remove unnecessary blocks from the block list for better system performance.",
+            "homepage": "https://www.drupal.org/project/block_list_override",
             "support": {
-                "source": "https://git.drupalcode.org/project/block_list_override_d10"
+                "source": "https://git.drupalcode.org/project/block_list_override"
             }
         },
         {
@@ -3129,32 +3137,32 @@
             }
         },
         {
-            "name": "drupal/cookie_content_blocker_d10",
-            "version": "dev-1.0.x",
+            "name": "drupal/cookie_content_blocker",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/cookie_content_blocker_d10.git",
-                "reference": "8acd4194bbc1a3d163488c18d1717da530651fdb"
+                "url": "https://git.drupalcode.org/project/cookie_content_blocker.git",
+                "reference": "2.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookie_content_blocker-2.2.2.zip",
+                "reference": "2.2.2",
+                "shasum": "fa86c9cf6cea2ec6cfd50e96db799ec2e83bb5c5"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/core": "^9.4 || ^10",
                 "ext-json": "*",
                 "php": "^8.0"
             },
-            "require-dev": {
-                "drupal/cookie_content_blocker": "*"
-            },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
                 "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1690471370",
+                    "version": "2.2.2",
+                    "datestamp": "1692175252",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3177,6 +3185,10 @@
                     "name": "Marc Janson",
                     "homepage": "https://www.drupal.org/u/scorpid",
                     "role": "Developer"
+                },
+                {
+                    "name": "Steven Buteneers",
+                    "homepage": "https://www.drupal.org/user/3301055"
                 }
             ],
             "description": "Prevent loading of content with a privacy impact until consent is given. This module needs a separate cookie consent manager.",
@@ -21436,12 +21448,10 @@
         "dof-dss/nicsdru_unity_modules": 20,
         "dof-dss/nicsdru_unity_profile": 20,
         "drupal/block_field": 5,
-        "drupal/block_list_override_d10": 20,
         "drupal/ckeditor5_allowed_html": 20,
         "drupal/clone_nodes": 20,
         "drupal/config_readonly": 10,
         "drupal/config_update": 15,
-        "drupal/cookie_content_blocker_d10": 20,
         "drupal/date_facet_drilldown": 20,
         "drupal/file_delete_ui": 10,
         "drupal/flag": 10,
