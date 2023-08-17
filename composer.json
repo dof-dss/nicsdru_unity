@@ -107,6 +107,7 @@
         "drupal/simplei": "^2.1",
         "drupal/slick": "^2.9",
         "drupal/slick_views": "^2.7",
+        "drupal/smart_date": "^4.0",
         "drupal/stable": "^2.0",
         "drupal/structure_sync": "^2.0",
         "drupal/telephone_plus_d10": "^1.0@dev",
