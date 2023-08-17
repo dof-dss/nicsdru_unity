@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7098d201fc8fcbc82778f236adc49145",
+    "content-hash": "e3d09f0eee5895bd71e88bd83568c760",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6292,6 +6292,47 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
+        },
+        {
+            "name": "drupal/migrate_absolute_links",
+            "version": "dev-4.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_absolute_links.git",
+                "reference": "4cf09168102bb17032defe58ee049f01ea7b96a2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
+                },
+                "drupal": {
+                    "version": "4.0.x-dev",
+                    "datestamp": "1691058031",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DuttonMa",
+                    "homepage": "https://www.drupal.org/user/2250396"
+                }
+            ],
+            "description": "Migration process plugin to replace absolute links with relative",
+            "homepage": "https://www.drupal.org/project/migrate_absolute_links",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_absolute_links"
             }
         },
         {
@@ -16504,6 +16545,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/media_entity_browser": 15,
         "drupal/menu_breadcrumb": 15,
+        "drupal/migrate_absolute_links": 20,
         "drupal/search_api_location": 15,
         "drupal/telephone_plus_d10": 20,
         "drupal/ultimate_cron": 15,
