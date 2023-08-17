@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59dedee4181f1d901455cce2c4863650",
+    "content-hash": "0856ecfaedce4d9867526641451a794b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8326,25 +8326,28 @@
             }
         },
         {
-            "name": "drupal/telephone_plus_d10",
-            "version": "dev-1.0.x",
+            "name": "drupal/telephone_plus",
+            "version": "9.1.4",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/telephone_plus_d10.git",
-                "reference": "8ca8fc55d4d95c96ed40c84e3143d9dded52a595"
+                "url": "https://git.drupalcode.org/project/telephone_plus.git",
+                "reference": "9.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/telephone_plus-9.1.4.zip",
+                "reference": "9.1.4",
+                "shasum": "9f3065db2a1bfe78ac0e056ed35d545dc030933e"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^9 || ^10",
                 "giggsey/libphonenumber-for-php": "^8.0@dev"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
                 "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1690904513",
+                    "version": "9.1.4",
+                    "datestamp": "1691050750",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -9586,16 +9589,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.17",
+            "version": "8.13.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "dee92bfa0782fd5899fe6b295dea40cdb0607476"
+                "reference": "23eb0cb4577ec59ed7a89decc332815896085d24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/dee92bfa0782fd5899fe6b295dea40cdb0607476",
-                "reference": "dee92bfa0782fd5899fe6b295dea40cdb0607476",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/23eb0cb4577ec59ed7a89decc332815896085d24",
+                "reference": "23eb0cb4577ec59ed7a89decc332815896085d24",
                 "shasum": ""
             },
             "require": {
@@ -9654,7 +9657,7 @@
                 "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
                 "source": "https://github.com/giggsey/libphonenumber-for-php"
             },
-            "time": "2023-07-20T10:32:50+00:00"
+            "time": "2023-08-03T11:09:03+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -21462,7 +21465,6 @@
         "drupal/scheduler_content_moderation_integration": 10,
         "drupal/search_api_location": 15,
         "drupal/shs": 5,
-        "drupal/telephone_plus_d10": 20,
         "drupal/timefield_d10": 20,
         "drupal/ultimate_cron": 15,
         "drupal/webform": 10,
