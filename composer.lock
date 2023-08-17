@@ -1544,12 +1544,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "24497cfd00145192c3b3d75a1fc805b54397a574"
+                "reference": "bb1c394075ea916902eeabead11f189c101ecdfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/24497cfd00145192c3b3d75a1fc805b54397a574",
-                "reference": "24497cfd00145192c3b3d75a1fc805b54397a574",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/bb1c394075ea916902eeabead11f189c101ecdfa",
+                "reference": "bb1c394075ea916902eeabead11f189c101ecdfa",
                 "shasum": ""
             },
             "require": {
@@ -1565,7 +1565,7 @@
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
                 "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/d10_upgrade"
             },
-            "time": "2023-07-28T08:21:07+00:00"
+            "time": "2023-08-17T15:48:33+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
