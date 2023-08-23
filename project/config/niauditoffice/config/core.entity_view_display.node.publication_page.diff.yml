@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.publication_page.field_niao_publication_image
     - field.field.node.publication_page.field_publication_date
     - field.field.node.publication_page.field_publication_topic
+    - field.field.node.publication_page.field_publication_type
     - field.field.node.publication_page.field_topics
     - node.type.publication_page
   module:
@@ -27,7 +28,7 @@ third_party_settings:
   field_group:
     group_a:
       children:
-        - field_publication_topic
+        - field_publication_type
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
@@ -78,7 +79,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_niao_publication_image:
     type: entity_reference_entity_view
@@ -98,16 +99,17 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_publication_topic:
+  field_publication_type:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   content_moderation_control: true
+  field_publication_topic: true
   field_topics: true
   langcode: true
   links: true

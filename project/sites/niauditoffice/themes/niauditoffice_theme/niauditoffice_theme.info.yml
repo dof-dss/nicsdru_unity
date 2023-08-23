@@ -2,7 +2,7 @@ name: Niauditoffice Theme
 type: theme
 description: 'Base theme for Niauditoffice D8'
 package: NICS
-core_version_requirement: 8.x || ^9
+core_version_requirement: 8.x || ^9 || ^10
 
 libraries:
   - niauditoffice_theme/site-styling
