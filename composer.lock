@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c322c03994d490f7972b832631172fa",
+    "content-hash": "8dc7de2e7a90642ed25087b2a901a89f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1598,16 +1598,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.78",
+            "version": "v0.1.79",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "580343dfe471b00b6d82f9b0c5909ba915298770"
+                "reference": "e8f682f3cef9ef27bb8aa6b7b573e980602d893e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/580343dfe471b00b6d82f9b0c5909ba915298770",
-                "reference": "580343dfe471b00b6d82f9b0c5909ba915298770",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/e8f682f3cef9ef27bb8aa6b7b573e980602d893e",
+                "reference": "e8f682f3cef9ef27bb8aa6b7b573e980602d893e",
                 "shasum": ""
             },
             "require": {
@@ -1631,9 +1631,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.78"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.79"
             },
-            "time": "2023-08-21T14:10:58+00:00"
+            "time": "2023-08-24T08:34:39+00:00"
         },
         {
             "name": "drupal/address",

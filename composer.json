@@ -19,7 +19,7 @@
         "dof-dss/nicsdru_origins_modules": "dev-d10_upgrade",
         "dof-dss/nicsdru_unity_modules": "dev-d10_upgrade",
         "dof-dss/nicsdru_unity_profile": "dev-d10_upgrade",
-        "dof-dss/nicsdru_unity_theme": "^0.1.78",
+        "dof-dss/nicsdru_unity_theme": "^0.1.79",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",
         "drupal/adminimal_theme": "^1.7",
