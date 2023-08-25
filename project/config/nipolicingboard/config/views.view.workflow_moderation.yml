@@ -6,7 +6,6 @@ dependencies:
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
-    - datetime
     - node
     - user
 _core:
@@ -799,7 +798,6 @@ display:
           default_row_class: true
           columns:
             nid: nid
-            edit_node: edit_node
             title: title
             type: type
             name: name
@@ -810,13 +808,6 @@ display:
           info:
             nid:
               sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_node:
-              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -852,7 +843,7 @@ display:
               responsive: ''
             changed:
               sortable: true
-              default_sort_order: asc
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
