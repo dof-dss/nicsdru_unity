@@ -161,3 +161,7 @@ tooling:
     description: List all databases
     cmd: mysql -uroot -e "SHOW DATABASES;"
     user: root
+  rebuild-unity-site-themes:
+    service: appserver
+    description: Re-builds the Unity themes for each site.
+    cmd: "/app/build-themes.sh"
