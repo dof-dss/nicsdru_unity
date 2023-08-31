@@ -13,9 +13,9 @@ for site in "$sites_dir"/*; do
         echo "Running npm install in $themes_dir"
         cd "$themes_dir"
 
-        if [ -d node_modules ]; then
-          rm -rf node_modules
-        fi
+        # if [ -d node_modules ]; then
+        #   rm -rf node_modules
+        # fi
 
         npm install --silent --no-progress
         npm install nicsdru_unity_theme --silent --no-progress
