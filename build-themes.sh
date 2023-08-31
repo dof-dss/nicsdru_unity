@@ -17,8 +17,8 @@ for site in "$sites_dir"/*; do
           rm -rf node_modules
         fi
 
-        npm install --quiet --no-progress
-        npm install nicsdru_unity_theme --quiet --no-progress
+        npm install --silent --no-progress
+        npm install nicsdru_unity_theme --silent --no-progress
         npm run build
     fi
 done
