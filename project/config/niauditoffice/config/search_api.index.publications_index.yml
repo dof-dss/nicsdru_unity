@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_publication_date
-    - field.storage.node.field_publication_topic
     - field.storage.node.field_topics
     - search_api.server.solr_default
   module:
@@ -75,14 +74,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_publication_date
-  field_publication_topic:
-    label: Type
-    datasource_id: 'entity:node'
-    property_path: field_publication_topic
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_publication_topic
   field_topics:
     label: Topics
     datasource_id: 'entity:node'
@@ -136,16 +127,6 @@ field_settings:
         - field.storage.node.field_topics
       module:
         - taxonomy
-  type_name:
-    label: 'Type » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_publication_topic:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_publication_topic
-      module:
-        - taxonomy
 datasource_settings:
   'entity:node':
     bundles:
@@ -158,6 +139,7 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
   entity_status: {  }
   entity_type: {  }
   highlight:
@@ -183,7 +165,6 @@ processor_settings:
       - title
       - title_fulltext
       - topic_name
-      - type_name
     title: false
     alt: true
     tags:
