@@ -2,7 +2,7 @@
 echo "Starting unity theme update"
 
 # Define the path to the 'sites' directory
-sites_dir="/app/project/sites"
+sites_dir=${1:-"/app/project/sites"}
 
 # Loop through each directory in the 'sites' directory
 for site in "$sites_dir"/*; do
