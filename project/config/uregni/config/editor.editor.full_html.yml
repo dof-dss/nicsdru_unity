@@ -1,4 +1,4 @@
-uuid: dea922a3-1c39-421b-b846-1182d4817c1a
+uuid: 41fff217-4fde-4089-a74f-ec257dc6e169
 langcode: en
 status: true
 dependencies:
@@ -48,7 +48,15 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     linkit_extension:
-      linkit_enabled: false
+      linkit_enabled: true
+      linkit_profile: default
     media_media:
       allow_view_mode_override: false
-image_upload: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0

@@ -14,9 +14,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'display eu cookie compliance popup'
-  - 'search content'
   - 'use search_api_autocomplete for search'
   - 'view media'
