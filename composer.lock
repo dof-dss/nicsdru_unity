@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28682b8eb0f673531672188bafecdc1a",
+    "content-hash": "22f57f24d58fbda3c3d888574f8c419e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1598,16 +1598,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v0.1.79",
+            "version": "dev-d10_upgrade",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "e8f682f3cef9ef27bb8aa6b7b573e980602d893e"
+                "reference": "d52bf021d67dc334e4c6f4b3f336d8c757f3bbaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/e8f682f3cef9ef27bb8aa6b7b573e980602d893e",
-                "reference": "e8f682f3cef9ef27bb8aa6b7b573e980602d893e",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/d52bf021d67dc334e4c6f4b3f336d8c757f3bbaa",
+                "reference": "d52bf021d67dc334e4c6f4b3f336d8c757f3bbaa",
                 "shasum": ""
             },
             "require": {
@@ -1631,9 +1631,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v0.1.79"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/d10_upgrade"
             },
-            "time": "2023-08-24T08:34:39+00:00"
+            "time": "2023-09-12T11:34:49+00:00"
         },
         {
             "name": "drupal/address",
@@ -21450,6 +21450,7 @@
         "dof-dss/nicsdru_origins_modules": 20,
         "dof-dss/nicsdru_unity_modules": 20,
         "dof-dss/nicsdru_unity_profile": 20,
+        "dof-dss/nicsdru_unity_theme": 20,
         "drupal/block_field": 5,
         "drupal/ckeditor5_allowed_html": 20,
         "drupal/clone_nodes": 20,
