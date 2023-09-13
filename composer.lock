@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22f57f24d58fbda3c3d888574f8c419e",
+    "content-hash": "536ba0237bf563809d48362a5e56e1a0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10310,24 +10310,15 @@
         },
         {
             "name": "kenwheeler/slick",
-            "version": "1.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Alexander2Leb/slick.git",
-                "reference": "76f05b1f6a1bd4792cd877d2c9ae22d0c7bcb712"
-            },
+            "version": "1.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Alexander2Leb/slick/zipball/76f05b1f6a1bd4792cd877d2c9ae22d0c7bcb712",
-                "reference": "76f05b1f6a1bd4792cd877d2c9ae22d0c7bcb712",
-                "shasum": ""
+                "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip"
             },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "support": {
-                "source": "https://github.com/Alexander2Leb/slick/tree/1.6.1"
+            "require": {
+                "composer/installers": "^2.0"
             },
-            "time": "2017-03-31T12:40:41+00:00"
+            "type": "drupal-library"
         },
         {
             "name": "laminas/laminas-stdlib",

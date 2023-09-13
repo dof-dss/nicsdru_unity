@@ -10,6 +10,21 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.8.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^2.0"
+                }
+            }
         }
     ],
     "require": {
@@ -125,7 +140,7 @@
         "drush/drush": "^11",
         "geocoder-php/google-maps-provider": "^4.7",
         "harvesthq/chosen": "^1.8",
-        "kenwheeler/slick": "^1.6",
+        "kenwheeler/slick": "^1.8",
         "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.4",
         "symfony/http-client": "^5.4",
