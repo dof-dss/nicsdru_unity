@@ -1515,12 +1515,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "86f2aed0c16898af3dd2c1449fe9a5df20d0486f"
+                "reference": "bba35c65518b8c1aca1551f71c2be49912fdac56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/86f2aed0c16898af3dd2c1449fe9a5df20d0486f",
-                "reference": "86f2aed0c16898af3dd2c1449fe9a5df20d0486f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/bba35c65518b8c1aca1551f71c2be49912fdac56",
+                "reference": "bba35c65518b8c1aca1551f71c2be49912fdac56",
                 "shasum": ""
             },
             "require": {
@@ -1536,7 +1536,7 @@
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
                 "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/d10_upgrade"
             },
-            "time": "2023-07-14T15:11:27+00:00"
+            "time": "2023-09-13T10:40:43+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
