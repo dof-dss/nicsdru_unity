@@ -7,7 +7,6 @@ dependencies:
   module:
     - blazy
     - ckeditor5_allowed_html
-    - cookie_content_blocker
     - editor
     - entity_embed
     - media
@@ -121,17 +120,10 @@ filters:
     weight: -39
     settings:
       replace_empty: '0'
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: true
-    weight: -35
-    settings:
-      disable_xss: '1'
   origins_media_cookie_content_blocker_embed_filter:
     id: origins_media_cookie_content_blocker_embed_filter
     provider: origins_common
-    status: true
+    status: false
     weight: -48
     settings:
       replacement_text: 'Click here to view the video content'
