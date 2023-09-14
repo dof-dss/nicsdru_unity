@@ -30,12 +30,12 @@
  */
 #}
 <div class="content twitter-block">
+  <i class="fab fa-twitter"><span class="visually-hidden">Follow us on Twitter</span></i>
   <h2{{ title_attributes }}>
-    <i class="fab fa-twitter"><span class="visually-hidden">Follow us on Twitter</span></i>
-    {{ 'Please log into your Twitter account to see latest tweets.'|t }}
-    <a class="twitter-link" href="https://twitter.com/PBNINews">@PBNINews</a>
+    {{ label }}
   </h2>
+  <div>{{ 'Please log into your Twitter account to see latest tweets.'|t }}</div>
   <a class="twitter-timeline" data-height="562" data-link-color="#008290" data-tweet-limit="1"
-     data-chrome="noheader nofooter" href="https://twitter.com/PBNINews">Tweets by PBNI</a>
+     data-chrome="noheader nofooter" href="https://twitter.com/NIPolicingBoard">Tweets by NI Policing Board</a>
   <script async src="//platform.twitter.com/widgets.js"></script>
 </div>
