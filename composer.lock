@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2d6d390141599ab3baf5ffffc3eb116",
+    "content-hash": "536ba0237bf563809d48362a5e56e1a0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3134,6 +3134,79 @@
             "homepage": "https://www.drupal.org/project/content_lock",
             "support": {
                 "source": "https://git.drupalcode.org/project/content_lock"
+            }
+        },
+        {
+            "name": "drupal/cookie_content_blocker",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookie_content_blocker.git",
+                "reference": "2.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookie_content_blocker-2.2.3.zip",
+                "reference": "2.2.3",
+                "shasum": "14117e4a4ccf4b280f0e0ff330ac76975691d75d"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "ext-json": "*",
+                "php": "^8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.3",
+                    "datestamp": "1693234318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Buteneers",
+                    "homepage": "https://www.drupal.org/u/steven-buteneers",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniël Smidt",
+                    "homepage": "https://www.drupal.org/u/dmsmidt",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marc Janson",
+                    "homepage": "https://www.drupal.org/u/scorpid",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Steven Buteneers",
+                    "homepage": "https://www.drupal.org/user/3301055"
+                },
+                {
+                    "name": "Dannyjanse",
+                    "homepage": "https://www.drupal.org/user/3774093"
+                }
+            ],
+            "description": "Prevent loading of content with a privacy impact until consent is given. This module needs a separate cookie consent manager.",
+            "homepage": "https://www.drupal.org/project/cookie_content_blocker",
+            "keywords": [
+                "Content",
+                "Content Access Control",
+                "Content Display",
+                "Drupal",
+                "Spam Prevention"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/cookie_content_blocker",
+                "issues": "https://www.drupal.org/project/issues/cookie_content_blocker?version=8.x"
             }
         },
         {
