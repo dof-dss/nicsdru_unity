@@ -92,5 +92,11 @@
     "> 1%",
     "last 2 versions",
     "ie >= 10"
-  ]
+  ],
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
 }
