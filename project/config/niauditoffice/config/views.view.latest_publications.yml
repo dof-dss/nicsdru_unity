@@ -159,10 +159,10 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_publication_topic_target_id:
-          id: field_publication_topic_target_id
-          table: node__field_publication_topic
-          field: field_publication_topic_target_id
+        field_publication_type_target_id:
+          id: field_publication_type_target_id
+          table: node__field_publication_type
+          field: field_publication_type_target_id
           relationship: none
           group_type: group
           admin_label: ''

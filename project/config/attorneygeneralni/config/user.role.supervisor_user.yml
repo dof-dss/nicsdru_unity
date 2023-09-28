@@ -17,6 +17,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - file
+    - file_delete_ui
     - media
     - menu_admin_per_menu
     - moderation_sidebar
@@ -72,6 +73,7 @@ permissions:
   - 'delete any audio media'
   - 'delete any document files'
   - 'delete any document media'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'

@@ -18,6 +18,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - file
+    - file_delete_ui
     - filter
     - media
     - menu_admin_per_menu
@@ -101,6 +102,7 @@ permissions:
   - 'delete any embargoed_publication content'
   - 'delete any evidence content'
   - 'delete any external_link content'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any gallery content'
   - 'delete any image files'

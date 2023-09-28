@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'senior-management/[node:title]'
 selection_criteria:
   36bbfaf3-0e8c-48cd-96ba-24c62bafff83:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: 36bbfaf3-0e8c-48cd-96ba-24c62bafff83
     context_mapping:

@@ -626,19 +626,30 @@
   }
 }
 
-#content #block-views-block-senior-management-senior-management-block .board-members .views-row a {
-  padding: 1rem;
-  margin: 0;
-  border: none;
+#content #block-views-block-senior-management-senior-management-block {
+  pointer-events: none;
 
-  &:hover,
-  &:focus {
-    border: none;
-    background: #e4f0fa;
-  }
+  .board-members {
+    .views-row.board-card .board-member--role::after {
+      display: none;
+    }
 
-  &:focus {
-    outline: 2px solid $black;
-    outline-offset: -2px;
+    .views-row a {
+      padding: 1rem;
+      margin: 0;
+      border: none;
+
+      &:hover,
+      &:focus {
+        border: none;
+        background: #e4f0fa;
+      }
+
+      &:focus {
+        outline: 2px solid $black;
+        outline-offset: -2px;
+      }
+    }
   }
 }
+
