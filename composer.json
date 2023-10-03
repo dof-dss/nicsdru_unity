@@ -33,7 +33,7 @@
         "cweagans/composer-patches": "^1.7",
         "dof-dss/nicsdru_origins_modules": "dev-10.x-dev",
         "dof-dss/nicsdru_unity_modules": "dev-10.x-dev",
-        "dof-dss/nicsdru_unity_profile": "dev-d10_upgrade",
+        "dof-dss/nicsdru_unity_profile": "dev-10.x-dev",
         "dof-dss/nicsdru_unity_theme": "dev-10.x-dev",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a6506c1f3388f361468b00b6cb76bbf",
+    "content-hash": "dce26650927afd25369dacc2f5c2e9ab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1571,16 +1571,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
-            "version": "dev-d10_upgrade",
+            "version": "dev-10.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_profile.git",
-                "reference": "57ed870602a5c310191c01a343ad5c01701f292a"
+                "reference": "4c7c632874aeb8fd340862502235cbbe7289c5dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/57ed870602a5c310191c01a343ad5c01701f292a",
-                "reference": "57ed870602a5c310191c01a343ad5c01701f292a",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/4c7c632874aeb8fd340862502235cbbe7289c5dd",
+                "reference": "4c7c632874aeb8fd340862502235cbbe7289c5dd",
                 "shasum": ""
             },
             "require": {
@@ -1594,9 +1594,9 @@
             "description": "Custom install profile used by all Unity sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_profile/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/d10_upgrade"
+                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/10.x-dev"
             },
-            "time": "2023-07-28T15:20:46+00:00"
+            "time": "2023-10-03T14:24:07+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
