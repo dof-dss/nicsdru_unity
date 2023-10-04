@@ -1604,12 +1604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "56ccf9c1e8855204f8cb3a8db35431f25297826f"
+                "reference": "db81bdefdb73b58d485ad080115386a89943b9b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/56ccf9c1e8855204f8cb3a8db35431f25297826f",
-                "reference": "56ccf9c1e8855204f8cb3a8db35431f25297826f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/db81bdefdb73b58d485ad080115386a89943b9b6",
+                "reference": "db81bdefdb73b58d485ad080115386a89943b9b6",
                 "shasum": ""
             },
             "require": {
@@ -1636,7 +1636,7 @@
             "support": {
                 "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/10.x-dev"
             },
-            "time": "2023-10-03T11:24:43+00:00"
+            "time": "2023-10-04T10:19:35+00:00"
         },
         {
             "name": "drupal/address",
