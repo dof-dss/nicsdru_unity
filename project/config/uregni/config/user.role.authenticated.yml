@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.basic_html_publications
   module:
+    - file
     - filter
     - media
     - node
@@ -18,12 +19,8 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access shortcuts'
-  - 'post comments'
-  - 'search content'
-  - 'skip comment approval'
+  - 'delete own files'
   - 'use search_api_autocomplete for search'
   - 'use text format basic_html'
   - 'use text format basic_html_publications'
