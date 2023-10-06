@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'commissioners/[node:title]'
 selection_criteria:
   dea9ca4a-5bd0-4e5f-b3b5-2ef0314466c5:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: dea9ca4a-5bd0-4e5f-b3b5-2ef0314466c5
     context_mapping:

@@ -8,8 +8,8 @@ logo:
   path: ''
 favicon:
   use_default: 1
-ga_tracking_disabled: 1
-ga_tracking_disabled_eu: 0
+ga_tracking_disabled: 0
+ga_tracking_disabled_eu: 1
 twitter_profile_url: 'https://twitter.com/fiscal_ni'
 facebook_profile_url: ''
 linkedin_profile_url: ''

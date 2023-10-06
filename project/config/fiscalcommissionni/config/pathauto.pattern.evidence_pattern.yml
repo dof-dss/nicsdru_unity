@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'evidence/[node:title]'
 selection_criteria:
   c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: c1a2dea7-7d17-4a9c-8b66-7f34eb0898fc
     context_mapping:
