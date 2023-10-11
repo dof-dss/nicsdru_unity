@@ -29,17 +29,32 @@
  * @ingroup themeable
  */
 #}
-<div class="content">
-  <i class="fab fa-twitter"><span class="visually-hidden">Follow us on Twitter</span></i>
-  <h2{{ title_attributes }}>
-    {{ label }}
-  </h2>
-  <div>{{ 'Please log into your Twitter account to see latest tweets.'|t }}
-  </div>
-  <a class="twitter-timeline" data-height="562" data-link-color="#008290" data-tweet-limit="1"
-     data-chrome="noheader nofooter" href="https://twitter.com/NIPolicingBoard">Tweets by NI Policing Board</a>
-  <script async src="//platform.twitter.com/widgets.js"></script>
-  <div class="view-footer">
-    <a class="twitter-link" href="https://twitter.com/NIPolicingBoard">More tweets&hellip;</a>
-  </div>
+<h2{{ title_attributes }}>{{ label }}</h2>
+<div class="follow-us-icons">
+  <ul>
+    {% if twitter_profile_url is not empty %}
+      <li><a href="{{ twitter_profile_url }}" rel="noopener noreferrer">
+          <i class="fab fa-twitter"><span class="visually-hidden">Follow us on Twitter</span></i>
+        </a>
+      </li>
+    {% endif %}
+    {% if facebook_profile_url is not empty %}
+      <li><a href="{{ facebook_profile_url }}" rel="noopener noreferrer">
+          <i class="fab fa-facebook-square"><span class="visually-hidden">Follow us on Facebook</span></i>
+        </a>
+      </li>
+    {% endif %}
+    {% if youtube_profile_url is not empty %}
+      <li><a href="{{ youtube_profile_url }}" rel="noopener noreferrer">
+          <i class="fab fa-youtube-square"><span class="visually-hidden">Follow us on Youtube</span></i>
+        </a>
+      </li>
+    {% endif %}
+    {% if linkedin_profile_url is not empty %}
+      <li><a href="{{ linkedin_profile_url }}" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"><span class="visually-hidden">Follow us on Linkedin</span></i>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
 </div>
