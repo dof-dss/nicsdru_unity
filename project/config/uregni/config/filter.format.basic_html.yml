@@ -124,7 +124,7 @@ filters:
     status: true
     weight: -45
     settings:
-      default_view_mode: default
+      default_view_mode: article_full
       allowed_view_modes:
         article_float: article_float
         article_float_expandable: article_float_expandable
