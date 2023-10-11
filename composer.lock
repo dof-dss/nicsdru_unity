@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dce26650927afd25369dacc2f5c2e9ab",
+    "content-hash": "1ff2ce8ca8808e90c8daa9cb99854395",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1545,12 +1545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "47c84d0b1c2b70d9d5f4732500c50b84de2c069f"
+                "reference": "cdbf5da863e2c6c6ff305fc186755a644d2371b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/47c84d0b1c2b70d9d5f4732500c50b84de2c069f",
-                "reference": "47c84d0b1c2b70d9d5f4732500c50b84de2c069f",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/cdbf5da863e2c6c6ff305fc186755a644d2371b9",
+                "reference": "cdbf5da863e2c6c6ff305fc186755a644d2371b9",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1567,7 @@
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
                 "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.x-dev"
             },
-            "time": "2023-10-03T11:25:04+00:00"
+            "time": "2023-10-11T09:21:47+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
