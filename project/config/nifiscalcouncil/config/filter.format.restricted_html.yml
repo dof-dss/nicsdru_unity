@@ -1,7 +1,19 @@
 uuid: 8c45d890-363e-4126-bd2d-2a5cddbffa96
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - blazy
+    - ckeditor5_allowed_html
+    - ckeditor5_premium_features
+    - cookie_content_blocker
+    - editor
+    - entity_embed
+    - linkit
+    - media
+    - noreferrer
+    - origins_common
+    - token_filter
 _core:
   default_config_hash: oz6NyPDAB4HB6N9hgH2LwNVtCd-sXbMG1fbn5KsRIDI
 name: 'Restricted HTML'
@@ -11,8 +23,8 @@ filters:
   filter_html:
     id: filter_html
     provider: filter
-    status: true
-    weight: -10
+    status: false
+    weight: -50
     settings:
       allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id>'
       filter_html_help: true
@@ -21,12 +33,131 @@ filters:
     id: filter_autop
     provider: filter
     status: true
-    weight: 0
+    weight: -48
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: true
-    weight: 0
+    weight: -47
     settings:
       filter_url_length: 72
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: -37
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  filter_allowed:
+    id: filter_allowed
+    provider: ckeditor5_allowed_html
+    status: true
+    weight: -49
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id>'
+      filter_html_help: '0'
+      filter_html_nofollow: '0'
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: -40
+    settings:
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: -31
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types: {  }
+  origins_media_cookie_content_blocker_embed_filter:
+    id: origins_media_cookie_content_blocker_embed_filter
+    provider: origins_common
+    status: false
+    weight: -39
+    settings:
+      replacement_text: 'Click here to view the video content'
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: -38
+    settings:
+      replace_empty: '0'
+  ckeditor5_premium_features_collaboration_filter:
+    id: ckeditor5_premium_features_collaboration_filter
+    provider: ckeditor5_premium_features
+    status: false
+    weight: -46
+    settings: {  }
+  cookie_content_blocker_filter:
+    id: cookie_content_blocker_filter
+    provider: cookie_content_blocker
+    status: false
+    weight: -44
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: -43
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: false
+    weight: -32
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -36
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: false
+    weight: -33
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -35
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -45
+    settings: {  }
+  noreferrer:
+    id: noreferrer
+    provider: noreferrer
+    status: false
+    weight: -34
+    settings: {  }
