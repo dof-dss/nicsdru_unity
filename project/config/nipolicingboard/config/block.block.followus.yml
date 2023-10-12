@@ -1,4 +1,4 @@
-uuid: 4b38612c-a511-4ae5-8a9a-f6a113271168
+uuid: 23cab447-9b35-4ba5-b362-381bf99ca366
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,10 @@ dependencies:
     - 'block_content:basic_block:0f10e79c-3bf5-412e-8a2e-b8652b085d14'
   module:
     - block_content
+    - system
   theme:
     - nipolicingboard_theme
-id: twitterblock
+id: followus
 theme: nipolicingboard_theme
 region: top_third
 weight: 0
@@ -16,10 +17,14 @@ provider: null
 plugin: 'block_content:0f10e79c-3bf5-412e-8a2e-b8652b085d14'
 settings:
   id: 'block_content:0f10e79c-3bf5-412e-8a2e-b8652b085d14'
-  label: Twitter
+  label: 'Follow us'
   label_display: visible
   provider: block_content
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
