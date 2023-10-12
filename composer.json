@@ -85,6 +85,7 @@
         "drupal/honeypot": "^2.1",
         "drupal/http_cache_control": "^2.1",
         "drupal/inline_entity_form": "^2.0@RC",
+        "drupal/jquery_ui_accordion": "^2.0",
         "drupal/layout_builder_modal": "^1.2",
         "drupal/layout_builder_restrictions": "^2.19",
         "drupal/link_fix_absolute_urls": "^1.0",
