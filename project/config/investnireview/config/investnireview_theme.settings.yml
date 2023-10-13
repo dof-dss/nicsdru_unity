@@ -7,12 +7,11 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
-ga_tracking_disabled: 1
-ga_tracking_disabled_eu: 0
+ga_tracking_disabled: 0
+ga_tracking_disabled_eu: 1
 twitter_profile_url: ''
 facebook_profile_url: ''
 linkedin_profile_url: ''
 pinterest_profile_url: ''
 youtube_profile_url: ''
 instagram_profile_url: ''
-basic_page_structure: 0
