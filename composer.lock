@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2eb6f45a9ef576f5355804e7d98c0b27",
+    "content-hash": "1d789e3b7ef016cd37aedc7858153418",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -16943,7 +16943,7 @@
         },
         {
             "name": "dof-dss/maestro-shell",
-            "version": "dev-drupal10_changes",
+            "version": "10.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-shell.git",
@@ -16995,7 +16995,7 @@
             "description": "Shell for working with Maestro projects.",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-shell/issues",
-                "source": "https://github.com/dof-dss/maestro-shell/tree/drupal10_changes"
+                "source": "https://github.com/dof-dss/maestro-shell/tree/10.1.0"
             },
             "time": "2023-06-26T10:17:14+00:00"
         },
@@ -21600,7 +21600,6 @@
         "drupal/timefield_d10": 20,
         "drupal/ultimate_cron": 15,
         "drupal/webform": 10,
-        "dof-dss/maestro-shell": 20,
         "drupal/easy_install_d10": 20
     },
     "prefer-stable": true,
