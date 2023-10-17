@@ -192,9 +192,6 @@
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
             },
-            "drupal/linkit": {
-                "Use aliased path": "https://www.drupal.org/files/issues/2022-08-16/linkit-2877535-link-shown-after-autocomplete-is-bare-41.patch"
-            },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
             },
