@@ -55,13 +55,6 @@ filters:
         img: img
         iframe: iframe
       use_data_uri: '0'
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: false
-    weight: -44
-    settings:
-      disable_xss: '1'
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -137,7 +130,7 @@ filters:
   noreferrer:
     id: noreferrer
     provider: noreferrer
-    status: false
+    status: true
     weight: -49
     settings: {  }
   origins_media_cookie_content_blocker_embed_filter:
@@ -207,3 +200,10 @@ filters:
     status: false
     weight: -42
     settings: {  }
+  cookie_content_blocker_filter:
+    id: cookie_content_blocker_filter
+    provider: cookie_content_blocker
+    status: false
+    weight: -44
+    settings:
+      disable_xss: '1'

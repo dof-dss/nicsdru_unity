@@ -136,7 +136,7 @@ filters:
   noreferrer:
     id: noreferrer
     provider: noreferrer
-    status: false
+    status: true
     weight: -49
     settings: {  }
   origins_media_cookie_content_blocker_embed_filter:
