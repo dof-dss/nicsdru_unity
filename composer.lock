@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f453924a61774a675e7b486ae66bf462",
+    "content-hash": "fb47365992ac0c582edeb69487434002",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1980,17 +1980,17 @@
         },
         {
             "name": "drupal/blazy",
-            "version": "2.16.0",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/blazy.git",
-                "reference": "8.x-2.16"
+                "reference": "8.x-2.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/blazy-8.x-2.16.zip",
-                "reference": "8.x-2.16",
-                "shasum": "ae84ac6083f734968eb9c7cc008b32aaa04c5b9c"
+                "url": "https://ftp.drupal.org/files/projects/blazy-8.x-2.21.zip",
+                "reference": "8.x-2.21",
+                "shasum": "60ac20ec9eff87ea688ff4c025f28d8fb07b237a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
@@ -2001,8 +2001,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1685788557",
+                    "version": "8.x-2.21",
+                    "datestamp": "1697526367",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
