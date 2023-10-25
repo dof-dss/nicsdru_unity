@@ -56,11 +56,11 @@
   {% endif %}
 {% else %}
   <div class="row">
-    {% spaceless %}
+    {% apply spaceless %}
     <span class="inline">{{ label }}{{ ':'|t }}</span>
     {% for item in items %}
       <span class="content-value">{{ item.content }}</span>
     {% endfor %}
-    {% endspaceless %}
+    {% endapply %}
   </div>
 {% endif %}

@@ -2,37 +2,17 @@
 
 echo "Starting unity theme update"
 
-# Defaults
+# Define the path to the 'sites' directory
 sites_dir="/app/project/sites"
-site_names=()
 
-# Parse named parameters
-while [[ $# -gt 0 ]]; do
-    key="$1"
-    case $key in
-        --sites-dir)
-            sites_dir="$2"
-            shift
-            shift
-            ;;
-        --site-names)
-            IFS=',' read -r -a site_names <<< "$2"
-            shift
-            shift
-            ;;
-        *)
-            echo "Unknown option: $1"
-            exit 1
-            ;;
-    esac
-done
-
-# If no site names provided, process all sites
-if [ ${#site_names[@]} -eq 0 ]; then
+if [ "$#" -gt 0 ]; then
+    # If site names are provided, process them
+    IFS=',' read -r -a site_names <<< "$1"
+else
+    # If no site names are provided, get all site names
     site_names=($(ls -1 "$sites_dir"))
 fi
 
-# Process each site
 for site_name in "${site_names[@]}"; do
     # Trim leading and trailing whitespace from site name
     site_name=$(echo "$site_name" | xargs)

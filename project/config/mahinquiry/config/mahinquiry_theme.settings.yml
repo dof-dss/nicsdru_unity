@@ -7,5 +7,5 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
-ga_tracking_disabled: 1
-ga_tracking_disabled_eu: 0
+ga_tracking_disabled: 0
+ga_tracking_disabled_eu: 1

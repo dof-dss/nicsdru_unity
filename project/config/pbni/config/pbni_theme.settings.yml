@@ -7,10 +7,10 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
-ga_tracking_disabled: 1
-ga_tracking_disabled_eu: 0
+ga_tracking_disabled: 0
+ga_tracking_disabled_eu: 1
 twitter_profile_url: 'https://twitter.com/PBNINews'
-facebook_profile_url: ''
+facebook_profile_url: 'https://www.facebook.com/PBNINews/'
 linkedin_profile_url: 'https://www.linkedin.com/company/probation-board-for-northern-ireland'
 pinterest_profile_url: ''
 youtube_profile_url: 'https://www.youtube.com/ProbationBoardNI'

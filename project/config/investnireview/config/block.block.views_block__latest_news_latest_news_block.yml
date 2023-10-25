@@ -30,7 +30,7 @@ visibility:
     negate: false
     block_visibility_group: ''
   node_type:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
