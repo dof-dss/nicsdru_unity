@@ -6,12 +6,14 @@ dependencies:
     - core.entity_view_mode.media.embed
   module:
     - blazy
+    - ckeditor5_allowed_html
     - cookie_content_blocker
     - editor
     - entity_embed
     - media
     - noreferrer
     - origins_common
+    - slick
     - token_filter
 name: 'Basic HTML publications'
 format: basic_html_publications
@@ -20,10 +22,10 @@ filters:
   filter_html:
     id: filter_html
     provider: filter
-    status: true
+    status: false
     weight: -50
     settings:
-      allowed_html: '<a class href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul class type> <ol class start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <div class> <p class translate> <br> <span> <img src alt height width data-* typeof> <sup> <table class> <caption> <tbody> <thead> <tfoot> <th scope> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <address> <drupal-media data-entity-type data-entity-id data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode alt title class>'
+      allowed_html: '<br> <p translate> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <address> <a class hreflang href> <blockquote cite> <ul class type> <ol class type start> <div class> <img src alt height width data-* typeof> <table class> <th scope rowspan colspan> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <drupal-media data-entity-id data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode title class data-entity-type data-entity-uuid alt> <strong> <em> <code> <sup> <li> <tr> <td rowspan colspan> <thead> <tbody> <tfoot> <caption>'
       filter_html_help: false
       filter_html_nofollow: false
   blazy_filter:
@@ -32,10 +34,13 @@ filters:
     status: false
     weight: -38
     settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
       filter_tags:
         img: img
         iframe: iframe
-      media_switch: ''
       use_data_uri: '0'
   editor_file_reference:
     id: editor_file_reference
@@ -116,17 +121,10 @@ filters:
     weight: -39
     settings:
       replace_empty: '0'
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: true
-    weight: -35
-    settings:
-      disable_xss: '1'
   origins_media_cookie_content_blocker_embed_filter:
     id: origins_media_cookie_content_blocker_embed_filter
     provider: origins_common
-    status: true
+    status: false
     weight: -48
     settings:
       replacement_text: 'Click here to view the video content'
@@ -137,4 +135,50 @@ filters:
     weight: 4
     settings:
       optionset: default
+      layout: ''
+      skin: ''
+      background: false
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      image_style: ''
       media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  filter_allowed:
+    id: filter_allowed
+    provider: ckeditor5_allowed_html
+    status: true
+    weight: 0
+    settings:
+      allowed_html: '<a class href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul class type> <ol class start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <div class> <p class translate> <br> <span class> <img src alt height width data-* typeof> <sup> <table class> <caption> <tbody> <thead> <tfoot> <th scope> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <address> <drupal-media data-entity-type data-entity-id data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode alt title class>'
+      filter_html_help: '0'
+      filter_html_nofollow: '0'
+  cookie_content_blocker_filter:
+    id: cookie_content_blocker_filter
+    provider: cookie_content_blocker
+    status: false
+    weight: -35
+    settings:
+      disable_xss: '1'

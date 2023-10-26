@@ -11,7 +11,7 @@ field_name: field_political_party
 entity_type: node
 bundle: question_page
 label: 'Political party'
-description: 'Select the member''s political party'
+description: "Select the member's political party"
 required: false
 translatable: false
 default_value: {  }

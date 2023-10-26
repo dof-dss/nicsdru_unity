@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - file
     - media
     - node
     - pathauto
@@ -14,23 +15,9 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access administration menu'
   - 'access content'
-  - 'access media browser'
-  - 'access workbench'
-  - 'create decision content'
-  - 'diff view changes'
-  - 'edit own decision content'
+  - 'delete own files'
   - 'notify of path changes'
-  - 'revert revisions'
-  - 'search content'
-  - 'use media wysiwyg'
-  - 'use text format filtered_html'
-  - 'use text format filtered_html_with_no_images'
   - 'view all revisions'
-  - 'view files'
   - 'view media'
-  - 'view moderation history'
-  - 'view moderation messages'
   - 'view own unpublished content'
-  - 'view revisions'
