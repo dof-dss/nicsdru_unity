@@ -11,18 +11,29 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
-      - heading
       - bold
       - italic
+      - blockQuote
+      - superscript
+      - removeFormat
+      - '|'
+      - heading
+      - style
+      - insertTable
       - '|'
       - link
-      - blockQuote
-      - code
+      - '|'
       - bulletedList
       - numberedList
-      - superscript
-      - insertTable
-      - style
+      - '|'
+      - drupalMedia
+      - '|'
+      - undo
+      - redo
+      - '|'
+      - importWord
+      - specialCharacters
+      - fullScreen
   plugins:
     ckeditor5_heading:
       enabled_headings:
