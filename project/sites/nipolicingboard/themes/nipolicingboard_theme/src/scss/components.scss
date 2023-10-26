@@ -236,6 +236,20 @@
   }
 }
 
+.region-top-third .follow-us-icons {
+  a {
+      border-bottom: none !important;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul:first-child {
+    margin-top: 3.4rem;
+  }
+}
+
 #footer {
   padding: 0;
 
@@ -309,3 +323,4 @@
 .content-sidebar-wrap {
   width: 65%;
 }
+

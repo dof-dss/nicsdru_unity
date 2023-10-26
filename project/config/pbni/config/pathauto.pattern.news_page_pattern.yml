@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'news/[node:title]'
 selection_criteria:
   41e13d6f-cf02-4a81-8267-b0c62517fc33:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: 41e13d6f-cf02-4a81-8267-b0c62517fc33
     context_mapping:

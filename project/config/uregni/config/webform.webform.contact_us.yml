@@ -11,7 +11,7 @@ archive: false
 id: contact_us
 title: 'Contact us'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   your_details:
     '#type': fieldset
@@ -80,6 +80,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -100,6 +101,9 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -143,6 +147,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -190,7 +196,6 @@ settings:
   token_update: false
   token_delete: false
   serial_disabled: false
-  form_remote_addr: true
 access:
   create:
     roles:

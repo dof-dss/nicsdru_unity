@@ -51,6 +51,8 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      use_universal_collation: false
 id: publications
 name: Publications
 description: ''
@@ -126,7 +128,7 @@ field_settings:
     label: 'Title fulltext'
     property_path: aggregated_field
     type: text
-    boost: !!float 13
+    boost: 13.0
     configuration:
       type: union
       fields:

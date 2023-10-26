@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'consultations/[node:title]'
 selection_criteria:
   f20bb793-aee9-48fc-a7a2-4973b85fc403:
-    id: entity_bundle:node
+    id: 'entity_bundle:node'
     negate: false
     uuid: f20bb793-aee9-48fc-a7a2-4973b85fc403
     context_mapping:

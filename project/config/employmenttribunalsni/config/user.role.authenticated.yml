@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - node.type.page
   module:
+    - file
     - filter
     - media
     - node
@@ -17,25 +18,13 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access administration menu'
   - 'access content'
-  - 'access media browser'
-  - 'access workbench'
   - 'create page content'
+  - 'delete own files'
   - 'delete own page content'
-  - 'diff view changes'
   - 'edit any page content'
   - 'edit own page content'
-  - 'revert revisions'
-  - 'search content'
-  - 'use media wysiwyg'
   - 'use text format basic_html'
-  - 'use text format filtered_html'
-  - 'use text format filtered_html_with_no_images'
   - 'view all revisions'
-  - 'view files'
   - 'view media'
-  - 'view moderation history'
-  - 'view moderation messages'
   - 'view own unpublished content'
-  - 'view revisions'
