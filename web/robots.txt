@@ -13,6 +13,42 @@
 # For more information about the robots.txt standard, see:
 # http://www.robotstxt.org/robotstxt.html
 
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: megaindex.com
+Disallow: /
+
+User-agent: HealthSumBot
+Disallow: /
+
+User-agent: MojeekBot
+Disallow: /
+
+User-agent: Android
+Disallow: /
+
+User-agent: KHTML
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
 User-agent: *
 # CSS, JS, Images
 Allow: /core/*.css$
@@ -61,5 +97,4 @@ Disallow: /index.php/user/password
 Disallow: /index.php/user/register
 Disallow: /index.php/user/login
 Disallow: /index.php/user/logout
-Disallow: /index.php/media/oembed
-Disallow: /index.php/*/media/oembed
+
