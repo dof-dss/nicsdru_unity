@@ -212,13 +212,16 @@
   }
 
   .container-wrap {
-
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
 
     .column {
       flex-basis: 50rem;
+
+      .content {
+        padding-top: 0;
+      }
     }
 
 
