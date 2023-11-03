@@ -140,6 +140,12 @@
   }
 }
 
+#content #top-area .container-wrap .column .region-top-second a {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 #top-area {
   margin: 2rem auto;
   text-align: left;
@@ -150,37 +156,80 @@
     margin: 1.5rem 0 1.2rem;
   }
 
-  .twitter-block {
-    h2 {
-      background: $brand-tertiary;
+  //.twitter-block {
+  //  h2 {
+  //    background: $brand-tertiary;
+  //    color: $white;
+  //    padding-left: 4rem;
+  //
+  //    i {
+  //      border: 1px solid $white;
+  //      border-radius: 100%;
+  //      padding: .5rem;
+  //    }
+  //
+  //    a {
+  //      color: white;
+  //
+  //      &:hover {
+  //        color: $brand-secondary;
+  //      }
+  //    }
+  //  }
+  //}
+
+  .spotify-block {
+    background: $black resolve('PBM-no-words.jpg') no-repeat;
+    background-size: 100%;
+    padding: 0;
+    margin-top: -.5rem;
+    height: 29rem;
+    width: 35.5rem;
+
+    @media screen and (min-width: 510px) {
+      height: 41rem;
+      width: 100%;
+    }
+
+    &:hover h2.visually-hidden,
+    &:focus h2.visually-hidden {
+      position: relative !important;
+      overflow: visible;
+      width: 100%;
+      height: 100%;
       color: $white;
-      padding-left: 4rem;
+      @include adjust-font-size-to(27px);
+      padding: 5rem 9rem 0 2rem;
+      text-align: center;
 
-      i {
-        border: 1px solid $white;
-        border-radius: 100%;
-        padding: .5rem;
-      }
-
-      a {
-        color: white;
-
-        &:hover {
-          color: $brand-secondary;
-        }
+      @media screen and (min-width: 510px) {
+        @include adjust-font-size-to(40px);
+        padding: 7rem 14rem 0 2rem;
+        text-align: center;
+        line-height: 6rem;
       }
     }
   }
 
   .container-wrap {
-    max-width: 1044px;
-    @include breakpoint($tab) {
 
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
 
-      .column {
-        flex-basis: 50%;
+    .column {
+      flex-basis: 50rem;
+    }
+
+
+    .column:last-child {
+      margin: 1rem;
+      @media screen and (min-width: 510px) {
+        width: 50rem !important;
+      }
+
+      @include breakpoint($tab) {
+        margin: 0;
       }
     }
   }
@@ -335,7 +384,7 @@
 #top-area #block-homepage3links {
   @media screen and (max-width: $tab) {
     ul {
-      margin-left: 0;
+      margin: 0;
     }
   }
 
@@ -419,6 +468,7 @@
       display: grid;
       justify-content: start;
       width: 100%;
+      margin: 0;
 
       li {
         padding: 1.8rem 9rem;
@@ -646,4 +696,3 @@
     }
   }
 }
-
