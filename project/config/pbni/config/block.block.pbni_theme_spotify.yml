@@ -1,0 +1,25 @@
+uuid: 52ccacf3-8543-4d30-9835-fab4ce833ea9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:687537df-75cb-4261-896a-686c6abd2664'
+  module:
+    - block_content
+  theme:
+    - pbni_theme
+id: pbni_theme_spotify
+theme: pbni_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'block_content:687537df-75cb-4261-896a-686c6abd2664'
+settings:
+  id: 'block_content:687537df-75cb-4261-896a-686c6abd2664'
+  label: Spotify
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
