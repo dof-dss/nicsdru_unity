@@ -153,7 +153,7 @@
   h2 {
     color: $headings;
     @include adjust-font-size-to(25px);
-    margin: 1.5rem 0 1.2rem;
+    //margin: 1.5rem 0 1.2rem;
   }
 
   //.twitter-block {
@@ -204,9 +204,10 @@
 
       @media screen and (min-width: 510px) {
         @include adjust-font-size-to(40px);
-        padding: 7rem 14rem 0 2rem;
+        padding: 8rem 11rem 0 0;
         text-align: center;
         line-height: 6rem;
+        letter-spacing: -.5px;
       }
     }
   }
@@ -377,7 +378,6 @@
 
 #top-area {
   max-width: 1044px;
-  margin: 0 auto;
 
   .column {
     margin: 0;
