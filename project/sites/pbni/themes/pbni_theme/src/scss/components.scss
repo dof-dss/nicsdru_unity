@@ -191,12 +191,7 @@
       width: 100%;
     }
 
-    &:hover h2.visually-hidden,
-    &:focus h2.visually-hidden {
-      position: relative !important;
-      overflow: visible;
-      width: 100%;
-      height: 100%;
+    h2 {
       color: $white;
       @include adjust-font-size-to(27px);
       padding: 5rem 9rem 0 2rem;
@@ -209,6 +204,13 @@
         line-height: 6rem;
         letter-spacing: -.5px;
       }
+    }
+
+    &:hover h2,
+    &:focus h2 {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
     }
   }
 
