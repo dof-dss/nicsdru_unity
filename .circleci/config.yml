@@ -179,6 +179,8 @@ jobs:
           command: |
             touch ~/.bashrc
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+            sudo apt update --allow-releaseinfo-change
+            sudo apt install libjpeg-dev make python g++ dh-autoreconf -y
       - install_psh_cli
       - run:
           name: Switch to edge branch
@@ -197,12 +199,6 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites
-            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
-            # to platform.sh for later steps to use.
-            cd $PROJECT_ROOT
-            git add *.css
-            git commit -m "Theme rebuild"
-            git push -f origin $EDGE_BUILD_BRANCH
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
