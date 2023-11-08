@@ -5,8 +5,28 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header {
+  @include breakpoint($tab) {
+    margin: 0 auto;
+  }
+}
+
+#inner_header_wrapper {
+  @media screen and (min-width: 767px) {
+    background: resolve('Nav-bg.png') no-repeat 50%;
+  }
+
+  .top_left #logo {
+    position: static;
+  }
+
+  img {
+    height: 99px;
+  }
+}
+
 #headerHero {
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: 766px) {
     background-color: $brand-secondary;
   }
 }
@@ -356,6 +376,11 @@
   }
 }
 
+#top-area {
+  .column:last-child {
+    float: left;
+  }
+}
 
 .region-front-welcome,
 #top-area {
@@ -505,12 +530,6 @@
   }
 }
 
-#top-area {
-  .column:last-child {
-    float: left;
-  }
-}
-
 #footer {
   max-width: 100%;
 
@@ -657,27 +676,6 @@
   h3 {
     margin-top: 0;
     padding-top: 3rem;
-  }
-}
-
-#header {
-  @include breakpoint($tab) {
-    margin: 0 auto;
-    padding: 1rem 0;
-  }
-}
-
-#inner_header_wrapper {
-  @include breakpoint($tab) {
-    background: resolve('Nav-bg.png') no-repeat 50%;
-  }
-
-  .top_left #logo {
-    position: static;
-  }
-
-  img {
-    height: 99px;
   }
 }
 
