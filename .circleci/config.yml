@@ -170,15 +170,15 @@ jobs:
       EDGE_BUILD_BRANCH: "edge"
       PLATFORM_REGION: "uk-1.platform.sh"
       CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
+      NODE_VERSION: 14.21.3
     steps:
       - hosts_keyscan
       - checkout_code
       - run:
           name: Add OS and PHP extensions
           command: |
-            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-            sudo apt update --allow-releaseinfo-change
-            sudo apt install libjpeg-dev make python g++ dh-autoreconf -y
+            touch ~/.bashrc
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
       - install_psh_cli
       - run:
           name: Switch to edge branch
@@ -190,24 +190,13 @@ jobs:
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
       - run:
-          name: Download nvm in order to select legacy node version (using nvm)
-          command: |
-            # Need to re-build site theme with any Unity changes.
-            # Download and configure node and npm.
-            git clone https://github.com/nvm-sh/nvm.git
-            cd nvm
-            chmod +x install.sh
-            ./install.sh
-      - run:
           name: Rebuild site themes
           command: |
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-            nvm install v14.21.3
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites
-
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
             cd $PROJECT_ROOT
