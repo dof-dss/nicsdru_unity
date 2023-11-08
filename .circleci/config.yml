@@ -12,13 +12,6 @@ default_docker_image: &docker_image
         PHP_INI_MEMORY_LIMIT: -1
         PHP_INI_MAX_EXECUTION_TIME: 60
         PHP_INI_MAX_INPUT_TIME: 60
-custom_npm_docker_image: &custom_npm_docker_image
-  docker:
-    - image: thecodingmachine/php:8.1-v4-apache-node14
-      environment:
-        PLATFORM_REGION: "uk-1.platform.sh"
-        PROJECT_ROOT: "/home/docker/project"
-        PHP_EXTENSIONS: "gd"
         # git variables to avoid empty committer identity errors
         EMAIL: "circleci@localhost"
         GIT_COMMITTER_NAME: "Circle CI"
@@ -115,6 +108,7 @@ jobs:
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/custom"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/origins"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/custom"
+            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/origins"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/unity"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/origins"
             ~/project/phpcs.sh ${PROJECT_ROOT} $CHECK_DIRS
@@ -161,7 +155,7 @@ jobs:
 
   # Nightly edge build
   edge_build:
-    <<: *custom_npm_docker_image
+    <<: *docker_image
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
@@ -199,6 +193,12 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites
+            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
+            # to platform.sh for later steps to use.
+            cd $PROJECT_ROOT
+            git add *.css
+            git commit -m "Theme rebuild"
+            git push -f origin $EDGE_BUILD_BRANCH
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
@@ -268,26 +268,7 @@ jobs:
                 platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
               fi
             done
-      #- run:
-      #    name: Purge and rebuild Solr indexes
-      #    command: |
-      #      for site in `ls -l ~/project/project/sites | grep ^d | awk '!/default/{print $9}'`
-      #      do
-      #        result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
-      #        if [[ -n $result ]]; then
-      #          result2=$(platform drush "pml --status=enabled -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "solr" || true) )
-      #          if [[ -n $result2 ]]; then
-      #            echo "***** Purge Solr index for - ${site} *****"
-      #            platform ssh -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH \
-      #              "curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8' \
-      #                && curl http://${site}_solr.internal:8080/solr/${site}_index/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'"
-      #            echo "***** Rebuild the Solr index for - ${site} *****"
-      #            platform drush "sapi-c -l ${site}" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
-      #            platform drush "sapi-r -l ${site}" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
-      #            platform drush "sapi-i -l ${site}" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
-      #          fi
-      #        fi
-      #      done
+
   # Checks to ensure that Unity Base has not been polluted with project files.
   unity_base_checks:
     <<: *docker_image
