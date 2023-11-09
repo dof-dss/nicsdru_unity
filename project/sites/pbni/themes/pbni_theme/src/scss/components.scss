@@ -26,7 +26,7 @@
 }
 
 #headerHero {
-  @media screen and (max-width: 766px) {
+  @media screen and (max-width: $tab) {
     background-color: $brand-secondary;
   }
 }
