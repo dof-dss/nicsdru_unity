@@ -58,7 +58,6 @@
         "drupal/blazy": "2.16.0",
         "drupal/block_content_permissions": "^1.11",
         "drupal/block_field": "^1.0@RC",
-        "drupal/block_list_override": "^1.0",
         "drupal/block_visibility_groups": "^2.0",
         "drupal/ckeditor": "^1.0",
         "drupal/ckeditor5_allowed_html": "^1.0@dev",
