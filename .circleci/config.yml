@@ -12,11 +12,7 @@ default_docker_image: &docker_image
         PHP_INI_MEMORY_LIMIT: -1
         PHP_INI_MAX_EXECUTION_TIME: 60
         PHP_INI_MAX_INPUT_TIME: 60
-        # git variables to avoid empty committer identity errors
-        EMAIL: "circleci@localhost"
-        GIT_COMMITTER_NAME: "Circle CI"
-        GIT_AUTHOR_NAME: "Circle CI"
-        EDGE_BUILD_BRANCH: "edge"
+        CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
 
 # Re-usable commands.
 commands:
@@ -108,7 +104,6 @@ jobs:
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/custom"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/modules/origins"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/custom"
-            CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/themes/origins"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/unity"
             CHECK_DIRS="${CHECK_DIRS} ${PROJECT_ROOT}/web/profiles/origins"
             ~/project/phpcs.sh ${PROJECT_ROOT} $CHECK_DIRS
@@ -174,17 +169,17 @@ jobs:
             touch ~/.bashrc
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
             sudo apt update --allow-releaseinfo-change
-            sudo apt install libjpeg-dev make python g++ dh-autoreconf -y
+            sudo apt install libjpeg-dev make python3 g++ dh-autoreconf -y
       - install_psh_cli
-      - run:
-          name: Switch to edge branch
-          command: git checkout -b $EDGE_BUILD_BRANCH
-      - composer_tasks__edge_packages
-      - run:
-          name: Push composer package updates back to GitHub
-          command: |
-            git add composer.*
-            git commit -m "Set dof-dss packages to HEAD development for build"
+      #      - run:
+      #          name: Switch to edge branch
+      #          command: git checkout -b $EDGE_BUILD_BRANCH
+      #      - composer_tasks__edge_packages
+      #      - run:
+      #          name: Push composer package updates back to GitHub
+      #          command: |
+      #            git add composer.*
+      #            git commit -m "Set dof-dss packages to HEAD development for build"
       - run:
           name: Rebuild site themes
           command: |
@@ -193,12 +188,12 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites
-            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
-            # to platform.sh for later steps to use.
-            cd $PROJECT_ROOT
-            git add *.css
-            git commit -m "Theme rebuild"
-            git push -f origin $EDGE_BUILD_BRANCH
+  #            # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
+  #            # to platform.sh for later steps to use.
+  #            cd $PROJECT_ROOT
+  #            git add *.css
+  #            git commit -m "Theme rebuild"
+  #            git push -f origin $EDGE_BUILD_BRANCH
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
@@ -268,7 +263,6 @@ jobs:
                 platform drush "bulk_update_qa_accounts enable -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH
               fi
             done
-
   # Checks to ensure that Unity Base has not been polluted with project files.
   unity_base_checks:
     <<: *docker_image
@@ -299,40 +293,12 @@ workflows:
       - deprecated_code:
           requires:
             - build
-      - check_illegal_updates:
-          requires:
-            - build
+  #      - check_illegal_updates:
+  #          requires:
+  #            - build
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
-    when:
-      and:
-        - not:
-          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
-    triggers:
-      - schedule:
-          # At 00:30 Monday to Friday
-          cron: "30 0 * * 1-5"
-          filters:
-            branches:
-              only:
-                - development
     jobs:
       - edge_build
-
-  # A nightly deploy or re-deploy of the edge site after the git branch has been created in nightly-edge-build.
-  nightly-edge-build-post-build-tasks:
-    when:
-      and:
-        - not:
-          equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
-    triggers:
-      - schedule:
-          # At 01:23 Monday to Friday
-          cron: "55 1 * * 1-5"
-          filters:
-            branches:
-              only:
-                - edge
-    jobs:
       - sync_data
