@@ -174,7 +174,7 @@ jobs:
             touch ~/.bashrc
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
             sudo apt update --allow-releaseinfo-change
-            sudo apt install libjpeg-dev make python g++ dh-autoreconf -y
+            sudo apt install libjpeg-dev make python3 g++ dh-autoreconf -y
       - install_psh_cli
       - run:
           name: Switch to edge branch
