@@ -26,97 +26,97 @@ proxy:
         - urologyservicesinquiry.org.uk.lndo.site
 services:
     uregni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     odscni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     fiscalcommissionni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     mahinquiry_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     nifiscalcouncil_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     octf_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     niauditoffice_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     employmenttribunalsni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     independentreviewofeducation_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     nipolicingboard_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     pbni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     investnireview_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     attorneygeneralni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     cscsreviewni_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     pcsps_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
             dir: .lando/config/solr/7.x/default
     urologyservicesinquiry_solr:
-        type: 'solr:7'
+        type: 'solr:8.11'
         portforward: true
         core: default
         config:
