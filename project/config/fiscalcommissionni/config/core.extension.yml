@@ -54,6 +54,7 @@ module:
   filter: 0
   fiscalcommissionni_breadcrumbs: 0
   flag: 0
+  flood_control: 0
   geocoder: 0
   geocoder_address: 0
   geocoder_field: 0
