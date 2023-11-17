@@ -23,7 +23,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
   field_group:
-    group_addi:
+    group_additional_content_details:
       children:
         - field_publication_image
         - field_pub_type
