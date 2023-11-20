@@ -564,6 +564,10 @@
     li {
       border: none;
 
+        @media screen and (min-width: $mob){
+          display: inline-block;
+        }
+
       a,
       span.active {
         margin: 0;
