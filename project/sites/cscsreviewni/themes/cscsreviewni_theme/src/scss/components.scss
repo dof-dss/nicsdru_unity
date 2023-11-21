@@ -169,7 +169,6 @@
   .footer-menu li {
     padding-left: 0;
     font-size: 1.4rem;
-    display: block;
 
     @include breakpoint($tab) {
       display: inline-block;
