@@ -5,8 +5,28 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header {
+  @include breakpoint($tab) {
+    margin: 0 auto;
+  }
+}
+
+#inner_header_wrapper {
+  @media screen and (min-width: 767px) {
+    background: resolve('Nav-bg.png') no-repeat 50%;
+  }
+
+  .top_left #logo {
+    position: static;
+  }
+
+  img {
+    height: 99px;
+  }
+}
+
 #headerHero {
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: $tab) {
     background-color: $brand-secondary;
   }
 }
@@ -140,6 +160,12 @@
   }
 }
 
+#content #top-area .container-wrap .column .region-top-second a {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 #top-area {
   margin: 2rem auto;
   text-align: left;
@@ -147,40 +173,89 @@
   h2 {
     color: $headings;
     @include adjust-font-size-to(25px);
-    margin: 1.5rem 0 1.2rem;
+    //margin: 1.5rem 0 1.2rem;
   }
 
-  .twitter-block {
+  //.twitter-block {
+  //  h2 {
+  //    background: $brand-tertiary;
+  //    color: $white;
+  //    padding-left: 4rem;
+  //
+  //    i {
+  //      border: 1px solid $white;
+  //      border-radius: 100%;
+  //      padding: .5rem;
+  //    }
+  //
+  //    a {
+  //      color: white;
+  //
+  //      &:hover {
+  //        color: $brand-secondary;
+  //      }
+  //    }
+  //  }
+  //}
+
+  .spotify-block {
+    background: $black resolve('PBM-no-words.jpg') no-repeat;
+    background-size: 100%;
+    padding: 0;
+    margin-top: -.5rem;
+    height: 29rem;
+    width: 35.5rem;
+
+    @media screen and (min-width: 510px) {
+      height: 41rem;
+      width: 100%;
+    }
+
     h2 {
-      background: $brand-tertiary;
       color: $white;
-      padding-left: 4rem;
+      @include adjust-font-size-to(27px);
+      padding: 5rem 9rem 0 2rem;
+      text-align: center;
 
-      i {
-        border: 1px solid $white;
-        border-radius: 100%;
-        padding: .5rem;
+      @media screen and (min-width: 510px) {
+        @include adjust-font-size-to(40px);
+        padding: 8rem 11rem 0 0;
+        text-align: center;
+        line-height: 6rem;
+        letter-spacing: -.5px;
       }
+    }
 
-      a {
-        color: white;
-
-        &:hover {
-          color: $brand-secondary;
-        }
-      }
+    &:hover h2,
+    &:focus h2 {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
     }
   }
 
   .container-wrap {
-    max-width: 1044px;
-    @include breakpoint($tab) {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
 
-      display: flex;
-      justify-content: space-between;
+    .column {
+      flex-basis: 50rem;
 
-      .column {
-        flex-basis: 50%;
+      .content {
+        padding-top: 0;
+      }
+    }
+
+
+    .column:last-child {
+      margin: 1rem;
+      @media screen and (min-width: 510px) {
+        width: 50rem !important;
+      }
+
+      @include breakpoint($tab) {
+        margin: 0;
       }
     }
   }
@@ -301,6 +376,11 @@
   }
 }
 
+#top-area {
+  .column:last-child {
+    float: left;
+  }
+}
 
 .region-front-welcome,
 #top-area {
@@ -325,7 +405,6 @@
 
 #top-area {
   max-width: 1044px;
-  margin: 0 auto;
 
   .column {
     margin: 0;
@@ -335,7 +414,7 @@
 #top-area #block-homepage3links {
   @media screen and (max-width: $tab) {
     ul {
-      margin-left: 0;
+      margin: 0;
     }
   }
 
@@ -419,6 +498,7 @@
       display: grid;
       justify-content: start;
       width: 100%;
+      margin: 0;
 
       li {
         padding: 1.8rem 9rem;
@@ -450,12 +530,6 @@
   }
 }
 
-#top-area {
-  .column:last-child {
-    float: left;
-  }
-}
-
 #footer {
   max-width: 100%;
 
@@ -468,6 +542,12 @@
       width: 100%;
       padding: 0;
       margin: 0;
+
+      li {
+        @media screen and (min-width: $mob) {
+          display: block ruby;
+        }
+      }
 
       @include breakpoint($tab) {
         width: 49%;
@@ -520,7 +600,7 @@
 
     @include breakpoint($tab) {
       justify-content: end;
-      margin-top: 8.2rem;
+      margin-top: 4.6rem;
 
       li {
         margin-right: 1rem;
@@ -605,33 +685,8 @@
   }
 }
 
-#header {
-  @include breakpoint($tab) {
-    margin: 0 auto;
-    padding: 1rem 0;
-  }
-}
-
-#inner_header_wrapper {
-  @include breakpoint($tab) {
-    background: resolve('Nav-bg.png') no-repeat 50%;
-  }
-
-  .top_left #logo {
-    position: static;
-  }
-
-  img {
-    height: 99px;
-  }
-}
-
 #content #block-views-block-senior-management-senior-management-block {
   .board-members {
-    .views-row.board-card .board-member--role::after {
-      display: none;
-    }
-
     .views-row a {
       padding: 1rem;
       margin: 0;
@@ -650,4 +705,3 @@
     }
   }
 }
-

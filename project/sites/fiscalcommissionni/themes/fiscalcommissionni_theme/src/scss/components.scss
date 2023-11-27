@@ -116,14 +116,9 @@
     font-size: 1.4rem;
 
     @include breakpoint($mob) {
-      display: inline-block;
       padding: 0 .8rem 0 0;
       line-height: 1.8rem;
       margin-right: .5rem;
-    }
-
-    a {
-      display: block;
     }
   }
 

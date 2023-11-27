@@ -65,12 +65,7 @@
     .menu {
       list-style: none;
 
-      @media screen and (max-width: $mob) {
-        text-align: center;
-      }
-
       li.menu-item {
-        display: inline-block;
         padding: 0 .8rem 0 0;
         margin-right: .5rem;
         @include adjust-font-size-to(16px);

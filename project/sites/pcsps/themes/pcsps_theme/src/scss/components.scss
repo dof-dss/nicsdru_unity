@@ -87,21 +87,29 @@
 
 #footer {
   padding: 2rem 0 0;
-
-  .footer-menu li {
-    padding-left: 0;
-    font-size: 1.6rem;
-
-    @include breakpoint($mob) {
-      display: inline-block;
-      padding: 0 .8rem 0 0;
-      line-height: 1.8rem;
-      margin-right: .5rem;
+  
+  .footer-menu {
+    ul {
+      @media screen and (max-width: $mob) {
+        list-style-type: none;
+      }
     }
 
-    a {
-      @media screen and (min-width: $mob) {
-        display: block;
+    li {
+      padding-left: 0;
+      font-size: 1.6rem;
+
+      @include breakpoint($mob) {
+        display: inline-block;
+        padding: 0 .8rem 0 0;
+        line-height: 1.8rem;
+        margin-right: .5rem;
+      }
+
+      a {
+        @media screen and (min-width: $mob) {
+          display: block;
+        }
       }
     }
   }
