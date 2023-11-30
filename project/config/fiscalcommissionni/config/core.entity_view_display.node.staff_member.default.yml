@@ -9,28 +9,8 @@ dependencies:
     - field.field.node.staff_member.field_meta_tags
     - node.type.staff_member
   module:
-    - field_group
     - text
     - user
-third_party_settings:
-  field_group:
-    group_additional_content_details:
-      children: {  }
-      label: 'Additional content details'
-      parent_name: ''
-      region: hidden
-      weight: 8
-      format_type: html_element
-      format_settings:
-        classes: field-collection
-        id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
 id: node.staff_member.default
 targetEntityType: node
 bundle: staff_member
