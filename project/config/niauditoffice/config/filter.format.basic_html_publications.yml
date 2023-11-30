@@ -11,9 +11,11 @@ dependencies:
   module:
     - blazy
     - ckeditor5_allowed_html
+    - ckeditor5_premium_features
     - cookie_content_blocker
     - editor
     - entity_embed
+    - linkit
     - media
     - noreferrer
     - origins_common
@@ -27,16 +29,16 @@ filters:
     id: filter_html
     provider: filter
     status: false
-    weight: -50
+    weight: -45
     settings:
-      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <sub> <blockquote> <a href data-entity-type data-entity-uuid data-entity-substitution> <ul> <ol start> <li> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
+      allowed_html: ''
       filter_html_help: false
       filter_html_nofollow: false
   blazy_filter:
     id: blazy_filter
     provider: blazy
     status: false
-    weight: -38
+    weight: -35
     settings:
       media_switch: ''
       hybrid_style: ''
@@ -50,55 +52,55 @@ filters:
     id: editor_file_reference
     provider: editor
     status: false
-    weight: -44
+    weight: -42
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: -46
+    weight: -48
     settings: {  }
   filter_align:
     id: filter_align
     provider: filter
     status: false
-    weight: -43
+    weight: -41
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
     status: false
-    weight: -42
+    weight: -39
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: false
-    weight: -41
+    weight: -38
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: false
-    weight: -36
+    weight: -33
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -45
+    weight: -43
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -37
+    weight: -34
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -40
+    weight: -37
     settings:
       filter_url_length: 72
   media_embed:
@@ -121,34 +123,34 @@ filters:
     id: noreferrer
     provider: noreferrer
     status: true
-    weight: -49
+    weight: -50
     settings: {  }
   token_filter:
     id: token_filter
     provider: token_filter
     status: false
-    weight: -39
+    weight: -36
     settings:
       replace_empty: '0'
   cookie_content_blocker_filter:
     id: cookie_content_blocker_filter
     provider: cookie_content_blocker
     status: false
-    weight: -35
+    weight: -32
     settings:
       disable_xss: '1'
   origins_media_cookie_content_blocker_embed_filter:
     id: origins_media_cookie_content_blocker_embed_filter
     provider: origins_common
     status: false
-    weight: -48
+    weight: -44
     settings:
       replacement_text: 'Click here to view the video content'
   slick_filter:
     id: slick_filter
     provider: slick
     status: false
-    weight: 4
+    weight: -30
     settings:
       optionset: default
       layout: ''
@@ -180,14 +182,27 @@ filters:
     id: filter_image_lazy_load
     provider: filter
     status: false
-    weight: -43
+    weight: -40
     settings: {  }
   filter_allowed:
     id: filter_allowed
     provider: ckeditor5_allowed_html
     status: true
-    weight: 0
+    weight: -49
     settings:
       allowed_html: '<a class href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul class type> <ol class start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <div class> <p class translate> <br> <span> <sup> <table class> <caption> <tbody> <thead> <tfoot> <th scope> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <address> <drupal-media data-entity-type data-entity-id data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode alt title class>'
       filter_html_help: '0'
       filter_html_nofollow: '0'
+  ckeditor5_premium_features_collaboration_filter:
+    id: ckeditor5_premium_features_collaboration_filter
+    provider: ckeditor5_premium_features
+    status: false
+    weight: -46
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: -31
+    settings:
+      title: true
