@@ -45,6 +45,7 @@ node_modules/
 .lando.yml
 .lando.local.yml
 .lando/config/
+.lando/private
 
 # Misc tooling files to ingore.
 .swp
