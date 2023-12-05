@@ -18,6 +18,7 @@ paths:
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
+  - 700x3000
   - 1200x3000
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
