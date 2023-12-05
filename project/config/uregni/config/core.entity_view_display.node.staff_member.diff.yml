@@ -12,6 +12,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - metatag
     - text
     - user
 third_party_settings:
@@ -21,7 +22,7 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - field_metatag
+        - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
@@ -66,9 +67,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
   langcode: true
   links: true
   search_api_excerpt: true
