@@ -13,12 +13,13 @@ paths:
   home:     /
   about-niao:    /about-niao
   trainee-accountant-scheme:     /trainee-accountant-scheme
-  publications: /publications/html-document/school-governance-good-practice-guide-html
+  html_document: /publications/html-document/school-governance-good-practice-guide-html
+  publication: /publications/judicial-review-process-northern-ireland
+  news: /news-centre/new-ni-audit-office-guide-promotes-good-practice-school-governance
   contact-us:  /contact-us
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
-  - 700x3000
   - 1200x3000
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
