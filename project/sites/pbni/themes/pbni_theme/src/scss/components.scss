@@ -544,8 +544,14 @@
       margin: 0;
 
       li {
-        @media screen and (min-width: $mob) {
-          display: block ruby;
+        @media screen and (min-width: $mob) and (max-width: $tab) {
+          display: flex;
+        }
+
+        a {
+          @media screen and (min-width: $tab) {
+            display: inline;
+          }
         }
       }
 
@@ -569,6 +575,14 @@
 
     li {
       border: none;
+
+      @media screen and (min-width: $tab) {
+        flex: 1;
+      }
+
+      @media screen and (min-width: 962px) {
+        display: contents;
+      }
 
       a,
       span.active {
