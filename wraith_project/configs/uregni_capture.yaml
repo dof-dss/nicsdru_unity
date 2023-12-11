@@ -1,6 +1,8 @@
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "phantomjs"
 
+snap_file: javascript/snap.js
+
 # (required) The domains to take screenshots of.
 domains:
   current:  "https://www.uregni.gov.uk/"
@@ -12,11 +14,16 @@ paths:
   about-us:    /about-us
   who-we-are:     /who-we-are
   contact-us:  /contact-us
+  news: /news-centre/minded-decision-proposed-changes-condition-251-soni-tso-licence-and-related-soni
+  consultation: /consultations/notice-under-article-142-electricity-ni-order-1992-power-ni-electricity-supply
+  publication: /publications/rp7-price-control-draft-determination-annexes
+  board: /our-board
+  board-member: /our-board/john-french
+  landing-page: /consumer-information
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
-  - 500x2000
-  - 1400x2000
+  - 1200x3000
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--phantom.js'
