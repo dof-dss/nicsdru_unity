@@ -3,10 +3,10 @@ audit_button_hover_text: 'Click this link to indicate you have checked this cont
 audit_confirmation_text: 'Click this button to indicate that you have audited this published content and are happy that it is still accurate and relevant.'
 audit_content_types:
   page: page
-  consultation: 0
+  feature: 0
   news: 0
   publication_page: 0
+  question_page: 0
   staff_member: 0
-  vacancy: 0
 _core:
   default_config_hash: 3SEIckwYL56FAPOaQjHj9GcV2CUC9lkT-AxU07onAWE
