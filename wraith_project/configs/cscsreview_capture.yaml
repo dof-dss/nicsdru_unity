@@ -1,6 +1,8 @@
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "phantomjs"
 
+snap_file: javascript/snap.js
+
 # (required) The domains to take screenshots of.
 domains:
   current:  "https://www.cscsreviewni.net/"
@@ -11,12 +13,13 @@ paths:
   home:     /
   about-us:    /about-us
   children-and-young-people:     /children-and-young-people
+  news: /news/press-release-childrens-social-care-services-needs-major-fix
+  publication: /publications/report-independent-review-childrens-social-care-services-northern-ireland
   contact:  /contact-us
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
-  - 500x2000
-  - 1400x2000
+  - 1200x3000
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--phantom.js'
