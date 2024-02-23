@@ -176,7 +176,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "php-http/discovery": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "drupal/console-extend-plugin": true
         },
         "sort-packages": true
     },
