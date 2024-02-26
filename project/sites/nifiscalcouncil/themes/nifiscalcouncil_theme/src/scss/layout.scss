@@ -20,14 +20,7 @@
     }
   }
 
-  .content-sidebar-wrap {
-    padding: 2.5rem;
-    width: 50%;
-  }
-
   .sidebar-second-layout {
-    width: 50%;
-
     @include breakpoint($lap) {
       margin-top: 10rem;
     }
