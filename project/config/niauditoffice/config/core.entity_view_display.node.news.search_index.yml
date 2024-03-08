@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_photo
     - field.field.node.news.field_published_date
-    - field.field.node.news.field_teaser
     - node.type.news
   module:
     - datetime
@@ -37,7 +36,6 @@ hidden:
   content_moderation_control: true
   field_meta_tags: true
   field_news_photo: true
-  field_teaser: true
   langcode: true
   links: true
   search_api_excerpt: true

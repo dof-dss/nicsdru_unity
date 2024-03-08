@@ -87,7 +87,7 @@
 
 #footer {
   padding: 2rem 0 0;
-  
+
   .footer-menu {
     ul {
       @media screen and (max-width: $mob) {
@@ -150,6 +150,12 @@
     .social-icons {
       margin: 3rem 0 2rem;
     }
+  }
+}
+
+.node-type-publication {
+  .published-date {
+    font-weight: bold;
   }
 }
 
