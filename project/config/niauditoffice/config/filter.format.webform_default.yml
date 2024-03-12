@@ -1,3 +1,4 @@
+uuid: 83f4bb45-c48b-46f9-b352-7d80d9030329
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,12 @@ dependencies:
 name: 'Webform (Default) - DO NOT EDIT'
 format: webform_default
 weight: 100
-roles:
-  - authenticated
-filters: {  }
+filters:
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''
