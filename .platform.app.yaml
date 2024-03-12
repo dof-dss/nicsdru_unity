@@ -38,8 +38,8 @@ mounts:
         source: local
         source_path: log
     /web/.well-known:
-      source: local
-      source_path: well-known
+        source: local
+        source_path: well-known
 build:
     flavor: composer
 hooks:
@@ -63,7 +63,7 @@ web:
                     allow: true
                     expires: 2w
                 ^/\.well-known/security\.txt$:
-                  allow: true
+                    allow: true
                 ^/sites/sites\.php$:
                     scripts: false
                 '^/sites/[^/]+/settings.*?\.php$':
