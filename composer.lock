@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d8df270fa5ca2c20106228d5d116d27",
+    "content-hash": "aa25eed458599e16113eb18183ad407b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1527,16 +1527,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "10.2.3",
+            "version": "10.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "ddc7faf279d5c6d1161d35beaac78a8f2658f5ae"
+                "reference": "264ff31617764a3af6e5cea27c86e18a8cb97e68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/ddc7faf279d5c6d1161d35beaac78a8f2658f5ae",
-                "reference": "ddc7faf279d5c6d1161d35beaac78a8f2658f5ae",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/264ff31617764a3af6e5cea27c86e18a8cb97e68",
+                "reference": "264ff31617764a3af6e5cea27c86e18a8cb97e68",
                 "shasum": ""
             },
             "require": {
@@ -1551,22 +1551,22 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.2.3"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.3.4"
             },
-            "time": "2024-01-17T11:55:18+00:00"
+            "time": "2024-03-08T14:41:45+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "10.1.6",
+            "version": "10.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "c4ceff3d8b73cbe87a7a8681f7aa5a2f4e1dd5e0"
+                "reference": "a0fe45901f5076e28259eb7b277e74b333b123b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/c4ceff3d8b73cbe87a7a8681f7aa5a2f4e1dd5e0",
-                "reference": "c4ceff3d8b73cbe87a7a8681f7aa5a2f4e1dd5e0",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/a0fe45901f5076e28259eb7b277e74b333b123b4",
+                "reference": "a0fe45901f5076e28259eb7b277e74b333b123b4",
                 "shasum": ""
             },
             "require": {
@@ -1580,9 +1580,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.1.6"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.1.10"
             },
-            "time": "2024-01-25T10:50:22+00:00"
+            "time": "2024-02-29T12:15:04+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -1615,20 +1615,20 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v10.1.9",
+            "version": "v10.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "2a1e067ca0bddfbfd9c7bf567b9783900657c31a"
+                "reference": "4e9eea7204fb91f7e192676786ebc5d0d8357f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/2a1e067ca0bddfbfd9c7bf567b9783900657c31a",
-                "reference": "2a1e067ca0bddfbfd9c7bf567b9783900657c31a",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/4e9eea7204fb91f7e192676786ebc5d0d8357f82",
+                "reference": "4e9eea7204fb91f7e192676786ebc5d0d8357f82",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=8.0"
             },
             "type": "drupal-custom-theme",
             "notification-url": "https://packagist.org/downloads/",
@@ -1641,16 +1641,16 @@
                     "role": "Maintainer"
                 }
             ],
-            "description": "Drupal 8 theme",
+            "description": "Drupal theme for Unity sites",
             "homepage": "https://github.com/dof-dss/nicsdru_unity_theme",
             "keywords": [
                 "drupal",
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v10.1.9"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v10.1.13"
             },
-            "time": "2024-01-08T11:15:23+00:00"
+            "time": "2024-03-08T12:55:31+00:00"
         },
         {
             "name": "drupal/address",
@@ -1796,64 +1796,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
-        },
-        {
-            "name": "drupal/adminimal_theme",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/adminimal_theme.git",
-                "reference": "8.x-1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/adminimal_theme-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "0fe020fecab6a1f6d877f2e622fb9f916ada52bb"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10",
-                "drupal/seven": "~1.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1691504486",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "ANDiTKO",
-                    "homepage": "https://www.drupal.org/user/1428124"
-                },
-                {
-                    "name": "andrey.troeglazov",
-                    "homepage": "https://www.drupal.org/user/3145389"
-                },
-                {
-                    "name": "realityloop",
-                    "homepage": "https://www.drupal.org/user/139189"
-                },
-                {
-                    "name": "rjjakes",
-                    "homepage": "https://www.drupal.org/user/3457245"
-                }
-            ],
-            "description": "Drupal administration theme with modern minimalist design.",
-            "homepage": "https://www.drupal.org/project/adminimal_theme",
-            "support": {
-                "source": "https://git.drupalcode.org/project/adminimal_theme",
-                "issues": "https://www.drupal.org/project/issues/adminimal_theme"
             }
         },
         {
@@ -5276,6 +5218,10 @@
                     "homepage": "https://www.drupal.org/user/99340"
                 },
                 {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
                     "name": "geek-merlin",
                     "homepage": "https://www.drupal.org/user/229048"
                 },
@@ -8654,10 +8600,6 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Dane Powell",
-                    "homepage": "https://www.drupal.org/user/339326"
-                },
-                {
                     "name": "gielfeldt",
                     "homepage": "https://www.drupal.org/user/366993"
                 },
@@ -9466,7 +9408,7 @@
                 "http geocoder"
             ],
             "support": {
-                "source": "https://github.com/geocoder-php/php-common-http/tree/4.6.0"
+                "source": "https://github.com/geocoder-php/php-common-http/tree/master"
             },
             "time": "2023-07-31T20:07:24+00:00"
         },
@@ -20289,6 +20231,72 @@
                 }
             ],
             "time": "2023-10-08T07:28:08+00:00"
+        },
+        {
+            "name": "spaze/phpstan-disallowed-calls",
+            "version": "v3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spaze/phpstan-disallowed-calls.git",
+                "reference": "d0b3d66d53fe581889c6f5927cacc5aed8249c34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/d0b3d66d53fe581889c6f5927cacc5aed8249c34",
+                "reference": "d0b3d66d53fe581889c6f5927cacc5aed8249c34",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "phpstan/phpstan": "^1.10.52"
+            },
+            "require-dev": {
+                "nette/neon": "^3.2",
+                "nikic/php-parser": "^4.13",
+                "php-parallel-lint/php-console-highlighter": "^1.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpunit/phpunit": "^8.5 || ^10.1",
+                "spaze/coding-standard": "^1.7"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spaze\\PHPStan\\Rules\\Disallowed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michal Špaček",
+                    "email": "mail@michalspacek.cz",
+                    "homepage": "https://www.michalspacek.cz"
+                }
+            ],
+            "description": "PHPStan rules to detect disallowed method & function calls, constant, namespace & superglobal usages",
+            "keywords": [
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/spaze/phpstan-disallowed-calls/issues",
+                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v3.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spaze",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-02-13T18:26:25+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

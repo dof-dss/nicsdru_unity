@@ -209,15 +209,14 @@
           </div>
         {% endif %}
       </div>
+
+      {% if page.footer %}
+        <div class="footer_credit">
+          {{ page.footer }}
+        </div>
+      {% endif %}
     {% endif %}
   </div>
-  {% if page.footer %}
-    <div class="footer_credit">
-      <div class="container-wrap">
-      {{ page.footer }}
-      </div>
-    </div>
-  {% endif %}
 </footer>
 
 
