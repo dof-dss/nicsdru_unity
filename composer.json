@@ -182,6 +182,9 @@
     },
     "extra": {
         "patches": {
+            "drupal/content_lock": {
+                "fix 10.2 $time deprecation message": "https://www.drupal.org/files/issues/2023-05-22/3343964-5.patch"
+            },
             "drupal/clientside_validation": {
                 "core/jquery.once is required": "https://www.drupal.org/files/issues/2021-02-23/3200022-01.patch"
             },
