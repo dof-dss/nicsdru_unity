@@ -65,7 +65,7 @@
         "drupal/clientside_validation": "^4.0",
         "drupal/clone_nodes": "^1.2@dev",
         "drupal/config_filter": "^1.10",
-        "drupal/config_ignore": "^2.4",
+        "drupal/config_ignore": "^3.2",
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^1.9",
         "drupal/config_update": "^2.0@alpha",
