@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90c1e55777fd81143db135887499d4d3",
+    "content-hash": "d4fee9f91cc169c32e589b0dcbef7b51",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2300,23 +2300,23 @@
         },
         {
             "name": "drupal/ckeditor5_allowed_html",
-            "version": "dev-1.0.x",
+            "version": "dev-1.2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_allowed_html.git",
-                "reference": "79aa55696df2cd48d60d2ac4074061a561525b6e"
+                "reference": "66db8fef57d6b4ccfa42bbea3039482f1282cde2"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
+                    "dev-1.2.x": "1.2.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1691506962",
+                    "version": "1.2.x-dev",
+                    "datestamp": "1711446853",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
