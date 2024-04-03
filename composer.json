@@ -214,7 +214,7 @@
                 "Allow disabling of logging": "https://git.drupalcode.org/project/fastly/-/merge_requests/6.patch"
             },
             "drupal/filelog": {
-                "Avoid circular reference": "https://www.drupal.org/files/issues/2020-05-03/filelog-3133252-5-Circular-service-reference.patch"
+                "Avoid circular reference": "https://www.drupal.org/files/issues/2024-01-25/filelog_with_tests.patch"
             },
             "drupal/hms_field": {
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
