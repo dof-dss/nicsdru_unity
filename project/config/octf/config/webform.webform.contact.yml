@@ -15,7 +15,7 @@ template: false
 archive: false
 id: contact
 title: 'Contact us'
-description: 'Basic email contact webform.'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |-
   your_details:
@@ -176,7 +176,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
