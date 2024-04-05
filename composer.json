@@ -183,6 +183,9 @@
     },
     "extra": {
         "patches": {
+            "drupal/auto_entityqueue": {
+                "Entityquery - add access control check": "https://www.drupal.org/files/issues/2023-10-25/3366202-7-accessCheck-auto-entity-queue.patch"
+            },
             "drupal/content_lock": {
                 "fix 10.2 $time deprecation message": "https://www.drupal.org/files/issues/2023-05-22/3343964-5.patch"
             },
