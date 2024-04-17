@@ -283,16 +283,15 @@
   #footer-content {
     .social-icons a {
       border-bottom: none;
-      color: $offwhite;
 
-      &:focus {
-        background-color: transparent;
+      &[href*='https://twitter.com'],
+      &[href*='https://x.com'] {
+        background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNy41LjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0ic3ZnNSIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNjY4LjU2IDEyMjEuMTkiDQoJIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2NjguNTYgMTIyMS4xOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I2ZlZGM5Mjt9DQoJLnN0MXtmaWxsOiMyMzMyNDM7fQ0KPC9zdHlsZT4NCjxnPg0KCTxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjgzNC4yOCIgY3k9IjYxMC42IiByPSI0ODEuMzMiLz4NCgk8ZyBpZD0ibGF5ZXIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1Mi4zOTAwODgsLTI1LjA1ODU5NykiPg0KCQk8cGF0aCBpZD0icGF0aDEwMDkiIGNsYXNzPSJzdDEiIGQ9Ik00ODUuMzksMzU2Ljc5bDIzMC4wNywzMDcuNjJMNDgzLjk0LDkxNC41Mmg1Mi4xMWwyMDIuNy0yMTguOThsMTYzLjc3LDIxOC45OGgxNzcuMzINCgkJCUw4MzYuODIsNTg5LjZsMjE1LjUtMjMyLjgxaC01Mi4xMUw4MTMuNTQsNTU4LjQ2TDY2Mi43MSwzNTYuNzlINDg1LjM5eiBNNTYyLjAyLDM5NS4xN2g4MS40NmwzNTkuNzIsNDgwLjk3aC04MS40Nkw1NjIuMDIsMzk1LjE3DQoJCQl6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=') center no-repeat;
       }
 
-      &:hover i,
-      &:focus i {
-        background-color: $brand-primary;
-        color: $white;
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 3px $offwhite;
       }
     }
   }
