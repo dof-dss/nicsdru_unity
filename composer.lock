@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2c3a0ae0d6bbab3179d3dd597930a55",
+    "content-hash": "7812575eb1ba6189bda6ea16cb0fc7ff",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1526,16 +1526,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "10.3.4",
+            "version": "10.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "264ff31617764a3af6e5cea27c86e18a8cb97e68"
+                "reference": "02a9d602329e2fd75a96cc039414346cc71e26b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/264ff31617764a3af6e5cea27c86e18a8cb97e68",
-                "reference": "264ff31617764a3af6e5cea27c86e18a8cb97e68",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/02a9d602329e2fd75a96cc039414346cc71e26b9",
+                "reference": "02a9d602329e2fd75a96cc039414346cc71e26b9",
                 "shasum": ""
             },
             "require": {
@@ -1550,9 +1550,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.3.4"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.3.5"
             },
-            "time": "2024-03-08T14:41:45+00:00"
+            "time": "2024-04-04T09:31:37+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
@@ -1614,16 +1614,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
-            "version": "v10.1.13",
+            "version": "v10.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_theme.git",
-                "reference": "4e9eea7204fb91f7e192676786ebc5d0d8357f82"
+                "reference": "a87ce4f31846b90bf250252e4039fd6a8da30107"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/4e9eea7204fb91f7e192676786ebc5d0d8357f82",
-                "reference": "4e9eea7204fb91f7e192676786ebc5d0d8357f82",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_theme/zipball/a87ce4f31846b90bf250252e4039fd6a8da30107",
+                "reference": "a87ce4f31846b90bf250252e4039fd6a8da30107",
                 "shasum": ""
             },
             "require": {
@@ -1647,9 +1647,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v10.1.13"
+                "source": "https://github.com/dof-dss/nicsdru_unity_theme/tree/v10.1.14"
             },
-            "time": "2024-03-08T12:55:31+00:00"
+            "time": "2024-04-16T09:37:13+00:00"
         },
         {
             "name": "drupal/address",
@@ -16699,16 +16699,16 @@
         },
         {
             "name": "dof-dss/maestro-hosting",
-            "version": "1.0.17",
+            "version": "1.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-hosting.git",
-                "reference": "20e96c4e0e70fa250d266b1d9c75af278d5b7ad9"
+                "reference": "adc3a13bd33857a804f4236dfbeec6aeddd08b1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/20e96c4e0e70fa250d266b1d9c75af278d5b7ad9",
-                "reference": "20e96c4e0e70fa250d266b1d9c75af278d5b7ad9",
+                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/adc3a13bd33857a804f4236dfbeec6aeddd08b1a",
+                "reference": "adc3a13bd33857a804f4236dfbeec6aeddd08b1a",
                 "shasum": ""
             },
             "require": {
@@ -16733,9 +16733,9 @@
             "description": "Maestro hosting resources",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-hosting/issues",
-                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0.17"
+                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0.23"
             },
-            "time": "2024-01-29T09:28:49+00:00"
+            "time": "2024-04-16T10:05:32+00:00"
         },
         {
             "name": "dof-dss/maestro-shell",
