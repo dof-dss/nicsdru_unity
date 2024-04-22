@@ -128,38 +128,8 @@
     }
   }
 
-  #block-contactus {
-    .social-icons {
-      @media screen and (max-width: $tab) {
-        margin-top: 1rem;
-      }
-
-      a {
-        border-bottom: 0;
-        color: $text;
-
-        &:hover,
-        &:focus {
-          outline: 0;
-          background: none;
-
-          i {
-            background: $text;
-            color: $footer-background;
-          }
-        }
-      }
-
-      i {
-        font-size: 2.4rem;
-        border: 1px solid;
-        padding: .5rem .7rem;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 100%;
-        line-height: 3rem;
-      }
-    }
+  .column .social-icons {
+    margin: 2.4rem 0 0 .2rem;
   }
 }
 
