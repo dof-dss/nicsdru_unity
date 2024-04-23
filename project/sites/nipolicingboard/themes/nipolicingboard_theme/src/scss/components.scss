@@ -274,10 +274,14 @@
     padding: 0;
 
     @include breakpoint($tab) {
+      &:first-child {
+        width: 37%;
+      }
+
       width: 39%;
 
       &:last-child {
-        width: 20%;
+        width: 22%;
       }
     }
 
