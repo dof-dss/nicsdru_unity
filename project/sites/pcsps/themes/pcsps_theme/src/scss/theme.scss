@@ -52,7 +52,7 @@
     text-transform: uppercase;
   }
 
-  .btn:not(.eu-cookie-compliance-secondary-button) {
+  .btn:not(.btn--primary) {
     background-image: resolve('pcsp-arrow.png');
     background-repeat: no-repeat;
     background-position: right 15px top 22px;

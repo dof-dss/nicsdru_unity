@@ -543,15 +543,13 @@
       padding: 0;
       margin: 0;
 
+      .social-icons {
+        margin: 2.4rem 0 0 .2rem;
+      }
+
       li {
         @media screen and (min-width: $mob) and (max-width: $tab) {
           display: flex;
-        }
-
-        a {
-          @media screen and (min-width: $tab) {
-            display: inline;
-          }
         }
       }
 
