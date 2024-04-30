@@ -21,15 +21,6 @@ name: 'Basic HTML publications'
 format: basic_html_publications
 weight: 0
 filters:
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: false
-    weight: -45
-    settings:
-      allowed_html: '<br> <p translate> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <address> <a class hreflang href> <blockquote cite> <ul class type> <ol class type start> <div class> <img src alt height width data-* typeof> <table class> <th scope rowspan colspan> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <drupal-media data-entity-id data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode title class data-entity-type data-entity-uuid alt> <strong> <em> <code> <sup> <li> <tr> <td rowspan colspan> <thead> <tbody> <tfoot> <caption>'
-      filter_html_help: false
-      filter_html_nofollow: false
   blazy_filter:
     id: blazy_filter
     provider: blazy
@@ -44,6 +35,19 @@ filters:
         img: img
         iframe: iframe
       use_data_uri: '0'
+  ckeditor5_premium_features_collaboration_filter:
+    id: ckeditor5_premium_features_collaboration_filter
+    provider: ckeditor5_premium_features
+    status: false
+    weight: -46
+    settings: {  }
+  cookie_content_blocker_filter:
+    id: cookie_content_blocker_filter
+    provider: cookie_content_blocker
+    status: false
+    weight: -32
+    settings:
+      disable_xss: '1'
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -62,6 +66,15 @@ filters:
     status: false
     weight: -41
     settings: {  }
+  filter_allowed:
+    id: filter_allowed
+    provider: ckeditor5_allowed_html
+    status: true
+    weight: -49
+    settings:
+      allowed_html: '<a class href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul class type> <ol class start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <div class> <p class translate> <br> <span class> <img src alt height width data-* typeof> <sup> <table class> <caption> <tbody> <thead> <tfoot> <th scope> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <address> <drupal-media data-entity-type data-entity-id data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode alt title class>'
+      filter_html_help: '0'
+      filter_html_nofollow: '0'
   filter_autop:
     id: filter_autop
     provider: filter
@@ -74,12 +87,15 @@ filters:
     status: false
     weight: -38
     settings: {  }
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
+  filter_html:
+    id: filter_html
     provider: filter
     status: false
-    weight: -33
-    settings: {  }
+    weight: -45
+    settings:
+      allowed_html: '<p class="info-notice"> <a class="btn">'
+      filter_html_help: false
+      filter_html_nofollow: false
   filter_html_escape:
     id: filter_html_escape
     provider: filter
@@ -92,6 +108,18 @@ filters:
     status: false
     weight: -34
     settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -33
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -99,6 +127,13 @@ filters:
     weight: -37
     settings:
       filter_url_length: 72
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: -31
+    settings:
+      title: true
   media_embed:
     id: media_embed
     provider: media
@@ -116,20 +151,6 @@ filters:
     status: true
     weight: -50
     settings: {  }
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: false
-    weight: -36
-    settings:
-      replace_empty: '0'
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: false
-    weight: -32
-    settings:
-      disable_xss: '1'
   origins_media_cookie_content_blocker_embed_filter:
     id: origins_media_cookie_content_blocker_embed_filter
     provider: origins_common
@@ -169,31 +190,10 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
+  token_filter:
+    id: token_filter
+    provider: token_filter
     status: false
-    weight: -40
-    settings: {  }
-  filter_allowed:
-    id: filter_allowed
-    provider: ckeditor5_allowed_html
-    status: true
-    weight: -49
+    weight: -36
     settings:
-      allowed_html: '<a class href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul class type> <ol class start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <div class> <p class translate> <br> <span class> <img src alt height width data-* typeof> <sup> <table class> <caption> <tbody> <thead> <tfoot> <th scope> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <picture data-* alt title class> <source srcset media type> <address> <drupal-media data-entity-type data-entity-id data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-view-mode alt title class>'
-      filter_html_help: '0'
-      filter_html_nofollow: '0'
-  ckeditor5_premium_features_collaboration_filter:
-    id: ckeditor5_premium_features_collaboration_filter
-    provider: ckeditor5_premium_features
-    status: false
-    weight: -46
-    settings: {  }
-  linkit:
-    id: linkit
-    provider: linkit
-    status: false
-    weight: -31
-    settings:
-      title: true
+      replace_empty: '0'
