@@ -2,7 +2,7 @@ _core:
   default_config_hash: pKsqCbo4H9qyDQIT3gmyBoVwk3vfU79GXU_UWRikmI0
 cache:
   page:
-    max_age: 300
+    max_age: 900
 css:
   preprocess: true
   gzip: true
