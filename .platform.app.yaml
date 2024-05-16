@@ -15,7 +15,7 @@ runtime:
         - apcu
         - redis
         - blackfire
-disk: 45000
+disk: 51200
 mounts:
     /web/files:
         source: local
