@@ -8,5 +8,6 @@ _core:
   default_config_hash: tnRwJhVTIaMEM5JMx5AuV51iW_aPN7S1zcgMabs3paQ
 id: media.portrait_float_xp
 label: 'Portrait float XP'
+description: ''
 targetEntityType: media
 cache: true

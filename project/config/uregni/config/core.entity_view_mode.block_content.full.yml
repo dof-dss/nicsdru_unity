@@ -8,5 +8,6 @@ _core:
   default_config_hash: tNU_e_MvDHcLew_LgwhRDFBGRER6sVkSBrscX_c01GE
 id: block_content.full
 label: Full
+description: ''
 targetEntityType: block_content
 cache: true

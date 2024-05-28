@@ -8,5 +8,6 @@ _core:
   default_config_hash: QpSCuCmwn-TMN3gzCbI3OY00dzdKC1mVwzAz2d6uPY4
 id: node.token
 label: Token
+description: ''
 targetEntityType: node
 cache: true
