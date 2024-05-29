@@ -1,4 +1,4 @@
-uuid: null
+uuid: 7e19f14d-23c8-4a6a-b9e2-5028e0b10acf
 langcode: en
 status: true
 dependencies:
@@ -40,8 +40,10 @@ settings:
         - heading5
         - heading6
     ckeditor5_list:
-      reversed: true
-      startIndex: true
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
 image_upload: {  }
