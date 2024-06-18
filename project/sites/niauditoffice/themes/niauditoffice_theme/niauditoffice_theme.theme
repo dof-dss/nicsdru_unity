@@ -21,7 +21,7 @@ function niauditoffice_theme_preprocess_node(array &$variables) {
       // Check the type of the current publication to see if it
       // is 'Work in progress'.
       $topic = $variables['node']->get('field_publication_type');
-      if (!empty($topic)) {
+      if (!empty($topic->getValue('tid')[0]['target_id'])) {
         $topic_tid = $topic->getValue('tid')[0]['target_id'];
         if (isset($topic_tid) && ($topic_tid == $wip_tid)) {
           $variables['work_in_progress'] = TRUE;
