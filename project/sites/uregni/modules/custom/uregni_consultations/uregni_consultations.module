@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains uregni_consultations.module.
+ */
+
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_entity_presave().
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function uregni_consultations_entity_presave(EntityInterface $entity)
+{
+
+  if ($entity->bundle() == 'consultation') {
+
+  // Get the current time to gauge consultation start and end dates off.
+  $current_time = \Drupal::time()->getCurrentTime();
+
+  // Convert consultation start date to a timestamp.
+  $consultation_start_date = $entity->get('field_consultation_dates')->value;
+  $consultation_start_date_date_time = new DrupalDateTime($consultation_start_date, 'UTC');
+  $consultation_start_date_timestamp = $consultation_start_date_date_time->getTimestamp();
+
+  // Convert consultation end date to a timestamp.
+  $consultation_end_date = $entity->get('field_consultation_dates')->end_value;
+  $consultation_end_date_date_time = new DrupalDateTime($consultation_end_date, 'UTC');
+  $consultation_end_date_timestamp = $consultation_end_date_date_time->getTimestamp();
+
+
+    if ($current_time > $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+      $entity->field_current_status->value = "Current";
+    }
+    elseif ($current_time < $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+      $entity->field_current_status->value = "Upcoming";
+    }
+    else {
+      $entity->field_current_status->value = "Closed";
+    }
+
+    \Drupal::logger('uregni_consultations')->notice(t("Just a test message"));
+  }
+}
+
+
+

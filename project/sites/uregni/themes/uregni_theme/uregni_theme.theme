@@ -39,8 +39,12 @@ function uregni_theme_preprocess_node(array &$variables) {
     if ($current_time > $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
       $variables['consultation_in_progress'] = TRUE;
       // Text to display if the consultation is open or closed. Used in the search result view mode only.
-      $output = t('Open');
+      $output = t('Current');
     }
+    elseif ($current_time < $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+      // Text to display if the consultation is open or closed. Used in the search result view mode only.
+      $output = t('Upcoming');
+     }
     else {
       $output = t('Closed');
     }
@@ -49,7 +53,6 @@ function uregni_theme_preprocess_node(array &$variables) {
       // Replace the dates with text as to whether open or closed consultation.
       $variables['content']['field_consultation_dates']['status'] = Markup::create($output);
     }
-
   }
 }
 
