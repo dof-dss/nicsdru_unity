@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_consultation_dates
+    - field.storage.node.field_current_status
     - field.storage.node.field_published_date
     - field.storage.node.field_publication_topic
     - search_api.server.solr_default
@@ -82,6 +83,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_consultation_dates
+  field_current_status:
+    label: 'Current Status'
+    datasource_id: 'entity:node'
+    property_path: field_current_status
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_current_status
   field_publication_topic:
     label: Topic
     datasource_id: 'entity:node'
@@ -155,13 +164,17 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
   entity_status: {  }
+  entity_type: {  }
   highlight:
     weights:
       postprocess_query: 0
     prefix: '<strong>'
     suffix: '</strong>'
     excerpt: true
+    excerpt_always: false
     excerpt_length: 256
     exclude_fields: {  }
     highlight: always
@@ -194,4 +207,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
+  track_changes_in_references: true
 server: solr_default

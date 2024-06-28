@@ -1,0 +1,17 @@
+uuid: 53bd46cc-e710-4a90-a5d0-c283752e0af8
+langcode: en
+status: true
+dependencies:
+  module:
+    - uregni_consultations
+title: 'Default cron handler'
+id: uregni_consultations_cron
+weight: 0
+module: uregni_consultations
+callback: uregni_consultations_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

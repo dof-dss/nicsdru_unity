@@ -5,6 +5,7 @@ dependencies:
   config:
     - facets.facet.publication_date_consultation
   module:
+    - block_visibility_groups
     - facets
     - system
   theme:
@@ -20,10 +21,15 @@ settings:
   label: 'Publication date'
   label_display: visible
   provider: facets
+  context_mapping: {  }
   block_id: publicationdateconsultation
 visibility:
   request_path:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*"
+    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*\r\n/consultations/status/*"
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
