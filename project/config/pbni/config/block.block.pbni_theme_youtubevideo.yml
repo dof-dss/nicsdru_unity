@@ -1,0 +1,30 @@
+uuid: e6a7dfbc-5b89-4f83-9d7d-fc154d7c59ef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:06b3f40c-8f03-4b5c-bfe7-172b86626efc'
+  module:
+    - block_content
+    - system
+  theme:
+    - pbni_theme
+id: pbni_theme_youtubevideo
+theme: pbni_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'block_content:06b3f40c-8f03-4b5c-bfe7-172b86626efc'
+settings:
+  id: 'block_content:06b3f40c-8f03-4b5c-bfe7-172b86626efc'
+  label: 'YouTube Video'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
