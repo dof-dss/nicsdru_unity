@@ -20,7 +20,7 @@ function uregni_consultations_entity_presave(EntityInterface $entity)
     // Get the current time to gauge consultation start and end dates off.
     $current_time = \Drupal::time()->getCurrentTime();
 
-    $entity = updateConsultationstatus($entity, $current_time);
+    $entity = updateConsultationStatus($entity, $current_time);
   }
 }
 
