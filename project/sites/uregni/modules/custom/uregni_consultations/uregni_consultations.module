@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Contains uregni_consultations.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+
+/**
+ * Implements hook_entity_presave().
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function uregni_consultations_entity_presave(EntityInterface $entity)
+{
+  // Only run this code on consultations
+  if ($entity->bundle() == 'consultation') {
+
+    // Get the current time to gauge consultation start and end dates off.
+    $current_time = \Drupal::time()->getCurrentTime();
+
+    $entity = updateConsultationStatus($entity, $current_time);
+  }
+}
+
+/**
+ * Implements hook_cron().
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function uregni_consultations_cron()
+{
+  // Retrieve all consultations.
+  $consultations = \Drupal::entityTypeManager()->getStorage('node')
+    ->loadByProperties([
+      'type' => 'consultation'
+    ]);
+
+  // Get the current time to gauge consultation start and end dates off.
+  $current_time = \Drupal::time()->getCurrentTime();
+
+  // Loop through all consultations
+  foreach ($consultations as $consultation) {
+
+    $consultation = updateConsultationStatus($consultation, $current_time);
+
+    $consultation->save();
+  }
+}
+
+function updateConsultationStatus($consultation, $current_time) {
+
+  // Convert consultation start date to a timestamp.
+  $consultation_start_date = $consultation->get('field_consultation_dates')->value;
+  $consultation_start_date_date_time = new DrupalDateTime($consultation_start_date, 'UTC');
+  $consultation_start_date_timestamp = $consultation_start_date_date_time->getTimestamp();
+
+  // Convert consultation end date to a timestamp.
+  $consultation_end_date = $consultation->get('field_consultation_dates')->end_value;
+  $consultation_end_date_date_time = new DrupalDateTime($consultation_end_date, 'UTC');
+  $consultation_end_date_timestamp = $consultation_end_date_date_time->getTimestamp();
+
+  // Calculating date range field and outputting the relative label into the current_status field.
+  if ($current_time > $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+    $consultation->field_current_status->value = "Current";
+
+  } elseif ($current_time < $consultation_start_date_timestamp && $current_time <= $consultation_end_date_timestamp) {
+    $consultation->field_current_status->value = "Upcoming";
+
+  } else {
+    $consultation->field_current_status->value = "Closed";
+  }
+  return $consultation;
+}

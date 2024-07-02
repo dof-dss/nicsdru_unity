@@ -1,0 +1,34 @@
+uuid: c38ede66-8a4f-41e5-b707-c7c3f26f517e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.status
+  module:
+    - block_visibility_groups
+    - facets
+    - system
+  theme:
+    - uregni_theme
+id: uregni_theme_status
+theme: uregni_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:status'
+settings:
+  id: 'facet_block:status'
+  label: Status
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: uregni_theme_status
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/consultations\r\n/consultations/topic/*\r\n/consultations/date/*\r\n/consultations/status/*"
