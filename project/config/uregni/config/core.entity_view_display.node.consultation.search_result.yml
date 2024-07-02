@@ -17,7 +17,6 @@ dependencies:
     - node.type.consultation
   module:
     - datetime
-    - datetime_range
     - layout_builder
     - user
 third_party_settings:
@@ -31,13 +30,11 @@ targetEntityType: node
 bundle: consultation
 mode: search_result
 content:
-  field_consultation_dates:
-    type: daterange_default
+  field_current_status:
+    type: string
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
@@ -54,7 +51,7 @@ hidden:
   body: true
   content_moderation_control: true
   field_attachment: true
-  field_current_status: true
+  field_consultation_dates: true
   field_email_address: true
   field_meta_tags: true
   field_postal: true
