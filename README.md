@@ -1,23 +1,21 @@
-# Maestro Unity base
+# Unity 1 (6tlkpwbr6tndk) 
 
-This repository contains Drupal core along with contrib and shared custom modules or themes for Unity sites. It is never
-deployed direct to a hosting environment and instead is used to create 'server specific' forks.
-
-When a core or contrib update is required for Unity sites it is first performed against this repository, pushed to
-Github and then each 'server instance' fork will pull from this upstream source. It is imperative that any
-changes to the files within this repository are not altered directly on the server instance fork as any future pulls
-could possibly overwrite those changes.
-
-## Structure
-
-```
-└── .circleci/ (Circle CI configuration and supporting files)
-├── scripts (Drupal scripts)
-├── web (Drupal public web directory)
-├── .env.sample (Example environment file)
-├── drushmulti.sh (Drush for multisite instances)
-```
-
-## Licence
-Unless stated otherwise, the codebase is released under [the MIT License](http://www.opensource.org/licenses/mit-license.php). This covers both the codebase and any sample code in the documentation.
-# maestro-drupal-unity
+ | Site  | ID | URL | Status | Default |
+| --- | --- | --- | --- | --- | 
+| Utility Regulator | uregni | uregni.gov.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Office of the Discretionary Support Commissioner | odscni | odscni.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Fiscal Commission NI | fiscalcommissionni | fiscalcommissionni.org | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) | ![#e8f5e9](https://placehold.co/80x30/c8e6c9/1b5e20.png?text=Yes&font=source-sans-pro) | 
+| Muckamore Abbey Hospital Inquiry | mahinquiry | mahinquiry.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| NI Fiscal Council | nifiscalcouncil | nifiscalcouncil.org | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Organised Crime Task Force | octf | octf.gov.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Northern Ireland Audit Office | niauditoffice | niauditoffice.gov.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Industrial Tribunals and the Fair Employment Tribunal Northern Ireland | employmenttribunalsni | employmenttribunalsni.co.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Independent Review of Education | independentreviewofeducation | independentreviewofeducation.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Northern Ireland Policing Board | nipolicingboard | nipolicingboard.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Probation Board for Northern Ireland | pbni | pbni.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Independent Review of Invest NI | investnireview | investnireview.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Attorney General for Northern Ireland | attorneygeneralni | attorneygeneralni.gov.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| CSCS NI Review | cscsreviewni | cscsreviewni.net | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Policing and Community Safety Partnerships | pcsps | pcsps.org | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+| Urology Services Inquiry | urologyservicesinquiry | urologyservicesinquiry.org.uk | ![#e8f5e9](https://placehold.co/140x30/c8e6c9/1b5e20.png?text=Production&font=source-sans-pro) |   | 
+Last updated: 03/07/2024 14:16
