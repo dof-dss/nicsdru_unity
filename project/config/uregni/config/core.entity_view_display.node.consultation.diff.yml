@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.consultation.body
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
+    - field.field.node.consultation.field_current_status
     - field.field.node.consultation.field_email_address
     - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
@@ -30,11 +31,12 @@ third_party_settings:
     group_additional_content_details:
       children:
         - field_publication_topic
+        - field_current_status
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -98,6 +100,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_current_status:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_email_address:
     type: email_mailto
     label: visually_hidden
@@ -110,7 +120,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_postal:
     type: basic_string
