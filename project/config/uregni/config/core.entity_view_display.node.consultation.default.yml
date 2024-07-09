@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.consultation.body
     - field.field.node.consultation.field_attachment
     - field.field.node.consultation.field_consultation_dates
+    - field.field.node.consultation.field_current_status
     - field.field.node.consultation.field_email_address
     - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_postal
@@ -85,6 +86,7 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_current_status: true
   field_meta_tags: true
   field_publication_topic: true
   langcode: true
