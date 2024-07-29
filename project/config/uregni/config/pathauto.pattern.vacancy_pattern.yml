@@ -1,18 +1,18 @@
-uuid: 3c2ad428-3f4d-443b-b82c-39ad04da75d5
+uuid: 48f1dd97-9aff-444a-a1b9-dfa319cf64ce
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: vacancy
+id: vacancy_pattern
 label: 'Vacancy pattern'
 type: 'canonical_entities:node'
 pattern: 'vacancy/[node:title]'
 selection_criteria:
-  a2e68b33-4e66-467b-b60a-4c7aca586d79:
+  83a0f332-669d-4fbf-84f3-8dc2e29b5cf8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a2e68b33-4e66-467b-b60a-4c7aca586d79
+    uuid: 83a0f332-669d-4fbf-84f3-8dc2e29b5cf8
     context_mapping:
       node: node
     bundles:
