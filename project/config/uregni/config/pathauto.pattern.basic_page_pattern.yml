@@ -9,15 +9,14 @@ label: 'Basic page pattern'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  7bf6f2ea-8059-406a-8239-29c132d37229:
+  b9a60282-f669-41af-b331-a53521739e73:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 7bf6f2ea-8059-406a-8239-29c132d37229
+    uuid: b9a60282-f669-41af-b331-a53521739e73
     context_mapping:
       node: node
     bundles:
       page: page
-      vacancy: vacancy
       webform: webform
 selection_logic: and
 weight: -5
