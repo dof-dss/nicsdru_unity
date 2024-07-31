@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cceee1ce1f326a304d9b83bbd40e330b",
+    "content-hash": "bc227bf099811996d2e44caf637c8a43",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3508,26 +3508,26 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "4.0.4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "4.0.4"
+                "reference": "4.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-4.0.4.zip",
-                "reference": "4.0.4",
-                "shasum": "4a2474eb2fd525b2add2db0e855c135ba7f0fb70"
+                "url": "https://ftp.drupal.org/files/projects/ctools-4.1.0.zip",
+                "reference": "4.1.0",
+                "shasum": "69f5889cf557df9e55519390e6a95cfa31b67874"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10"
+                "drupal/core": "^9.5 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.4",
-                    "datestamp": "1684299878",
+                    "version": "4.1.0",
+                    "datestamp": "1718144949",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7116,30 +7116,37 @@
         },
         {
             "name": "drupal/scheduled_transitions",
-            "version": "2.3.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/scheduled_transitions.git",
-                "reference": "2.3.0"
+                "reference": "2.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/scheduled_transitions-2.3.0.zip",
-                "reference": "2.3.0",
-                "shasum": "240e389d549141e24ec9d7d7c2223cca7b4357ca"
+                "url": "https://ftp.drupal.org/files/projects/scheduled_transitions-2.5.0.zip",
+                "reference": "2.5.0",
+                "shasum": "0deda0f43d56e9d42ffe7e3ea5df5309e6f6f6a7"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10",
-                "drupal/dynamic_entity_reference": "^1.0 || ^2.0 || ^3.0 || ^4.0",
-                "php": ">=8.0"
+                "drupal/core": ">=10.2",
+                "drupal/dynamic_entity_reference": "^3.0 || ^4.0",
+                "php": ">=8.1"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
-                "drupal/coder": "^8.3",
-                "drush/drush": "^10 || ^11",
-                "mglaman/phpstan-drupal": "^1",
-                "phpstan/phpstan": "^1",
-                "phpstan/phpstan-deprecation-rules": "*"
+                "composer/installers": "2.x-dev",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1",
+                "drupal/core-composer-scaffold": "^10.1",
+                "drupal/core-dev": ">=10.1",
+                "drush/drush": ">=11",
+                "micheh/phpcs-gitlab": "^1.1",
+                "mockery/mockery": "^1.5",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-deprecation-rules": "*",
+                "phpstan/phpstan-mockery": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1@stable",
+                "previousnext/coding-standard": "^1"
             },
             "suggest": {
                 "drupal/token": "Shows Token UI on Add Scheduled Transitions form."
@@ -7147,17 +7154,20 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.3.0",
-                    "datestamp": "1670235101",
+                    "version": "2.5.0",
+                    "datestamp": "1718876455",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
+                "installer-paths": {
+                    "web/core": [
+                        "type:drupal-core"
+                    ],
+                    "web/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ]
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8500,27 +8510,28 @@
         },
         {
             "name": "drupal/token_filter",
-            "version": "2.0.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token_filter.git",
-                "reference": "2.0.0"
+                "reference": "2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token_filter-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "73a4dc759ed78d634d4414ec81febc3428ebd2a5"
+                "url": "https://ftp.drupal.org/files/projects/token_filter-2.2.1.zip",
+                "reference": "2.2.1",
+                "shasum": "1950ce8c0235418175e11c0d9ed15afbe1421dd7"
             },
             "require": {
-                "drupal/core": "^9.4 || ^10",
-                "drupal/token": "*"
+                "drupal/core": "^10 || ^11",
+                "drupal/token": "^1",
+                "php": ">=8.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1675762777",
+                    "version": "2.2.1",
+                    "datestamp": "1719183798",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8621,24 +8632,23 @@
         },
         {
             "name": "drupal/twig_tweak",
-            "version": "3.2.1",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "3.2.1"
+                "reference": "3.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.2.1.zip",
-                "reference": "3.2.1",
-                "shasum": "89fc08b60f494a7d786251b6c2c493c536218222"
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.4.0.zip",
+                "reference": "3.4.0",
+                "shasum": "1f47f71b4cfbad97fff11db1adc72c311bb1645e"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10.0",
+                "drupal/core": "^10.3 || ^11.0",
                 "ext-json": "*",
-                "php": ">=7.3",
-                "symfony/polyfill-php80": "^1.17",
-                "twig/twig": "^2.12 || ^3.3.8"
+                "php": ">=8.1",
+                "twig/twig": "^3.10.3"
             },
             "suggest": {
                 "symfony/var-dumper": "Better dump() function for debugging Twig variables"
@@ -8646,8 +8656,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.1",
-                    "datestamp": "1677404306",
+                    "version": "3.4.0",
+                    "datestamp": "1721562308",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8655,7 +8665,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
