@@ -281,10 +281,11 @@ display:
         type: slick
         options:
           caption:
-            title: '0'
-          optionset: uregni
+            field_link_url: '0'
+            field_photo: '0'
+            field_teaser: '0'
+          optionset: default
           class: ''
-          id: ''
           image: ''
           link: ''
           overlay: ''
@@ -292,15 +293,16 @@ display:
           vanilla: true
           layout: ''
           cache: 0
-          current_view_mode: block_1
+          admin_uri: '/admin/structure/views/ajax/display/slideshow/slideshow/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: ''
           skin: default
-          grid: null
-          grid_medium: null
-          grid_small: null
           overridables:
-            arrows: '0'
+            arrows: arrows
+            dots: dots
             autoplay: '0'
-            dots: '0'
             draggable: '0'
             infinite: '0'
             mouseWheel: '0'
@@ -312,7 +314,7 @@ display:
           thumbnail_caption: ''
           thumbnail_effect: ''
           thumbnail_position: ''
-          override: false
+          override: true
           preserve_keys: false
           visible_items: null
       row:
@@ -437,7 +439,9 @@ display:
           limit_queue: slideshow
       display_description: ''
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
