@@ -40,10 +40,23 @@
                     "composer/installers": "^1.2.0"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "accessible360/accessible-slick",
+                "version": "1.0.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/Accessible360/accessible-slick/archive/refs/tags/v1.0.1.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
         "composer-runtime-api": "*",
+        "accessible360/accessible-slick": "^1.0",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "dof-dss/nicsdru_origins_modules": "^10.3",
@@ -55,7 +68,7 @@
         "drupal/allowed_formats": "^2.0",
         "drupal/antibot": "^2.0",
         "drupal/auto_entityqueue": "^2.1",
-        "drupal/blazy": "2.16.0",
+        "drupal/blazy": "^3.0",
         "drupal/block_content_permissions": "^1.11",
         "drupal/block_field": "^1.0@RC",
         "drupal/block_list_override": "^1.0",
@@ -137,9 +150,10 @@
         "drupal/seven": "^1.0",
         "drupal/shs": "^2.0@RC",
         "drupal/simplei": "^2.1",
-        "drupal/slick": "2.9.0",
-        "drupal/slick_views": "2.7.0",
+        "drupal/slick": "^3.0",
+        "drupal/slick_views": "^3.0",
         "drupal/smart_date": "^4.0",
+        "drupal/splide": "^2.0",
         "drupal/stable": "^2.0",
         "drupal/structure_sync": "^2.0",
         "drupal/taxonomy_access_fix": "^4.0",
@@ -242,9 +256,6 @@
                 "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch",
                 "URL redirects listing only displays operations": "https://www.drupal.org/files/issues/2019-04-05/redirects_list_builder-3031125-9-d8.patch",
                 "Fix ajax error when creating redirects": "https://www.drupal.org/files/issues/2020-12-14/validation-issue-3057250-29.patch"
-            },
-            "drupal/slick": {
-                "PHP 8.2 compatibility": "https://git.drupalcode.org/issue/slick-3373261/-/commit/4035fef4eb48df2a2859d6c2785357d6071f9e72.patch"
             },
             "drupal/ultimate_cron": {
                 "Fix $last_ran deprecation error": "https://www.drupal.org/files/issues/2023-04-03/3351276-4.patch"
