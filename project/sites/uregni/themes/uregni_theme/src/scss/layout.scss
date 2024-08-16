@@ -26,7 +26,8 @@
 }
 
 .slick--view--slideshow {
-  .slick__slide {
+  .slick__slide,
+  .slick-slide {
     .slide__caption {
       @include adjust-font-size-to(20px);
       background: rgba(0, 0, 0, .85);

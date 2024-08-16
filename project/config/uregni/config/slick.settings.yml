@@ -3,5 +3,5 @@ _core:
 library: accessible-slick
 module_css: true
 slick_css: true
-sitewide: 0
+sitewide: 1
 disable_old_skins: false

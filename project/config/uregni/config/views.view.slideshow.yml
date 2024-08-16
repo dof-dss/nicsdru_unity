@@ -284,7 +284,7 @@ display:
             field_link_url: '0'
             field_photo: '0'
             field_teaser: '0'
-          optionset: default
+          optionset: uregni_set
           class: ''
           image: ''
           link: ''
@@ -292,7 +292,7 @@ display:
           title: ''
           vanilla: true
           layout: ''
-          cache: 0
+          cache: 300
           admin_uri: '/admin/structure/views/ajax/display/slideshow/slideshow/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
@@ -300,9 +300,9 @@ display:
           style: ''
           skin: default
           overridables:
-            arrows: arrows
-            dots: dots
+            arrows: '0'
             autoplay: '0'
+            dots: '0'
             draggable: '0'
             infinite: '0'
             mouseWheel: '0'
@@ -314,7 +314,7 @@ display:
           thumbnail_caption: ''
           thumbnail_effect: ''
           thumbnail_position: ''
-          override: true
+          override: false
           preserve_keys: false
           visible_items: null
       row:
