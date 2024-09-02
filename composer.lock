@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c61c4ad0b54dcbe750b4bfa3db07a74",
+    "content-hash": "84d439a6c9740957b19d8a7a6270600c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1705,16 +1705,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "10.1.17",
+            "version": "dev-dialog-aggreg",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "74c2fe94329ab4c76a983f24e170bbf778be24aa"
+                "reference": "e6fd4ab17525353099cdc775144accad6ec8f900"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/74c2fe94329ab4c76a983f24e170bbf778be24aa",
-                "reference": "74c2fe94329ab4c76a983f24e170bbf778be24aa",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/e6fd4ab17525353099cdc775144accad6ec8f900",
+                "reference": "e6fd4ab17525353099cdc775144accad6ec8f900",
                 "shasum": ""
             },
             "require": {
@@ -1728,9 +1728,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.1.17"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/dialog-aggreg"
             },
-            "time": "2024-08-28T12:38:50+00:00"
+            "time": "2024-09-02T09:51:52+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -22228,6 +22228,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_unity_modules": 20,
         "drupal/block_field": 5,
         "drupal/ckeditor5_allowed_html": 20,
         "drupal/clone_nodes": 20,
