@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84d439a6c9740957b19d8a7a6270600c",
+    "content-hash": "65999c105ef14d9ef584f93f7b629d0e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1675,16 +1675,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "10.4.0",
+            "version": "dev-moderation-sidebar-error",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "6e438fd21a9c2aa9f821fc1de62a59c0eb25cda4"
+                "reference": "6b9b7b8f924906d63a173d6ccb01329098436810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/6e438fd21a9c2aa9f821fc1de62a59c0eb25cda4",
-                "reference": "6e438fd21a9c2aa9f821fc1de62a59c0eb25cda4",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/6b9b7b8f924906d63a173d6ccb01329098436810",
+                "reference": "6b9b7b8f924906d63a173d6ccb01329098436810",
                 "shasum": ""
             },
             "require": {
@@ -1699,9 +1699,9 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.4.0"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/moderation-sidebar-error"
             },
-            "time": "2024-08-21T11:21:24+00:00"
+            "time": "2024-09-03T12:56:44+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
@@ -22228,6 +22228,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_origins_modules": 20,
         "dof-dss/nicsdru_unity_modules": 20,
         "drupal/block_field": 5,
         "drupal/ckeditor5_allowed_html": 20,
