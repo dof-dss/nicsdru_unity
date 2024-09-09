@@ -18,6 +18,7 @@ report-only:
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
+        - 'https://use.typekit.net'
     frame-src:
       base: self
       sources:
