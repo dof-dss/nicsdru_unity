@@ -65,6 +65,7 @@ report-only:
         - unpkg.com
         - 'https://*.newrelic.com'
         - 'https://*.nr-data.net'
+        - 'https://p.typekit.net'
     style-src:
       base: self
       sources:
@@ -85,6 +86,7 @@ report-only:
         - cdnjs.cloudflare.com
         - fonts.googleapis.com
         - unpkg.com
+        - 'https://p.typekit.net'
     block-all-mixed-content: true
   reporting:
     plugin: none
