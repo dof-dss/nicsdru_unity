@@ -151,33 +151,85 @@
       -o-transition: all 200ms ease-in-out;
       transition: all 200ms ease-in-out;
 
+      &.slick-prev,
+      &.slick-next {
+        background: $white;
+        opacity: .75;
+        border: 1px solid transparent;
+
+      //  &:hover {
+      //    opacity: 1;
+      //
+      //    &:before {
+      //      opacity: 1;
+      //    }
+      //  }
+      //
+      //  &:focus {
+      //    opacity: .75;
+      //    top: .1rem;
+      //
+      //    &:before {
+      //      content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-10%3C/title%3E%3Cg id="Left-3" data-name="Left"%3E%3Cpath d="M21,8H11V5a1,1,0,0,0-1.707-.707l-7,7a1,1,0,0,0,0,1.414l7,7A1,1,0,0,0,11,19V16H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8Z" style="fill:%23fff"/%3E%3C/g%3E%3C/svg%3E');
+      //    }
+      //  }
+      //
+      //  &::before {
+      //    font-size: 44px;
+      //    opacity: .75;
+      //    color: white;
+      //    -webkit-font-smoothing: antialiased;
+      //    -moz-osx-font-smoothing: grayscale;
+      //    content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-10%3C/title%3E%3Cg id="Left-3" data-name="Left"%3E%3Cpath d="M21,8H11V5a1,1,0,0,0-1.707-.707l-7,7a1,1,0,0,0,0,1.414l7,7A1,1,0,0,0,11,19V16H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E%0A');
+      //  }
+      //}
+
       &.slick-prev {
         left: 0;
-
-        &::before {
-          font-size: 44px;
-          opacity: .75;
-          color: white;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          font-family: $slick-arrow;
-          content: '←';
-
-        }
       }
 
       &.slick-next {
-        left: 44px;
+        left: 47px;
       }
 
-      &::before {
-        font-size: 44px;
-        opacity: .75;
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-family: $slick-arrow;
-        content: '→';
+     &.slick-prev,
+        &.slick-next {
+       &:before {
+         width: 36px;
+         height: 36px;
+         display: inline-block;
+         content: '';
+         -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-9%3C/title%3E%3Cg id="Right-3" data-name="Right"%3E%3Cpath d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E') no-repeat 50% 50%;
+         mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-9%3C/title%3E%3Cg id="Right-3" data-name="Right"%3E%3Cpath d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E') no-repeat 50% 50%;
+         -webkit-mask-size: cover;
+         mask-size: cover;
+         background-color: $black;
+         opacity: .85;
+       }
+
+       &:hover {
+         opacity: 1;
+
+         &:before {
+           opacity: 1;
+         }
+       }
+
+       &:focus {
+         opacity: 1;
+         top: 1px;
+
+         &:before {
+           background-color: #ff6d2c;
+         }
+       }
+     }
+
+        &.slick-prev {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
       }
 
       &:hover {
@@ -198,16 +250,28 @@
     bottom: -35px;
 
     li {
+      margin-bottom: 0;
+      vertical-align: bottom;
+
+      &.slick-active button:focus {
+        outline: none;
+      }
+
       button {
         background: none !important;
         border: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
         position: unset !important;
+        padding: 0 !important;
 
         &:focus {
           outline: 3px solid #333;
           outline-offset: 0;
+        }
+
+        .slick-dot-icon::before {
+          left: -.5px
         }
       }
 
@@ -218,8 +282,9 @@
       }
 
       &.slick-active {
-        button::before {
-          color: #000;
+        button .slick-dot-icon::before {
+          font-size: 12px;
+          margin: 0;
         }
       }
     }
