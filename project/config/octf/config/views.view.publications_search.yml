@@ -100,6 +100,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 20
           total_pages: null
           id: 0
@@ -304,6 +305,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.default_content'
+        - 'search_api_list:default_content'
   home_publications:
     id: home_publications
     display_title: 'Publications Front Block'
@@ -425,19 +427,20 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.default_content'
+        - 'search_api_list:default_content'
   publication_search_page:
     id: publication_search_page
     display_title: Page
     display_plugin: page
     position: 1
     display_options:
-      cache:
-        type: none
       defaults:
-        cache: false
+        cache: true
       exposed_block: true
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: publications
       menu:
         type: normal
@@ -445,7 +448,7 @@ display:
         weight: -46
         menu_name: main
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -453,5 +456,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.date'
+        - 'config:facets.facet.type'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.default_content'
+        - 'search_api_list:default_content'
