@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: rl8AmIE0lzl5PrOA9RVmIqZUeqKyCtNmOhaQMJaRQoE
 report-only:
   enable: true
   directives:
@@ -10,6 +8,8 @@ report-only:
       sources:
         - 'https://www.google-analytics.com'
         - 'https://region1.google-analytics.com'
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
     font-src:
       base: self
       sources:
@@ -18,11 +18,12 @@ report-only:
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
-        - '*.typekit.com'
+        - 'https://use.typekit.net'
     frame-src:
       base: self
       sources:
         - 'https://www.youtube.com'
+        - 'https://www.vimeo.com'
     img-src:
       base: self
       sources:
@@ -42,23 +43,50 @@ report-only:
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - unpkg.com
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
+        - 'https://app.feedblitz.com'
     script-src-attr:
       base: self
+      flags:
+        - unsafe-hashes
+      sources:
+        - 'https://app.feedblitz.com'
     script-src-elem:
       base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - unpkg.com
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
+        - 'https://p.typekit.net'
     style-src:
       base: self
       sources:
-        - '*.typekit.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - fonts.googleapis.com
+        - unpkg.com
     style-src-attr:
       base: self
       flags:
         - unsafe-inline
     style-src-elem:
       base: self
+      flags:
+        - unsafe-inline
+      sources:
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - fonts.googleapis.com
+        - unpkg.com
+        - 'https://p.typekit.net'
     block-all-mixed-content: true
   reporting:
     plugin: none
