@@ -8,6 +8,7 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url:absolute]'
+  google_site_verification: rbQWzC2B7z7T1s646_J6y_vXm3QDX_g1W1W2rdFZ4iI
   shortlink: '[current-page:url:unaliased]'
   title: '[current-page:title] | [site:name]'
   og_site_name: '[site:name]'
