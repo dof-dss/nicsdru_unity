@@ -34,6 +34,7 @@ EXCLUDE=$(IFS=, ; echo "${DRUPAL_EXCLUDED_SNIFFS[*]}")
 ${PHPCS_PATH} -nq --standard=Drupal --extensions=${PHPCS_EXTENSIONS} --exclude=${EXCLUDE} --ignore=${IGNORE} ${PHPCS_CHECK_DIR}
 if [ $? != 0 ]
 then
+    echo "🚫 Drupal coding standards checks failed, see above for details 🚫"
     exit 1
 fi
 
@@ -42,5 +43,9 @@ EXCLUDE=$(IFS=, ; echo "${DRUPAL_PRACTICE_EXCLUDED_SNIFFS[*]}")
 ${PHPCS_PATH} -nq --standard=DrupalPractice --extensions=${PHPCS_EXTENSIONS} --exclude=${EXCLUDE} --ignore=${IGNORE} ${PHPCS_CHECK_DIR}
 if [ $? != 0 ]
 then
+    echo "🚫 Drupal best practice checks failed, see above for details 🚫"
     exit 1
 fi
+
+## Make it clearer when the script succeeds.
+echo "LGTM ✅"
