@@ -37,6 +37,7 @@ node_modules/
 # Ignore .env files as they are personal
 .env
 
+
 # Ignore raw SQL files, potentially dangerous.
 *.sql
 *.sql.gz
@@ -46,6 +47,9 @@ node_modules/
 .lando.local.yml
 .lando/config/
 .lando/private
+
+# Ignore local DDev files
+.ddev/.env
 
 # Misc tooling files to ingore.
 .swp
