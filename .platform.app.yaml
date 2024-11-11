@@ -5,7 +5,7 @@
 # original repository.Any changes here will be overwritten when the project #
 # is built.                                                                 #
 #############################################################################
-name: unity.1
+name: unity_1
 type: 'php:8.3'
 dependencies:
     php:

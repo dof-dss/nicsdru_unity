@@ -7,7 +7,7 @@
 #############################################################################
 'https://www.fiscalcommissionni.org.{default}/':
     type: upstream
-    upstream: 'unity.1:http'
+    upstream: 'unity_1:http'
     cache:
         enabled: 'false'
 'https://fiscalcommissionni.org.{default}/':
@@ -15,7 +15,7 @@
     to: 'https://www.fiscalcommissionni.org.{default}/'
 'https://www.{all}/':
     type: upstream
-    upstream: 'unity.1:http'
+    upstream: 'unity_1:http'
     cache:
         enabled: 'false'
 'https://{all}/':
