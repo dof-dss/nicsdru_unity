@@ -1,0 +1,27 @@
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
+services:
+    solr:
+        volumes:
+            - './solr-cores/uregni:/solr-uregni-conf'
+            - './solr-cores/odscni:/solr-odscni-conf'
+            - './solr-cores/fiscalcommissionni:/solr-fiscalcommissionni-conf'
+            - './solr-cores/mahinquiry:/solr-mahinquiry-conf'
+            - './solr-cores/nifiscalcouncil:/solr-nifiscalcouncil-conf'
+            - './solr-cores/octf:/solr-octf-conf'
+            - './solr-cores/niauditoffice:/solr-niauditoffice-conf'
+            - './solr-cores/employmenttribunalsni:/solr-employmenttribunalsni-conf'
+            - './solr-cores/independentreviewofeducation:/solr-independentreviewofeducation-conf'
+            - './solr-cores/nipolicingboard:/solr-nipolicingboard-conf'
+            - './solr-cores/pbni:/solr-pbni-conf'
+            - './solr-cores/investnireview:/solr-investnireview-conf'
+            - './solr-cores/attorneygeneralni:/solr-attorneygeneralni-conf'
+            - './solr-cores/cscsreviewni:/solr-cscsreviewni-conf'
+            - './solr-cores/pcsps:/solr-pcsps-conf'
+            - './solr-cores/urologyservicesinquiry:/solr-urologyservicesinquiry-conf'
+        entrypoint: 'bash -c "VERBOSE=yes docker-entrypoint.sh precreate-core uregni /solr-uregni-conf; precreate-core odscni /solr-odscni-conf; precreate-core fiscalcommissionni /solr-fiscalcommissionni-conf; precreate-core mahinquiry /solr-mahinquiry-conf; precreate-core nifiscalcouncil /solr-nifiscalcouncil-conf; precreate-core octf /solr-octf-conf; precreate-core niauditoffice /solr-niauditoffice-conf; precreate-core employmenttribunalsni /solr-employmenttribunalsni-conf; precreate-core independentreviewofeducation /solr-independentreviewofeducation-conf; precreate-core nipolicingboard /solr-nipolicingboard-conf; precreate-core pbni /solr-pbni-conf; precreate-core investnireview /solr-investnireview-conf; precreate-core attorneygeneralni /solr-attorneygeneralni-conf; precreate-core cscsreviewni /solr-cscsreviewni-conf; precreate-core pcsps /solr-pcsps-conf; precreate-core urologyservicesinquiry /solr-urologyservicesinquiry-conf; exec solr -f"'
