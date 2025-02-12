@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e836f579038e25374cd83397b6a71d1",
+    "content-hash": "2e232f877c54de739a9e9dba82a21bf9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -213,16 +213,16 @@
         },
         {
             "name": "caxy/php-htmldiff",
-            "version": "v0.1.14",
+            "version": "v0.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caxy/php-htmldiff.git",
-                "reference": "3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5"
+                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5",
-                "reference": "3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5",
+                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
+                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
                 "shasum": ""
             },
             "require": {
@@ -268,9 +268,9 @@
             ],
             "support": {
                 "issues": "https://github.com/caxy/php-htmldiff/issues",
-                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.14"
+                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.15"
             },
-            "time": "2022-01-19T11:09:59+00:00"
+            "time": "2023-11-05T23:49:04+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -1675,16 +1675,16 @@
         },
         {
             "name": "dof-dss/nicsdru_origins_modules",
-            "version": "10.4.1",
+            "version": "10.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_origins_modules.git",
-                "reference": "906059f4af77c3f727a6f1b4b766b085342d838b"
+                "reference": "0d96d5bcd7b56c342324a2c6a6a42c4c11faf0c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/906059f4af77c3f727a6f1b4b766b085342d838b",
-                "reference": "906059f4af77c3f727a6f1b4b766b085342d838b",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_origins_modules/zipball/0d96d5bcd7b56c342324a2c6a6a42c4c11faf0c5",
+                "reference": "0d96d5bcd7b56c342324a2c6a6a42c4c11faf0c5",
                 "shasum": ""
             },
             "require": {
@@ -1699,22 +1699,22 @@
             "description": "Generic modules for DOF-DSS Drupal sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_origins_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.4.1"
+                "source": "https://github.com/dof-dss/nicsdru_origins_modules/tree/10.4.4"
             },
-            "time": "2024-09-05T10:39:36+00:00"
+            "time": "2024-12-11T12:00:37+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "10.1.18",
+            "version": "10.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "877687239b03c55840c3409c527a53dce7be5397"
+                "reference": "589431cae7e14b1e682fd81b00e8ab4a8fb2cda5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/877687239b03c55840c3409c527a53dce7be5397",
-                "reference": "877687239b03c55840c3409c527a53dce7be5397",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/589431cae7e14b1e682fd81b00e8ab4a8fb2cda5",
+                "reference": "589431cae7e14b1e682fd81b00e8ab4a8fb2cda5",
                 "shasum": ""
             },
             "require": {
@@ -1728,9 +1728,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.1.18"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/10.1.20"
             },
-            "time": "2024-10-09T11:25:18+00:00"
+            "time": "2024-11-15T15:59:25+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
@@ -2504,11 +2504,11 @@
         },
         {
             "name": "drupal/ckeditor5_allowed_html",
-            "version": "dev-1.2.x",
+            "version": "dev-1.5.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_allowed_html.git",
-                "reference": "66db8fef57d6b4ccfa42bbea3039482f1282cde2"
+                "reference": "1ac530b30f4a07b17e14e2e520c1f722357bf5b4"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11"
@@ -2516,11 +2516,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.2.x": "1.2.x-dev"
+                    "dev-1.5.x": "1.5.x-dev"
                 },
                 "drupal": {
-                    "version": "1.2.x-dev",
-                    "datestamp": "1711446853",
+                    "version": "1.5.x-dev",
+                    "datestamp": "1729178881",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2533,7 +2533,7 @@
             ],
             "authors": [
                 {
-                    "name": "DuttonMa",
+                    "name": "duttonma",
                     "homepage": "https://www.drupal.org/user/2250396"
                 }
             ],
@@ -4123,7 +4123,7 @@
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
-                    "name": "Devin Carlson",
+                    "name": "devin carlson",
                     "homepage": "https://www.drupal.org/user/290182"
                 },
                 {
@@ -4139,7 +4139,7 @@
                     "homepage": "https://www.drupal.org/user/471638"
                 },
                 {
-                    "name": "Primsi",
+                    "name": "primsi",
                     "homepage": "https://www.drupal.org/user/282629"
                 },
                 {
@@ -5155,25 +5155,25 @@
         },
         {
             "name": "drupal/google_tag",
-            "version": "2.0.6",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "2.0.6"
+                "reference": "2.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.6.zip",
-                "reference": "2.0.6",
-                "shasum": "c8f2895a81a7898ac909bdc693fcd25ffe6f62be"
+                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.8.zip",
+                "reference": "2.0.8",
+                "shasum": "af12c74ec367c1c1319ea710f8fb6feefb100a6e"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
             },
             "require-dev": {
-                "drupal/commerce": "^2.0",
+                "drupal/commerce": "^2.0 || ^3.0",
                 "drupal/commerce_wishlist": "^3.0@beta",
-                "drupal/csp": "^1.0",
+                "drupal/csp": "^1.0 || ~2.1.1",
                 "drupal/google_analytics": "^4.0",
                 "drupal/search_api": "^1.28.0",
                 "drupal/token": "^1.11.0",
@@ -5182,8 +5182,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.6",
-                    "datestamp": "1721948116",
+                    "version": "2.0.8",
+                    "datestamp": "1738172706",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8508,50 +8508,6 @@
             }
         },
         {
-            "name": "drupal/timefield_d10",
-            "version": "dev-1.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/timefield_d10.git",
-                "reference": "b2995d80c6d3a2eb0cd5f3655e3ea68af7823a92"
-            },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9 || ^10"
-            },
-            "suggest": {
-                "fgelinas/timepicker": "Required to use drupal/timefield. jQuery UI Timepicker a jQuery UI time picker plugin build to match with other official jQuery UI widgets. Based on the existing date picker, it will blend nicely with your form and use your selected jQuery UI theme. The plugin is very easy to integrate in your form for you time (hours / minutes) inputs."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1692282877",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "DuttonMa",
-                    "homepage": "https://www.drupal.org/user/2250396"
-                }
-            ],
-            "description": "Implements a time field (HH:MM), with optional to time and weekly repeat value.",
-            "homepage": "http://drupal.org/project/timefield",
-            "support": {
-                "source": "https://git.drupalcode.org/project/timefield_d10"
-            }
-        },
-        {
             "name": "drupal/token",
             "version": "1.12.0",
             "source": {
@@ -9409,20 +9365,20 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.16.0",
+            "version": "v4.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "523407fb06eb9e5f3d59889b3978d5bfe94299c8"
+                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/523407fb06eb9e5f3d59889b3978d5bfe94299c8",
-                "reference": "523407fb06eb9e5f3d59889b3978d5bfe94299c8",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/bbc513d79acf6691fa9cf10f192c90dd2957f18c",
+                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0"
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
             },
             "require-dev": {
                 "cerdic/css-tidy": "^1.7 || ^2.0",
@@ -9464,9 +9420,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.16.0"
+                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.17.0"
             },
-            "time": "2022-09-18T07:06:19+00:00"
+            "time": "2023-11-17T15:01:25+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -17159,16 +17115,16 @@
         },
         {
             "name": "dof-dss/maestro-hosting",
-            "version": "1.0.29",
+            "version": "1.0.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-hosting.git",
-                "reference": "43d270feca002732eb54ea1d54803bb139023359"
+                "reference": "79c4128f206c946c2542ab9ab90a90bcd8cfe586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/43d270feca002732eb54ea1d54803bb139023359",
-                "reference": "43d270feca002732eb54ea1d54803bb139023359",
+                "url": "https://api.github.com/repos/dof-dss/maestro-hosting/zipball/79c4128f206c946c2542ab9ab90a90bcd8cfe586",
+                "reference": "79c4128f206c946c2542ab9ab90a90bcd8cfe586",
                 "shasum": ""
             },
             "require": {
@@ -17193,22 +17149,22 @@
             "description": "Maestro hosting resources",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-hosting/issues",
-                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0.29"
+                "source": "https://github.com/dof-dss/maestro-hosting/tree/1.0.36"
             },
-            "time": "2024-07-03T14:13:29+00:00"
+            "time": "2024-11-21T10:13:05+00:00"
         },
         {
             "name": "dof-dss/maestro-shell",
-            "version": "10.1.2",
+            "version": "10.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/maestro-shell.git",
-                "reference": "e89f2c12d7744e92b44a920c0c0a5a8f3d1138df"
+                "reference": "4484f484b72941dbff5a1af0470e1255f7b08537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/maestro-shell/zipball/e89f2c12d7744e92b44a920c0c0a5a8f3d1138df",
-                "reference": "e89f2c12d7744e92b44a920c0c0a5a8f3d1138df",
+                "url": "https://api.github.com/repos/dof-dss/maestro-shell/zipball/4484f484b72941dbff5a1af0470e1255f7b08537",
+                "reference": "4484f484b72941dbff5a1af0470e1255f7b08537",
                 "shasum": ""
             },
             "require": {
@@ -17251,9 +17207,9 @@
             "description": "Shell for working with Maestro projects.",
             "support": {
                 "issues": "https://github.com/dof-dss/maestro-shell/issues",
-                "source": "https://github.com/dof-dss/maestro-shell/tree/10.1.2"
+                "source": "https://github.com/dof-dss/maestro-shell/tree/10.1.5"
             },
-            "time": "2024-03-20T16:06:13+00:00"
+            "time": "2024-11-12T14:34:10+00:00"
         },
         {
             "name": "drupal/coder",
@@ -22605,6 +22561,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_update": 15,
         "drupal/date_facet_drilldown": 20,
+        "drupal/easy_install_d10": 20,
         "drupal/file_delete_ui": 10,
         "drupal/flag": 10,
         "drupal/inline_entity_form": 5,
@@ -22614,15 +22571,13 @@
         "drupal/scheduler_content_moderation_integration": 10,
         "drupal/search_api_location": 15,
         "drupal/shs": 5,
-        "drupal/timefield_d10": 20,
-        "drupal/ultimate_cron": 15,
-        "drupal/easy_install_d10": 20
+        "drupal/ultimate_cron": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "composer-runtime-api": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
