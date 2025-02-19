@@ -6,6 +6,9 @@ id: local
 label: local
 description: "Local development split. \r\nEnables debugging and development modules"
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../project/config/nipolicingboard/local
 module:
   clone_nodes: 0
@@ -19,8 +22,6 @@ module:
   stage_file_proxy: 0
   views_ui: 0
 theme: {  }
-blacklist:
+complete_list:
   - search_api.server.solr_default
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }
