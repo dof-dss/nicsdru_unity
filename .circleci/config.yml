@@ -231,6 +231,7 @@ jobs:
             sleep 300s
             platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
           when: on_fail
+          no_output_timeout: 30m
       - run:
           name: Run any outstanding updates
           command: |
