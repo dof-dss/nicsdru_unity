@@ -10,8 +10,8 @@ default_docker_image: &docker_image
         PHP_EXTENSION_GD: 1
         PHP_EXTENSIONS: "gd"
         PHP_INI_MEMORY_LIMIT: -1
-        PHP_INI_MAX_EXECUTION_TIME: 60
-        PHP_INI_MAX_INPUT_TIME: 60
+        PHP_INI_MAX_EXECUTION_TIME: 600
+        PHP_INI_MAX_INPUT_TIME: 600
         # git variables to avoid empty committer identity errors
         EMAIL: "circleci@localhost"
         GIT_COMMITTER_NAME: "Circle CI"
@@ -346,8 +346,8 @@ workflows:
           equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
     triggers:
       - schedule:
-          # At 01:23 Monday to Friday
-          cron: "55 1 * * 1-5"
+          # At 02:55 Monday to Friday
+          cron: "55 2 * * 1-5"
           filters:
             branches:
               only:
