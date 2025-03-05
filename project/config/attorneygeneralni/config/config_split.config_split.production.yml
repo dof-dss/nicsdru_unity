@@ -6,11 +6,14 @@ id: production
 label: production
 description: 'Used for production site.'
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../project/config/attorneygeneralni/production
 module:
   fastly: 0
 theme: {  }
-blacklist:
+complete_list:
   - search_api.server.solr_default
   - fastly.settings
 graylist:
