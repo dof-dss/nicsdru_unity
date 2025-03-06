@@ -10,8 +10,8 @@ default_docker_image: &docker_image
         PHP_EXTENSION_GD: 1
         PHP_EXTENSIONS: "gd"
         PHP_INI_MEMORY_LIMIT: -1
-        PHP_INI_MAX_EXECUTION_TIME: 60
-        PHP_INI_MAX_INPUT_TIME: 60
+        PHP_INI_MAX_EXECUTION_TIME: 600
+        PHP_INI_MAX_INPUT_TIME: 600
         # git variables to avoid empty committer identity errors
         EMAIL: "circleci@localhost"
         GIT_COMMITTER_NAME: "Circle CI"
@@ -223,6 +223,7 @@ jobs:
           name: Trigger a data sync from master environment to nightly edge build.
           command: |
             platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
+          no_output_timeout: 20m
       - run:
           name: Backup data sync if the previous attempt failed.
           command: |
@@ -230,6 +231,7 @@ jobs:
             sleep 300s
             platform sync data -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH -y
           when: on_fail
+          no_output_timeout: 30m
       - run:
           name: Run any outstanding updates
           command: |
@@ -240,6 +242,7 @@ jobs:
                 result2=$(platform drush "updb -l ${site} -y" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
             fi
             done
+          no_output_timeout: 20m
       - run:
           name: Turn off fastly module to allow for cleaner config import
           command: |
@@ -343,8 +346,8 @@ workflows:
           equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
     triggers:
       - schedule:
-          # At 01:23 Monday to Friday
-          cron: "55 1 * * 1-5"
+          # At 02:55 Monday to Friday
+          cron: "55 2 * * 1-5"
           filters:
             branches:
               only:

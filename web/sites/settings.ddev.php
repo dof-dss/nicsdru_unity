@@ -25,6 +25,8 @@ $databases[$subsite_id . '7']['default'] = [
   'driver' => getenv('DB_DRIVER'),
 ];
 
+$databases['migrate']['default'] = $databases[$subsite_id . '7']['default'];
+
 // Recommended setting for Drupal 10 only.
 $settings['state_cache'] = TRUE;
 

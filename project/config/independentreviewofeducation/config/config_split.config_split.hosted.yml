@@ -6,10 +6,11 @@ id: hosted
 label: hosted
 description: "Use for any that are 'hosted' and not running locally, apart from production (which has its own split).\t"
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../project/config/independentreviewofeducation/hosted
 module: {  }
 theme: {  }
-blacklist: {  }
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+complete_list: {  }
+partial_list: {  }
