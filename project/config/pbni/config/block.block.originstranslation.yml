@@ -1,0 +1,25 @@
+uuid: 16562ffe-45db-40c6-aa02-d04bb2913b1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - origins_translations
+    - system
+  theme:
+    - pbni_theme
+id: originstranslation
+theme: pbni_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: origins_translations_block
+settings:
+  id: origins_translations_block
+  label: 'Translation help'
+  label_display: visible
+  provider: origins_translations
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/translation-page\r\n/translations"
