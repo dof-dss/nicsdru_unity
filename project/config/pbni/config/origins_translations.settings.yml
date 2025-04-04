@@ -1,0 +1,9 @@
+domain: ''
+ui-position: ot-br
+override_default_route: 0
+override_url: ''
+title: 'Translation help'
+summary: 'You can use free translation tools to translate web pages into languages other than English. '
+content:
+  value: '<h2 id="toc-0">Translate using Google Translate</h2><p>You can translate NI Policing Board to a different language by using the Google Translate web service.&nbsp;</p>'
+  format: full_html
