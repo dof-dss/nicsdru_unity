@@ -259,6 +259,9 @@ jobs:
       - run:
           name: Compile site theme
           command: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
 
@@ -285,6 +288,9 @@ jobs:
       - run:
           name: Compile site theme
           command: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
 
