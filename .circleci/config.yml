@@ -232,8 +232,9 @@ jobs:
       PLATFORM_REGION: "uk-1.platform.sh"
     steps:
       - attach_workspace:
-          at: ./
-      - run: ls -lha $PROJECT_ROOT
+          at: ./workspace
+      - run: ls -lha ./workspace/
+      - run: ls -lha $PROJECT_ROOT/project/sites/
       - run:
           name: Push compiled CSS files back to git
           command: |
@@ -268,10 +269,10 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
       - persist_to_workspace:
-          root: project/sites/attorneygeneralni/themes
+          root: workspace/attorneygeneralni
           paths:
-            - attorneygeneralni_theme
-
+            - attorneygeneralni_theme/css
+            - attorneygeneralni_theme/js
 
   edge_build__theme_compilation__cscsreviewni:
     <<: *docker_image
@@ -302,9 +303,11 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
       - persist_to_workspace:
-          root: project/sites/cscsreviewni/themes
-          paths:
-            - cscsreviewni_theme
+          - persist_to_workspace:
+              root: workspace/cscsreviewni
+              paths:
+                - cscsreviewni_theme/css
+                - cscsreviewni_theme/js
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
