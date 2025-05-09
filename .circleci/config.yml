@@ -268,6 +268,7 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
+            mkdir -p $PROJECT_ROOT/workspace
             cp -R $PROJECT_ROOT/project/sites/attorneygeneralni $PROJECT_ROOT/workspace/attorneygeneralni
       - persist_to_workspace:
           root: workspace/attorneygeneralni
@@ -303,6 +304,7 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
+            mkdir -p $PROJECT_ROOT/workspace
             cp -R $PROJECT_ROOT/project/sites/cscsreviewni $PROJECT_ROOT/workspace/cscsreviewni
       - persist_to_workspace:
           root: workspace/cscsreviewni
