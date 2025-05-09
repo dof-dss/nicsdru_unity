@@ -303,11 +303,10 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
       - persist_to_workspace:
-          - persist_to_workspace:
-              root: workspace/cscsreviewni
-              paths:
-                - cscsreviewni_theme/css
-                - cscsreviewni_theme/js
+          root: workspace/cscsreviewni
+          paths:
+            - cscsreviewni_theme/css
+            - cscsreviewni_theme/js
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
