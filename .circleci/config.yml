@@ -264,6 +264,12 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
+      - persist_to_workspace:
+          root: $PROJECT_ROOT/project/sites/attorneygeneralni/themes/attorneygeneralni_theme
+          paths:
+            - css
+            - js
+
 
   edge_build__theme_compilation__cscsreviewni:
     <<: *docker_image
@@ -293,6 +299,11 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
+      - persist_to_workspace:
+          root: $PROJECT_ROOT/project/sites/cscsreviewni/themes/cscsreviewni_theme
+          paths:
+            - css
+            - js
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
