@@ -231,6 +231,9 @@ jobs:
       EDGE_BUILD_BRANCH: "edge-refinement"
       PLATFORM_REGION: "uk-1.platform.sh"
     steps:
+      - attach_workspace:
+          at: ./
+      - run: ls -lha $PROJECT_ROOT
       - run:
           name: Push compiled CSS files back to git
           command: |
