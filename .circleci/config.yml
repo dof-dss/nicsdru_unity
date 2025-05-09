@@ -268,10 +268,9 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
       - persist_to_workspace:
-          root: project/sites/attorneygeneralni/themes/attorneygeneralni_theme
+          root: project/sites/attorneygeneralni/themes
           paths:
-            - css
-            - js
+            - attorneygeneralni_theme
 
 
   edge_build__theme_compilation__cscsreviewni:
@@ -303,10 +302,9 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
       - persist_to_workspace:
-          root: project/sites/cscsreviewni/themes/cscsreviewni_theme
+          root: project/sites/cscsreviewni/themes
           paths:
-            - css
-            - js
+            - cscsreviewni_theme
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
