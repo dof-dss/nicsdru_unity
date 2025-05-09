@@ -265,7 +265,7 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
       - persist_to_workspace:
-          root: $PROJECT_ROOT/project/sites/attorneygeneralni/themes/attorneygeneralni_theme
+          root: project/sites/attorneygeneralni/themes/attorneygeneralni_theme
           paths:
             - css
             - js
@@ -300,7 +300,7 @@ jobs:
             cd $PROJECT_ROOT
             ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
       - persist_to_workspace:
-          root: $PROJECT_ROOT/project/sites/cscsreviewni/themes/cscsreviewni_theme
+          root: project/sites/cscsreviewni/themes/cscsreviewni_theme
           paths:
             - css
             - js
