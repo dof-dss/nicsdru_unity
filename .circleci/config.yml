@@ -50,7 +50,17 @@ edge_theme_steps: &edge_theme_steps
     - run:
         name: Persist compiled CSS/JS assets between workspace jobs
         command: |
-          tar -czf workspace/${SITE_NAME}_assets.tar.gz -C $PROJECT_ROOT/project/sites/${SITE_NAME}/themes ${SITE_NAME}_theme/css ${SITE_NAME}_theme/js
+          # Build list of existing folders to include
+          INCLUDE_PATHS=()
+          [ -d "${SITE_NAME}_theme/css" ] && INCLUDE_PATHS+=("${SITE_NAME}_theme/css")
+          [ -d "${SITE_NAME}_theme/js" ] && INCLUDE_PATHS+=("${SITE_NAME}_theme/js")
+
+          # Only create archive if there is something to include
+          if [ ${#INCLUDE_PATHS[@]} -gt 0 ]; then
+            tar -czf "$PROJECT_ROOT/workspace/${SITE_NAME}_assets.tar.gz" "${INCLUDE_PATHS[@]}"
+          else
+            echo "No css or js folders found for $SITE_NAME. Skipping archive."
+          fi
     - persist_to_workspace:
         root: ./workspace
         paths:
