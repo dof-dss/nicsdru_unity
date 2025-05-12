@@ -287,8 +287,7 @@ jobs:
               [ -e "$file" ] || continue
               filename=$(basename -- "$file")
               sitename="${filename%_assets.tar.gz}"
-              target_dir="$PROJECT_ROOT/project/sites/${sitename}/themes/${sitename}_theme"
-              mkdir -p "$target_dir"
+              target_dir="$PROJECT_ROOT/project/sites/${sitename}/"
               tar -xzf "$file" -C "$target_dir"
             done
       - run: ls -lha ./workspace/
