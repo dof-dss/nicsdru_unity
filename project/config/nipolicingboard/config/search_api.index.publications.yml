@@ -4,14 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_publication_date
     - field.storage.node.field_pub_type
-    - search_api.server.solr_default
+    - field.storage.node.field_publication_date
   module:
-    - search_api_solr
     - node
-    - taxonomy
     - search_api
+    - search_api_solr
+    - taxonomy
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -167,4 +166,4 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
-server: solr_default
+server: null
