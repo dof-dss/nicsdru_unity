@@ -50,14 +50,21 @@ edge_theme_steps: &edge_theme_steps
     - run:
         name: Persist compiled CSS/JS assets between workspace jobs
         command: |
-          # Build list of existing folders to include
-          INCLUDE_PATHS=()
-          [ -d "${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/css" ] && INCLUDE_PATHS+=("${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/css")
-          [ -d "${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/js" ] && INCLUDE_PATHS+=("${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/js")
+          # Set base directory
+          BASE_DIR="${PROJECT_ROOT}/project/sites/${SITE_NAME}"
 
-          # Only create archive if there is something to include
+          # Relative paths to check
+          THEME_DIR="themes/${SITE_NAME}_theme"
+          INCLUDE_PATHS=()
+
+          # Check for existence using absolute paths, store as relative paths
+          [ -d "${BASE_DIR}/${THEME_DIR}/css" ] && INCLUDE_PATHS+=("${THEME_DIR}/css")
+          [ -d "${BASE_DIR}/${THEME_DIR}/js" ] && INCLUDE_PATHS+=("${THEME_DIR}/js")
+
+          # Only create archive if something exists
           if [ ${#INCLUDE_PATHS[@]} -gt 0 ]; then
-            tar -czf "$PROJECT_ROOT/workspace/${SITE_NAME}_assets.tar.gz" "${INCLUDE_PATHS[@]}"
+            mkdir -p "$PROJECT_ROOT/workspace"
+            tar -czf "$PROJECT_ROOT/workspace/${SITE_NAME}_assets.tar.gz" -C "$BASE_DIR" "${INCLUDE_PATHS[@]}"
           else
             echo "No css or js folders found for $SITE_NAME. Skipping archive."
           fi
@@ -276,7 +283,7 @@ jobs:
       - run:
           name: Extract compiled assets into appropriate theme folders
           command: |
-            for file in workspace/*_assets.tar.gz; do
+            for file in $PROJECT_ROOT/workspace/*_assets.tar.gz; do
               [ -e "$file" ] || continue
               filename=$(basename -- "$file")
               sitename="${filename%_assets.tar.gz}"
