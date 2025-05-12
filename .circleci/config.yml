@@ -62,7 +62,7 @@ edge_theme_steps: &edge_theme_steps
             echo "No css or js folders found for $SITE_NAME. Skipping archive."
           fi
     - persist_to_workspace:
-        root: $PROJECT_ROOT/workspace
+        root: ./workspace
         paths:
           - ${SITE_NAME}_assets.tar.gz
 
