@@ -169,7 +169,6 @@ jobs:
 
   edge_build_refinement:
     <<: *docker_image
-    <<: *docker_image
     environment:
       # git variables to avoid empty committer identity errors
       EMAIL: "circleci@localhost"
@@ -234,7 +233,6 @@ jobs:
       - attach_workspace:
           at: ./workspace
       - run: ls -lha ./workspace/
-      - run: ls -lha $PROJECT_ROOT/project/sites/
       - run:
           name: Push compiled CSS files back to git
           command: |
@@ -250,6 +248,7 @@ jobs:
       EDGE_BUILD_BRANCH: "edge-refinement"
       CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
       NODE_VERSION: 14.21.3
+      SITE_NAME: "attorneygeneralni"
     steps:
       - checkout_code
       - run: cd $PROJECT_ROOT && git checkout $EDGE_BUILD_BRANCH
@@ -267,14 +266,14 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             cd $PROJECT_ROOT
-            ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names attorneygeneralni
+            ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names $SITE_NAME
             mkdir -p $PROJECT_ROOT/workspace
-            cp -R $PROJECT_ROOT/project/sites/attorneygeneralni $PROJECT_ROOT/workspace/attorneygeneralni
+            cp -R $PROJECT_ROOT/project/sites/$SITE_NAME $PROJECT_ROOT/workspace/$SITE_NAME
       - persist_to_workspace:
-          root: workspace/attorneygeneralni
+          root: workspace/$SITE_NAME
           paths:
-            - attorneygeneralni_theme/css
-            - attorneygeneralni_theme/js
+            - $SITE_NAME_theme/css
+            - $SITE_NAME_theme/js
 
   edge_build__theme_compilation__cscsreviewni:
     <<: *docker_image
