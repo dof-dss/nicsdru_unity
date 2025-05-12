@@ -52,8 +52,8 @@ edge_theme_steps: &edge_theme_steps
         command: |
           # Build list of existing folders to include
           INCLUDE_PATHS=()
-          [ -d "${SITE_NAME}_theme/css" ] && INCLUDE_PATHS+=("${SITE_NAME}_theme/css")
-          [ -d "${SITE_NAME}_theme/js" ] && INCLUDE_PATHS+=("${SITE_NAME}_theme/js")
+          [ -d "${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/css" ] && INCLUDE_PATHS+=("${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/css")
+          [ -d "${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/js" ] && INCLUDE_PATHS+=("${PROJECT_ROOT}/project/sites/${SITE_NAME}/themes/${SITE_NAME}_theme/js")
 
           # Only create archive if there is something to include
           if [ ${#INCLUDE_PATHS[@]} -gt 0 ]; then
