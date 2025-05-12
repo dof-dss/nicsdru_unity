@@ -50,7 +50,7 @@ edge_theme_steps: &edge_theme_steps
     - run:
         name: Persist compiled CSS/JS assets between workspace jobs
         command: |
-          tar -czf workspace/${SITE_NAME}_assets.tar.gz -C project/sites/${SITE_NAME} ${SITE_NAME}_theme/css ${SITE_NAME}_theme/js
+          tar -czf workspace/${SITE_NAME}_assets.tar.gz -C $PROJECT_ROOT/project/sites/${SITE_NAME}/themes ${SITE_NAME}_theme/css ${SITE_NAME}_theme/js
     - persist_to_workspace:
         root: ./workspace
         paths:
