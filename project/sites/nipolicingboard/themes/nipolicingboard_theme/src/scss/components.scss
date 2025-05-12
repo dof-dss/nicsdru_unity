@@ -107,6 +107,21 @@
       }
     }
 
+
+    li a {
+      display: block;
+      width: 7.5rem;
+      height: 7.5rem;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 3px #333;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
     i {
       font-size: 5rem;
       background: #423f6c;
@@ -117,11 +132,24 @@
       line-height: 6.5rem;
       padding: .5rem 1.3rem;
 
+      &.fab.fa-twitter {
+        padding: .3rem 2rem;
+        
+        &::before {
+          content: "𝕏";
+        }
+      }
+
       &.fa-file-alt {
         padding: .5rem 1.9rem;
       }
     }
   }
+}
+
+#content #top-area .column li a {
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .question-meta {
@@ -238,7 +266,7 @@
 
 .region-top-third .follow-us-icons {
   a {
-      border-bottom: none !important;
+    border-bottom: none !important;
   }
 
   ul {

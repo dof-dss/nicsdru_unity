@@ -280,7 +280,7 @@ h2 i {
 
 #footer {
   @media screen and (max-width: $tab) {
-    padding-left: 1rem;
+    padding: 2rem 0 0 1rem;
   }
 
   .footer-menu {
@@ -297,6 +297,10 @@ h2 i {
       }
     }
   }
+}
+
+#block-footerlogo {
+  width: 25rem;
 }
 
 #footer {
