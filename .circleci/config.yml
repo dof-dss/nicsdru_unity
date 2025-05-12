@@ -19,6 +19,41 @@ default_docker_image: &docker_image
         GIT_AUTHOR_NAME: "Circle CI"
         EDGE_BUILD_BRANCH: "edge"
 
+edge_environment: &edge_env
+  EMAIL: "circleci@localhost"
+  GIT_COMMITTER_NAME: "Circle CI"
+  GIT_AUTHOR_NAME: "Circle CI"
+  PLATFORM_REGION: "uk-1.platform.sh"
+  CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
+  NODE_VERSION: 14.21.3
+
+edge_theme_steps: &edge_theme_steps
+  steps:
+    - checkout_code
+    - run: cd $PROJECT_ROOT && git checkout $EDGE_BUILD_BRANCH
+    - run:
+        name: Add OS and PHP extensions
+        command: |
+          touch ~/.bashrc
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+          sudo apt update --allow-releaseinfo-change
+          sudo apt install libjpeg-dev make python3 g++ dh-autoreconf -y
+    - run:
+        name: Compile site theme
+        command: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+          cd $PROJECT_ROOT
+          ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names $SITE_NAME
+          mkdir -p $PROJECT_ROOT/workspace
+          cp -R $PROJECT_ROOT/project/sites/$SITE_NAME $PROJECT_ROOT/workspace/$SITE_NAME
+    - persist_to_workspace:
+        root: workspace/$SITE_NAME
+        paths:
+          - ${SITE_NAME}_theme/css
+          - ${SITE_NAME}_theme/js
+
 # Re-usable commands.
 commands:
   checkout_code:
@@ -197,14 +232,8 @@ jobs:
   edge_build:
     <<: *docker_image
     environment:
-      # git variables to avoid empty committer identity errors
-      EMAIL: "circleci@localhost"
-      GIT_COMMITTER_NAME: "Circle CI"
-      GIT_AUTHOR_NAME: "Circle CI"
+      <<: *edge_env
       EDGE_BUILD_BRANCH: "edge"
-      PLATFORM_REGION: "uk-1.platform.sh"
-      CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
-      NODE_VERSION: 14.21.3
     steps:
       - hosts_keyscan
       - checkout_code
@@ -214,7 +243,7 @@ jobs:
           command: git checkout -b $EDGE_BUILD_BRANCH
       - composer_tasks__edge_packages
       - run:
-          name: Push composer package updates back to GitHub
+          name: Push composer updates
           command: |
             git add composer.*
             git commit -m "Set dof-dss packages to HEAD development for build"
@@ -241,75 +270,18 @@ jobs:
   edge_build__theme_compilation__attorneygeneralni:
     <<: *docker_image
     environment:
-      # git variables to avoid empty committer identity errors
-      EMAIL: "circleci@localhost"
-      GIT_COMMITTER_NAME: "Circle CI"
-      GIT_AUTHOR_NAME: "Circle CI"
+      <<: *edge_env
       EDGE_BUILD_BRANCH: "edge-refinement"
-      CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
-      NODE_VERSION: 14.21.3
       SITE_NAME: "attorneygeneralni"
-    steps:
-      - checkout_code
-      - run: cd $PROJECT_ROOT && git checkout $EDGE_BUILD_BRANCH
-      - run:
-          name: Add OS and PHP extensions
-          command: |
-            touch ~/.bashrc
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-            sudo apt update --allow-releaseinfo-change
-            sudo apt install libjpeg-dev make python3 g++ dh-autoreconf -y
-      - run:
-          name: Compile site theme
-          command: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-            cd $PROJECT_ROOT
-            ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names $SITE_NAME
-            mkdir -p $PROJECT_ROOT/workspace
-            cp -R $PROJECT_ROOT/project/sites/$SITE_NAME $PROJECT_ROOT/workspace/$SITE_NAME
-      - persist_to_workspace:
-          root: workspace/$SITE_NAME
-          paths:
-            - $SITE_NAME_theme/css
-            - $SITE_NAME_theme/js
+    <<: *edge_theme_steps
 
   edge_build__theme_compilation__cscsreviewni:
     <<: *docker_image
     environment:
-      # git variables to avoid empty committer identity errors
-      EMAIL: "circleci@localhost"
-      GIT_COMMITTER_NAME: "Circle CI"
-      GIT_AUTHOR_NAME: "Circle CI"
+      <<: *edge_env
       EDGE_BUILD_BRANCH: "edge-refinement"
-      CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
-      NODE_VERSION: 14.21.3
-    steps:
-      - checkout_code
-      - run: cd $PROJECT_ROOT && git checkout $EDGE_BUILD_BRANCH
-      - run:
-          name: Add OS and PHP extensions
-          command: |
-            touch ~/.bashrc
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-            sudo apt update --allow-releaseinfo-change
-            sudo apt install libjpeg-dev make python3 g++ dh-autoreconf -y
-      - run:
-          name: Compile site theme
-          command: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-            cd $PROJECT_ROOT
-            ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names cscsreviewni
-            mkdir -p $PROJECT_ROOT/workspace
-            cp -R $PROJECT_ROOT/project/sites/cscsreviewni $PROJECT_ROOT/workspace/cscsreviewni
-      - persist_to_workspace:
-          root: workspace/cscsreviewni
-          paths:
-            - cscsreviewni_theme/css
-            - cscsreviewni_theme/js
+      SITE_NAME: "cscsreviewni"
+    <<: *edge_theme_steps
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
