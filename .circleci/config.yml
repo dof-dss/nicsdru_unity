@@ -64,7 +64,7 @@ edge_theme_steps: &edge_theme_steps
     - persist_to_workspace:
         root: ./workspace
         paths:
-          - ${SITE_NAME}_assets.tar.gz
+          - $PROJECT_ROOT/workspace/${SITE_NAME}_assets.tar.gz
 
 # Re-usable commands.
 commands:
