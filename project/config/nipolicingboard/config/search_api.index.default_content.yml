@@ -230,4 +230,4 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
-server: null
+server: solr_default
