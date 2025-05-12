@@ -47,12 +47,14 @@ edge_theme_steps: &edge_theme_steps
           cd $PROJECT_ROOT
           ./build-themes.sh --sites-dir $PROJECT_ROOT/project/sites --site-names $SITE_NAME
           mkdir -p $PROJECT_ROOT/workspace
-          cp -R $PROJECT_ROOT/project/sites/$SITE_NAME $PROJECT_ROOT/workspace/$SITE_NAME
+    - run:
+        name: Persist compiled CSS/JS assets between workspace jobs
+        command: |
+          tar -czf workspace/${SITE_NAME}_assets.tar.gz -C project/sites/${SITE_NAME} ${SITE_NAME}_theme/css ${SITE_NAME}_theme/js
     - persist_to_workspace:
-        root: workspace/$SITE_NAME
+        root: ./workspace
         paths:
-          - ${SITE_NAME}_theme/css
-          - ${SITE_NAME}_theme/js
+          - ${SITE_NAME}_assets.tar.gz
 
 # Re-usable commands.
 commands:
@@ -261,6 +263,17 @@ jobs:
     steps:
       - attach_workspace:
           at: ./workspace
+      - run:
+          name: Extract compiled assets into appropriate theme folders
+          command: |
+            for file in workspace/*_assets.tar.gz; do
+              [ -e "$file" ] || continue
+              filename=$(basename -- "$file")
+              sitename="${filename%_assets.tar.gz}"
+              target_dir="$PROJECT_ROOT/project/sites/${sitename}/themes/${sitename}_theme"
+              mkdir -p "$target_dir"
+              tar -xzf "$file" -C "$target_dir"
+            done
       - run: ls -lha ./workspace/
       - run:
           name: Push compiled CSS files back to git
