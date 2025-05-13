@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: front_3_col
 label: 'Front 3 col'
-revision: 0
+revision: false
 description: 'This block contains an image, a link and some text'

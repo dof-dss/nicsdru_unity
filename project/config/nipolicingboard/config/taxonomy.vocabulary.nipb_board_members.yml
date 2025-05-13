@@ -6,3 +6,4 @@ name: 'NIPB Board Members'
 vid: nipb_board_members
 description: 'List of board members'
 weight: 0
+new_revision: false

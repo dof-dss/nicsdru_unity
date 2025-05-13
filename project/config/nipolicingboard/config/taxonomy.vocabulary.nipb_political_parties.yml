@@ -6,3 +6,4 @@ name: 'NIPB Political Parties'
 vid: nipb_political_parties
 description: 'List of political parties which sit on the board'
 weight: 0
+new_revision: false

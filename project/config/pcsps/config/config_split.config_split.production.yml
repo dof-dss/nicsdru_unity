@@ -16,7 +16,4 @@ theme: {  }
 complete_list:
   - search_api.server.solr_default
   - fastly.settings
-graylist:
-  - pcsps_theme.settings
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }

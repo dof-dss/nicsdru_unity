@@ -6,3 +6,4 @@ name: 'NIPB Committee'
 vid: nipb_committees
 description: 'List of committees associated to the board'
 weight: 0
+new_revision: false

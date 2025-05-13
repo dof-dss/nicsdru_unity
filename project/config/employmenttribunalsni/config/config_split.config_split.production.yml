@@ -16,7 +16,4 @@ theme: {  }
 complete_list:
   - fastly.settings
   - fastly.settings
-graylist:
-  - employmenttribunalsni_theme.settings
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }
