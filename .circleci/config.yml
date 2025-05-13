@@ -261,9 +261,9 @@ jobs:
     environment:
       <<: *edge_env
     steps:
+      - checkout_code
       - attach_workspace:
           at: ./workspace
-      - checkout_code
       - run:
           name: Switch to edge branch
           command: git checkout -b $EDGE_BUILD_BRANCH
