@@ -1,32 +1,36 @@
 version: 2.1
 
+definitions:
+  common_env: &common_env
+    DOCKER_DEFAULT_PLATFORM: "linux/amd64"
+    PLATFORM_REGION: "uk-1.platform.sh"
+    PROJECT_ROOT: "/home/docker/project"
+    PHP_EXTENSION_GD: 1
+    PHP_EXTENSIONS: "gd"
+    PHP_INI_MEMORY_LIMIT: -1
+    PHP_INI_MAX_EXECUTION_TIME: 600
+    PHP_INI_MAX_INPUT_TIME: 600
+
+  edge_env: &edge_env
+    # git variables to avoid empty committer identity errors
+    # TODO: change branch name once ready, back to 'edge'
+    EDGE_BUILD_BRANCH: "edge-refinement"
+    EMAIL: "circleci@localhost"
+    GIT_COMMITTER_NAME: "Circle CI"
+    GIT_AUTHOR_NAME: "Circle CI"
+    PLATFORM_REGION: "uk-1.platform.sh"
+    CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
+    NODE_VERSION: 14.21.3
+
 # Default docker image.
 default_docker_image: &docker_image
   docker:
     - image: thecodingmachine/php:8.3-v4-apache
       environment:
-        DOCKER_DEFAULT_PLATFORM: "linux/amd64"
-        PLATFORM_REGION: "uk-1.platform.sh"
-        PROJECT_ROOT: "/home/docker/project"
-        PHP_EXTENSION_GD: 1
-        PHP_EXTENSIONS: "gd"
-        PHP_INI_MEMORY_LIMIT: -1
-        PHP_INI_MAX_EXECUTION_TIME: 600
-        PHP_INI_MAX_INPUT_TIME: 600
-        # git variables to avoid empty committer identity errors
-        EMAIL: "circleci@localhost"
-        GIT_COMMITTER_NAME: "Circle CI"
-        GIT_AUTHOR_NAME: "Circle CI"
-        EDGE_BUILD_BRANCH: "edge"
+        *common_env
 
-edge_environment: &edge_env
-  EMAIL: "circleci@localhost"
-  GIT_COMMITTER_NAME: "Circle CI"
-  GIT_AUTHOR_NAME: "Circle CI"
-  PLATFORM_REGION: "uk-1.platform.sh"
-  CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
-  NODE_VERSION: 14.21.3
-
+# Common steps involved with compiling and persisting a site's theme.
+# $SITE_NAME env var very important here as it's designed to act as a parameter.
 edge_theme_steps: &edge_theme_steps
   steps:
     - checkout_code
@@ -220,39 +224,11 @@ jobs:
             echo "** checking sites.php  **"
             diff maestro-drupal-unity/web/sites/sites.php web/sites/sites.php
 
-
-  edge_build_refinement:
-    <<: *docker_image
-    environment:
-      # git variables to avoid empty committer identity errors
-      EMAIL: "circleci@localhost"
-      GIT_COMMITTER_NAME: "Circle CI"
-      GIT_AUTHOR_NAME: "Circle CI"
-      EDGE_BUILD_BRANCH: "edge-refinement"
-      PLATFORM_REGION: "uk-1.platform.sh"
-      CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
-      NODE_VERSION: 14.21.3
-    steps:
-      - hosts_keyscan
-      - checkout_code
-      - install_psh_cli
-      - run:
-          name: Switch to edge branch
-          command: git checkout -b $EDGE_BUILD_BRANCH
-      - composer_tasks__edge_packages
-      - run:
-          name: Push composer package updates back to GitHub
-          command: |
-            git add composer.*
-            git commit -m "Set dof-dss packages to HEAD development for build"
-            git push -f origin $EDGE_BUILD_BRANCH
-
   # Nightly edge build
   edge_build:
     <<: *docker_image
     environment:
       <<: *edge_env
-      EDGE_BUILD_BRANCH: "edge"
     steps:
       - hosts_keyscan
       - checkout_code
@@ -268,15 +244,22 @@ jobs:
             git commit -m "Set dof-dss packages to HEAD development for build"
             git push -f origin $EDGE_BUILD_BRANCH
 
+  # Interstitial replacement for 'edge_build' job.
+  # TODO: Remove when no longer needed.
+  edge_build_refinement:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+    steps:
+      - run: echo "This step would normally build the latest changes and push them back to github"
+
+  # This job aims to fetch compiled assets from the project's various site themes,
+  # extract them into position in the required site themes folders and git add/commit them
+  # to trigger a platform.sh build.
   edge_build_push_compiled_themes:
     <<: *docker_image
     environment:
-      # git variables to avoid empty committer identity errors
-      EMAIL: "circleci@localhost"
-      GIT_COMMITTER_NAME: "Circle CI"
-      GIT_AUTHOR_NAME: "Circle CI"
-      EDGE_BUILD_BRANCH: "edge-refinement"
-      PLATFORM_REGION: "uk-1.platform.sh"
+      <<: *edge_env
     steps:
       - attach_workspace:
           at: ./workspace
@@ -296,11 +279,11 @@ jobs:
           command: |
             echo "Mock git command here for now"
 
+  # Jobs, per site, to compile the theme assets.
   edge_build__theme_compilation__attorneygeneralni:
     <<: *docker_image
     environment:
       <<: *edge_env
-      EDGE_BUILD_BRANCH: "edge-refinement"
       SITE_NAME: "attorneygeneralni"
     <<: *edge_theme_steps
 
@@ -308,8 +291,105 @@ jobs:
     <<: *docker_image
     environment:
       <<: *edge_env
-      EDGE_BUILD_BRANCH: "edge-refinement"
       SITE_NAME: "cscsreviewni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__employmenttribunalsni:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "employmenttribunalsni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__fiscalcommissionni:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "fiscalcommissionni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__independentreviewofeducation:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "independentreviewofeducation"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__investnireview:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "investnireview"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__mahinquiry:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "mahinquiry"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__niauditoffice:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "niauditoffice"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__nifiscalcouncil:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "nifiscalcouncil"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__nipolicingboard:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "nipolicingboard"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__octf:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "octf"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__odscni:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "odscni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__pbni:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "pbni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__pcsps:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "pcsps"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__uregni:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "uregni"
+    <<: *edge_theme_steps
+
+  edge_build__theme_compilation__urologyservicesinquiry:
+    <<: *docker_image
+    environment:
+      <<: *edge_env
+      SITE_NAME: "urologyservicesinquiry"
     <<: *edge_theme_steps
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
@@ -421,9 +501,9 @@ workflows:
           requires:
             - build
 
+  # TODO: Swap workflow into triggered edge-build when ready.
   edge-build-refinement:
     jobs:
-      # - edge_build
       - edge_build_refinement
       - edge_build__theme_compilation__attorneygeneralni:
           requires:
@@ -431,10 +511,66 @@ workflows:
       - edge_build__theme_compilation__cscsreviewni:
           requires:
             - edge_build_refinement
+      - edge_build__theme_compilation__employmenttribunalsni:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__fiscalcommissionni:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__independentreviewofeducation:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__investnireview:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__mahinquiry:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__niauditoffice:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__nifiscalcouncil:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__nipolicingboard:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__octf:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__odscni:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__pbni:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__pcsps:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__uregni:
+          requires:
+            - edge_build_refinement
+      - edge_build__theme_compilation__urologyservicesinquiry:
+          requires:
+            - edge_build_refinement
       - edge_build_push_compiled_themes:
           requires:
             - edge_build__theme_compilation__attorneygeneralni
             - edge_build__theme_compilation__cscsreviewni
+            - edge_build__theme_compilation__employmenttribunalsni
+            - edge_build__theme_compilation__fiscalcommissionni
+            - edge_build__theme_compilation__independentreviewofeducation
+            - edge_build__theme_compilation__investnireview
+            - edge_build__theme_compilation__mahinquiry
+            - edge_build__theme_compilation__niauditoffice
+            - edge_build__theme_compilation__nifiscalcouncil
+            - edge_build__theme_compilation__nipolicingboard
+            - edge_build__theme_compilation__octf
+            - edge_build__theme_compilation__odscni
+            - edge_build__theme_compilation__pbni
+            - edge_build__theme_compilation__pcsps
+            - edge_build__theme_compilation__uregni
+            - edge_build__theme_compilation__urologyservicesinquiry
 
   # A nightly build of the project, using all dof-dss packages at HEAD from development branch.
   nightly-edge-build:
