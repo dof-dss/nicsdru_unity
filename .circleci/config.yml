@@ -263,6 +263,10 @@ jobs:
     steps:
       - attach_workspace:
           at: ./workspace
+      - checkout_code
+      - run:
+          name: Switch to edge branch
+          command: git checkout -b $EDGE_BUILD_BRANCH
       - run:
           name: Extract compiled assets into appropriate theme folders
           command: |
