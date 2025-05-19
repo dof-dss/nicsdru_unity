@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abf67b5d5fea86dbd930a580390dbd6c",
+    "content-hash": "67e4061aeaeaf5d8204895388df97719",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1738,16 +1738,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
-            "version": "10.1.5",
+            "version": "dev-D8UN-3048",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_profile.git",
-                "reference": "bd589de5a764904a9e20a73ccbb1224d8161262e"
+                "reference": "157522c2530d89b3d9c92201a6da9c54e1595366"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/bd589de5a764904a9e20a73ccbb1224d8161262e",
-                "reference": "bd589de5a764904a9e20a73ccbb1224d8161262e",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/157522c2530d89b3d9c92201a6da9c54e1595366",
+                "reference": "157522c2530d89b3d9c92201a6da9c54e1595366",
                 "shasum": ""
             },
             "require": {
@@ -1761,9 +1761,9 @@
             "description": "Custom install profile used by all Unity sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_profile/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/10.1.5"
+                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/D8UN-3048"
             },
-            "time": "2024-10-09T11:25:39+00:00"
+            "time": "2025-05-19T14:51:25+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
@@ -22741,6 +22741,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dof-dss/nicsdru_unity_profile": 20,
         "drupal/block_field": 5,
         "drupal/ckeditor5_allowed_html": 20,
         "drupal/clone_nodes": 20,
