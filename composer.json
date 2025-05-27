@@ -53,7 +53,7 @@
         "dof-dss/nicsdru_unity_profile": "^10.1",
         "dof-dss/nicsdru_unity_theme": "^10.1",
         "drupal/address": "^1.12",
-        "drupal/admin_toolbar": "^3.4",
+        "drupal/admin_toolbar": "^3.5",
         "drupal/allowed_formats": "^3.0",
         "drupal/antibot": "^2.0",
         "drupal/auto_entityqueue": "^2.1",
@@ -72,7 +72,7 @@
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^2.0",
         "drupal/config_update": "^2.0@alpha",
-        "drupal/content_lock": "^2.4",
+        "drupal/content_lock": "^2.3",
         "drupal/cookie_content_blocker": "^2.2",
         "drupal/core-composer-scaffold": "^10.4",
         "drupal/core-project-message": "^10.4",
@@ -93,7 +93,7 @@
         "drupal/fastly": "^4.0",
         "drupal/field_group": "^3.4",
         "drupal/file_delete_ui": "^1.0@beta",
-        "drupal/filelog": "3.0.x-dev@dev",
+        "drupal/filelog": "dev-3.0.x",
         "drupal/flag": "^4.0@beta",
         "drupal/flood_control": "^2.3",
         "drupal/geocoder": "^4.9",
@@ -134,7 +134,7 @@
         "drupal/search_api_autocomplete": "^1.4",
         "drupal/search_api_glossary": "^4.2",
         "drupal/search_api_location": "^1.0@alpha",
-        "drupal/search_api_solr": "^4.3",
+        "drupal/search_api_solr": "4.3.0",
         "drupal/search_api_spellcheck": "^4.0",
         "drupal/seven": "^1.0",
         "drupal/shs": "^2.0@RC",
@@ -236,6 +236,9 @@
             },
             "drupal/slick": {
                 "PHP 8.2 compatibility": "https://git.drupalcode.org/issue/slick-3373261/-/commit/4035fef4eb48df2a2859d6c2785357d6071f9e72.patch"
+            },
+            "drupal/search_api": {
+                "Declaration of Drupal\\search_api_solr\\Plugin\\search_api\\backend\\SearchApiSolrBackend::__sleep() must be compatible": "https://www.drupal.org/files/issues/2024-06-18/type_declaration.patch"
             },
             "drupal/smart_date":{
                 "Hide duration field": "https://www.drupal.org/files/issues/2024-10-07/3379263-duration-fix.patch",
