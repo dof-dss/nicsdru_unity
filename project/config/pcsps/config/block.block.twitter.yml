@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:7f940ed3-d21b-40b6-9aed-ba19b2ee25e1'
 settings:
   id: 'block_content:7f940ed3-d21b-40b6-9aed-ba19b2ee25e1'
-  label: Twitter
+  label: X
   label_display: visible
   provider: block_content
   status: true
