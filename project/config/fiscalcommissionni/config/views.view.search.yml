@@ -201,7 +201,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty:
         area:
@@ -631,7 +631,7 @@ display:
           offset: 0
           items_per_page: 5
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty: {  }
       defaults:
