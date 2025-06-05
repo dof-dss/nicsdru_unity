@@ -29,7 +29,7 @@ $chroma: add-colors((
   hc-red:                 #d1431f, // 4.63:1 with white
   light-pink:             #ffdae0, // 4.53:1 with dark-red
 
-  brand-primary:          #07601f, //#0f3d0f,
+  brand-primary:          #1d2e53, //#0f3d0f,
 
   brand-secondary:        #606,
 
@@ -56,10 +56,10 @@ $chroma: add-colors('functional', (
   error-bg:               'light-pink',
 
   menu-background:        'brand-primary',
-  menu-item-hover:        'brand-secondary',
+  menu-item-hover:        #7f9ac9,
   menu-separator:         #fff,
   menu-sub-item-background: lighten(#606, 10),
-  menu-sub-item-hover:    'brand-primary',
+  menu-sub-item-hover:    #7f9ac9,
 
   table-background:       #fff,
   table-border:           #bbb,
@@ -70,7 +70,7 @@ $chroma: add-colors('functional', (
   table-cell-text:        'text',
 
   footer-background:      #e7e7e7,
-  footer-border:          'brand-primary',
+  footer-border:          #2fac66,
   footer-text:            'text',
   footer-headings:        'text',
 ));

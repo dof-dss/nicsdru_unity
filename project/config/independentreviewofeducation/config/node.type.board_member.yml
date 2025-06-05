@@ -23,7 +23,7 @@ third_party_settings:
 name: 'Board member'
 type: board_member
 description: 'A content type to add board members.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

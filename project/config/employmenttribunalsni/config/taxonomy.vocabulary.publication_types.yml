@@ -6,3 +6,4 @@ name: 'Publication types'
 vid: publication_types
 description: 'list of terms for publication content types'
 weight: 0
+new_revision: false
