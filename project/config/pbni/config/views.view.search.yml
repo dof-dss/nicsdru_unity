@@ -255,7 +255,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty:
         search_api_spellcheck_did_you_mean:
