@@ -4,19 +4,19 @@ site-styling:
     # loads stylesheets based on the SMACSS ordering of:
     # base, layout, component, state, theme
     base:
-      css/base.css: { minified: true }
+      css/base.css: { weight: 1, minified: true }
 
     # The SMACSS category, "layout", is loaded after "base" styles.
     layout:
-      css/layout.css: { weight: -100, minified: true }
+      css/layout.css: { weight: 2, minified: true }
 
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
-      css/components.css: { minified: true }
+      css/components.css: { weight: 3, minified: true }
 
     # The SMACSS category, "theme", is loaded after "base", "layout" and "component" styles.
     theme:
-      css/theme.css: { minified: true }
+      css/theme.css: { weight: 4, minified: true }
 
 fonts:
   css:
