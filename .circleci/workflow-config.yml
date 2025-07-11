@@ -28,6 +28,7 @@ workflows:
       - check_illegal_updates:
           requires:
             - build
+          php_version: << pipeline.parameters.php_version >>
   build-edge:
     when:
       and:
