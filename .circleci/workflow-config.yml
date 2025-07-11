@@ -42,7 +42,7 @@ workflows:
               only:
                 - development
     jobs:
-      - build_edge:
+      - unity_edge_build:
           php_version: << pipeline.parameters.php_version >>
           edge_branch: << pipeline.parameters.edge_branch >>
           edge_build_dofdss_packages: << pipeline.parameters.edge_build_dofdss_packages >>
