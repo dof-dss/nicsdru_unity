@@ -36,7 +36,7 @@ workflows:
           equal: [ "https://github.com/dof-dss/unity_base", << pipeline.project.git_url >> ]
     triggers:
       - schedule:
-          # At 00:30 Monday to Friday.
+          # At 00:30 Monday to Friday
           cron: "30 0 * * 1-5"
           filters:
             branches:
