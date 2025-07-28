@@ -40,7 +40,7 @@ jobs:
               "php_version": "8.3",
               "drupal_core_version": "10.5",
               "node_version": "18",
-              "coding_standards_dirs": "${PROJECT_ROOT}/web/sites ${PROJECT_ROOT}/web/modules/custom ${PROJECT_ROOT}/web/modules/origins ${PROJECT_ROOT}/web/themes/custom ${PROJECT_ROOT}/web/themes/origins ${PROJECT_ROOT}/web/profiles/unity ${PROJECT_ROOT}/web/profiles/origins",
+              "coding_standards_dirs": "${PROJECT_ROOT}/web/sites ${PROJECT_ROOT}/web/modules/custom ${PROJECT_ROOT}/web/modules/origins ${PROJECT_ROOT}/web/themes/custom ${PROJECT_ROOT}/web/profiles/unity ${PROJECT_ROOT}/web/profiles/origins",
               "custom_code_dirs": "${PROJECT_ROOT}/web/modules/custom ${PROJECT_ROOT}/web/themes/custom",
               "deprecated_code_dirs": "${PROJECT_ROOT}/web/modules/custom ${PROJECT_ROOT}/web/modules/origins ${PROJECT_ROOT}/web/themes/custom",
               "edge_branch": "edge",
