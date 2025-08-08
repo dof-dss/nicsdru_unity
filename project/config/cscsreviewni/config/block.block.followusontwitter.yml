@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:9e997874-8f3d-4bb5-902b-ca6f9c15c88d'
 settings:
   id: 'block_content:9e997874-8f3d-4bb5-902b-ca6f9c15c88d'
-  label: 'Follow us on Twitter'
+  label: 'Follow us on X'
   label_display: visible
   provider: block_content
   status: true
