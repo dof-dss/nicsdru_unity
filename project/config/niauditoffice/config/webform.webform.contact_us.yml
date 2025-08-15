@@ -46,6 +46,7 @@ elements: |-
         'Freedom of Information': 'Freedom of Information'
         Whistleblowing: Whistleblowing
         'General enquiries': 'General enquiries'
+        'Subject access request': 'Subject access request'
       '#required': true
     queries_or_comments:
       '#type': textarea
