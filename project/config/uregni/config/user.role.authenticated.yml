@@ -5,12 +5,14 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.basic_html_publications
+    - search_api_autocomplete.search.search
   module:
     - file
     - filter
     - media
     - node
     - search_api_autocomplete
+    - sitemap
     - system
 _core:
   default_config_hash: VoGMwue3ygKarnYt6zeRWNo6OkRUJNmOUehXtCf0jvY
@@ -20,6 +22,7 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access sitemap'
   - 'delete own files'
   - 'use search_api_autocomplete for search'
   - 'use text format basic_html'

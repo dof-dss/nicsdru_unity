@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_display.node.landing_page.default
+    - entityqueue.entity_queue.slideshow
     - filter.format.basic_html
     - filter.format.basic_html_publications
     - media.type.audio
