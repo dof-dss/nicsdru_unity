@@ -1,0 +1,42 @@
+uuid: 2a22cd76-716b-4997-bbb1-0d347ebbfcb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-NG5VWKD.69022fc2ca5884.81346734
+label: GTM-NG5VWKD
+weight: 0
+tag_container_ids:
+  - GTM-NG5VWKD
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-NG5VWKD:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  webform_purchase: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  custom: {  }
+  search: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
