@@ -1,0 +1,42 @@
+uuid: 6f916aac-862b-461e-aa3e-49cebe086738
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-WV44RP2.690333c48c3805.63153159
+label: GTM-WV44RP2
+weight: 0
+tag_container_ids:
+  - GTM-WV44RP2
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-WV44RP2:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  search: {  }
+  webform_purchase: {  }
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  sign_up:
+    method: CMS
+  login:
+    method: CMS

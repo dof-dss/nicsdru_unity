@@ -1,0 +1,42 @@
+uuid: 32ac22ed-96c4-4145-8401-aa8d9f78aa3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-T7NN4DQ.690330066b78f1.01342097
+label: GTM-T7NN4DQ
+weight: 0
+tag_container_ids:
+  - GTM-T7NN4DQ
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-T7NN4DQ:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  search: {  }
+  webform_purchase: {  }
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  sign_up:
+    method: CMS
+  login:
+    method: CMS
