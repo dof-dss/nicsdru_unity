@@ -18,3 +18,351 @@
     width: 100%;
   }
 }
+
+.region-slideshow {
+  max-width: $max-grid-width;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slick--view--slideshow {
+  .slick__slider,
+  .slick-slide {
+    .slide__caption {
+      @include adjust-font-size-to(20px);
+      background: rgba(0, 0, 0, .85);
+      margin: 0;
+      right: 0;
+      padding: 2%;
+      color: $white;
+      width: 355px;
+      height: 100%;
+      top: 0;
+      left: auto;
+      position: absolute;
+      @media screen and (max-width: $tab) {
+        @include adjust-font-size-to(16px);
+      }
+
+      a {
+        text-decoration: none;
+        background: none;
+      }
+
+      @media screen and (max-width: $lap) {
+        background: #6a6a6a;
+        opacity: 1;
+      }
+
+      @media screen and (max-width: $tab) {
+        width: 100%;
+        position: relative;
+        padding: 2%;
+      }
+
+      h2,
+      h3 {
+        @media screen and (max-width: $lap) {
+          @include adjust-font-size-to(18px);
+          margin: 0;
+        }
+      }
+
+      h2 {
+        @include adjust-font-size-to(20px);
+        padding: 1% 5% 1% 6%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px #414141;
+
+        @media screen and (max-width: $tab) {
+          @include adjust-font-size-to(16px);
+        }
+      }
+
+      h3 {
+        @media screen and (max-width: $tab) {
+          margin: 5px 0;
+        }
+      }
+
+      p,
+      a {
+        @include adjust-font-size-to(20px);
+        display: block;
+        padding: 0 6%;
+        color: $white;
+        text-decoration: underline;
+
+        @media screen and (max-width: $lap) {
+          @include adjust-font-size-to(16px);
+        }
+
+        @media screen and (max-width: $tab) {
+          padding: 6px 6%;
+        }
+      }
+    }
+
+    &:hover {
+      a {
+        .slide__caption {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        img {
+          filter: grayscale(100%);
+        }
+      }
+    }
+
+    a.slider_link {
+      &:focus {
+        border: 4px solid #0e6bb3;
+        display: flex;
+        position: relative;
+        @media screen and (max-width: $tab) {
+          flex-direction: column;
+        }
+
+        img {
+          filter: grayscale(100%);
+        }
+
+        .slide__caption {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  nav.slick__arrow {
+    position: absolute;
+    bottom: 26px;
+    right: 94px;
+    left: auto;
+    width: unset;
+    top: unset;
+
+    .slick-arrow::before {
+      top: 1px;
+    }
+
+    button {
+      display: block;
+      -webkit-transition: all 200ms ease-in-out;
+      -moz-transition: all 200ms ease-in-out;
+      -o-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
+
+      &.slick-prev,
+      &.slick-next {
+        background: $white;
+        opacity: .75;
+        border: 1px solid transparent;
+
+        //  &:hover {
+        //    opacity: 1;
+        //
+        //    &:before {
+        //      opacity: 1;
+        //    }
+        //  }
+        //
+        //  &:focus {
+        //    opacity: .75;
+        //    top: .1rem;
+        //
+        //    &:before {
+        //      content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-10%3C/title%3E%3Cg id="Left-3" data-name="Left"%3E%3Cpath d="M21,8H11V5a1,1,0,0,0-1.707-.707l-7,7a1,1,0,0,0,0,1.414l7,7A1,1,0,0,0,11,19V16H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8Z" style="fill:%23fff"/%3E%3C/g%3E%3C/svg%3E');
+        //    }
+        //  }
+        //
+        //  &::before {
+        //    font-size: 44px;
+        //    opacity: .75;
+        //    color: white;
+        //    -webkit-font-smoothing: antialiased;
+        //    -moz-osx-font-smoothing: grayscale;
+        //    content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-10%3C/title%3E%3Cg id="Left-3" data-name="Left"%3E%3Cpath d="M21,8H11V5a1,1,0,0,0-1.707-.707l-7,7a1,1,0,0,0,0,1.414l7,7A1,1,0,0,0,11,19V16H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E%0A');
+        //  }
+        //}
+
+        &.slick-prev {
+          left: -54px;
+        }
+
+        &.slick-next {
+          left: 47px;
+        }
+
+        &.slick-prev,
+        &.slick-next {
+          &:before {
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            content: '';
+            -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-9%3C/title%3E%3Cg id="Right-3" data-name="Right"%3E%3Cpath d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E') no-repeat 50% 50%;
+            mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ctitle%3EArtboard-9%3C/title%3E%3Cg id="Right-3" data-name="Right"%3E%3Cpath d="M21.707,11.293l-7-7A1,1,0,0,0,13,5V8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H13v3a1,1,0,0,0,1.707.707l7-7A1,1,0,0,0,21.707,11.293Z" style="fill:currentColor"/%3E%3C/g%3E%3C/svg%3E') no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: $black;
+            opacity: .85;
+          }
+
+          &:hover {
+            opacity: 1;
+
+            &:before {
+              opacity: 1;
+            }
+          }
+
+          &:focus {
+            opacity: 1;
+            top: 1px;
+
+            &:before {
+              background-color: #ff6d2c;
+            }
+          }
+        }
+
+        &.slick-prev {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      &:focus {
+        &:before {
+          color: $link;
+        }
+      }
+    }
+  }
+
+  ul.slick-dots {
+    bottom: -35px;
+
+    li {
+      margin-bottom: 0;
+      vertical-align: bottom;
+
+      &.slick-active button:focus {
+        outline: none;
+      }
+
+      button {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        position: unset !important;
+        padding: 0 !important;
+
+        &:focus {
+          outline: 3px solid #333;
+          outline-offset: 0;
+        }
+
+        .slick-dot-icon::before {
+          left: -.5px
+        }
+      }
+
+      button::before {
+        font-size: 1rem;
+        color: #919191;
+        opacity: 1;
+      }
+
+      &.slick-active {
+        button .slick-dot-icon::before {
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.slick--view--slideshow .slick__slider ul.slick-dots li button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  position: unset !important;
+  padding: 0 !important;
+
+  &:focus {
+    outline: 3px solid #333;
+    outline-offset: 0;
+  }
+}
+
+button.slick-autoplay-toggle-button {
+  background: $white !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  position: absolute !important;
+  padding: .6rem .3rem !important;
+  bottom: 7px;
+  right: 56px;
+  left: auto;
+  top: unset;
+  width: 42px;
+  height: 42px;
+  pointer-events: auto;
+  border: 0;
+  border-radius: 50% !important;
+  font-size: 0;
+  color: $black !important;
+  font-weight: normal !important;
+
+  &:focus {
+    color: #ff6d2c !important;
+  }
+
+  .slick-sr-only {
+   overflow: visible !important;
+    position: relative !important;
+    height: 36px !important;
+    width: 36px !important;
+    display: block;
+    clip-path: none !important;
+    clip: unset !important;
+    margin: 0 !important;
+  }
+  .slick-pause-text {
+    font-size: 0;
+
+    &:before {
+      //background: resolve('arrow-down.png');
+      content: "\23f8";
+      font-size: 28px;
+      font-family: "slick", serif;
+    }
+  }
+
+  .slick-play-text {
+    font-size: 0;
+    left: 2px;
+
+    &:before {
+      //background: resolve('arrow-down.png');
+      content: "\25b6";
+      font-size: 28px;
+      font-family: "slick", serif;
+    }
+  }
+}
