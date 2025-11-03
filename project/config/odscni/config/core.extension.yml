@@ -52,6 +52,7 @@ module:
   geocoder_address: 0
   geocoder_field: 0
   geolocation: 0
+  google_tag: 0
   handy_cache_tags: 0
   help: 0
   history: 0
@@ -133,8 +134,8 @@ module:
   views: 10
   paragraphs: 11
   nicsdru_unity_profile: 1000
-  eu_cookie_compliance: 1001
   readonlymode: 9999
+  eu_cookie_compliance: 10000
 theme:
   stark: 0
   stable: 0

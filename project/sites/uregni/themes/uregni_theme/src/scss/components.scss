@@ -76,7 +76,7 @@
 
   .content {
     @include breakpoint($tab) {
-      width: 30%;
+      width: 35%;
       padding: 3rem 0 0 2rem;
     }
   }
