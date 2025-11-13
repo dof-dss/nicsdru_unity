@@ -225,7 +225,7 @@ display:
               1: {  }
               2: {  }
               3: {  }
-          parse_mode: fuzzy_terms
+          parse_mode: terms
           min_length: null
           fields: {  }
       style:
