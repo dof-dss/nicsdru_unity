@@ -56,5 +56,11 @@
         </a>
       </li>
     {% endif %}
+    {% if instagram_profile_url is not empty %}
+      <li><a href="{{ instagram_profile_url }}" rel="noopener noreferrer">
+          <i class="fab fa-instagram"><span class="visually-hidden">Follow us on Instagram</span></i>
+        </a>
+      </li>
+    {% endif %}
   </ul>
 </div>
