@@ -2,7 +2,7 @@ uuid: 4f34bd41-1c59-4df5-80c0-7135da5d6798
 langcode: en
 status: true
 dependencies: {  }
-id: uregni
+id: nipb
 name: nipb
 weight: 0
 label: NIPB
@@ -11,20 +11,26 @@ skin: default
 breakpoints: 1
 optimized: false
 options:
-  options__active_tab: edit-options-responsives
+  options__active_tab: edit-options-settings
   settings:
     mobileFirst: false
     asNavFor: ''
-    accessibility: true
+    regionLabel: ''
+    useGroupRole: true
+    instructionsText: ''
     adaptiveHeight: false
     autoplay: true
+    useAutoplayToggleButton: true
+    pauseIcon: ''
+    playIcon: ''
     pauseOnHover: true
     pauseOnDotsHover: true
     pauseOnFocus: true
-    autoplaySpeed: 3000
+    autoplaySpeed: 2000
     arrows: true
     prevArrow: Previous
     nextArrow: Next
+    arrowsPlacement: ''
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0
@@ -43,10 +49,10 @@ options:
     randomize: false
     respondTo: window
     rtl: false
-    rows: 1
+    rows: 0
     slidesPerRow: 1
     slide: ''
-    slidesToShow: 1
+    slidesToShow: 1.0
     slidesToScroll: 1
     speed: 500
     swipe: false
@@ -70,13 +76,20 @@ options:
         breakpoint: 767
         unslick: false
         settings:
+          regionLabel: ''
+          useGroupRole: true
+          instructionsText: ''
           adaptiveHeight: false
           autoplay: true
+          useAutoplayToggleButton: true
+          pauseIcon: ''
+          playIcon: ''
           pauseOnHover: true
           pauseOnDotsHover: true
           pauseOnFocus: true
-          autoplaySpeed: 3000
-          arrows: false
+          autoplaySpeed: 2000
+          arrows: true
+          arrowsPlacement: ''
           centerMode: false
           centerPadding: 50px
           dots: true
@@ -86,9 +99,9 @@ options:
           infinite: true
           initialSlide: 0
           respondTo: window
-          rows: 1
+          rows: 0
           slidesPerRow: 1
-          slidesToShow: 1
+          slidesToShow: 1.0
           slidesToScroll: 1
           speed: 500
           swipe: true
