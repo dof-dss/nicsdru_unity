@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_current_status
     - field.storage.node.field_publication_topic
     - field.storage.node.field_published_date
+    - search_api.server.solr_default
   module:
     - node
     - search_api_solr

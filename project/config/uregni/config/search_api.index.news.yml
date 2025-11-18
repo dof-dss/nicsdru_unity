@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_published_date
     - field.storage.node.field_teaser
+    - search_api.server.solr_default
   module:
     - node
     - search_api_solr
