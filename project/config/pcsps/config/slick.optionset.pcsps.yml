@@ -37,7 +37,7 @@ options:
     centerMode: false
     centerPadding: 50px
     dots: true
-    dotsClass: ''
+    dotsClass: slick-dots
     appendDots: $(element)
     draggable: false
     fade: false
