@@ -6,7 +6,7 @@ core_version_requirement: 8.x || ^9 || ^10
 
 libraries:
   - uregni_theme/site-styling
-#  - nicsdru_unity_theme/unity-slider
+  - nicsdru_unity_theme/unity-slider
   - nicsdru_unity_theme/autocomplete
   - nicsdru_unity_theme/board_member
   - nicsdru_unity_theme/accordions
