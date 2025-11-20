@@ -5,7 +5,7 @@ dependencies: {  }
 id: uregni
 name: uregni
 weight: 0
-label: Uregni
+label: UREGNI
 group: ''
 skin: default
 breakpoints: 1
@@ -15,14 +15,14 @@ options:
   settings:
     mobileFirst: false
     asNavFor: ''
-    regionLabel: ''
+    regionLabel: carousel
     useGroupRole: true
     instructionsText: ''
     adaptiveHeight: false
     autoplay: true
     useAutoplayToggleButton: true
-    pauseIcon: ''
-    playIcon: ''
+    pauseIcon: slick-pause-icon
+    playIcon: slick-play-icon
     pauseOnHover: true
     pauseOnDotsHover: true
     pauseOnFocus: true
@@ -76,14 +76,14 @@ options:
         breakpoint: 767
         unslick: false
         settings:
-          regionLabel: ''
+          regionLabel: carousel
           useGroupRole: true
           instructionsText: ''
           adaptiveHeight: false
           autoplay: true
           useAutoplayToggleButton: true
-          pauseIcon: ''
-          playIcon: ''
+          pauseIcon: slick-pause-icon
+          playIcon: slick-play-icon
           pauseOnHover: true
           pauseOnDotsHover: true
           pauseOnFocus: true
