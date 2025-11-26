@@ -1,0 +1,42 @@
+uuid: 72599f92-7cd2-424d-8d51-118fffcb2468
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-55WDPGN.69022368da32f3.99021890
+label: GTM-55WDPGN
+weight: 0
+tag_container_ids:
+  - GTM-55WDPGN
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-55WDPGN:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  webform_purchase: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  custom: {  }
+  search: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS

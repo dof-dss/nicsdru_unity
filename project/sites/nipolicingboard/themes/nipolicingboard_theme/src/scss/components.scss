@@ -134,7 +134,7 @@
 
       &.fab.fa-twitter {
         padding: .3rem 2rem;
-        
+
         &::before {
           content: "𝕏";
         }
@@ -356,3 +356,6 @@
   width: 65%;
 }
 
+#footer .column .social-icons ul {
+  flex-wrap: wrap;
+}

@@ -1,0 +1,42 @@
+uuid: b275d556-f4ab-4d7b-b01b-92811313290d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-5344VSR.69032f119a4535.18664749
+label: GTM-5344VSR
+weight: 0
+tag_container_ids:
+  - GTM-5344VSR
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-5344VSR:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  search: {  }
+  webform_purchase: {  }
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  sign_up:
+    method: CMS
+  login:
+    method: CMS
