@@ -1,0 +1,20 @@
+uuid: 71298ed0-f163-4ce2-bc98-1466d09831de
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uregni_theme
+id: messages
+theme: uregni_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }
