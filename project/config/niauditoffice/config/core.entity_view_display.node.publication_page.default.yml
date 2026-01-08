@@ -35,7 +35,7 @@ content:
       view_mode: embed
       link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_html_document:
     type: entity_reference_entity_view
@@ -44,16 +44,16 @@ content:
       view_mode: embed
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_niao_publication_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: publication_image
+      view_mode: article_full
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_publication_date:
     type: datetime_default
@@ -64,18 +64,11 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_topics:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 5
-    region: content
 hidden:
   content_moderation_control: true
   field_meta_tags: true
   field_publication_type: true
+  field_topics: true
   langcode: true
   links: true
   search_api_excerpt: true
