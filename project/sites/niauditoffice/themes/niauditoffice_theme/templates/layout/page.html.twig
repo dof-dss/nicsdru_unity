@@ -77,8 +77,8 @@
   {% endif %}
 </div>
 
+{{ page.highlighted }}
 {% if is_front %}
-  {{ page.highlighted }}
   {{ page.slideshow }}
 
   {{ page.front_welcome }}
@@ -86,7 +86,8 @@
   {% if page.top_first or page.top_second or page.top_third %}
     <main id="content">
       {% if drupal_config('system.site', 'frontpage_title') %}
-        <div class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
+        <div
+          class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
           <h1>
             {{ drupal_config('system.site', 'frontpage_title') }}
           </h1>
@@ -116,18 +117,21 @@
 {% if not is_front %}
   <div id="container">
     <div class="container-wrap">
-      <div class="content-sidebar-wrap{% if search_page %} search-page{% endif %}">
+      <div
+        class="content-sidebar-wrap{% if search_page %} search-page{% endif %}">
 
         {{ page.breadcrumb }}
         {% if search_page %}
           {{ drupal_block('page_title_block', wrapper=false) }}
         {% endif %}
 
-        <div id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
+        <div
+          id="content" {{ page.search_facets ? '' : 'class="main-content"' }}>
           {% if page.search_facets %}
             <header id="search-facets" class="sidebar-first-layout">
               <nav aria-label="Skip links">
-                <a href="#post-content" class="skip-link visually-hidden focusable">
+                <a href="#post-content"
+                   class="skip-link visually-hidden focusable">
                   {{- 'Skip to results'|t -}}
                 </a>
               </nav>
@@ -135,7 +139,8 @@
             </header>
           {% endif %}
           {% if page.content %}
-            <main id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
+            <main
+              id="post-content" {{ page.search_facets ? 'class="main-content"' : '' }}>
               {{ page.content }}
             </main>
           {% endif %}
