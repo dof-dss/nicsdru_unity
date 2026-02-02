@@ -77,6 +77,7 @@ module:
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
+  js_cookie: 0
   language: 0
   layout_builder: 0
   layout_builder_modal: 0
