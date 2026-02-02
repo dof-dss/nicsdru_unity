@@ -1667,16 +1667,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
-            "version": "10.1.8",
+            "version": "10.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_profile.git",
-                "reference": "559af6682d9dbddba3218129ae435c2093bd4fb2"
+                "reference": "05aee26d6e123a3e23c6147a96b8347059002fb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/559af6682d9dbddba3218129ae435c2093bd4fb2",
-                "reference": "559af6682d9dbddba3218129ae435c2093bd4fb2",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_profile/zipball/05aee26d6e123a3e23c6147a96b8347059002fb5",
+                "reference": "05aee26d6e123a3e23c6147a96b8347059002fb5",
                 "shasum": ""
             },
             "require": {
@@ -1690,9 +1690,9 @@
             "description": "Custom install profile used by all Unity sites",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_profile/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/10.1.8"
+                "source": "https://github.com/dof-dss/nicsdru_unity_profile/tree/10.1.9"
             },
-            "time": "2025-08-29T10:37:38+00:00"
+            "time": "2026-02-02T10:56:03+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_theme",
