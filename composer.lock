@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "828232ecc39454f7cc833febfdae0d80",
+    "content-hash": "b455f54abb5ce2e79220427e31fe2b62",
     "packages": [
         {
             "name": "accessible360/accessible-slick",
@@ -3045,80 +3045,6 @@
             }
         },
         {
-            "name": "drupal/cookie_content_blocker",
-            "version": "2.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/cookie_content_blocker.git",
-                "reference": "2.6.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/cookie_content_blocker-2.6.1.zip",
-                "reference": "2.6.1",
-                "shasum": "c7760ca6b0ac411236033ef09bcb07f9b426984f"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10 || ^11",
-                "drupal/js_cookie": "^1.0 || ^2.0",
-                "ext-json": "*",
-                "php": "^8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.6.1",
-                    "datestamp": "1766250363",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steven Buteneers",
-                    "homepage": "https://www.drupal.org/u/steven-buteneers",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Daniël Smidt",
-                    "homepage": "https://www.drupal.org/u/dmsmidt",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Marc Janson",
-                    "homepage": "https://www.drupal.org/u/scorpid",
-                    "role": "Developer"
-                },
-                {
-                    "name": "sjerdo",
-                    "homepage": "https://www.drupal.org/user/3495403"
-                },
-                {
-                    "name": "steven buteneers",
-                    "homepage": "https://www.drupal.org/user/3301055"
-                }
-            ],
-            "description": "Prevent loading of content with a privacy impact until consent is given. This module needs a separate cookie consent manager.",
-            "homepage": "https://www.drupal.org/project/cookie_content_blocker",
-            "keywords": [
-                "Content",
-                "Content Access Control",
-                "Content Display",
-                "Drupal",
-                "Spam Prevention"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/cookie_content_blocker",
-                "issues": "https://www.drupal.org/project/issues/cookie_content_blocker?version=8.x"
-            }
-        },
-        {
             "name": "drupal/core",
             "version": "10.6.2",
             "source": {
@@ -5025,75 +4951,6 @@
             }
         },
         {
-            "name": "drupal/honeypot",
-            "version": "2.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/honeypot.git",
-                "reference": "2.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-2.1.3.zip",
-                "reference": "2.1.3",
-                "shasum": "101105029a10a574ef6017824182500ab9905856"
-            },
-            "require": {
-                "drupal/core": "^9.2 || ^10"
-            },
-            "require-dev": {
-                "drupal/rules": "^3.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.3",
-                    "datestamp": "1695604754",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jeff Geerling",
-                    "homepage": "https://www.drupal.org/user/389011",
-                    "email": "geerlingguy@mac.com"
-                },
-                {
-                    "name": "manuel garcia",
-                    "homepage": "https://www.drupal.org/user/213194"
-                },
-                {
-                    "name": "tr",
-                    "homepage": "https://www.drupal.org/user/202830"
-                },
-                {
-                    "name": "vijaycs85",
-                    "homepage": "https://www.drupal.org/user/93488"
-                }
-            ],
-            "description": "Mitigates spam form submissions using the honeypot method.",
-            "homepage": "https://www.drupal.org/project/honeypot",
-            "keywords": [
-                "deterrent",
-                "form",
-                "honeypot",
-                "honeytrap",
-                "php",
-                "spam"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/honeypot",
-                "issues": "https://www.drupal.org/project/issues/honeypot"
-            }
-        },
-        {
             "name": "drupal/http_cache_control",
             "version": "2.8.0",
             "source": {
@@ -5512,62 +5369,6 @@
             "homepage": "https://www.drupal.org/project/jquery_ui_menu",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui_menu"
-            }
-        },
-        {
-            "name": "drupal/js_cookie",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/js_cookie.git",
-                "reference": "1.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/js_cookie-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "effcbee68083efc866aca2a1bfa3fc6e14fe0c2f"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1762168962",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "dave reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "jan kellermann",
-                    "homepage": "https://www.drupal.org/user/371731"
-                }
-            ],
-            "description": "Provides the js-cookie library as a dependency.",
-            "homepage": "https://www.drupal.org/project/js_cookie",
-            "support": {
-                "source": "https://git.drupalcode.org/project/js_cookie"
             }
         },
         {
