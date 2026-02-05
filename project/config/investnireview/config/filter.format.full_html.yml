@@ -18,7 +18,6 @@ dependencies:
   module:
     - blazy
     - ckeditor5_allowed_html
-    - cookie_content_blocker
     - editor
     - entity_embed
     - linkit
