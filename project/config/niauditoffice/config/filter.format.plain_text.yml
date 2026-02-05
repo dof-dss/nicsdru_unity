@@ -12,13 +12,6 @@ name: 'Plain text'
 format: plain_text
 weight: 10
 filters:
-  cookie_content_blocker_filter:
-    id: cookie_content_blocker_filter
-    provider: cookie_content_blocker
-    status: false
-    weight: 0
-    settings:
-      disable_xss: '0'
   filter_autop:
     id: filter_autop
     provider: filter
@@ -38,13 +31,6 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
-  origins_media_cookie_content_blocker_embed_filter:
-    id: origins_media_cookie_content_blocker_embed_filter
-    provider: origins_common
-    status: false
-    weight: 0
-    settings:
-      replacement_text: 'Click here to view the video content'
   slick_filter:
     id: slick_filter
     provider: slick
