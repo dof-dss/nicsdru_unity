@@ -16,6 +16,12 @@ elements: |-
   urn_case:
     '#type': textfield
     '#title': 'URN / CASE REFERENCE (if known):'
+  offender_name:
+    '#type': textfield
+    '#title': 'Offender Name'
+  offender_sentence:
+    '#type': textfield
+    '#title': 'Offender Sentence'
   victim_details:
     '#type': fieldset
     '#title': 'VICTIM DETAILS'
@@ -57,6 +63,16 @@ elements: |-
     email:
       '#type': email
       '#title': 'Contact email address:'
+    direct_victim:
+      '#type': select
+      '#title': 'Direct Victim'
+      '#description': "<p>Please choose if you are the direct victim or if you are making the submission on someone's behalf.</p>"
+      '#title_display': invisible
+      '#description_display': before
+      '#options':
+        'Direct Victim': 'Direct Victim'
+        "Someone making the submission on the victim's behalf": "Someone making the submission on the victim's behalf"
+      '#required': true
     consent:
       '#type': checkboxes
       '#title': 'Consent:'
@@ -104,6 +120,9 @@ elements: |-
       '#title': 'Telephone:'
       '#pattern': '^[0-9\(\) \+\-]{6,20}$'
       '#pattern_error': 'Enter a valid phone number.'
+    representative_email:
+      '#type': email
+      '#title': Email
   victim_information_scheme:
     '#type': fieldset
     '#title': 'PBNI Victim Information Scheme'
