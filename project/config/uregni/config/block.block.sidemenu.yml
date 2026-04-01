@@ -12,14 +12,14 @@ dependencies:
     - uregni_theme
 id: sidemenu
 theme: uregni_theme
-region: sidebar_first
+region: sidebar_second
 weight: -15
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Sidebar navigation'
-  label_display: '0'
+  label: 'In this section'
+  label_display: visible
   provider: system
   level: 1
   depth: 0
