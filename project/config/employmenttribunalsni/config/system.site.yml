@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: bf828570-725b-4a41-975a-0049dca0d714
 name: 'Industrial Tribunals and the Fair Employment Tribunal Northern Ireland'
-mail: eddwebdev@finance-ni.gov.uk
+mail: noreply@email.employmenttribunalsni.co.uk
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to the Industrial Tribunals and Fair Employment Tribunal'
-frontpage_show_title: 1
+frontpage_show_title: true
