@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 78658025-1a4c-461b-8659-7cb4b769a5b1
 name: 'NI Fiscal Council'
-mail: admin@nifiscalcouncil.org
+mail: noreply@email.nifiscalcouncil.org
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: Welcome
-frontpage_show_title: 1
+frontpage_show_title: true
