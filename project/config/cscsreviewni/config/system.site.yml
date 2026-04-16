@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 720b0f57-1b72-4200-9dcf-4b0ec43ae9c5
 name: 'CSCS NI Review'
-mail: admin@cscsreviewni.net
+mail: noreply@email.cscsreviewni.net
 slogan: ''
 page:
   403: ''
@@ -14,4 +14,4 @@ weight_select_max: 100
 default_langcode: en
 mail_notification: ''
 frontpage_title: 'Welcome to CSCS NI Independent Review'
-frontpage_show_title: 0
+frontpage_show_title: false
