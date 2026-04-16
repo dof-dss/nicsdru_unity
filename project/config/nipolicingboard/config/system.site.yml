@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: ad5bb45b-cc83-4a11-b048-5cca60024c3b
 name: 'Northern Ireland Policing Board'
-mail: eddwebdev@finance-ni.gov.uk
+mail: noreply@email.nipolicingboard.org.uk
 slogan: ''
 page:
   403: /
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to the Northern Ireland Policing Board'
-frontpage_show_title: 0
+frontpage_show_title: false

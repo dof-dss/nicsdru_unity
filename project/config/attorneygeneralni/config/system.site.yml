@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 9ee61300-5049-4c8e-acfd-76c3da9a4999
 name: 'Attorney General for Northern Ireland'
-mail: contact@attorneygeneralni.gov.uk
+mail: noreply@email.attorneygeneralni.gov.uk
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: Welcome
-frontpage_show_title: 1
+frontpage_show_title: true
