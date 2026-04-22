@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: a401ac91-9830-4ab3-942c-8f958bb0b8ed
 name: 'Independent Review of Education'
-mail: eddwebdev@finance-ni.gov.uk
+mail: noreply@email.independentreviewofeducation.org.uk
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to the Independent Review of Education'
-frontpage_show_title: 0
+frontpage_show_title: false

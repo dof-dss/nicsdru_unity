@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 51166a4f-3e27-4b0c-a4c0-536aad5a45ce
 name: 'Policing and Community Safety Partnerships'
-mail: admin@pcsps.org
+mail: noreply@email.pcsps.org
 slogan: ''
 page:
   403: ''
@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Welcome to Policing and Community Safety Partnerships'
-frontpage_show_title: 0
+frontpage_show_title: false
