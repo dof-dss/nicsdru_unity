@@ -23,6 +23,6 @@ module:
   stage_file_proxy: 0
   views_ui: 0
 theme: {  }
-complete_list:
+complete_list: {  }
+partial_list:
   - search_api.server.solr_default
-partial_list: {  }
