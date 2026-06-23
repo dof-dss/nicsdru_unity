@@ -12,11 +12,14 @@ adding:
       context: solr
       username: solr
       password: SolrRocks
+    fallback_multiple: false
+    index_single_documents_fallback_count: 10
+    index_empty_text_fields: false
+    suppress_missing_languages: false
 removing:
   backend_config:
     connector_config:
-      host: uregni_solr.internal
+      host: uregni_solr.intranet
       port: 8080
       core: uregni_index
-      skip_schema_check: false
       solr_install_dir: ''
