@@ -11,7 +11,7 @@ adding:
       distrib: true
       context: solr
       username: solr
-      password: SolrRocks
+      password: solr
     fallback_multiple: false
     index_single_documents_fallback_count: 10
     index_empty_text_fields: false
