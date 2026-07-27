@@ -1,14 +1,15 @@
-uuid: e7d5902d-b8e5-4d54-b32d-5e202e300901
+uuid: 7c3fc872-d1e9-40ce-9602-53b81184cd86
 langcode: en
 status: true
 dependencies:
   module:
     - search_api_db
-id: local
-name: Local
+id: default
+name: Default
 description: ''
 backend: search_api_db
 backend_config:
   database: 'default:default'
-  min_chars: 2
+  min_chars: 1
   matching: partial
+  phrase: bigram
