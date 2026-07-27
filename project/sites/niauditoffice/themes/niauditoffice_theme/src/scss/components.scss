@@ -361,6 +361,25 @@
   }
 }
 
+#mailchimp-publications .btn {
+  background: #fedc92;
+  min-width: 13rem;
+  min-height: 3.5rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: 3px solid transparent;
+  margin: 1rem 0 0;
+  text-align: center;
+  color: #233243 !important;
+  border-bottom: none!important;
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: #fff !important;
+  }
+}
+
 #footer #footer-menu .menu li.menu-item a {
   @include adjust-font-size-to(14px);
   margin: 0;
