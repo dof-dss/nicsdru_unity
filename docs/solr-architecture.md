@@ -11,8 +11,8 @@ Ten hosting declarations (`odscni`, `fiscalcommissionni`, `mahinquiry`, `nifisca
 The split is intentional:
 
 - `maestro-hosting` owns the common infrastructure mechanics: the Solr image,
-  authentication, optional modules, persistent data volume, DDEV startup
-  script, compose templates, and Platform.sh service generation.
+  optional modules, credential-free local health check, persistent data volume,
+  DDEV startup script, compose templates, and Platform.sh service generation.
 - This repository owns behaviour that can differ by site: the site inventory,
   Drupal Search API server configuration, local connector patch, and generated
   configset under `.platform/solr_configsets/<site>/conf`.
