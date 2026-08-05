@@ -42,12 +42,6 @@ node_modules/
 *.sql
 *.sql.gz
 
-# Ignore local Lando files
-.lando.yml
-.lando.local.yml
-.lando/config/
-.lando/private
-
 # Ignore local DDev files
 .ddev/.env
 
@@ -57,7 +51,7 @@ node_modules/
 .DS_Store
 .talismanrc
 
-# Any local tooling/Lando things we want to ignore.
+# Any local tooling files we want to ignore.
 web/sites/default/redis.services.yml
 
 # Ignore local logs

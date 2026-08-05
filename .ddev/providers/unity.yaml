@@ -53,6 +53,7 @@ db_import_command:
         gzip -dc .ddev/.downloads/db_cscsreviewni.sql.gz | ddev import-db --database=cscsreviewni --skip-hooks 
         gzip -dc .ddev/.downloads/db_pcsps.sql.gz | ddev import-db --database=pcsps --skip-hooks 
         gzip -dc .ddev/.downloads/db_urologyservicesinquiry.sql.gz | ddev import-db --database=urologyservicesinquiry --skip-hooks 
+        scripts/solr/configure-local-connectors --all
     service: host
 files_pull_command:
     command: |

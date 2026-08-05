@@ -1,0 +1,15 @@
+uuid: 57660205-8542-4ebf-9acc-f533205693eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: default
+name: Default
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
+  phrase: bigram
