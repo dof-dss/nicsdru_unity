@@ -91,43 +91,48 @@ db:
                 default_schema: urologyservicesinquirydb
                 privileges:
                     urologyservicesinquirydb: admin
-solr_8_11:
-    type: 'solr:8.11'
+solr_9_9:
+    type: 'solr:9.9'
     disk: 1024
     configuration:
+        modules:
+            - extraction
+            - analysis-extras
+            - langid
+            - ltr
         cores:
             uregni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/uregni/conf/
             odscni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/odscni/conf/
             fiscalcommissionni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/fiscalcommissionni/conf/
             mahinquiry_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/mahinquiry/conf/
             nifiscalcouncil_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/nifiscalcouncil/conf/
             octf_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/octf/conf/
             niauditoffice_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/niauditoffice/conf/
             employmenttribunalsni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/employmenttribunalsni/conf/
             independentreviewofeducation_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/independentreviewofeducation/conf/
             nipolicingboard_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/nipolicingboard/conf/
             pbni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/pbni/conf/
             investnireview_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/investnireview/conf/
             attorneygeneralni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/attorneygeneralni/conf/
             cscsreviewni_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/cscsreviewni/conf/
             pcsps_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/pcsps/conf/
             urologyservicesinquiry_index:
-                conf_dir: !archive solr_config/
+                conf_dir: !archive solr_configsets/urologyservicesinquiry/conf/
         endpoints:
             uregni:
                 core: uregni_index

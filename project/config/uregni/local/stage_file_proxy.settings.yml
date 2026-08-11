@@ -1,0 +1,7 @@
+hotlink: false
+origin: 'https://www.uregni.gov.uk'
+origin_dir: sites/uregni/files
+proxy_headers: ''
+use_imagecache_root: false
+verify: true
+excluded_extensions: ''
