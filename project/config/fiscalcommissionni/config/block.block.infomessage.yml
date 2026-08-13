@@ -1,0 +1,35 @@
+uuid: 712423fa-768a-40d7-b884-84dfd7a4ec7c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:4dbce9ab-a369-49be-8ced-d6d124e7ad15'
+  module:
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - fiscalcommissionni_theme
+id: infomessage
+theme: fiscalcommissionni_theme
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:4dbce9ab-a369-49be-8ced-d6d124e7ad15'
+settings:
+  id: 'block_content:4dbce9ab-a369-49be-8ced-d6d124e7ad15'
+  label: 'Info message'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/terms-reference\r\n/commissioners\r\n/news\r\n/evidence\r\n/reports"
