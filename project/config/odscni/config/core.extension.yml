@@ -89,13 +89,11 @@ module:
   origins_ckeditor_enhancements: 0
   origins_common: 0
   origins_forms: 0
-  origins_internal_link_checker: 0
   origins_media: 0
   origins_qa: 0
   origins_search_views_routing: 0
   origins_toc: 0
   origins_translations: 0
-  origins_workflow: 2
   page_cache: 0
   path: 0
   path_alias: 0
@@ -130,6 +128,7 @@ module:
   workflows: 0
   menu_admin_per_menu: 1
   pathauto: 1
+  origins_workflow: 2
   views: 10
   paragraphs: 11
   nicsdru_unity_profile: 1000
