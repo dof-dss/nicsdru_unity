@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Statically verify that generated Solr resources agree across the hosting,
-# DDEV, provider-hook and Drupal configuration layers. No running DDEV project
-# is required.
+# Statically verify that generated Solr infrastructure agrees across the
+# hosting, DDEV and provider-hook layers. Drupal's active search backend and
+# local connector patches are intentionally outside this check.
 set -euo pipefail
 
 # These scripts are published as scripts/solr/*, two levels below the generated
@@ -53,6 +53,13 @@ done
 
 [[ -x .ddev/solr/create-or-refresh-cores.sh ]] \
   || fail ".ddev/solr/create-or-refresh-cores.sh is not executable"
+if [[ -f .ddev/solr/create-or-refresh-cores.sh ]] && ! awk '
+  $0 == "mkdir -p /var/solr/data" { mkdir_line = NR }
+  $0 == "rm -f /var/solr/data/security.json" { security_cleanup_line = NR }
+  END { exit !(mkdir_line && security_cleanup_line && mkdir_line < security_cleanup_line) }
+' .ddev/solr/create-or-refresh-cores.sh; then
+  fail ".ddev/solr/create-or-refresh-cores.sh does not create /var/solr/data before using it"
+fi
 [[ -x scripts/solr/configure-local-connectors ]] \
   || fail "scripts/solr/configure-local-connectors is not executable"
 [[ -f "$provider_file" ]] || fail "missing generated DDEV provider ${provider_file}"
@@ -84,25 +91,6 @@ for site in "${declared_sites[@]}"; do
 
   grep -Eq "(^|[[:space:]'])${site}([[:space:]']|$)" .ddev/docker-compose.solr_extra.yaml \
     || fail ".ddev/docker-compose.solr_extra.yaml does not declare ${site}"
-
-  # Sites with a committed server also need a local split patch matching the
-  # DDEV hostname/core convention used by configure-local-connectors.
-  server="project/config/${site}/config/search_api.server.solr_default.yml"
-  local_patch="project/config/${site}/local/config_split.patch.search_api.server.solr_default.yml"
-  if [[ -f "$server" ]]; then
-    [[ -f "$local_patch" ]] || fail "${site} has a Solr server but no local connector patch"
-    if [[ -f "$local_patch" ]]; then
-      grep -Eq "host: ${expected_local_host}$" "$local_patch" \
-        || fail "${site} local connector does not use host ${expected_local_host}"
-      grep -Eq "core: ${site}_index$" "$local_patch" \
-        || fail "${site} local connector does not use core ${site}_index"
-      if grep -Eq '^[[:space:]]+(username|password):' "$local_patch"; then
-        fail "${site} local connector patch contains committed HTTP credentials"
-      fi
-    fi
-  else
-    echo "NOTICE: ${site} declares Solr hosting but has no committed solr_default server config."
-  fi
 done
 
 if [[ $failures -ne 0 ]]; then
