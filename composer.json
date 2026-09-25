@@ -62,9 +62,9 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "dof-dss/nicsdru_origins_modules": "^10.7",
-        "dof-dss/nicsdru_unity_modules": "^10.3",
-        "dof-dss/nicsdru_unity_profile": "^10.1",
-        "dof-dss/nicsdru_unity_theme": "^10.2",
+        "dof-dss/nicsdru_unity_modules": "^11.0",
+        "dof-dss/nicsdru_unity_profile": "dev-11.x-dev",
+        "dof-dss/nicsdru_unity_theme": "dev-11.x-dev",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.6",
         "drupal/allowed_formats": "^3.0",
@@ -135,8 +135,8 @@
         "drupal/pathauto": "^1.14",
         "drupal/rdf": "^2.1",
         "drupal/read_only_mode": "^1.0@dev",
-        "drupal/readonlymode": "^1.2",
-        "drupal/redirect": "^1.12",
+        "drupal/readonlymode": "1.3",
+        "drupal/redirect": "1.13",
         "drupal/redis": "^1.7",
         "drupal/scheduled_transitions": "^2.7",
         "drupal/scheduler": "^2.0",
@@ -154,7 +154,7 @@
         "drupal/sitemap": "^2.0",
         "drupal/slick": "^3.0",
         "drupal/slick_views": "^3.0",
-        "drupal/smart_date": "^4.1",
+        "drupal/smart_date": "^4.3",
         "drupal/stable": "^2.0",
         "drupal/structure_sync": "^2.0",
         "drupal/taxonomy_access_fix": "^4.0",
@@ -206,9 +206,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/block_visibility_groups": {
-                "Visibility incorrectly returns false on OR logic when context missing from a different condition #3503194": "https://www.drupal.org/files/issues/2025-02-07/or-logic-when-context-missing--3503194-5.patch"
-            },
             "drupal/clientside_validation": {
                 "core/jquery.once is required": "https://www.drupal.org/files/issues/2021-02-23/3200022-01.patch"
             },
@@ -235,7 +232,7 @@
                 "non-existent service entity.manager": "https://www.drupal.org/files/issues/2020-12-08/3162621-4.patch"
             },
             "drupal/entityqueue": {
-                "Allow unique records only": "https://www.drupal.org/files/issues/2021-02-07/entity_queue_unique_records-1240856-3197148.patch"
+                "Allow unique records only": "https://www.drupal.org/files/issues/2026-09-10/entityqueue-disallow-duplicates-3197148-11.patch"
             },
             "drupal/facets": {
                 "Pass facet object onto child items": "https://www.drupal.org/files/issues/2019-11-13/child_item-3094143-2.patch"
@@ -247,20 +244,16 @@
                 "Drupal 9 compatability": "https://www.drupal.org/files/issues/2020-06-06/hms_field.1.x-dev.rector.patch"
             },
             "drupal/linkit": {
-                "Show URL alias after autocomplete selection instead of internal route (e.g., /node/123)": "https://www.drupal.org/files/issues/2023-10-03/linkit-2877535-62.patch"
+                "Show URL alias after autocomplete selection instead of internal route (e.g., /node/123)": "https://www.drupal.org/files/issues/2026-07-09/linkit-2877535-104.patch"
             },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
-            },
-            "drupal/redirect": {
-                "Add URL Redirects tab to taxonomy term edit form": "https://www.drupal.org/files/issues/2025-09-17/3205896-5.patch"
             },
             "drupal/search_api": {
                 "Declaration of Drupal\\search_api_solr\\Plugin\\search_api\\backend\\SearchApiSolrBackend::__sleep() must be compatible": "https://www.drupal.org/files/issues/2024-06-18/type_declaration.patch"
             },
             "drupal/smart_date":{
-                "Hide duration field": "https://www.drupal.org/files/issues/2024-10-07/3379263-duration-fix.patch",
-                "Fix multiple error messages": "https://www.drupal.org/files/issues/2024-10-07/3477741-fix.patch"
+                "Hide duration field": "https://www.drupal.org/files/issues/2024-10-07/3379263-duration-fix.patch"
             },
             "drupal/ultimate_cron": {
                 "Fix $last_ran deprecation error": "https://www.drupal.org/files/issues/2023-04-03/3351276-4.patch"
