@@ -55,6 +55,7 @@
         }
     ],
     "require": {
+        "php": "^8.3",
         "composer-runtime-api": "*",
         "accessible360/accessible-slick": "^1.0",
         "aws/aws-sdk-php": "^3.369",
@@ -154,7 +155,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/taxonomy_access_fix": "^4.0",
         "drupal/taxonomy_manager": "^2.0",
-        "drupal/telephone_plus": "^2.1",
+        "drupal/telephone_plus": "^2.0",
         "drupal/token": "^1.17",
         "drupal/token_filter": "^2.2",
         "drupal/twig_field_value": "^2.0",
@@ -181,6 +182,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
