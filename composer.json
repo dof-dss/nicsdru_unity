@@ -75,9 +75,9 @@
         "drupal/block_field": "^1.0@RC",
         "drupal/block_list_override": "^1.0",
         "drupal/block_visibility_groups": "^2.0",
-        "drupal/ckeditor_lts": "^1.0",
         "drupal/ckeditor5_allowed_html": "^1.5@dev",
         "drupal/ckeditor5_premium_features": "^1.6",
+        "drupal/ckeditor_lts": "^1.0",
         "drupal/clientside_validation": "^4.0",
         "drupal/config_filter": "^1.10",
         "drupal/config_ignore": "^3.2",
@@ -139,7 +139,7 @@
         "drupal/scheduler": "^2.0",
         "drupal/scheduler_content_moderation_integration": "^3.0",
         "drupal/schema_metatag": "^3.0",
-        "drupal/search_api": "^1.40",
+        "drupal/search_api": "^1.41",
         "drupal/search_api_autocomplete": "^1.4",
         "drupal/search_api_glossary": "^4.2",
         "drupal/search_api_location": "^1.0@alpha",
@@ -243,9 +243,6 @@
             },
             "drupal/media_browser_responsive_images": {
                 "Form alter applies for any media browser, not just image related ones": "https://www.drupal.org/files/issues/2019-12-17/media-browser-hook-checks-for-image-types.patch"
-            },
-            "drupal/search_api": {
-                "Declaration of Drupal\\search_api_solr\\Plugin\\search_api\\backend\\SearchApiSolrBackend::__sleep() must be compatible": "https://www.drupal.org/files/issues/2024-06-18/type_declaration.patch"
             },
             "drupal/smart_date":{
                 "Hide duration field": "https://www.drupal.org/files/issues/2024-10-07/3379263-duration-fix.patch"
