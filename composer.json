@@ -215,7 +215,6 @@
             "drupal/core": {
                 "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch",
                 "User enable email exception": "https://www.drupal.org/files/issues/2023-05-19/user_email_exception-3355151-3.patch",
-                "Expand menu_tree field sizes": "https://www.drupal.org/files/issues/2026-08-28/3106205-length-menu-tree-too-short-10.6.x.patch",
                 "Fix getSetting() error on translated migrations": "https://www.drupal.org/files/issues/2018-07-08/2984460-3.patch",
                 "Fix to $form.ajaxSubmit is not a function": "https://git.drupalcode.org/project/drupal/-/merge_requests/6052.diff",
                 "DateList and date range inline form errors are repeated": "https://www.drupal.org/files/issues/2020-01-30/2827034-35.patch",
