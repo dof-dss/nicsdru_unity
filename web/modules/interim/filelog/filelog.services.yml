@@ -1,6 +1,8 @@
 services:
   logger.filelog:
     class: Drupal\filelog\Logger\FileLog
+    arguments:
+      - '@service_container'
     tags:
       - { name: logger }
   filelog.file_manager:
@@ -17,3 +19,4 @@ services:
       - '@datetime.time'
       - '@filelog.file_manager'
       - '@file_system'
+      - '@token'

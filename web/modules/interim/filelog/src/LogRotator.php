@@ -3,7 +3,6 @@
 namespace Drupal\filelog;
 
 use Drupal\Component\Datetime\TimeInterface;
-use Drupal\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Render\PlainTextOutput;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -11,6 +10,7 @@ use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\State\StateInterface;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\Utility\Token;
+use function basename;
 use function date;
 use function dirname;
 use function fclose;
@@ -42,18 +42,11 @@ class LogRotator {
   protected StateInterface $state;
 
   /**
-   * The (lazy loaded) dependency injection (DI) container.
+   * The token service.
    *
-   * @var ?\Drupal\Component\DependencyInjection\ContainerInterface
+   * @var \Drupal\Core\Utility\Token
    */
-  protected ?ContainerInterface $container;
-
-  /**
-   * The (lazy loaded) token object.
-   *
-   * @var ?\Drupal\Core\Utility\Token
-   */
-  protected ?Token $token;
+  protected Token $token;
 
   /**
    * The datetime.time service.
@@ -89,26 +82,16 @@ class LogRotator {
    *   The filelog service.
    * @param \Drupal\Core\File\FileSystemInterface $fileSystem
    *   The file_system service.
+   * @param \Drupal\Core\Utility\Token $token
+   *   The token service.
    */
-  public function __construct(ConfigFactoryInterface $configFactory, StateInterface $state, TimeInterface $time, LogFileManagerInterface $fileManager, FileSystemInterface $fileSystem) {
+  public function __construct(ConfigFactoryInterface $configFactory, StateInterface $state, TimeInterface $time, LogFileManagerInterface $fileManager, FileSystemInterface $fileSystem, Token $token) {
     $this->config = $configFactory->get('filelog.settings');
     $this->state = $state;
     $this->time = $time;
     $this->fileManager = $fileManager;
     $this->fileSystem = $fileSystem;
-  }
-
-  /**
-   * Get Dependency Injection container.
-   *
-   * @return \Drupal\Component\DependencyInjection\ContainerInterface
-   *   Current Dependency Injection container.
-   */
-  protected function getContainer(): ContainerInterface {
-    if (!isset($this->container)) {
-      $this->container = \Drupal::getContainer();
-    }
-    return $this->container;
+    $this->token = $token;
   }
 
   /**
@@ -159,7 +142,7 @@ class LogRotator {
     $timestamp = $this->state->get('filelog.rotation');
 
     if (!$truncate) {
-      $destination = $this->token()->replace(
+      $destination = $this->token->replace(
         $this->config->get('rotation.destination'),
         ['date' => $timestamp]
       );
@@ -226,7 +209,7 @@ class LogRotator {
     $sourceReal = $this->fileSystem->realpath($source);
     $destDir = $this->fileSystem->dirname($destination);
     $destDirReal = $this->fileSystem->realpath($destDir);
-    $destBase = $this->fileSystem->basename($destination);
+    $destBase = basename($destination);
     $destinationReal = $destDirReal . DIRECTORY_SEPARATOR . $destBase;
     if ($sourceReal && $destDirReal && copy($sourceReal, 'compress.zlib://' . $destinationReal)) {
       return TRUE;
@@ -276,19 +259,6 @@ class LogRotator {
       fwrite($out, pack('LL', $crc->get(), $length));
     }
     return TRUE;
-  }
-
-  /**
-   * Get lazy-loaded Token service.
-   *
-   * @return \Drupal\Core\Utility\Token
-   *   Token service.
-   */
-  protected function token(): Token {
-    if (!isset($this->token)) {
-      $this->token = $this->getContainer()->get('token');
-    }
-    return $this->token;
   }
 
 }

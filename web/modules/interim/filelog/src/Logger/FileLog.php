@@ -11,6 +11,7 @@ use Drupal\Core\Logger\LogMessageParserInterface;
 use Drupal\Core\Logger\RfcLoggerTrait;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\Core\State\StateInterface;
+use Drupal\Core\Utility\Error;
 use Drupal\Core\Utility\Token;
 use Drupal\filelog\Event\FileLogEvents;
 use Drupal\filelog\Event\FileShouldLogEvent;
@@ -21,7 +22,6 @@ use Psr\Log\LoggerInterface;
 use function file_exists;
 use function fopen;
 use function fwrite;
-use function watchdog_exception;
 
 /**
  * File-based logger.
@@ -95,6 +95,19 @@ class FileLog implements LoggerInterface {
   protected LogFileManagerInterface $fileManager;
 
   /**
+   * Constructs a file logger.
+   *
+   * The container is used to defer resolving logger dependencies until the
+   * logger is used, avoiding a circular dependency during logger discovery.
+   *
+   * @param \Drupal\Component\DependencyInjection\ContainerInterface $container
+   *   The dependency injection container.
+   */
+  public function __construct(ContainerInterface $container) {
+    $this->container = $container;
+  }
+
+  /**
    * Open the logfile for writing.
    *
    * @return bool
@@ -150,7 +163,9 @@ class FileLog implements LoggerInterface {
     catch (FileLogException $error) {
       // Log the exception, unless we were already logging a filelog error.
       if ($context['channel'] !== 'filelog') {
-        watchdog_exception('filelog', $error);
+        /** @var \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerFactory */
+        $loggerFactory = $this->getContainer()->get('logger.factory');
+        Error::logException($loggerFactory->get('filelog'), $error);
       }
       // Write the message directly to STDERR.
       fwrite($this->stderr(), $entry . "\n");
@@ -209,7 +224,8 @@ class FileLog implements LoggerInterface {
     // is not needed as it is not used for cacheable output but for writing to a
     // logfile.
     $bubbleable_metadata_to_discard = new BubbleableMetadata();
-    $log = new LogMessage($level, $message, $variables, $context);
+    $currentUser = $this->getContainer()->get('current_user');
+    $log = new LogMessage($level, $message, $variables, $context, (int) $currentUser->id());
     $entry = $this->token()->replace(
       $this->config->get('format'),
       ['log' => $log],
@@ -255,9 +271,6 @@ class FileLog implements LoggerInterface {
    *   Current Dependency Injection container.
    */
   protected function getContainer(): ContainerInterface {
-    if (!isset($this->container)) {
-      $this->container = \Drupal::getContainer();
-    }
     return $this->container;
   }
 

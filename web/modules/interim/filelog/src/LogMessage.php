@@ -74,6 +74,13 @@ class LogMessage {
   protected UserInterface $user;
 
   /**
+   * The ID of the current user.
+   *
+   * @var int
+   */
+  protected int $currentUserId;
+
+  /**
    * LogMessage constructor.
    *
    * @param int $level
@@ -84,8 +91,10 @@ class LogMessage {
    *   Placeholder variables.
    * @param array $context
    *   Context variables.
+   * @param int $currentUserId
+   *   The ID of the current user.
    */
-  public function __construct(int $level, string $message, array $variables, array $context) {
+  public function __construct(int $level, string $message, array $variables, array $context, int $currentUserId) {
     $this->level = $level;
     // Store the original placeholders for rendering the message.
     $this->placeholders = $variables;
@@ -100,6 +109,7 @@ class LogMessage {
     }
 
     $this->variables = $variables;
+    $this->currentUserId = $currentUserId;
     $this->context = $context + [
       'uid'         => NULL,
       'channel'     => NULL,
@@ -234,7 +244,7 @@ class LogMessage {
         $this->user = $user;
       }
       else {
-        $this->user = User::load(\Drupal::currentUser()->id());
+        $this->user = User::load($this->currentUserId);
       }
     }
     return $this->user;
