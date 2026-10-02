@@ -317,6 +317,7 @@
     },
     "require-dev": {
         "dof-dss/maestro-hosting": "^1.0",
+        "dof-dss/maestro-shell": "^11.0",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^11.3",
         "drupal/devel": "^5.4",
@@ -330,5 +331,10 @@
         "phpstan/extension-installer": "^1.3",
         "slevomat/coding-standard": "^8.13",
         "spaze/phpstan-disallowed-calls": "^3.1"
+    },
+    "scripts": {
+        "post-package-update": [
+            "Maestro\\Shell\\Events\\ComposerEventListener::postPackageUpdate"
+        ]
     }
 }
