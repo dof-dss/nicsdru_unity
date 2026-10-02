@@ -12,7 +12,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * Implements hook_entity_presave().
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
-function uregni_consultations_entity_presave(EntityInterface $entity)  {
+function uregni_consultations_entity_presave(EntityInterface $entity) {
   // Only run this code on consultations.
   if ($entity->bundle() == 'consultation' && $entity->hasField('field_current_status')) {
     // Get the current time to gauge consultation start and end dates off.
@@ -25,7 +25,7 @@ function uregni_consultations_entity_presave(EntityInterface $entity)  {
  * Implements hook_cron().
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
-function uregni_consultations_cron()  {
+function uregni_consultations_cron() {
   // Retrieve all consultations.
   $consultations = \Drupal::entityTypeManager()->getStorage('node')
     ->loadByProperties([
