@@ -11,10 +11,9 @@ no_patching: false
 storage: folder
 folder: ../project/config/octf/local
 module:
-  clone_nodes: 0
   dblog: 0
   devel: 0
-  easy_install: 0
+  kint: 0
   migrate: 0
   migrate_drupal: 0
   migrate_plus: 0

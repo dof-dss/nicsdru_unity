@@ -3,6 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.accordion_menu
+    - block_content.type.banner_deep
+    - block_content.type.basic_block
+    - block_content.type.card_contact
+    - block_content.type.card_nested_standard
+    - block_content.type.card_nested_wide
+    - block_content.type.card_standard
+    - block_content.type.card_wide
+    - block_content.type.information_notice
+    - block_content.type.plain_cards
+    - block_content.type.text
+    - block_content.type.video
+    - block_content.type.video_and_caption
     - core.entity_view_display.node.landing_page.default
     - entityqueue.entity_queue.slideshow
     - filter.format.basic_html
@@ -22,7 +35,7 @@ dependencies:
     - node.type.vacancy
     - workflows.workflow.nics_editorial_workflow
   module:
-    - block_content_permissions
+    - block_content
     - content_moderation
     - contextual
     - entityqueue
@@ -47,6 +60,7 @@ weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
@@ -140,19 +154,32 @@ permissions:
   - 'delete publication_page revisions'
   - 'delete staff_member revisions'
   - 'delete vacancy revisions'
+  - 'edit any accordion_menu block content'
   - 'edit any audio media'
+  - 'edit any banner_deep block content'
+  - 'edit any basic_block block content'
+  - 'edit any card_contact block content'
+  - 'edit any card_nested_standard block content'
+  - 'edit any card_nested_wide block content'
+  - 'edit any card_standard block content'
+  - 'edit any card_wide block content'
   - 'edit any consultation content'
   - 'edit any document media'
   - 'edit any feature content'
   - 'edit any file media'
   - 'edit any image media'
+  - 'edit any information_notice block content'
   - 'edit any landing_page content'
   - 'edit any news content'
   - 'edit any page content'
+  - 'edit any plain_cards block content'
   - 'edit any publication_page content'
   - 'edit any remote_video media'
   - 'edit any staff_member content'
+  - 'edit any text block content'
   - 'edit any vacancy content'
+  - 'edit any video block content'
+  - 'edit any video_and_caption block content'
   - 'edit basic meta tags'
   - 'edit own audio media'
   - 'edit own consultation content'
@@ -184,19 +211,6 @@ permissions:
   - 'revert publication_page revisions'
   - 'revert staff_member revisions'
   - 'revert vacancy revisions'
-  - 'update any accordion_menu block content'
-  - 'update any banner_deep block content'
-  - 'update any basic_block block content'
-  - 'update any card_contact block content'
-  - 'update any card_nested_standard block content'
-  - 'update any card_nested_wide block content'
-  - 'update any card_standard block content'
-  - 'update any card_wide block content'
-  - 'update any information_notice block content'
-  - 'update any plain_cards block content'
-  - 'update any text block content'
-  - 'update any video block content'
-  - 'update any video_and_caption block content'
   - 'update slideshow entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
