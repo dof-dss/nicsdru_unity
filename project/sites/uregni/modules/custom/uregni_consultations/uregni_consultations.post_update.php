@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Deploy hooks for the UREGNI consultations module.
+ * Post-update hooks for the UREGNI consultations module.
  */
 
 /**
- * Migrates block permissions and removes stale module state.
+ * Migrates UREGNI block permissions before config import.
  */
-function uregni_consultations_deploy_remove_block_content_permissions(array &$sandbox): string {
+function uregni_consultations_post_update_remove_block_content_permissions(array &$sandbox): string {
   $role_storage = \Drupal::entityTypeManager()->getStorage('user_role');
   $migrated_permissions = 0;
 
@@ -39,17 +39,7 @@ function uregni_consultations_deploy_remove_block_content_permissions(array &$sa
     }
   }
 
-  $extension_config = \Drupal::configFactory()->getEditable('core.extension');
-
-  if ($extension_config->get('module.block_content_permissions') !== NULL) {
-    $extension_config
-      ->clear('module.block_content_permissions')
-      ->save(TRUE);
-  }
-
-  \Drupal::keyValue('system.schema')->delete('block_content_permissions');
-
-  return t('Migrated @count block content permissions and removed stale block_content_permissions module state.', [
+  return (string) t('Migrated @count UREGNI block content permissions.', [
     '@count' => $migrated_permissions,
   ]);
 }

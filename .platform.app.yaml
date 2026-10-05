@@ -69,6 +69,8 @@ hooks:
             if [ "$result2" = "Enabled" ]; then
               echo "****** $site deployment ******"
               cd /app/web/sites/$site
+              # Repair logging prerequisites before any site updates.
+              drush -l $site unity-upgrade-preflight || exit 1
               # Disable Fastly logging
               drush -l $site disable-fastly-logging
               # Readonlymode module should be installed on all sites,

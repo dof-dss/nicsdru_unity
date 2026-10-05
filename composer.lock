@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "942c78ff5d1f18824b82ec2dd587c779",
+    "content-hash": "11403f0c74ed7f04e43336916188055f",
     "packages": [
         {
             "name": "accessible360/accessible-slick",
@@ -1585,16 +1585,16 @@
         },
         {
             "name": "dof-dss/nicsdru_unity_modules",
-            "version": "11.0.0",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dof-dss/nicsdru_unity_modules.git",
-                "reference": "ad5e6c8d1edc8bcca034275e73bd75e177ec606a"
+                "reference": "6bef7ec05712a19fc7e37283f7d7e6e571d22e33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/ad5e6c8d1edc8bcca034275e73bd75e177ec606a",
-                "reference": "ad5e6c8d1edc8bcca034275e73bd75e177ec606a",
+                "url": "https://api.github.com/repos/dof-dss/nicsdru_unity_modules/zipball/6bef7ec05712a19fc7e37283f7d7e6e571d22e33",
+                "reference": "6bef7ec05712a19fc7e37283f7d7e6e571d22e33",
                 "shasum": ""
             },
             "require": {
@@ -1608,9 +1608,9 @@
             "description": "Custom modules available to all Unity sites.",
             "support": {
                 "issues": "https://github.com/dof-dss/nicsdru_unity_modules/issues",
-                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/11.0.0"
+                "source": "https://github.com/dof-dss/nicsdru_unity_modules/tree/11.1.0"
             },
-            "time": "2026-09-24T14:47:07+00:00"
+            "time": "2026-10-05T14:16:37+00:00"
         },
         {
             "name": "dof-dss/nicsdru_unity_profile",
