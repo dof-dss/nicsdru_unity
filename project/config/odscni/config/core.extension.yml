@@ -43,7 +43,6 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
-  file_delete_ui: 0
   filelog: 0
   filter: 0
   flag: 0
@@ -139,7 +138,6 @@ module:
 theme:
   stark: 0
   stable: 0
-  seven: 0
   nicsdru_unity_theme: 0
   odscni_theme: 0
   claro: 0
