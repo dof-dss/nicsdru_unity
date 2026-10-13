@@ -53,7 +53,7 @@ class LogFileManager implements LogFileManagerInterface {
   /**
    * Lazy loads the real service from the container.
    *
-   * @return object
+   * @return \Drupal\filelog\LogFileManagerInterface
    *   Returns the constructed real service.
    */
   protected function lazyLoadItself(): LogFileManagerInterface {

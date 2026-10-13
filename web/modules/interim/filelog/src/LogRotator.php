@@ -237,28 +237,41 @@ class LogRotator {
     if (!$in || !$out) {
       return FALSE;
     }
+    $length = 0;
+    $stream = NULL;
+    $crc = new Crc32();
     if ($deflate) {
       fwrite($out, "\x1f\x8b\x08\x00" . pack('L', filemtime($source)) . "\x00\x03");
       $stream = stream_filter_append($out, 'zlib.deflate', STREAM_FILTER_WRITE, -1);
-      $crc = new Crc32();
-      $length = 0;
+      if ($stream === FALSE) {
+        fclose($in);
+        fclose($out);
+        return FALSE;
+      }
     }
     while (!feof($in)) {
-      if (($chunk = fread($in, static::CHUNK_SIZE)) && (fwrite($out, $chunk) !== FALSE)) {
+      $chunk = fread($in, static::CHUNK_SIZE);
+      if ($chunk === '' && feof($in)) {
+        break;
+      }
+      if ($chunk !== FALSE && fwrite($out, $chunk) !== FALSE) {
         if ($deflate) {
           $crc->append($chunk);
           $length += strlen($chunk);
         }
       }
       else {
+        fclose($in);
+        fclose($out);
         return FALSE;
       }
     }
-    if ($deflate) {
+    if ($deflate && is_resource($stream)) {
       stream_filter_remove($stream);
       fwrite($out, pack('LL', $crc->get(), $length));
     }
-    return TRUE;
+    fclose($in);
+    return fclose($out);
   }
 
 }

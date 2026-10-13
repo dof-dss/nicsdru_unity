@@ -240,7 +240,7 @@ class LogMessage {
   public function getUser(): UserInterface {
     if (!isset($this->user)) {
       if (isset($this->context['uid']) && $user = User::load($this->context['uid'])) {
-        /** @var \Drupal\user\UserInterface user */
+        /** @var \Drupal\user\UserInterface $user */
         $this->user = $user;
       }
       else {
