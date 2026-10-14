@@ -133,7 +133,9 @@ if ($platformsh->hasRelationship('redis') && !\Drupal\Core\Installer\InstallerKe
   $settings['cache']['default'] = 'cache.backend.redis';
   $settings['redis.connection']['host'] = $redis['host'];
   $settings['redis.connection']['port'] = $redis['port'];
-  // Add a cache prefix for the subsite to avoid clashes.
+  // Separate each site's cache items, cache tags, locks and flood keys.
+  // Redis is shared; separate Drupal databases do not isolate these keys.
+  // Set this before the Redis bootstrap cache is configured.
   $settings['cache_prefix'] = $subsite_id . '_';
 
   // Apply changes to the container configuration to better leverage Redis.

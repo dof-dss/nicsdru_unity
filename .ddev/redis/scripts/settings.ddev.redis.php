@@ -1,8 +1,19 @@
 <?php
-// #ddev-generated
+
+/**
+ * @file
+ * Project-owned local Redis settings for regular and multisite installs.
+ */
+
 use Drupal\Core\Installer\InstallerKernel;
 
-if (!InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
+if (!InstallerKernel::installationAttempted() && extension_loaded('redis')) {
+  // Register Redis classes before the module is enabled during bootstrap.
+  $class_loader->addPsr4('Drupal\\redis\\', $app_root . '/modules/contrib/redis/src');
+  $settings['redis.connection']['interface'] = 'PhpRedis';
+  if (!empty($subsite_id)) {
+    $settings['cache_prefix'] = $subsite_id . '_';
+  }
   // Set Redis as the default backend for any cache bin not otherwise specified.
   $settings['cache']['default'] = 'cache.backend.redis';
   $settings['redis.connection']['host'] = 'redis';
@@ -13,14 +24,13 @@ if (!InstallerKernel::installationAttempted() && extension_loaded('redis') && cl
   // as the cache tag checksum. Alternatively, copy the contents of that file
   // to your project-specific services.yml file, modify as appropriate, and
   // remove this line.
-  $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
+  // Match hosted overrides, including any project-specific flood policy.
+  $settings['container_yamls'][] = file_exists($app_root . '/sites/redis.services.yml')
+    ? 'sites/redis.services.yml'
+    : 'modules/contrib/redis/example.services.yml';
 
   // Allow the services to work before the Redis module itself is enabled.
   $settings['container_yamls'][] = 'modules/contrib/redis/redis.services.yml';
-
-  // Manually add the classloader path, this is required for the container cache bin definition below
-  // and allows to use it without the redis module being enabled.
-  $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
 
   // Use redis for container cache.
   // The container cache is used to load the container definition itself, and
