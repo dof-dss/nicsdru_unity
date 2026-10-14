@@ -11,6 +11,7 @@ no_patching: false
 storage: folder
 folder: ../project/config/pcsps/local
 module:
+  stage_file_proxy: 0
   dblog: 0
   devel: 0
   kint: 0
@@ -24,6 +25,7 @@ module:
   unity_file_migrations: 0
   views_ui: 0
 theme: {  }
-complete_list: {  }
+complete_list:
+  - stage_file_proxy.settings
 partial_list:
   - search_api.server.solr_default
