@@ -71,7 +71,7 @@ class PublicationBreadcrumb implements BreadcrumbBuilderInterface {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static(
+    return new self(
       $container->get('entity_type.manager'),
       $container->get('title_resolver'),
       $container->get('request_stack')
