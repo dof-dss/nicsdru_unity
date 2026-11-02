@@ -1,0 +1,7 @@
+hotlink: false
+origin: https://www.nifiscalcouncil.org
+origin_dir: files/nifiscalcouncil
+proxy_headers: ''
+use_imagecache_root: true
+verify: true
+excluded_extensions: ''

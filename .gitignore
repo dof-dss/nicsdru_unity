@@ -44,6 +44,7 @@ node_modules/
 
 # Ignore local DDev files
 .ddev/.env
+.ddev/cache
 
 # Misc tooling files to ingore.
 .swp

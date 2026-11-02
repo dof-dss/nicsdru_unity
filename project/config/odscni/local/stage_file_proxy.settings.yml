@@ -1,0 +1,7 @@
+hotlink: false
+origin: https://www.odscni.org.uk
+origin_dir: files/odscni
+proxy_headers: ''
+use_imagecache_root: true
+verify: true
+excluded_extensions: ''
