@@ -7,16 +7,16 @@ dependencies:
 id: vacancy_pattern
 label: 'Vacancy pattern'
 type: 'canonical_entities:node'
-pattern: 'vacancy/[node:title]'
+pattern: '/vacancy/[node:title]'
 selection_criteria:
   83a0f332-669d-4fbf-84f3-8dc2e29b5cf8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 83a0f332-669d-4fbf-84f3-8dc2e29b5cf8
     context_mapping:
       node: node
     bundles:
       vacancy: vacancy
+    uuid: 83a0f332-669d-4fbf-84f3-8dc2e29b5cf8
 selection_logic: and
 weight: 0
 relationships: {  }
