@@ -1,0 +1,12 @@
+parameters:
+  level: 0
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    -
+      message: '#Unsafe usage of new static\(\)\.#'
+      paths:
+        - web/modules/custom/*
+    -
+      message: '#\\Drupal calls should be avoided in classes, use dependency injection instead#'
+      paths:
+        - web/modules/custom/*

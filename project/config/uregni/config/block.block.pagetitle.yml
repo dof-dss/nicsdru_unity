@@ -2,10 +2,8 @@ uuid: 41e67fc0-b513-46b3-bc57-3961719008a7
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.page_title
   module:
-    - block_visibility_groups
+    - node
     - system
   theme:
     - uregni_theme
@@ -21,12 +19,22 @@ settings:
   label_display: '0'
   provider: core
 visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    context_mapping: {  }
-    block_visibility_group: page_title
   request_path:
     id: request_path
     negate: true
-    pages: '/node/*/revisions/view/*'
+    pages: "/node/*/revisions/view/*\r\n<front>\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/publications/topic/*\r\n/consultations\r\n/consultations\r\n/consultations/topic/*\r\n/consultations/date/*\r\n/news\r\n/news/date/*"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      consultation: consultation
+      feature: feature
+      html_document: html_document
+      landing_page: landing_page
+      news: news
+      publication_page: publication_page
+      staff_member: staff_member
+      vacancy: vacancy
+      webform: webform

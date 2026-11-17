@@ -53,7 +53,7 @@ class ViewPageBreadcrumb implements BreadcrumbBuilderInterface {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static(
+    return new self(
       $container->get('request_stack'),
       $container->get('title_resolver')
     );

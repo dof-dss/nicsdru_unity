@@ -1,0 +1,7 @@
+hotlink: false
+origin: https://www.investnireview.org.uk
+origin_dir: files/investnireview
+proxy_headers: ''
+use_imagecache_root: true
+verify: true
+excluded_extensions: ''
