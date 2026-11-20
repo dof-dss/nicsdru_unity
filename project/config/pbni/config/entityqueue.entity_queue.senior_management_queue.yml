@@ -6,6 +6,7 @@ dependencies:
     - node
 id: senior_management_queue
 label: 'Senior Management queue'
+description: null
 handler: simple
 handler_configuration: {  }
 entity_settings:

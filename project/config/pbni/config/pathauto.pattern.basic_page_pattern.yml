@@ -7,17 +7,17 @@ dependencies:
 id: basic_page_pattern
 label: 'Basic page pattern'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   50c884fd-698d-4f06-bb20-aec396a60f1c:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 50c884fd-698d-4f06-bb20-aec396a60f1c
     context_mapping:
       node: node
     bundles:
       basic_page: basic_page
       webform: webform
+    uuid: 50c884fd-698d-4f06-bb20-aec396a60f1c
 selection_logic: and
 weight: -5
 relationships: {  }
