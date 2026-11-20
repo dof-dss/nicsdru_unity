@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entityqueue.entity_queue.board_members_queue
+    - entityqueue.entity_queue.slideshow
     - media.type.audio
     - media.type.document
     - media.type.file
