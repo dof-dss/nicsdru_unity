@@ -159,7 +159,6 @@ filters:
     settings:
       optionset: default
       layout: ''
-      skin: ''
       background: false
       loading: ''
       preload: false
@@ -168,6 +167,7 @@ filters:
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
+      skin: ''
       overridables:
         arrows: '0'
         autoplay: '0'

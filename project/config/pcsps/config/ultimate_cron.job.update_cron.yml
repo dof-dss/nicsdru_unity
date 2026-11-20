@@ -1,0 +1,17 @@
+uuid: f41c8f0d-88ff-48e9-96bf-defb6d4111fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - update
+title: 'Check for updates'
+id: update_cron
+weight: 0
+module: update
+callback: 'update#cron'
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
