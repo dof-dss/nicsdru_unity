@@ -1,6 +1,6 @@
 hotlink: false
-origin: https://www.pcsps.org
-origin_dir: files/pcsps
+origin: https://www.uregni.gov.uk
+origin_dir: files/uregni
 proxy_headers: ''
 use_imagecache_root: true
 verify: true

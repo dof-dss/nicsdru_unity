@@ -3,7 +3,6 @@ adding:
     connector_config:
       host: ddev-unity.1-solr
       port: 8983
-      core: uregni_index
       skip_schema_check: true
       solr_install_dir: /opt/solr
       checkpoints_collection: ''
@@ -13,11 +12,11 @@ adding:
     fallback_multiple: false
     index_single_documents_fallback_count: 10
     index_empty_text_fields: false
+    index_items_with_warnings: true
     suppress_missing_languages: false
 removing:
   backend_config:
     connector_config:
       host: uregni_solr.intranet
       port: 8080
-      core: uregni_index
       solr_install_dir: ''
