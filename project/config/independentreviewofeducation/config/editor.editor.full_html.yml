@@ -33,8 +33,8 @@ settings:
       - redo
       - '|'
       - specialCharacters
-      - fullScreen
       - sourceEditing
+      - fullscreen
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -48,6 +48,7 @@ settings:
       properties:
         reversed: false
         startIndex: true
+        styles: true
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
