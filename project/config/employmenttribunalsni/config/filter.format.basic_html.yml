@@ -16,6 +16,7 @@ dependencies:
     - linkit
     - media
     - noreferrer
+    - origins_common
     - token_filter
 _core:
   default_config_hash: wLnUSBZ871Sj2PTV5Bb0VGb6M99uUg7MYT5SuXjXIvA
@@ -32,6 +33,7 @@ filters:
       media_switch: ''
       hybrid_style: ''
       box_style: ''
+      box_media_style: ''
       box_caption: ''
       filter_tags:
         img: img
@@ -152,6 +154,13 @@ filters:
     status: true
     weight: -49
     settings: {  }
+  origins_media_cookie_content_blocker_embed_filter:
+    id: origins_media_cookie_content_blocker_embed_filter
+    provider: origins_common
+    status: false
+    weight: 0
+    settings:
+      replacement_text: 'Click here to view the video content'
   token_filter:
     id: token_filter
     provider: token_filter

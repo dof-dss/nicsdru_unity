@@ -16,6 +16,7 @@ dependencies:
     - linkit
     - media
     - noreferrer
+    - origins_common
     - slick
     - token_filter
 _core:
@@ -33,6 +34,7 @@ filters:
       media_switch: ''
       hybrid_style: ''
       box_style: ''
+      box_media_style: ''
       box_caption: ''
       filter_tags:
         img: img
@@ -153,23 +155,41 @@ filters:
     status: true
     weight: -49
     settings: {  }
+  origins_media_cookie_content_blocker_embed_filter:
+    id: origins_media_cookie_content_blocker_embed_filter
+    provider: origins_common
+    status: false
+    weight: 0
+    settings:
+      replacement_text: 'Click here to view the video content'
   slick_filter:
     id: slick_filter
     provider: slick
     status: false
     weight: -30
     settings:
+      caption:
+        alt: '0'
+        title: '0'
       optionset: default
       layout: ''
-      skin: ''
+      admin_uri: '/admin/config/content/formats/manage/basic_html?destination=/admin/config/content/formats&ajax_form=1&_wrapper_format=drupal_ajax'
       background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
       loading: ''
-      preload: false
       responsive_image_style: ''
+      box_style: ''
       image_style: ''
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: ''
       overridables:
         arrows: '0'
         autoplay: '0'
@@ -185,6 +205,8 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+      preserve_keys: false
+      visible_items: null
   token_filter:
     id: token_filter
     provider: token_filter
