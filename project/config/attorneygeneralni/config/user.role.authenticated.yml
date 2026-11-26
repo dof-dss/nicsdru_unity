@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - search_api_autocomplete.search.news_search
+    - search_api_autocomplete.search.search
   module:
     - file
     - filter
