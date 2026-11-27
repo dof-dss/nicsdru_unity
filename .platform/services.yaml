@@ -167,6 +167,6 @@ solr_9_9:
             urologyservicesinquiry:
                 core: urologyservicesinquiry_index
 redis:
-    type: 'redis:8.0'
+    type: 'redis:8.8'
     configuration:
         maxmemory_policy: allkeys-lfu
